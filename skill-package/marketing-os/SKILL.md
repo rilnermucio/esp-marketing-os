@@ -46,6 +46,26 @@ Clones são personas de copywriters lendários que podem ser injetadas nos subag
 
 **Como ativar um clone:** Mencione o clone no briefing (ex: "usar voz do Hormozi", "estilo Ogilvy") ou use `aios clone suggest --content <tipo> --niche <nicho>` para recomendação automática.
 
+### Detecção Automática de Clone
+
+Quando o briefing NÃO especifica um clone, o sistema detecta automaticamente:
+
+1. **Análise do briefing** — Identifica content type e nicho
+2. **Consulta histórica** — Verifica qual clone teve melhor performance para combinação similar
+3. **Sugestão automática** — Recomenda clone com maior qualidade média (mínimo 2 execuções anteriores)
+4. **Fallback ao manifest** — Se sem dados históricos, usa mapeamento do clone-manifest.yaml
+
+**Prioridade de seleção:**
+```
+Briefing explícito (clone: hormozi) > Dados históricos > Manifest > Sem clone
+```
+
+**Exemplo automático:**
+- Briefing: "Criar VSL para curso de fitness"
+- Sistema detecta: content_type=vsl, niche=fitness
+- Histórico: Hormozi teve 8.7/10 em VSL+fitness (5 execuções)
+- Auto-inject: Clone Hormozi ativado automaticamente
+
 ## Workflow Principal
 
 1. **Entender o briefing** → Nicho, objetivo, público-alvo, tom de voz, CTAs

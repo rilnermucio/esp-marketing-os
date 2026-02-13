@@ -2037,6 +2037,55 @@ Frase: "Simple frameworks beat complex theories"
 
 ---
 
+## Clones de Voz para Redes Sociais
+
+Os clones de voz adaptam o tom e estilo dos posts para cada plataforma e objetivo.
+
+### Clone por Tipo de Post
+
+| Tipo de Post | Clone Recomendado | Por quê |
+|--------------|-------------------|---------|
+| Post de vendas/oferta | Hormozi | Direto, valor claro, urgência natural |
+| Carrossel educativo | Ogilvy | Didático, pesquisa-driven, autoridade |
+| Story/Reels de engajamento | Brunson | Storytelling épico, curiosidade, ganchos |
+| Thread informativo | Schwartz | Posicionamento, consciência de mercado |
+| Post de storytelling | Halbert | Emoção, narrativa envolvente, conexão |
+| Post de autoridade | Ogilvy ou Schwartz | Dados, credibilidade, sofisticação |
+| CTA/conversão | Hormozi ou Halbert | Persuasão direta + gatilhos emocionais |
+| Conteúdo viral | Brunson ou Hormozi | Ganchos fortes, ritmo rápido |
+
+### Clone por Plataforma
+
+| Plataforma | Clone Default | Justificativa |
+|------------|---------------|---------------|
+| Instagram Feed | Hormozi | Direto, visual-first, ganchos curtos |
+| Instagram Reels | Brunson | Storytelling rápido, curiosidade |
+| LinkedIn | Ogilvy | Profissional, pesquisa, autoridade |
+| Twitter/X | Schwartz | Conciso, posicionamento, provocativo |
+| TikTok | Brunson ou Hormozi | Ritmo rápido, hook nos primeiros 2s |
+
+### Exemplo Prático
+
+```
+SEM CLONE:
+"5 dicas para aumentar seu engajamento no Instagram"
+
+COM CLONE HORMOZI:
+"Testei 147 posts em 30 dias. Estes 5 padrões geraram 3x mais engajamento. O #3 é o mais contra-intuitivo."
+
+COM CLONE HALBERT:
+"Há 6 meses meu Instagram estava morto. 200 views por post. Então descobri algo que mudou tudo..."
+```
+
+### Ativação
+
+Para ativar um clone nos seus posts:
+- No briefing, adicione: `clone: hormozi` (ou o clone desejado)
+- O clone adapta ton, hooks e CTAs mantendo as regras da plataforma
+- Hashtags, horários e formatos seguem as regras do Social Agent independentemente do clone
+
+---
+
 ## Integração com Marketing OS
 
 O Social Agent fornece:

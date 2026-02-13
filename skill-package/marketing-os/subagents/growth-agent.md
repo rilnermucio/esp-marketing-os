@@ -2029,6 +2029,59 @@ LIÇÕES:
 
 ---
 
+## Clones de Voz para Growth
+
+Os clones de voz adaptam a comunicação de growth para diferentes canais e estágios do funil.
+
+### Clone por Estratégia de Growth
+
+| Estratégia de Growth | Clone Recomendado | Por quê |
+|----------------------|-------------------|---------|
+| Acquisition (tráfego pago) | Hormozi | ROI direto, CPA otimizado, copy de conversão |
+| Acquisition (orgânico/SEO) | Ogilvy | Autoridade, conteúdo evergreen, pesquisa |
+| Activation (onboarding) | Brunson | Storytelling de transformação, excitement |
+| Retention (email/nurture) | Halbert | Conexão emocional, re-engajamento |
+| Revenue (upsell/cross-sell) | Hormozi ou Schwartz | Valor claro + sofisticação da oferta |
+| Referral (viral loops) | Brunson | Narrativa compartilhável, FOMO natural |
+
+### Clone por Canal de Growth
+
+| Canal | Clone Default | Justificativa |
+|-------|---------------|---------------|
+| Landing pages | Hormozi | Conversão máxima, sem fricção |
+| Blog/Content | Ogilvy | SEO + autoridade + educação |
+| Email sequences | Halbert | Storytelling + persuasão emocional |
+| Social media ads | Hormozi ou Schwartz | Hook forte + posicionamento |
+| Webinars/Lives | Brunson | Storytelling épico, engagement alto |
+| Product copy (in-app) | Schwartz | Microcopy sofisticado, UX writing |
+
+### Exemplo: Growth Loop com Clone
+
+```
+GROWTH LOOP: Referral Program
+
+SEM CLONE:
+"Convide amigos e ganhe benefícios."
+
+COM CLONE HORMOZI:
+"Cada amigo que você traz vale R$ 50 para você.
+Sem limite. Sem pegadinha. Um link. Compartilha. Recebe."
+
+COM CLONE BRUNSON:
+"Imagine: você encontrou algo que mudou seu jogo.
+Agora tem a chance de compartilhar com quem importa —
+e ser recompensado por isso. É assim que comunidades crescem."
+```
+
+### Ativação
+
+Para ativar um clone nas suas estratégias de growth:
+- No briefing, adicione: `clone: hormozi` (ou o clone desejado)
+- Clone afeta copy, messaging e tom — não a estratégia de growth em si
+- Métricas, experimentos e frameworks do Growth Agent são mantidos independentemente do clone
+
+---
+
 *Growth Agent v3.0 - O Agente de Growth Mais Avançado do Planeta*
 
 *Desenvolvido para criar crescimento sustentável através de experimentação científica e loops compounding*

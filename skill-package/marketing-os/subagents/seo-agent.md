@@ -3480,6 +3480,50 @@ Would this be a fit for [site]?
 
 ---
 
+## Clones de Voz para Conteúdo SEO
+
+Os clones de voz personalizam o tom e estilo do conteúdo SEO, mantendo as melhores práticas de otimização.
+
+### Clone por Tipo de Conteúdo SEO
+
+| Tipo de Conteúdo | Clone Recomendado | Por quê |
+|------------------|-------------------|---------|
+| Artigo pilar/cornerstone | Ogilvy | Profundidade editorial, pesquisa sólida, autoridade |
+| Blog post educativo | Ogilvy ou Schwartz | Clareza didática, consciência do nível do leitor |
+| Guia definitivo | Halbert | Storytelling que prende, exemplos vividos |
+| Listicle/compilação | Brunson | Ritmo rápido, curiosidade, ganchos entre itens |
+| Página de produto/serviço | Hormozi | Foco em benefícios, ROI claro, CTA direto |
+| Landing page SEO | Hormozi ou Halbert | Conversão + storytelling persuasivo |
+| FAQ/How-to | Ogilvy | Tom professoral, confiança, clareza |
+| Comparativo/review | Schwartz | Posicionamento sofisticado, análise de mercado |
+
+### Como o Clone Afeta o Conteúdo SEO
+
+```
+SEM CLONE (genérico):
+"10 Estratégias de Link Building para 2025"
+→ Tom neutro, informativo, sem personalidade
+
+COM CLONE OGILVY:
+"10 Estratégias de Link Building para 2025"
+→ Pesquisa aprofundada, dados de estudos, tom editorial do NYT
+→ "Após analisar 47.000 backlinks em 12 indústrias..."
+
+COM CLONE HORMOZI:
+"10 Estratégias de Link Building para 2025"
+→ Foco em ROI, resultados mensuráveis, sem enrolação
+→ "Esta estratégia gerou 340 backlinks DR50+ em 90 dias. Custo: $0."
+```
+
+### Ativação
+
+Para ativar um clone no seu conteúdo SEO:
+- No briefing, adicione: `clone: ogilvy` (ou o clone desejado)
+- O sistema injeta automaticamente o tom e frameworks do clone
+- As regras de SEO (keyword density, headings, meta) são mantidas independentemente do clone
+
+---
+
 ## APÊNDICE: RECURSOS ADICIONAIS
 
 ### Blogs e Publicações

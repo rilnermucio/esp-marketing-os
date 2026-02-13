@@ -3951,6 +3951,67 @@ SETUP AVANÇADO (Lançamento em Escala)
 
 ---
 
+## Clones de Voz para Lançamentos
+
+Os clones de voz personalizam cada fase do lançamento com tom e frameworks específicos.
+
+### Clone por Fase do Lançamento
+
+| Fase | Clone Recomendado | Por quê |
+|------|-------------------|---------|
+| Pré-lançamento (buzz) | Brunson | Storytelling épico, antecipação, curiosidade |
+| CPL 1 - Oportunidade | Schwartz | Consciência de mercado, posicionamento |
+| CPL 2 - Transformação | Halbert | Storytelling emocional, prova social |
+| CPL 3 - Experiência | Hormozi | Resultados, prova, ROI claro |
+| Abertura de carrinho | Hormozi | Urgência natural, valor vs preço, CTA direto |
+| Emails de carrinho | Halbert ou Hormozi | Emoção + escassez legítima |
+| Página de vendas | Hormozi | Oferta irresistível, stack de valor |
+| Webinar de venda | Brunson | Perfect Webinar framework, pitch natural |
+| Upsell/Order bump | Schwartz | Sofisticação, complementaridade |
+| Remarketing | Halbert | Reconexão emocional, objeções |
+
+### Clone por Tipo de Lançamento
+
+| Tipo de Lançamento | Clone Principal | Clone Secundário |
+|--------------------|----------------|------------------|
+| Lançamento Semente | Ogilvy | Halbert |
+| Lançamento Interno | Brunson | Hormozi |
+| Lançamento Externo | Hormozi | Brunson |
+| Lançamento Meteórico | Hormozi | Schwartz |
+| Perpétuo (VSL) | Hormozi | Halbert |
+| Perpétuo (Webinar) | Brunson | Schwartz |
+| Challenge/Desafio | Brunson | Hormozi |
+| High Ticket (Aplicação) | Ogilvy | Schwartz |
+
+### Exemplo: Mesmo Lançamento, Diferentes Clones
+
+```
+PRODUTO: Curso de Copywriting (R$ 997)
+
+CLONE HORMOZI (Abertura de Carrinho):
+"Este curso tem 47 aulas. Cada aula tem um framework que você aplica no mesmo dia.
+Aluno médio recupera o investimento em 14 dias. Se não recuperar em 30, devolvemos tudo."
+
+CLONE BRUNSON (Webinar):
+"Há 3 anos eu estava quebrado, escrevendo copy por R$ 50.
+Então descobri 3 segredos que mudaram tudo. Hoje vou compartilhar cada um deles com você..."
+
+CLONE HALBERT (Email de carrinho):
+"Ontem recebi uma mensagem da Ana. Ela chorava.
+Não de tristeza. De alívio.
+Pela primeira vez em 8 meses, ela conseguiu pagar todas as contas.
+O que mudou? Uma habilidade. Copywriting."
+```
+
+### Ativação
+
+Para ativar um clone no seu lançamento:
+- No briefing, adicione: `clone: hormozi` (ou o clone desejado)
+- Para lançamentos multi-fase, pode usar clones diferentes por fase
+- As regras de timing, sequência e estrutura do Launch Agent são mantidas independentemente do clone
+
+---
+
 ## APÊNDICE A: TEMPLATES DE PÁGINAS
 
 ### A.1 Estrutura Página de Captura

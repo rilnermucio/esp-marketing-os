@@ -45,6 +45,54 @@ clones:
     tone: "energético, storytelling, frameworks visuais"
     path: "brunson/"
 
+  miller:
+    name: "Donald Miller"
+    specialty: "Storytelling para negócios, StoryBrand framework"
+    best_for: ["brand_story", "landing_page", "pitch", "apresentacao"]
+    niches: ["todos"]
+    tone: "claro, estruturado, narrativo, centrado no cliente como herói"
+    path: "miller/"
+
+  howell:
+    name: "Park Howell"
+    specialty: "Business storytelling, ABT framework (And/But/Therefore)"
+    best_for: ["pitch", "apresentacao", "brand_story", "social_media"]
+    niches: ["todos"]
+    tone: "simples, conversacional, focado em contraste e resolução"
+    path: "howell/"
+
+  mrbeast:
+    name: "MrBeast (Jimmy Donaldson)"
+    specialty: "Conteúdo viral de vídeo, retenção extrema, thumbnails"
+    best_for: ["youtube", "reels", "tiktok", "thumbnails"]
+    niches: ["entretenimento", "educacao", "desafios"]
+    tone: "energético, épico, superlativo, challenge-driven"
+    path: "mrbeast/"
+
+  abdaal:
+    name: "Ali Abdaal"
+    specialty: "Conteúdo educativo em vídeo, produtividade, lifestyle"
+    best_for: ["youtube", "podcast", "curso", "newsletter"]
+    niches: ["produtividade", "educacao", "tech", "saude"]
+    tone: "calmo, inteligente, evidence-based, acessível"
+    path: "abdaal/"
+
+  ellis:
+    name: "Sean Ellis"
+    specialty: "Growth hacking, experimentação rápida, product-market fit"
+    best_for: ["growth", "onboarding", "ativacao", "retencao"]
+    niches: ["saas", "tech", "startups"]
+    tone: "data-driven, experimental, pragmático, focado em métricas"
+    path: "ellis/"
+
+  chen:
+    name: "Andrew Chen"
+    specialty: "Network effects, viral loops, marketplace growth"
+    best_for: ["growth", "estrategia", "newsletter", "artigo_seo"]
+    niches: ["tech", "saas", "marketplace", "startups"]
+    tone: "analítico, ensaístico, baseado em cases, reflexivo"
+    path: "chen/"
+
 matching_rules:
   - content_type: "copy_vendas"
     primary: "hormozi"
@@ -67,3 +115,51 @@ matching_rules:
   - content_type: "post_linkedin"
     primary: "ogilvy"
     alternatives: ["hormozi"]
+  - content_type: "brand_story"
+    primary: "miller"
+    alternatives: ["howell"]
+  - content_type: "pitch"
+    primary: "howell"
+    alternatives: ["miller"]
+  - content_type: "apresentacao"
+    primary: "miller"
+    alternatives: ["howell"]
+  - content_type: "youtube"
+    primary: "mrbeast"
+    alternatives: ["abdaal"]
+  - content_type: "reels"
+    primary: "mrbeast"
+    alternatives: ["abdaal"]
+  - content_type: "tiktok"
+    primary: "mrbeast"
+    alternatives: ["abdaal"]
+  - content_type: "thumbnails"
+    primary: "mrbeast"
+    alternatives: []
+  - content_type: "podcast"
+    primary: "abdaal"
+    alternatives: []
+  - content_type: "curso"
+    primary: "abdaal"
+    alternatives: []
+  - content_type: "newsletter"
+    primary: "chen"
+    alternatives: ["abdaal", "halbert"]
+  - content_type: "growth"
+    primary: "ellis"
+    alternatives: ["chen"]
+  - content_type: "onboarding"
+    primary: "ellis"
+    alternatives: []
+  - content_type: "ativacao"
+    primary: "ellis"
+    alternatives: ["chen"]
+  - content_type: "retencao"
+    primary: "ellis"
+    alternatives: ["chen"]
+  - content_type: "estrategia"
+    primary: "chen"
+    alternatives: ["ellis"]
+  - content_type: "social_media"
+    primary: "howell"
+    alternatives: ["ogilvy", "hormozi"]

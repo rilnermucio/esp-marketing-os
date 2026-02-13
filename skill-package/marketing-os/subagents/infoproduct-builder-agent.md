@@ -4542,3 +4542,64 @@ PERGUNTA 4: Qual faixa de ticket?
 │ Nicho negócios        │ Consultoria → Formação           │
 └───────────────────────┴──────────────────────────────────┘
 ```
+
+---
+
+## Clones de Voz para Infoprodutos
+
+Os clones de voz personalizam a comunicação do infoproduto em todas as etapas: criação, lançamento e entrega.
+
+### Clone por Tipo de Infoproduto
+
+| Tipo de Infoproduto | Clone Recomendado | Por quê |
+|---------------------|-------------------|---------|
+| Ebook/guia digital | Ogilvy | Profundidade editorial, pesquisa, clareza |
+| Mini-curso | Hormozi | Direto ao ponto, resultados rápidos |
+| Curso completo | Ogilvy ou Schwartz | Estrutura didática + sofisticação |
+| Mentoria em grupo | Brunson | Comunidade, storytelling, motivação |
+| Mentoria 1:1 | Ogilvy | Tom consultivo, autoridade personalizada |
+| Workshop/masterclass | Hormozi | Intensivo, prático, ROI imediato |
+| Challenge/bootcamp | Brunson | Energia, storytelling épico, momentum |
+| Membership/assinatura | Halbert | Conexão emocional, fidelização |
+| Templates/ferramentas | Hormozi | Praticidade, resultado direto |
+| Consultoria | Schwartz | Sofisticação, diagnóstico, posicionamento |
+
+### Clone por Etapa do Infoproduto
+
+| Etapa | Clone Recomendado | Aplicação |
+|-------|-------------------|-----------|
+| Validação | Schwartz | Pesquisa de mercado, nível de consciência |
+| Conteúdo/aulas | Ogilvy | Didática, profundidade, exemplos |
+| Página de vendas | Hormozi | Oferta irresistível, stack de valor |
+| Sequência de lançamento | Brunson | Storytelling, antecipação, urgência |
+| Onboarding do aluno | Brunson | Excitement, primeiros resultados |
+| Emails de engajamento | Halbert | Conexão, motivação, retenção |
+| Upsell/próximo produto | Hormozi ou Schwartz | Valor + sofisticação da oferta |
+
+### Exemplo: Mesmo Infoproduto, Diferentes Clones
+
+```
+INFOPRODUTO: Curso de Produtividade (R$ 497)
+
+PÁGINA DE VENDAS (Clone Hormozi):
+"37 sistemas de produtividade testados em 200+ alunos.
+Resultado médio: 3h a mais de tempo livre por dia.
+Garantia: se não funcionar em 21 dias, devolvemos 100%."
+
+AULA INTRODUTÓRIA (Clone Ogilvy):
+"Produtividade não é fazer mais. É fazer o que importa.
+Neste módulo, vamos desconstruir os 4 mitos que sabotam
+90% dos profissionais — com base em pesquisa de Harvard."
+
+EMAIL DE ENGAJAMENTO (Clone Halbert):
+"João me escreveu ontem às 22h. Não era reclamação.
+Era para contar que pela primeira vez em 3 anos
+conseguiu jantar com a família sem olhar o celular."
+```
+
+### Ativação
+
+Para ativar um clone no seu infoproduto:
+- No briefing, adicione: `clone: ogilvy` (ou o clone desejado)
+- Para infoprodutos completos, use clones diferentes por etapa
+- O design instrucional (taxonomia de Bloom, carga cognitiva, gamificação) segue as regras do Infoproduct Builder independentemente do clone

@@ -2520,6 +2520,52 @@ Frase: "The most interesting answer often comes from the follow-up question."
 
 ---
 
+## Clones de Voz para Conteúdo de Áudio
+
+Os clones de voz adaptam o tom narrativo, ritmo e estilo de entrega do conteúdo de áudio.
+
+### Clone por Formato de Áudio
+
+| Formato de Áudio | Clone Recomendado | Por quê |
+|------------------|-------------------|---------|
+| Podcast solo | Hormozi ou Ogilvy | Autoridade + clareza, conteúdo denso |
+| Podcast entrevista | Ogilvy | Tom jornalístico, perguntas profundas |
+| Podcast narrativo | Halbert | Storytelling emocional, arcos dramáticos |
+| Audio ads/spots | Hormozi | Direto, CTA claro, sem enrolação |
+| Audiobook narração | Halbert ou Ogilvy | Prosa envolvente, ritmo de leitura |
+| Audio course/educativo | Ogilvy ou Schwartz | Didático, estruturado, autoridade |
+| Meditação guiada | Halbert | Tom suave, emocional, imersivo |
+| Webinar em áudio | Brunson | Storytelling épico, pitch natural |
+| Vinheta/jingle | Brunson | Memorabilidade, ritmo, impacto |
+
+### Como o Clone Afeta a Narração
+
+```
+SEM CLONE (genérico):
+"Neste episódio vamos falar sobre produtividade..."
+→ Tom neutro, previsível
+
+COM CLONE HORMOZI:
+"Eu gastava 14 horas por dia e faturava menos que agora com 4.
+Neste episódio, vou te mostrar os 3 sistemas exatos que uso."
+→ Resultado primeiro, prova pessoal, promessa específica
+
+COM CLONE HALBERT:
+"Era 3 da manhã. O escritório estava vazio.
+E pela primeira vez em anos, eu percebi que estava trabalhando
+no projeto errado..."
+→ Cena visual, tensão narrativa, vulnerabilidade
+```
+
+### Ativação
+
+Para ativar um clone no seu conteúdo de áudio:
+- No briefing, adicione: `clone: hormozi` (ou o clone desejado)
+- O clone adapta tom, ritmo e estilo de narração
+- Estrutura técnica do áudio (pausas, re-hooks, SFX) segue as regras do Audio Agent independentemente do clone
+
+---
+
 ## Integração com Marketing OS
 
 O Audio Agent fornece:
