@@ -20,6 +20,8 @@ import argparse
 from typing import Dict, List, Tuple
 from collections import Counter
 
+from output_formatter import add_output_args, OutputFormatter, print_json
+
 # Conectivos e palavras de transição (bom sinal)
 TRANSITION_WORDS = [
     "portanto", "porém", "contudo", "entretanto", "todavia",
@@ -145,7 +147,7 @@ def calculate_reading_time(text: str) -> Dict:
         "leitura_atenta": 150
     }
 
-    times = {}
+    times: Dict[str, str] = {}
     for speed_name, wpm in speeds.items():
         minutes = word_count / wpm
         if minutes < 1:
@@ -168,7 +170,7 @@ def analyze_sentences(text: str) -> Dict:
 
     lengths = [len(get_words(s)) for s in sentences]
 
-    analysis = {
+    analysis: Dict = {
         "total_sentences": len(sentences),
         "avg_length": round(sum(lengths) / len(lengths), 1),
         "shortest": min(lengths),
@@ -270,7 +272,7 @@ def get_vocabulary_stats(text: str) -> Dict:
 
 def full_analysis(text: str) -> Dict:
     """Análise completa de legibilidade."""
-    results = {
+    results: Dict = {
         "text_preview": text[:200] + "..." if len(text) > 200 else text
     }
 
@@ -331,7 +333,7 @@ def full_analysis(text: str) -> Dict:
     return results
 
 
-def print_report(results: Dict):
+def print_report(results: Dict) -> None:
     """Imprime relatório formatado."""
     print("\n" + "="*60)
     print("📖 ANÁLISE DE LEGIBILIDADE")
@@ -408,7 +410,7 @@ def print_report(results: Dict):
     print("📋 RECOMENDAÇÕES")
     print("-"*60)
 
-    recommendations = []
+    recommendations: List[str] = []
 
     if results['flesch']['score'] < 50:
         recommendations.append("Simplifique o texto: use frases mais curtas e palavras mais simples")
@@ -437,12 +439,14 @@ def print_report(results: Dict):
     print("\n" + "="*60)
 
 
-def main():
+def main() -> None:
     parser = argparse.ArgumentParser(description="Analisa legibilidade de textos")
     parser.add_argument("text", nargs="*", help="Texto para analisar")
     parser.add_argument("--file", "-f", help="Arquivo de texto")
+    add_output_args(parser)
 
     args = parser.parse_args()
+    fmt = OutputFormatter(args)
 
     text = ""
 
@@ -461,7 +465,7 @@ def main():
         sys.exit(1)
 
     results = full_analysis(text)
-    print_report(results)
+    fmt.print(results, human_fn=lambda d: print_report(d))
 
 
 if __name__ == "__main__":

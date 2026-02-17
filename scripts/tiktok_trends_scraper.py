@@ -20,6 +20,7 @@ from datetime import datetime
 from pathlib import Path
 import sys
 import site
+from typing import Any, Dict, List, Optional, Tuple
 
 # Adiciona user site-packages ao path (necessário em alguns sistemas)
 user_site = site.getusersitepackages()
@@ -43,7 +44,7 @@ OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 # CATEGORIAS E NICHOS PARA BUSCA
 # ============================================================
 
-NICHOS_HASHTAGS = {
+NICHOS_HASHTAGS: Dict[str, List[str]] = {
     "marketing": [
         "marketingdigital", "socialmedia", "empreendedorismo",
         "negociosonline", "marketingtips", "growthhacking",
@@ -81,7 +82,7 @@ NICHOS_HASHTAGS = {
     ]
 }
 
-FORMATOS_VIRAIS = {
+FORMATOS_VIRAIS: Dict[str, List[str]] = {
     "tutorial": ["tutorial", "comofazer", "dicasde", "aprenda", "pap"],
     "storytime": ["storytime", "historia", "oqueaconteceu", "exposed"],
     "trends": ["trend", "viral", "challenge", "dancinha", "fyp"],
@@ -97,17 +98,17 @@ FORMATOS_VIRAIS = {
 # FUNÇÕES DE BUSCA
 # ============================================================
 
-async def buscar_trending(api, region="BR", limit=30):
+async def buscar_trending(api: Any, region: str = "BR", limit: int = 30) -> List[Dict]:
     """Busca vídeos em trending"""
-    videos = []
+    videos: List[Dict] = []
     async for video in api.trending.videos(count=limit):
         videos.append(extrair_dados_video(video))
     return videos
 
 
-async def buscar_por_hashtag(api, hashtag, limit=30, min_views=0):
+async def buscar_por_hashtag(api: Any, hashtag: str, limit: int = 30, min_views: int = 0) -> List[Dict]:
     """Busca vídeos por hashtag"""
-    videos = []
+    videos: List[Dict] = []
     tag = api.hashtag(name=hashtag)
     async for video in tag.videos(count=limit):
         dados = extrair_dados_video(video)
@@ -116,9 +117,9 @@ async def buscar_por_hashtag(api, hashtag, limit=30, min_views=0):
     return videos
 
 
-async def buscar_por_keyword(api, keyword, limit=30, min_views=0):
+async def buscar_por_keyword(api: Any, keyword: str, limit: int = 30, min_views: int = 0) -> List[Dict]:
     """Busca vídeos por palavra-chave"""
-    videos = []
+    videos: List[Dict] = []
     async for video in api.search.videos(keyword, count=limit):
         dados = extrair_dados_video(video)
         if dados["views"] >= min_views:
@@ -126,7 +127,7 @@ async def buscar_por_keyword(api, keyword, limit=30, min_views=0):
     return videos
 
 
-def extrair_dados_video(video):
+def extrair_dados_video(video: Any) -> Dict:
     """Extrai dados relevantes do vídeo - compatível com TikTokApi v7.x"""
     try:
         # TikTokApi v7.x usa atributos diferentes
@@ -195,7 +196,7 @@ def extrair_dados_video(video):
 
         # Calcula engagement e viral score
         class StatsObj:
-            def __init__(self, v, l, c, s):
+            def __init__(self, v: int, l: int, c: int, s: int) -> None:
                 self.play_count = v
                 self.digg_count = l
                 self.comment_count = c
@@ -224,7 +225,7 @@ def extrair_dados_video(video):
         return {"erro": str(e), "erro_detalhes": repr(e)}
 
 
-def calcular_engagement(stats):
+def calcular_engagement(stats: Any) -> float:
     """Calcula taxa de engajamento"""
     try:
         total_engajamento = stats.digg_count + stats.comment_count + stats.share_count
@@ -235,7 +236,7 @@ def calcular_engagement(stats):
         return 0
 
 
-def calcular_viral_score(stats):
+def calcular_viral_score(stats: Any) -> float:
     """Calcula score de viralidade (0-100)"""
     try:
         # Pesos: views (40%), likes (25%), shares (20%), comments (15%)
@@ -252,17 +253,17 @@ def calcular_viral_score(stats):
 # FUNÇÕES DE ANÁLISE
 # ============================================================
 
-def analisar_trends(videos):
+def analisar_trends(videos: List[Dict]) -> Dict:
     """Analisa padrões nos vídeos coletados"""
     if not videos:
         return {}
 
     # Hashtags mais comuns
-    todas_hashtags = []
+    todas_hashtags: List[str] = []
     for v in videos:
         todas_hashtags.extend(v.get("hashtags", []))
 
-    hashtag_count = {}
+    hashtag_count: Dict[str, int] = {}
     for h in todas_hashtags:
         hashtag_count[h] = hashtag_count.get(h, 0) + 1
 
@@ -291,7 +292,7 @@ def analisar_trends(videos):
     }
 
 
-def gerar_relatorio(videos, analise, params):
+def gerar_relatorio(videos: List[Dict], analise: Dict, params: Dict) -> Tuple[str, str]:
     """Gera relatório em formato Markdown"""
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M")
 
@@ -379,7 +380,7 @@ def gerar_relatorio(videos, analise, params):
 # FUNÇÃO PRINCIPAL
 # ============================================================
 
-async def main():
+async def main() -> None:
     parser = argparse.ArgumentParser(
         description="Busca vídeos virais do TikTok por nicho/hashtag",
         formatter_class=argparse.RawDescriptionHelpFormatter,
@@ -433,8 +434,8 @@ Exemplos de uso:
             browser="webkit"
         )
 
-        videos = []
-        params = {
+        videos: List[Dict] = []
+        params: Dict = {
             "limit": args.limit,
             "min_views": args.min_views,
             "region": args.region
@@ -470,8 +471,8 @@ Exemplos de uso:
                 videos.extend(novos)
 
         # Filtra duplicatas
-        ids_vistos = set()
-        videos_unicos = []
+        ids_vistos: set = set()
+        videos_unicos: List[Dict] = []
         for v in videos:
             if v.get("id") not in ids_vistos:
                 ids_vistos.add(v.get("id"))

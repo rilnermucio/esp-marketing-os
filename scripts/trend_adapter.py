@@ -9,6 +9,10 @@ Exemplo: python trend_adapter.py "get ready with me" marketing
 
 import sys
 import random
+from typing import Dict, List
+
+from output_formatter import print_json
+from validators import ValidationError, validar_texto, handle_validation_error
 
 # Trends adaptáveis com estrutura
 TRENDS = {
@@ -200,7 +204,7 @@ ADAPTACOES = {
     }
 }
 
-def adaptar_trend(trend_key: str, nicho: str) -> dict:
+def adaptar_trend(trend_key: str, nicho: str) -> Dict:
     """Adapta uma trend para o nicho especificado."""
 
     if trend_key not in TRENDS:
@@ -227,10 +231,10 @@ def adaptar_trend(trend_key: str, nicho: str) -> dict:
 
     return resultado
 
-def gerar_ideias_adicionais(trend_key: str, nicho: str) -> list:
+def gerar_ideias_adicionais(trend_key: str, nicho: str) -> List[str]:
     """Gera ideias adicionais de adaptação."""
 
-    ideias_base = {
+    ideias_base: Dict[str, List[str]] = {
         "get_ready_with_me": [
             f"GRWM para evento importante do seu nicho",
             f"GRWM mostrando ferramentas que usa no trabalho",
@@ -264,7 +268,7 @@ def gerar_ideias_adicionais(trend_key: str, nicho: str) -> list:
         "Faça versão em série (parte 1, 2, 3)"
     ])
 
-def formatar_saida(resultado: dict) -> str:
+def formatar_saida(resultado: Dict) -> str:
     """Formata o resultado para exibição."""
 
     trend = resultado["trend"]
@@ -333,7 +337,7 @@ def formatar_saida(resultado: dict) -> str:
 
     return saida
 
-def listar_trends():
+def listar_trends() -> None:
     """Lista todas as trends disponíveis."""
 
     print("\n📚 TRENDS DISPONÍVEIS:\n")
@@ -341,7 +345,7 @@ def listar_trends():
         print(f"  • {key}: {value['nome']}")
     print()
 
-def listar_nichos():
+def listar_nichos() -> None:
     """Lista todos os nichos disponíveis."""
 
     print("\n🎯 NICHOS DISPONÍVEIS:\n")
@@ -349,9 +353,15 @@ def listar_nichos():
         print(f"  • {nicho}")
     print()
 
-def main():
+USO_TREND_ADAPTER = (
+    'Uso: python trend_adapter.py "trend" [nicho] [--json]\n'
+    'Exemplo: python trend_adapter.py "pov_your_life" marketing_digital'
+)
+
+
+def main() -> None:
     if len(sys.argv) < 2:
-        print(__doc__)
+        print(USO_TREND_ADAPTER)
         listar_trends()
         listar_nichos()
         return
@@ -364,11 +374,24 @@ def main():
         listar_nichos()
         return
 
-    trend_input = sys.argv[1].lower().replace(" ", "_").replace("-", "_")
-    nicho = sys.argv[2].lower() if len(sys.argv) > 2 else "lifestyle"
+    json_mode = "--json" in sys.argv
+    args_clean = [a for a in sys.argv[1:] if a not in ("--json", "--trends", "--nichos")]
+
+    try:
+        trend_raw = validar_texto(args_clean[0], campo="trend", max_len=100) if args_clean else ""
+        nicho_raw = validar_texto(args_clean[1], campo="nicho", max_len=50) if len(args_clean) > 1 else "lifestyle"
+    except ValidationError as e:
+        handle_validation_error(e, mostrar_uso=USO_TREND_ADAPTER)
+        return
+
+    trend_input = trend_raw.lower().replace(" ", "_").replace("-", "_")
+    nicho = nicho_raw.lower()
 
     resultado = adaptar_trend(trend_input, nicho)
-    print(formatar_saida(resultado))
+    if json_mode:
+        print_json(resultado)
+    else:
+        print(formatar_saida(resultado))
 
 if __name__ == "__main__":
     main()

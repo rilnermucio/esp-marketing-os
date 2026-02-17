@@ -7,6 +7,7 @@ Gera variações de copy para testes A/B.
 import json
 import sys
 import re
+from typing import Dict, List, Optional
 
 # Templates de variação por elemento
 VARIATION_TEMPLATES = {
@@ -40,8 +41,8 @@ VARIATION_TEMPLATES = {
 def generate_variations(
     original: str,
     element_type: str = 'headline',
-    context: dict = None
-) -> dict:
+    context: Optional[Dict] = None
+) -> Dict:
     """Gera variações de copy para teste A/B."""
 
     if context is None:
@@ -57,7 +58,7 @@ def generate_variations(
             'percentage': '[%]',
         }
 
-    variations = []
+    variations: List[Dict] = []
     templates = VARIATION_TEMPLATES.get(element_type, {})
 
     if element_type == 'headline':
@@ -111,12 +112,12 @@ def generate_variations(
         'recommended_tests': get_recommended_tests(element_type),
     }
 
-def analyze_copy(text: str) -> dict:
+def analyze_copy(text: str) -> Dict:
     """Analisa características do copy."""
     words = text.split()
 
     # Detectar técnicas usadas
-    techniques = []
+    techniques: List[str] = []
 
     if '?' in text:
         techniques.append('question')
@@ -176,9 +177,9 @@ def get_hook_psychology(style: str) -> str:
     }
     return explanations.get(style, 'N/A')
 
-def get_recommended_tests(element_type: str) -> list:
+def get_recommended_tests(element_type: str) -> List[str]:
     """Retorna testes recomendados por tipo."""
-    tests = {
+    tests: Dict[str, List[str]] = {
         'headline': [
             'Pergunta vs Afirmação',
             'Com número vs Sem número',
@@ -202,7 +203,7 @@ def get_recommended_tests(element_type: str) -> list:
     }
     return tests.get(element_type, [])
 
-def main():
+def main() -> None:
     if len(sys.argv) < 3:
         print("Uso: python ab_generator.py <tipo> <texto_original> [contexto_json]")
         print("Tipos: headline, cta, hook")

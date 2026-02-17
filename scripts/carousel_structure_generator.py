@@ -10,6 +10,9 @@ Exemplo: python carousel_structure_generator.py "Marketing Digital" educativo 10
 import sys
 import random
 
+from output_formatter import print_json
+from validators import ValidationError, validar_texto, validar_inteiro, handle_validation_error
+
 # Estruturas de carrossel por tipo
 ESTRUTURAS = {
     "educativo": {
@@ -246,7 +249,7 @@ def formatar_saida(estrutura: dict) -> str:
 
     return saida
 
-def listar_tipos():
+def listar_tipos() -> None:
     """Lista todos os tipos de carrossel disponíveis."""
 
     print("\n📚 TIPOS DE CARROSSEL DISPONÍVEIS:\n")
@@ -254,9 +257,15 @@ def listar_tipos():
         print(f"  • {key}: {value['nome']}")
     print()
 
-def main():
+USO_CAROUSEL = (
+    'Uso: python carousel_structure_generator.py "tema" [tipo] [num_slides] [--json]\n'
+    'Exemplo: python carousel_structure_generator.py "produtividade" educativo 8'
+)
+
+
+def main() -> None:
     if len(sys.argv) < 2:
-        print(__doc__)
+        print(USO_CAROUSEL)
         listar_tipos()
         return
 
@@ -264,17 +273,26 @@ def main():
         listar_tipos()
         return
 
-    tema = sys.argv[1]
-    tipo = sys.argv[2] if len(sys.argv) > 2 else "educativo"
-    num_slides = int(sys.argv[3]) if len(sys.argv) > 3 else 10
+    json_mode = "--json" in sys.argv
+    args_clean = [a for a in sys.argv[1:] if a != "--json"]
 
-    # Validar número de slides
+    try:
+        tema = validar_texto(args_clean[0], campo="tema", max_len=200)
+        tipo = validar_texto(args_clean[1], campo="tipo", max_len=50) if len(args_clean) > 1 else "educativo"
+        num_slides = validar_inteiro(args_clean[2], campo="num_slides", min_val=3, max_val=15) if len(args_clean) > 2 else 10
+    except ValidationError as e:
+        handle_validation_error(e, mostrar_uso=USO_CAROUSEL)
+        return
+
     if num_slides < 3 or num_slides > 10:
-        print("⚠️  Recomendado: 5-10 slides (mínimo 3, máximo 10)")
+        print("⚠️  Recomendado: 5-10 slides. Ajustando...")
         num_slides = min(max(num_slides, 3), 10)
 
     estrutura = gerar_estrutura(tema, tipo, num_slides)
-    print(formatar_saida(estrutura))
+    if json_mode:
+        print_json(estrutura)
+    else:
+        print(formatar_saida(estrutura))
 
 if __name__ == "__main__":
     main()

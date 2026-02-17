@@ -653,7 +653,7 @@ def formatar_markdown(resultado: Dict) -> str:
     return "\n".join(linhas)
 
 
-def mostrar_ajuda():
+def mostrar_ajuda() -> None:
     """Mostra mensagem de ajuda."""
     ajuda = """
 ╔══════════════════════════════════════════════════════════════════════╗
@@ -706,7 +706,7 @@ OBJETIVOS:
     print(ajuda)
 
 
-def main():
+def main() -> None:
     """Função principal."""
     args = sys.argv[1:]
 

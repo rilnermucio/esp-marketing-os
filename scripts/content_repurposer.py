@@ -14,8 +14,10 @@ Uso:
 import re
 import sys
 import argparse
-from typing import Dict, List
+from typing import Dict, List, Optional
 from datetime import datetime
+
+from output_formatter import add_output_args, OutputFormatter
 
 
 def extract_key_points(text: str, max_points: int = 7) -> List[str]:
@@ -35,7 +37,7 @@ def extract_key_points(text: str, max_points: int = 7) -> List[str]:
                        "primeiro", "segundo", "terceiro", "dica", "segredo",
                        "aprenda", "descubra", "como", "por que"]
 
-    scored = []
+    scored: List[tuple] = []
     for s in sentences:
         score = sum(1 for w in important_words if w.lower() in s.lower())
         scored.append((score, s))
@@ -72,7 +74,7 @@ def to_instagram_carousel(text: str, num_slides: int = 10) -> Dict:
     title = extract_title(text)
     points = extract_key_points(text, num_slides - 2)
 
-    slides = []
+    slides: List[Dict] = []
 
     # Slide 1: Capa
     slides.append({
@@ -183,7 +185,7 @@ def to_twitter_thread(text: str) -> Dict:
     title = extract_title(text)
     points = extract_key_points(text, 7)
 
-    tweets = []
+    tweets: List[Dict] = []
 
     # Tweet 1: Hook
     tweets.append({
@@ -427,7 +429,7 @@ def repurpose_all(text: str) -> Dict:
     }
 
 
-def print_output(result: Dict, platform: str = None):
+def print_output(result: Dict, platform: Optional[str] = None) -> None:
     """Imprime o resultado formatado."""
     print("\n" + "="*60)
     print("📦 CONTENT REPURPOSER")
@@ -488,14 +490,20 @@ def print_output(result: Dict, platform: str = None):
     print("\n" + "="*60)
 
 
-def main():
+def main() -> None:
     parser = argparse.ArgumentParser(description="Adapta conteúdo entre plataformas")
     parser.add_argument("text", nargs="*", help="Texto para adaptar")
     parser.add_argument("--file", "-f", help="Arquivo de texto")
-    parser.add_argument("--output", "-o", default="todos",
+    parser.add_argument("--platform", "-p", default="todos",
                         help="Plataforma: carousel, reels, twitter, linkedin, email, youtube, todos")
+    # Mantém --output para compatibilidade retroativa, mas o novo padrão é --platform
+    parser.add_argument("--output", default=None,
+                        help=argparse.SUPPRESS)
+    add_output_args(parser)
 
     args = parser.parse_args()
+    fmt = OutputFormatter(args)
+    platform = args.output or args.platform  # retrocompatibilidade
 
     text = ""
 
@@ -505,8 +513,8 @@ def main():
     elif args.text:
         text = " ".join(args.text)
     else:
-        print("Uso: python content_repurposer.py --file artigo.txt --output todos")
-        print("     python content_repurposer.py \"Texto aqui\" --output twitter")
+        print("Uso: python content_repurposer.py --file artigo.txt --platform todos")
+        print("     python content_repurposer.py \"Texto aqui\" --platform twitter")
         sys.exit(1)
 
     if len(text) < 100:
@@ -514,7 +522,7 @@ def main():
         sys.exit(1)
 
     result = repurpose_all(text)
-    print_output(result, args.output)
+    fmt.print(result, human_fn=lambda d: print_output(d, platform))
 
 
 if __name__ == "__main__":

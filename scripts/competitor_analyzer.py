@@ -696,7 +696,7 @@ def formatar_markdown(analises: List[dict], comparacao: Optional[dict] = None) -
     return "\n".join(linhas)
 
 
-def mostrar_ajuda():
+def mostrar_ajuda() -> None:
     """Mostra ajuda de uso."""
     ajuda = """
 COMPETITOR ANALYZER - Análise de Concorrentes
@@ -745,7 +745,7 @@ NOTAS:
     print(ajuda)
 
 
-def main():
+def main() -> None:
     if len(sys.argv) < 2 or sys.argv[1] in ['-h', '--help', 'help']:
         mostrar_ajuda()
         return

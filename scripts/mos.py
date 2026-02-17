@@ -32,12 +32,13 @@ Uso:
 import os
 import sys
 import subprocess
+from typing import Callable, Dict, List, Tuple
 
 # Diretório dos scripts
 SCRIPTS_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # Mapeamento de comandos para scripts
-COMMAND_MAP = {
+COMMAND_MAP: Dict[str, Dict[str, Tuple[str, str]]] = {
     "seo": {
         "analyze": ("seo_analyzer.py", "Analisa conteúdo para SEO"),
     },
@@ -96,7 +97,7 @@ COMMAND_MAP = {
 }
 
 # Comandos especiais que precisam de argumentos transformados
-SPECIAL_ARGS = {
+SPECIAL_ARGS: Dict[Tuple[str, str], Callable[[List[str]], List[str]]] = {
     ("headlines", "compare"): lambda args: ["--compare"] + args,
     ("readability", "check"): lambda args: args,  # já é passthrough
     ("project", "create"): lambda args: ["create"] + args,
@@ -108,7 +109,7 @@ SPECIAL_ARGS = {
 }
 
 
-def print_help():
+def print_help() -> None:
     """Exibe ajuda completa."""
     print("""
 ╔══════════════════════════════════════════════════════════╗
@@ -170,7 +171,7 @@ Para ajuda de um comando específico:
 """)
 
 
-def run_script(script_name: str, args: list):
+def run_script(script_name: str, args: List[str]) -> None:
     """Executa um script com os argumentos fornecidos."""
     script_path = os.path.join(SCRIPTS_DIR, script_name)
 
@@ -184,7 +185,7 @@ def run_script(script_name: str, args: list):
     sys.exit(result.returncode)
 
 
-def main():
+def main() -> None:
     if len(sys.argv) < 2 or sys.argv[1] in ['--help', '-h', 'help']:
         print_help()
         sys.exit(0)

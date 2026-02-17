@@ -103,7 +103,7 @@ def analisar_legibilidade(texto: str) -> Dict:
     palavras = re.findall(r'\b\w+\b', texto_limpo.lower())
 
     # Contar sílabas (aproximação para português)
-    def contar_silabas(palavra):
+    def contar_silabas(palavra: str) -> int:
         vogais = 'aeiouáéíóúâêîôûãõ'
         count = 0
         anterior_vogal = False
@@ -833,7 +833,7 @@ def auditar_pasta(pasta: str, extensoes: List[str] = None) -> List[Dict]:
     return resultados
 
 
-def mostrar_ajuda():
+def mostrar_ajuda() -> None:
     """Mostra mensagem de ajuda."""
     ajuda = """
 ╔══════════════════════════════════════════════════════════════════════╗
@@ -889,7 +889,7 @@ MÉTRICAS ANALISADAS:
     print(ajuda)
 
 
-def main():
+def main() -> None:
     """Função principal."""
     args = sys.argv[1:]
 

@@ -9,6 +9,10 @@ Exemplo: python caption_generator.py "produtividade" engajamento
 
 import sys
 import random
+from typing import Dict, List
+
+from output_formatter import print_json
+from validators import ValidationError, validar_texto, handle_validation_error
 
 # Estruturas de legenda por objetivo
 ESTRUTURAS = {
@@ -207,7 +211,7 @@ CTAS = {
 }
 
 # Hashtags por nicho
-HASHTAGS = {
+HASHTAGS: Dict[str, List[str]] = {
     "geral": ["#conteudo", "#dicas", "#aprendizado", "#conhecimento", "#desenvolvimento"],
     "marketing": ["#marketingdigital", "#socialmedia", "#marketing", "#empreendedorismo", "#negocios"],
     "produtividade": ["#produtividade", "#gestaodotempo", "#foco", "#organizacao", "#habitos"],
@@ -218,7 +222,7 @@ HASHTAGS = {
     "tech": ["#tecnologia", "#inovacao", "#ia", "#futuro", "#digital"]
 }
 
-def gerar_legenda(tema: str, objetivo: str) -> dict:
+def gerar_legenda(tema: str, objetivo: str) -> Dict:
     """Gera legenda completa baseada no objetivo."""
 
     if objetivo not in ESTRUTURAS:
@@ -272,7 +276,7 @@ def gerar_legenda(tema: str, objetivo: str) -> dict:
 
     return resultado
 
-def gerar_exemplo_completo(legenda: dict) -> str:
+def gerar_exemplo_completo(legenda: Dict) -> str:
     """Gera um exemplo de legenda completa."""
 
     tema = legenda["tema"]
@@ -416,7 +420,7 @@ O importante é não desistir. ❤️
 
     return exemplos.get(objetivo, exemplos["engajamento"])
 
-def formatar_saida(legenda: dict) -> str:
+def formatar_saida(legenda: Dict) -> str:
     """Formata a legenda para exibição."""
 
     saida = f"""
@@ -470,7 +474,7 @@ def formatar_saida(legenda: dict) -> str:
 
     return saida
 
-def listar_objetivos():
+def listar_objetivos() -> None:
     """Lista todos os objetivos disponíveis."""
 
     print("\n📚 OBJETIVOS DE LEGENDA DISPONÍVEIS:\n")
@@ -478,9 +482,15 @@ def listar_objetivos():
         print(f"  • {key}: {value['nome']}")
     print()
 
-def main():
+USO_CAPTION = (
+    'Uso: python caption_generator.py "tema" [objetivo] [--json]\n'
+    'Exemplo: python caption_generator.py "marketing digital" engajamento'
+)
+
+
+def main() -> None:
     if len(sys.argv) < 2:
-        print(__doc__)
+        print(USO_CAPTION)
         listar_objetivos()
         return
 
@@ -488,11 +498,21 @@ def main():
         listar_objetivos()
         return
 
-    tema = sys.argv[1]
-    objetivo = sys.argv[2] if len(sys.argv) > 2 else "engajamento"
+    json_mode = "--json" in sys.argv
+    args_clean = [a for a in sys.argv[1:] if a != "--json"]
+
+    try:
+        tema = validar_texto(args_clean[0], campo="tema", max_len=200)
+        objetivo = validar_texto(args_clean[1], campo="objetivo", max_len=50) if len(args_clean) > 1 else "engajamento"
+    except ValidationError as e:
+        handle_validation_error(e, mostrar_uso=USO_CAPTION)
+        return
 
     legenda = gerar_legenda(tema, objetivo)
-    print(formatar_saida(legenda))
+    if json_mode:
+        print_json(legenda)
+    else:
+        print(formatar_saida(legenda))
 
 if __name__ == "__main__":
     main()

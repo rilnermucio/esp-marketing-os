@@ -13,6 +13,8 @@ import sys
 import argparse
 from typing import Dict, List, Tuple
 
+from output_formatter import add_output_args, OutputFormatter
+
 # Palavras de poder por categoria
 POWER_WORDS = {
     "urgencia": [
@@ -69,7 +71,7 @@ PENALTY_WORDS = [
 def count_power_words(headline: str) -> Dict[str, List[str]]:
     """Conta palavras de poder por categoria."""
     headline_lower = headline.lower()
-    found = {}
+    found: Dict[str, List[str]] = {}
 
     for category, words in POWER_WORDS.items():
         matches = [w for w in words if w in headline_lower]
@@ -82,7 +84,7 @@ def count_power_words(headline: str) -> Dict[str, List[str]]:
 def check_patterns(headline: str) -> List[str]:
     """Verifica padrões de headline que funcionam."""
     headline_lower = headline.lower()
-    matched = []
+    matched: List[str] = []
 
     for pattern_name, pattern in HEADLINE_PATTERNS.items():
         if re.search(pattern, headline_lower, re.IGNORECASE):
@@ -113,7 +115,7 @@ def calculate_length_score(headline: str) -> Tuple[int, str]:
 def score_headline(headline: str) -> Dict:
     """Calcula a pontuação total da headline."""
 
-    results = {
+    results: Dict = {
         "headline": headline,
         "scores": {},
         "power_words": {},
@@ -194,7 +196,7 @@ def score_headline(headline: str) -> Dict:
     return results
 
 
-def print_report(results: Dict):
+def print_report(results: Dict) -> None:
     """Imprime relatório formatado."""
     print("\n" + "="*60)
     print("📊 ANÁLISE DE HEADLINE")
@@ -245,7 +247,7 @@ def print_report(results: Dict):
     print("\n" + "="*60)
 
 
-def compare_headlines(headlines: List[str]):
+def compare_headlines(headlines: List[str]) -> None:
     """Compara múltiplas headlines."""
     results = [(h, score_headline(h)) for h in headlines]
     results.sort(key=lambda x: x[1]['total_score'], reverse=True)
@@ -264,15 +266,17 @@ def compare_headlines(headlines: List[str]):
     print("="*60)
 
 
-def main():
+def main() -> None:
     parser = argparse.ArgumentParser(description="Analisa e pontua headlines")
     parser.add_argument("headline", nargs="*", help="Headline(s) para analisar")
     parser.add_argument("--file", "-f", help="Arquivo com headlines (uma por linha)")
     parser.add_argument("--compare", "-c", action="store_true", help="Modo comparação")
+    add_output_args(parser)
 
     args = parser.parse_args()
+    fmt = OutputFormatter(args)
 
-    headlines = []
+    headlines: List[str] = []
 
     if args.file:
         with open(args.file, 'r', encoding='utf-8') as f:
@@ -285,10 +289,11 @@ def main():
         sys.exit(1)
 
     if len(headlines) > 1 or args.compare:
-        compare_headlines(headlines)
+        data = [score_headline(h) for h in headlines]
+        fmt.print(data, human_fn=lambda d: compare_headlines([h["headline"] for h in d]))
     else:
         result = score_headline(headlines[0])
-        print_report(result)
+        fmt.print(result, human_fn=lambda d: print_report(d))
 
 
 if __name__ == "__main__":

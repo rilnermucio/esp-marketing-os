@@ -156,8 +156,8 @@ PLATFORM_SPECS = {
 def generate_hooks(tema: str, plataforma: str = "reels", quantidade: int = 10) -> Dict:
     """Gera hooks virais para o tema especificado."""
 
-    hooks = []
-    categorias_usadas = []
+    hooks: List[Dict] = []
+    categorias_usadas: List[str] = []
 
     # Gerar hooks de diferentes categorias
     all_categories = list(HOOK_TEMPLATES.keys())
@@ -199,7 +199,7 @@ def generate_hooks(tema: str, plataforma: str = "reels", quantidade: int = 10) -
     }
 
 
-def print_results(results: Dict):
+def print_results(results: Dict) -> None:
     """Imprime os resultados formatados."""
 
     print("=" * 70)
@@ -244,7 +244,7 @@ USO = (
 )
 
 
-def main():
+def main() -> None:
     if len(sys.argv) < 2:
         print(USO)
         sys.exit(1)

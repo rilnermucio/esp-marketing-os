@@ -168,7 +168,7 @@ def generate_ideas(nicho: str, quantidade: int = 20) -> Dict:
         nicho = "tecnologia"
 
     nicho_data = PILARES[nicho]
-    ideas = []
+    ideas: List[Dict] = []
     ano = datetime.now().year
 
     for i in range(quantidade):
@@ -212,7 +212,7 @@ def generate_ideas(nicho: str, quantidade: int = 20) -> Dict:
         })
 
     # Organizar por pilar
-    ideas_por_pilar = {}
+    ideas_por_pilar: Dict[str, List[Dict]] = {}
     for idea in ideas:
         pilar = idea["pilar"]
         if pilar not in ideas_por_pilar:
@@ -229,7 +229,7 @@ def generate_ideas(nicho: str, quantidade: int = 20) -> Dict:
     }
 
 
-def print_results(results: Dict):
+def print_results(results: Dict) -> None:
     """Imprime os resultados formatados."""
 
     print("=" * 70)
@@ -259,7 +259,7 @@ def print_results(results: Dict):
     print()
 
     # Contar por formato
-    formato_count = {}
+    formato_count: Dict[str, int] = {}
     for idea in results['ideias']:
         fmt = idea['formato']
         formato_count[fmt] = formato_count.get(fmt, 0) + 1
@@ -279,7 +279,7 @@ def print_results(results: Dict):
     print("=" * 70)
 
 
-def _uso_ideias():
+def _uso_ideias() -> str:
     linhas = [
         "Uso: python content_idea_generator.py [nicho] [quantidade]",
         "\nNichos disponíveis:",
@@ -290,7 +290,7 @@ def _uso_ideias():
     return "\n".join(linhas)
 
 
-def main():
+def main() -> None:
     if len(sys.argv) < 2:
         print(_uso_ideias())
         sys.exit(1)

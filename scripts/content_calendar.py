@@ -7,7 +7,7 @@ Gera calendário editorial para múltiplas plataformas.
 import json
 import sys
 from datetime import datetime, timedelta
-from typing import List, Dict
+from typing import List, Dict, Optional
 
 from validators import ValidationError, validar_data, validar_inteiro, validar_lista_plataformas, handle_validation_error
 
@@ -86,7 +86,7 @@ FREQUENCY = {
 def generate_calendar(
     start_date: str,
     weeks: int = 4,
-    platforms: List[str] = None,
+    platforms: Optional[List[str]] = None,
     nicho: str = 'geral'
 ) -> Dict:
     """Gera calendário editorial."""
@@ -167,7 +167,7 @@ USO = (
 )
 
 
-def main():
+def main() -> None:
     if len(sys.argv) < 2:
         print(USO)
         sys.exit(1)

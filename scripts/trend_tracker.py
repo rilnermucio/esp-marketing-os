@@ -624,7 +624,7 @@ def formatar_resultado_markdown(dados: dict) -> str:
     return "\n".join(linhas)
 
 
-def mostrar_ajuda():
+def mostrar_ajuda() -> None:
     """Mostra ajuda de uso."""
     ajuda = """
 TREND TRACKER - Monitorador de Tendências
@@ -673,7 +673,7 @@ NOTAS:
     print(ajuda)
 
 
-def main():
+def main() -> None:
     if len(sys.argv) < 2 or sys.argv[1] in ['-h', '--help', 'help']:
         mostrar_ajuda()
         return

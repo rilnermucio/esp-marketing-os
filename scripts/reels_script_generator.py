@@ -9,6 +9,7 @@ Exemplo: python reels_script_generator.py "5 dicas de produtividade" 30 tutorial
 
 import sys
 import random
+from typing import Dict, List
 
 from validators import ValidationError, validar_texto, validar_inteiro, validar_formato, handle_validation_error
 
@@ -178,7 +179,7 @@ DIRECOES_CAMERA = [
     "🎬 Texto na tela com narração"
 ]
 
-def gerar_roteiro(tema: str, duracao: int, formato: str) -> dict:
+def gerar_roteiro(tema: str, duracao: int, formato: str) -> Dict:
     """Gera roteiro completo para Reels."""
 
     if formato not in ESTRUTURAS:
@@ -208,14 +209,15 @@ def gerar_roteiro(tema: str, duracao: int, formato: str) -> dict:
     cta = random.choice(CTAS[categoria_cta]).format(tema=tema, palavra="EU QUERO")
 
     # Montar roteiro
-    roteiro = {
+    direcoes_selecionadas: List[str] = random.sample(DIRECOES_CAMERA, min(5, len(estrutura["estrutura"])))
+    roteiro: Dict = {
         "tema": tema,
         "formato": estrutura["nome"],
         "duracao": f"{duracao} segundos",
         "estrutura": [],
         "hook_sugerido": hook,
         "cta_sugerido": cta,
-        "direcoes_camera": random.sample(DIRECOES_CAMERA, min(5, len(estrutura["estrutura"])))
+        "direcoes_camera": direcoes_selecionadas
     }
 
     # Ajustar tempos baseado na duração
@@ -234,7 +236,7 @@ def gerar_roteiro(tema: str, duracao: int, formato: str) -> dict:
 
     return roteiro
 
-def formatar_saida(roteiro: dict) -> str:
+def formatar_saida(roteiro: Dict) -> str:
     """Formata o roteiro para exibição."""
 
     saida = f"""
@@ -287,7 +289,7 @@ def formatar_saida(roteiro: dict) -> str:
 
     return saida
 
-def listar_formatos():
+def listar_formatos() -> None:
     """Lista todos os formatos disponíveis."""
 
     print("\n📚 FORMATOS DE REELS DISPONÍVEIS:\n")
@@ -304,7 +306,7 @@ USO = (
 _DURACOES_VALIDAS = {15, 30, 60, 90}
 
 
-def main():
+def main() -> None:
     if len(sys.argv) < 2:
         print(USO)
         listar_formatos()

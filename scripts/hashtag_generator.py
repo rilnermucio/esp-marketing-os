@@ -6,6 +6,7 @@ Gera hashtags relevantes por nicho e plataforma.
 
 import json
 import sys
+from typing import List, Dict, Optional
 
 from validators import ValidationError, validar_texto, validar_plataforma, handle_validation_error
 
@@ -62,7 +63,7 @@ PLATFORM_LIMITS = {
     'facebook': {'max': 3, 'recommended': 2, 'note': 'Hashtags opcionais, foco no conteúdo'},
 }
 
-def get_hashtags(nicho: str, platform: str = 'instagram', custom_keywords: list = None) -> dict:
+def get_hashtags(nicho: str, platform: str = 'instagram', custom_keywords: Optional[List[str]] = None) -> Dict:
     """Gera hashtags para um nicho e plataforma."""
 
     nicho_lower = nicho.lower().replace(' ', '_').replace('-', '_')
@@ -80,7 +81,7 @@ def get_hashtags(nicho: str, platform: str = 'instagram', custom_keywords: list 
     platform_config = PLATFORM_LIMITS.get(platform.lower(), PLATFORM_LIMITS['instagram'])
 
     # Montar lista de hashtags
-    all_hashtags = []
+    all_hashtags: List[str] = []
     all_hashtags.extend(hashtags['core'][:3])  # Top 3 core
     all_hashtags.extend(hashtags['engagement'][:3])  # Top 3 engagement
     all_hashtags.extend(hashtags['trending'][:4])  # Top 4 trending
@@ -124,7 +125,7 @@ def get_hashtags(nicho: str, platform: str = 'instagram', custom_keywords: list 
         ]
     }
 
-def _uso_hashtag():
+def _uso_hashtag() -> str:
     linhas = [
         "Uso: python hashtag_generator.py <nicho> [plataforma] [keywords...]",
         "Exemplo: python hashtag_generator.py marketing_digital instagram ia chatgpt",
@@ -136,7 +137,7 @@ def _uso_hashtag():
     return "\n".join(linhas)
 
 
-def main():
+def main() -> None:
     if len(sys.argv) < 2:
         print(_uso_hashtag())
         sys.exit(1)

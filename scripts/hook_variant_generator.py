@@ -438,7 +438,7 @@ def formatar_saida_json(variantes: List[Dict], tema: str) -> str:
     return json.dumps(output, indent=2, ensure_ascii=False)
 
 
-def mostrar_ajuda():
+def mostrar_ajuda() -> None:
     """Mostra mensagem de ajuda."""
     ajuda = """
 ╔══════════════════════════════════════════════════════════════════════╗
@@ -492,7 +492,7 @@ EXEMPLOS:
     print(ajuda)
 
 
-def main():
+def main() -> None:
     """Função principal."""
     args = sys.argv[1:]
 
