@@ -15,6 +15,8 @@ import random
 from typing import List, Dict
 from datetime import datetime
 
+from validators import ValidationError, validar_texto, validar_inteiro, handle_validation_error
+
 # Pilares de conteúdo por nicho
 PILARES = {
     "tecnologia": {
@@ -277,19 +279,28 @@ def print_results(results: Dict):
     print("=" * 70)
 
 
+def _uso_ideias():
+    linhas = [
+        "Uso: python content_idea_generator.py [nicho] [quantidade]",
+        "\nNichos disponíveis:",
+    ]
+    for n in PILARES.keys():
+        linhas.append(f"   • {n}")
+    linhas.append("\nExemplo: python content_idea_generator.py tecnologia 20")
+    return "\n".join(linhas)
+
+
 def main():
     if len(sys.argv) < 2:
-        print("Uso: python content_idea_generator.py [nicho] [quantidade]")
-        print()
-        print("Nichos disponíveis:")
-        for n in PILARES.keys():
-            print(f"   • {n}")
-        print()
-        print("Exemplo: python content_idea_generator.py tecnologia 20")
+        print(_uso_ideias())
         sys.exit(1)
 
-    nicho = sys.argv[1]
-    quantidade = int(sys.argv[2]) if len(sys.argv) > 2 else 20
+    try:
+        nicho = validar_texto(sys.argv[1], campo="nicho", max_len=100)
+        quantidade = validar_inteiro(sys.argv[2], campo="quantidade", min_val=1, max_val=100) if len(sys.argv) > 2 else 20
+    except ValidationError as e:
+        handle_validation_error(e, mostrar_uso=_uso_ideias())
+        return
 
     if nicho not in PILARES:
         print(f"⚠️  Nicho '{nicho}' não encontrado.")

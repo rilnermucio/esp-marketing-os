@@ -10,6 +10,8 @@ Exemplo: python reels_script_generator.py "5 dicas de produtividade" 30 tutorial
 import sys
 import random
 
+from validators import ValidationError, validar_texto, validar_inteiro, validar_formato, handle_validation_error
+
 # Estruturas por formato de Reels
 ESTRUTURAS = {
     "tutorial": {
@@ -293,9 +295,18 @@ def listar_formatos():
         print(f"  • {key}: {value['nome']}")
     print()
 
+USO = (
+    'Uso: python reels_script_generator.py "tema" [duracao] [formato]\n'
+    'Exemplo: python reels_script_generator.py "5 dicas de produtividade" 30 tutorial\n'
+    "Durações válidas: 15, 30, 60, 90 (segundos)"
+)
+
+_DURACOES_VALIDAS = {15, 30, 60, 90}
+
+
 def main():
     if len(sys.argv) < 2:
-        print(__doc__)
+        print(USO)
         listar_formatos()
         return
 
@@ -303,14 +314,18 @@ def main():
         listar_formatos()
         return
 
-    tema = sys.argv[1]
-    duracao = int(sys.argv[2]) if len(sys.argv) > 2 else 30
-    formato = sys.argv[3] if len(sys.argv) > 3 else "tutorial"
+    try:
+        tema = validar_texto(sys.argv[1], campo="tema", max_len=200)
+        duracao_raw = validar_inteiro(sys.argv[2], campo="duracao", min_val=1, max_val=300) if len(sys.argv) > 2 else 30
+        formato = validar_formato(sys.argv[3], campo="formato") if len(sys.argv) > 3 else "tutorial"
+    except ValidationError as e:
+        handle_validation_error(e, mostrar_uso=USO)
+        return
 
-    # Validar duração
-    if duracao not in [15, 30, 60, 90]:
-        print("⚠️  Durações recomendadas: 15, 30, 60 ou 90 segundos")
-        duracao = 30
+    if duracao_raw not in _DURACOES_VALIDAS:
+        print(f"⚠️  Duração {duracao_raw}s não é padrão. Durações recomendadas: 15, 30, 60, 90 segundos. Usando 30s.")
+        duracao_raw = 30
+    duracao = duracao_raw
 
     roteiro = gerar_roteiro(tema, duracao, formato)
     print(formatar_saida(roteiro))

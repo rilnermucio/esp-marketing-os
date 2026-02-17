@@ -9,6 +9,8 @@ import re
 import sys
 from collections import Counter
 
+from validators import ValidationError, validar_arquivo, validar_texto, handle_validation_error
+
 def analyze_content(content: str, keyword: str = None) -> dict:
     """Analisa conteúdo para SEO."""
 
@@ -160,14 +162,25 @@ def calculate_seo_score(word_count, headers, keyword_analysis, external_links):
 
     return score
 
+USO = (
+    "Uso: python seo_analyzer.py <arquivo.md> [keyword]\n"
+    "Exemplo: python seo_analyzer.py artigo.md 'marketing digital'"
+)
+
+
 def main():
     if len(sys.argv) < 2:
-        print("Uso: python seo_analyzer.py <arquivo.md> [keyword]")
-        print("Exemplo: python seo_analyzer.py artigo.md 'marketing digital'")
+        print(USO)
         sys.exit(1)
 
-    filepath = sys.argv[1]
-    keyword = sys.argv[2] if len(sys.argv) > 2 else None
+    try:
+        filepath = validar_arquivo(sys.argv[1], extensoes=[".md", ".txt"], campo="arquivo")
+        keyword = None
+        if len(sys.argv) > 2:
+            keyword = validar_texto(sys.argv[2], campo="keyword", max_len=100)
+    except ValidationError as e:
+        handle_validation_error(e, mostrar_uso=USO)
+        return
 
     with open(filepath, 'r', encoding='utf-8') as f:
         content = f.read()
