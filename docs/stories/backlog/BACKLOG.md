@@ -21,23 +21,23 @@ Backlog priorizado de melhorias e novas funcionalidades.
 | STORY-002 | ~~Sincronizar Skill.md com README.md~~ (CONCLUÍDA) | Docs | P |
 | STORY-003 | ~~Criar testes unitários para scripts principais~~ (CONCLUÍDA) | Quality | M |
 | STORY-008 | ~~Configurar GitHub Actions para CI~~ (CONCLUÍDA) | DevOps | M |
-| STORY-011 | Adicionar testes para quality_gate.py e project_manager.py | Quality | M |
-| STORY-016 | Integração com Instagram Business API (métricas reais) | Integration | G |
-| STORY-017 | Integração com Google Search Console (dados de SEO) | Integration | G |
+| STORY-011 | ~~Adicionar testes para quality_gate.py e project_manager.py~~ (CONCLUÍDA) | Quality | M |
+| STORY-016 | ~~Integração com Instagram Business API (métricas reais)~~ (CONCLUÍDA) | Integration | G |
+| STORY-017 | ~~Integração com Google Search Console (dados de SEO)~~ (CONCLUÍDA) | Integration | G |
 
 ### P2 - Média Prioridade
 
 | ID | Story | Tipo | Estimativa |
 |----|-------|------|------------|
-| STORY-004 | Adicionar type hints a todos os scripts Python | Quality | M |
-| STORY-005 | Criar documentação de API dos scripts | Docs | M |
-| STORY-006 | Padronizar output dos scripts (JSON/Markdown) | Enhancement | M |
-| STORY-007 | Adicionar validação de entrada nos scripts | Quality | P |
+| STORY-004 | ~~Adicionar type hints a todos os scripts Python~~ (CONCLUÍDA) | Quality | M |
+| STORY-005 | ~~Criar documentação de API dos scripts~~ (CONCLUÍDA) | Docs | M |
+| STORY-006 | ~~Padronizar output dos scripts (JSON/Markdown)~~ (CONCLUÍDA) | Enhancement | M |
+| STORY-007 | ~~Adicionar validação de entrada nos scripts~~ (CONCLUÍDA) | Quality | P |
 | STORY-012 | ~~Expandir clones de voz com mais experts~~ (CONCLUÍDA) | Enhancement | G |
 | STORY-013 | Criar testes de integração para comandos MCP | Quality | M |
-| STORY-018 | Integração com Meta Ads API (gestão de campanhas) | Integration | G |
-| STORY-019 | Integração com YouTube Analytics API | Integration | G |
-| STORY-020 | Script de geração automática de relatório semanal | Feature | M |
+| STORY-018 | ~~Integração com Meta Ads API (gestão de campanhas)~~ (CONCLUÍDA) | Integration | G |
+| STORY-019 | ~~Integração com YouTube Analytics API~~ (CONCLUÍDA) | Integration | G |
+| STORY-020 | ~~Script de geração automática de relatório semanal~~ (CONCLUÍDA) | Feature | M |
 | STORY-021 | Integração com Notion API (publicação de conteúdo) | Integration | M |
 
 ### P3 - Baixa Prioridade
@@ -79,4 +79,4 @@ Backlog → Active → In Progress → Review → Completed
 
 ---
 
-*Última atualização: 2026-02-16*
+*Última atualização: 2026-02-17*
