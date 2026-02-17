@@ -1,7 +1,7 @@
 # Clone System Manifest - Marketing OS
 # Registro dos clones de experts disponíveis
 
-version: "1.0.0"
+version: "1.1.0"
 description: "Sistema de clones de experts em marketing e copywriting"
 
 clones:
@@ -149,22 +149,150 @@ clones:
     tone: "energético, irreverente, orientado a sistemas, prova-heavy"
     path: "suby/"
 
+  sugarman:
+    name: "Joseph Sugarman"
+    specialty: "Long copy, slippery slide, product storytelling, psychological triggers"
+    best_for: ["copy_vendas", "sales_letter", "landing_page", "anuncio", "email"]
+    niches: ["ecommerce", "produtos-fisicos", "infoprodutos", "tech", "saude"]
+    tone: "conversacional, curioso, hipnótico, narrativo"
+    path: "sugarman/"
+
+  provost:
+    name: "Gary Provost"
+    specialty: "Escrita com ritmo, variação de frase, show don't tell, economia de palavras"
+    best_for: ["copy_vendas", "artigo_seo", "email", "roteiro_video", "newsletter"]
+    niches: ["todos"]
+    tone: "musical, claro, didático, variado em ritmo"
+    path: "provost/"
+
+  hopkins:
+    name: "Claude Hopkins"
+    specialty: "Scientific advertising, copy baseada em fatos, teste e medição, diferenciação por processo"
+    best_for: ["copy_vendas", "anuncio", "landing_page", "email", "artigo_seo"]
+    niches: ["saude", "produtos-fisicos", "bens-consumo", "educacao"]
+    tone: "factual, educativo, sem hype, baseado em provas"
+    path: "hopkins/"
+
+  caples:
+    name: "John Caples"
+    specialty: "Headlines testadas, copy de resposta direta, estrutura de storytelling com identificação"
+    best_for: ["headline", "copy_vendas", "anuncio", "email", "landing_page"]
+    niches: ["educacao", "dev-pessoal", "saude", "financas", "marketing-digital"]
+    tone: "direto, específico, não-arrogante, orientado ao interesse do leitor"
+    path: "caples/"
+
+  collier:
+    name: "Robert Collier"
+    specialty: "Sales letters personalizadas, entrar na conversa da mente, construção de desejo"
+    best_for: ["sales_letter", "copy_vendas", "email", "landing_page", "reativacao_clientes"]
+    niches: ["dev-pessoal", "saude", "educacao", "financas", "empreendedorismo"]
+    tone: "íntimo, empático, pessoal, emotivo sem ser manipulador"
+    path: "collier/"
+
+  cialdini:
+    name: "Robert Cialdini"
+    specialty: "Psicologia da influência, 7 princípios de persuasão ética, Pre-Suasion"
+    best_for: ["copy_vendas", "landing_page", "email", "estrategia_marketing", "treinamento_vendas"]
+    niches: ["todos"]
+    tone: "acadêmico mas acessível, ético, baseado em evidências, estruturado"
+    path: "cialdini/"
+
+  godin:
+    name: "Seth Godin"
+    specialty: "Permission Marketing, Purple Cow, Tribes, liderança de nicho"
+    best_for: ["post_blog", "newsletter", "post_instagram", "post_linkedin", "brand_story"]
+    niches: ["marketing-digital", "empreendedorismo", "educacao", "dev-pessoal"]
+    tone: "curto, filosófico, metáforas poderosas, pergunta no final"
+    path: "godin/"
+
+  welsh:
+    name: "Justin Welsh"
+    specialty: "Solopreneurship, LinkedIn, construção de audiência, negócio de criador"
+    best_for: ["post_linkedin", "newsletter", "post_instagram", "copy_vendas"]
+    niches: ["empreendedorismo", "marketing-digital", "dev-pessoal", "criadores"]
+    tone: "números concretos, listas numeradas, transparência radical, antes/depois"
+    path: "welsh/"
+
+  cole:
+    name: "Nicolas Cole"
+    specialty: "Escrita digital, atomic essays, Ship30, ghostwriting, criação de categoria"
+    best_for: ["post_linkedin", "newsletter", "artigo_seo", "copy_vendas", "post_instagram"]
+    niches: ["escrita", "marketing-digital", "educacao", "criadores", "empreendedorismo"]
+    tone: "direto, sem floreio, 1-1-1 framework, problema do leitor primeiro"
+    path: "cole/"
+
+  flavio-augusto:
+    name: "Flávio Augusto da Silva"
+    specialty: "Empreendedorismo brasileiro, Geração de Valor, Wise Up, resiliência"
+    best_for: ["post_instagram", "roteiro_podcast", "post_linkedin", "email", "newsletter"]
+    niches: ["empreendedorismo", "dev-pessoal", "financas", "educacao", "brasil"]
+    tone: "informal brasileiro, história pessoal com números, urgência, contraste"
+    path: "flavio-augusto/"
+
+  joel-jota:
+    name: "Joel Jota"
+    specialty: "Alta performance, Gestão pelo Afeto, basquete, mentalidade de atleta"
+    best_for: ["post_instagram", "roteiro_reels", "post_linkedin", "email", "roteiro_podcast"]
+    niches: ["dev-pessoal", "empreendedorismo", "lideranca", "esporte", "educacao"]
+    tone: "energético, metáforas esportivas, desafio com amor, verbos de ação"
+    path: "joel-jota/"
+
+  conrado:
+    name: "Conrado Adolpho"
+    specialty: "8Ps do Marketing Digital, metodologia, mercado brasileiro, educação"
+    best_for: ["artigo_seo", "post_linkedin", "email", "roteiro_aula", "newsletter"]
+    niches: ["marketing-digital", "empreendedorismo", "educacao", "brasil", "pme"]
+    tone: "formal-acessível, processo antes de resultado, 8Ps como referência, dados BR"
+    path: "conrado/"
+
+  codie-sanchez:
+    name: "Codie Sanchez"
+    specialty: "Contrarian Thinking, boring businesses, aquisição de empresas, Wall Street"
+    best_for: ["newsletter", "post_linkedin", "email", "copy_vendas", "thread"]
+    niches: ["empreendedorismo", "financas", "investimentos", "negocios-locais", "aquisicoes"]
+    tone: "tese contrária, dados financeiros específicos, analítica, sem hype"
+    path: "codie-sanchez/"
+
+  mel-robbins:
+    name: "Mel Robbins"
+    specialty: "5 Second Rule, High 5 Habit, procrastinação, neurociência aplicada"
+    best_for: ["post_instagram", "newsletter", "post_linkedin", "roteiro_podcast", "email"]
+    niches: ["dev-pessoal", "saude", "produtividade", "empreendedorismo", "bem-estar"]
+    tone: "vulnerabilidade pessoal, ciência traduzida, ferramenta sempre presente, amiga calorosa"
+    path: "mel-robbins/"
+
+  ezra-firestone:
+    name: "Ezra Firestone"
+    specialty: "E-commerce DTC, BOOM!, Smart Marketer, email marketing, Facebook Ads"
+    best_for: ["newsletter", "email", "post_instagram", "post_linkedin", "roteiro_video"]
+    niches: ["ecommerce", "marketing-digital", "empreendedorismo", "financas", "tech"]
+    tone: "dados reais do negócio, sistemas, mecanismo explicado, prosperidade consciente"
+    path: "ezra-firestone/"
+
+  rachitsky:
+    name: "Lenny Rachitsky"
+    specialty: "Product management, Lenny's Newsletter, benchmarks, PLG, crescimento"
+    best_for: ["newsletter", "post_linkedin", "artigo_seo", "thread", "podcast"]
+    niches: ["tech", "saas", "startups", "produto", "empreendedorismo"]
+    tone: "pesquisa antes de opinião, benchmarks como âncora, frameworks nomeados, peer para peer"
+    path: "rachitsky/"
+
 matching_rules:
   - content_type: "copy_vendas"
     primary: "hormozi"
-    alternatives: ["halbert", "schwartz"]
+    alternatives: ["halbert", "schwartz", "sugarman", "collier", "caples"]
   - content_type: "landing_page"
     primary: "brunson"
     alternatives: ["hormozi", "ogilvy"]
   - content_type: "email"
     primary: "halbert"
-    alternatives: ["ogilvy"]
+    alternatives: ["ogilvy", "collier", "sugarman"]
   - content_type: "artigo_seo"
     primary: "ogilvy"
     alternatives: ["schwartz"]
   - content_type: "anuncio"
     primary: "schwartz"
-    alternatives: ["hormozi", "brunson"]
+    alternatives: ["hormozi", "brunson", "caples", "hopkins"]
   - content_type: "roteiro_video"
     primary: "brunson"
     alternatives: ["hormozi"]
@@ -245,7 +373,7 @@ matching_rules:
     alternatives: ["hormozi", "kennedy"]
   - content_type: "sales_letter"
     primary: "kennedy"
-    alternatives: ["halbert", "schwartz"]
+    alternatives: ["collier", "halbert", "schwartz", "sugarman"]
   - content_type: "funil_vendas"
     primary: "suby"
     alternatives: ["brunson", "kennedy"]
@@ -261,3 +389,90 @@ matching_rules:
   - content_type: "geracao_leads"
     primary: "suby"
     alternatives: ["kennedy", "hormozi"]
+  - content_type: "headline"
+    primary: "caples"
+    alternatives: ["ogilvy", "sugarman"]
+  - content_type: "ritmo_escrita"
+    primary: "provost"
+    alternatives: ["ogilvy"]
+  - content_type: "copy_produto_fisico"
+    primary: "sugarman"
+    alternatives: ["halbert", "kennedy"]
+  - content_type: "copy_cientifica"
+    primary: "hopkins"
+    alternatives: ["schwartz", "ogilvy"]
+  - content_type: "influencia_persuasao"
+    primary: "cialdini"
+    alternatives: ["collier", "halbert"]
+  - content_type: "carta_vendas_longa"
+    primary: "collier"
+    alternatives: ["halbert", "sugarman"]
+  - content_type: "sequencia_email_nutrição"
+    primary: "collier"
+    alternatives: ["cialdini", "halbert"]
+  - content_type: "post_blog"
+    primary: "godin"
+    alternatives: ["ogilvy", "cole"]
+  - content_type: "post_instagram"
+    primary: "joel-jota"
+    alternatives: ["mel-robbins", "flavio-augusto", "godin"]
+  - content_type: "thread"
+    primary: "codie-sanchez"
+    alternatives: ["welsh", "cole"]
+  - content_type: "solopreneurship"
+    primary: "welsh"
+    alternatives: ["cole", "godin"]
+  - content_type: "escrita_digital"
+    primary: "cole"
+    alternatives: ["welsh", "ogilvy"]
+  - content_type: "atomic_essay"
+    primary: "cole"
+    alternatives: ["welsh", "godin"]
+  - content_type: "alta_performance"
+    primary: "joel-jota"
+    alternatives: ["flavio-augusto"]
+  - content_type: "gestao_equipes"
+    primary: "joel-jota"
+    alternatives: ["leila-hormozi"]
+  - content_type: "empreendedorismo_br"
+    primary: "flavio-augusto"
+    alternatives: ["conrado", "joel-jota"]
+  - content_type: "marketing_digital_br"
+    primary: "conrado"
+    alternatives: ["patel", "flavio-augusto"]
+  - content_type: "aquisicao_negocios"
+    primary: "codie-sanchez"
+    alternatives: ["abraham", "kennedy"]
+  - content_type: "boring_business"
+    primary: "codie-sanchez"
+    alternatives: ["kennedy"]
+  - content_type: "habitos"
+    primary: "mel-robbins"
+    alternatives: ["joel-jota"]
+  - content_type: "procrastinacao"
+    primary: "mel-robbins"
+    alternatives: ["joel-jota"]
+  - content_type: "ecommerce"
+    primary: "ezra-firestone"
+    alternatives: ["suby", "hormozi"]
+  - content_type: "email_ecommerce"
+    primary: "ezra-firestone"
+    alternatives: ["halbert", "collier"]
+  - content_type: "facebook_ads"
+    primary: "ezra-firestone"
+    alternatives: ["suby", "schwartz"]
+  - content_type: "product_management"
+    primary: "rachitsky"
+    alternatives: ["ellis", "chen"]
+  - content_type: "saas_growth"
+    primary: "rachitsky"
+    alternatives: ["ellis", "chen"]
+  - content_type: "benchmarks_produto"
+    primary: "rachitsky"
+    alternatives: ["ellis"]
+  - content_type: "roteiro_podcast"
+    primary: "mel-robbins"
+    alternatives: ["flavio-augusto", "joel-jota", "ezra-firestone"]
+  - content_type: "nicho_tribo"
+    primary: "godin"
+    alternatives: ["welsh", "cole"]
