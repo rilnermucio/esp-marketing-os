@@ -34,11 +34,11 @@ Backlog priorizado de melhorias e novas funcionalidades.
 | STORY-006 | ~~Padronizar output dos scripts (JSON/Markdown)~~ (CONCLUÍDA) | Enhancement | M |
 | STORY-007 | ~~Adicionar validação de entrada nos scripts~~ (CONCLUÍDA) | Quality | P |
 | STORY-012 | ~~Expandir clones de voz com mais experts~~ (CONCLUÍDA) | Enhancement | G |
-| STORY-013 | Criar testes de integração para comandos MCP | Quality | M |
+| STORY-013 | ~~Criar testes de integração para comandos MCP~~ (CONCLUÍDA) | Quality | M |
 | STORY-018 | ~~Integração com Meta Ads API (gestão de campanhas)~~ (CONCLUÍDA) | Integration | G |
 | STORY-019 | ~~Integração com YouTube Analytics API~~ (CONCLUÍDA) | Integration | G |
 | STORY-020 | ~~Script de geração automática de relatório semanal~~ (CONCLUÍDA) | Feature | M |
-| STORY-021 | Integração com Notion API (publicação de conteúdo) | Integration | M |
+| STORY-021 | ~~Integração com Notion API (publicação de conteúdo)~~ (CONCLUÍDA) | Integration | M |
 
 ### P3 - Baixa Prioridade
 
@@ -79,4 +79,4 @@ Backlog → Active → In Progress → Review → Completed
 
 ---
 
-*Última atualização: 2026-02-17*
+*Última atualização: 2026-02-17 (sessão 3)*

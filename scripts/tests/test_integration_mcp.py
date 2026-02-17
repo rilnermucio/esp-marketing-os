@@ -259,6 +259,8 @@ class TestCoberturaDeSscripts:
         "youtube_analytics.py", # integração de API (não CLI direto)
         "weekly_report.py",     # script standalone (não precisa de proxy MOS)
         "project_manager.py",   # registrado via subcomandos no MOS
+        "notion_api.py",        # integração de API (não CLI direto)
+        "tiktok_trends_scraper.py",  # scraper assíncrono (não CLI direto)
     }
 
     def test_scripts_relevantes_estao_no_command_map(self):
