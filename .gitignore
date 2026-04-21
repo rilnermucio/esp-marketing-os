@@ -4,13 +4,22 @@
 # Claude Code
 .claude/
 
+# Other AI CLIs (local configs, equivalent to .claude/)
+.aios/
+.antigravity/
+.codex/
+.cursor/
+
 # Outputs gerados
 outputs/
+output/
+Roteiro_*.md
 
 # Python
 __pycache__/
 *.pyc
 .env
+.env.backup*
 
 # Arquivos temporários
 *.tmp
