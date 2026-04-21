@@ -1,7 +1,7 @@
 {
   "name": "marketing-os",
-  "version": "4.0.0",
-  "description": "Marketing OS — sistema operacional completo de marketing digital. 16 subagentes especializados: Copy, SEO, Social, Video, Audio, Design, AI Tools, Analytics, Email, Ads, Research, Brand, Storytelling, Funnel, Growth e Launch.",
+  "version": "5.1.0",
+  "description": "Marketing OS — sistema operacional completo de marketing digital. 18 subagentes especializados: Copy, SEO, Social, Video, Audio, Design, AI Tools, Analytics, Email, Ads, Research, Brand, Storytelling, Funnel, Growth, Launch, Infoproduct Builder e AB Testing.",
   "author": "rilnermucio",
   "repository": "https://github.com/rilnermucio/Agents",
   "skills": [

@@ -11,6 +11,8 @@ This plugin integrates with external tools via MCP (Model Context Protocol).
 | **Canva** | Graphics, social media designs, templates | OAuth via Canva |
 | **Slack** | Team notifications, content approvals | OAuth via Slack |
 | **Similarweb** | Competitor analysis, traffic data, trends | API key required |
+| **Meta Ads (Especializei)** | Create/manage Meta ad campaigns, audiences, creatives | OAuth via Meta |
+| **Playwright** | Browser automation, screenshot capture, web testing | Local (no auth) |
 
 ## Connector Usage
 
@@ -43,6 +45,21 @@ Analyze competitors and market trends.
 - Traffic analysis
 - Competitor benchmarking
 - Trend identification
+
+### Meta Ads (Especializei)
+Create and manage advertising campaigns on Meta platforms.
+- Create campaigns, ad sets, and ads
+- Target audiences with interests, demographics, and behaviors
+- Generate ad creatives and copy
+- Monitor ad performance and insights
+- Search Meta Ads archive for competitor research
+
+### Playwright
+Automate browser interactions for testing and content capture.
+- Take screenshots of web pages
+- Navigate and interact with websites
+- Capture competitor page layouts
+- Test landing pages
 
 ## Setup
 

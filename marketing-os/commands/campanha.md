@@ -473,6 +473,6 @@ Cada preset tem um clone recomendado, mas você pode substituir:
 
 - [workflows/end-to-end-campaign-workflow.md](../workflows/end-to-end-campaign-workflow.md) — Workflow completo de campanha
 - [workflows/content-pipeline.md](../workflows/content-pipeline.md) — Pipeline de produção de conteúdo
-- [squads/marketing-os/data/clones/clone-manifest.yaml](../squads/marketing-os/data/clones/clone-manifest.yaml) — Sistema de clones
+- [squads/marketing-os/data/clones/clone-manifest.yaml](../../squads/marketing-os/data/clones/clone-manifest.yaml) — Sistema de clones
 - [subagents/ab-testing-agent.md](../subagents/ab-testing-agent.md) — Testes A/B para campanhas
 - [scripts/ab_generator.py](../scripts/ab_generator.py) — Geração automática de variantes
