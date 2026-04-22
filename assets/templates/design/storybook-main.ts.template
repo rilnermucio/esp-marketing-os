@@ -1,0 +1,62 @@
+/**
+ * Storybook 8+ config — {{PROJECT_NAME}}
+ * Place at `.storybook/main.ts` na raiz do repo.
+ *
+ * Reqs: storybook@^8, @storybook/react-vite, @storybook/addon-essentials,
+ *       @storybook/addon-a11y, @storybook/addon-interactions,
+ *       @storybook/addon-themes, storybook-addon-designs
+ */
+
+import type { StorybookConfig } from '@storybook/react-vite';
+
+const config: StorybookConfig = {
+  stories: [
+    '../src/**/*.mdx',
+    '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)',
+  ],
+
+  addons: [
+    '@storybook/addon-essentials',   // controls, docs, viewport, backgrounds, actions, measure, outline
+    '@storybook/addon-a11y',          // axe-core integrado, relatório de a11y por story
+    '@storybook/addon-interactions',  // play functions para testar fluxos
+    '@storybook/addon-links',         // links entre stories
+    '@storybook/addon-themes',        // toggle light/dark direto no toolbar
+    'storybook-addon-designs',        // embed Figma dentro da docs page
+  ],
+
+  framework: {
+    name: '@storybook/react-vite',
+    options: {},
+  },
+
+  docs: {
+    autodocs: 'tag',        // só gera autodocs para componentes com tag 'autodocs'
+    defaultName: 'Docs',
+  },
+
+  typescript: {
+    reactDocgen: 'react-docgen-typescript',
+    reactDocgenTypescriptOptions: {
+      shouldExtractLiteralValuesFromEnum: true,
+      shouldRemoveUndefinedFromOptional: true,
+      propFilter: (prop) => {
+        if (prop.parent) {
+          return !/node_modules/.test(prop.parent.fileName);
+        }
+        return true;
+      },
+    },
+  },
+
+  staticDirs: ['../public'],
+
+  viteFinal: async (config) => {
+    return config;
+  },
+
+  features: {
+    experimentalRSC: false,
+  },
+};
+
+export default config;
