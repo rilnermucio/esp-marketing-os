@@ -140,7 +140,7 @@ python scripts/validate_agents.py
 
 ## Próximos Passos Pós-Migração
 
-- Wirar o engine JS `.aios-core/core/orchestration/` aos agents (state machine + durabilidade)
+- Wirar engine de orquestração aos agents (state machine + durabilidade) — implementação em `scripts/` ou hooks do Claude Code
 - Logging estruturado por dispatch (JSONL com agent, input, output, gates)
 - Feedback loop: capturar performance das peças publicadas e retroalimentar
 - Paralelismo em mais workflows (atualmente só content-pipeline)

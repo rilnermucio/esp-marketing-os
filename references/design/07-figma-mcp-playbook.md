@@ -289,10 +289,10 @@ Por que falha: sem especificar biblioteca UI, tokens, e paths, o agente pode imp
 
 ### 6.2. Conexão MCP server ao Claude Code
 
-O Marketing OS usa o MCP governance centralizado no agente @devops. O Figma MCP é adicionado via:
+O Marketing OS gerencia MCPs via `.mcp.json` na raiz do projeto. O Figma MCP é adicionado editando esse arquivo ou via `claude mcp add figma`:
 
 ```
-@devops *add-mcp figma
+claude mcp add figma
 ```
 
 Após adição, o agente roda `gh auth status` equivalente para Figma e retorna `mcp: figma connected` quando tudo está verde.
@@ -648,7 +648,7 @@ Resposta vem em JSON, o que acelera troubleshoot versus ida-e-volta humana.
 
 **Hipótese:** token sem escopo `variables:write` ou `components:write`.
 
-**Fix:** Regenere o token com escopos completos (ver §6.3) e reautentique via @devops.
+**Fix:** Regenere o token com escopos completos (ver §6.3) e reautentique reaplicando o token em `.mcp.json`.
 
 ### 14.3. Resultado visual não bate com código
 
@@ -668,7 +668,7 @@ Resposta vem em JSON, o que acelera troubleshoot versus ida-e-volta humana.
 - Figma Dev Mode desativado no arquivo.
 - Rate limit (muitos calls em janela curta).
 
-**Fix:** rode o probe do §6.4. Se timeout, valide token. Se rate limit, espere 60s e retry. Se persistir, escale para @devops via `*list-mcps`.
+**Fix:** rode o probe do §6.4. Se timeout, valide token. Se rate limit, espere 60s e retry. Se persistir, verifique status via `claude mcp list`.
 
 ### 14.5. Skill produz resultado ruim (genérico ou errado)
 
@@ -678,7 +678,7 @@ Resposta vem em JSON, o que acelera troubleshoot versus ida-e-volta humana.
 2. **Dividir a task.** Component muito grande, quebre em subcomponents.
 3. **Fallback manual.** Faça no UI do Figma os 2 a 3 components críticos, use MCP para o resto.
 4. **Pedir verbose.** Peça para a skill explicar suas decisões antes de executar, revise, aprove.
-5. **Escalar.** Se a skill falha repetidamente, é bug. Documente em `docs/qa/mcp-issues/` e notifique @devops.
+5. **Escalar.** Se a skill falha repetidamente, é bug. Documente em `docs/qa/mcp-issues/` para análise.
 
 ### 14.6. Publish falha com erro de permissão
 
