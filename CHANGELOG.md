@@ -7,6 +7,36 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
 
 ---
 
+## [6.1.0] — 2026-05-07 (distribution-ready)
+
+### Added
+- 18 native subagents (`agents/mos-*.md`) now versioned and shipped with the plugin
+  (previously gitignored at `.claude/agents/`, never embarked via marketplace install)
+- Root `CLAUDE.md` describing plugin architecture, dispatch protocol, quality gates,
+  workspace separation, and validate_agents.py usage
+
+### Fixed
+- Quality gate hook in all 18 agents now uses `${CLAUDE_PLUGIN_ROOT}/scripts/hooks/quality_gate_hook.py`
+  instead of relative `scripts/hooks/quality_gate_hook.py`. Per Claude Code hook docs,
+  hook subprocess CWD is the user's working directory, so the relative path failed
+  with exit 2 ("No such file or directory") in any consumer environment outside the
+  plugin root. Hooks now resolve correctly regardless of CWD.
+- `test_workspace_separation`: scans `agents/` instead of removed `.claude/agents/`,
+  allowlists `commands/criar-meu-clone.md` (legitimately uses workspace samples by design)
+- `test_integration_mcp`: excludes `voice_extractor.py` from COMMAND_MAP coverage
+  (invoked directly by `/criar-meu-clone`, not via `mos.py`)
+
+### Removed
+- Synkra AIOS residue: header in `.env.example`, `AIOS_VERSION` env var,
+  AIOS-FullStack ignore block in `.gitignore`, and 27 local-only AIOS files in `.claude/`
+  (CLAUDE.md, rules/, commands/AIOS/) that were leftover from the v6.0.0 cleanup
+
+### Migration
+- No action required for plugin consumers — install or update via marketplace as usual
+- Local developers: pull and verify `agents/` is at repo root; `.claude/agents/` is gone
+
+---
+
 ## [6.0.0] — 2026-05-06 (refactor/plugin-first)
 
 ### Added
