@@ -27,24 +27,24 @@ Motivo: cada subagent tem contexto próprio (evita poluição do main), tools fi
 
 | Briefing típico do usuário | Agent | Arquivo |
 |----|----|----|
-| "escreve headline / CTA / sales letter / microcopy" | `mos-copy` | `.claude/agents/mos-copy.md` |
-| "cria artigo SEO / keyword research / on-page" | `mos-seo` | `.claude/agents/mos-seo.md` |
-| "pesquisa tendências / concorrentes / audience / validar produto" | `mos-research` | `.claude/agents/mos-research.md` |
-| "post Instagram / LinkedIn / TikTok / Twitter / cross-platform" | `mos-social` | `.claude/agents/mos-social.md` |
-| "roteiro YouTube / Reels / VSL / Shorts" | `mos-video` | `.claude/agents/mos-video.md` |
-| "podcast / roteiro de áudio / spot / audiobook" | `mos-audio` | `.claude/agents/mos-audio.md` |
-| "prompt para IA gerar imagem / vídeo" | `mos-ai-tools` | `.claude/agents/mos-ai-tools.md` |
-| "direção criativa / paleta / tipografia / design spec" | `mos-design` | `.claude/agents/mos-design.md` |
-| "métricas / relatório / análise de performance / dashboard" | `mos-analytics` | `.claude/agents/mos-analytics.md` |
-| "sequência de email / newsletter / automação / subject line" | `mos-email` | `.claude/agents/mos-email.md` |
-| "campanha Meta Ads / Google Ads / TikTok Ads (completa)" | `mos-ads` | `.claude/agents/mos-ads.md` |
-| "identidade de marca / posicionamento / tom de voz" | `mos-brand` | `.claude/agents/mos-brand.md` |
-| "storytelling / narrativa / arco de história" | `mos-storytelling` | `.claude/agents/mos-storytelling.md` |
-| "funil / jornada do cliente / TOFU MOFU BOFU" | `mos-funnel` | `.claude/agents/mos-funnel.md` |
-| "growth hacking / aquisição / crescimento" | `mos-growth` | `.claude/agents/mos-growth.md` |
-| "lançamento de produto / campanha de lançamento / PLF" | `mos-launch` | `.claude/agents/mos-launch.md` |
-| "infoproduto / curso / ebook / membership / mentoria" | `mos-infoproduct` | `.claude/agents/mos-infoproduct.md` |
-| "teste A/B / variação / otimização de conversão" | `mos-ab-testing` | `.claude/agents/mos-ab-testing.md` |
+| "escreve headline / CTA / sales letter / microcopy" | `mos-copy` | `agents/mos-copy.md` |
+| "cria artigo SEO / keyword research / on-page" | `mos-seo` | `agents/mos-seo.md` |
+| "pesquisa tendências / concorrentes / audience / validar produto" | `mos-research` | `agents/mos-research.md` |
+| "post Instagram / LinkedIn / TikTok / Twitter / cross-platform" | `mos-social` | `agents/mos-social.md` |
+| "roteiro YouTube / Reels / VSL / Shorts" | `mos-video` | `agents/mos-video.md` |
+| "podcast / roteiro de áudio / spot / audiobook" | `mos-audio` | `agents/mos-audio.md` |
+| "prompt para IA gerar imagem / vídeo" | `mos-ai-tools` | `agents/mos-ai-tools.md` |
+| "direção criativa / paleta / tipografia / design spec" | `mos-design` | `agents/mos-design.md` |
+| "métricas / relatório / análise de performance / dashboard" | `mos-analytics` | `agents/mos-analytics.md` |
+| "sequência de email / newsletter / automação / subject line" | `mos-email` | `agents/mos-email.md` |
+| "campanha Meta Ads / Google Ads / TikTok Ads (completa)" | `mos-ads` | `agents/mos-ads.md` |
+| "identidade de marca / posicionamento / tom de voz" | `mos-brand` | `agents/mos-brand.md` |
+| "storytelling / narrativa / arco de história" | `mos-storytelling` | `agents/mos-storytelling.md` |
+| "funil / jornada do cliente / TOFU MOFU BOFU" | `mos-funnel` | `agents/mos-funnel.md` |
+| "growth hacking / aquisição / crescimento" | `mos-growth` | `agents/mos-growth.md` |
+| "lançamento de produto / campanha de lançamento / PLF" | `mos-launch` | `agents/mos-launch.md` |
+| "infoproduto / curso / ebook / membership / mentoria" | `mos-infoproduct` | `agents/mos-infoproduct.md` |
+| "teste A/B / variação / otimização de conversão" | `mos-ab-testing` | `agents/mos-ab-testing.md` |
 
 ## Padrões de Orquestração
 
@@ -185,7 +185,7 @@ Após o agent (ou agents em paralelo) retornar(em):
 
 ## Arquitetura (two-tier)
 
-- **Tier 1** (`.claude/agents/mos-*.md`): system prompts enxutos (~250 linhas) com dispatch protocol, output schema, quality gates. Carregados pelo Claude Code automaticamente quando sessão abre.
+- **Tier 1** (`agents/mos-*.md`): system prompts enxutos (~250 linhas) com dispatch protocol, output schema, quality gates. Carregados pelo Claude Code automaticamente quando sessão abre.
 - **Tier 2** (`subagents/*-agent.md`): knowledge base profunda (~3500 linhas cada) com frameworks, cases, tabelas, exemplos. Lida sob demanda via Read pelos agents tier-1.
 
 Isso mantém contextos dos agents leves, carrega profundidade só quando precisa, e permite evoluir knowledge sem mexer no dispatch.

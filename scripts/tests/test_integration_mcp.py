@@ -258,6 +258,7 @@ class TestCoberturaDeSscripts:
         "notion_api.py",        # integração de API (não CLI direto)
         "tiktok_trends_scraper.py",  # scraper assíncrono (não CLI direto)
         "validate_agents.py",   # utilitário de validação de infra (não CLI MOS)
+        "voice_extractor.py",   # invocado direto por /criar-meu-clone, não pelo CLI mos.py
     }
 
     def test_scripts_relevantes_estao_no_command_map(self):

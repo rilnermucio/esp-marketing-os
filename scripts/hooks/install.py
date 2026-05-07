@@ -2,11 +2,11 @@
 """
 Marketing OS — Hook Installer
 
-Adiciona o bloco `hooks:` no frontmatter de cada `.claude/agents/mos-*.md`,
+Adiciona o bloco `hooks:` no frontmatter de cada `agents/mos-*.md`,
 ativando o quality gate automatico (Write/Edit/MultiEdit).
 
 Idempotente: se o agent ja tem hooks, pula sem alterar.
-Seguro: nao toca em nada fora de .claude/agents/mos-*.md.
+Seguro: nao toca em nada fora de agents/mos-*.md.
 
 Uso:
     python3 scripts/hooks/install.py
@@ -61,7 +61,7 @@ def inject(filepath: str) -> str:
 def main() -> int:
     if not os.path.isdir(AGENTS_DIR):
         print(f"Diretorio nao encontrado: {AGENTS_DIR}")
-        print("Crie agents nativos em .claude/agents/mos-*.md primeiro.")
+        print("Crie agents nativos em agents/mos-*.md primeiro.")
         return 1
 
     files = sorted(glob.glob(os.path.join(AGENTS_DIR, "mos-*.md")))

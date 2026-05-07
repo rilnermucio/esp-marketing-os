@@ -3,7 +3,7 @@
 Marketing OS — PreToolUse Quality Gate Hook
 
 Valida escritas (Write/Edit/MultiEdit) contra regras de qualidade do Marketing OS.
-Ativado via frontmatter `hooks:` em cada `.claude/agents/mos-*.md`.
+Ativado via frontmatter `hooks:` em cada `agents/mos-*.md`.
 
 Tres niveis de validacao:
 

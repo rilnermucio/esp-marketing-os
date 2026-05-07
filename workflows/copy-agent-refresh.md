@@ -80,7 +80,7 @@ Renomear título PARTE XVI para ano atual.
 Após editar `copy-agent.md`, verificar referências em:
 
 - `subagents/copy-agent.md` — Última Atualização (linha 11)
-- `.claude/agents/mos-copy.md` — capacidades referenciam PARTE X (sem mudar números)
+- `agents/mos-copy.md` — capacidades referenciam PARTE X (sem mudar números)
 - `README.md` — versão se mudou
 - `CHANGELOG.md` — adicionar entrada
 

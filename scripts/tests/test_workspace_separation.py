@@ -6,8 +6,10 @@ from pathlib import Path
 import pytest
 
 
-PLUGIN_DIRS = ["skills", "subagents", "commands", "workflows", "assets", "references", ".claude/agents"]
+PLUGIN_DIRS = ["skills", "subagents", "commands", "workflows", "assets", "references", "agents"]
 LEAK_PATTERNS = ["workspace/", "../workspace", "/workspace/"]
+# Files that legitimately reference workspace/ by design (e.g. commands that read user-local samples)
+WORKSPACE_REF_ALLOWLIST = {"commands/criar-meu-clone.md"}
 
 
 def test_workspace_dir_exists_after_phase_1(project_root: Path) -> None:
@@ -29,11 +31,14 @@ def test_no_plugin_file_references_workspace(project_root: Path) -> None:
                 continue
             if path.suffix not in {".md", ".yaml", ".yml", ".json", ".py"}:
                 continue
+            rel = str(path.relative_to(project_root))
+            if rel in WORKSPACE_REF_ALLOWLIST:
+                continue
             try:
                 content = path.read_text(encoding="utf-8")
             except (UnicodeDecodeError, IsADirectoryError):
                 continue
             for pattern in LEAK_PATTERNS:
                 if pattern in content:
-                    leaks.append(f"{path.relative_to(project_root)}: contains '{pattern}'")
+                    leaks.append(f"{rel}: contains '{pattern}'")
     assert not leaks, "Plugin files reference workspace paths:\n" + "\n".join(leaks)

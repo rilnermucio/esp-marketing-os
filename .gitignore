@@ -3,8 +3,6 @@
 
 # Claude Code & other AI CLIs (local configs)
 .claude/
-.aios/
-.aios-core/
 .antigravity/
 .codex/
 .cursor/
@@ -18,8 +16,11 @@ workspace/**
 
 # Secrets
 .env
+.env.*.local
 .env.backup.*
 .env.local
+*.key
+*.pem
 
 # Outputs gerados (legacy paths, não usar mais — workspace/ é o lugar)
 outputs/
@@ -34,6 +35,16 @@ __pycache__/
 # Node
 node_modules/
 
+# Build & Logs
+dist/
+build/
+logs/
+
+# IDE & OS
+Thumbs.db
+.idea/
+*.swp
+
 # Backups de migração
 *.pre-migration.backup
 *.bak
@@ -41,31 +52,3 @@ node_modules/
 # Arquivos temporários
 *.tmp
 *.log
-
-# AIOS-FullStack Framework Files (auto-managed - do not edit)
-outputs/minds/
-.aios-installation-config.yaml
-.aios-pm-config.yaml
-package.json
-package-lock.json
-# End AIOS-FullStack auto-managed section
-
-# Environment & Secrets (AIOS)
-.env.*.local
-*.key
-*.pem
-
-# Build & Logs (AIOS)
-dist/
-build/
-logs/
-
-# IDE & OS (AIOS)
-Thumbs.db
-.idea/
-*.swp
-
-# AIOS Local (AIOS)
-.aios-core/local/
-.claude/settings.local.json
-.aios/install-log.txt

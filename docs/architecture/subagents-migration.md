@@ -14,7 +14,7 @@ v6.0 migra para **native subagents do Claude Code** (`.claude/agents/`), ganhand
 ## Arquitetura Two-Tier
 
 ```
-.claude/agents/mos-*.md          TIER 1: dispatch + protocol (~250 linhas cada)
+agents/mos-*.md          TIER 1: dispatch + protocol (~250 linhas cada)
 subagents/*-agent.md              TIER 2: knowledge base profundo (~3500 linhas cada)
 skills/marketing-os/SKILL.md      ORQUESTRADOR: dispatch map
 marketing-os/commands/*.md        COMMANDS: entry points que acionam agents
@@ -22,7 +22,7 @@ marketing-os/commands/*.md        COMMANDS: entry points que acionam agents
 
 ### Tier 1 (enxuto, carregado sempre)
 
-Cada `.claude/agents/mos-X.md` contém:
+Cada `agents/mos-X.md` contém:
 
 ```yaml
 ---
@@ -118,7 +118,7 @@ Regras comuns (ambos níveis):
 
 ## Como Adicionar Novo Agent
 
-1. Criar `.claude/agents/mos-X.md` seguindo padrão de um existente (ex: copiar `mos-copy.md` e adaptar).
+1. Criar `agents/mos-X.md` seguindo padrão de um existente (ex: copiar `mos-copy.md` e adaptar).
 2. Preencher YAML frontmatter (name, description, tools, model).
 3. Apontar para knowledge base via `Read` em `subagents/X.md` (ou criar um novo knowledge).
 4. Rodar `python scripts/validate_agents.py`.
@@ -128,7 +128,7 @@ Regras comuns (ambos níveis):
 ## Backup e Rollback
 
 - `skills/marketing-os/SKILL.md.pre-migration.backup`: skill v5.x preservado.
-- Rollback: restaurar backup + remover `.claude/agents/mos-*.md`.
+- Rollback: restaurar backup + remover `agents/mos-*.md`.
 - Os arquivos tier-2 em `subagents/*-agent.md` são **intactos** na migração (zero duplicação).
 
 ## Validação
