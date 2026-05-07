@@ -17,7 +17,7 @@ Cada agente tem acesso a uma knowledge base própria (`subagents/*.md`), uma bib
 
 ```bash
 # Clone o repositório
-git clone https://github.com/rilnermucio/Agents.git "Marketing OS"
+git clone https://github.com/rilnermucio/Marketing-OS.git "Marketing OS"
 cd "Marketing OS"
 
 # Instale as deps Python (apenas pra rodar testes/validações)

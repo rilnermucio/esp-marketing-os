@@ -7,6 +7,24 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
 
 ---
 
+## [6.1.2] — 2026-05-07
+
+### Fixed
+- `plugin.json` schema violations rejected by Claude Code's manifest validator:
+  - `author`: changed from string `"rilnermucio"` to object `{"name": "rilnermucio"}`
+  - removed `skills: ["skills/marketing-os"]` field (default discovery from `skills/`
+    folder already covers this and the explicit value was rejected as invalid input)
+  - replaced `categories` array with single `category: "marketing"` (per spec,
+    `category` is singular; `keywords` already covers the rest)
+  - corrected `repository` URL from old `rilnermucio/Agents` to `rilnermucio/Marketing-OS`
+  - added `license: "MIT"` (already declared in LICENSE file)
+- `README.md`: same repo-URL correction in the `git clone` example
+
+Without these, `/plugin install marketing-os@marketing-os-marketplace` failed with
+"invalid manifest file ... author: expected object, received string, skills: Invalid input".
+
+---
+
 ## [6.1.1] — 2026-05-07
 
 ### Fixed
