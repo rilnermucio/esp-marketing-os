@@ -4087,9 +4087,906 @@ LIÇÃO: super-app brasileiro precisa visual coeso
 
 ---
 
+## Design DNA System (25 Designers)
+
+Sistema paralelo aos 35 voice clones (copy/voice). 25 designers mestres com **DNA visual mapeado** em arquivo dedicado.
+
+### Protocolo Obrigatório
+
+Quando o briefing pedir "estilo X" ou "tom visual Y" referenciando designer famoso:
+
+1. **SEMPRE leia primeiro** `assets/clones/design/design-dna-system.md` (seção do designer específico)
+2. Aplique DNA: paleta + tipografia + composição + tendência + anti-padrões
+3. Combine com brand do cliente (não substitua brand)
+4. Valide: o resultado parece com o designer ou genérico AI?
+
+### 25 Designers Disponíveis
+
+**Classic Masters (10)**: Dieter Rams, Massimo Vignelli, Paul Rand, Saul Bass, Milton Glaser, Paula Scher, Stefan Sagmeister, Erik Spiekermann, Josef Müller-Brockmann, Alvin Lustig
+
+**Modern Innovators (8)**: Jessica Hische, Aaron Draplin, David Carson, Steven Heller, Jonathan Ive, Tobias van Schneider, Ryan Hawthorne, Mike Monteiro
+
+**Tech/Digital Studios (4)**: Pentagram, IDEO, Frog Design, Bricolage Studio
+
+**BR/Latam (3)**: Tide Hellmeister, Crama Design, Marko Brajovic
+
+### Mapa Arquétipo → Designer
+
+| Arquétipo (do mos-brand) | Designer Primário | Por quê |
+|--------------------------|-------------------|---------|
+| Inocente | Glaser, Lustig | Joy + warmth + poetic |
+| Sábio | Müller-Brockmann, Spiekermann | Rational + sistêmico |
+| Herói | Rand, Scher | Bold + memorável |
+| Forasteiro | Sagmeister, Carson | Provocativo |
+| Mago | Ive, Hische | Transformação + craft |
+| Cara Comum | Draplin, Glaser | Acessível + warm |
+| Amante | Lustig, Hische | Sensorial + poético |
+| Bobo | Glaser, Sagmeister | Joy + provocativo |
+| Prestativo | Hawthorne, Hellmeister | Calm + reliable |
+| Criador | Sagmeister, Carson | Experimental |
+| Governante | Vignelli, Rams | Premium + atemporal |
+| Explorador | Draplin, Brajovic | Outdoor + organic |
+
+### Mapa Tipo de Projeto → Designer
+
+| Projeto | Designer Primário | Alternativo |
+|---------|-------------------|-------------|
+| Logo corporate atemporal | Rand | Vignelli |
+| Brand premium minimalista | Rams | Ive |
+| Tipografia bold protagonista | Scher | van Schneider |
+| Title sequence / Reels intro | Bass | Hische |
+| Logo com humor/soul | Glaser | Draplin |
+| Wayfinding / sinalização | Vignelli | Spiekermann |
+| Editorial tipográfico | Müller-Brockmann | Scher |
+| Brand experimental | Sagmeister | Carson |
+| Lettering / wordmark | Hische | Draplin |
+| Brand outdoor/craft | Draplin | Glaser |
+| Brand poético/intelectual | Lustig | Glaser |
+| Tech product brand | Ive | Rams |
+| SaaS premium | Hawthorne | Ive |
+| Personal brand creator | van Schneider | Hische |
+| Brand BR sofisticado | Hellmeister | Crama |
+| Brand BR moderno indie | Crama | Brajovic |
+
+### Combinação Híbrida (70/30)
+
+Como nos voice clones, pode combinar 2 designers:
+
+```
+PROTOCOLO:
+1. Designer primário (70% do DNA visual)
+2. Designer secundário (30% para contraste/depth)
+3. Validar coerência
+
+EXEMPLOS:
+├── Vignelli + Sagmeister → Premium clean com toque conceitual
+├── Rams + Glaser → Minimalismo com warmth
+├── Scher + Hische → Bold typography com craft
+├── Ive + Sagmeister → Premium tech com soul
+├── Hellmeister + Hische → BR sofisticado com lettering custom
+└── Draplin + Lustig → Vintage com poetry
+```
+
+### Triggers de Ativação
+
+Quando usuário disser:
+- "estilo Vignelli", "tom Rams", "DNA Hische"
+- "como Pentagram faria", "com a vibe de Sagmeister"
+- "modern indie tipo van Schneider", "BR mas sofisticado tipo Hellmeister"
+
+ATIVE o protocolo de Read em `assets/clones/design/design-dna-system.md` (seção do designer específico).
+
+---
+
+## Marketing Conversion Design Patterns
+
+10 anatomias detalhadas de peças que convertem. Use como base, customize com brand + DNA.
+
+### Pattern 1: Landing Page Hero (Conversão Direta)
+
+```
+ANATOMIA:
+
+ESPAÇO 1: HERO ZONE (50-70% acima da dobra)
+├── Headline (H1): big, bold, benefit-driven (40-60px)
+├── Subheadline: nuance + audiência específica (18-22px)
+├── Hero image/video: produto ou transformação visualizável
+├── CTA Primary: contrasta brand color, 16-20px texto, padding 32x16
+├── Social proof secundário (logos clientes, "X mil clientes")
+└── Scroll cue (sutil — seta ou animação)
+
+PROPORÇÕES:
+├── Logo: top-left, 24-32px alto
+├── Nav: top-right ou top-center, 14-16px
+├── H1: 1/3 da viewport altura
+├── CTA: visível sem scroll (ratio mínimo 4:1 contraste)
+└── Imagem: 40-50% do hero space
+
+CORES:
+├── Background: 90% brand neutral (white/off-white/dark)
+├── Texto: 7:1 contraste mínimo (WCAG AAA)
+├── CTA: cor signature brand (alto contraste)
+└── Accent: 5-10% accent brand (em pequenas doses)
+
+TIPOGRAFIA:
+├── H1: peso 700-900, line-height 1.1
+├── Subhead: peso 400-500, line-height 1.4
+├── Body: 16-18px, line-height 1.5
+└── CTA: peso 600+, all caps ou title case (depende brand)
+
+ANTI-PADRÕES:
+✗ Hero longo demais (>70vh)
+✗ Múltiplos CTAs primários
+✗ Vídeo auto-play com som
+✗ Headline >12 palavras
+✗ Imagem que distrai do CTA
+```
+
+### Pattern 2: Carrossel Instagram que Pega Saves
+
+```
+ANATOMIA (10 slides):
+
+SLIDE 1 (HOOK):
+├── Texto grande (50-70% do frame)
+├── Pergunta provocativa OU promessa
+├── Mínimo de imagem (texto domina)
+├── Cor: alto contraste para "scroll-stopper"
+└── Hashtag #savethis ou cue visual
+
+SLIDES 2-9 (PAYOFF):
+├── 1 ideia por slide (não acumule)
+├── Numeração visível ("2 de 10")
+├── Hierarquia: H1 (slide title) + body
+├── Pode incluir imagens/icons relevantes
+├── Padding generoso (mobile-first)
+└── Background levemente variado (cohesão visual)
+
+SLIDE 10 (CTA + SAVE):
+├── "Salvou? Deixa nos comentários se foi útil"
+├── @handle visível pra share
+├── Próxima ação clara
+
+PROPORÇÕES:
+├── 1080x1080 (square) ou 1080x1350 (vertical)
+├── Texto: 60-100px (mobile-readable)
+├── Padding: 60-80px laterais
+├── Slide 1 hook: max 8-10 palavras
+
+CORES:
+├── Brand colors consistente
+├── 3 cores max
+├── Alto contraste (WCAG AA mínimo)
+
+TIPOGRAFIA:
+├── Display font para hooks (bold, big)
+├── Body font para conteúdo (legível mobile)
+├── Hierarquia clara (H1 vs body 2x diferença)
+
+ANTI-PADRÕES:
+✗ Texto pequeno mobile (<48px)
+✗ Mais de 3 cores
+✗ Slide 1 sem hook
+✗ Conteúdo denso (mais de 30 palavras/slide)
+✗ Sem CTA no último slide
+```
+
+### Pattern 3: YouTube Thumbnail que Pega Clicks
+
+```
+ANATOMIA:
+
+ZONA EMOCIONAL (canto esquerdo, 60% da thumb):
+├── Rosto humano expressivo (close-up)
+├── Emoção exagerada (surprise, shock, joy)
+├── Olhos em foco direto (eye contact com viewer)
+└── Lighting alto contraste
+
+ZONA TEXTUAL (canto direito, 40% da thumb):
+├── 3-5 palavras max
+├── Texto BIG (tipografia 80-120pt)
+├── Outline/stroke para legibilidade
+├── Cor contraste alto vs background
+└── Pode ter ícone/emoji
+
+ELEMENTOS DE TENSÃO:
+├── Setas vermelhas apontando
+├── Círculos destaque
+├── Antes/depois split (se aplicável)
+├── Numbers grandes ("$10K", "30 days")
+
+PROPORÇÕES:
+├── 1280x720 px (16:9)
+├── Safe zones: 60px de margem cada lado
+├── Mobile preview: testar em 130x73px
+
+CORES:
+├── 3 cores high-contrast
+├── Saturação alta (chama atenção)
+├── Vermelho/amarelo/laranja (energy colors)
+
+TIPOGRAFIA:
+├── Sans bold extreme (Impact, Bebas Neue, Knockout)
+├── Outline 4-6px para readability
+├── Drop shadow pra depth
+
+ANTI-PADRÕES:
+✗ Mais de 5 palavras
+✗ Tipografia thin/light
+✗ Cores muted
+✗ Rosto em frame médio (precisa close)
+✗ Sem ponto focal (olho não sabe onde olhar)
+✗ Stock photo genérica
+```
+
+### Pattern 4: Ad Creative Meta (Stop Scroll)
+
+```
+ANATOMIA (Feed/Stories):
+
+PRIMEIRA META: 1-3 SEGUNDOS
+├── Hook visual nos primeiros frames
+├── Movement/action que para o thumb
+├── Pessoa em close-up ou produto-hero
+├── Texto "scroll-stopper" (hook 5-7 palavras)
+└── Cor signature brand presente imediato
+
+SEGUNDA META: 5-10 SEGUNDOS
+├── Promessa/benefício explicado
+├── Demonstração visual
+├── Social proof (cliente, número)
+└── Build trust
+
+TERCEIRA META: CTA (último 3-5 seg)
+├── CTA visual + text
+├── Botão claro (mesmo se app já mostra)
+├── Sense of urgency ou opportunity
+└── Brand reinforcement
+
+PROPORÇÕES:
+├── 1:1 (Feed): 1080x1080
+├── 9:16 (Stories/Reels): 1080x1920
+├── 4:5 (Feed vertical): 1080x1350
+├── Texto na imagem: <20% (Meta's rule)
+
+CORES:
+├── Brand consistency
+├── Alto contraste pra mobile
+├── 1 cor accent pra CTA
+
+TIPOGRAFIA:
+├── Big text mobile-readable
+├── Sans bold predominante
+├── Hierarquia clara
+
+ANTI-PADRÕES:
+✗ Slow burn (sem hook 1-3s)
+✗ Texto pequeno em mobile
+✗ Branding atrasado (>5s)
+✗ Linear narrative sem hook
+✗ Sem CTA visual
+```
+
+### Pattern 5: Sales Page Spine
+
+```
+ANATOMIA (vertical scroll):
+
+HERO SECTION (above fold):
+├── Headline (transformação)
+├── Subheadline (audiência específica)
+├── Hero visual
+├── Primary CTA
+└── Trust signals
+
+PROBLEM SECTION:
+├── Empatia com dor
+├── Cost of inaction
+├── 3-5 problemas específicos
+└── Imagem/icon ilustrativos
+
+SOLUTION SECTION:
+├── Apresenta solução
+├── Como funciona (3-5 steps)
+├── Diferenciação vs alternatives
+└── Visual demo
+
+PROOF SECTION:
+├── Social proof (logos, depoimentos)
+├── Cases / case studies
+├── Numbers / metrics
+└── Authority badges
+
+OFFER SECTION:
+├── Stack of value (módulos/bonus)
+├── Preço com anchoring
+├── Garantia explícita
+└── CTA destacado
+
+OBJECTIONS / FAQ:
+├── 5-10 perguntas frequentes
+├── Counter-arguments visíveis
+└── Re-CTA pequeno
+
+URGENCY / SCARCITY (se real):
+├── Deadline visual
+├── Bonus por tempo limitado
+└── Final CTA
+
+FOOTER:
+├── Compliance disclaimers
+├── Garantia detalhada
+└── Suporte contact
+
+PROPORÇÕES:
+├── Container: 1200px max-width
+├── Section padding: 80-120px vertical
+├── Texto column: 60-80ch line-length
+└── Visual breaks entre sections
+
+CORES:
+├── Background alternating (branco/light gray) pra rhythm
+├── Brand colors em CTAs
+├── Accent em destaques
+└── Texto WCAG AAA
+
+TIPOGRAFIA:
+├── H1: 56-72px
+├── H2: 36-48px
+├── H3: 24-32px
+├── Body: 18-20px (legível em desktop + mobile)
+└── Line-height: 1.5-1.6
+
+ANTI-PADRÕES:
+✗ Sales page sem hierarchy clara
+✗ Múltiplos CTAs com mesma weight
+✗ Texto wall sem visual breaks
+✗ FAQ enterrada (deve ser visível)
+✗ Sem garantia visível
+```
+
+### Pattern 6: Email Design (Welcome / Nurture)
+
+```
+ANATOMIA:
+
+HEADER:
+├── Logo (200-300px max)
+├── Subject preview (preheader sutil)
+└── Brand consistency
+
+HERO SECTION:
+├── Hero image (600px wide max)
+├── Headline (24-32px)
+├── Body intro (16-18px)
+└── Primary CTA
+
+CONTENT SECTIONS (3-5):
+├── Sub-section heading (20-24px)
+├── Body text (16-18px line-height 1.5)
+├── Visual element (photo, icon, GIF)
+├── Inline CTA (if relevant)
+└── Visual break entre sections
+
+CLOSE / CTA SECTION:
+├── Reinforce primary CTA
+├── Personal touch (signature)
+└── PS line (importante)
+
+FOOTER:
+├── Logo small
+├── Social media icons
+├── Unsubscribe (legal LGPD)
+├── Address (legal CAN-SPAM)
+└── Privacy policy link
+
+PROPORÇÕES:
+├── Width: 600px (industry standard)
+├── Padding: 20-30px
+├── Image width: max-width 100% responsive
+
+CORES:
+├── Brand consistency
+├── Background: white/off-white (best deliverability)
+├── CTAs: brand color, contrast >7:1
+└── Body text: dark gray, easy to read
+
+TIPOGRAFIA:
+├── Web-safe fallbacks (Helvetica, Arial, Georgia)
+├── Email-safe brand fonts
+├── Min 14px (legível mobile)
+└── Inline CSS (clients vary)
+
+ANTI-PADRÕES:
+✗ Imagem pesada como background (mobile data)
+✗ Tipografia <14px
+✗ CTA button como imagem (não clica em alguns clients)
+✗ Width >600px (corta em mobile)
+✗ Sem unsubscribe link
+✗ Sem alt text em imagens
+```
+
+### Pattern 7: Reels/TikTok Thumbnail (Cover)
+
+```
+ANATOMIA:
+
+ZONA DE ATENÇÃO (canto esquerdo + central):
+├── Rosto OU produto-hero
+├── Texto BIG sobreposto
+├── Cor signature brand
+└── 3-5 palavras max
+
+PROPORÇÕES:
+├── 9:16 (1080x1920)
+├── Safe zones: 90-150px topo (handle/UI), 120px bottom (caption preview)
+├── Texto principal: zona central, 40-60% da altura
+└── Brand: bottom-right ou top-corner
+
+ELEMENTOS:
+├── Pessoa em close-up (frente para câmera)
+├── Texto chamativo (não muita letra)
+├── Cor sinal (vermelho/amarelo destaque)
+└── Pode ter teaser ("ASSISTA ATÉ O FIM")
+
+CORES:
+├── Alto contraste (mobile small)
+├── Cores saturadas
+├── Brand presence sutil
+
+TIPOGRAFIA:
+├── Sans bold extreme
+├── 80-120pt
+├── Outline/stroke para legibilidade
+└── Drop shadow
+
+ANTI-PADRÕES:
+✗ Pessoa em frame médio
+✗ Texto pequeno
+✗ Cores muted
+✗ Sem ponto focal
+✗ Stock photo
+```
+
+### Pattern 8: Webinar Slide (Conversion-Optimized)
+
+```
+ANATOMIA (16:9):
+
+LAYOUT:
+├── Header: webinar name + presenter name (top, 40px)
+├── Body: 1 ideia principal (centro, 70-80% espaço)
+├── Footer: brand + slide number (bottom, 30px)
+└── Generous negative space
+
+ELEMENTOS POR SLIDE:
+├── 1 ideia (não cluster)
+├── Hierarquia clara (1 H1, 1-3 bullets max)
+├── Visual support (icon, chart, photo)
+└── Sem mais de 30 palavras
+
+PROPORÇÕES:
+├── 1920x1080 (16:9 standard)
+├── Padding: 80-120px laterais
+├── Title: 60-80pt
+├── Body: 28-40pt
+└── Caption: 18-24pt
+
+CORES:
+├── Background: brand light or white
+├── Text: high contrast
+├── 1 accent color for emphasis
+└── Brand consistent
+
+TIPOGRAFIA:
+├── Sans for legibility
+├── Big sizes (visible on Zoom small thumb)
+├── Hierarquia óbvia
+
+ANTI-PADRÕES:
+✗ Slides cheios de texto
+✗ Bullet lists longos
+✗ Imagens stock genéricas
+✗ Sem hierarquia visual
+✗ Texto pequeno (<24pt)
+```
+
+### Pattern 9: Lead Magnet Cover (Ebook/PDF)
+
+```
+ANATOMIA:
+
+CAPA:
+├── Title: BIG, atomic (40-50% da capa)
+├── Subtitle: clarifica audience/benefit
+├── Author/brand: small mas presente
+├── Visual element: icon, photo, ou abstract shape
+└── Color signature
+
+INNER PAGES:
+├── Header: brand + page number
+├── Body: legibilidade primary
+├── Sidebar: quotes/highlights (opcional)
+└── Footer: brand small
+
+CTA / NEXT STEP:
+├── Final page com clear next action
+├── QR code ou link
+├── Brand signature
+└── Permission para share
+
+PROPORÇÕES:
+├── A4 (210x297mm) ou Letter (8.5x11in)
+├── Margem: 20-30mm
+├── Body width: 60-80ch
+└── Capa: full bleed quando design permite
+
+CORES:
+├── Brand consistency
+├── Capa: bold (chamativa)
+├── Pages: legível (dark text on light bg)
+└── Headers: accent brand
+
+TIPOGRAFIA:
+├── Capa: display bold
+├── Body: serif legible (Garamond, Lora, Source Serif)
+├── Headers: sans-serif para contraste
+└── Hierarquia clara
+
+ANTI-PADRÕES:
+✗ Capa genérica (template visível)
+✗ Body em sans (cansa olhos PDF longo)
+✗ Sem páginas number
+✗ Sem CTA final
+✗ Branding inconsistente entre pages
+```
+
+### Pattern 10: Pricing Table (Decision Optimized)
+
+```
+ANATOMIA:
+
+ESTRUTURA 3-COLUMN (decoy pricing):
+├── Coluna A: "Basic" (low ticket)
+├── Coluna B: "Pro" (recommended) ← visualmente destacada
+├── Coluna C: "Enterprise" (high ticket)
+└── Visual hierarchy guides eye to B
+
+POR COLUMN:
+├── Plan name (heading)
+├── Price (BIG, signature feature)
+├── Tagline ("Best for...")
+├── Feature list (8-12 items)
+├── CTA button
+└── Optional: badge "Most Popular"
+
+VISUAL DESTAQUES PARA "PRO":
+├── Border ou shadow
+├── Slightly larger
+├── Cor/background distinto
+├── Badge ("Recommended" / "Most Popular")
+└── Maior font no preço
+
+PROPORÇÕES:
+├── 3 columns of equal width
+├── "Pro" pode ser 10-15% mais alto
+├── Padding: 24-32px interno
+└── Gap entre columns: 24-32px
+
+CORES:
+├── 2 columns (A, C): neutral
+├── "Pro" column: brand color subtle bg
+├── CTAs: brand color all
+└── Checkmarks: green
+
+TIPOGRAFIA:
+├── Plan name: 24-32px bold
+├── Price: 48-64px bold (BIG)
+├── Tagline: 14-16px
+├── Feature list: 14-16px
+└── CTA: 16-18px
+
+ANTI-PADRÕES:
+✗ Todas opções com mesmo peso visual
+✗ Pricing escondido
+✗ Sem differentiation entre planos
+✗ CTAs diferentes (todos devem ser "Choose Plan")
+✗ Feature list bagunçada (sem hierarquia)
+```
+
+---
+
+## AI Image Generation Workflow Deep (Direção)
+
+PARTE original "Geração de Imagens com IA" cobre tools. Esta section é workflow profundo no LADO DA DIREÇÃO (antes de delegar para mos-ai-tools).
+
+### Workflow Padrão (Direction → Generation)
+
+```
+ETAPA 1 — BRIEF VISUAL (este agent)
+├── Definir conceito (1-2 frases)
+├── Definir mood (3-5 adjetivos)
+├── Definir composição (cropping, focal point)
+├── Definir paleta + tipografia (se incluir)
+├── Listar elementos obrigatórios
+└── Listar anti-padrões
+
+ETAPA 2 — STYLE REFERENCES (este agent)
+├── Selecionar 3-5 imagens referência
+├── Validar com brand guidelines
+├── Anotar o que pegar / o que evitar
+└── Output: prompt + URLs de styles
+
+ETAPA 3 — PROMPT ENGINEERING (este agent)
+├── Estrutura: [main subject] + [composition] + [style refs] + [technical]
+├── Negative prompt (que NÃO incluir)
+├── Aspect ratio + quality settings
+└── Output: prompt pronto pra Midjourney/Ideogram/DALL-E
+
+ETAPA 4 — DELEGATE (mos-ai-tools)
+├── Pass prompt + style refs
+├── Generate 4-8 variações
+└── Receive output
+
+ETAPA 5 — REVIEW (este agent)
+├── Brand fit check
+├── Quality check (artefatos, consistência)
+├── Brief alignment
+└── Approve ou iterate
+```
+
+### Style References Workflow (Midjourney --sref)
+
+```
+COMO USAR --sref EFICIENTEMENTE:
+
+NÍVEL 1: SREF SIMPLES
+├── 1 imagem referência
+├── Comando: /imagine [prompt] --sref [URL]
+├── Bom para: estilo único bem definido
+└── Limitação: pode "copiar" demais
+
+NÍVEL 2: SREF MULTIPLE
+├── 2-3 imagens referência
+├── Comando: /imagine [prompt] --sref [URL1] [URL2] [URL3]
+├── Bom para: blend de estilos
+└── Aplicação: Designer A + Designer B híbrido
+
+NÍVEL 3: SREF COM PESOS
+├── /imagine [prompt] --sref [URL]::2 [URL]::1
+├── Pesos definem influência relativa
+├── Bom para: priorização clara
+└── Ex: Sagmeister 2x + Ive 1x
+
+NÍVEL 4: SREF + SREF RANDOM (consistency)
+├── --sref random retorna mesmo seed
+├── Anote o sref code (--sref [code])
+├── Use code para consistência em série
+└── Crítico para brand campaigns multi-asset
+
+NÍVEL 5: SAVE BRAND SREF
+├── Após achar style certo, save o sref code
+├── Adicione em brand book
+├── Future ads usam mesmo code
+└── Brand consistency em escala
+
+EXEMPLO DE BRAND CONSISTENCY:
+1. Hero shot: --sref 1234567890 (seu brand DNA)
+2. Hero shot variation: --sref 1234567890
+3. Product photo: --sref 1234567890
+4. Lifestyle shot: --sref 1234567890
+
+Tudo coerente sem ser idêntico.
+```
+
+### Brand Consistency em Escala (100+ imagens)
+
+```
+DESAFIO:
+Brand precisa de 200 imagens AI-generated por mês
+(social, ads, blog, email, etc.). Como manter consistência?
+
+SISTEMA RECOMENDADO:
+
+LAYER 1 — BRAND VISUAL DNA (one-time setup)
+├── Style reference master (sref code Midjourney)
+├── Color palette tokens (W3C spec)
+├── Typography pairing definida
+├── Composition rules (centered, asymmetric, etc.)
+└── Anti-patterns documented
+
+LAYER 2 — PROMPT TEMPLATES (per use case)
+├── Hero shot template: "[product] in [environment], [brand DNA sref], [aspect ratio], professional photography"
+├── Lifestyle template
+├── Product detail template
+├── Conceptual/abstract template
+└── Each saves prompt structure as variable
+
+LAYER 3 — VALIDATION CHECKLIST
+├── Brand fit check (paleta consistente?)
+├── Composition check (segue regras?)
+├── Anti-pattern check (não inclui itens proibidos?)
+├── Quality check (sem artefatos óbvios?)
+└── If 4/4 pass → publish; senão → iterate
+
+LAYER 4 — LIBRARY ORGANIZATION
+├── Pasta por mês/campaign
+├── Naming: brand_topic_variant_v01
+├── Tag por use case
+└── Library cresce, busca rápida
+```
+
+### Prompt Engineering Específico Pra Design
+
+```
+ANATOMIA DE PROMPT BEM ESTRUTURADO:
+
+[SUJEITO PRINCIPAL] + [COMPOSIÇÃO] + [STYLE/MOOD] + [TÉCNICO] + [NEGATIVE]
+
+EXEMPLO REAL (Midjourney v6+):
+
+PROMPT BASE:
+"Modern Brazilian woman, 30s, sitting at minimalist Brazilian
+home office with wood texture and tropical plants, soft natural
+window light, candid moment looking thoughtfully at laptop,
+warm earthy tones, photorealistic editorial photography style"
+
+ENRIQUECIDO COM TÉCNICO:
+"... shot on Hasselblad, f/1.8, shallow depth of field,
+golden hour light, color grade: warm magenta tones,
+photographer: Annie Leibovitz inspired"
+
+COM STYLE REFS:
+"... --sref [yoursref] --ar 16:9 --stylize 250 --v 6"
+
+NEGATIVE PROMPT (Midjourney):
+"--no text, no logo, no watermark, no people in background,
+no graphic design elements"
+
+VARIAÇÕES:
+1. Mude lighting: "harsh midday sun", "blue hour", "studio lighting"
+2. Mude mood: "melancholic", "joyful", "contemplative"
+3. Mude angle: "low angle", "bird's eye view", "Dutch angle"
+```
+
+### AI Image Audit Checklist
+
+```
+ANTES DE APROVAR IMAGEM AI-GENERATED:
+
+QUALITY:
+□ Sem mãos com 6 dedos (artefato common)
+□ Sem texto enrolado/ilegível
+□ Sem distorções faciais
+□ Resolução adequada (4K mínimo se hero)
+□ Sem artefatos de upscaling
+
+BRAND FIT:
+□ Paleta dentro da brand
+□ Tipografia (se incluir) é da brand
+□ Mood aligned com posicionamento
+□ Composição respeita brand DNA
+
+ETHICS / LEGAL:
+□ Não parece pessoa real específica (sem autorização)
+□ Sem viés cultural/racial óbvio
+□ Disclaimer "AI-generated" se requerido
+□ Sem manipulação de antes/depois (CONAR)
+□ Sem replicação de obra de arte protegida
+
+USO:
+□ Aspect ratio correto pra plataforma
+□ Resolução adequada (Instagram 1080, billboard 4K+)
+□ File size optimizado (<2MB social, <500KB email)
+□ Alt text descritivo gerado
+
+Se 12/12 → publish.
+```
+
+### Multi-Modal Pipelines (Text → Image → Video)
+
+```
+WORKFLOW COMPLETO 2026:
+
+ETAPA 1 — TEXT → IMAGE
+├── Brief textual via mos-design
+├── Prompt engineered + sref
+├── Midjourney/Ideogram → 4-8 variations
+├── Select best 1-2
+
+ETAPA 2 — IMAGE → IMAGE EDIT
+├── Inpaint elements (Photoshop AI / Magnific)
+├── Upscale para production resolution
+├── Color grade pra brand
+└── Final quality pass
+
+ETAPA 3 — IMAGE → VIDEO
+├── Static image → motion via Runway / Luma / Pika
+├── Define motion (subtle parallax / dramatic zoom / particle effects)
+├── Duration: 3-10s para social
+└── Output: vídeo pronto pra Reels/TikTok/Stories
+
+ETAPA 4 — VIDEO → SOUND
+├── Add background music (Mubert / Suno)
+├── Add voice (ElevenLabs)
+├── Mix em Descript / CapCut
+└── Export final
+
+ETAPA 5 — DEPLOY
+├── Multi-platform export (1:1, 9:16, 16:9)
+├── Caption + hashtags
+├── Tracking parameters
+└── Publish
+
+TIMELINE TÍPICA:
+├── Manual tradicional: 2-3 dias por asset hero
+├── AI-augmented: 2-4 horas por asset hero
+└── Quality similar ou superior
+```
+
+### Anti-Padrões em AI Image Generation
+
+```
+8 ANTI-PADRÕES COMUNS:
+
+❌ Aceitar primeira geração sem iteration
+❌ Brand colors "approximate" (não exatos)
+❌ Imagem genérica AI-vibe (sem brand DNA)
+❌ Pessoa AI passando por real (sem disclosure)
+❌ Replicar estilo de artista vivo sem autorização
+❌ Stock photos AI (continuação do mesmo problema)
+❌ Sem audit antes de publicar
+❌ Mesmo prompt 100x sem variar (perda de criatividade)
+```
+
+---
+
+## Workflow Integrado: Brand → Design DNA → Marketing Pattern → AI Generation
+
+```
+FLUXO COMPLETO DE PRODUÇÃO VISUAL:
+
+1. BRAND (mos-brand)
+   ├── Arquétipo definido (12 archetypes)
+   ├── Paleta + tipografia
+   ├── Voz + tom
+   └── Output: brand book
+
+2. DESIGN DNA (mos-design + design-dna-system.md)
+   ├── Map arquétipo → designer (ver tabela acima)
+   ├── Read DNA do designer escolhido
+   ├── Combinar (70/30) com brand
+   └── Output: visual direction
+
+3. MARKETING PATTERN (mos-design)
+   ├── Identificar peça (landing hero, carrossel, etc.)
+   ├── Aplicar anatomia (10 patterns desta section)
+   ├── Customize com brand + DNA
+   └── Output: brief detalhado
+
+4. AI GENERATION (mos-ai-tools, dispatched)
+   ├── Receive brief + sref code + brand DNA
+   ├── Generate variations
+   ├── Iterate baseado em feedback
+   └── Output: assets prontos
+
+5. AUDIT (mos-design)
+   ├── Brand fit check
+   ├── Quality check
+   ├── Compliance check (CONAR + WCAG)
+   └── Output: assets aprovados
+
+6. DEPLOY
+   ├── Multi-platform export
+   ├── Tracking
+   └── Performance monitoring (mos-analytics)
+```
+
+---
+
 *Design Agent v3.2 — O agente de design visual mais avançado do planeta*
 
-*34 seções | Última atualização Maio 2026 | WCAG 2.2 | 10+ plataformas*
+*37 seções | Última atualização Maio 2026 | WCAG 2.2 | 10+ plataformas*
 
 *Motion Design | UX | Acessibilidade | Cultural | Print | E-Commerce | Data Viz | Brand-Aware | Figma MCP | Visual Compliance | Apify Benchmarking | Continuous Optimization | BR Cases*
 
