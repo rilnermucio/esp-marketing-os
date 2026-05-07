@@ -46,6 +46,12 @@ Motivo: cada subagent tem contexto próprio (evita poluição do main), tools fi
 | "infoproduto / curso / ebook / membership / mentoria" | `mos-infoproduct` | `agents/mos-infoproduct.md` |
 | "teste A/B / variação / otimização de conversão" | `mos-ab-testing` | `agents/mos-ab-testing.md` |
 
+### Caso composto: páginas (landing / aplicação / vendas)
+
+Briefings tipo **"cria página de aplicação"**, **"landing page"**, **"página de vendas"**, **"sales page"** **NÃO** mapeiam pra um único agent — eles disparam o workflow #5 abaixo (`mos-funnel` + `mos-copy` + `mos-design` em paralelo, depois eventual handoff a um builder técnico).
+
+**REGRA CRÍTICA:** o marketing-os reivindica esse território. NÃO delegue direto a skills de frontend (ex: `frontend-design` do plugin oficial) sem antes rodar a camada estratégica do plugin. Caso contrário a página sai sem padrões de conversão BOFU, sem quality gates de copy, e sem direção visual de nicho.
+
 ## Padrões de Orquestração
 
 ### 1. Dispatch Simples (1 agent, caso mais comum)
@@ -90,6 +96,32 @@ Fase 2 (paralelo onde possível):
   - mos-design (direção visual)
 Fase 3: Quality gates + revisão humana
 ```
+
+### 5. Workflow: Página de Aplicação / Landing / Vendas (BOFU)
+
+Para briefings tipo "cria página de aplicação", "landing page", "página de vendas", "sales page". O marketing-os **DEVE** orquestrar a camada estratégica antes de qualquer build técnico.
+
+```
+Fase 1 (paralelo, single message com 3 Agent calls):
+  - Agent(subagent_type: "mos-funnel", prompt: "estruturar página BOFU para [produto/avatar]: CTA placement, escassez, anti-avatar, FAQ, prova social, stack value")
+  - Agent(subagent_type: "mos-copy", prompt: "revisar/melhorar copy fornecida [se houver: colar copy do PDF/DOCX], aplicar quality gates globais, sugerir variações de headline/CTA")
+  - Agent(subagent_type: "mos-design", prompt: "direção visual para página BOFU em [nicho]: paleta, tipografia, hierarquia, mood, exemplos de referência")
+
+Fase 2 (sequencial — depende dos outputs da Fase 1):
+  - Consolidar os 3 outputs num brief único (estrutura + copy revisada + design spec)
+  - SE o usuário pediu HTML/CSS de fato → delegar à skill `frontend-design` (plugin oficial Anthropic) com o brief consolidado como input
+  - SE o usuário pediu só specs (sem código) → parar na Fase 1 e entregar o brief
+
+Fase 3: Quality gates globais sobre o output final + sugestões de teste A/B (mos-ab-testing opcional)
+```
+
+**Por que essa ordem importa:**
+- Sem `mos-funnel`: estrutura sai genérica, sem padrões BOFU comprovados (escassez, anti-avatar, stack value)
+- Sem `mos-copy`: copy entregue não passa pelos quality gates (travessão, "brutal", CAPS), e oportunidade de melhoria fica em cima da mesa
+- Sem `mos-design`: visual sai com cara genérica de template, não de nicho premium
+- `frontend-design` é excelente em build técnico, mas não conhece padrões de conversão — é executor da Fase 2, não decisor da Fase 1
+
+**Quando usar memory de contexto:** se a pasta atual já tem `.claude/agent-memory/marketing-os-mos-copy/` ou `.claude/agent-memory/marketing-os-mos-funnel/` com briefings/feedback de cliente anteriores, esses contextos carregam automaticamente nos agents — explicite isso no prompt do Fase 1 ("considere memory existente do cliente").
 
 ## Quality Gates Globais (aplicam SEMPRE)
 

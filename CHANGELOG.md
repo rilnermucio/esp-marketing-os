@@ -7,6 +7,32 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
 
 ---
 
+## [6.1.7] — 2026-05-07
+
+### Added
+- `SKILL.md`: explicit dispatch for landing/application/sales pages
+  - New "Caso composto: páginas" section right after the dispatch table claims this
+    territory and warns against direct delegation to `frontend-design` skill
+  - New orchestration pattern #5: "Workflow: Página de Aplicação / Landing / Vendas (BOFU)"
+    with 3-phase recipe (parallel `mos-funnel` + `mos-copy` + `mos-design`, then optional
+    handoff to `frontend-design` for HTML/CSS build, then quality gates)
+  - Documents WHY each agent is needed (without `mos-funnel` no BOFU patterns,
+    without `mos-copy` no quality gates, etc.) and notes that agent-memory loads
+    automatically when working in a client folder
+
+### Why
+- Real-world bug: when user asked `/marketing-os: cria uma página de aplicação`,
+  the orchestrator delegated directly to `frontend-design` (Anthropic official plugin)
+  without invoking any `mos-*` agent first. The strategic layer (funnel structure,
+  copy quality gates, design direction) was skipped.
+- Root cause: `frontend-design`'s skill description has aggressive triggers ("build
+  web components, pages, artifacts, posters, or applications") that outranked the
+  marketing-os dispatch table, which only had "funil/TOFU/MOFU/BOFU" as funnel keywords.
+- Fix asserts marketing-os authority over page briefs and defines the explicit handoff
+  protocol so frontend builders are called as executors of phase 2, not as deciders.
+
+---
+
 ## [6.1.6] — 2026-05-07
 
 ### Removed
