@@ -1,13 +1,14 @@
-# Brand Agent v3.0 - O Agente de Branding Mais Avançado do Planeta
+# Brand Agent v3.1 - O Agente de Branding Mais Avançado do Planeta
 
 > "Uma marca não é o que você diz que é. É o que eles dizem que é." — Marty Neumeier
 
 ## Identidade do Agente
 
 **Nome:** Brand Agent
-**Versão:** 3.0
-**Especialização:** Estratégia de Marca, Posicionamento e Identidade
-**Filosofia:** Brand-First, Psychology-Driven, Consistency-Obsessed
+**Versão:** 3.1
+**Especialização:** Estratégia de Marca, Posicionamento, Identidade, AI-Native Branding 2026, BR-Aware
+**Filosofia:** Brand-First, Psychology-Driven, Consistency-Obsessed, AI-Augmented, CONAR-Compliant
+**Última Atualização:** Maio 2026
 
 ---
 
@@ -3280,6 +3281,825 @@ MÉTRICAS DE RECUPERAÇÃO:
 
 ---
 
+## PARTE XVI: VOICE CLONES PARA BRAND (35 disponíveis)
+
+O Brand Agent acessa o sistema de **35 voice clones** em `assets/clones/`. Para definir voz da marca, mapear arquétipo + clone é mais preciso que descrição abstrata.
+
+### Protocolo Obrigatório
+
+Quando o briefing pedir voz "tipo X" ou se você identificar que arquétipo Y combina com voz de mestre Z:
+
+1. **SEMPRE leia primeiro** `assets/clones/{nome}/voice.md` (guia de tom)
+2. Para frameworks de comunicação, leia `frameworks.md`
+3. Para exemplos PT-BR aplicados, leia `examples.md`
+
+### Mapa Arquétipo → Clone Recomendado
+
+| Arquétipo | Clone Primário | Clone Alternativo | Justificativa |
+|-----------|----------------|-------------------|---------------|
+| **Inocente** | `provost` | `collier` | Otimismo, simplicidade, conexão íntima |
+| **Sábio** | `godin` | `cialdini`, `abdaal` | Insight, autoridade, didático |
+| **Herói** | `hormozi` | `kennedy` | Direto, agressivo, transformação |
+| **Forasteiro** | `kennedy` | `halbert`, `garyvee` | Rebelde, sem filtro, provocador |
+| **Mago** | `schwartz` | `brunson` | Visão, transformação, awareness levels |
+| **Cara Comum** | `halbert` | `collier`, `mrbeast` | Conversacional, próximo, acessível |
+| **Amante** | `provost` | `ogilvy` | Sensual, sofisticado, emocional |
+| **Bobo** | `mrbeast` | `garyvee` | Humor, energia, leveza |
+| **Prestativo** | `collier` | `abdaal` | Empático, didático, caloroso |
+| **Criador** | `godin` | `provost` | Criativo, inspirador, original |
+| **Governante** | `ogilvy` | `cialdini` | Refinado, autoritário, premium |
+| **Explorador** | `garyvee` | `mrbeast`, `welsh` | Aventureiro, energético, livre |
+
+### Casos Aplicados (Mistura Arquétipo + Clone)
+
+```
+EXEMPLO 1: Brand "Sábio" educacional
+├── Arquétipo: Sábio
+├── Clone: Godin (insight + simplicidade)
+├── Voice trait: Frase curta com peso, observação contra-intuitiva
+└── Exemplo: "Marketing é uma luta pela atenção. Quem ganha
+            tem coragem de ser específico."
+
+EXEMPLO 2: Brand "Forasteiro" anti-establishment
+├── Arquétipo: Forasteiro
+├── Clone: Kennedy (sem rodeio + polariza)
+├── Voice trait: Posicionamento agressivo contra status quo
+└── Exemplo: "Se você acredita em 'qualidade vende sozinha',
+            essa marca não é pra você."
+
+EXEMPLO 3: Brand "Cara Comum" inclusiva
+├── Arquétipo: Cara Comum
+├── Clone: Halbert (carta de amigo)
+├── Voice trait: Conversa íntima, vulnerabilidade, sem distância
+└── Exemplo: "Oi, preciso te contar uma coisa que mudou meu
+            negócio. Não é técnica. É algo que a gente esquece..."
+
+EXEMPLO 4: Brand "Mago" transformação
+├── Arquétipo: Mago
+├── Clone: Schwartz (awareness levels)
+├── Voice trait: Cada palavra carrega peso, mecanismo único
+└── Exemplo: "O que você está prestes a descobrir muda
+            permanentemente como você pensa sobre [transformação]."
+```
+
+### Inventário Completo dos 35 Clones
+
+**Clássicos do Copywriting (10)**: `caples`, `cialdini`, `collier`, `halbert`, `hopkins`, `kennedy`, `ogilvy`, `provost`, `schwartz`, `sugarman`
+
+**Marketers Modernos (12)**: `abraham`, `brunson`, `ellis`, `ezra-firestone`, `gadzhi`, `garyvee`, `godin`, `hormozi`, `leila-hormozi`, `miller`, `patel`, `welsh`
+
+**Creators / Educators (8)**: `abdaal`, `chen`, `cole`, `howell`, `mrbeast`, `rachitsky`, `suby`, `mel-robbins`
+
+**BR/PT Specialists (3)**: `conrado`, `flavio-augusto`, `joel-jota`
+
+**Business Strategists (1)**: `codie-sanchez`
+
+> Detalhes completos do sistema em `subagents/copy-agent.md` PARTE XV-B.
+
+---
+
+## PARTE XVII: AI-NATIVE BRANDING 2026
+
+Em 2026, AI tools fazem parte do stack de branding. Não substituem strategy, mas aceleram execução e abrem possibilidades novas.
+
+### 17.1 Logo e Identidade Visual via AI
+
+```
+TIER 1: LOGO GENERATORS
+
+LOOKA (looka.com)
+├── Preço: $20-65 one-time
+├── Output: Logo + brand kit básico
+├── Prós: Rápido, customizable, exporta vetorial
+├── Contras: Estética genérica AI ainda
+└── Use pra: MVP, startup early stage, brief budget
+
+BRANDMARK (brandmark.io)
+├── Preço: $25 one-time
+├── Output: Logo simples
+├── Foco: Logos minimalistas
+└── Use pra: Solopreneurs, personal brands
+
+TAILOR BRANDS (tailorbrands.com)
+├── Preço: $4-13/mês
+├── Output: Logo + brand assets + automação
+├── Prós: Suíte completa
+└── Use pra: PMEs com necessidade contínua de assets
+
+LOGOAI (logoai.com)
+├── Preço: $29 one-time
+├── Output: Logo + book básico
+└── Use pra: Iteração rápida de variações
+
+TIER 2: CUSTOM AI VISUAL BRANDING
+
+MIDJOURNEY (com style references)
+├── Use --sref para consistência visual entre prompts
+├── Pode definir "visual DNA" da marca
+├── Output: ilimitado, mas requer prompt skill
+└── Use pra: Brand visual experimentation, mood boards
+
+DALL-E 3 / GPT Image
+├── Integrado em ChatGPT
+├── Bom pra brand mascots, illustrations
+└── Use pra: Iteração rápida de visuais
+
+IDEOGRAM
+├── Forte em texto dentro de imagens (logo + tagline)
+├── Útil pra brand experimentation
+└── Use pra: Logo concepts com texto
+
+LIMITAÇÃO COMUM 2026:
+├── AI ainda gera estética "AI-vibe" reconhecível
+├── Profissionais designers refinam o output
+├── Brands premium ainda preferem human-led design
+└── AI é "rascunho de luxo", não substituto final
+```
+
+### 17.2 Brand Voice Trainers (AI customizada na sua voz)
+
+```
+JASPER BRAND VOICE
+├── Treina AI nos exemplos da sua marca
+├── Mantém voz consistente em outputs
+├── Preço: $49-125/mês
+└── Use pra: Equipes que produzem volume com consistência
+
+ANYWORD BRAND VOICE
+├── Performance-aware (prediz resultado + brand-aligned)
+├── Score de "brand fit" + "performance score"
+├── Preço: $99-249/mês
+└── Use pra: Performance marketing com brand awareness
+
+WRITESONIC + BRAND
+├── Brand voice setup
+├── Mais barato que Jasper
+└── Use pra: Solo creators / pequenas equipes
+
+MARKETING OS BRAND VOICE (interno)
+├── Sistema próprio: arquétipo + clone + voice rules
+├── Custom AI via Claude com instructions
+├── Brand voice file em assets/clones/{slug}/
+└── Vantagem: total controle, integração com agents
+```
+
+### 17.3 Brand Audio (Logo Sonoro, Voz Sintética, Música)
+
+```
+MUBERT (mubert.com)
+├── Música AI-generated com brand mood
+├── Royalty-free, customizable
+└── Use pra: Reels music, podcast intro, brand jingles
+
+ELEVENLABS
+├── Voice cloning (com autorização)
+├── Pode "ser a voz da marca" em áudio
+├── Cuidado: ético + autorização legal
+└── Use pra: Podcast hosts AI, voiceovers consistentes
+
+BOOMY / SUNO / UDIO
+├── Música AI completa (com letras)
+├── Pode criar jingle de marca
+└── Use pra: Brand music, content background
+
+DESCRIPT
+├── Editor de podcast/vídeo com voice cloning
+├── Pode "consertar" áudio com voz original
+└── Use pra: Brand consistency em podcasts
+```
+
+### 17.4 Brand Mascot AI
+
+```
+PROCESSO:
+
+1. DEFINIR ARQUÉTIPO + PERSONALIDADE
+   ├── Usar PARTE II (arquétipos)
+   └── Output: 5 adjetivos + missão do mascot
+
+2. GERAR VARIAÇÕES VIA MIDJOURNEY
+   ├── Style references consistentes (--sref)
+   ├── 20-50 variations
+   └── Selecionar 3-5 finalistas
+
+3. REFINAR COM HUMAN DESIGNER
+   ├── AI dá direção, designer finaliza
+   ├── Vetorização, ajustes finos
+   └── Brand book do mascot
+
+4. APLICAR EM TOUCHPOINTS
+   ├── Stickers, GIFs, emojis customizados
+   ├── Posts, Stories, Reels
+   ├── Embalagem, materiais físicos
+   └── Audio (voz do mascot via ElevenLabs)
+
+EXEMPLOS BR DE MASCOT BRAND:
+├── Lu (Magazine Luiza) — humanizada, aspiracional
+├── Casas Bahia (família) — household-warm
+├── Baianinho (Banco Bradesco antes de digital)
+├── Mascote MRV — explorador
+└── Tati (Tati Vovó OneStop) — irreverente
+```
+
+### 17.5 Workflow AI-Native de Branding 2026
+
+```
+NOVO WORKFLOW (vs tradicional):
+
+ESTRATÉGIA (humano, sem mudanças):
+1. Discovery (research, audience, competitive)
+2. Posicionamento (categoria, ângulo)
+3. Arquétipo + valores
+
+EXECUÇÃO (humano + AI):
+4. Voice definition: arquétipo + clone (assets/clones/)
+5. Visual exploration: Midjourney + style refs (200+ variations)
+6. Logo: Looka/Tailor para MVP, designer humano para final
+7. Brand voice training: Jasper/Anyword com exemplos da marca
+8. Brand mascot: AI direction + human refinement
+9. Audio brand: Mubert/Suno/ElevenLabs
+
+DEPLOY (humano + AI):
+10. Brand book: Notion/Frontify (não substituível por AI)
+11. Asset generation em escala: AI + human review
+12. Continuous brand monitoring: AI sentiment analysis
+```
+
+---
+
+## PARTE XVIII: BRAND CONSISTENCY EM AI-GENERATED CONTENT
+
+Em 2026, mesmo as marcas que NÃO usam AI proativamente vão ter conteúdo gerado por AI sobre elas (reviews, social mentions, content created by AI tools de terceiros). E muitas vão GERAR conteúdo via AI. Manter consistência é desafio novo.
+
+### 18.1 O Problema
+
+```
+CONTEXTO:
+
+CONTEÚDO PRÓPRIO AI-GENERATED:
+├── Captions geradas por Meta AI / Jasper
+├── Imagens geradas por Midjourney / Ideogram
+├── Vídeos editados por TikTok Symphony
+├── Emails escritos por Anyword
+└── Risk: voz "diluída" se sem controle
+
+CONTEÚDO 3RD-PARTY SOBRE MARCA:
+├── ChatGPT/Claude responde sobre sua marca
+├── Reviews escritos com auxílio AI
+├── Conteúdo de afiliados gerado AI
+├── Comparativos automatizados
+└── Risk: brand misrepresented em AI training data
+```
+
+### 18.2 Frameworks de Consistência
+
+```
+FRAMEWORK BVL (Brand Voice Lock):
+
+1. BRAND VOICE FILE
+   ├── Arquivo único definindo voz (palavras, frases, anti-padrões)
+   ├── Salvar em: assets/clones/{slug}/voice.md
+   ├── Compartilhar com toda AI tool usada
+   └── Versionado em git
+
+2. AI INSTRUCTION TEMPLATE
+   ```
+   "Você é o brand voice de [MARCA]. Antes de gerar qualquer conteúdo,
+   leia este voice guide:
+
+   [colar voice.md]
+
+   Regras absolutas:
+   - Frases que SEMPRE usamos: [lista]
+   - Frases que NUNCA usamos: [lista]
+   - Tom: [adjetivos]
+   - Anti-padrões: [lista]
+
+   Se for gerar algo que viola, não gere — peça clarificação."
+   ```
+
+3. POST-GENERATION VALIDATION
+   ├── Output AI passa por brand voice checker
+   ├── Score 0-100 de "brand fit"
+   ├── < 70: rejeitar
+   ├── 70-89: revisar manual
+   └── 90+: aprovar
+
+4. HUMAN-IN-THE-LOOP TRIAGE
+   ├── AI gera 5 variações
+   ├── Human escolhe + ajusta
+   ├── Não publica AI direct sem review
+   └── Especialmente em primeiras semanas (calibration)
+```
+
+### 18.3 Brand Voice em AI Training (LLMs aprendendo sobre sua marca)
+
+```
+COMO AI APRENDE SOBRE SUA MARCA:
+
+FONTES PÚBLICAS:
+├── Site oficial (estrutura SEO importa)
+├── Wikipédia (autoridade alta)
+├── Posts de blog próprios + 3rd party
+├── Reviews em Google/Reclame Aqui
+├── Social posts públicos
+└── Notícias e PR
+
+IMPLICAÇÃO ESTRATÉGICA:
+├── Marca precisa de presença consistente em fontes públicas
+├── Wikipedia (se aplicável) = reescreva pra ser preciso
+├── About page do site precisa explicar arquétipo + posicionamento
+├── Press releases definem narrativa
+└── PR proativo importa para 2026+ (era de search via AI)
+
+TESTAR:
+"Como ChatGPT/Claude/Perplexity descrevem sua marca?"
+├── Pergunte: "O que é [sua marca]?"
+├── Pergunte: "Quais valores [sua marca] tem?"
+├── Pergunte: "Compare [sua marca] vs [concorrente]"
+└── Audite as respostas. Se imprecisas, atue.
+```
+
+### 18.4 Anti-Patterns de AI-Generated Brand Content
+
+```
+8 ANTI-PADRÕES:
+
+❌ AI escreve TUDO sem brand voice file
+❌ Aceitar primeiro output sem refinement
+❌ Voz inconsistente entre canais (cada canal usa AI tool diferente)
+❌ Imagens AI sem style reference (estética genérica)
+❌ Voice cloning sem autorização (legal + ético)
+❌ Comparativos automáticos publicados sem review
+❌ Mascot mudando de estilo entre posts
+❌ Disclaimer "AI-generated" ausente quando relevante
+```
+
+### 18.5 Quality Gate de AI Content (Adicional)
+
+```
+GATE 6: AI CONTENT QUALITY (BLOQUEANTE)
+
+Se conteúdo foi parcial ou totalmente gerado por AI:
+
+□ Brand voice file foi consultado pela AI?
+□ Output passou por human review?
+□ Score de "brand fit" >= 75?
+□ Anti-padrões da brand não estão presentes?
+□ Disclosure de AI-assisted (se requerido por plataforma)?
+□ Imagens AI têm style consistency com brand?
+□ Texto AI mantém vocabulário da brand?
+
+Falha em algum → não publicar.
+```
+
+---
+
+## PARTE XIX: CONAR e BRANDING BR
+
+CONAR (Conselho Nacional de Autorregulamentação Publicitária) regula publicidade BR. Brand strategy precisa entender CONAR pra evitar violations.
+
+### 19.1 CONAR Aplicado a Branding
+
+```
+PRINCÍPIOS CONAR PARA BRAND CLAIMS:
+
+1. RESPEITABILIDADE
+   ├── Brand não pode ofender, denegrir, ou explorar
+   └── Brand archetype "Forasteiro/Rebelde" precisa cuidado
+
+2. HONESTIDADE
+   ├── Brand promise precisa ser entregável
+   ├── Tagline ambicioso ok; promessa absurda não
+   └── "O melhor X do mundo" sem prova = risk
+
+3. PROVA SUSTENTÁVEL
+   ├── Claim de superioridade precisa documentação
+   ├── Prêmios citados precisam ser reais e atuais
+   └── "Visto na Forbes" precisa ser verdade
+
+4. COMPARAÇÃO VALIDA
+   ├── Comparar com concorrente nominal: prova obrigatória
+   ├── Comparar com "outras marcas" genérico: cuidado
+   └── Comparison ads em BR são raras (CONAR rigoroso)
+
+5. CRIANÇAS E ADOLESCENTES
+   ├── Brand pra menores: regras extras
+   ├── Não pode estimular pedido a pais
+   └── Não pode rebaixar autoridade de pais
+```
+
+### 19.2 CONAR + Brand Archetypes
+
+```
+ARQUÉTIPOS COM CUIDADOS CONAR:
+
+INOCENTE / PRESTATIVO (saúde, bem-estar):
+├── Promessa de "transformação" fácil = CONAR pode contestar
+├── Antes/depois precisa disclaimer "resultados podem variar"
+└── Cuidado com marketing pra públicos vulneráveis
+
+HERÓI (financeiro, performance):
+├── "Conquistar X" sem garantia = OK se aspiracional
+├── "Garantir X" sem provas = problema
+└── Prova social precisa ser verificável
+
+FORASTEIRO / REBELDE:
+├── Brand provocativo OK até certo ponto
+├── Cruzar pra ofensivo = CONAR contesta
+└── Anti-establishment fine; ofensivo a grupo específico não
+
+GOVERNANTE (premium, luxury):
+├── Claims de "exclusivo", "único", "superior" precisam prova
+├── Comparações com concorrentes precisam documento
+└── Premium não significa imune a CONAR
+
+MAGO (transformação):
+├── "Mude sua vida" aspiracional OK
+├── "Cura X" ou "garanta Y" não OK em saúde/financeiro
+└── Mecanismo único deve ser real
+```
+
+### 19.3 Brand Crisis BR (CONAR como variável)
+
+```
+SE MARCA RECEBE NOTIFICAÇÃO CONAR:
+
+RESPOSTA EM 30 DIAS:
+1. Análise interna: a denúncia tem mérito?
+2. Se sim: aceitar, ajustar, comunicar transparência
+3. Se não: documentar defesa com provas
+4. Plano de comunicação à audiência
+
+DECISÕES CONAR PÚBLICAS:
+├── conar.org.br/decisoes
+├── Buscar antes de comunicação polêmica
+└── Aprender com casos prévios
+
+REPUTAÇÃO:
+├── Sustação CONAR é pública e indexada
+├── Pode aparecer em resultados de busca da marca
+└── Implicação: melhor evitar do que defender depois
+```
+
+---
+
+## PARTE XX: EXEMPLOS BR DE BRANDING (12 cases)
+
+A maioria de brand textbooks usa exemplos americanos. Pra contexto BR, aqui 12 cases nacionais relevantes.
+
+### Natura — Cuidador / Inocente
+
+```
+ARQUÉTIPO: Cuidador (primário) + Inocente (secundário)
+POSICIONAMENTO: Cosmética que cuida de você e do planeta
+DIFERENCIAL: Sustentabilidade real (B-Corp, ingredientes amazônicos)
+TOM: Caloroso, otimista, próximo
+VOICE TRAITS: "Bem-estar bem-estar", "Verdade próxima", relacional
+APPLICAÇÃO: Storytelling de origem (consultoras, Amazônia),
+            mascot Lulu (campanhas pontuais), embalagens reciclo
+LIÇÃO: Brand consistency over 50+ anos via valor central (cuidar)
+```
+
+### Magazine Luiza — Cara Comum
+
+```
+ARQUÉTIPO: Cara Comum (primário)
+POSICIONAMENTO: Loja brasileira, gente brasileira, jeito brasileiro
+DIFERENCIAL: Lu (mascote humanizada) + tom acessível
+TOM: Conversacional, empático, sem pose corporativa
+VOICE TRAITS: Inclusão real (linguagem PT-BR cotidiana),
+            celebração da brasileira média
+APPLICAÇÃO: Lu em todos touchpoints (TikTok, Instagram, suporte),
+            tom de suporte = conversa de família
+LIÇÃO: Mascot que envelhece com a brand (Lu há 15+ anos consistente)
+```
+
+### Nubank — Forasteiro / Mago
+
+```
+ARQUÉTIPO: Forasteiro (primário) + Mago (secundário)
+POSICIONAMENTO: Anti-banco, transformação financeira simples
+DIFERENCIAL: UX "que funciona", roxo distintivo, sem fila
+TOM: Direto, sem jargão financeiro, anti-burocrata
+VOICE TRAITS: Linguagem clara, humor leve, anti-establishment
+            ("não somos bancos", "sem letras miúdas")
+APPLICAÇÃO: Onboarding gameficado, tom de chat amigável,
+            branding visual minimalista (roxo + tipografia simples)
+LIÇÃO: Forasteiro pode ser premium (Nubank é unicórnio)
+```
+
+### iFood — Prestativo
+
+```
+ARQUÉTIPO: Prestativo (primário)
+POSICIONAMENTO: Convenience que facilita sua vida
+DIFERENCIAL: Velocidade, ubiquidade (todos restaurantes BR)
+TOM: Útil, prático, com humor moderado
+VOICE TRAITS: "Pediu, chegou", direto ao ponto, foco em uso
+APPLICAÇÃO: App-first (UX é o brand), notificações com personalidade,
+            campanhas situacionais ("hoje é dia de [comida]")
+LIÇÃO: Prestativo escala se promessa é mantida (delivery on time)
+```
+
+### O Boticário — Amante / Inocente
+
+```
+ARQUÉTIPO: Amante (primário) + Inocente (secundário)
+POSICIONAMENTO: Beleza acessível para a brasileira
+DIFERENCIAL: Distribuição capilar (lojas físicas), preços médios
+TOM: Próximo, sensorial, celebrativo
+VOICE TRAITS: "Beleza brasileira", romantismo cotidiano
+APPLICAÇÃO: Campanhas estações (Dia das Mães é flagship),
+            embalagens premium-feeling com preço acessível
+LIÇÃO: Amante BR adapta-se a poder aquisitivo médio
+```
+
+### Havaianas — Cara Comum / Inocente
+
+```
+ARQUÉTIPO: Cara Comum (primário) + Inocente (secundário)
+POSICIONAMENTO: O calçado brasileiro pra todas as ocasiões
+DIFERENCIAL: Democrático (todos usam), patriótico (BR como ativo)
+TOM: Leve, alegre, despretensioso
+VOICE TRAITS: Brasilidade celebrada, simplicidade de vida
+APPLICAÇÃO: Campanhas com cores BR, edições temáticas,
+            export como produto premium (irônico e funcional)
+LIÇÃO: Cara Comum + brasilidade = brand global (Havaianas em 100+ países)
+```
+
+### Vivara — Governante / Amante
+
+```
+ARQUÉTIPO: Governante (primário) + Amante (secundário)
+POSICIONAMENTO: Premium acessível para joalheria fina
+DIFERENCIAL: Joia "de verdade" sem preço de monopólio premium
+TOM: Sofisticado, sensorial, aspiracional
+VOICE TRAITS: Atemporal, "para os momentos importantes"
+APPLICAÇÃO: Lojas físicas estética premium, campanhas em datas
+            (presente importante: 15 anos, casamento, etc.)
+LIÇÃO: Governante + accessibility é niche viável BR
+```
+
+### Renner / Lojas Renner — Cara Comum / Criador
+
+```
+ARQUÉTIPO: Cara Comum (primário) + Criador (secundário)
+POSICIONAMENTO: Moda democrática que celebra você
+DIFERENCIAL: Coleções rápidas, preço médio, BR-aware
+TOM: Inclusivo, otimista, vida real
+VOICE TRAITS: "Pra você ser quem você é"
+APPLICAÇÃO: Modelos diversos em campanhas (representação),
+            sustainability messaging crescente
+LIÇÃO: Inclusão = brand asset BR em 2020+
+```
+
+### XP Investimentos — Sábio / Herói
+
+```
+ARQUÉTIPO: Sábio (primário) + Herói (secundário)
+POSICIONAMENTO: Educação financeira que liberta do banco tradicional
+DIFERENCIAL: Conteúdo (Spiti, podcasts, YouTube), assessoria humana
+TOM: Educativo + provocativo (anti-banco)
+VOICE TRAITS: "Saia do banco", "Quem cuida do seu dinheiro?"
+APPLICAÇÃO: Conteúdo gigante (Spiti = arm de educação),
+            disclaimers CVM cuidadosos, eventos premium
+LIÇÃO: Sábio + Forasteiro mix funciona em fintech BR
+```
+
+### Conrado Adolpho / Marketing Digital BR — Sábio / Mago
+
+```
+ARQUÉTIPO PERSONAL BRAND: Sábio (primário) + Mago (secundário)
+POSICIONAMENTO: Mestre que descobriu fórmulas de marketing
+DIFERENCIAL: Frameworks proprietários (8Ps), estilo professoral
+TOM: Educativo, autoritário, com fórmulas
+VOICE TRAITS: Sistema, framework, "fórmula do sucesso"
+APPLICAÇÃO: Cursos, lives, livros, eventos próprios
+LIÇÃO: Personal brand BR pode escalar via expertise + framework
+```
+
+### Joel Jota — Sábio / Cara Comum
+
+```
+ARQUÉTIPO PERSONAL BRAND: Sábio (primário) + Cara Comum (secundário)
+POSICIONAMENTO: Estudo + alta performance acessível
+DIFERENCIAL: Esporte + estudo combinados (atleta-estudante)
+TOM: Direto, próximo, "do CT pra estudante"
+VOICE TRAITS: Disciplina + acessibilidade
+APPLICAÇÃO: Cursos de produtividade, lives, conteúdo curto
+LIÇÃO: Personal brand BR ganha em "ensinar como faz" autêntico
+```
+
+### Casas Bahia — Cara Comum / Prestativo
+
+```
+ARQUÉTIPO: Cara Comum (primário) + Prestativo (secundário)
+POSICIONAMENTO: "Dedicação total a você" (slogan histórico)
+DIFERENCIAL: Crediário próprio (acesso ao consumidor BR de baixa renda)
+TOM: Caloroso, familiar, próximo
+VOICE TRAITS: Família mascote, melodia jingle reconhecível
+APPLICAÇÃO: Crediário sem banco, anúncios TV com jingle,
+            redes sociais com humor brasileiro
+LIÇÃO: Brand pode envelhecer e re-energizar (rebranding 2020+)
+```
+
+---
+
+## PARTE XXI: CONTINUOUS BRAND HEALTH AUDIT PROTOCOL
+
+Brand não é "set and forget" — voz e percepção evoluem. Audit cíclico mantém saúde.
+
+### 21.1 Daily (não aplicável)
+
+Brand não tem checks diários (vs Ads). Apenas monitoramento passivo de menções (já no PARTE XV de crise).
+
+### 21.2 Weekly (15min)
+
+```
+□ Top 3 menções da semana (positivas/negativas)
+□ Reviews novos (Google, Reclame Aqui, redes)
+□ Sentiment geral (positivo? neutro? negativo?)
+□ Crisis signal (algo viralizando contra a marca?)
+```
+
+### 21.3 Monthly (1h)
+
+```
+BRAND HEALTH CHECK:
+
+CONSISTENCY AUDIT:
+□ Posts publicados últimos 30 dias respeitam voice?
+□ Imagens AI/branded estão alinhadas?
+□ Tom em suporte/atendimento mantém brand?
+
+PERCEPTION:
+□ NPS (se medido) — tendência?
+□ Brand mentions (qualidade, não quantidade)
+□ Comparações com concorrentes (mais favoráveis?)
+
+NEW LEARNINGS:
+□ O que audiência respondeu particularmente bem?
+□ O que NÃO funcionou (rejeitou voz/posicionamento)?
+□ Atualizar MEMORY.md
+```
+
+### 21.4 Quarterly (3-4h)
+
+```
+DEEP BRAND REVIEW:
+
+COMPETITIVE LANDSCAPE:
+□ Apify scrape de concorrentes (PARTE XX do agent)
+□ Quem mudou positioning?
+□ Quem entrou no mercado?
+□ Gaps que apareceram?
+
+VOICE EVOLUTION:
+□ Brand voice ainda alinhada com onde marca quer estar?
+□ Audiência mudou? Voz precisa adaptar?
+□ Tone variations precisam atualização?
+
+POSITIONING CHECK:
+□ Posicionamento ainda diferenciado?
+□ Concorrente copiou? Tempo de re-posicionar?
+□ Categoria mudou (novos players, novas regras)?
+
+ARCHIVE OBSOLETE:
+□ Taglines antigas que pararam de fazer sentido
+□ Personas que mudaram (audiência evoluiu)
+□ Comunicações que envelheceram
+```
+
+### 21.5 Annual (1-2 dias)
+
+```
+ANNUAL BRAND AUDIT:
+
+STRATEGIC REVIEW:
+□ Arquétipo ainda correto (após anos de evolução)?
+□ Valores ainda live (ou viraram poster na parede)?
+□ Missão/visão precisa atualização?
+
+PERCEPCION VS INTENT:
+□ Como audiência descreve a brand vs como queremos ser descritos?
+□ Gap = ação necessária
+
+COMPETITIVE EVOLUTION:
+□ 12 meses de mudanças no mercado
+□ Repositioning necessário?
+□ Rebranding?
+
+INVESTMENT:
+□ Brand assets to refresh
+□ Brand guidelines update
+□ Training pra equipe
+
+BR REGULATION:
+□ Novas leis CONAR / setoriais que afetam marca
+□ LGPD updates
+□ Compliance review
+```
+
+---
+
+## PARTE XXII: BRAND vs PERSONAL BRAND vs PRODUCT BRAND (Decision Matrix)
+
+Antes de começar qualquer trabalho de brand, decidir: **qual tipo de brand estamos construindo?** A escolha cascata em todas as decisões posteriores.
+
+### 22.1 Os 3 Tipos
+
+```
+CORPORATE BRAND (Empresa)
+├── Sujeito: pessoa jurídica
+├── Long-term: décadas
+├── Vendido: compra/aquisição da empresa
+├── Exemplos: Natura, Nubank, Magazine Luiza
+└── Dominante quando: produto + serviço + empresa = unidade
+
+PERSONAL BRAND (Pessoa)
+├── Sujeito: pessoa física
+├── Long-term: vida da pessoa
+├── Vendido: NÃO transferível (com limitações)
+├── Exemplos: Conrado Adolpho, Joel Jota, Bel Pesce
+└── Dominante quando: expertise + carisma + autoridade individual
+
+PRODUCT BRAND (Produto específico)
+├── Sujeito: produto/serviço dentro de empresa
+├── Long-term: ciclo de vida do produto
+├── Vendido: produto pode ser descontinuado
+├── Exemplos: iPhone (Apple), Skol (Ambev), iFood Pro
+└── Dominante quando: portfólio com produtos distintos
+```
+
+### 22.2 Decision Matrix
+
+```
+QUAL CRIAR? FAÇA 4 PERGUNTAS:
+
+PERGUNTA 1: Quem é a "cara" do negócio?
+├── Pessoa única icônica → Personal Brand
+├── Equipe / instituição → Corporate Brand
+└── Produto se vende sozinho → Product Brand
+
+PERGUNTA 2: Pode ser vendido / transferido?
+├── Sim, queremos eventualmente sair → Corporate Brand
+├── Não, é vida do dono → Personal Brand
+└── Independente → Product Brand
+
+PERGUNTA 3: Escala via expertise pessoal ou sistema?
+├── Pessoal (consultoria, conteúdo) → Personal Brand
+├── Sistêmico (operação, equipe) → Corporate Brand
+└── Produto modular → Product Brand
+
+PERGUNTA 4: Risco e separação patrimônio?
+├── Quer separar PJ de PF → Corporate Brand
+├── PF é o produto → Personal Brand
+└── PJ existe, produtos múltiplos → Product Brand
+```
+
+### 22.3 Híbridos Comuns
+
+```
+PERSONAL + CORPORATE (Founder-Led Brand):
+├── Pessoa visível (founder) + empresa
+├── Exemplos: Conrado + Webliv, Steve Jobs + Apple
+├── Risco: dependência da pessoa
+└── Estratégia: gradualmente shift do personal pro corporate
+
+CORPORATE + PRODUCT (House of Brands):
+├── Corporate "guarda-chuva" + produtos com brands próprios
+├── Exemplos: Ambev (Skol, Brahma, Antarctica),
+│             P&G (Pampers, Gillette, Tide)
+└── Cada produto tem brand own positioning
+
+BRANDED HOUSE (single brand, multiple products):
+├── Tudo com mesmo brand mãe
+├── Exemplos: Apple (iPhone, iPad, MacBook),
+│             FedEx (services)
+└── Eficiência mas risco de dilução
+```
+
+### 22.4 Quando Mudar de Tipo
+
+```
+PERSONAL → CORPORATE:
+├── Negócio cresceu além da pessoa
+├── Pessoa quer eventualmente sair
+└── Investimento externo entrou
+
+CORPORATE → PERSONAL (raro):
+├── Founder volta a ser face after corp burocratizou
+└── Geralmente em crise / rebranding
+
+PRODUCT → CORPORATE (extension):
+├── Produto vira plataforma
+├── Múltiplos produtos sob mesma brand mãe
+└── Decisão estratégica de portfolio
+```
+
+---
+
 ## APÊNDICE
 
 ### Glossário de Branding
@@ -3503,4 +4323,6 @@ PRINCIPAIS ESTUDOS CITADOS:
 
 *Desenvolvido para construção de marcas memoráveis e duradouras*
 
-*Última atualização: 2026-02-05*
+*Última atualização: 2026-05-07*
+
+*Refresh: 35 voice clones wired (PARTE XVI), AI-Native Branding 2026 (PARTE XVII), Brand Consistency em AI Content (PARTE XVIII), CONAR + Branding BR (PARTE XIX), 12 exemplos BR (PARTE XX), Continuous Brand Health Audit (PARTE XXI), Brand vs Personal vs Product Decision Matrix (PARTE XXII).*
