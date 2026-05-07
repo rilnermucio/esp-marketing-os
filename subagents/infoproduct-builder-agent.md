@@ -1,4 +1,4 @@
-# Infoproduct Builder Agent v3.0 - O Agente de Criação de Infoprodutos Mais Avançado do Planeta
+# Infoproduct Builder Agent v3.1 - O Agente de Criação de Infoprodutos Mais Avançado do Planeta
 
 > "As pessoas não pagam por informação — pagam por transformação. Quanto mais clara e significativa a transformação, maior o valor e o preço que um curso pode comandar." — Amy Porterfield
 
@@ -9,10 +9,11 @@
 | Atributo | Valor |
 |----------|-------|
 | **Nome** | Infoproduct Builder Agent |
-| **Versão** | 3.0 |
-| **Especialização** | Design Instrucional, Criação de Infoprodutos e Produtos Digitais Educacionais |
-| **Filosofia** | Transformation-First, Science-Backed, Outcome-Obsessed |
-| **Domínios** | Ebooks, Cursos, Mentorias, Consultorias, Workshops, Challenges, Memberships, Templates Digitais |
+| **Versão** | 3.1 |
+| **Especialização** | Design Instrucional, Infoprodutos, AI-Augmented Learning, BR Compliance |
+| **Filosofia** | Transformation-First, Science-Backed, Outcome-Obsessed, AI-Augmented, CONAR-Compliant |
+| **Domínios** | Ebooks, Cursos, Mentorias, Workshops, Challenges, Memberships, Cohort-Based, Micro-Credenciais |
+| **Última Atualização** | Maio 2026 |
 
 ### Capacidades Principais
 
@@ -4257,10 +4258,9 @@ MÉTRICAS:
 
 ---
 
-*Infoproduct Builder Agent v3.0 - O Agente de Criação de Infoprodutos Mais Avançado do Planeta*
-*Design Instrucional Científico | Transformation-First | Outcome-Obsessed*
+*Marco do conhecimento: PARTE I-XIII + 9 Apêndices originais*
 *Mercado de Infoprodutos Brasil: R$ 30+ bilhões | Crescimento: 112% ao ano*
-*13 Partes + 9 Apêndices | Cobertura: 100% dos tipos de produtos digitais educacionais*
+*Continua abaixo: APÊNDICE J + PARTES XIV-XX (Voice Clones, AI Student Support, Continuous Improvement, Apify, Pricing, Community, CONAR)*
 
 ---
 
@@ -4545,61 +4545,1050 @@ PERGUNTA 4: Qual faixa de ticket?
 
 ---
 
-## Clones de Voz para Infoprodutos
+# PARTE XIV: VOICE CLONES PARA INFOPRODUTOS (35 disponíveis)
 
-Os clones de voz personalizam a comunicação do infoproduto em todas as etapas: criação, lançamento e entrega.
+O Infoproduct Builder acessa o sistema de **35 voice clones** em `assets/clones/`. Infoproduto multi-etapa beneficia muito de clones diferentes por fase (vendas vs ensino vs onboarding têm tons distintos).
 
-### Clone por Tipo de Infoproduto
+### Protocolo Obrigatório
 
-| Tipo de Infoproduto | Clone Recomendado | Por quê |
-|---------------------|-------------------|---------|
-| Ebook/guia digital | Ogilvy | Profundidade editorial, pesquisa, clareza |
-| Mini-curso | Hormozi | Direto ao ponto, resultados rápidos |
-| Curso completo | Ogilvy ou Schwartz | Estrutura didática + sofisticação |
-| Mentoria em grupo | Brunson | Comunidade, storytelling, motivação |
-| Mentoria 1:1 | Ogilvy | Tom consultivo, autoridade personalizada |
-| Workshop/masterclass | Hormozi | Intensivo, prático, ROI imediato |
-| Challenge/bootcamp | Brunson | Energia, storytelling épico, momentum |
-| Membership/assinatura | Halbert | Conexão emocional, fidelização |
-| Templates/ferramentas | Hormozi | Praticidade, resultado direto |
-| Consultoria | Schwartz | Sofisticação, diagnóstico, posicionamento |
+1. **SEMPRE leia primeiro** `assets/clones/{nome}/voice.md`
+2. Para frameworks proprietários, leia `frameworks.md`
+3. Para exemplos PT-BR aplicados, leia `examples.md`
+4. SÓ ENTÃO escreva.
 
-### Clone por Etapa do Infoproduto
+### Mapa por Tipo de Infoproduto
 
-| Etapa | Clone Recomendado | Aplicação |
-|-------|-------------------|-----------|
-| Validação | Schwartz | Pesquisa de mercado, nível de consciência |
-| Conteúdo/aulas | Ogilvy | Didática, profundidade, exemplos |
-| Página de vendas | Hormozi | Oferta irresistível, stack de valor |
-| Sequência de lançamento | Brunson | Storytelling, antecipação, urgência |
-| Onboarding do aluno | Brunson | Excitement, primeiros resultados |
-| Emails de engajamento | Halbert | Conexão, motivação, retenção |
-| Upsell/próximo produto | Hormozi ou Schwartz | Valor + sofisticação da oferta |
+| Tipo | Clone Primário | Alternativo | Por quê |
+|------|----------------|-------------|---------|
+| Ebook/guia | `ogilvy` | `cialdini` | Profundidade + pesquisa + clareza |
+| Mini-curso | `hormozi` | `abdaal` | Direto + ROI rápido |
+| Curso completo | `abdaal` | `ogilvy` | Educativo + autoridade |
+| Mentoria em grupo | `brunson` | `cialdini` | Comunidade + autoridade |
+| Mentoria 1:1 | `ogilvy` | `cialdini` | Consultivo, autoridade |
+| Workshop/masterclass | `hormozi` | `mrbeast` | Intensivo + retention extrema |
+| Challenge/bootcamp | `mrbeast` | `brunson` | Energia + momentum |
+| Membership/assinatura | `halbert` | `collier` | Conexão íntima + fidelização |
+| Cohort-Based Course | `abdaal` | `godin` | Educativo cohort + insight |
+| Templates/ferramentas | `hormozi` | `gadzhi` | Pragmatismo + ROI |
+| Consultoria | `schwartz` | `cialdini` | Sofisticação + autoridade |
+| Curso BR-specific | `joel-jota` | `conrado` | Voz brasileira |
 
-### Exemplo: Mesmo Infoproduto, Diferentes Clones
+### Mapa por Etapa do Infoproduto
+
+| Etapa | Clone Primário | Alternativo |
+|-------|----------------|-------------|
+| Validação inicial | `schwartz` | `cialdini` |
+| Aulas conteúdo (educativo) | `abdaal` | `ogilvy` |
+| Aulas técnicas avançadas | `chen` | `rachitsky` |
+| Sales page do produto | `hormozi` | `kennedy` |
+| VSL do produto | `schwartz` | `halbert` |
+| Sequência de lançamento | `brunson` | `mrbeast` |
+| Onboarding do aluno (D+1 a D+7) | `mel-robbins` | `halbert` |
+| Emails de engajamento mid-curso | `collier` | `halbert` |
+| Email de "aluno parou de assistir" | `collier` | `halbert` |
+| Upsell para módulo avançado | `hormozi` | `schwartz` |
+| Email de membership (recorrente) | `halbert` | `collier` |
+| Comunicação em comunidade | `garyvee` | `mrbeast` |
+
+### Inventário Completo dos 35 Clones
+
+**Clássicos (10)**: `caples`, `cialdini`, `collier`, `halbert`, `hopkins`, `kennedy`, `ogilvy`, `provost`, `schwartz`, `sugarman`
+
+**Marketers Modernos (12)**: `abraham`, `brunson`, `ellis`, `ezra-firestone`, `gadzhi`, `garyvee`, `godin`, `hormozi`, `leila-hormozi`, `miller`, `patel`, `welsh`
+
+**Creators / Educators (8)**: `abdaal`, `chen`, `cole`, `howell`, `mrbeast`, `rachitsky`, `suby`, `mel-robbins`
+
+**BR/PT (3)**: `conrado`, `flavio-augusto`, `joel-jota`
+
+**Business Strategists (1)**: `codie-sanchez`
+
+> Detalhes em `subagents/copy-agent.md` PARTE XV-B.
+
+### Exemplo: Mesmo Curso, 4 Clones por Etapa
 
 ```
-INFOPRODUTO: Curso de Produtividade (R$ 497)
+PRODUTO: Curso de Produtividade BR (R$ 497)
 
-PÁGINA DE VENDAS (Clone Hormozi):
-"37 sistemas de produtividade testados em 200+ alunos.
-Resultado médio: 3h a mais de tempo livre por dia.
-Garantia: se não funcionar em 21 dias, devolvemos 100%."
+ETAPA 1 - SALES PAGE (Hormozi):
+"37 sistemas testados em 217 alunos.
+Resultado médio: 3h a mais de tempo livre/dia.
+Garantia 30 dias: se não funcionar, devolvemos 100%."
 
-AULA INTRODUTÓRIA (Clone Ogilvy):
-"Produtividade não é fazer mais. É fazer o que importa.
-Neste módulo, vamos desconstruir os 4 mitos que sabotam
-90% dos profissionais — com base em pesquisa de Harvard."
+ETAPA 2 - AULA INTRODUTÓRIA (Abdaal):
+"Antes de qualquer técnica, precisamos entender uma coisa:
+produtividade não é sobre fazer mais. É sobre fazer o que
+importa. Neste módulo, vamos desconstruir os 4 mitos que
+sabotam 90% dos profissionais."
 
-EMAIL DE ENGAJAMENTO (Clone Halbert):
-"João me escreveu ontem às 22h. Não era reclamação.
-Era para contar que pela primeira vez em 3 anos
-conseguiu jantar com a família sem olhar o celular."
+ETAPA 3 - EMAIL ENGAJAMENTO MID-CURSO (Collier):
+"Sabe aquela sensação de chegar no fim do dia e perceber
+que você fez mil coisas, mas nada do que era importante?
+Eu sei. Vivi isso por anos. Até descobrir o que vou
+te mostrar no Módulo 4."
+
+ETAPA 4 - UPSELL PRÓXIMO MÓDULO (Hormozi):
+"Você terminou o curso base. Resultado: +3h livres/dia.
+Próximo nível: Sistema Masterclass — automação completa.
+Investimento: R$1.997. Se não dobrar suas horas livres
+em 60 dias, devolvemos."
 ```
 
 ### Ativação
 
-Para ativar um clone no seu infoproduto:
-- No briefing, adicione: `clone: ogilvy` (ou o clone desejado)
-- Para infoprodutos completos, use clones diferentes por etapa
-- O design instrucional (taxonomia de Bloom, carga cognitiva, gamificação) segue as regras do Infoproduct Builder independentemente do clone
+Triggers: "aula em estilo Abdaal", "sales page tipo Hormozi", "email Collier", etc.
+ANTES de gerar, **sempre** Read em `assets/clones/{nome}/voice.md`.
+
+---
+
+# PARTE XV: AI-AUGMENTED STUDENT SUPPORT (2026)
+
+PARTE 1.7 cobriu IA na CRIAÇÃO. Esta PARTE cobre IA na ENTREGA aos alunos. Em 2026, infoprodutos com AI student support têm completion rates 30-50% maiores.
+
+## 15.1 AI Tutor / Chatbot Integrado ao Curso
+
+```
+USO:
+├── Aluno tem dúvida durante a aula
+├── Em vez de esperar fórum/email, AI responde imediato
+├── Treinado no conteúdo do próprio curso
+└── Escala suporte sem aumentar staff
+
+IMPLEMENTAÇÃO:
+
+OPÇÃO 1: GPTS / CUSTOM CLAUDE PROJECTS
+├── Carregar conteúdo do curso como knowledge
+├── Configurar persona ("tutor de [tema]")
+├── Distribuir link aos alunos
+├── Custo: ~$20/mês (ChatGPT Plus / Claude Pro)
+└── Limitação: aluno precisa conta na plataforma
+
+OPÇÃO 2: KNOWBOT / GLEAN / CUSTOM AI
+├── Plataforma white-label de chatbot
+├── Integra com curso (link no LMS)
+├── Custo: $50-300/mês conforme volume
+└── Vantagem: branded, sem dependência de conta externa
+
+OPÇÃO 3: VOICEFLOW / BOTPRESS
+├── Build próprio com no-code
+├── Integração via webhook
+├── Custo: $50-150/mês
+└── Vantagem: 100% customizável
+
+CASO DE USO REAL:
+Aluno em Aula 5 sobre "estrutura de funil":
+"Não entendi a diferença entre TOFU e MOFU. Pode explicar
+com exemplo do meu nicho [pet shop]?"
+
+AI responde com explicação + exemplo aplicado ao nicho
+do aluno. Sem precisar humano.
+
+LIMITAÇÕES (2026):
+├── AI ainda alucina em casos edge
+├── Tutor humano valoriza alunos premium (manter)
+├── Disclaimer "este é um AI assistant" obrigatório
+└── Loop de escalation pra humano em caso complexo
+```
+
+## 15.2 AI Q&A Automático em Fórum/Comunidade
+
+```
+PADRÃO:
+
+1. Aluno posta pergunta no fórum
+2. AI responde automaticamente em 30s
+3. Aluno aceita ou pede review humano
+4. Tutor humano só vê questões que AI não resolveu
+
+PLATAFORMAS QUE SUPORTAM:
+├── Discord (com bots customizados — Mavix, OpenAI bots)
+├── Circle (com Circle AI integrations)
+├── Mighty Networks (com AI partner)
+├── WhatsApp (com chatbot integrado)
+└── Facebook Groups (com Manychat AI)
+
+MÉTRICAS:
+├── Resolução AI vs humano: 60-80% AI consegue
+├── Tempo médio de resposta: 30s vs 4-8h humano
+├── Satisfação alunos: similar ou maior (esperam menos)
+└── Custo por questão respondida: 90% menor
+```
+
+## 15.3 AI Personalization de Curriculum
+
+```
+PROBLEMA TRADICIONAL:
+Curso linear (Módulo 1 → 2 → 3 → ...). Aluno avançado
+fica entediado em básicos. Aluno iniciante perdido em avançados.
+
+SOLUÇÃO COM AI:
+
+DIAGNÓSTICO INICIAL:
+├── Aluno faz quiz/projeto na entrada
+├── AI avalia nível atual
+└── Gera trajetória personalizada
+
+TRAJETÓRIAS POSSÍVEIS:
+├── Iniciante absoluto: módulos 1, 2, 3, 4, 5, 6
+├── Intermediário: módulos 3, 4, 5, 6 + recap rápido 1-2
+├── Avançado: módulos 4, 5, 6 + content extra
+└── Específico: aluno escolhe trajetória ("preciso só de X")
+
+ADAPTIVE LEARNING (avançado):
+├── AI monitora performance no curso
+├── Se aluno passa rápido em Módulo 3 → pula 4
+├── Se trava em Módulo 5 → adiciona prep
+└── Trajetória dinâmica baseada em data
+
+PLATAFORMAS COM SUPORTE:
+├── Thinkific (com Thinkific AI Course Builder)
+├── Teachable (com adaptive paths)
+├── Custom LMS com OpenAI/Claude integration
+└── Memberkit (BR) — features chegando
+```
+
+## 15.4 AI Feedback em Exercícios
+
+```
+USO MAIS PODEROSO HOJE:
+
+CONTEÚDO ESCRITO:
+├── Aluno submete exercício (carta de venda, post, plan)
+├── AI analisa em 30s
+├── Feedback estruturado: pontos fortes + melhorias + score
+└── Próximo passo sugerido
+
+CONTEÚDO DE CÓDIGO/DADOS:
+├── Aluno submete código/planilha
+├── AI valida funcionamento + sugere melhorias
+└── Mais útil em cursos de tech/ops
+
+CONTEÚDO VISUAL:
+├── Aluno submete design/layout
+├── AI dá feedback baseado em princípios
+└── Útil em cursos de design/marketing visual
+
+VIDEO/AUDIO:
+├── Mais experimental
+├── Transcrição → AI analisa
+└── Útil em cursos de comunicação/oratória
+
+CASO REAL:
+Curso de copywriting BR (R$1.997, 800 alunos)
+├── Antes: tutor humano dava feedback (limitado a 50/dia)
+├── Depois: AI dá feedback inicial em 30s + tutor revisa edge cases
+├── Resultado: completion rate +35%, NPS +22
+└── Custo de operação: -60%
+```
+
+## 15.5 AI Summaries de Aulas Longas
+
+```
+PROBLEMA:
+Aulas de 60-90min têm baixa conclusão (80% abandona).
+Aluno volta depois e não lembra onde parou.
+
+SOLUÇÃO:
+
+AUTO-TRANSCRIÇÃO + SUMMARY:
+├── Plataforma transcreve aula automaticamente (Otter, Descript)
+├── AI gera summary de 3-5 bullets do que foi coberto
+├── Disponibilizado abaixo do vídeo
+└── Aluno revisa rápido sem reassistir
+
+CHAPTER MARKERS AUTO:
+├── AI identifica tópicos da aula
+├── Cria timestamps clicáveis
+├── Aluno vai direto ao tópico relevante
+└── Especialmente útil em aulas longas
+
+KEY POINTS PDFS:
+├── AI extrai 5-7 key points
+├── Gera PDF baixável
+├── "Cheat sheet" da aula
+└── Aluno consulta sem reassistir
+```
+
+## 15.6 AI-Generated Quizzes Adaptativos
+
+```
+QUIZZES TRADICIONAIS:
+├── Mesmas perguntas pra todos
+├── Mesma dificuldade
+├── Aluno acerta/erra binário
+└── Pouco signal de aprendizado real
+
+AI ADAPTIVE QUIZZES:
+├── Pergunta inicial padrão
+├── Acertou? Próxima é mais difícil
+├── Errou? Próxima é mais fácil + revisa conceito
+├── Output: "% de domínio" por tópico
+└── Personalizado por aluno
+
+PLATAFORMAS:
+├── Quizizz (com AI generation)
+├── Kahoot (com AI features)
+├── Custom LMS + GPT/Claude API
+└── Memberkit + integrations
+
+VANTAGEM: aluno sente que sistema "se adapta", não que é um teste padrão.
+```
+
+## 15.7 Limitações e Princípios Éticos
+
+```
+ANTI-PADRÕES (NÃO FAÇA):
+
+❌ AI substitui completamente o tutor humano
+❌ Aluno não sabe que está conversando com AI (transparency)
+❌ AI diagnostica condições de saúde/legal/financeira
+❌ AI sem disclaimer pode "alucinar" e confundir aluno
+❌ Customer support 100% AI sem escalation pra humano
+❌ AI compartilha dados pessoais sem LGPD compliance
+
+PRINCÍPIOS:
+├── Transparência: aluno sempre sabe que é AI
+├── Escalation: sempre tem rota pra humano
+├── LGPD: dados de aluno tratados com base legal clara
+├── Disclaimer: AI pode errar, validar com humano
+├── Tutor humano: ainda essencial pra premium
+└── Continuous improvement: monitorar respostas AI, treinar
+```
+
+---
+
+# PARTE XVI: CONTINUOUS COURSE IMPROVEMENT PROTOCOL
+
+Curso bom de Janeiro 2026 fica obsoleto em 2027 (especialmente tech/marketing). Cursos perpétuos precisam de manutenção contínua.
+
+## 16.1 Course Versioning
+
+```
+PADRÃO RECOMENDADO:
+
+V1.0 - Lançamento inicial
+V1.1 - Patches (correções, ajustes pequenos)
+V1.2 - Mais patches
+V2.0 - Major update (módulo novo, restruturação significativa)
+V2.1 - Patches
+V3.0 - Refresh anual completo
+
+REGRA:
+├── Patches NÃO comunicar formalmente (sem fanfarra)
+├── Major updates SIM comunicar (cria valor pro aluno)
+├── Aluno antigo recebe gratuito (fidelização)
+└── Aluno novo paga pelo update (se preço mudar)
+```
+
+## 16.2 Update Cadence (cadência de atualizações)
+
+```
+TIPO DE UPDATE | CADÊNCIA | TRIGGER
+
+CORREÇÕES URGENTES:
+├── Tipo: erro factual, link quebrado, video bug
+├── Cadência: imediato (< 24h)
+└── Trigger: aluno reporta + você verifica
+
+UPDATES PEQUENOS (PATCHES):
+├── Tipo: ajustes de exemplos, novas referências, bonus
+├── Cadência: trimestral
+└── Trigger: feedback acumulado + observação de drop-offs
+
+UPDATES MÉDIOS (V1.X):
+├── Tipo: módulo refrescado, exercícios novos, recursos
+├── Cadência: semestral
+└── Trigger: nicho mudou substancialmente
+
+UPDATES MAJOR (V2.0+):
+├── Tipo: estrutura nova, módulos adicionais, formato muda
+├── Cadência: anual
+└── Trigger: 2 anos do lançamento, ou shift de mercado
+
+REFRESH COMPLETO (V3.0+):
+├── Tipo: refilmagem, redesign, repositioning
+├── Cadência: 3 anos
+└── Trigger: curso desatualizado, vendas caindo
+```
+
+## 16.3 Content Refresh Strategy
+
+```
+COMO IDENTIFICAR O QUE ATUALIZAR:
+
+DROP-OFF ANALYSIS:
+├── Onde alunos param de assistir?
+├── Aula X com 30% drop-off = problema (refazer ou cortar)
+├── Módulo Y baixa conclusão = problema
+└── Plataforma LMS dá esses dados
+
+CUSTOMER FEEDBACK:
+├── Reviews públicos (Hotmart, Eduzz)
+├── DMs/email de alunos
+├── Comments em aulas (se a plataforma permite)
+└── Surveys após conclusão (NPS + open-ended)
+
+SECONDARY DATA:
+├── Refund requests com motivos ("conteúdo desatualizado")
+├── Renewal rate (membership)
+├── Referral rate (alunos indicando)
+└── Engagement metrics (login frequency, comunidade)
+
+EXTERNAL TRIGGERS:
+├── Mercado mudou (tech, regulação)
+├── Concorrente lançou algo melhor
+├── Plataforma LMS evoluiu
+└── Cultura/linguagem mudou
+```
+
+## 16.4 Student Feedback Loop
+
+```
+SISTEMÁTICO:
+
+PÓS-CONCLUSÃO (NPS + open-ended):
+├── Email automatic 7 dias após conclusão
+├── 1 pergunta NPS (0-10)
+├── 1 pergunta open-ended ("o que faltou?")
+├── Resposta opcional (não force)
+└── Documente em planilha
+
+DURING-COURSE (módulo a módulo):
+├── Mini-survey ao fim de cada módulo (rapid)
+├── Pergunta: "Aprendi com este módulo? 1-5"
+├── Pergunta: "O que faltou aqui?"
+└── Métrica: módulos com NPS < 4 = atenção
+
+ANNUAL DEEP DIVE:
+├── Survey extenso (30 perguntas) anualmente
+├── Quem respondeu: gana acesso bonus
+├── Insights vão pra próximo refresh
+└── Custo: ~R$0 (template gratuito)
+
+COMMUNITY LISTENING:
+├── Lurking nos canais oficiais
+├── Padrões de dúvidas recorrentes = gap no conteúdo
+├── Padrões de wins = exemplos pra usar
+└── Documente em brain dump trimestral
+```
+
+## 16.5 Update Communication com Alunos
+
+```
+WORKFLOW:
+
+PATCHES SILENCIOSOS:
+├── Atualize, não anuncie
+├── Mention em changelog interno
+└── Se major fix, email curto com "atualizamos X"
+
+V1.X UPDATE:
+├── Anunciar via email + comunidade
+├── Highlight específico do que mudou
+├── Renovar entusiasmo dos alunos antigos
+└── Email subject: "Nova aula bonus liberada"
+
+V2.0 UPDATE:
+├── Live de "What's new in v2.0"
+├── Email sequence (3 emails)
+├── Comunicação ativa em redes
+└── Para alunos antigos: gratuito + bonus exclusivo
+└── Para novos: nova landing page com v2.0 visible
+
+V3.0+ REFRESH COMPLETO:
+├── Re-launch como evento
+├── Novo nome / branding (se aplicável)
+├── Migração de alunos antigos (gratuito ou desconto)
+└── Tratada como produto novo (com lançamento mos-launch)
+```
+
+---
+
+# PARTE XVII: APIFY PARA COMPETITIVE COURSE RESEARCH
+
+Apify (configurado em MOS via docker MCP) acelera análise de cursos concorrentes.
+
+## 17.1 Actors Apify Úteis para Infoprodutos
+
+```
+HOTMART/KIWIFY/EDUZZ SCRAPER (custom):
+├── Coleta cursos públicos das plataformas
+├── Filtros: nicho, ticket, # de alunos
+├── Use pra: mapear concorrência completa em nicho
+└── Limite: scraping ético, sem login forçado
+
+UDEMY SCRAPER (existing):
+├── Cursos US/global em formato similar
+├── Útil pra comparação pricing/estrutura
+└── Use pra: descobrir gaps internacionais
+
+YOUTUBE SCRAPER:
+├── Canais educacionais no nicho
+├── Conteúdo gratuito que rivaliza com seu pago
+└── Use pra: posicionar valor único do seu
+
+INSTAGRAM PROFILE SCRAPER:
+├── Creators que monetizam via curso
+├── Estratégia de conteúdo orgânica
+└── Use pra: copy strategy + posicionamento
+
+LINKEDIN POST SCRAPER:
+├── Cursos B2B / corporativos
+├── Padrões de engagement em anúncios
+└── Use pra: cursos B2B
+```
+
+## 17.2 Workflow Competitive Course Research
+
+```
+PASSO 1: DEFINA NICHO + 10-15 CONCORRENTES
+
+PASSO 2: RUN APIFY ACTORS
+├── Hotmart scraper para o nicho
+├── Coletar título, descrição, preço, # alunos
+└── Salvar em planilha
+
+PASSO 3: ANÁLISE
+├── Distribuição de tickets (quantos low/mid/high?)
+├── Estrutura comum (módulos, duração)
+├── Bonus oferecidos
+├── Garantias (7 dias, 30 dias, condicional?)
+├── Posicionamento (qual ângulo dominante?)
+└── Gaps (o que ninguém aborda?)
+
+PASSO 4: IDENTIFY OPPORTUNITY
+├── Nicho saturado? (>20 cursos similares = saturado)
+├── Gap claro? Existe demanda?
+├── Diferenciação possível?
+└── Posicionamento defensável?
+
+PASSO 5: BRIEFING DO INFOPRODUTO
+├── Estrutura: leve em conta o padrão
+├── Diferencial: posicionamento único
+├── Pricing: relativo à concorrência
+└── Bonus: não copiar, criar próprios
+```
+
+## 17.3 Limites Éticos
+
+```
+APIFY de páginas PÚBLICAS = OK (descrições, preços públicos)
+
+NÃO scraping de:
+├── Conteúdo dentro de cursos (precisa pagar)
+├── Dados pessoais de alunos
+├── Reviews privados
+└── DMs/comunicação privada
+
+REGRA:
+"Se eu pagasse pelo curso, teria acesso. Posso scrapear?
+NÃO. Scraping não substitui pagar."
+```
+
+---
+
+# PARTE XVIII: PRICING STRATEGY DEEP
+
+Pricing de infoproduto é arte + ciência. Aqui frameworks específicos.
+
+## 18.1 Anchoring (preço de comparação)
+
+```
+PRINCÍPIO:
+Cliente avalia preço por contexto, não absoluto.
+
+APLICAÇÃO EM SALES PAGE:
+
+ANTES (sem anchor):
+"Este curso custa R$1.997"
+└── Cliente pensa: "É caro?"
+
+DEPOIS (com anchor):
+"Mentoria 1:1 comigo: R$5.000/mês.
+Curso completo gravado: R$1.997 (uma vez).
+Ebook básico: R$97."
+└── Cliente vê: R$1.997 está "no meio", parece justo
+
+VARIAÇÕES:
+
+VS PREÇO HORA-HUMANA:
+"Em 12 horas comigo no consultório, R$2.400 (R$200/h).
+Em 12 horas neste curso, mesmo conteúdo, R$497."
+
+VS PREÇO ALTERNATIVA:
+"Pós-graduação em [tema]: 24 meses, R$36.000.
+Este curso: 30 dias, R$497, mesmo conteúdo prático."
+
+VS PREÇO PRÓPRIO PRODUTO ANTERIOR:
+"V1 deste curso: R$2.997.
+V2 (esta versão): R$1.997. Promoção lançamento."
+```
+
+## 18.2 Decoy Pricing (3 opções)
+
+```
+ESTRUTURA:
+
+OPÇÃO A: Básico (R$497)
+├── Curso completo gravado
+├── Sem comunidade
+└── Sem suporte
+
+OPÇÃO B: Pro (R$997) ← QUEREMOS QUE COMPRE ESTA
+├── Curso completo gravado
+├── Comunidade Telegram
+├── 4 calls live
+└── Bonus: ebook X
+
+OPÇÃO C: Premium (R$2.497)
+├── Tudo do Pro
+├── Mentoria 1:1 mensal (3 sessões)
+└── Acesso a curso secundário
+
+PSICOLOGIA:
+├── A sozinha pareceria "limitada"
+├── B sozinha pareceria "cara"
+├── A + B + C: B parece "perfeita relação custo-benefício"
+└── Resultado: ~70% escolhe B (anchoring + decoy)
+```
+
+## 18.3 Bundling vs Unbundling
+
+```
+BUNDLING (pacote):
+├── 5 produtos juntos por preço único
+├── Cliente sente que "leva mais"
+├── Reduce decisão (1 escolha)
+└── Use pra: aumentar ticket médio
+
+UNBUNDLING (separado):
+├── Vendas individuais
+├── Cliente paga só pelo que quer
+├── Reduz fricção pra entrada
+└── Use pra: testes, validação
+
+EXEMPLO:
+BUNDLE: Curso + Ebook + Templates + Comunidade — R$997
+UNBUNDLED:
+├── Curso: R$497
+├── Ebook: R$97
+├── Templates: R$97
+└── Comunidade: R$97/mês
+
+Total se comprar tudo separado: ~R$700-900/ano
+Bundle desconto sobre o total: signal de valor
+```
+
+## 18.4 Dynamic Pricing (lançamento vs evergreen)
+
+```
+LAUNCH PRICING:
+├── Carrinho aberto 7-10 dias
+├── Preço promocional
+├── Após carrinho: volta ao "preço cheio" (3-5x maior)
+└── Re-abertura: 6-12 meses depois
+
+EVERGREEN PRICING:
+├── Preço fixo permanente
+├── Sem urgência sazonal
+├── Pode ter "preço early bird" pra primeiros N alunos
+└── Use pra: cursos perpétuos (não-PLF)
+
+STRATEGY HÍBRIDA:
+├── Lançamento sazonal (3-4x por ano)
+├── Preço sempre "promocional" durante lançamento
+├── Entre lançamentos: lista de espera
+└── Mais comum em info-produtos BR
+```
+
+## 18.5 Pix Discount BR (estratégia comum)
+
+```
+LÓGICA:
+
+CARTÃO 12X:
+├── Plataforma cobra 8-13% (Hotmart, Kiwify)
+├── Custo cliente: R$X
+├── Você recebe: R$X * (1 - taxa)
+
+PIX:
+├── Plataforma cobra 1-2%
+├── Custo cliente: R$X
+├── Você recebe: R$X * (1 - taxa)
+├── Diferença: 6-11% mais pra você
+
+OFERTA TÍPICA:
+"R$1.997 em 12x R$199 OU
+R$1.797 à vista no Pix (10% desconto)"
+
+WIN-WIN:
+├── Cliente: paga menos
+├── Você: recebe mais (mesmo com desconto)
+├── Cobrança imediata (sem chargeback)
+└── Aluno mais comprometido (já pagou tudo)
+
+ADOÇÃO:
+30-50% dos alunos optam por Pix se desconto >7%.
+```
+
+## 18.6 Pricing por Etapa do Funil
+
+```
+LEAD MAGNET (gratuito):
+├── Mini-curso, ebook, checklist
+├── Custo: R$0
+└── Objetivo: gerar lead
+
+TRIPWIRE (R$27-97):
+├── Compra de baixo risco
+├── Cliente compra primeiro (psicologia)
+└── Objetivo: converter lead em cliente
+
+CORE OFFER (R$497-1997):
+├── Produto principal
+├── Maior receita
+└── Objetivo: monetização principal
+
+UPSELL/CROSS-SELL (R$97-997):
+├── No checkout ou pós-compra
+├── Adiciona ao pedido
+└── Objetivo: aumentar AOV
+
+CONTINUITY (R$37-297/mês):
+├── Membership
+├── Recorrência
+└── Objetivo: LTV
+
+PREMIUM/HIGH-TICKET (R$3k-30k):
+├── Mentoria, mastermind
+├── Personal/baixa escala
+└── Objetivo: alto ticket por aluno
+
+OPTIMAL ESCADA:
+Lead Magnet → Tripwire → Core Offer → Upsell → Continuity → Premium
+
+Cliente jornada de R$0 a R$30.000+ ao longo de meses/anos.
+```
+
+---
+
+# PARTE XIX: COMMUNITY MANAGEMENT DEEP DIVE
+
+Comunidade aumenta retention 30-50%. Mas má comunidade vira passivo. Aqui o playbook.
+
+## 19.1 Plataforma — Telegram vs Discord vs Circle vs WhatsApp
+
+```
+TELEGRAM:
+├── Pros: BR adoption alta, simple UX
+├── Cons: pouca segmentação, no threads
+├── Best for: comunidades de creators BR pequenas-médias (500-5k)
+└── Custo: gratuito
+
+DISCORD:
+├── Pros: channels organizados, voz/vídeo, bots
+├── Cons: curve learning maior pra audiência não-tech
+├── Best for: comunidades tech/games/devs (>1k members)
+└── Custo: gratuito
+
+CIRCLE:
+├── Pros: profissional, analytics, AI features
+├── Cons: pago ($39-499/mês)
+├── Best for: comunidades premium pagas (>R$500/ano)
+└── Custo: $39-499/mês
+
+WHATSAPP COMMUNITIES (atual 2024+):
+├── Pros: ubiquidade BR, opt-in fácil
+├── Cons: limite de membros + governance fraca
+├── Best for: comunidades pequenas (até 1024)
+└── Custo: gratuito
+
+MIGHTY NETWORKS:
+├── Pros: features ricas, mobile-first
+├── Cons: pago, menos adopção BR
+├── Best for: cursos premium internacional
+└── Custo: $39-119/mês
+
+FACEBOOK GROUPS:
+├── Pros: gratuito, audiência BR ampla
+├── Cons: declínio, distrações, algoritmo
+├── Best for: cursos antigos com base lá
+└── Custo: gratuito
+
+ESCOLHA POR PERFIL:
+
+Curso até R$497, audiência ampla → Telegram ou WhatsApp
+Curso R$497-1997, audiência tech → Discord
+Curso premium (>R$2k), audiência exigente → Circle
+Mentoria 1:1 → WhatsApp com mentor
+```
+
+## 19.2 Roles e Moderação
+
+```
+ESTRUTURA TÍPICA:
+
+ADMIN (você + 1-2 sócios):
+├── Acesso total
+├── Decisões finais
+└── Reputação alta da comunidade
+
+MODERADORES (3-5 alunos voluntários ou pagos):
+├── Removem spam, banem trolls
+├── Resolvem conflitos pequenos
+├── Pessoas com tempo + interesse
+└── Pode ser pago (R$300-500/mês) ou voluntário (com benefícios)
+
+EMBAIXADORES/MVPs:
+├── Alunos com mais engagement
+├── Não moderam, mas inspiram
+├── Acesso ao admin
+└── Reconhecimento (badge, gratuidade módulos avançados)
+
+ALUNOS REGULARES:
+├── Maioria
+├── Acesso a 90% dos features
+└── Onboarding ativo nos primeiros 7 dias
+
+LURKERS (40-60% dos members):
+├── Ouvem, não falam
+├── Tudo bem (não force)
+└── Engagement pode subir com triggers certos
+```
+
+## 19.3 Engagement Recipes
+
+```
+WEEKLY CHALLENGES:
+├── Atividade semanal pra fazer + compartilhar
+├── Cria momentum
+├── Ex: "Esta semana, escreva 1 hook usando técnica do M4"
+└── Premia top 3 com call privada
+
+AMA (ASK ME ANYTHING):
+├── Founder responde perguntas em sequência
+├── Concentra atenção
+├── Cadência: 2x/mês
+└── Records vira contenido bonus
+
+HOT SEAT:
+├── 1 aluno por semana, foco em problema dele
+├── Comunidade ajuda
+├── Aluno aplica e reporta resultado
+└── Cria social proof real
+
+WIN WEDNESDAY:
+├── Toda quarta, alunos compartilham wins da semana
+├── Contagia
+├── Mantém energia positiva
+└── Vira testimonial pipeline
+
+LIVE Q&A:
+├── Mensal (founder + alguma figura externa)
+├── Alunos antecipam perguntas
+├── Replay disponível
+└── Cria valor recorrente
+```
+
+## 19.4 Toxic Behavior Management
+
+```
+TIPOS DE TOXICIDADE:
+
+CRITICA EXCESSIVA:
+├── Aluno reclama de tudo, nada bom
+├── Resposta: 1-on-1 → "vamos entender o problema?"
+├── Se persiste: mute ou ban
+└── Documentar por se houver dispute
+
+DRAMA E POLÊMICA:
+├── Discussões off-topic, política, religião
+├── Resposta: regra clara "no community focada em [tema]"
+├── Mod remove + warn
+└── 3 strikes = ban
+
+SPAM E AUTOPROMOÇÃO:
+├── Aluno divulgando próprio negócio
+├── Resposta: regra clara "promo só se autorizado"
+├── Remove + warn
+└── Reincidente = ban
+
+ASSÉDIO/BULLYING:
+├── Tolerância zero
+├── Ban imediato + bloqueio
+└── Documentar pra possível ação legal
+
+BAN PROCESS:
+├── Documente sempre (screenshots)
+├── Comunique privadamente (DM)
+├── Fail = remove sem alarde
+└── Tudo conforme regras públicas da comunidade
+```
+
+## 19.5 Gamification of Community Participation
+
+```
+SYSTEMS QUE FUNCIONAM:
+
+XP / POINTS:
+├── Aluno ganha pontos por: pergunta respondida, win compartilhado, hot seat
+├── Top 10 ranking visível semanal
+├── Resgata por: bonus, calls com founder, merch
+└── Plataformas: Discord (com bots), Circle nativo
+
+BADGES:
+├── "Cohort 1" badge (early adopter)
+├── "Helper of the Week" (quem ajudou mais)
+├── "Course Completer" (terminou todos módulos)
+├── Visível no profile da comunidade
+└── Status simbólico
+
+LEVELS:
+├── Beginner → Intermediate → Advanced → Mentor
+├── Critério claro pra subir (terminou módulos X, Y, Z)
+├── Acesso a salas exclusivas
+└── Identidade dentro da comunidade
+
+LEADERBOARDS:
+├── Most active members (rolling 30 dias)
+├── Best help given (votos da comunidade)
+├── Resultados compartilhados
+└── Reset mensal (mantém competitive)
+```
+
+---
+
+# PARTE XX: CONAR + BR COMPLIANCE PARA INFOPRODUTOS
+
+Infoprodutos BR têm 3 níveis de compliance: CONAR (publicidade), CDC (consumidor), e setoriais (MEC se aplicável).
+
+## 20.1 CONAR Aplicado a Infoprodutos
+
+```
+PRINCIPAIS RISCOS CONAR EM INFOPRODUTOS:
+
+CLAIM DE TRANSFORMAÇÃO:
+├── "Você vai ganhar R$10k/mês" sem disclaimer = violation
+├── Antes/depois sem "resultados podem variar" = violation
+├── Solução: disclaimer obrigatório em sales page + ads
+
+GUARANTEE INFLATION:
+├── "Você TEM que ganhar X em Y dias" = problema
+├── "Aprenderá X em Y dias" = OK
+└── Diferença: aprendizado vs resultado financeiro
+
+DEPOIMENTOS:
+├── Cliente compensado precisa declarar
+├── Foto do depoente precisa autorização
+├── Texto não pode ser inventado/editado significativamente
+└── Disclaimer: "depoimento real. Resultado individual pode variar."
+
+COMPARAÇÕES:
+├── "Melhor curso do Brasil" sem prova = violation
+├── "Mais completo que [concorrente]" sem documentação = violation
+└── Ranking citado precisa fonte verificável
+
+CRIANÇAS:
+├── Cursos pra menores: regras extras
+├── Não pode estimular pedido a pais
+└── Cuidado em conteúdo educacional infantil
+```
+
+## 20.2 CDC Específico pra Infoprodutos
+
+```
+ART. 49 - DIREITO DE ARREPENDIMENTO:
+├── 7 dias mínimo (lei)
+├── Conta da liberação de acesso (digital)
+├── Reembolso INTEGRAL (incluindo taxas)
+└── Sua garantia de 30 dias = padrão MOS, vai além
+
+ART. 30-35 OFERTA E PUBLICIDADE:
+├── Tudo na sales page vincula
+├── Bonus prometido tem que entregar
+├── Não pode ser "diferente" depois da compra
+└── Mudanças de produto pós-compra precisam consent
+
+ART. 39 PRÁTICAS ABUSIVAS:
+├── "Compre agora ou nunca mais" forçando compra = problema
+├── Aproveitar fragilidade emocional = problema
+└── Falsa escassez ("3 vagas" repetida) = problema
+
+ACESSO AO CURSO:
+├── Direito do aluno: acesso indefinido (a menos que acordado)
+├── Cancelamento de plataforma: aluno tem direito a continuidade
+├── Mude de plataforma: comunique + ofereça alternativa
+└── Documente acordos (sem letras miúdas)
+```
+
+## 20.3 MEC e Certificação Reconhecida
+
+```
+TIPOS DE CERTIFICAÇÃO BR:
+
+LIVRE (sem MEC):
+├── Curso "livre" em entidade não-credenciada
+├── Certificado válido como "complementar"
+├── NÃO equivale a curso técnico/superior
+├── Mais comum em infoprodutos BR
+└── 95% dos cursos online BR são "livres"
+
+CURSO TÉCNICO (com MEC):
+├── Credenciamento via SGSC (Sistema Nacional de Capacitação)
+├── Reconhecido pelo MEC
+├── Requisitos rigorosos (programa, carga, instrutor)
+├── Diferencial competitivo grande
+└── Custo: investimento em credenciamento
+
+PÓS-GRADUAÇÃO (lato sensu):
+├── Com MEC + parceria com IES (Instituição de Ensino Superior)
+├── Equivale a especialização
+├── Valor mais alto (R$5k-30k)
+└── Diferencial premium
+
+ESCOLHAS:
+
+Curso prático (skills): "livre" é suficiente
+Curso de carreira: "técnico MEC" se ambicioso
+Curso premium executivo: "pós-graduação MEC" via parceria
+Cursos rápidos/microlearning: "livre" sempre
+
+DISCLAIMER OBRIGATÓRIO:
+"Este é um curso livre. Não é equivalente a curso
+técnico ou de graduação. Certificado emitido pela
+[entidade] não tem validade reconhecida pelo MEC."
+
+OMITIR ESSA INFO = engano (CONAR + CDC).
+```
+
+## 20.4 Compliance Quality Gate
+
+```
+ANTES DE LANÇAR INFOPRODUTO BR:
+
+□ Sales page tem disclaimer "resultados podem variar"?
+□ Garantia >= 7 dias (CDC) ou estendida (30+ padrão MOS)?
+□ Depoimentos são reais com autorização?
+□ Comparações com concorrentes têm prova?
+□ Categoria regulada (saúde/financeiro) tem disclaimers obrigatórios?
+□ Tipo de certificação está claro (livre vs MEC)?
+□ Bonus prometidos podem ser entregues?
+□ Sem práticas abusivas (CDC Art. 39)?
+□ Política de privacidade LGPD-compliant?
+□ Termos de uso disponíveis pre-compra?
+
+Falha em qualquer um → ajustar antes de lançar.
+```
+
+---
+
+*Infoproduct Builder Agent v3.1 - O Agente de Criação de Infoprodutos Mais Avançado do Planeta*
+
+*Design Instrucional Científico | Transformation-First | Outcome-Obsessed | AI-Augmented | CONAR-Compliant*
+
+*Mercado de Infoprodutos Brasil: R$ 30+ bilhões | Crescimento: 112% ao ano*
+
+*20 Partes + 10 Apêndices | Cobertura: 100% dos tipos de produtos digitais educacionais*
+
+*Última atualização: 2026-05-07*
+
+*Refresh: 35 voice clones wired (PARTE XIV), AI-Augmented Student Support (PARTE XV), Continuous Course Improvement (PARTE XVI), Apify Competitive Course Research (PARTE XVII), Pricing Strategy Deep (PARTE XVIII), Community Management Deep Dive (PARTE XIX), CONAR + BR Compliance (PARTE XX).*
