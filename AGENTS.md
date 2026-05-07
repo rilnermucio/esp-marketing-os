@@ -2,7 +2,7 @@
 
 This file provides guidance to AI coding agents (Claude Code, Codex CLI, Cursor, Gemini CLI, etc.) when working with code in this repository.
 
-> Mirrored from `CLAUDE.md`. Keep both in sync when editing — Claude Code reads `CLAUDE.md`, Codex and tooling-agnostic agents read this file.
+> **Canonical source.** Edit this file directly. `CLAUDE.md` is a thin shim that imports this file via `@AGENTS.md` — Claude Code reads it on launch, Codex and other tooling-agnostic agents read this file directly. Don't duplicate content; everything goes here.
 
 ## O que é este repositório
 
