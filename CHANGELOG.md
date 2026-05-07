@@ -7,6 +7,22 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
 
 ---
 
+## [6.1.6] — 2026-05-07
+
+### Removed
+- 23 leaked tracked files (3.3 MB) that were never meant to be distributed:
+  - `.vscode/`, `.playwright-mcp/`, `.mcp.json` — local IDE/tooling configs
+  - `workspace/landing-pages/*` (4 files) — personal copy and HTML
+  - `workspace/media/images/queila-*.png` (10 files) — personal client images
+  - `workspace/outputs/*` (1 file) — personal video script
+  - `workspace/research/*.docx` (2 files) — personal competitive research
+
+  Files remain locally (`git rm --cached` only). Added new ignore rules to prevent
+  future re-tracking. The `workspace/.gitkeep` markers stay (they preserve the
+  directory skeleton for new users).
+
+---
+
 ## [6.1.5] — 2026-05-07
 
 ### Fixed

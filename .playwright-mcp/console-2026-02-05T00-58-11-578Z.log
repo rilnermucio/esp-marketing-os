@@ -1,7 +1,0 @@
-[    1851ms] [WARNING] [.WebGL-0x12400447800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels @ https://www.instagram.com/queilatrizotti/:0
-[    2215ms] [WARNING] [.WebGL-0x12400447200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels @ https://www.instagram.com/queilatrizotti/:0
-[    4693ms] [ERROR] ErrorUtils caught an error:
-
-Got unexpected null or undefined
-
-Subsequent non-fatal errors won't be logged; see https://fburl.com/debugjs. {column: 137, clientTime: 1770253096, extra: Object, guardList: Array(0), hash: zxwvba} @ https://static.cdninstagram.com/rsrc.php/v4/yt/r/__rDlrM-qQd.js:76

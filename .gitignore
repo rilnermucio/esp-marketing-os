@@ -7,6 +7,11 @@
 .codex/
 .cursor/
 
+# Local IDE / tooling configs (não distribuídos pelo plugin)
+.vscode/
+.playwright-mcp/
+.mcp.json
+
 # Workspace pessoal (não distribuído pelo plugin)
 workspace/**
 !workspace/
