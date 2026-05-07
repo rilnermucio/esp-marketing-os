@@ -2804,6 +2804,320 @@ sem soar acadêmica seca. O equilíbrio é difícil mas
 distingue educação séria de info-produto disfarçado.
 ```
 
+### Real Estate BR (Imobiliário)
+
+```
+TOM: Confiável, técnico-financeiro, contextual.
+Cliente compara TIR, financiamento, valorização zona.
+NÃO é decisão de impulso — informação > emoção.
+
+NÃO faça: "Casa dos sonhos te espera!"
+NÃO faça: Promessa de valorização ("vai dobrar em 2 anos!")
+NÃO faça: Esconder taxa de condomínio, IPTU, ITBI
+
+FAÇA:
+"Apartamento 2 dorms, 67m², frente para o parque,
+em Pinheiros. R$890K com financiamento direto pela
+construtora em até 180 meses ou Caixa SBPE com
+entrada de 20%.
+
+Histórico de valorização da microrregião: 8.4% a.a.
+nos últimos 5 anos (Embraesp 2025), acima da média
+da capital (6.1%).
+
+ITBI ~2% + IPTU R$390/mês + condomínio R$680/mês.
+Use o simulador completo para projetar parcela
+incluindo amortização SAC vs PRICE.
+
+Visita guiada com corretor, com fotos atualizadas
+de hoje (não imagens 360 antigas).
+
+[Agendar visita esta semana]"
+
+PALAVRAS-CHAVE: TIR, valorização, financiamento, SBPE,
+SAC, PRICE, FGTS, ITBI, condomínio, IPTU, microrregião,
+laje, planta, pé-direito, área útil vs construída.
+
+PROVA: Histórico Embraesp/Secovi, comparativos com
+microrregião, certificação CRECI, RGI matrícula.
+
+CUIDADO: CRECI obrigatório. Promessa de valorização
+sem dado oficial pode caracterizar publicidade enganosa.
+Nunca prometer "garantido". Sempre incluir custos
+totais (parcela + condomínio + IPTU + manutenção).
+```
+
+### Food & Hospitality (Restaurante / Delivery / Hotel)
+
+```
+TOM: Sensorial, específico, contextual.
+Comida vende pelos sentidos. Hotel vende pela
+projeção de quem você é nesse espaço.
+
+NÃO faça: "A melhor pizza da cidade!" (genérico)
+NÃO faça: Stock photos genéricas de comida
+NÃO faça: Esconder taxa de serviço/couvert/delivery
+
+FAÇA (restaurante):
+"Massa fresca feita às 6h da manhã, todos os dias.
+Farinha tipo 00 italiana, ovos caipira de Atibaia,
+fermentação natural por 48h.
+
+Carbonara R$58: guanciale curado por 90 dias na casa,
+ovo gema curada com sal grosso, pecorino romano DOP.
+
+Sem creme de leite. Como em Roma.
+
+Reservas R$0, taxa de serviço 13% (gorjeta opcional).
+Aberto qua-sáb 19h-23h. 18 lugares apenas.
+
+[Reservar mesa]"
+
+FAÇA (hotel):
+"Suíte Master com sacada para o oceano,
+amanhecer chegando às 5h47 nesta semana.
+
+Café da manhã servido até 10h30, ovos beneditine
+a la carte, pão fresco da padaria local entregue
+às 6h.
+
+R$1.890/noite (mín 2 noites), inclui café e
+acesso ao spa. Sem taxa de resort. Cancelamento
+grátis até 7 dias antes.
+
+[Verificar disponibilidade]"
+
+PALAVRAS-CHAVE: ingrediente, fornecedor, técnica,
+DOP, fermentação, terroir, sazonal, fresco, artesanal.
+
+PROVA: Origem dos ingredientes (foto da feira/produtor),
+prêmios reconhecidos (Veja Comer&Beber, Michelin),
+chef com biografia verificável.
+
+CUIDADO: Foto de prato sempre real (não estoque).
+Vigilância sanitária obrigatória. Cardápio com preço
+visível antes do cliente sentar (lei BR). Disclaimers
+sobre alergênicos quando aplicável.
+```
+
+### Beauty / Cosmetics (Estética e Dermocosmético)
+
+```
+TOM: Aspiracional mas honesto, ANVISA-aware.
+Cliente compra transformação visual. Mas regulação
+proíbe claims terapêuticos sem registro.
+
+NÃO faça: "Acaba com rugas em 7 dias"
+NÃO faça: Antes/depois com retoque digital escondido
+NÃO faça: Claim de "tratamento" sem registro ANVISA
+NÃO faça: Comparação direta com procedimento médico
+
+FAÇA:
+"Sérum com ácido hialurônico 2% e niacinamida 5%,
+notificado ANVISA sob nº 2.5847.0123.001-5.
+
+Estudo in-vitro (não in-vivo) mostrou aumento de
+hidratação cutânea em 23% após 28 dias. Resultados
+em pele real podem variar conforme fototipo,
+hábitos e rotina de cuidados.
+
+Indicado para peles 25+ com sinais iniciais de
+desidratação. NÃO indicado para grávidas, lactantes,
+ou peles em tratamento dermatológico ativo (consulte
+sua dermatologista).
+
+R$189 frasco 30ml, rende ~60 dias.
+
+[Comprar com 10% off na primeira compra]
+
+Este produto é cosmético. Não tem ação terapêutica.
+Não substitui consulta dermatológica."
+
+PALAVRAS-CHAVE: ativo, dermocosmético, fototipo,
+notificação ANVISA, in-vitro, in-vivo, eficácia
+clínica, certificação cruelty-free, vegano.
+
+PROVA: Notificação ANVISA verificável, dermatologista
+porta-voz com CRM, estudo de eficácia (mesmo in-vitro)
+referenciado. Reviews em fonte externa (Beleza na Web,
+Sephora, etc.) com volume.
+
+CUIDADO: ANVISA RDC 7/2015 regula claims cosméticos.
+Nunca prometer "cura", "trata doença", ou comparar
+com procedimento médico. Antes/depois precisa
+declarar se houve retoque. Imagens hiper-realísticas
+geradas por IA precisam disclaimer.
+```
+
+### Fitness Commercial (Academia, Personal, Suplementação)
+
+```
+TOM: Energético mas responsável. Saúde > vaidade.
+Performance > estética como narrativa principal.
+
+NÃO faça: "Perca 10kg em 30 dias!"
+NÃO faça: Foto de corpo "ideal" único como meta
+NÃO faça: Suplementação como atalho mágico
+NÃO faça: Generalizar resultado individual
+
+FAÇA (personal):
+"Treino de força 3x/semana, 60min, com periodização
+linear 12 semanas. Avaliação física antes (composição
+corporal via bioimpedância), revisão a cada 4 semanas.
+
+Para iniciantes: foco em padrões de movimento
+(agachamento, stiff, supino, remada, militar). Carga
+progride conforme técnica permite, não conforme ego.
+
+Resultado em 12 semanas (depende de adesão e nutrição):
++3-5kg de massa magra para iniciantes do sexo
+masculino, +1-3kg para feminino. Composição corporal
+e força crescem antes do peso na balança mudar.
+
+Sessões R$140 cada, pacote 12 semanas R$1.520
+(R$127/sessão). Desconto se vier com nutricionista
+parceira.
+
+[Agendar avaliação inicial]
+
+Personal trainer registrado CREF nº [registro].
+Antes de iniciar atividade física, consulte seu
+médico (em especial se houver condição cardíaca,
+metabólica ou musculoesquelética)."
+
+PALAVRAS-CHAVE: hipertrofia, força, periodização,
+composição corporal, RIR (reps in reserve),
+carga progressiva, recuperação, nutrição,
+deload, mobilidade, CREF, CRN.
+
+PROVA: Cases de alunos com fotos reais (com
+permissão escrita), evolução de carga (planilhas),
+certificações (CREF, especialização), educação
+formal verificável.
+
+CUIDADO: CREF obrigatório para personal. Promessa
+de emagrecimento específico (X kg em Y dias) sem
+nutricionista é antiético e arriscado. Suplementação
+sem prescrição: cuidado com claims (creatina ok,
+"emagrecedor" não). Sempre disclaimer de "consulte
+seu médico".
+```
+
+### Jurídico (Advocacia)
+
+```
+TOM: Sóbrio, técnico-pedagógico, OAB-compliant.
+Advogado não pode "vender" como comerciante.
+Educação > pitch.
+
+NÃO faça: "Garantimos sua aposentadoria!"
+NÃO faça: "O melhor escritório de São Paulo"
+NÃO faça: Captação ativa de cliente (proibido CEC)
+NÃO faça: Prometer resultado processual
+
+FAÇA:
+"Sobre revisão de aposentadoria após reforma 2019:
+quem se aposentou pela regra antiga e tinha tempo
+de contribuição superior ao mínimo pode ter direito
+a recálculo, dependendo da conjugação fator
+previdenciário + período básico de cálculo.
+
+A análise técnica considera:
+1. Período integral de contribuição (CNIS)
+2. Cálculo da RMI atual vs RMI ideal
+3. Verificação de períodos especiais
+4. Análise de cumulação possível
+
+Cada caso é único. Em alguns, o recálculo aumenta
+em R$X-Y/mês; em outros, não há vantagem ou pode
+até ser desfavorável (revisão da vida toda como
+exemplo). Análise prévia antes de ajuizar.
+
+Avaliação técnica preliminar: R$0, presencial ou
+videoconferência, ~50min. Honorários quota litis
+seguindo tabela OAB se houver tese viável.
+
+[Agendar análise]
+
+OAB/SP 123.456 — Advogada [Nome], 12 anos atuando
+em Direito Previdenciário. Conforme CEC, este
+conteúdo é informativo, não constitui captação
+de cliente nem promessa de resultado."
+
+PALAVRAS-CHAVE: tese, jurisprudência, STF, STJ, CNIS,
+revisão, recálculo, fator previdenciário, RMI,
+quota litis, honorários, OAB, CEC, CPP, CPC.
+
+PROVA: OAB inscrita, especialização (pós-graduação,
+mestrado), tempo de atuação na matéria,
+jurisprudência citada (com referência verificável).
+
+CUIDADO: CEC OAB veda mercantilização. NÃO usar
+"garantia de resultado", "100% de sucesso",
+"clientes satisfeitos", testemunhos de clientes.
+Marketing jurídico permitido: educacional,
+informativo, técnico. NÃO permitido: comparativo,
+sensacionalista, ou que sugira captação ativa.
+Disclaimer obrigatório em todo conteúdo.
+```
+
+### Agribusiness BR (Commodities, Coop, AgTech)
+
+```
+TOM: Técnico-pragmático, contextual ao calendário
+agrícola, dado-driven. Produtor rural decide com
+planilha, não com emoção.
+
+NÃO faça: "Aumente sua produtividade!" (vago)
+NÃO faça: Generalizar para todas as culturas
+NÃO faça: Ignorar o ciclo (plantio/colheita/safra)
+
+FAÇA:
+"Seguro multirrisco para soja safra 2026/27,
+cobrindo: granizo, geada, seca, chuva excessiva,
+pragas e doenças (com receituário agronômico).
+
+Premio ~3.2-4.8% do VMR (Valor Máximo de
+Reposição) por hectare segurado, a depender da
+microrregião e histórico do produtor (CAR ativo
++ NF-e de insumos da última safra).
+
+Cobertura 70-85% da produtividade média histórica
+do município (IBGE/CONAB), franquia 30%, indenização
+em até 60 dias após laudo do perito agrônomo.
+
+Subvenção federal PSR pode chegar a 30-40% do
+prêmio para soja, conforme orçamento MAPA do ano.
+
+Cotação para sua área específica: envie CAR + área
+total + histórico produtividade últimas 3 safras.
+Resposta em 48h úteis.
+
+[Solicitar cotação]
+
+Operação registrada SUSEP processo nº [registro],
+representada por [empresa] CNPJ [número]. Antes de
+contratar, consulte CCG (Condições Contratuais Gerais)
+disponível em [link]."
+
+PALAVRAS-CHAVE: VMR, prêmio, sinistro, indenização,
+PSR, MAPA, CAR, CONAB, EMBRAPA, IBGE, microrregião,
+safra, plantio, colheita, perito agrônomo, NDVI,
+agricultura de precisão.
+
+PROVA: SUSEP processo + autorização, dados oficiais
+EMBRAPA/CONAB/IBGE, histórico de sinistros pagos da
+seguradora, parcerias com cooperativas reconhecidas
+(Coopavel, Cocamar, Frísia, Castrolanda, etc.).
+
+CUIDADO: SUSEP regula seguro rural. Claim de
+"100% de cobertura" é juridicamente impossível
+(toda apólice tem exclusões). Cuidado com expectativa
+de indenização — depende de laudo de perito.
+Linguagem precisa em ciclo agrícola é diferenciador
+crítico (produtor reconhece amador imediatamente).
+```
+
 ---
 
 # PARTE XII: COPY PARA E-COMMERCE

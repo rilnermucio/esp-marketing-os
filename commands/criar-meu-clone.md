@@ -53,21 +53,34 @@ Antes de comecar, verificar:
 
 ### Fase 2: Analise de Padroes
 
-Analise cada dimensao em todas as amostras combinadas:
+**Use `scripts/voice_extractor.py` para a parte mecanica** (frequencia, distribuicao, n-grams, pontuacao). Em seguida, faca interpretacao qualitativa em cima dos dados.
 
-#### A) Vocabulario Tipico
+```bash
+python3 scripts/voice_extractor.py \
+  --input <pasta-de-samples-ou-arquivos> \
+  --output md \
+  --top-words 30 \
+  --top-ngrams 20
+```
 
-- Listar palavras/frases que aparecem em MAIS DE UMA amostra (frequencia >=2)
-- Identificar 20-30 termos distintivos (nao-genericos)
-- Marcar palavras de **alta frequencia + alta singularidade** (ex: "vamos parar pra pensar nisso", "isso me intriga", "no fundo")
-- Listar tambem o que o usuario NUNCA escreve (vocabulario banido implicito)
+O script gera um relatorio com dados objetivos. Sua tarefa: interpretar.
 
-#### B) Cadencia e Ritmo
+#### A) Vocabulario Tipico (a partir do output do script)
 
-- Calcular distribuicao de tamanho de frase: % < 8 palavras, % 8-15, % 15-25, % > 25
-- Identificar padrao dominante: "frases curtas predominam" / "alternancia frequente" / "frases longas e fluidas"
-- Identificar uso de pontuacao distintiva: dois-pontos, parenteses, frases de 1 palavra
-- Identificar formato de paragrafo: 1-3 linhas / paragrafos longos / mix
+- O script ja te entrega "Top 30 palavras distintivas" com freq + presence + score
+- Sua tarefa: ler a lista e classificar cada palavra como "signature" (distintiva, raramente usada por outros), "topical" (sobre o nicho), ou "generica" (descartar)
+- Mantenha as 15-20 palavras de signature
+- Marcar palavras que o usuario NUNCA escreve (com base em comparacao com baseline mental de PT-BR comum)
+
+#### B) Cadencia e Ritmo (a partir do output do script)
+
+- O script entrega distribuicao % de tamanho de frase
+- Identifique o padrao dominante:
+  - "Frases curtas predominam" (>50% < 8 palavras)
+  - "Alternancia balanceada" (mix em todos buckets)
+  - "Frases longas e fluidas" (>40% > 15 palavras)
+  - "Variacao deliberada" (alta dispersao com pico em 1-palavra ocasional)
+- Cruze com o output de pontuacao: muitos dois-pontos = uso de "setup-payoff", muitos parenteses = nuance lateral, muitos `?` = perguntas retoricas, muitos `...` = tom suspensivo
 
 #### C) Estrutura Narrativa
 
