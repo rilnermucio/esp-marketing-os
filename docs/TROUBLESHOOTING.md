@@ -155,6 +155,28 @@ São pastas diferentes pra contextos diferentes. Não há cross-contaminação.
   /reload-plugins
   ```
 
+### `claude plugin update marketing-os` falha com "Plugin not found" (CLI)
+
+**Sintoma:** Pelo CLI fora da sessão interativa:
+```
+$ claude plugin update marketing-os
+Checking for updates for plugin "marketing-os" at user scope…
+✘ Failed to update plugin "marketing-os": Plugin "marketing-os" not found
+```
+
+Mesmo com o plugin instalado e enabled (`claude plugin list` confirma).
+
+**Causa:** O comando `update` da CLI procura o plugin pelo nome curto, mas a resolução falha quando o marketplace cache local diverge do remoto (validado em v6.5.0). `claude plugin marketplace update <name>` atualiza o cache de manifests mas o `update` do plugin em si continua errando.
+
+**Workaround verificado:**
+```bash
+claude plugin marketplace update mos-marketplace
+claude plugin uninstall marketing-os@mos-marketplace
+claude plugin install marketing-os@mos-marketplace
+```
+
+Reinstalação puxa a versão nova do cache atualizado. Não perde nada — settings/memory são externos ao plugin install.
+
 ### Como saber qual versão está ativa?
 
 ```

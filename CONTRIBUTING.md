@@ -66,6 +66,32 @@ venv\Scripts\activate     # Windows
    ```
 7. **Abra um Pull Request**
 
+#### Testando dispatches via `claude -p` (modo nao-interativo)
+
+Util pra rodar a VALIDATION-GUIDE.md ou validar workflows novos sem abrir sessao interativa.
+
+**Quirk importante:** comandos slash em `claude -p` exigem namespace explicito do plugin:
+
+```bash
+# NAO funciona em -p (mas funciona em sessao interativa)
+claude -p "/criar-anuncio Meta Ads pra curso de Copy"
+# -> Unknown command: /criar-anuncio
+
+# Funciona em -p
+claude -p "/marketing-os:criar-anuncio Meta Ads pra curso de Copy"
+
+# A skill /marketing-os (sem comando) funciona sem namespace
+claude -p "/marketing-os escreve 5 headlines pra curso de Python"
+```
+
+**Por que:** o resolver de slash commands em print mode nao herda o namespace default; em sessao interativa (`claude` sem `-p`), o `/criar-X` resolve direto. Detalhes de validacao em `docs/VALIDATION-RESULTS-v6.5.0.md`.
+
+**Outras gotchas do `-p`:**
+
+- `AskUserQuestion` nao recebe resposta. Se um agent precisar de contexto (avatar, ticket, urgencia, etc), pre-bake no proprio briefing.
+- `--permission-mode bypassPermissions` evita prompts de permissao, util pra rodar batches.
+- `--output-format stream-json --include-hook-events --verbose` captura events (incluindo dispatches `Agent`) pra parseamento posterior.
+
 ---
 
 ## Padroes de Codigo
