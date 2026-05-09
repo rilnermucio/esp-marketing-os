@@ -15,6 +15,12 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
 - `runs.jsonl` append-only por projeto rastreia execucoes (`run_id`, `stage_id`, `agent`, `iteration`, `status`, `started_at`, `approved_at`/`rejected_at`, `feedback`, `source`).
 - `decisions.md` por projeto: log human-readable de aprovacoes/rejeicoes com feedback.
 - 26 testes em `scripts/tests/test_project_manager.py` (slugify, frontmatter, create, list, status, append_run, advance, approve, reject, iteracao).
+- New command `/auditoria-pro <url>` — premium agency-grade landing audit. Output: 25-30 page PDF com radar chart (ghost outline de potencial pos-fixes), screenshots (homepage + 2-3 internas via Playwright), 3-5 paragrafos por dimensao, comparativos antes/depois de copy, analise competitiva, roadmap 30/90/180 dias com esforco/impacto/owner, apendice tecnico com outputs raw dos 7 agents, glossario filtrado por termos usados.
+- 5 novos scripts: `audit_screenshot.py` (Playwright capture), `audit_radar_chart.py` (matplotlib radar com overlay de potencial), `audit_premium_template.py` (HTML/CSS premium template, ~600 linhas), `audit_roadmap_generator.py` (bucketing 30/90/180), `audit_glossary.py` (67 termos tecnicos PT-BR).
+- `scripts/pdf_generator.py` extended com flag `--from-html` para templates HTML premium (skip do pipeline markdown).
+- Novas deps: `matplotlib>=3.7`, `playwright>=1.40` (com browser chromium).
+- User doc: `docs/AUDITORIA-PRO.md`.
+- Smoke test `scripts/tests/test_auditoria_pro_smoke.py` exercita pipeline completo (synthesis mockada -> scoring -> radar -> roadmap -> HTML render -> PDF).
 
 ### Changed
 - `scripts/project_manager.py` reescrito do zero. CRUD anterior (project.json + content/ + notes) substituido por state machine declarativa em `project.md` com YAML frontmatter (current_stage + pipeline + default_approval).
@@ -29,6 +35,13 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
 
 ### Design rationale
 Spec consensual entre Claude Opus 4.7 + Codex CLI (gpt-5.5/high) em 3 turnos de debate. Decisao: NAO construir abstracao de "times/squads" (overhead pra operador solo); flat por projeto + state machine simples + run log estruturado eh suficiente. Faseamento explicito: MVP sequencial agora; paralelismo, `auto_approve` e `published_at` ficam pra Fase 2 condicional ao uso real.
+
+### Notes (auditoria-pro)
+- `/auditoria-pro` e landing-only nesta versao. Extensoes Instagram/Meta Ads/YouTube em v6.8.1+.
+- Identidade visual: deep ink blue `#0a2540` + warm orange `#ff6b35`. White-label via `.auditoria-config.json` (compativel com `/auditoria` standard).
+- Tempo de geracao: ~6-9 min por run vs ~3-5 min do `/auditoria` standard.
+- Custo: $0 (Playwright local, sem Apify mandatory).
+- macOS: Playwright requer `playwright install chromium` apos `pip install`.
 
 ---
 
