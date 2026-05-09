@@ -81,3 +81,32 @@ class TestWhiteLabel:
         generate(md, out, cfg)
         assert out.exists()
         assert out.stat().st_size > 100
+
+
+import subprocess
+
+
+class TestPDFCLI:
+    def test_cli_basic(self, tmp_path: Path):
+        md = tmp_path / "r.md"
+        md.write_text("# CLI Test")
+        out = tmp_path / "r.pdf"
+        script = Path(__file__).resolve().parent.parent / "pdf_generator.py"
+        result = subprocess.run(
+            [sys.executable, str(script), str(md), str(out)],
+            capture_output=True, text=True, check=True,
+        )
+        assert out.exists()
+
+    def test_cli_with_config(self, tmp_path: Path):
+        md = tmp_path / "r.md"
+        md.write_text("# Configured")
+        cfg = tmp_path / "cfg.json"
+        cfg.write_text(json.dumps({"brand_name": "Brand X"}))
+        out = tmp_path / "r.pdf"
+        script = Path(__file__).resolve().parent.parent / "pdf_generator.py"
+        result = subprocess.run(
+            [sys.executable, str(script), str(md), str(out), str(cfg)],
+            capture_output=True, text=True, check=True,
+        )
+        assert out.exists()
