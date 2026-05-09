@@ -58,3 +58,52 @@ def validate_rubrics() -> None:
 
 # Validate at import time so misconfigured rubric fails fast.
 validate_rubrics()
+
+
+def compute(
+    audit_type: str,
+    dimension_scores: dict[str, int | None],
+    evidences: dict[str, str],
+    fixes: dict[str, dict],
+) -> dict:
+    """Compute overall + sort wins/fixes. Returns serializable dict."""
+    if audit_type not in RUBRICS:
+        raise ValueError(f"tipo desconhecido: {audit_type!r}")
+
+    rubric = RUBRICS[audit_type]
+
+    missing = set(rubric.keys()) - set(dimension_scores.keys())
+    if missing:
+        raise ValueError(f"dimensão ausente: {sorted(missing)!r}")
+
+    for dim, score in dimension_scores.items():
+        if score is None:
+            continue
+        if not isinstance(score, (int, float)) or score < 0 or score > 100:
+            raise ValueError(f"score fora de 0-100 em {dim!r}: {score}")
+
+    scored = [(d, s, rubric[d]) for d, s in dimension_scores.items() if s is not None]
+    if not scored:
+        raise ValueError("todas as dimensões são N/D, auditoria sem score possível")
+
+    weight_sum = sum(w for _, _, w in scored)
+    weighted_total = sum(s * w for _, s, w in scored)
+    overall = round(weighted_total / weight_sum)
+    partial = len(scored) < len(rubric)
+
+    dimensions = {
+        dim: {
+            "score": dimension_scores[dim],
+            "weight": rubric[dim],
+            "evidence": evidences.get(dim, ""),
+            "fix": fixes.get(dim, {"text": "", "priority": "baixa"}),
+        }
+        for dim in rubric
+    }
+
+    return {
+        "overall": overall,
+        "partial": partial,
+        "dimensions": dimensions,
+        "type": audit_type,
+    }
