@@ -93,7 +93,8 @@ COMMAND_MAP: Dict[str, Dict[str, Tuple[str, str]]] = {
         "novo": ("project_manager.py", "Cria novo projeto (--tipo lancamento|perpetuo|consultoria|mentoria)"),
         "list": ("project_manager.py", "Lista projetos"),
         "status": ("project_manager.py", "Status de um projeto"),
-        "avancar": ("project_manager.py", "Cria run pendente pro stage atual"),
+        "avancar": ("project_manager.py", "Cria run pendente + auto-mkdir do stage"),
+        "completar": ("project_manager.py", "Marca run pending como pending_approval (com output path)"),
         "aprovar": ("project_manager.py", "Aprova ultimo run e avanca stage"),
         "rejeitar": ("project_manager.py", "Rejeita ultimo run com feedback"),
     },
@@ -114,6 +115,7 @@ SPECIAL_ARGS: Dict[Tuple[str, str], Callable[[List[str]], List[str]]] = {
     ("project", "list"): lambda args: ["list"] + args,
     ("project", "status"): lambda args: ["status"] + args,
     ("project", "avancar"): lambda args: ["avancar"] + args,
+    ("project", "completar"): lambda args: ["completar"] + args,
     ("project", "aprovar"): lambda args: ["aprovar"] + args,
     ("project", "rejeitar"): lambda args: ["rejeitar"] + args,
 }

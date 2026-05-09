@@ -216,6 +216,21 @@ def _stage_iteration(slug: str, stage_id: str) -> int:
     return sum(1 for r in runs if r.get("stage_id") == stage_id) + 1
 
 
+def _stage_index(pipeline: list[dict], stage_id: str) -> int:
+    """Retorna posicao 1-based do stage no pipeline (pra prefixo de pasta)."""
+    for i, s in enumerate(pipeline, start=1):
+        if s["id"] == stage_id:
+            return i
+    raise ValueError(f"stage '{stage_id}' nao esta na pipeline")
+
+
+def stage_folder(slug: str, stage_id: str) -> Path:
+    """Caminho da pasta do stage (NN-stage_id, auto-criada por advance_stage)."""
+    state = project_status(slug)
+    idx = _stage_index(state["pipeline"], stage_id)
+    return PROJECTS_ROOT / slug / f"{idx:02d}-{stage_id}"
+
+
 def _rewrite_runs(slug: str, runs: list[dict]) -> None:
     runs_path = PROJECTS_ROOT / slug / "runs.jsonl"
     runs_path.write_text(
@@ -236,24 +251,57 @@ def _append_decision(slug: str, stage_id: str, run_id: str, decision: str, feedb
 
 
 def advance_stage(slug: str) -> dict:
-    """Cria run pendente pro stage atual e retorna ele.
+    """Cria run pendente pro stage atual + auto-cria pasta do stage.
 
     Nao executa o agente. Quem executa eh o slash command /projeto.
-    Esse helper soh registra "vai rodar isso agora".
+    Esse helper registra "vai rodar isso agora" e prepara filesystem.
     """
     state = project_status(slug)
     stage_def = _current_stage_def(state["pipeline"], state["current_stage"])
     if stage_def is None:
         raise ValueError(f"stage atual '{state['current_stage']}' nao esta na pipeline")
     iteration = _stage_iteration(slug, stage_def["id"])
+
+    folder = stage_folder(slug, stage_def["id"])
+    folder.mkdir(parents=True, exist_ok=True)
+
     run = append_run(slug, {
         "stage_id": stage_def["id"],
         "agent": stage_def["agent"],
         "iteration": iteration,
         "status": "pending",
         "source": "pipeline",
+        "folder": str(folder.relative_to(PROJECTS_ROOT / slug)),
     })
     return run
+
+
+def complete_run(slug: str, output_path: Optional[str] = None) -> dict:
+    """Marca ultimo run pending como pending_approval com output path.
+
+    Auto-aprova se o stage tem approval: skip (avanca pra proximo stage automaticamente).
+    Chamado pelo /projeto avancar depois que o agente devolveu output.
+    """
+    project_dir = PROJECTS_ROOT / slug
+    runs = _read_jsonl(project_dir / "runs.jsonl")
+    if not runs:
+        raise ValueError("nenhum run pra completar")
+    last = runs[-1]
+    if last.get("status") != "pending":
+        raise ValueError(f"ultimo run nao esta pending: {last.get('status')}")
+
+    last["status"] = "pending_approval"
+    last["completed_at"] = datetime.now().isoformat(timespec="seconds")
+    if output_path:
+        last["output"] = output_path
+    _rewrite_runs(slug, runs)
+
+    state = project_status(slug)
+    stage_def = _current_stage_def(state["pipeline"], last["stage_id"])
+    approval = stage_def.get("approval", state["default_approval"]) if stage_def else "required"
+    if approval == "skip":
+        return approve_stage(slug)
+    return state
 
 
 def approve_stage(slug: str) -> dict:
@@ -352,8 +400,12 @@ def main():
     p_status = sub.add_parser("status", help="Mostrar estado de um projeto")
     p_status.add_argument("slug")
 
-    p_avancar = sub.add_parser("avancar", help="Cria run pendente pro stage atual")
+    p_avancar = sub.add_parser("avancar", help="Cria run pendente pro stage atual + auto-cria pasta")
     p_avancar.add_argument("slug")
+
+    p_completar = sub.add_parser("completar", help="Marca run pending como pending_approval (com output)")
+    p_completar.add_argument("slug")
+    p_completar.add_argument("--output", help="Path relativo do output (ex: 01-research/draft-v1.md)")
 
     p_aprovar = sub.add_parser("aprovar", help="Aprova ultimo run e avanca stage")
     p_aprovar.add_argument("slug")
@@ -379,7 +431,13 @@ def main():
         elif args.cmd == "avancar":
             run = advance_stage(args.slug)
             print(f"Run pendente criado: {run['run_id']} stage={run['stage_id']} agent={run['agent']}")
-            print("Agora /projeto despacha o agente. Quando terminar, use /projeto aprovar ou rejeitar.")
+            print(f"Pasta do stage: workspace/projects/{args.slug}/{run['folder']}/")
+            print("Agora /projeto despacha o agente. Quando terminar, use 'completar' + 'aprovar'/'rejeitar'.")
+        elif args.cmd == "completar":
+            state = complete_run(args.slug, args.output)
+            print(f"Run completado. Stage: {state['current_stage']} status={state['status']}")
+            if state.get("last_run", {}).get("status") == "approved":
+                print(f"(approval: skip detectado, auto-aprovado e avancado)")
         elif args.cmd == "aprovar":
             state = approve_stage(args.slug)
             print(f"Stage aprovado. Novo stage atual: {state['current_stage']} (status={state['status']})")

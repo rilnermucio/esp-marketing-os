@@ -16,6 +16,7 @@ from project_manager import (  # noqa: E402
     advance_stage,
     append_run,
     approve_stage,
+    complete_run,
     create_project,
     list_projects,
     load_template,
@@ -24,6 +25,7 @@ from project_manager import (  # noqa: E402
     reject_stage,
     serialize_frontmatter,
     slugify,
+    stage_folder,
 )
 
 
@@ -289,3 +291,78 @@ def test_reject_then_advance_creates_iteration_2(tmp_workspace):
     run2 = advance_stage("iter-test")
     assert run2["iteration"] == 2
     assert run2["stage_id"] == "research"
+
+
+# ---------- stage_folder + auto-mkdir ----------
+
+def test_advance_stage_creates_folder(tmp_workspace):
+    create_project("Folder Test", "lancamento")
+    run = advance_stage("folder-test")
+    assert run["folder"] == "01-research"
+    folder = tmp_workspace / "folder-test" / "01-research"
+    assert folder.is_dir()
+
+
+def test_stage_folder_returns_correct_index(tmp_workspace):
+    create_project("Idx Test", "lancamento")
+    folder = stage_folder("idx-test", "copy")
+    assert folder.name == "04-copy"
+
+
+def test_stage_folder_unknown_stage_raises(tmp_workspace):
+    create_project("Idx Test 2", "lancamento")
+    with pytest.raises(ValueError, match="nao esta na pipeline"):
+        stage_folder("idx-test-2", "naoexiste")
+
+
+# ---------- complete_run ----------
+
+def test_complete_run_updates_status_and_output(tmp_workspace):
+    create_project("Complete Test", "lancamento")
+    advance_stage("complete-test")
+    state = complete_run("complete-test", "01-research/draft-v1.md")
+    runs = _read_jsonl_lines(tmp_workspace / "complete-test" / "runs.jsonl")
+    assert runs[-1]["output"] == "01-research/draft-v1.md"
+    assert "completed_at" in runs[-1]
+    assert state["current_stage"] in ("estrategia", "research")
+
+
+def test_complete_run_with_skip_approval_auto_advances(tmp_workspace):
+    create_project("Skip Test", "lancamento")
+    advance_stage("skip-test")
+    state = complete_run("skip-test", "01-research/draft-v1.md")
+    assert state["current_stage"] == "estrategia"
+    assert state["last_run"]["status"] == "approved"
+
+
+def test_complete_run_with_required_approval_pauses(tmp_workspace):
+    create_project("Pause Test", "perpetuo")
+    advance_stage("pause-test")
+    runs_path = tmp_workspace / "pause-test" / "runs.jsonl"
+    runs = _read_jsonl_lines(runs_path)
+    runs[-1]["status"] = "approved"
+    runs_path.write_text("\n".join(json.dumps(r) for r in runs) + "\n", encoding="utf-8")
+    _update_fm = __import__("project_manager")._update_frontmatter
+    _update_fm("pause-test", {"current_stage": "funil"})
+
+    advance_stage("pause-test")
+    state = complete_run("pause-test", "02-funil/draft-v1.md")
+    assert state["current_stage"] == "funil"
+    assert state["last_run"]["status"] == "pending_approval"
+
+
+def test_complete_run_without_pending_raises(tmp_workspace):
+    create_project("Fail Test", "lancamento")
+    with pytest.raises(ValueError, match="nenhum run"):
+        complete_run("fail-test")
+
+
+def test_complete_run_when_already_approved_raises(tmp_workspace):
+    create_project("Twice Test", "perpetuo")
+    advance_stage("twice-test")
+    runs_path = tmp_workspace / "twice-test" / "runs.jsonl"
+    runs = _read_jsonl_lines(runs_path)
+    runs[-1]["status"] = "approved"
+    runs_path.write_text("\n".join(json.dumps(r) for r in runs) + "\n", encoding="utf-8")
+    with pytest.raises(ValueError, match="nao esta pending"):
+        complete_run("twice-test")
