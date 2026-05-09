@@ -6,7 +6,7 @@ This file provides guidance to AI coding agents (Claude Code, Codex CLI, Cursor,
 
 ## O que é este repositório
 
-Marketing OS é um **plugin do Claude Code** (`plugin.json` v6.5.0) que distribui 18 subagents nativos especializados em marketing digital, mais 32 slash commands, knowledge bases, voice clones e scripts Python. O conteúdo é majoritariamente PT-BR e otimizado para o mercado brasileiro.
+Marketing OS é um **plugin do Claude Code** (`plugin.json` v6.7.0) que distribui 18 subagents nativos especializados em marketing digital, mais 33 slash commands, knowledge bases, voice clones e scripts Python. O conteúdo é majoritariamente PT-BR e otimizado para o mercado brasileiro.
 
 Arquivos manifesto: `plugin.json` (raiz) e `.claude-plugin/marketplace.json` (listagem de marketplace). O entrypoint da skill é `skills/marketing-os/SKILL.md`.
 

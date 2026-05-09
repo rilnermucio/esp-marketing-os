@@ -73,6 +73,12 @@ class TestWhiteLabel:
         html = _build_html("# X", config=config)
         assert '<img class="header-logo"' not in html
 
+    def test_logo_missing_warning_to_stderr(self, tmp_path: Path, capsys):
+        config = {"brand_name": "X", "logo_path": str(tmp_path / "nonexistent.png")}
+        _build_html("# X", config=config)
+        captured = capsys.readouterr()
+        assert "não encontrado" in captured.err
+
     def test_generate_with_config_path(self, tmp_path: Path):
         md = tmp_path / "r.md"
         md.write_text("# Title")

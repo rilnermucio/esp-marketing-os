@@ -86,6 +86,8 @@ def _build_html(markdown_text: str, config: dict | None) -> str:
         logo_path = Path(cfg["logo_path"])
         if logo_path.exists():
             header_parts.append(f'<img class="header-logo" src="{logo_path.resolve()}" />')
+        else:
+            print(f"[pdf_generator] logo não encontrado: {logo_path}", file=sys.stderr)
     if cfg.get("brand_name"):
         header_parts.append(f'<div class="header-brand">{cfg["brand_name"]}</div>')
     header = "\n".join(header_parts)

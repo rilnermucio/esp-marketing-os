@@ -91,7 +91,7 @@ Para cada dimensão da rubric:
 
 Se algum agent falhou ou retornou outputs vazios para uma dimensão: marque score como `null`. Recalcule overall normalizado.
 
-Monte o JSON `scores.json`:
+Use a tool Write para salvar `scores.json` em `${RUN_DIR}/scores.json` com o conteúdo:
 
 ```json
 {
@@ -105,7 +105,7 @@ Monte o JSON `scores.json`:
 ## Passo 5: Calcular score final
 
 ```bash
-python ${CLAUDE_PLUGIN_ROOT}/scripts/audit_scoring.py < scores.json
+python ${CLAUDE_PLUGIN_ROOT}/scripts/audit_scoring.py < ${RUN_DIR}/scores.json
 ```
 
 Output: JSON com `overall`, `partial`, `dimensions`, `top_wins`, `top_fixes`, `scorecard_md`, `priorities_md`.
