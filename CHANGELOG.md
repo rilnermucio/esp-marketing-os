@@ -7,6 +7,28 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
 
 ---
 
+## [6.5.1] — 2026-05-09 (path canonicalization + post-v6.5.0 polish + validation docs)
+
+Patch release que distribui dois commits acumulados desde o tag v6.5.0 (1aa2a44, 1303771) e adiciona docs derivadas da validação completa da v6.5.0 ([VALIDATION-RESULTS-v6.5.0.md](docs/VALIDATION-RESULTS-v6.5.0.md)).
+
+### Fixed
+
+- **Path canonicalization em prompts de dispatch** (`commands/criar-landing-page.md`, `commands/criar-funil.md`, `commands/criar-infoproduto.md`, `commands/publicar-anuncio.md`, `commands/batch.md`): substituido `agent-memory/marketing-os-mos-X/` literal por "memory existente do cliente neste projeto" generico. Bug v6.5.0: subagents `mos-funnel`/`mos-infoproduto` escreviam memory no path antigo enquanto `mos-copy`/`mos-design` usavam o canonico, causando inconsistencia entre sessoes (descoberto durante setup do Test 7 longitudinal).
+- CI fixes + audit gerais (commit 1aa2a44).
+- 6 presets adicionais de `/campanha` + `/mo` orchestrator (commit 1303771).
+
+### Added
+
+- `docs/VALIDATION-RESULTS-v6.5.0.md` — execução completa da VALIDATION-GUIDE 15 tests via `claude -p` (14/15 PASS, 1 deferido pra teste manual longitudinal).
+- `CONTRIBUTING.md` — secao "Testando dispatches via `claude -p`" cobrindo namespace quirk (`/marketing-os:criar-X` em vez de `/criar-X`), AskUserQuestion limitation em -p, e flags uteis pra captura de dispatches.
+- `docs/TROUBLESHOOTING.md` — workaround para `claude plugin update marketing-os` falhar com "Plugin not found" (CLI): reinstall (`uninstall` + `install`) em vez de `update`.
+
+### Notes
+
+Validacao end-to-end (memory persistence cross-session, T7 da VALIDATION-GUIDE) ainda pendente — agendado para 2026-05-11 (Calendar event externo). Resultados serao adicionados a VALIDATION-RESULTS-v6.5.0.md como `## T7 — Memory persistente (resultado)`.
+
+---
+
 ## [6.5.0] — 2026-05-08 (audit cleanup: dispatch coverage + Tier 2 expansion + memory bootstrap)
 
 Fecha os 5 itens P0/P1 da auditoria do fluxo de criação de conteúdo identificados na sessão anterior. Resolve TODOS os "Deferred (v6.5.x)" da v6.4.0.
