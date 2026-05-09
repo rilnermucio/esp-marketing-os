@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import json
 import os
+import subprocess
 import sys
 from pathlib import Path
 
@@ -82,8 +83,23 @@ class TestWhiteLabel:
         assert out.exists()
         assert out.stat().st_size > 100
 
+    def test_footer_with_double_quotes_escaped(self):
+        config = {"brand_name": "X", "footer_text": 'He said "hi"'}
+        html = _build_html("# X", config=config)
+        # Backslash-escaped double quotes appear in CSS
+        assert 'said \\"hi\\"' in html
 
-import subprocess
+
+class TestBuildHTMLBraces:
+    def test_html_handles_braces_in_markdown(self):
+        # Markdown with code block containing braces should not crash format()
+        md_text = '# Title\n\nExample: `{"key": "value"}` and `{x: 1, y: 2}`'
+        html = _build_html(md_text, config=None)
+        # markdown-it HTML-encodes quotes inside code spans: " → &quot;
+        assert "key" in html
+        assert "y: 2" in html
+        # Verify <code> tags rendered, not crashed
+        assert "<code>" in html
 
 
 class TestPDFCLI:
@@ -110,3 +126,12 @@ class TestPDFCLI:
             capture_output=True, text=True, check=True,
         )
         assert out.exists()
+
+    def test_cli_too_few_args_exits_nonzero(self):
+        script = Path(__file__).resolve().parent.parent / "pdf_generator.py"
+        result = subprocess.run(
+            [sys.executable, str(script)],
+            capture_output=True, text=True,
+        )
+        assert result.returncode != 0
+        assert "Usage" in result.stderr

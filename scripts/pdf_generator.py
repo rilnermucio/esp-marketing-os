@@ -76,6 +76,8 @@ _HTML_TEMPLATE = """<!DOCTYPE html>
 
 def _build_html(markdown_text: str, config: dict | None) -> str:
     cfg = {**_DEFAULT, **(config or {})}
+    # CSS escape double quotes in footer_text (CSS string literal context)
+    cfg["footer_text"] = cfg.get("footer_text", "").replace('"', '\\"')
     md = MarkdownIt("commonmark", {"html": False}).enable(["table", "strikethrough"])
     body = md.render(markdown_text)
 
@@ -90,10 +92,14 @@ def _build_html(markdown_text: str, config: dict | None) -> str:
 
     title = cfg.get("brand_name") or "Relatório"
 
+    # Escape literal braces so str.format() doesn't interpret them as fields.
+    body_safe = body.replace("{", "{{").replace("}", "}}")
+    header_safe = header.replace("{", "{{").replace("}", "}}")
+
     return _HTML_TEMPLATE.format(
         title=title,
-        body=body,
-        header=header,
+        body=body_safe,
+        header=header_safe,
         primary=cfg["primary_color"],
         accent=cfg["accent_color"],
         footer=cfg["footer_text"],
