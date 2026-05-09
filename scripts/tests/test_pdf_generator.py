@@ -141,3 +141,33 @@ class TestPDFCLI:
         )
         assert result.returncode != 0
         assert "Usage" in result.stderr
+
+
+class TestFromHtml:
+    def test_from_html_generates_pdf(self, tmp_path: Path):
+        html_path = tmp_path / "report.html"
+        html_path.write_text("<!DOCTYPE html><html><body><h1>HTML Test</h1></body></html>")
+        out_path = tmp_path / "report.pdf"
+        result = generate(html_path, out_path, from_html=True)
+        assert result == out_path
+        assert out_path.exists()
+        assert out_path.stat().st_size > 100
+
+    def test_html_extension_auto_detects(self, tmp_path: Path):
+        html_path = tmp_path / "report.html"
+        html_path.write_text("<!DOCTYPE html><html><body>Auto</body></html>")
+        out_path = tmp_path / "report.pdf"
+        # Default from_html=False, but extension is .html → auto-detect
+        result = generate(html_path, out_path)
+        assert out_path.exists()
+
+    def test_cli_from_html_flag(self, tmp_path: Path):
+        html = tmp_path / "x.html"
+        html.write_text("<html><body>X</body></html>")
+        out = tmp_path / "x.pdf"
+        script = Path(__file__).resolve().parent.parent / "pdf_generator.py"
+        result = subprocess.run(
+            [sys.executable, str(script), "--from-html", str(html), str(out)],
+            capture_output=True, text=True, check=True,
+        )
+        assert out.exists()

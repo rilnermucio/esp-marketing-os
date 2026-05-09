@@ -112,29 +112,52 @@ def generate(
     markdown_path: Path | str,
     output_path: Path | str,
     config_path: Path | str | None = None,
+    *,
+    from_html: bool = False,
 ) -> Path:
-    """Render markdown file to PDF. Returns output_path."""
+    """Render markdown OR HTML file to PDF. Returns output_path.
+
+    If `from_html=True` or input has .html extension, treats input as raw HTML
+    and skips the markdown→HTML pipeline. Useful for premium templates.
+    """
     from audit_config import load as load_config
 
-    md_path = Path(markdown_path)
+    in_path = Path(markdown_path)
     out_path = Path(output_path)
-    md_text = md_path.read_text(encoding="utf-8")
     config = load_config(config_path) if config_path else None
 
-    html = _build_html(md_text, config)
-    HTML(string=html, base_url=str(md_path.parent)).write_pdf(str(out_path))
+    is_html = from_html or in_path.suffix.lower() == ".html"
+
+    if is_html:
+        html = in_path.read_text(encoding="utf-8")
+    else:
+        md_text = in_path.read_text(encoding="utf-8")
+        html = _build_html(md_text, config)
+
+    HTML(string=html, base_url=str(in_path.parent)).write_pdf(str(out_path))
     return out_path
 
 
 def _cli(argv: list[str]) -> int:
     if len(argv) < 3:
-        print("Usage: pdf_generator.py <input.md> <output.pdf> [config.json]", file=sys.stderr)
+        print("Usage: pdf_generator.py [--from-html] <input> <output.pdf> [config.json]", file=sys.stderr)
         return 1
-    md_path = Path(argv[1])
-    out_path = Path(argv[2])
-    cfg_path = Path(argv[3]) if len(argv) > 3 else None
+
+    args = list(argv[1:])
+    from_html = False
+    if args and args[0] == "--from-html":
+        from_html = True
+        args.pop(0)
+
+    if len(args) < 2:
+        print("Usage: pdf_generator.py [--from-html] <input> <output.pdf> [config.json]", file=sys.stderr)
+        return 1
+
+    in_path = Path(args[0])
+    out_path = Path(args[1])
+    cfg_path = Path(args[2]) if len(args) > 2 else None
     try:
-        generate(md_path, out_path, cfg_path)
+        generate(in_path, out_path, cfg_path, from_html=from_html)
     except Exception as e:
         print(f"Error: {e}", file=sys.stderr)
         return 1
