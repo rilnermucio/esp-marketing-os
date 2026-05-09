@@ -53,3 +53,7 @@
 weasyprint>=60.0
 markdown-it-py>=3.0
 jsonschema>=4.0
+
+# Dependencias para /auditoria-pro v6.8.0
+matplotlib>=3.7
+playwright>=1.40
