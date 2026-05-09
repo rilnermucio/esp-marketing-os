@@ -72,6 +72,15 @@ class TestInstagramDetection:
         assert result["normalized"] == "ericorocha"
         assert result["slug"] == "ericorocha"
 
+    def test_handle_too_long_raises(self):
+        with pytest.raises(ValueError, match="Não consegui"):
+            detect("@" + "a" * 31)
+
+    def test_single_char_handle(self):
+        result = detect("@a")
+        assert result["type"] == "instagram"
+        assert result["normalized"] == "a"
+
 
 class TestMetaAdsDetection:
     def test_meta_ad_library(self):
@@ -84,6 +93,17 @@ class TestMetaAdsDetection:
             "https://www.facebook.com/ads/library/?country=BR&search_type=keyword&q=curso"
         )
         assert result["type"] == "meta_ads"
+
+    def test_meta_ads_url_encoded_query(self):
+        result = detect(
+            "https://www.facebook.com/ads/library/?country=BR&q=curso+online"
+        )
+        assert result["type"] == "meta_ads"
+        assert result["slug"] == "curso-online"
+
+    def test_meta_ads_id_query(self):
+        result = detect("https://www.facebook.com/ads/library/?id=12345")
+        assert result["slug"] == "12345"
 
 
 class TestYouTubeDetection:
@@ -102,6 +122,11 @@ class TestYouTubeDetection:
         assert result["type"] == "youtube"
         assert result["slug"] == "channelname"
 
+    def test_bare_short_url(self):
+        result = detect("https://youtu.be/")
+        assert result["type"] == "youtube"
+        assert result["slug"] == "youtube"
+
 
 class TestErrorCases:
     def test_empty_string_raises(self):
@@ -115,6 +140,10 @@ class TestErrorCases:
     def test_invalid_input_raises(self):
         with pytest.raises(ValueError, match="Não consegui"):
             detect("não é url nem perfil 123!@#")
+
+    def test_prose_with_meta_ads_substring_raises(self):
+        with pytest.raises(ValueError, match="Não consegui"):
+            detect("check out facebook.com/ads/library for inspiration")
 
 
 class TestCLI:

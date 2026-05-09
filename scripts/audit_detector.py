@@ -10,11 +10,11 @@ from __future__ import annotations
 import json
 import re
 import sys
-from urllib.parse import urlparse
+from urllib.parse import urlparse, parse_qs
 
 
 _URL_RE = re.compile(r"^https?://", re.IGNORECASE)
-_IG_HANDLE_RE = re.compile(r"^@?[a-z0-9_.]+$", re.IGNORECASE)
+_IG_HANDLE_RE = re.compile(r"^@?[a-z0-9_.]{1,30}$", re.IGNORECASE)
 
 
 def _slug_from_landing(url: str) -> str:
@@ -38,13 +38,12 @@ def _normalize_landing(url: str) -> str:
 
 def _slug_meta_ads(url: str) -> str:
     parsed = urlparse(url)
-    qs = parsed.query
-    # Try id= first, then q=
+    qs = parse_qs(parsed.query)
     for key in ("id", "q"):
-        for pair in qs.split("&"):
-            if pair.startswith(f"{key}="):
-                val = pair.split("=", 1)[1]
-                return val.lower().replace(" ", "-")[:32] or "meta-ad"
+        vals = qs.get(key)
+        if vals:
+            val = vals[0].lower().replace(" ", "-")[:32]
+            return val or "meta-ad"
     return "meta-ad"
 
 
@@ -55,7 +54,8 @@ def _yt_slug(url: str) -> str | None:
     if host not in {"youtube.com", "www.youtube.com", "youtu.be", "m.youtube.com"}:
         return None
     if host == "youtu.be":
-        return parsed.path.lstrip("/")[:16]
+        slug = parsed.path.lstrip("/")[:16]
+        return slug or "youtube"
     path = parsed.path
     if path.startswith("/@"):
         return path[2:].split("/")[0]
@@ -80,7 +80,7 @@ def detect(input_str: str) -> dict:
     s = input_str.strip()
 
     # Meta Ad Library check (URL with specific path)
-    if "facebook.com/ads/library" in s.lower():
+    if _URL_RE.match(s) and "facebook.com/ads/library" in s.lower():
         return {
             "type": "meta_ads",
             "normalized": s,
