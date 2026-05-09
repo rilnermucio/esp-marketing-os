@@ -71,3 +71,33 @@ class TestInstagramDetection:
         result = detect("@EricoRocha")
         assert result["normalized"] == "ericorocha"
         assert result["slug"] == "ericorocha"
+
+
+class TestMetaAdsDetection:
+    def test_meta_ad_library(self):
+        result = detect("https://www.facebook.com/ads/library/?id=12345")
+        assert result["type"] == "meta_ads"
+        assert "facebook.com/ads/library" in result["normalized"]
+
+    def test_meta_ads_pt_locale(self):
+        result = detect(
+            "https://www.facebook.com/ads/library/?country=BR&search_type=keyword&q=curso"
+        )
+        assert result["type"] == "meta_ads"
+
+
+class TestYouTubeDetection:
+    def test_full_url(self):
+        result = detect("https://youtube.com/watch?v=dQw4w9WgXcQ")
+        assert result["type"] == "youtube"
+        assert result["slug"] == "dQw4w9WgXcQ"
+
+    def test_short_url(self):
+        result = detect("https://youtu.be/dQw4w9WgXcQ")
+        assert result["type"] == "youtube"
+        assert result["slug"] == "dQw4w9WgXcQ"
+
+    def test_channel_url(self):
+        result = detect("https://youtube.com/@channelname")
+        assert result["type"] == "youtube"
+        assert result["slug"] == "channelname"

@@ -36,6 +36,36 @@ def _normalize_landing(url: str) -> str:
     return url
 
 
+def _slug_meta_ads(url: str) -> str:
+    parsed = urlparse(url)
+    qs = parsed.query
+    # Try id= first, then q=
+    for key in ("id", "q"):
+        for pair in qs.split("&"):
+            if pair.startswith(f"{key}="):
+                val = pair.split("=", 1)[1]
+                return val.lower().replace(" ", "-")[:32] or "meta-ad"
+    return "meta-ad"
+
+
+def _yt_slug(url: str) -> str | None:
+    """Returns video_id or channel name, or None if not YouTube."""
+    parsed = urlparse(url)
+    host = parsed.netloc.lower()
+    if host not in {"youtube.com", "www.youtube.com", "youtu.be", "m.youtube.com"}:
+        return None
+    if host == "youtu.be":
+        return parsed.path.lstrip("/")[:16]
+    path = parsed.path
+    if path.startswith("/@"):
+        return path[2:].split("/")[0]
+    if path.startswith("/watch"):
+        for pair in parsed.query.split("&"):
+            if pair.startswith("v="):
+                return pair.split("=", 1)[1][:16]
+    return path.lstrip("/").split("/")[0][:16] or "youtube"
+
+
 def detect(input_str: str) -> dict:
     """Return {type, normalized, slug} or raise ValueError."""
     if not input_str or not input_str.strip():
@@ -49,6 +79,24 @@ def detect(input_str: str) -> dict:
 
     s = input_str.strip()
 
+    # Meta Ad Library check (URL with specific path)
+    if "facebook.com/ads/library" in s.lower():
+        return {
+            "type": "meta_ads",
+            "normalized": s,
+            "slug": _slug_meta_ads(s),
+        }
+
+    # YouTube check (URL host match)
+    yt_slug = _yt_slug(s)
+    if yt_slug is not None:
+        return {
+            "type": "youtube",
+            "normalized": s,
+            "slug": yt_slug,
+        }
+
+    # Generic landing URL
     if _URL_RE.match(s):
         return {
             "type": "landing",
@@ -56,6 +104,7 @@ def detect(input_str: str) -> dict:
             "slug": _slug_from_landing(s),
         }
 
+    # Instagram handle
     if _IG_HANDLE_RE.match(s):
         handle = s.lstrip("@").lower()
         return {
