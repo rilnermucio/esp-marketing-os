@@ -71,12 +71,6 @@ _COST_RATES = {
         "rate_per_result": 0.005,
         "default_multiplier": 20,
     },
-    "apidojo/twitter-scraper-lite": {
-        "list_field": "twitterHandles",
-        "multiplier_field": "maxItems",
-        "rate_per_result": 0.0004,
-        "default_multiplier": 50,
-    },
 }
 
 

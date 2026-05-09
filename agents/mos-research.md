@@ -70,9 +70,6 @@ python3 scripts/apify_tiktok.py --handle @concorrente --max-videos 30
 # YouTube channel — top vídeos + views/likes + duração
 python3 scripts/apify_youtube.py --channel @concorrente --max-videos 20
 
-# Twitter/X profile — tweets + likes/retweets/replies
-python3 scripts/apify_twitter.py --handle @concorrente --max-tweets 50
-
 # Meta Ad Library — anúncios ATIVOS de uma marca/keyword (FB + IG)
 python3 scripts/apify_meta_ads.py --query "marca-ou-keyword" --country BR --max-ads 30
 

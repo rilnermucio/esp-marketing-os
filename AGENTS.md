@@ -89,11 +89,11 @@ Conteúdos de redes sociais (Reels, posts, carrosséis, stories) **devem** inclu
 
 ## Ferramentas Python relevantes
 
-36 scripts em `scripts/` (CLI unificado em `scripts/mos.py`). Os agents Tier 1 com acesso a `Bash` invocam-nos para tarefas determinísticas: `seo_analyzer.py`, `hashtag_generator.py`, `hook_generator.py`, `reels_script_generator.py`, `carousel_structure_generator.py`, `caption_generator.py`, `trend_tracker.py`, `quality_gate.py`, `headline_scorer.py`, `competitor_analyzer.py`, etc.
+35 scripts em `scripts/` (CLI unificado em `scripts/mos.py`). Os agents Tier 1 com acesso a `Bash` invocam-nos para tarefas determinísticas: `seo_analyzer.py`, `hashtag_generator.py`, `hook_generator.py`, `reels_script_generator.py`, `carousel_structure_generator.py`, `caption_generator.py`, `trend_tracker.py`, `quality_gate.py`, `headline_scorer.py`, `competitor_analyzer.py`, etc.
 
 Hook de quality gate: `scripts/hooks/quality_gate_hook.py` é invocado via `PreToolUse` matcher `Write|Edit|MultiEdit` em vários agents Tier 1 (ver frontmatter `hooks` em `agents/mos-*.md`).
 
-**Apify (opt-in)**: 7 scripts opcionais (`apify_client.py` + 6 scrapers: `apify_serp.py`, `apify_instagram.py`, `apify_meta_ads.py`, `apify_tiktok.py`, `apify_youtube.py`, `apify_twitter.py`) habilitam scraping estruturado de SERP do Google, Instagram, Meta Ad Library, TikTok, YouTube e Twitter/X. Usados pelos agents `mos-seo`, `mos-research`, `mos-ads` e `mos-video` quando a variável `APIFY_TOKEN` está disponível. Sem token, comportamento idêntico ao anterior (fallback automático para `WebSearch`). Setup, custo estimado, mapeamento Actor↔agent e FAQ em `docs/APIFY-INTEGRATION.md`.
+**Apify (opt-in)**: 6 scripts opcionais (`apify_client.py` + 5 scrapers: `apify_serp.py`, `apify_instagram.py`, `apify_meta_ads.py`, `apify_tiktok.py`, `apify_youtube.py`) habilitam scraping estruturado de SERP do Google, Instagram, Meta Ad Library, TikTok e YouTube. Usados pelos agents `mos-seo`, `mos-research`, `mos-ads` e `mos-video` quando a variável `APIFY_TOKEN` está disponível. Sem token, comportamento idêntico ao anterior (fallback automático para `WebSearch`). Setup, custo estimado, mapeamento Actor↔agent e FAQ em `docs/APIFY-INTEGRATION.md`.
 
 ## Voice clones (`assets/clones/`)
 
