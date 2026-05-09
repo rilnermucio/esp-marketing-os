@@ -138,3 +138,74 @@ def top_fixes(result: dict, n: int = 3) -> list[dict]:
         scored,
         key=lambda x: (_PRIORITY_ORDER.get(x["priority"], 99), x["score"]),
     )[:n]
+
+
+def format_scorecard_md(result: dict) -> str:
+    """Markdown table: Dimensão | Peso | Score | Status."""
+    lines = [
+        "| Dimensão | Peso | Score | Status |",
+        "|---|---|---|---|",
+    ]
+    for dim, info in result["dimensions"].items():
+        score = info["score"]
+        if score is None:
+            status = "N/D"
+            score_str = "N/D"
+        elif score >= 80:
+            status = "Forte"
+            score_str = str(score)
+        elif score >= 60:
+            status = "OK"
+            score_str = str(score)
+        else:
+            status = "Atenção"
+            score_str = str(score)
+        lines.append(f"| {dim} | {info['weight']}% | {score_str} | {status} |")
+    return "\n".join(lines)
+
+
+def format_priorities_md(result: dict, n: int = 3) -> str:
+    """Numbered list of top N fixes with priority markers."""
+    fixes = top_fixes(result, n=n)
+    if not fixes:
+        return "Nenhuma prioridade identificada."
+    lines = ["## Prioridades"]
+    for i, fix in enumerate(fixes, start=1):
+        prio = fix["priority"].upper()
+        lines.append(
+            f"{i}. **[{prio}] {fix['dimension']}** (score {fix['score']}): {fix['fix']}"
+        )
+    return "\n".join(lines)
+
+
+def _cli() -> int:
+    try:
+        payload = json.loads(sys.stdin.read())
+    except json.JSONDecodeError as e:
+        print(f"Invalid JSON on stdin: {e}", file=sys.stderr)
+        return 1
+
+    try:
+        result = compute(
+            payload["type"],
+            payload["dimension_scores"],
+            payload.get("evidences", {}),
+            payload.get("fixes", {}),
+        )
+    except (ValueError, KeyError) as e:
+        print(f"Error: {e}", file=sys.stderr)
+        return 1
+
+    out = {
+        **result,
+        "top_wins": top_wins(result),
+        "top_fixes": top_fixes(result),
+        "scorecard_md": format_scorecard_md(result),
+        "priorities_md": format_priorities_md(result),
+    }
+    print(json.dumps(out, ensure_ascii=False))
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(_cli())

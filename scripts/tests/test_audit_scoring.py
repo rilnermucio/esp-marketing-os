@@ -7,7 +7,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import pytest
 
-from audit_scoring import RUBRICS, validate_rubrics, compute, top_wins, top_fixes
+from audit_scoring import RUBRICS, validate_rubrics, compute, top_wins, top_fixes, format_scorecard_md, format_priorities_md
 
 
 class TestRubrics:
@@ -127,3 +127,51 @@ class TestOrdering:
         result = compute("landing", scores, evidences, fixes)
         wins = top_wins(result, n=3)
         assert all(w["dimension"] != "Copy (headline, value prop)" for w in wins)
+
+
+import json
+import subprocess
+
+
+class TestFormatters:
+    def _sample_result(self):
+        scores = {k: 70 for k in RUBRICS["landing"]}
+        scores["Conversão (CTA, friction, funil)"] = 90
+        evidences = {k: f"saw {k}" for k in scores}
+        fixes = {k: {"text": f"fix {k}", "priority": "media"} for k in scores}
+        return compute("landing", scores, evidences, fixes)
+
+    def test_scorecard_is_markdown_table(self):
+        result = self._sample_result()
+        md = format_scorecard_md(result)
+        assert "| Dimensão" in md
+        assert "| Peso" in md
+        assert "| Score" in md
+        assert "Conversão" in md
+
+    def test_priorities_lists_top_3(self):
+        result = self._sample_result()
+        md = format_priorities_md(result)
+        assert md.count("\n- ") + md.count("\n1. ") >= 3 or md.count("Prioridade") >= 1
+
+
+class TestScoringCLI:
+    def test_cli_reads_stdin_writes_stdout(self):
+        from pathlib import Path
+        script = Path(__file__).resolve().parent.parent / "audit_scoring.py"
+        scores = {k: 70 for k in RUBRICS["landing"]}
+        payload = {
+            "type": "landing",
+            "dimension_scores": scores,
+            "evidences": {k: "" for k in scores},
+            "fixes": {k: {"text": "", "priority": "media"} for k in scores},
+        }
+        result = subprocess.run(
+            [sys.executable, str(script)],
+            input=json.dumps(payload),
+            capture_output=True, text=True, check=True,
+        )
+        out = json.loads(result.stdout)
+        assert out["overall"] == 70
+        assert "scorecard_md" in out
+        assert "priorities_md" in out
