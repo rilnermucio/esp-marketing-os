@@ -6,9 +6,11 @@ Transforma um conteúdo original (ex: artigo de blog) em múltiplos formatos
 para diferentes plataformas.
 
 Uso:
-    python content_repurposer.py --file artigo.txt --output todos
-    python content_repurposer.py --file artigo.txt --output instagram
-    python content_repurposer.py "Texto aqui" --output twitter
+    python content_repurposer.py --file artigo.txt --platform todos
+    python content_repurposer.py --file artigo.txt --platform instagram
+    python content_repurposer.py "Texto aqui" --platform twitter
+
+    # --output/-o salva o resultado em arquivo; --json emite JSON estruturado.
 """
 
 import re
@@ -484,7 +486,7 @@ def print_output(result: Dict, platform: Optional[str] = None) -> None:
         for key, name, detail in platforms:
             print(f"   ✅ {name}: {detail}")
 
-        print("\n💡 Use --output [plataforma] para ver versão específica")
+        print("\n💡 Use --platform [plataforma] para ver versão específica")
         print("   Opções: carousel, reels, twitter, linkedin, email, youtube")
 
     print("\n" + "="*60)
@@ -496,14 +498,12 @@ def main() -> None:
     parser.add_argument("--file", "-f", help="Arquivo de texto")
     parser.add_argument("--platform", "-p", default="todos",
                         help="Plataforma: carousel, reels, twitter, linkedin, email, youtube, todos")
-    # Mantém --output para compatibilidade retroativa, mas o novo padrão é --platform
-    parser.add_argument("--output", default=None,
-                        help=argparse.SUPPRESS)
+    # --output/-o (salvar em arquivo) e --json vêm de add_output_args (padrão dos demais scripts).
     add_output_args(parser)
 
     args = parser.parse_args()
     fmt = OutputFormatter(args)
-    platform = args.output or args.platform  # retrocompatibilidade
+    platform = args.platform
 
     text = ""
 

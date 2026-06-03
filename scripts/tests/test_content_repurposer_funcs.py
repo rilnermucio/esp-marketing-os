@@ -208,11 +208,27 @@ def test_print_output_reels_via_alias(capsys):
 
 
 # ----------------------------------------------------------- main / CLI
-# NOTE: o script tem um bug pré-existente (conflito --output entre o argparse
-# local e add_output_args), então main() não pode ser exercido sem patch no
-# script. Pulamos os testes de main() pra não fragilizar a suite.
-@pytest.mark.skip(reason="bug pré-existente: conflito --output em main()")
+# O conflito de --output (argparse local x add_output_args) foi corrigido:
+# --platform seleciona a plataforma, --output/-o salva em arquivo.
 def test_main_sem_args_e_sem_file(capsys):
     with patch.object(sys, "argv", ["content_repurposer.py"]):
         with pytest.raises(SystemExit):
             cr.main()
+    out = capsys.readouterr().out
+    assert "--platform" in out
+
+
+def test_main_com_texto_e_platform(capsys):
+    argv = ["content_repurposer.py", SAMPLE_TEXT, "--platform", "twitter"]
+    with patch.object(sys, "argv", argv):
+        cr.main()
+    out = capsys.readouterr().out
+    assert len(out) > 0
+
+
+def test_main_json_mode(capsys):
+    argv = ["content_repurposer.py", SAMPLE_TEXT, "--platform", "todos", "--json"]
+    with patch.object(sys, "argv", argv):
+        cr.main()
+    out = capsys.readouterr().out
+    assert out.strip().startswith("{") or out.strip().startswith("[")
