@@ -33,7 +33,7 @@ Briefing recebido
         └── Dispatch SIMPLES: mos-email (com schema próprio de newsletter)
 ```
 
-`mos-email` não tem memory persistente — passe todos os inputs no prompt.
+`mos-email` não tem memory persistente, passe todos os inputs no prompt.
 
 ## Dispatch Simples (single email ou newsletter)
 
@@ -54,7 +54,7 @@ Agent(subagent_type: "mos-email", prompt: "Crie [single email | newsletter] sobr
 Após os agents retornarem, entregue:
 
 ```markdown
-## Email: [Tipo] — [Tópico/Oferta]
+## Email: [Tipo]: [Tópico/Oferta]
 
 Tipo: [single | welcome | nurture | launch | cart | re-engagement | newsletter] | Goal: [goal] | Audiência: [audiência]
 
@@ -117,4 +117,4 @@ Aplicar gates globais do `skills/marketing-os/SKILL.md`:
 
 ## Por que esse dispatch
 
-Single email = `mos-email` resolve sozinho (knowledge profunda de framework PAS/AIDA, subject formulas, hook patterns). Sequências têm 2 problemas independentes que paralelizam bem: arquitetura narrativa (mos-email — qual email faz qual coisa, timing, progressão) e copy de subject+CTA (mos-copy — onde mora open rate e CTR). Roda em 1 message, ganho de qualidade sem custo de latência.
+Single email = `mos-email` resolve sozinho (knowledge profunda de framework PAS/AIDA, subject formulas, hook patterns). Sequências têm 2 problemas independentes que paralelizam bem: arquitetura narrativa (mos-email, qual email faz qual coisa, timing, progressão) e copy de subject+CTA (mos-copy, onde mora open rate e CTR). Roda em 1 message, ganho de qualidade sem custo de latência.

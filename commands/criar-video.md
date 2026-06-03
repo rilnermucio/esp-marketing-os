@@ -16,9 +16,9 @@ Cria roteiro orquestrando subagents conforme tipo de vídeo. Roteamento abaixo s
 5. **Goal** (obrigatório): educar | entreter | converter (vendas) | branding
 6. **CTA** (opcional): inscrever, comprar, comentar, etc.
 
-## Dispatch — roteamento por formato
+## Dispatch, roteamento por formato
 
-### Caso A: VSL (Video Sales Letter) — Workflow #9 dedicado
+### Caso A: VSL (Video Sales Letter), Workflow #9 dedicado
 
 VSLs precisam de copy de venda + storytelling + ciência de retenção em vídeo simultaneamente. Dispatch paralelo:
 
@@ -74,7 +74,7 @@ Aplicar gates globais do `skills/marketing-os/SKILL.md`:
 ## Consolidação
 
 ```markdown
-## Roteiro: [Tema] — [Formato] [duração]
+## Roteiro: [Tema]: [Formato] [duração]
 
 ### Hook (primeiros segundos)
 [Texto exato pro creator falar]
@@ -99,4 +99,4 @@ Aplicar gates globais do `skills/marketing-os/SKILL.md`:
 
 ## Por que essa orquestração
 
-Vídeos curtos (Reels/Shorts) são naturalmente território do `mos-video`. VSLs são caso composto — copy de venda + arco narrativo + ciência de retenção têm que casar; falta de qualquer um quebra a peça toda.
+Vídeos curtos (Reels/Shorts) são naturalmente território do `mos-video`. VSLs são caso composto, copy de venda + arco narrativo + ciência de retenção têm que casar; falta de qualquer um quebra a peça toda.

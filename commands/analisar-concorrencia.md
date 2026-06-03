@@ -95,7 +95,7 @@ Aplicar gates globais do `skills/marketing-os/SKILL.md`:
 - Sem `—`, sem "brutal", sem CAPS gratuito, sem aspas em falas
 - Acentuação PT-BR correta
 - Métricas citadas devem ser verificáveis (CONFIRMADO via fonte primária ou PROVÁVEL com indicação)
-- Não inventar números — quando o agent não conseguir extrair, marcar "não disponível" ou "estimativa"
+- Não inventar números, quando o agent não conseguir extrair, marcar "não disponível" ou "estimativa"
 - Compliance regulatório se nicho saúde/finanças/suplementos (analisar concorrentes não escapa do disclaimer pro user)
 
 ## Follow-up

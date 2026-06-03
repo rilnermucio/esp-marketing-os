@@ -1,5 +1,5 @@
 ---
-description: Create a complete webinar (live or perpetual) — strategy, structure, registration page, email sequence. Dispatches mos-launch + mos-funnel + mos-video → mos-copy + mos-email (workflow #6).
+description: Create a complete webinar (live or perpetual), strategy, structure, registration page, email sequence. Dispatches mos-launch + mos-funnel + mos-video → mos-copy + mos-email (workflow #6).
 argument-hint: "<topic and goal, e.g., 'webinar de vendas pra meu curso de Python'>"
 ---
 
@@ -16,7 +16,7 @@ Cria webinar (live ou perpetual) conforme **workflow #6** em `skills/marketing-o
 5. **Pitch ou só conteúdo?** (obrigatório): vendas (pitch + oferta) | nutrição (sem pitch)
 6. **Nicho** (obrigatório): define disclaimers regulatórios
 
-## Dispatch — Fase 1 (paralelo, single message)
+## Dispatch, Fase 1 (paralelo, single message)
 
 ```
 - Agent(subagent_type: "mos-launch", prompt: "Estratégia de webinar [live/perpetual] para [produto]: posicionamento da oferta, pitch timing dentro da [duração], escassez/urgência, garantia, FAQ ao vivo. Modelo: [PLF perpetual / live launch]. Considere memory existente do cliente neste projeto.")
@@ -41,7 +41,7 @@ Aplicar gates globais do `skills/marketing-os/SKILL.md` (sem `—`, sem "brutal"
 ## Consolidação
 
 ```markdown
-## Webinar: [Tema] — Modelo [live/perpetual]
+## Webinar: [Tema]: Modelo [live/perpetual]
 
 ### Estratégia (mos-launch)
 [Posicionamento + pitch timing + escassez]
@@ -73,4 +73,4 @@ Aplicar gates globais do `skills/marketing-os/SKILL.md` (sem `—`, sem "brutal"
 
 ## Por que essa orquestração
 
-Sem `mos-launch`: webinar vira aula sem venda (não tem estratégia de oferta). Sem `mos-funnel`: cada step do funil sai isolado. Sem `mos-video`: roteiro não respeita ciência de retenção. Fase 2 (copy + email) depende de saber QUAL é a oferta e onde está o pitch — por isso sequencial.
+Sem `mos-launch`: webinar vira aula sem venda (não tem estratégia de oferta). Sem `mos-funnel`: cada step do funil sai isolado. Sem `mos-video`: roteiro não respeita ciência de retenção. Fase 2 (copy + email) depende de saber QUAL é a oferta e onde está o pitch, por isso sequencial.

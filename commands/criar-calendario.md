@@ -35,7 +35,7 @@ Briefing recebido
         └── Dispatch SIMPLES: mos-social (ele puxa contexto da campanha)
 ```
 
-`mos-social` tem `memory: project` — explicite "considere memory existente do cliente neste projeto" no prompt.
+`mos-social` tem `memory: project`: explicite "considere memory existente do cliente neste projeto" no prompt.
 
 ## Dispatch Simples (cliente/nicho conhecido)
 
@@ -81,8 +81,8 @@ Plataformas: [...] | Nicho: [...] | Goal: [growth | engagement | sales | authori
 #### Semana 1: [Tema/Foco]
 | Dia | Data | Plataforma | Formato | Tópico | Pillar | Horário BRT | Enquete? |
 |-----|------|------------|---------|--------|--------|-------------|----------|
-| Mon | [...] | IG | Carousel | [...] | Educational | 19:00 | — |
-| Tue | [...] | IG | Reel | [...] | Entertainment | 20:00 | Sim — [tipo] |
+| Mon | [...] | IG | Carousel | [...] | Educational | 19:00 |, |
+| Tue | [...] | IG | Reel | [...] | Entertainment | 20:00 | Sim, [tipo] |
 | ... | ... | ... | ... | ... | ... | ... | ... |
 
 #### Semana 2, 3, 4

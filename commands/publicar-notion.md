@@ -89,7 +89,7 @@ Aplicar gates globais do `skills/marketing-os/SKILL.md` no conteúdo **antes** d
 - Acentuação PT-BR correta
 - Fatos verificados
 
-Conteúdo que não passa nos gates **não vai pro Notion** — refaça primeiro.
+Conteúdo que não passa nos gates **não vai pro Notion**: refaça primeiro.
 
 ## Follow-up ao usuário
 

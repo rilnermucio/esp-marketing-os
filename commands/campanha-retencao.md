@@ -42,17 +42,17 @@ argument-hint: "<base/contexto> [--segmento=inativos-90dias|vip|risco|todos] [--
 ## Segmentação
 
 ```
-SEGMENTO 1 — INATIVOS (>90d): Reativação com oferta exclusiva. Tom Abraham. 5 emails / 14d.
-SEGMENTO 2 — ATIVOS (<90d): Upsell/cross-sell. Tom Hormozi. Email + social.
-SEGMENTO 3 — VIP (top 20%): Programa de fidelidade. Tom exclusivo. Email + ligação se high-ticket.
-SEGMENTO 4 — RISCO DE CHURN: Engajamento de emergência. 3 emails rápidos + suporte personalizado.
+SEGMENTO 1, INATIVOS (>90d): Reativação com oferta exclusiva. Tom Abraham. 5 emails / 14d.
+SEGMENTO 2, ATIVOS (<90d): Upsell/cross-sell. Tom Hormozi. Email + social.
+SEGMENTO 3, VIP (top 20%): Programa de fidelidade. Tom exclusivo. Email + ligação se high-ticket.
+SEGMENTO 4, RISCO DE CHURN: Engajamento de emergência. 3 emails rápidos + suporte personalizado.
 ```
 
 ## Frameworks
 
-- Os 3 Pilares — Abraham (Pilar 2 e 3)
+- Os 3 Pilares, Abraham (Pilar 2 e 3)
 - LTV Maximization
-- Reactivation Sequence — Dan Kennedy
+- Reactivation Sequence, Dan Kennedy
 
 ### Checklist
 

@@ -46,9 +46,9 @@ argument-hint: "<nicho/avatar> [--canal=...] [--budget=...] [--clone=suby|kenned
 
 ## Frameworks
 
-- Método HDIC (Horde-Direct-Convert) — Sabri Suby
+- Método HDIC (Horde-Direct-Convert), Sabri Suby
 - Pirâmide de Consciência (3% → 97%)
-- Os 3 Pilares — Jay Abraham
+- Os 3 Pilares, Jay Abraham
 
 ## Estrutura do Funil
 

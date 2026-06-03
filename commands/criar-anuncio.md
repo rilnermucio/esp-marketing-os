@@ -51,31 +51,31 @@ Agent(subagent_type: "mos-ads", prompt: "Crie copy completa de anúncio para [pl
 Após os agents retornarem, entregue:
 
 ```markdown
-## Anúncio: [Produto] — [Plataforma]
+## Anúncio: [Produto]: [Plataforma]
 
 Plataforma: [Meta | Google | TikTok | LinkedIn | Pinterest] | Objetivo: [objetivo] | Audiência: [audiência]
 
 ### Research Context (se houver)
-[Concorrência ativa + ângulos saturados + ângulos em aberto + stats — do mos-research]
+[Concorrência ativa + ângulos saturados + ângulos em aberto + stats, do mos-research]
 
 ### Variações de Copy (de mos-ads)
 
-**Versão 1 — [Ângulo: ex. Problem-Aware]**
+**Versão 1, [Ângulo: ex. Problem-Aware]**
 - Primary text: [...]
 - Headline: [...]
 - Description: [...]
 - CTA: [...]
 
-**Versão 2 — [Ângulo: ex. Social Proof]**
+**Versão 2, [Ângulo: ex. Social Proof]**
 [mesmo schema]
 
-**Versão 3 — [Ângulo: ex. Result-Focused]**
+**Versão 3, [Ângulo: ex. Result-Focused]**
 [mesmo schema]
 
-**Versão 4 — Short-form (Stories/Reels)**
+**Versão 4, Short-form (Stories/Reels)**
 [versão condensada]
 
-**Versão 5 — Urgency/Scarcity**
+**Versão 5, Urgency/Scarcity**
 [versão com gatilho temporal]
 
 ### Direção Criativa

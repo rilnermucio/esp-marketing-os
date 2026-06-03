@@ -46,7 +46,7 @@ Passo 2:
 Agent(subagent_type: "mos-video", prompt: "Análise reverse-engineered do vídeo: [URL]. Use este contexto do creator: [colar research brief]. [resto igual ao dispatch simples]")
 ```
 
-`mos-research` tem memory project; `mos-video` não — passe todo o contexto no prompt do segundo.
+`mos-research` tem memory project; `mos-video` não, passe todo o contexto no prompt do segundo.
 
 ## Consolidação
 

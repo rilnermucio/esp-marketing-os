@@ -21,7 +21,7 @@ Cria artigo SEO orquestrando 2 subagents em sequência (research alimenta SEO). 
 
 A sequência é obrigatória: `mos-seo` precisa do output de `mos-research` (keywords reais, SERP atual, intent confirmado, gaps de conteúdo) pra produzir artigo que ranqueia. Não rode em paralelo.
 
-### Passo 1 — Research
+### Passo 1, Research
 
 ```
 Agent(subagent_type: "mos-research", prompt: "Keyword research e SERP analysis para artigo sobre [tópico], primary keyword [keyword], intent [intent]. Considere memory existente do cliente neste projeto. Entregue: volume estimado e dificuldade da primary, 3-5 secondary keywords com volume, 5-8 long-tail (incluindo question keywords e LSI), análise dos top 5 ranqueando hoje (estrutura, gaps, ângulo predominante), search intent confirmado/refinado, snippets oportunidades (paragraph/list/table), entidades semânticas e tópicos correlatos. Audiência: [audiência].")
@@ -29,13 +29,13 @@ Agent(subagent_type: "mos-research", prompt: "Keyword research e SERP analysis p
 → Aguarde research brief antes do passo 2.
 ```
 
-### Passo 2 — Artigo SEO completo
+### Passo 2, Artigo SEO completo
 
 ```
 Agent(subagent_type: "mos-seo", prompt: "Artigo SEO completo sobre [tópico], primary keyword [keyword], intent [intent], target [word count] palavras. Audiência: [audiência]. Use este research como base [colar research brief do passo 1]. Entregue: 3-5 opções de title tag (50-60 chars), meta description (150-160 chars), URL slug, heading structure completa H1/H2/H3, artigo full com intro+body+conclusão, integração E-E-A-T, otimização de featured snippets (paragraph/list/table conforme intent), FAQ schema-ready, internal linking suggestions, image suggestions com alt text, SEO checklist final. Aplicar quality gates globais (sem travessão, sem 'brutal', PT-BR correto).")
 ```
 
-### Passo 3 (opcional) — Refino de headline + CTA
+### Passo 3 (opcional), Refino de headline + CTA
 
 ```
 Agent(subagent_type: "mos-copy", prompt: "Otimizar headline (H1 + title tag) e CTA final do artigo abaixo. Gerar 5 variações de headline com ângulos diferentes (curiosidade, benefício, número, contrarian, autoridade) e 3 variações de CTA. Texto do artigo: [colar artigo do passo 2]. Aplicar quality gates globais.")

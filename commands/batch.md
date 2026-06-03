@@ -115,7 +115,7 @@ Para cada peça i de 1..N:
     Considere memory em .claude/agent-memory/marketing-os-mos-email/ se houver.")
 ```
 
-### Articles (sequencial por peça — research é caro)
+### Articles (sequencial por peça, research é caro)
 
 ```
 Para cada peça i de 1..N:
@@ -156,7 +156,7 @@ Cada bucket vira um conjunto de Agent calls em paralelo. Buckets independentes p
 
 ## Memory note
 
-Vários dos agents têm memory project (`.claude/agent-memory/marketing-os-<agent>/`). Em batches do mesmo cliente, **mencione no prompt** que considere memory existente — evita repetir hooks já usados, mantém consistência de tom, e respeita restrições de compliance previamente registradas.
+Vários dos agents têm memory project (`.claude/agent-memory/marketing-os-<agent>/`). Em batches do mesmo cliente, **mencione no prompt** que considere memory existente, evita repetir hooks já usados, mantém consistência de tom, e respeita restrições de compliance previamente registradas.
 
 ## Consolidação do output
 
@@ -195,8 +195,8 @@ Clone: [clone se aplicável]
 ### Calendar placement (sugestão)
 | Semana | Seg | Ter | Qua | Qui | Sex | Sáb | Dom |
 |--------|-----|-----|-----|-----|-----|-----|-----|
-| 1 | #1 | #2 | — | #3 | #4 | — | #5 |
-| 2 | #6 | #7 | — | #8 | #9 | — | #10 |
+| 1 | #1 | #2 |, | #3 | #4 |, | #5 |
+| 2 | #6 | #7 |, | #8 | #9 |, | #10 |
 
 **Best posting times:** Instagram [...], LinkedIn [...], TikTok [...]
 

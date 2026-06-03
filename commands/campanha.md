@@ -40,11 +40,11 @@ Ver `skills/marketing-os/SKILL.md`. Cada sub-command já reforça localmente, ma
 
 ## Recursos relacionados
 
-- `workflows/end-to-end-campaign-workflow.md` — workflow completo de referência
-- `workflows/content-pipeline.md` — pipeline de produção
-- `assets/clones/clone-manifest.yaml` — sistema de clones (35 perfis)
-- `subagents/ab-testing-agent.md` — testes A/B aprofundados
-- `scripts/ab_generator.py` — geração automática de variantes
+- `workflows/end-to-end-campaign-workflow.md`: workflow completo de referência
+- `workflows/content-pipeline.md`: pipeline de produção
+- `assets/clones/clone-manifest.yaml`: sistema de clones (35 perfis)
+- `subagents/ab-testing-agent.md`: testes A/B aprofundados
+- `scripts/ab_generator.py`: geração automática de variantes
 
 ## Por que essa estrutura de presets
 

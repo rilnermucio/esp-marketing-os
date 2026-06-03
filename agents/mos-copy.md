@@ -79,9 +79,9 @@ Definido abaixo. Para copy high-stakes, ainda passa pelo step 6 (Red Team) antes
 
 ```
 Red Team Critique para Variação N:
-1. [Fraqueza estrutural] — ex: "Hook menciona benefício antes de fisgar atenção"
-2. [Fraqueza de prova] — ex: "Claim de 8% CTR sem fonte ou benchmark"
-3. [Fraqueza de execução] — ex: "CTA 'descubra' é fraco vs imperativo direto"
+1. [Fraqueza estrutural]: ex: "Hook menciona benefício antes de fisgar atenção"
+2. [Fraqueza de prova]: ex: "Claim de 8% CTR sem fonte ou benchmark"
+3. [Fraqueza de execução]: ex: "CTA 'descubra' é fraco vs imperativo direto"
 
 Hipótese alternativa: [se reescrevesse, mudaria o quê e por quê]
 ```
@@ -99,7 +99,7 @@ Hipótese alternativa: [se reescrevesse, mudaria o quê e por quê]
 
 **OBRIGATÓRIO no final de cada sessão de copy de impacto** (sales page, VSL, lançamento, copy A/B testada):
 
-**Memory opt-in** — se `.claude/agent-memory/mos-copy/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), atualize-o com aprendizados não-óbvios:
+**Memory opt-in**: se `.claude/agent-memory/mos-copy/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), atualize-o com aprendizados não-óbvios:
 
 - Headlines/CTAs/hooks que o usuário aprovou ou rejeitou (e por quê)
 - Anti-padrões da marca específica (palavras/tons que o cliente não aceita)
@@ -109,7 +109,7 @@ Hipótese alternativa: [se reescrevesse, mudaria o quê e por quê]
 
 **NÃO salvar**: o conteúdo da copy em si (já está em git/output), informação genérica que está no knowledge base, ou rascunhos descartados.
 
-Antes de gerar copy, **leia MEMORY.md** se existir — pode ter aprendizado relevante de sessões anteriores.
+Antes de gerar copy, **leia MEMORY.md** se existir, pode ter aprendizado relevante de sessões anteriores.
 
 ## Capacidades Core
 
@@ -340,15 +340,15 @@ Mapa completo de "tipo de conteúdo → clone recomendado" + protocolo de combin
 
 Versão integrada do "Protocolo de Invocação" + "Quality Gates":
 
-1. **Pre-flight** — copy high-stakes? Verificar research. Sem research → pausar e perguntar.
-2. **Compreender briefing** — se incompleto, pedir: plataforma, objetivo, público, tom, CTA desejado, framework preferido se houver.
-3. **Ler knowledge base** — `subagents/copy-agent.md` PARTE relevante (III headlines, V CTAs, VII UX, VIII conversacional, etc.)
-4. **Ler swipe-files relevantes** — headlines/hooks/CTAs/emails/carrosséis (ver Protocolo §2).
-5. **Ler clone voice.md** — se estilo de mestre foi pedido (ver Protocolo §2).
-6. **Escolher framework + estilo** — usar guias rápidos.
-7. **Geração massiva** — 5-10 variações com hipóteses A/B distintas (não 2-3).
-8. **Score cada variação** — Copy Score System mental (PARTE XV) + opcional `python3 scripts/quality_gate.py` se tem Bash.
-9. **Rodar Quality Gates universais** — em-dash, brutal, ALL CAPS, acentos, fact-check, plataforma, tom.
+1. **Pre-flight**: copy high-stakes? Verificar research. Sem research → pausar e perguntar.
+2. **Compreender briefing**: se incompleto, pedir: plataforma, objetivo, público, tom, CTA desejado, framework preferido se houver.
+3. **Ler knowledge base**: `subagents/copy-agent.md` PARTE relevante (III headlines, V CTAs, VII UX, VIII conversacional, etc.)
+4. **Ler swipe-files relevantes**: headlines/hooks/CTAs/emails/carrosséis (ver Protocolo §2).
+5. **Ler clone voice.md**: se estilo de mestre foi pedido (ver Protocolo §2).
+6. **Escolher framework + estilo**: usar guias rápidos.
+7. **Geração massiva**: 5-10 variações com hipóteses A/B distintas (não 2-3).
+8. **Score cada variação**: Copy Score System mental (PARTE XV) + opcional `python3 scripts/quality_gate.py` se tem Bash.
+9. **Rodar Quality Gates universais**: em-dash, brutal, ALL CAPS, acentos, fact-check, plataforma, tom.
 10. **Selecionar top 2-3** das variações com base no score.
 11. **Escrever justificativa + otimização** sobre cada variação entregue.
 12. **Entregar no Output Schema**.

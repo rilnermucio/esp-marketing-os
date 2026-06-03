@@ -32,7 +32,7 @@ argument-hint: "<produto> [--desconto=...] [--clone=hormozi|suby] [--canal=...] 
   - Dia -7: teaser + abertura da lista VIP
   - Dia -3: anúncio oficial da promoção
   - Dia -1: último aviso
-  - Dia 0: abertura — Black Friday (manhã + tarde + noite)
+  - Dia 0: abertura, Black Friday (manhã + tarde + noite)
   - Dia +1: Cyber Monday (se aplicável)
   - Dia +2: última chance (manhã + 6h antes do fim)
   Considere memory de campanhas BF anteriores.")
@@ -55,13 +55,13 @@ argument-hint: "<produto> [--desconto=...] [--clone=hormozi|suby] [--canal=...] 
 | D-7 | Teaser + lista VIP |
 | D-3 | Anúncio oficial da promoção |
 | D-1 | Último aviso |
-| D 0 | Abertura — Black Friday |
+| D 0 | Abertura, Black Friday |
 | D+1 | Cyber Monday (se aplicável) |
 | D+2 | Última chance |
 
 ## Frameworks
 
-- Value Stack — Alex Hormozi
+- Value Stack, Alex Hormozi
 - Urgência Real (não artificial)
 - Scarcity Marketing
 
@@ -76,7 +76,7 @@ argument-hint: "<produto> [--desconto=...] [--clone=hormozi|suby] [--canal=...] 
 [ ] Design dos assets (mos-design opcional)
 
 1 SEMANA ANTES:
-[ ] Anúncios configurados (Fase 2: mos-ads) — não ativar ainda
+[ ] Anúncios configurados (Fase 2: mos-ads), não ativar ainda
 [ ] Página de vendas e checkout testados
 [ ] Posts e emails agendados
 [ ] Briefing da equipe

@@ -79,7 +79,7 @@ Apresente critique LOGO ABAIXO do plano. Termine com: "Vale ajustar antes de sub
 
 **OBRIGATÓRIO em todo lançamento que aconteceu** (não só plejado):
 
-**Memory opt-in** — se `.claude/agent-memory/mos-launch/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), atualize-o com:
+**Memory opt-in**: se `.claude/agent-memory/mos-launch/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), atualize-o com:
 
 - Tipo de lançamento + ticket + audiência + duração
 - Conversion rate carrinho real vs estimada

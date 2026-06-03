@@ -15,7 +15,7 @@ Cria estratégia completa de funil orquestrando subagents conforme `skills/marke
 4. **Tráfego de origem** (obrigatório): orgânico, ads pagos, referência, etc.
 5. **Cliente novo ou existente?** (define se precisa de mos-research)
 
-## Dispatch — decisão por contexto
+## Dispatch, decisão por contexto
 
 ### Caso A: Cliente conhecido + funil tradicional
 
@@ -76,4 +76,4 @@ Aplicar gates globais do `skills/marketing-os/SKILL.md`:
 
 ## Por que esse dispatch
 
-Funil é um framework estratégico que `mos-funnel` cobre profundamente. Para clientes novos, `mos-research` valida assumptions ANTES de mapear o funil — evita projetar funil sobre premissas erradas. Os outros agents (copy, email, ads, analytics) são executores das peças individuais — chame em comandos dedicados depois.
+Funil é um framework estratégico que `mos-funnel` cobre profundamente. Para clientes novos, `mos-research` valida assumptions ANTES de mapear o funil, evita projetar funil sobre premissas erradas. Os outros agents (copy, email, ads, analytics) são executores das peças individuais, chame em comandos dedicados depois.

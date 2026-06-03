@@ -46,17 +46,17 @@ argument-hint: "<nicho/tema> [--clone=ogilvy|abdaal] [--canal=linkedin|blog|podc
 ## Pilares de Conteúdo
 
 ```
-PILAR 1 — EDUCAÇÃO (40%): ensina algo específico/útil. Carrossel, artigo, vídeo tutorial.
-PILAR 2 — PERSPECTIVA (30%): opinião baseada em dados. Post de texto, LinkedIn, thread.
-PILAR 3 — PROVA (20%): casos de sucesso, resultados, bastidores. Depoimento, estudo de caso.
-PILAR 4 — HUMANIZAÇÃO (10%): falhas, jornada, curiosidades pessoais. Stories, vídeo informal.
+PILAR 1, EDUCAÇÃO (40%): ensina algo específico/útil. Carrossel, artigo, vídeo tutorial.
+PILAR 2, PERSPECTIVA (30%): opinião baseada em dados. Post de texto, LinkedIn, thread.
+PILAR 3, PROVA (20%): casos de sucesso, resultados, bastidores. Depoimento, estudo de caso.
+PILAR 4, HUMANIZAÇÃO (10%): falhas, jornada, curiosidades pessoais. Stories, vídeo informal.
 ```
 
 ## Frameworks
 
-- Content Marketing — David Ogilvy
-- Evidence-Based Content — Ali Abdaal
-- Preeminência — Jay Abraham
+- Content Marketing, David Ogilvy
+- Evidence-Based Content, Ali Abdaal
+- Preeminência, Jay Abraham
 
 ### Checklist
 

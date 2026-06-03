@@ -14,7 +14,7 @@ Engenharia reversa de estratégia de concorrente/expert conforme **workflow #10*
 3. **Foco da análise** (obrigatório): conteúdo orgânico | ads | funil de vendas | posicionamento | copy
 4. **Profundidade** (obrigatório): rápida (visão geral) | profunda (frameworks específicos)
 
-## Dispatch — Fase 1 (paralelo, single message)
+## Dispatch, Fase 1 (paralelo, single message)
 
 ```
 - Agent(subagent_type: "mos-research", prompt: "Mapeamento completo de [alvo]: produtos vendidos + ticket, posicionamento (Schwartz nível, big idea), fontes de tráfego ativas, conteúdo orgânico (frequência/formatos/temas), ads ativos (Meta/Google ad library), depoimentos públicos, autoridade construída. WebSearch + análise de perfis públicos. Considere memory existente do cliente neste projeto.")
@@ -41,7 +41,7 @@ Saída final:
 **Tráfego:** [orgânico %, ads %, parcerias %, etc.]
 **Conteúdo:** [frequência/formatos/temas dominantes]
 **Ads ativos:** [exemplos da ad library]
-**Autoridade:** [como construiu — credenciais, depoimentos, mídia]
+**Autoridade:** [como construiu, credenciais, depoimentos, mídia]
 
 ### Brand Spec Extraído (mos-brand)
 **Arquétipo:** [principal + sub-arquétipos]
@@ -90,7 +90,7 @@ Clone sem `mos-research` é cópia rasa (só pega headlines visíveis). Sem `mos
 
 ## Related commands
 
-- `/analisar-concorrencia` — análise mais focada em conteúdo/SEO
-- `/analisar-video` — análise focada em 1 vídeo específico
-- `/criar-clone` — cria clone de copywriter externo (Halbert, Hopkins, etc.) via web research
-- `/criar-meu-clone` — clone da SUA voz via amostras locais
+- `/analisar-concorrencia`: análise mais focada em conteúdo/SEO
+- `/analisar-video`: análise focada em 1 vídeo específico
+- `/criar-clone`: cria clone de copywriter externo (Halbert, Hopkins, etc.) via web research
+- `/criar-meu-clone`: clone da SUA voz via amostras locais

@@ -37,7 +37,7 @@ Briefing recebido
             (junto com mos-design, ou junto com mos-design + mos-brand)
 ```
 
-`mos-design` tem `memory: project`. `mos-brand` também tem `memory: project`. Explicite "considere memory existente do cliente" em ambos os prompts. `mos-ai-tools` não tem memory — passe tudo no prompt.
+`mos-design` tem `memory: project`. `mos-brand` também tem `memory: project`. Explicite "considere memory existente do cliente" em ambos os prompts. `mos-ai-tools` não tem memory, passe tudo no prompt.
 
 ## Dispatch Simples (1 peça, identidade existente)
 
@@ -88,14 +88,14 @@ Brand: [...] | Purpose: [...] | Plataformas: [...] | Style: [...]
 Racional da paleta (se mos-brand): [psicologia + nicho]
 
 ### Typography
-- Heading: [Font] — [Weight] (personalidade: ...)
-- Body: [Font] — [Weight]
-- Accent: [Font] — [Weight] (se aplicável)
+- Heading: [Font]: [Weight] (personalidade: ...)
+- Body: [Font]: [Weight]
+- Accent: [Font]: [Weight] (se aplicável)
 - Scale: H1/H2/H3/Body/Small/Caption (size px / line-height)
 
 ### Layout & Spacing (de mos-design)
 - Grid: [12 cols | 8 cols | free]
-- Spacing unit: [base px] — multiples
+- Spacing unit: [base px]: multiples
 - Border radius: [...]
 - Shadows: [...]
 
@@ -119,7 +119,7 @@ Racional da paleta (se mos-brand): [psicologia + nicho]
 3. [Exemplo de copy 3]
 
 ### AI Image Prompts (se mos-ai-tools)
-**Prompt 1 — [Uso]:**
+**Prompt 1, [Uso]:**
 "[Prompt detalhado para Midjourney/Flux/Ideogram, com aspect ratio e parâmetros]"
 
 [Repetir por uso]
@@ -153,4 +153,4 @@ Aplicar gates globais do `skills/marketing-os/SKILL.md`:
 
 ## Por que esse dispatch
 
-1 peça com identidade existente: `mos-design` resolve sozinho (knowledge profunda de specs por plataforma, layout principles, component patterns). Identidade completa: `mos-brand` define a alma (paleta com racional, tipografia com personalidade, arquétipo, tom) e `mos-design` constrói o esqueleto técnico em cima — paralelizam porque são camadas independentes (mos-brand não precisa de specs técnicas, mos-design pode trabalhar layout/grid sem cor final). `mos-ai-tools` adicional só quando pedido explicitamente, porque prompts de IA têm escopo próprio e não dependem de specs nem de identidade pra começar.
+1 peça com identidade existente: `mos-design` resolve sozinho (knowledge profunda de specs por plataforma, layout principles, component patterns). Identidade completa: `mos-brand` define a alma (paleta com racional, tipografia com personalidade, arquétipo, tom) e `mos-design` constrói o esqueleto técnico em cima, paralelizam porque são camadas independentes (mos-brand não precisa de specs técnicas, mos-design pode trabalhar layout/grid sem cor final). `mos-ai-tools` adicional só quando pedido explicitamente, porque prompts de IA têm escopo próprio e não dependem de specs nem de identidade pra começar.

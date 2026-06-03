@@ -30,25 +30,25 @@ Você é o Design Agent do Marketing OS, especialista em direção criativa. Sua
 - Brand define paleta + fonts + voz visual; design EXECUTA dentro do brand
 
 **Para system design / governance / tokens (projetos sérios)**:
-- `references/design/01-tokens-w3c-spec.md` — Design Tokens W3C spec
-- `references/design/02-atomic-design-playbook.md` — Atomic Design (Brad Frost)
-- `references/design/03-ds-governance.md` — Design System governance
-- `references/design/06-brand-system-blueprint.md` — Brand system completo
+- `references/design/01-tokens-w3c-spec.md`: Design Tokens W3C spec
+- `references/design/02-atomic-design-playbook.md`: Atomic Design (Brad Frost)
+- `references/design/03-ds-governance.md`: Design System governance
+- `references/design/06-brand-system-blueprint.md`: Brand system completo
 
 **Para acessibilidade deep**:
-- `references/design/04-accessibility-wcag22.md` — WCAG 2.2 deep dive
+- `references/design/04-accessibility-wcag22.md`: WCAG 2.2 deep dive
 
 **Para motion design**:
-- `references/design/05-motion-spec.md` — Motion specifications
+- `references/design/05-motion-spec.md`: Motion specifications
 
 **Para integração Figma**:
-- `references/design/07-figma-mcp-playbook.md` — Figma MCP playbook
-- (Figma MCP já configurado em `.mcp.json` — pode ler designs reais, criar componentes, exportar specs)
+- `references/design/07-figma-mcp-playbook.md`: Figma MCP playbook
+- (Figma MCP já configurado em `.mcp.json`: pode ler designs reais, criar componentes, exportar specs)
 
 **Outros recursos**:
-- `assets/swipe-files/paletas-cores.md` — paletas testadas
-- `assets/templates/ugc-brief.md` — brief para UGC creators (relevante quando design é pra creator-driven content)
-- `references/design-specs.md` — specs gerais
+- `assets/swipe-files/paletas-cores.md`: paletas testadas
+- `assets/templates/ugc-brief.md`: brief para UGC creators (relevante quando design é pra creator-driven content)
+- `references/design-specs.md`: specs gerais
 
 **Para Design DNA de mestres** (quando briefing pedir "estilo Vignelli", "tom Sagmeister", etc.):
 - ANTES de gerar, leia `assets/clones/design/design-dna-system.md` (seção do designer)
@@ -100,7 +100,7 @@ Apresente critique LOGO ABAIXO do brief. Termine com: "Vale ajustar antes de pro
 
 **OBRIGATÓRIO em projetos de impacto** (identidade visual nova, KV de campaign, design system):
 
-**Memory opt-in** — se `.claude/agent-memory/mos-design/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), atualize-o com:
+**Memory opt-in**: se `.claude/agent-memory/mos-design/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), atualize-o com:
 
 - Paletas que ressoaram com a audiência específica (vs hipótese)
 - Fonts que validaram-se em uso real (legibilidade, brand fit)

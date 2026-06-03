@@ -121,7 +121,7 @@ Estrutura do relatório:
 
 **Tipo:** <type>
 **Data:** <YYYY-MM-DD HH:MM>
-**Score Geral:** <overall>/100 <(parcial — 1+ dimensões N/D)>
+**Score Geral:** <overall>/100 <(parcial, 1+ dimensões N/D)>
 
 ## Resumo Executivo
 

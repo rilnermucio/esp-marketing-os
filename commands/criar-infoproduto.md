@@ -1,5 +1,5 @@
 ---
-description: Create a complete infoproduct (curso/membership/mentoria/ebook) — research, structure, pricing, launch plan, sales materials. Dispatches workflow #7 (research → structure+launch+funnel → copy+email+ads).
+description: Create a complete infoproduct (curso/membership/mentoria/ebook), research, structure, pricing, launch plan, sales materials. Dispatches workflow #7 (research → structure+launch+funnel → copy+email+ads).
 argument-hint: "<type and topic, e.g., 'curso de IA pra empreendedores BR ticket R$ 1.997'>"
 ---
 
@@ -16,7 +16,7 @@ Cria infoproduto + estratégia de lançamento conforme **workflow #7** em `skill
 5. **Marca nova ou pivô?** (define se precisa mos-brand)
 6. **Urgência de lançamento** (obrigatório): semana | mês | trimestre | sem prazo
 
-## Dispatch — Fase 1 (paralelo, single message)
+## Dispatch, Fase 1 (paralelo, single message)
 
 ```
 - Agent(subagent_type: "mos-research", prompt: "Validação de mercado para [formato] sobre [tópico]: tamanho do nicho BR, concorrentes ativos, ticket médio praticado, dores não atendidas, fontes de tráfego dominantes. Considere memory existente do cliente neste projeto. Retorne brief com 3-5 oportunidades de diferenciação.")
@@ -51,12 +51,12 @@ Aplicar gates globais do `skills/marketing-os/SKILL.md` (sem `—`, sem "brutal"
 ## Consolidação
 
 ```markdown
-## Infoproduto: [Nome] — [Formato]
+## Infoproduto: [Nome]: [Formato]
 
 ### Validação de Mercado (mos-research)
 [Tamanho + concorrentes + ticket + oportunidades]
 
-### Marca/Posicionamento (mos-brand) — se aplicável
+### Marca/Posicionamento (mos-brand), se aplicável
 [Arquétipo + voz + diferenciação]
 
 ### Estrutura do Produto (mos-infoproduct)
@@ -86,4 +86,4 @@ Aplicar gates globais do `skills/marketing-os/SKILL.md` (sem `—`, sem "brutal"
 
 ## Por que esse encadeamento
 
-Lançamento não é peça única — é orquestração de estratégia + estrutura + funil + execução. Pular Fase 1 (research) é o erro #1 de quem lança no escuro. Pular Fase 2 (escolha de modelo de lançamento) é o erro #2 de copiar PLF sem entender se cabe.
+Lançamento não é peça única, é orquestração de estratégia + estrutura + funil + execução. Pular Fase 1 (research) é o erro #1 de quem lança no escuro. Pular Fase 2 (escolha de modelo de lançamento) é o erro #2 de copiar PLF sem entender se cabe.

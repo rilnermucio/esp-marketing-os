@@ -9,16 +9,16 @@ Gerencia projetos de marketing como pipeline declarativo, com handoffs entre sub
 
 ## Subcomandos
 
-- `/projeto novo "<nome>" --tipo {lancamento|perpetuo|consultoria|mentoria}` — cria projeto novo a partir do template
-- `/projeto list` — lista todos os projetos com status atual
-- `/projeto status <slug>` — mostra detalhe (pipeline, stage atual, último run)
-- `/projeto avancar <slug>` — despacha o agente do stage atual e salva output como pending_approval
-- `/projeto aprovar <slug>` — aprova último run e avança pra próximo stage
-- `/projeto rejeitar <slug> "<feedback>"` — rejeita último run; próxima execução roda novamente com o feedback
+- `/projeto novo "<nome>" --tipo {lancamento|perpetuo|consultoria|mentoria}`: cria projeto novo a partir do template
+- `/projeto list`: lista todos os projetos com status atual
+- `/projeto status <slug>`: mostra detalhe (pipeline, stage atual, último run)
+- `/projeto avancar <slug>`: despacha o agente do stage atual e salva output como pending_approval
+- `/projeto aprovar <slug>`: aprova último run e avança pra próximo stage
+- `/projeto rejeitar <slug> "<feedback>"`: rejeita último run; próxima execução roda novamente com o feedback
 
 ## Como cada subcomando se comporta
 
-### novo / list / status / aprovar / rejeitar — determinísticos
+### novo / list / status / aprovar / rejeitar, determinísticos
 
 Roda direto via Bash, sem dispatch:
 
@@ -28,7 +28,7 @@ Bash("python scripts/project_manager.py <subcomando> [args]")
 
 Mostra a saída do script direto pro usuário (já vem human-readable).
 
-### avancar — orquestrador real
+### avancar, orquestrador real
 
 Esse subcomando NÃO é determinístico. Despacha um subagent. Fluxo:
 
@@ -54,7 +54,7 @@ mas o output detalhado vem PRIMEIRO e completo.
 7. **Mostra ao usuário:** preview do output + instrução "use `/projeto aprovar <slug>` ou `/projeto rejeitar <slug> \"motivo\"`" (a menos que tenha sido auto-aprovado).
 
 Importante:
-- Se `approval: skip` no stage atual, `completar` já avança automaticamente — não precisa chamar `aprovar` manualmente.
+- Se `approval: skip` no stage atual, `completar` já avança automaticamente, não precisa chamar `aprovar` manualmente.
 - Se já for o último stage do pipeline, ao aprovar marca o projeto como `status: completed`.
 - Se houver iteração com feedback de rejeição anterior, incluir o feedback explicitamente no prompt do novo run.
 - Quality Gates globais (ver `skills/marketing-os/SKILL.md`) se aplicam ao output do agente antes de salvar.
@@ -69,7 +69,7 @@ Stage atual: research. Pipeline: research → estrategia → funil → copy → 
 > /projeto avancar lancamento-curso-ia
 [mos-research roda automaticamente, despacha pesquisa de mercado]
 Output salvo em 01-research/draft-v1.md.
-Stage tem approval: skip — avancei automaticamente.
+Stage tem approval: skip, avancei automaticamente.
 Próximo stage: estrategia (mos-launch).
 
 > /projeto avancar lancamento-curso-ia
@@ -118,9 +118,9 @@ Os pipelines são fixos por tipo no MVP. Para customizar, edite o `pipeline:` no
 
 ## Limitações conhecidas (Fase 2 vai resolver)
 
-- Pipeline 100% sequencial — sem paralelismo (ex: copy + design simultâneos)
-- Approval só `required` ou `skip` — sem `auto_approve` com log
-- Output e approval são o mesmo gate — sem distinção entre "aprovado pra avançar" e "publicado"
+- Pipeline 100% sequencial, sem paralelismo (ex: copy + design simultâneos)
+- Approval só `required` ou `skip`: sem `auto_approve` com log
+- Output e approval são o mesmo gate, sem distinção entre "aprovado pra avançar" e "publicado"
 - Sem integração de publish (ex: postar no Notion automaticamente após aprovar)
 
 Fase 2 entra se uso real mostrar dor.

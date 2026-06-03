@@ -207,9 +207,9 @@ Matemática básica: sem essa relação, funil não escala. Validar ou alertar.
 
 ## Atualize Memory ao final
 
-**OBRIGATÓRIO em funis que entraram em produção** (não rascunho — funil real rodando com tráfego):
+**OBRIGATÓRIO em funis que entraram em produção** (não rascunho, funil real rodando com tráfego):
 
-**Memory opt-in** — se `.claude/agent-memory/mos-funnel/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), atualize-o com:
+**Memory opt-in**: se `.claude/agent-memory/mos-funnel/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), atualize-o com:
 
 - Conversion rate por etapa (real vs estimada) por nicho/ticket
 - Lead magnets que validaram-se (qualificação real do lead capturado)

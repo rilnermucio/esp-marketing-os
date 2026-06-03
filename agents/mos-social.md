@@ -102,7 +102,7 @@ Apresente o critique LOGO ABAIXO do conteúdo. Termine com: "Vale ajustar antes 
 
 **OBRIGATÓRIO em posts de impacto** (alta performance, baixa performance surpreendente, post de lançamento):
 
-**Memory opt-in** — se `.claude/agent-memory/mos-social/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), atualize-o com:
+**Memory opt-in**: se `.claude/agent-memory/mos-social/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), atualize-o com:
 
 - Hooks que funcionaram melhor por nicho/plataforma
 - Hashtags com performance comprovada (vs estimadas)

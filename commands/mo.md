@@ -11,16 +11,16 @@ Atalho universal para quando o usuário sabe **o que precisa** mas não sabe **q
 2. Sugere o command especializado equivalente (`/criar-post`, `/campanha`, etc.), OU
 3. Pergunta clarificações ANTES de dispatchar quando o briefing é ambíguo demais.
 
-Não duplica lógica do `skills/marketing-os/SKILL.md` — usa o Mapa de Dispatch oficial daquele arquivo como fonte de verdade.
+Não duplica lógica do `skills/marketing-os/SKILL.md`: usa o Mapa de Dispatch oficial daquele arquivo como fonte de verdade.
 
 ## Quando usar este command
 
-- Você não sabe qual `/criar-X` cabe ("preciso de conteúdo pro lançamento" — `/criar-post`? `/campanha`? `/criar-infoproduto`?)
+- Você não sabe qual `/criar-X` cabe ("preciso de conteúdo pro lançamento", `/criar-post`? `/campanha`? `/criar-infoproduto`?)
 - Briefing toca em mais de uma área ("artigo + post promo + email")
 - Você só quer descrever o problema e deixar o sistema decidir o melhor workflow
 - Quer descobrir quais workflows existem antes de comprometer com um command específico
 
-Para briefings claros e únicos (`"cria um post Instagram sobre X"`), invoque `/criar-post` direto — vai direto ao ponto sem a camada de roteamento.
+Para briefings claros e únicos (`"cria um post Instagram sobre X"`), invoque `/criar-post` direto, vai direto ao ponto sem a camada de roteamento.
 
 ## Protocolo de execução (você, o orquestrador)
 
@@ -35,7 +35,7 @@ O usuário forneceu texto livre. Identifique:
 
 ### Passo 2: Decidir a rota
 
-Use a tabela abaixo. Para casos não cobertos, consulte o **Mapa de Dispatch** em `skills/marketing-os/SKILL.md` (seção "Mapa de Dispatch") — fonte canônica.
+Use a tabela abaixo. Para casos não cobertos, consulte o **Mapa de Dispatch** em `skills/marketing-os/SKILL.md` (seção "Mapa de Dispatch"), fonte canônica.
 
 #### Tabela de roteamento rápido
 
@@ -82,7 +82,7 @@ Briefing recebido
   +-- Briefing amplo / multi-canal / lançamento / campanha?
   |     -> Modo "workflow": rotear pra /campanha <preset> ou pro workflow
   |        composto certo (#5 página BOFU, #6 webinar, #7 infoproduto,
-  |        #8 carrossel, #9 VSL, #10 análise concorrente — ver SKILL.md)
+  |        #8 carrossel, #9 VSL, #10 análise concorrente, ver SKILL.md)
   |
   +-- Briefing ambíguo (faltam dados-chave: nicho, avatar, ticket, plataforma)?
         -> Modo "clarificar": faça as 5 perguntas-chave do SKILL.md
@@ -104,7 +104,7 @@ Se preferir A, dispatcho o mos-social com o briefing pronto. Se faltar algo
 (nicho, avatar, tom), eu pergunto antes.
 ```
 
-Espere a escolha do usuário. Não dispatche sem confirmação quando o command equivalente existe — o usuário pode preferir aprender o atalho.
+Espere a escolha do usuário. Não dispatche sem confirmação quando o command equivalente existe, o usuário pode preferir aprender o atalho.
 
 ### Passo 5: Modo "dispatch direto" (sem command equivalente OR usuário pediu pra rodar)
 
@@ -118,11 +118,11 @@ Agent(subagent_type: "mos-X", prompt: "[contexto extraído do briefing]. Conside
 
 Pergunte exatamente as **5 perguntas-chave** do SKILL.md (numeradas na mesma resposta):
 
-1. **Nicho** — qual área? (saúde, finanças, tech, educação, etc.)
-2. **Avatar** — quem é o público? (cargo/profissão, faixa de renda, dor principal)
-3. **Ticket** — preço do produto? (gratuito, low/mid/high-ticket)
-4. **Plataforma** — onde vai publicar? (Instagram, LinkedIn, email, página web, etc.)
-5. **Urgência** — publicar hoje, semana, planejamento futuro?
+1. **Nicho**: qual área? (saúde, finanças, tech, educação, etc.)
+2. **Avatar**: quem é o público? (cargo/profissão, faixa de renda, dor principal)
+3. **Ticket**: preço do produto? (gratuito, low/mid/high-ticket)
+4. **Plataforma**: onde vai publicar? (Instagram, LinkedIn, email, página web, etc.)
+5. **Urgência**: publicar hoje, semana, planejamento futuro?
 
 Pule as que já vieram explícitas no briefing OU já estão em memory do cliente (`.claude/agent-memory/mos-*/`). NÃO chute respostas.
 
@@ -154,7 +154,7 @@ invocar o command direto?
 Se rodar agora, dispatcho mos-social com:
 - Plataforma: Instagram
 - Tema: produtividade pra devs
-- Goal: engagement (default — me corrige se for tráfego/conversão)
+- Goal: engagement (default, me corrige se for tráfego/conversão)
 - Tom: técnico-prático
 
 Confirma?
@@ -167,16 +167,16 @@ Usuário: /mo vou lançar um curso de Python pra iniciantes em 30 dias,
 preciso de tudo
 
 Você responde:
-Isso é caso clássico de lançamento — recomendo **/campanha lancamento**
+Isso é caso clássico de lançamento, recomendo **/campanha lancamento**
 (preset que dispatcha mos-research + mos-launch + mos-funnel em paralelo,
 depois copy + storytelling + social + email, depois ads + design + analytics).
 
 Antes de rodar, preciso confirmar:
-1. Avatar — devs juniores? estudantes? profissionais migrando de área?
-2. Ticket — quanto custa o curso? (define modelo de lançamento)
+1. Avatar, devs juniores? estudantes? profissionais migrando de área?
+2. Ticket, quanto custa o curso? (define modelo de lançamento)
 3. Lista existente? Tamanho? (define se é PLF / semente / relâmpago)
-4. Plataforma principal de aquecimento — Instagram, YouTube, email?
-5. Budget pra ads — tem? quanto?
+4. Plataforma principal de aquecimento, Instagram, YouTube, email?
+5. Budget pra ads, tem? quanto?
 
 Com isso, rodo /campanha lancamento --produto="Curso Python iniciantes"
 --ticket=[X] --clone=[brunson|hormozi conforme estilo]
@@ -205,11 +205,11 @@ Usuário: /mo preciso melhorar meu marketing
 Você responde (modo clarificar):
 Briefing amplo demais pra rotear bem. Antes de chutar, me ajuda com:
 
-1. **Nicho** — qual área? (saúde, finanças, tech, educação, etc.)
-2. **Avatar** — quem é o público alvo?
-3. **Ticket** — qual o preço do produto/serviço principal?
-4. **Plataforma** — onde já está ativo / quer estar?
-5. **Urgência** — peça pontual ou planejamento mensal/lançamento?
+1. **Nicho**: qual área? (saúde, finanças, tech, educação, etc.)
+2. **Avatar**: quem é o público alvo?
+3. **Ticket**: qual o preço do produto/serviço principal?
+4. **Plataforma**: onde já está ativo / quer estar?
+5. **Urgência**: peça pontual ou planejamento mensal/lançamento?
 
 Pode responder em texto corrido, eu extraio. Com isso eu roteio pro
 workflow certo (post, sequência, campanha completa, etc.).
@@ -231,7 +231,7 @@ estágios; /criar-landing-page foca BOFU.
 
 ## Por que existe esse command
 
-Tem 25 commands específicos (`/criar-X`). Pra usuários novos é fricção descobrir o certo. Pra casos ambíguos ("conteúdo pro lançamento" — qual command?) o sistema fica engessado. `/mo` resolve com:
+Tem 25 commands específicos (`/criar-X`). Pra usuários novos é fricção descobrir o certo. Pra casos ambíguos ("conteúdo pro lançamento", qual command?) o sistema fica engessado. `/mo` resolve com:
 
 - **Single entry point**: 1 command que aceita qualquer briefing de marketing
 - **Discoverability**: usuário não precisa decorar 25 nomes
@@ -309,18 +309,18 @@ Antes de rodar, confirme:
 ```markdown
 ## Antes de rotear, preciso de:
 
-1. **Nicho** — qual área?
-2. **Avatar** — quem é o público?
-3. **Ticket** — preço do produto?
-4. **Plataforma** — onde vai publicar?
-5. **Urgência** — pontual / mensal / lançamento?
+1. **Nicho**: qual área?
+2. **Avatar**: quem é o público?
+3. **Ticket**: preço do produto?
+4. **Plataforma**: onde vai publicar?
+5. **Urgência**: pontual / mensal / lançamento?
 
 Pode responder em texto corrido. Pulo as que já vieram no briefing inicial.
 ```
 
 ## Observações
 
-- **Nunca duplique** lógica de Mapa de Dispatch aqui — sempre referencie `skills/marketing-os/SKILL.md`
+- **Nunca duplique** lógica de Mapa de Dispatch aqui, sempre referencie `skills/marketing-os/SKILL.md`
 - **Prefira sugerir command** sobre dispatchar direto quando o command existe (efeito colateral positivo: usuário aprende o atalho)
 - **Clarifique antes de dispatchar** quando faltam dados-chave (5 perguntas), nunca chute
 - **Para campanhas/lançamentos**, sempre roteie pra `/campanha <preset>` (presets já têm cronograma, KPIs, checklist)

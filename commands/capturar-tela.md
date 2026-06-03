@@ -57,7 +57,7 @@ Intenção do usuário                          → Dispatch
 
 "compara com concorrentes"                   → roteia pra /analisar-concorrencia (mencionar)
 
-(sem pedido de análise — só captura)         → Pular dispatch, entregar screenshot puro
+(sem pedido de análise, só captura)         → Pular dispatch, entregar screenshot puro
 ```
 
 ## Output

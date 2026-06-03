@@ -65,7 +65,7 @@ Apresente o critique LOGO ABAIXO da identidade. Termine com: "Vale repensar ante
 
 **OBRIGATÓRIO em decisões de brand de impacto** (definição inicial, rebranding, mudança de tom):
 
-**Memory opt-in** — se `.claude/agent-memory/mos-brand/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), atualize-o com:
+**Memory opt-in**: se `.claude/agent-memory/mos-brand/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), atualize-o com:
 
 - Arquétipos identificados nos projetos do usuário (e por que cada)
 - Voice patterns que ressoaram com a audiência

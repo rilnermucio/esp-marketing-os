@@ -49,13 +49,13 @@ Plataforma: [Instagram | LinkedIn] | Tipo: [tipo] | Slides: [N]
 
 ### Conteúdo dos Slides (de mos-copy)
 
-**Slide 1 (Capa)** — Hook
+**Slide 1 (Capa)**: Hook
 [texto]
 
-**Slide 2-N** — Body
+**Slide 2-N**: Body
 [texto de cada slide]
 
-**Slide [Final]** — CTA
+**Slide [Final]**: CTA
 [texto + ação]
 
 ### Direção Visual (de mos-design)

@@ -47,7 +47,7 @@ SEMPRE (Documentação): log de experimentos + aprendizados (mesmo em casos nega
 
 ## Frameworks
 
-- ICE Score — Sean Ellis
+- ICE Score, Sean Ellis
 - Growth Loop
 - Viral Coefficient
 - AARRR Metrics (Pirate Metrics)

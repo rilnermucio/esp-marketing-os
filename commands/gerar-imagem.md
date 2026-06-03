@@ -22,7 +22,7 @@ Cria prompt otimizado para geração de imagem por IA, despachando o subagent es
 Agent(subagent_type: "mos-ai-tools", prompt: "Gere prompt otimizado para [tool] do subject: [subject]. Purpose: [purpose]. Style: [style]. Aspect ratio: [ar]. Mood: [mood]. Entregue: 1 prompt principal completo (com parâmetros tool-specific tipo --ar/--v/--s pra Midjourney quando aplicável), 3 variações (ângulo/estilo/mood diferentes), negative prompt quando aplicável, e 3-5 dicas tool-specific pra extrair melhor resultado. Estruture em markdown.")
 ```
 
-`mos-ai-tools` não tem memory project — passe todo o contexto no prompt.
+`mos-ai-tools` não tem memory project, passe todo o contexto no prompt.
 
 ## Consolidação
 
@@ -37,13 +37,13 @@ Subject: [subject] | Purpose: [purpose] | Aspect ratio: [ar] | Style: [style]
 [Prompt completo, com parâmetros se aplicável]
 
 ### Variações (3)
-**Variação A** — [ângulo/perspectiva diferente]
+**Variação A**: [ângulo/perspectiva diferente]
 [Prompt]
 
-**Variação B** — [estilo diferente]
+**Variação B**: [estilo diferente]
 [Prompt]
 
-**Variação C** — [mood diferente]
+**Variação C**: [mood diferente]
 [Prompt]
 
 ### Negative Prompt (se aplicável)

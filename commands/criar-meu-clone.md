@@ -42,31 +42,31 @@ Antes de dispatchar:
 ```
 Agent(subagent_type: "mos-copy", prompt: "Voice extraction de amostras LOCAIS do usuario (nao expert externo, nao usar WebSearch). Slug: {slug}. Contexto: [contexto fornecido].
 
-PASSO 1 — Coleta e limpeza:
+PASSO 1, Coleta e limpeza:
 - Carregar todas as amostras (Read pra arquivos, WebFetch pra URLs publicas, parsear texto colado)
 - Para cada amostra: remover headers/metadata, manter apenas texto produzido pelo usuario, identificar tipo (post curto/longo, email, artigo, thread)
 - Reportar inventario: 'Coletei N amostras: X posts, Y emails, Z artigos'
 
-PASSO 2 — Analise mecanica via script:
+PASSO 2, Analise mecanica via script:
 Rode via Bash: `python3 scripts/voice_extractor.py --input <pasta-ou-lista-de-arquivos> --output md --top-words 30 --top-ngrams 20`
 O script entrega top-30 palavras distintivas (com freq + presence + score), top-20 n-grams, distribuicao % de tamanho de frase, padroes de pontuacao.
 
-PASSO 3 — Interpretacao qualitativa em cima do output do script:
+PASSO 3, Interpretacao qualitativa em cima do output do script:
 - Vocabulario tipico: das 30 palavras, classificar como 'signature' (distintiva, raramente usada por outros), 'topical' (sobre o nicho) ou 'generica' (descartar). Manter 15-20 signature. Marcar palavras que o usuario NUNCA escreve (comparando com baseline mental de PT-BR comum).
 - Cadencia e ritmo: identificar padrao dominante (frases curtas predominam / alternancia balanceada / frases longas e fluidas / variacao deliberada). Cruzar com pontuacao (dois-pontos = setup-payoff, parenteses = nuance, ? = pergunta retorica, ... = suspensivo).
 - Estrutura narrativa por tipo de conteudo: como abre? como fecha? tem CTA? estrutura geral.
 - Anti-padroes: cliches que aparecem em <5% das amostras (ou nunca), tons que o usuario rejeita implicitamente.
 - Persona e posicionamento: nichos tratados, objecoes, prova social usada (numeros proprios? cases? dados externos?), tom (autoridade/parceiro/mentor/contrarian).
 
-PASSO 4 — Gerar os 4 arquivos em assets/clones/{slug}/ via Write:
+PASSO 4, Gerar os 4 arquivos em assets/clones/{slug}/ via Write:
 
-profile.md — Identidade (slug, tipo: voice clone proprio nao expert externo, nicho primario detectado, posicionamento detectado), Contexto (do user), Sumario (2-3 paragrafos com base na analise), Tipos de conteudo dominantes, Audiencia detectada.
+profile.md, Identidade (slug, tipo: voice clone proprio nao expert externo, nicho primario detectado, posicionamento detectado), Contexto (do user), Sumario (2-3 paragrafos com base na analise), Tipos de conteudo dominantes, Audiencia detectada.
 
-voice.md (PRIORIDADE — agent vai ler primeiro quando gerar copy estilo {slug}) — Tom Geral, Vocabulario Tipico (palavras distintivas + vocabulario banido), Cadencia (distribuicao + padrao dominante), Estrutura Tipica (aberturas com 5 exemplos das amostras + fechamentos com 5 exemplos + CTAs caracteristicos), Anti-padroes (tabela 'Item | Por que nao usa'), Heuristicas de fidelidade (3-5 regras concretas pra clonar a voz).
+voice.md (PRIORIDADE, agent vai ler primeiro quando gerar copy estilo {slug}), Tom Geral, Vocabulario Tipico (palavras distintivas + vocabulario banido), Cadencia (distribuicao + padrao dominante), Estrutura Tipica (aberturas com 5 exemplos das amostras + fechamentos com 5 exemplos + CTAs caracteristicos), Anti-padroes (tabela 'Item | Por que nao usa'), Heuristicas de fidelidade (3-5 regras concretas pra clonar a voz).
 
-frameworks.md — Frameworks proprietarios identificados nas amostras (se houver), Frameworks classicos detectados (AIDA / PAS / Hook-Story-Offer), Estruturas de conteudo dominantes por formato (template extraido).
+frameworks.md, Frameworks proprietarios identificados nas amostras (se houver), Frameworks classicos detectados (AIDA / PAS / Hook-Story-Offer), Estruturas de conteudo dominantes por formato (template extraido).
 
-examples.md — Exemplos diretos (5-10 das amostras originais com anotacao do que torna autenticamente 'voz dele'), Exemplos sinteticos (5-10 novos gerados imitando o estilo, com anotacao do que esta capturando), Comparacao 'antes vs depois' (copy generica reescrita no estilo {slug}).
+examples.md, Exemplos diretos (5-10 das amostras originais com anotacao do que torna autenticamente 'voz dele'), Exemplos sinteticos (5-10 novos gerados imitando o estilo, com anotacao do que esta capturando), Comparacao 'antes vs depois' (copy generica reescrita no estilo {slug}).
 
 REGRAS:
 - Tudo em PT-BR
@@ -79,7 +79,7 @@ Considere memory existente do cliente neste projeto. Reportar ao final: total de
 )
 ```
 
-`mos-copy` tem memory project — cita explicitamente.
+`mos-copy` tem memory project, cita explicitamente.
 
 ## Phase pos-dispatch (orquestrador inline)
 
@@ -124,7 +124,7 @@ Voice clones podem ser **atualizados** com mais amostras:
 /criar-meu-clone {slug} --update
 ```
 
-(adicionar novas amostras ao clone existente, sem sobrescrever — o agent faz merge no voice.md/examples.md).
+(adicionar novas amostras ao clone existente, sem sobrescrever, o agent faz merge no voice.md/examples.md).
 
 ## Quality Gates (antes de entregar)
 
@@ -133,7 +133,7 @@ Aplicar gates globais do `skills/marketing-os/SKILL.md`:
 - Sinalizar amostras de baixa qualidade (texto < 50 caracteres, repetidos, off-topic)
 - Voice extraido deve ser distintivo: vocabulario tipico generico = refazer com mais amostras
 - Cada um dos 4 arquivos com > 200 palavras (caso contrario sem profundidade)
-- Tudo em PT-BR com acentuacao correta (mesmo este command esta sem acentos por seguranca de encoding — o agent gera com acentuacao plena)
+- Tudo em PT-BR com acentuacao correta (mesmo este command esta sem acentos por seguranca de encoding, o agent gera com acentuacao plena)
 
 ## Por que isso importa
 

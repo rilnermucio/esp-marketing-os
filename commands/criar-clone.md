@@ -1,5 +1,5 @@
 ---
-description: Create a complete expert clone (profile/voice/frameworks/examples) via dispatch — mos-research busca a base factual, mos-copy gera os 4 arquivos no padrão dos clones existentes em assets/clones/.
+description: Create a complete expert clone (profile/voice/frameworks/examples) via dispatch, mos-research busca a base factual, mos-copy gera os 4 arquivos no padrão dos clones existentes em assets/clones/.
 argument-hint: "<expert-name> [specialty]"
 ---
 
@@ -25,28 +25,28 @@ Antes de dispatchar:
 2. Verificar que `assets/clones/clone-manifest.yaml` existe.
 3. Listar 2-3 clones existentes (`assets/clones/hormozi/`, etc.) como referência de padrão.
 
-## Phase 1: Research (Dispatch — mos-research)
+## Phase 1: Research (Dispatch, mos-research)
 
 ```
 Agent(subagent_type: "mos-research", prompt: "Pesquisa profunda sobre o expert [Nome completo]. Use WebSearch em múltiplas queries: '\"[nome]\" filosofia frameworks methodology', '\"[nome]\" writing style voice', '\"[nome]\" books career biography', '\"[nome]\" content examples copy', '\"[nome]\" frameworks proprietários', '\"[nome]\" famous quotes phrases'.
 
 Retorne brief estruturado nas 7 categorias canônicas dos clones:
-1. Identidade — nome, empresa(s), papel atual, livros, reconhecimento público (com números quando possível)
-2. Filosofia — central + 3-5 princípios fundamentais com exemplos concretos
-3. Trajetória — narrativa de carreira + marcos com datas
-4. Audiência típica — 4-6 segmentos
-5. Voz — tom, padrões de linguagem, vocabulário típico, palavras que ele NUNCA usa, tom por contexto (sales/landing/ad/video/post)
-6. Frameworks — 4-6 frameworks proprietários (apenas REAIS, não inventar) com componentes e como aplicar
-7. Exemplos de estilo — padrões de copy de venda, ad, email, post LinkedIn
+1. Identidade, nome, empresa(s), papel atual, livros, reconhecimento público (com números quando possível)
+2. Filosofia, central + 3-5 princípios fundamentais com exemplos concretos
+3. Trajetória, narrativa de carreira + marcos com datas
+4. Audiência típica, 4-6 segmentos
+5. Voz, tom, padrões de linguagem, vocabulário típico, palavras que ele NUNCA usa, tom por contexto (sales/landing/ad/video/post)
+6. Frameworks, 4-6 frameworks proprietários (apenas REAIS, não inventar) com componentes e como aplicar
+7. Exemplos de estilo, padrões de copy de venda, ad, email, post LinkedIn
 
 REGRA CRÍTICA: apenas informação verificada. Não inventar frameworks, quotes ou conquistas. Marcar incertezas como [VERIFICAR]. Considere memory existente do cliente neste projeto."
 )
   → Aguarde brief de research
 ```
 
-`mos-research` tem memory project — cita explicitamente.
+`mos-research` tem memory project, cita explicitamente.
 
-## Phase 2: Geração dos 4 arquivos (Dispatch — mos-copy)
+## Phase 2: Geração dos 4 arquivos (Dispatch, mos-copy)
 
 Com o brief em mãos, dispatcha `mos-copy` para gerar os 4 arquivos seguindo o padrão dos clones existentes.
 
@@ -55,18 +55,18 @@ Agent(subagent_type: "mos-copy", prompt: "Gere os 4 arquivos canônicos do clone
 
 Padrão de referência: clones já existentes em assets/clones/ (ex: hormozi/, halbert/, hopkins/). Você já conhece o schema dos 4 arquivos via knowledge base do agent. Resumo dos targets:
 
-1. profile.md (~100 linhas) — Identidade, Filosofia Central + Princípios Fundamentais (5), Trajetória + Marcos, Audiência Típica, Estilo de Comunicação (tabela), Diferenciação (5), Quando Usar Este Clone (tabela com Excelente/Muito bom/Não recomendado), Tópicos de Domínio (8)
+1. profile.md (~100 linhas), Identidade, Filosofia Central + Princípios Fundamentais (5), Trajetória + Marcos, Audiência Típica, Estilo de Comunicação (tabela), Diferenciação (5), Quando Usar Este Clone (tabela com Excelente/Muito bom/Não recomendado), Tópicos de Domínio (8)
 
-2. voice.md (~190 linhas) — Visão Geral, 5 Características Fundamentais (cada uma com 'Não faça / Faça' OU exemplos concretos), Estrutura Narrativa (padrão principal + secundário), Vocabulário Típico (tabela de categorias + tabela de palavras NUNCA usadas com motivo), Tom por Tipo de Conteúdo (sales/landing/ad/video/post), Regras de Formatação (6), Exemplos de Adaptação de Tom (formal vs estilo dele, motivacional vazio vs estilo dele), Checklist de Voz (8 items)
+2. voice.md (~190 linhas), Visão Geral, 5 Características Fundamentais (cada uma com 'Não faça / Faça' OU exemplos concretos), Estrutura Narrativa (padrão principal + secundário), Vocabulário Típico (tabela de categorias + tabela de palavras NUNCA usadas com motivo), Tom por Tipo de Conteúdo (sales/landing/ad/video/post), Regras de Formatação (6), Exemplos de Adaptação de Tom (formal vs estilo dele, motivacional vazio vs estilo dele), Checklist de Voz (8 items)
 
-3. frameworks.md (~200 linhas) — 4-6 frameworks REAIS do expert. Cada um: descrição (1-2 frases), Componentes (tabela), Aplicação na Copy (passo a passo), exemplos. Tabela-resumo no final ('Use quando...'). NÃO INVENTAR frameworks.
+3. frameworks.md (~200 linhas), 4-6 frameworks REAIS do expert. Cada um: descrição (1-2 frases), Componentes (tabela), Aplicação na Copy (passo a passo), exemplos. Tabela-resumo no final ('Use quando...'). NÃO INVENTAR frameworks.
 
-4. examples.md (~200 linhas) — 4 exemplos completos (não snippets) na voz autêntica do expert: Copy de Vendas, Anúncio para Redes Sociais, Email de Vendas (com subject + body + P.S.), Post LinkedIn. Cada exemplo seguido de tabela 'Análise: Elemento | Técnica Aplicada'. Vocabulário e frameworks devem ser os mesmos do voice.md/frameworks.md.
+4. examples.md (~200 linhas), 4 exemplos completos (não snippets) na voz autêntica do expert: Copy de Vendas, Anúncio para Redes Sociais, Email de Vendas (com subject + body + P.S.), Post LinkedIn. Cada exemplo seguido de tabela 'Análise: Elemento | Técnica Aplicada'. Vocabulário e frameworks devem ser os mesmos do voice.md/frameworks.md.
 
 REGRAS:
 - Tudo em PT-BR com acentuação correta
 - Aplicar quality gates globais (sem '—', sem 'brutal', sem CAPS, sem aspas em falas, máx 1-2 emojis)
-- Apenas info do research — se algo está [VERIFICAR], suavizar ou omitir
+- Apenas info do research, se algo está [VERIFICAR], suavizar ou omitir
 - Salvar via Write em: assets/clones/{slug}/profile.md, voice.md, frameworks.md, examples.md
 - Total alvo: ~700 linhas nos 4 arquivos somados
 
@@ -75,7 +75,7 @@ Considere memory existente do cliente neste projeto."
   → Aguarde criação dos 4 arquivos
 ```
 
-`mos-copy` tem memory project — cita explicitamente.
+`mos-copy` tem memory project, cita explicitamente.
 
 ## Phase 3: Update do manifest (orquestrador inline)
 
@@ -142,4 +142,4 @@ Pergunte se quer:
 
 ## Por que esse workflow estruturado (e não dispatch simples)
 
-Clone de expert é peça de longa duração que vai ser consultada por anos pelo `mos-copy`. Pular a fase de research = clone com info inventada (falha em compliance e em qualidade). Pular a separação research → geração = `mos-copy` chuta detalhes biográficos e mistura mestres. Os 4 arquivos têm schemas distintos que o `mos-copy` já conhece via Tier 2 — por isso não precisam de templates inline aqui.
+Clone de expert é peça de longa duração que vai ser consultada por anos pelo `mos-copy`. Pular a fase de research = clone com info inventada (falha em compliance e em qualidade). Pular a separação research → geração = `mos-copy` chuta detalhes biográficos e mistura mestres. Os 4 arquivos têm schemas distintos que o `mos-copy` já conhece via Tier 2, por isso não precisam de templates inline aqui.

@@ -88,7 +88,7 @@ Apresente o critique LOGO ABAIXO da campanha. Termine com: "Vale ajustar antes d
 
 **OBRIGATÓRIO em campaigns de impacto** (lançamento, account novo, budget mensal > R$5k):
 
-**Memory opt-in** — se `.claude/agent-memory/mos-ads/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), atualize-o com:
+**Memory opt-in**: se `.claude/agent-memory/mos-ads/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), atualize-o com:
 
 - Benchmarks CPA/ROAS observados por nicho/cliente (vs estimativas)
 - Públicos que performaram (por nicho, lookalike base, source)

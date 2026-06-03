@@ -233,7 +233,7 @@ python scripts/apify_serp.py --query "<keyword>" --max-results 10
 
 Output: Markdown summary direto no stdout (Top resultados + People Also Ask + Related searches), JSON completo salvo no diretório local configurado pelo script (ver `docs/APIFY-INTEGRATION.md`). Use `--dry-run` antes pra ver custo estimado (~$0.005 por resultado).
 
-Sem `APIFY_TOKEN`, o script sai silenciosamente — siga com `WebSearch` normal. Documentação completa: `docs/APIFY-INTEGRATION.md`.
+Sem `APIFY_TOKEN`, o script sai silenciosamente, siga com `WebSearch` normal. Documentação completa: `docs/APIFY-INTEGRATION.md`.
 
 ## Referência à Base de Conhecimento
 

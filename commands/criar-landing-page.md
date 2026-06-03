@@ -1,5 +1,5 @@
 ---
-description: Create a complete landing page (BOFU) — hero, benefits, social proof, offer, CTA. Dispatches mos-funnel + mos-copy + mos-design in parallel (workflow #5), with optional handoff to frontend-design for HTML/CSS build.
+description: Create a complete landing page (BOFU), hero, benefits, social proof, offer, CTA. Dispatches mos-funnel + mos-copy + mos-design in parallel (workflow #5), with optional handoff to frontend-design for HTML/CSS build.
 argument-hint: "<product/offer and avatar, e.g., 'mentoria médica high-ticket pra Dr. Victor'>"
 ---
 
@@ -14,11 +14,11 @@ Cria página de aplicação / landing page / página de vendas conforme **workfl
 1. **Produto/Oferta** (obrigatório): nome, ticket, formato (curso/mentoria/serviço)
 2. **Avatar** (obrigatório): cargo, faixa de renda, dor principal
 3. **Tipo de página** (obrigatório): aplicação (formulário + call) | vendas direta (checkout) | captura (lead magnet)
-4. **Nicho** (obrigatório): saúde, finanças, tech, etc. — define disclaimers regulatórios
+4. **Nicho** (obrigatório): saúde, finanças, tech, etc., define disclaimers regulatórios
 5. **Copy fornecida** (opcional): se houver PDF/DOCX existente, anexar pra revisão
 6. **Buildar HTML/CSS?** (opcional): sim = handoff a `frontend-design` na Fase 2; não = só specs
 
-## Dispatch — Fase 1 (paralelo, single message)
+## Dispatch, Fase 1 (paralelo, single message)
 
 ```
 - Agent(subagent_type: "mos-funnel", prompt: "Estruturar página BOFU para [produto/avatar/ticket]: CTA placement, escassez, anti-avatar, FAQ, prova social, stack value, hierarquia de seções. Tipo: [aplicação/vendas/captura]. Considere memory existente do cliente neste projeto.")
@@ -70,4 +70,4 @@ Aplicar gates globais do `skills/marketing-os/SKILL.md`:
 - Sem `mos-funnel`: estrutura sai genérica sem padrões BOFU (escassez, anti-avatar, stack value)
 - Sem `mos-copy`: copy não passa pelos quality gates, oportunidade de melhoria perdida
 - Sem `mos-design`: visual sai com cara de template genérico, não de nicho premium
-- `frontend-design` é excelente em build técnico, mas não conhece padrões de conversão — é executor da Fase 2, não decisor da Fase 1
+- `frontend-design` é excelente em build técnico, mas não conhece padrões de conversão, é executor da Fase 2, não decisor da Fase 1

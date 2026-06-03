@@ -61,9 +61,9 @@ argument-hint: "<produto> [--preco=...] [--clone=brunson|suby|hormozi] [--canal=
 
 ## Frameworks aplicados
 
-- PLF (Product Launch Formula) — Jeff Walker
-- Seed-and-Launch — Russell Brunson
-- Value Stack — Alex Hormozi
+- PLF (Product Launch Formula), Jeff Walker
+- Seed-and-Launch, Russell Brunson
+- Value Stack, Alex Hormozi
 
 ### Checklist de Lançamento
 
@@ -76,7 +76,7 @@ PRÉ-LANÇAMENTO (2 semanas antes):
 [ ] Sequência de email de aquecimento (Fase 2: mos-email)
 [ ] Conteúdo de aquecimento social (Fase 2: mos-social)
 [ ] Assets visuais e identidade (Fase 3: mos-design)
-[ ] Setup de tracking — pixel, UTMs, conversões (Fase 3: mos-analytics)
+[ ] Setup de tracking, pixel, UTMs, conversões (Fase 3: mos-analytics)
 
 LANÇAMENTO (dia D):
 [ ] Email de abertura

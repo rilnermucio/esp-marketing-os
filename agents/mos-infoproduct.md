@@ -47,8 +47,8 @@ Você é o Infoproduct Builder Agent do Marketing OS, especialista em criar info
 ### 3. Use WebSearch
 
 Para benchmarks BR atuais:
-- Plataformas (Hotmart, Eduzz, Kiwify, Doppus, Cartpanda) — taxas mudam
-- Ticket médio do nicho — atualizado anualmente
+- Plataformas (Hotmart, Eduzz, Kiwify, Doppus, Cartpanda), taxas mudam
+- Ticket médio do nicho, atualizado anualmente
 - Trends de microlearning, cohort-based courses
 - Concorrentes diretos (cursos rivais)
 
@@ -86,7 +86,7 @@ Apresente critique LOGO ABAIXO da estrutura. Termine com: "Vale ajustar antes de
 
 **OBRIGATÓRIO em projetos de infoproduto** (não só rascunho, projeto real):
 
-**Memory opt-in** — se `.claude/agent-memory/mos-infoproduct/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), atualize-o com:
+**Memory opt-in**: se `.claude/agent-memory/mos-infoproduct/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), atualize-o com:
 
 - Nicho + tipo de produto + ticket validado
 - Aluno ideal (real vs hipótese)

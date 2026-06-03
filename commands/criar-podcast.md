@@ -33,7 +33,7 @@ Briefing recebido
         └── Dispatch SIMPLES: mos-audio (com referência ao formato da série)
 ```
 
-`mos-audio` não tem memory persistente — passe todos os inputs no prompt.
+`mos-audio` não tem memory persistente, passe todos os inputs no prompt.
 
 ## Dispatch Simples (solo, co-hosted, storytelling, panel)
 
@@ -43,7 +43,7 @@ Agent(subagent_type: "mos-audio", prompt: "Roteiro completo de episódio [solo |
 
 ## Dispatch Sequencial (interview)
 
-### Passo 1 — Research do guest
+### Passo 1, Research do guest
 
 ```
 Agent(subagent_type: "mos-research", prompt: "Research profundo sobre guest [nome do guest] para entrevista de podcast sobre [tópico]. Considere memory existente do projeto. Entregue: bio e credenciais verificadas, trajetória profissional (origem, momentos-chave, pivôs), trabalhos/produtos atuais, principais ideias e teses defendidas, histórias e cases que o guest costuma contar, posições polêmicas ou contrarian, gaps no que ele já abordou em outras entrevistas (ângulos novos), 3-5 stats/estudos relevantes do tópico, conexão com a audiência [audiência]. Fact-check tudo (CONFIRMADO/PROVÁVEL/NÃO USAR).")
@@ -51,7 +51,7 @@ Agent(subagent_type: "mos-research", prompt: "Research profundo sobre guest [nom
 → Aguarde research brief antes do passo 2.
 ```
 
-### Passo 2 — Script da entrevista
+### Passo 2, Script da entrevista
 
 ```
 Agent(subagent_type: "mos-audio", prompt: "Roteiro completo de entrevista para podcast sobre [tópico]. Show: [show name]. Duração-alvo: [N] minutos. Guest: [nome]. Use este research como base [colar research brief do passo 1]. Entregue: estrutura por timestamps (pre-interview com hook + show intro + apresentação do guest + setup, opening questions 5-10min com background/journey, core questions 20-40min com 3-5 deep-dives + follow-ups + storytelling prompts + perguntas contrarian baseadas em pontos polêmicos do research, rapid-fire 5-10min, closing questions com best advice + recursos + onde encontrar guest, outro com thanks + insights + CTA), 3 opções de título de episódio, 3 social media clips (timestamp + hook + quote), show notes completas (descrição SEO, key takeaways, timestamps, resources do guest, CONNECT WITH GUEST com handles, sponsors), copy promocional (caption Instagram + email teaser + Twitter thread). Aplicar quality gates globais (sem travessão, sem 'brutal', sem aspas em falas — escreva direto, PT-BR correto).")
@@ -62,7 +62,7 @@ Agent(subagent_type: "mos-audio", prompt: "Roteiro completo de entrevista para p
 Após os agents retornarem, entregue:
 
 ```markdown
-## Podcast: [Show] — Episódio: [Título]
+## Podcast: [Show]: Episódio: [Título]
 
 Formato: [solo | interview | co-hosted | storytelling | panel] | Duração-alvo: [N] min | Tópico: [tópico]
 
@@ -83,7 +83,7 @@ Formato: [solo | interview | co-hosted | storytelling | panel] | Duração-alvo:
 ### Script (timestamps)
 
 #### Intro [0:00 - X:XX]
-[Hook + show intro + episode setup, sem aspas — falas escritas direto]
+[Hook + show intro + episode setup, sem aspas, falas escritas direto]
 
 #### Segment 1 / Opening Questions [X:XX - X:XX]
 [Talking points / perguntas com follow-ups]
@@ -91,7 +91,7 @@ Formato: [solo | interview | co-hosted | storytelling | panel] | Duração-alvo:
 #### Segment 2 / Core Questions [X:XX - X:XX]
 [Deep-dives + perguntas contrarian baseadas em research]
 
-#### [Ad Break — se aplicável]
+#### [Ad Break, se aplicável]
 [Roteiro do ad-read]
 
 #### Segment 3 / Rapid-Fire [X:XX - X:XX]
@@ -106,9 +106,9 @@ Formato: [solo | interview | co-hosted | storytelling | panel] | Duração-alvo:
 3. [...]
 
 ### Social Media Clips (3)
-- Clip 1: timestamp [X:XX - X:XX] — hook: [...]
-- Clip 2: timestamp [X:XX - X:XX] — hook: [...]
-- Clip 3: timestamp [X:XX - X:XX] — hook: [...]
+- Clip 1: timestamp [X:XX - X:XX]: hook: [...]
+- Clip 2: timestamp [X:XX - X:XX]: hook: [...]
+- Clip 3: timestamp [X:XX - X:XX]: hook: [...]
 
 ### Show Notes
 - Descrição SEO (150-300 palavras): [...]
@@ -141,4 +141,4 @@ Aplicar gates globais do `skills/marketing-os/SKILL.md`:
 
 ## Por que esse dispatch
 
-Solo/co-hosted/storytelling/panel: `mos-audio` tem knowledge profunda de estrutura de episódio, hook formulas, transições, ad-reads, show notes. Sozinho entrega tudo. Interview é diferente: a qualidade da entrevista mora nas perguntas, e perguntas boas exigem research real do guest (gaps, polêmicas, ângulos novos). Por isso o `mos-research` vai antes — não em paralelo, porque o `mos-audio` precisa do output dele pra construir o questionário.
+Solo/co-hosted/storytelling/panel: `mos-audio` tem knowledge profunda de estrutura de episódio, hook formulas, transições, ad-reads, show notes. Sozinho entrega tudo. Interview é diferente: a qualidade da entrevista mora nas perguntas, e perguntas boas exigem research real do guest (gaps, polêmicas, ângulos novos). Por isso o `mos-research` vai antes, não em paralelo, porque o `mos-audio` precisa do output dele pra construir o questionário.
