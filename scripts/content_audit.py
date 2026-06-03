@@ -57,6 +57,7 @@ def ler_arquivo(caminho: str) -> Tuple[str, str]:
     except FileNotFoundError:
         return None, None
     except Exception as e:
+        print(f"[content_audit] erro lendo arquivo: {e}", file=sys.stderr)
         return None, None
 
 

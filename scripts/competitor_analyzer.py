@@ -43,6 +43,7 @@ def fazer_requisicao(url: str, headers: Optional[dict] = None, timeout: int = 15
         with urllib.request.urlopen(req, timeout=timeout, context=ssl_context) as response:
             return response.read().decode('utf-8')
     except Exception as e:
+        print(f"[competitor_analyzer] fetch falhou: {e}", file=sys.stderr)
         return None
 
 
