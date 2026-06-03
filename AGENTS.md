@@ -8,7 +8,7 @@ This file provides guidance to AI coding agents (Claude Code, Codex CLI, Cursor,
 
 Marketing OS é um **plugin do Claude Code** (`plugin.json` v6.8.0) que distribui 18 subagents nativos especializados em marketing digital, mais 35 slash commands, knowledge bases, voice clones e scripts Python. O conteúdo é majoritariamente PT-BR e otimizado para o mercado brasileiro.
 
-Arquivos manifesto: `plugin.json` (raiz) e `.claude-plugin/marketplace.json` (listagem de marketplace). O entrypoint da skill é `skills/marketing-os/SKILL.md`.
+Arquivos manifesto: `.claude-plugin/plugin.json` e `.claude-plugin/marketplace.json` (listagem de marketplace). O entrypoint da skill é `skills/marketing-os/SKILL.md`.
 
 ## Comandos
 
@@ -28,7 +28,7 @@ python scripts/validate_agents.py --strict   # falha em warnings também
 python3 scripts/init_agent_memory.py            # todos os agents com memory: project
 python3 scripts/init_agent_memory.py mos-copy   # apenas um agent
 
-# CLI unificado das ferramentas (29 scripts)
+# CLI unificado das ferramentas (mos.py expõe um subconjunto dos 48 scripts)
 python scripts/mos.py seo analyze artigo.md "keyword"
 python scripts/mos.py headlines score "Sua headline"
 ```
@@ -89,7 +89,7 @@ Conteúdos de redes sociais (Reels, posts, carrosséis, stories) **devem** inclu
 
 ## Ferramentas Python relevantes
 
-35 scripts em `scripts/` (CLI unificado em `scripts/mos.py`). Os agents Tier 1 com acesso a `Bash` invocam-nos para tarefas determinísticas: `seo_analyzer.py`, `hashtag_generator.py`, `hook_generator.py`, `reels_script_generator.py`, `carousel_structure_generator.py`, `caption_generator.py`, `trend_tracker.py`, `quality_gate.py`, `headline_scorer.py`, `competitor_analyzer.py`, etc.
+48 scripts em `scripts/` (CLI unificado em `scripts/mos.py`). Os agents Tier 1 com acesso a `Bash` invocam-nos para tarefas determinísticas: `seo_analyzer.py`, `hashtag_generator.py`, `hook_generator.py`, `reels_script_generator.py`, `carousel_structure_generator.py`, `caption_generator.py`, `trend_tracker.py`, `quality_gate.py`, `headline_scorer.py`, `competitor_analyzer.py`, etc.
 
 Hook de quality gate: `scripts/hooks/quality_gate_hook.py` é invocado via `PreToolUse` matcher `Write|Edit|MultiEdit` em vários agents Tier 1 (ver frontmatter `hooks` em `agents/mos-*.md`).
 
@@ -97,7 +97,7 @@ Hook de quality gate: `scripts/hooks/quality_gate_hook.py` é invocado via `PreT
 
 ## Voice clones (`assets/clones/`)
 
-35 perfis detalhados (Halbert, Hopkins, Kennedy, Ogilvy, Schwartz, Sugarman, Hormozi, GaryVee, MrBeast, Brunson, Cialdini, Codie Sanchez, Abdaal, Conrado, Joel Jota, etc.). Cada clone tem `profile.md`, `frameworks.md`, `voice.md`, `examples.md`. Usados por `/criar-clone` e referenciados pelo `mos-copy` quando o briefing pede estilo de um copywriter específico.
+34 perfis de copywriters (Halbert, Hopkins, Kennedy, Ogilvy, Schwartz, Sugarman, Hormozi, GaryVee, MrBeast, Brunson, Cialdini, Codie Sanchez, Abdaal, Conrado, Joel Jota, etc.). Cada clone tem `profile.md`, `frameworks.md`, `voice.md`, `examples.md`. Usados por `/criar-clone` e referenciados pelo `mos-copy` quando o briefing pede estilo de um copywriter específico. O diretório `assets/clones/design/` é a exceção: guarda o `design-dna-system.md` (DNA visual usado pelo `mos-design`), não um perfil de voz.
 
 `/criar-meu-clone` é o caso especial: usa amostras locais do usuário em `workspace/` (não copywriters externos).
 

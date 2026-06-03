@@ -1,8 +1,8 @@
 # Marketing OS
 
-> Plugin Claude Code com **18 subagentes especializados** em marketing digital + 32 slash commands + 36 voice clones de copywriters lendários.
+> Plugin Claude Code com **18 subagentes especializados** em marketing digital + 35 slash commands + 34 voice clones de copywriters lendários.
 
-[![Version](https://img.shields.io/badge/version-6.5.0-blue.svg)](./CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-6.8.0-blue.svg)](./CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
 
 ## O que é
