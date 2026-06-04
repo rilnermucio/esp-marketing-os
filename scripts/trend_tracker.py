@@ -24,10 +24,8 @@ from html import unescape
 from typing import Optional
 import ssl
 
-# Configuração para ignorar verificação SSL (algumas APIs)
+# Configuração SSL (verificação de certificado habilitada por padrão)
 ssl_context = ssl.create_default_context()
-ssl_context.check_hostname = False
-ssl_context.verify_mode = ssl.CERT_NONE
 
 
 def fazer_requisicao(

@@ -4,11 +4,14 @@ Módulo de validação de entrada para scripts do Marketing OS.
 Fornece funções reutilizáveis para validar argumentos de linha de comando.
 """
 
+import ipaddress
 import os
 import re
+import socket
 import sys
 from datetime import datetime
 from typing import List, Optional
+from urllib.parse import urlparse
 
 # Plataformas suportadas no Marketing OS
 PLATAFORMAS_VALIDAS = {
@@ -471,6 +474,34 @@ def validar_url(url: str, campo: str = "URL") -> str:
         )
 
     return url
+
+
+def url_aponta_para_rede_interna(url: str) -> bool:
+    """Anti-SSRF: True se o host da URL resolve para um endereço não-público.
+
+    Bloqueia loopback, link-local (inclui 169.254.169.254 de metadata de cloud),
+    ranges privados, reservados, multicast e unspecified. Hosts que não resolvem
+    retornam False (deixa o request falhar naturalmente; não é alvo interno).
+    """
+    host = urlparse(url).hostname
+    if not host:
+        return True
+    try:
+        infos = socket.getaddrinfo(host, None)
+    except socket.gaierror:
+        return False
+    for info in infos:
+        ip = ipaddress.ip_address(info[4][0])
+        if (
+            ip.is_private
+            or ip.is_loopback
+            or ip.is_link_local
+            or ip.is_reserved
+            or ip.is_multicast
+            or ip.is_unspecified
+        ):
+            return True
+    return False
 
 
 # ---------------------------------------------------------------------------

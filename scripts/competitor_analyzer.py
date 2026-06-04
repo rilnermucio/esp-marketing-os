@@ -24,10 +24,8 @@ from typing import Optional, List
 from collections import Counter
 import ssl
 
-# Configuração SSL
+# Configuração SSL (verificação de certificado habilitada por padrão)
 ssl_context = ssl.create_default_context()
-ssl_context.check_hostname = False
-ssl_context.verify_mode = ssl.CERT_NONE
 
 
 def fazer_requisicao(

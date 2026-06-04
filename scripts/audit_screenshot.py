@@ -15,6 +15,8 @@ import sys
 from pathlib import Path
 from urllib.parse import urljoin, urlparse
 
+from validators import url_aponta_para_rede_interna
+
 try:
     from playwright.sync_api import sync_playwright
 except ImportError:  # pragma: no cover – optional dep
@@ -82,6 +84,10 @@ def capture(
     """Capture screenshots. Returns {homepage: Path, internals: list[Path], errors: list}."""
     if not re.match(r"^https?://", url):
         raise ValueError(f"URL inválida: {url!r}")
+    if url_aponta_para_rede_interna(url):
+        raise ValueError(
+            f"URL aponta para rede interna/privada, bloqueada por segurança (anti-SSRF): {url!r}"
+        )
 
     out_dir = Path(output_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
