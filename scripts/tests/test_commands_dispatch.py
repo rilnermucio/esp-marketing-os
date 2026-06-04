@@ -28,6 +28,7 @@ UTILITY_COMMANDS = {
     "publicar-notion.md",  # routes to other /criar-* commands when generation is needed
     "campanha.md",  # index of /campanha-* sub-commands; pure router, no direct dispatch
     "projeto.md",  # workflow orchestrator; dispatch is dynamic per pipeline stage at runtime
+    "datas-sazonais.md",  # data utility (seasonal_calendar_br); shows dates, no agent dispatch
 }
 
 # Regex to extract the agent name from any Agent(subagent_type: "mos-*") call.

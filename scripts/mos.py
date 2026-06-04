@@ -147,6 +147,9 @@ COMMAND_MAP: Dict[str, Dict[str, Tuple[str, str]]] = {
     "report": {
         "weekly": ("weekly_report.py", "Relatório semanal consolidado"),
     },
+    "seasonal": {
+        "list": ("seasonal_calendar_br.py", "Calendário sazonal comercial BR"),
+    },
 }
 
 # Comandos especiais que precisam de argumentos transformados
