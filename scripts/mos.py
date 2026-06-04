@@ -150,6 +150,9 @@ COMMAND_MAP: Dict[str, Dict[str, Tuple[str, str]]] = {
     "seasonal": {
         "list": ("seasonal_calendar_br.py", "Calendário sazonal comercial BR"),
     },
+    "audio": {
+        "narrate": ("tts_runner.py", "Narra roteiro em áudio PT-BR (say/kokoro)"),
+    },
 }
 
 # Comandos especiais que precisam de argumentos transformados
