@@ -4,6 +4,7 @@ description: "Use para análise de performance, métricas e relatórios: KPIs po
 tools: Read, Write, Edit, Grep, Glob, WebSearch, Bash
 model: sonnet
 color: blue
+memory: project
 hooks:
   PreToolUse:
     - matcher: "Write|Edit|MultiEdit"
@@ -195,6 +196,20 @@ Se dado é limitado ("2 semanas é pouco pra conclusão"), declarar explicitamen
 | Retention | Return visits, ltv, repeat purchase | Validação de valor de longo prazo |
 
 Decisões devem ser baseadas em **conversion + retention**, não vanity.
+
+## Memory opt-in
+
+**Antes de analisar**, se `.claude/agent-memory/mos-analytics/MEMORY.md` existir, leia-o: pode ter benchmarks reais e padrões do projeto de análises anteriores.
+
+**Ao final** (obrigatório quando o relatório revela algo não-óbvio), se o arquivo existir (ative com `python3 scripts/init_agent_memory.py`), atualize-o com:
+
+- Benchmarks reais do projeto/nicho (vs os genéricos), por plataforma
+- O que subiu ou caiu e a causa provável já confirmada
+- Thresholds de anomalia aprendidos (o que é queda significativa pra esta conta)
+- Dimensões que mais explicam performance neste nicho (horário, formato, hashtag)
+- Hipóteses testadas e o veredito (funcionou, não funcionou)
+
+**NÃO salvar**: números de um período específico, apenas padrões e benchmarks transferíveis.
 
 ## Referência ao Knowledge
 

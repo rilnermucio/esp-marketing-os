@@ -107,6 +107,23 @@ def test_marketplace_manifest_rules():
 
 
 # --------------------------------------------------------------- quality gate
+def test_memory_agents_match_init_script():
+    # Trava o drift que o comentário de init_agent_memory.py avisa: o set de agents
+    # com `memory: project` no frontmatter tem que bater com AGENTS_WITH_MEMORY.
+    import sys
+
+    sys.path.insert(0, str(ROOT / "scripts"))
+    import init_agent_memory as iam
+
+    declared = {
+        a.stem
+        for a in AGENTS
+        if re.search(r"^memory:\s*project\s*$", a.read_text(encoding="utf-8"), re.M)
+    }
+    listed = set(iam.AGENTS_WITH_MEMORY)
+    assert declared == listed, f"frontmatter memory != init list: {declared ^ listed}"
+
+
 def test_every_agent_declares_the_emdash_gate():
     missing = [a.name for a in AGENTS if not _RULE.search(a.read_text(encoding="utf-8"))]
     assert not missing, f"agents sem o quality gate do travessão: {missing}"

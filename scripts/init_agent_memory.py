@@ -22,6 +22,7 @@ from pathlib import Path
 # e com a seção "Memory automática" em skills/marketing-os/SKILL.md
 AGENTS_WITH_MEMORY = [
     "mos-ads",
+    "mos-analytics",
     "mos-brand",
     "mos-copy",
     "mos-design",
