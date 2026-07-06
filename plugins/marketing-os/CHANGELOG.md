@@ -7,6 +7,37 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
 
 ---
 
+## v6.14.0 (2026-07-06)
+
+Nivelamento completo dos 21 agents + 21 KBs em 5 ondas (auditoria → execução com revisão entre ondas; worklog em `docs/ai-engineering/worklogs/2026-07-06-nivelamento-21-agents.md`).
+
+### Added
+
+- PRE-FLIGHT bloqueante (inputs mínimos, até 3 perguntas e parar) e auto-iteração com score interno nos 13 agents que não tinham: funnel, ads, brand, infoproduct, analytics, growth, ab-testing, audio, social, design, ai-tools, research e launch (21/21 no padrão mos-copy/mos-offer)
+- Red team self-critique em growth (viabilidade dos experimentos), ab-testing (validade estatística), analytics (mínimo 3 hipóteses rivais + ceticismo estatístico), ai-tools (drift de ferramenta) e funnel (ataque cético ao desenho)
+- Régua ICE Canônica única em `subagents/ab-testing-agent.md` (score = I×C×E, faixas 300+/150-299/100-149/<100); growth e ab-testing citam a mesma régua
+- `memory: project` nos 4 agents restantes (ab-testing, ai-tools, audio, growth): 21/21 com memory; sync em `init_agent_memory.py`, AGENTS.md, README e SKILL.md
+- Integração do `memory_writer.py` nos protocolos de memory dos 21 agents (categorias mapeadas por item; exceção: story bank do storytelling segue em edição direta)
+- Swipe files pessoais de ads (`workspace/swipe-files/ads-aprovados.md`) e ofertas (`ofertas-aprovadas.md`): leitura antes de gerar + append quando houver resultado aprovado
+- `mos-audio` ganhou WebSearch (pesquisa de guest deixou de ser capability morta) e Bash; Bash também em ai-tools, funnel e community (pré-requisito do memory_writer)
+- `mos-analytics` ganhou consciência do pipeline `/aprender` (metrics_collector, memory_writer, learnings per-owner como benchmark local)
+- ÍNDICE nas 4 KBs grandes que faltavam (brand, email, funnel, launch) e 34 snapshot guards em seções datadas de 8 KBs
+- 6 linhas de delegação novas (launch→offer/research, social→community, copy/funnel/infoproduct→offer)
+
+### Changed
+
+- Gate 1 comprimido nos 21 agents: regras universais referenciam o quality gate hook como canônico (ADR-0002); itens específicos de domínio preservados
+- Dedup conservador de KBs: teoria de email→email-agent canônico, vieses/persuasão→copy-agent PARTE I, template DADOS DO VÍDEO 5x→1+referências, cross-refs de compliance (tabelas locais intactas por segurança)
+- Contagens de linhas de KB removidas dos prompts Tier 1 de 13 agents (números drift; descrição de seções fica)
+- Routing evals: critério refinado pra casos roteados por command (pontuar por `expected_command`; enumeração declarada de agents em headless é instável além da fronteira do command)
+
+### Fixed
+
+- "35 clones" corrigido pra 34 em 5 agents Tier 1 e 4 ocorrências em KBs
+- Três réguas ICE contraditórias unificadas (growth >150 com divisão por 3; ab-testing >100 com produto puro; KB com fórmula de produto e exemplos calculados por média)
+- Lógica invertida no protocolo do mos-design (agora: brand book existe → ler; não existe → sugerir mos-brand antes de inventar identidade)
+- Contradição interna de contagem no mos-launch (4700+ vs 4378)
+
 ## v6.13.0 (2026-07-06)
 
 Primeira versão com o backlog executado por delegação (Cursor Composer 2.5 Fast sob briefs e revisão do mantenedor; método e avaliação em `docs/ai-engineering/worklogs/2026-07-06-delegacao-composer.md`).

@@ -2,7 +2,7 @@
 
 > Plugin Claude Code e Codex com **21 especialistas** em marketing digital + 46 slash commands Claude + 34 voice clones de copywriters lendários.
 
-[![Version](https://img.shields.io/badge/version-6.13.0-blue.svg)](./CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-6.14.0-blue.svg)](./CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
 
 ## O que é
