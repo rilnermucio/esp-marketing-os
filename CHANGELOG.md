@@ -7,7 +7,7 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
 
 ---
 
-## [Unreleased]
+## v6.9.0 (2026-07-06)
 
 ### Added
 - Distribuicao oficial para Codex via marketplace repo-scoped em `.agents/plugins/marketplace.json`.
@@ -15,10 +15,39 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
 - Manifesto Codex em `.codex-plugin/plugin.json` e metadados de skill em `skills/marketing-os/agents/openai.yaml`.
 - Scripts `scripts/build_codex_plugin.py` e `scripts/validate_codex_plugin.py` para build/check/validacao do pacote Codex.
 - Job CI `validate-codex-plugin` para impedir pacote Codex defasado ou manifesto invalido.
+- Camada de engenharia de IA em `docs/ai-engineering/`: operating model do mantenedor, heurísticas de design, rubricas 0-4 com threshold de merge, taxonomia de falhas com IDs estáveis (F-CAT-NN), estratégia de evals, quality gates documentados, cost control, release checklist (Claude + Codex), maintainer handbook, ADRs (0001 arquitetura two-tier, 0002 hook canônico dos gates), runbooks e worklogs.
+- Golden set de roteamento com 18 briefings PT-BR (`docs/ai-engineering/evals/routing-cases.json`) validado por `scripts/tests/test_routing_evals.py` (92 testes: consistência com commands/, agents/ e taxonomia).
+- New command `/otimizar-copy`: diagnóstico (PARTE XVIII), Copy Score (PARTE XV) e reescrita de copy existente com hipóteses A/B via mos-copy.
+- New command `/narrar-roteiro` + `scripts/tts_runner.py`: roteiro do mos-audio/mos-video vira áudio PT-BR.
+- New command `/datas-sazonais` + `scripts/seasonal_calendar_br.py`: calendário comercial brasileiro (Carnaval/Páscoa via Computus).
+- Memory opt-in no `mos-analytics` (10º agent com `memory: project`) + guard de sync frontmatter↔`init_agent_memory.py`.
+- Quality gate de antítese negação→afirmação ("Não é X / É Y", "Não faça X / Faça Y") nas 3 camadas: HARD BLOCK no hook, check "Vícios de IA" no `quality_gate.py` (score capado em 60) e tabelas de prompt. O hook ganhou suite de testes própria (`test_quality_gate_hook.py`, incluindo casos de falso positivo).
+- `mos-copy`: Bash na tools list (lint determinístico e `headline_scorer --compare` no loop de auto-iteração), swipe file pessoal vivo em `workspace/swipe-files/aprovados.md`, nível de consciência (Schwartz) no output schema e pre-flight preservado.
+- Guard no `validate_agents.py`: prompt que instrui rodar `python3 scripts/*.py` sem `Bash` na tools list falha em `--strict` (classe "instrução morta").
+- Smoke tests cobrem os 18 agents (antes: 5 representativos).
+- `scripts/mos.py` expõe `youtube`, `gsc` e `report` no CLI unificado.
 
 ### Changed
 - README documenta instalacao Codex via `codex plugin marketplace add rilnermucio/esp-marketing-os`.
 - Metadados de repositorio apontam para `https://github.com/rilnermucio/esp-marketing-os`.
+- Agents de raciocínio pesado roteados para Opus via frontmatter `model:`.
+- SKILL.md: CSO explicitado na description; `docs/ROADMAP.md` ganhou o princípio de escopo (geração/estratégia entra; ops/automação stateful fica fora).
+- CI: black/flake8 obrigatórios (deixam de ser `|| true`); cobertura mínima de 70% mantida.
+- Seções datadas do `copy-agent.md` (PARTE XVI Tendências, 6.2 Ferramentas) ganharam snapshot guards com protocolo de refresh via WebSearch.
+- Prosa instrucional de agents/commands/subagents sem travessão (consistência com o próprio quality gate).
+- Teto de versão nas dependências do requirements.txt (reproducibilidade).
+
+### Fixed
+- Segurança: verificação TLS + guard anti-SSRF no download de screenshot da auditoria.
+- Contagem de voice clones corrigida para 34 em README/AGENTS/mos-copy/PARTE XV-B (off-by-one histórico: o inventário somava 35 com subtotal errado; guard `test_repo_consistency` valida contra o filesystem).
+- SKILL.md: memory opt-in corrigido para 10 agents (mos-analytics constava como sem memory).
+- Contagens de commands (38/34) e drift residual de docs corrigidos; contagem de scripts removida da prosa (variou 3x em 30 dias).
+- `commands/criar-post.md`: fallback de migração morto ("se mos-social ainda não existir") removido.
+- `requirements.txt`: numpy declarado (import direto em `audit_radar_chart.py`).
+- `docs/CONNECTORS.md`: nome pessoal removido do connector Meta Ads + nota de que connectors são MCPs do ambiente do usuário.
+- Scripts expõem erros de fetch/leitura no stderr (antes silenciados); `content_repurposer.py` sem conflito de `--output` no argparse.
+- Testes de CLI do PDF resilientes a flake do weasyprint.
+- Removido `narracao.aiff.txt` (arquivo de teste de 13 bytes na raiz do repo).
 
 ## v6.8.0 (2026-05-09)
 

@@ -36,6 +36,15 @@ REQUIRED_FIELDS = (
     "detects",
 )
 
+# No pacote Codex distribuído docs/ai-engineering nao e copiada (build_codex_plugin
+# COPY_DIRS); pular ali evita erro de coleta. No repo, a ausencia do JSON com o
+# diretorio presente continua quebrando alto (guard segue estrito).
+if not (PROJECT_ROOT / "docs" / "ai-engineering").exists():
+    pytest.skip(
+        "golden set não distribuído no pacote (docs/ai-engineering ausente)",
+        allow_module_level=True,
+    )
+
 CASES: list[dict] = json.loads(CASES_PATH.read_text(encoding="utf-8"))["cases"]
 TAXONOMY_TEXT = TAXONOMY_PATH.read_text(encoding="utf-8")
 CASE_IDS = [c.get("id", f"case-{i}") for i, c in enumerate(CASES)]

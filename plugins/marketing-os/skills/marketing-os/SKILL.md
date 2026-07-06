@@ -44,9 +44,9 @@ Quando o usuário não fornece contexto suficiente, **NÃO chute** — pergunte 
 
 ### Memory opt-in
 
-9 dos 18 agents têm `memory: project` no frontmatter e instruem persistir aprendizados em `.claude/agent-memory/mos-<agent>/MEMORY.md`:
+10 dos 18 agents têm `memory: project` no frontmatter e instruem persistir aprendizados em `.claude/agent-memory/mos-<agent>/MEMORY.md`:
 
-`mos-copy`, `mos-funnel`, `mos-design`, `mos-brand`, `mos-launch`, `mos-research`, `mos-social`, `mos-infoproduct`, `mos-ads`
+`mos-copy`, `mos-funnel`, `mos-design`, `mos-brand`, `mos-launch`, `mos-research`, `mos-social`, `mos-infoproduct`, `mos-ads`, `mos-analytics`
 
 Memory é **opt-in**: o diretório `.claude/agent-memory/` está gitignored (memory é per-projeto, não distribuída pelo plugin). Pra ativar nesse projeto, rode uma vez:
 
@@ -54,9 +54,9 @@ Memory é **opt-in**: o diretório `.claude/agent-memory/` está gitignored (mem
 python3 scripts/init_agent_memory.py
 ```
 
-Isso cria os 9 arquivos `MEMORY.md` placeholder. Depois disso os agents passam a gravar/ler patterns transferíveis (não conteúdo bruto). Sem o bootstrap, os agents seguem funcionando normalmente — só não persistem memory entre sessões.
+Isso cria os 10 arquivos `MEMORY.md` placeholder. Depois disso os agents passam a gravar/ler patterns transferíveis (não conteúdo bruto). Sem o bootstrap, os agents seguem funcionando normalmente — só não persistem memory entre sessões.
 
-Quando dispatchar qualquer dos 9 agents acima e o memory estiver ativo, **explicite no prompt**: "considere memory existente do cliente neste projeto". Os outros 9 agents (`mos-analytics`, `mos-ai-tools`, `mos-audio`, `mos-email`, `mos-seo`, `mos-storytelling`, `mos-video`, `mos-growth`, `mos-ab-testing`) não têm memory — passe todos os inputs no prompt.
+Quando dispatchar qualquer dos 10 agents acima e o memory estiver ativo, **explicite no prompt**: "considere memory existente do cliente neste projeto". Os outros 8 agents (`mos-ai-tools`, `mos-audio`, `mos-email`, `mos-seo`, `mos-storytelling`, `mos-video`, `mos-growth`, `mos-ab-testing`) não têm memory — passe todos os inputs no prompt.
 
 ## Mapa de Dispatch (18 Agents)
 

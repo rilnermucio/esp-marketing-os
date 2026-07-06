@@ -51,12 +51,6 @@ Em um único message, invoque em paralelo:
 - Agent(subagent_type: "mos-social", prompt: "Crie post [plataforma] sobre [tema]. Audiência: [descrição]. Tom: [tom]. Goal: [goal]. Format: [format]. CTA: [cta]. Considere memory existente do cliente neste projeto. Aplique schema padrão + 3 hooks + variações A/B + hashtags + horário + enquete de engajamento.")
 ```
 
-Se `mos-social` ainda não existir (durante migração), fallback:
-
-```
-- Agent(subagent_type: "mos-copy", prompt: "Post para [plataforma]: hook + copy + CTA + variações A/B. Tópico: [tema]. Considere memory existente do cliente neste projeto...")
-```
-
 ### Exemplo de dispatch sequencial
 
 Quando precisa de research ANTES de copy (research informa os hooks):

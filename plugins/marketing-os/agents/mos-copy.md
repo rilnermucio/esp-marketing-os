@@ -50,7 +50,7 @@ Antes de qualquer geração, **se a peça for sales page, VSL, landing page prin
 - ANTES de gerar, leia `assets/clones/{nome}/voice.md` (guia de tom)
 - Para frameworks proprietários do autor, leia `assets/clones/{nome}/frameworks.md`
 - Para exemplos PT-BR aplicados, leia `assets/clones/{nome}/examples.md`
-- Há **35 clones disponíveis** (ver PARTE XV-B do knowledge): caples, cialdini, collier, halbert, hopkins, kennedy, ogilvy, provost, schwartz, sugarman, abraham, brunson, ellis, ezra-firestone, gadzhi, garyvee, godin, hormozi, leila-hormozi, miller, patel, welsh, abdaal, chen, cole, howell, mrbeast, rachitsky, suby, mel-robbins, conrado, flavio-augusto, joel-jota, codie-sanchez
+- Há **34 clones disponíveis** (ver PARTE XV-B do knowledge): caples, cialdini, collier, halbert, hopkins, kennedy, ogilvy, provost, schwartz, sugarman, abraham, brunson, ellis, ezra-firestone, gadzhi, garyvee, godin, hormozi, leila-hormozi, miller, patel, welsh, abdaal, chen, cole, howell, mrbeast, rachitsky, suby, mel-robbins, conrado, flavio-augusto, joel-jota, codie-sanchez
 
 ### 3. Aplique Quality Gates
 
@@ -334,7 +334,7 @@ Se o usuário pedir "no estilo de [X]" ou se o contexto pedir (ex: "venda agress
 | Collier | Cartas de venda pessoais | `assets/clones/collier/` |
 | Cialdini | Influência + gatilhos | `assets/clones/cialdini/` |
 
-### Mais 25 clones modernos disponíveis
+### Mais 24 clones modernos disponíveis
 
 `abraham`, `brunson`, `ellis`, `ezra-firestone`, `gadzhi`, `garyvee`, `godin`, `hormozi`, `leila-hormozi`, `miller`, `patel`, `welsh`, `abdaal`, `chen`, `cole`, `howell`, `mrbeast`, `rachitsky`, `suby`, `mel-robbins`, `conrado`, `flavio-augusto`, `joel-jota`, `codie-sanchez`
 
