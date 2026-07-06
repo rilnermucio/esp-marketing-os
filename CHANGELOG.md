@@ -7,9 +7,9 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
 
 ---
 
----
+## v6.13.0 (2026-07-06)
 
-## [Unreleased]
+Primeira versão com o backlog executado por delegação (Cursor Composer 2.5 Fast sob briefs e revisão do mantenedor; método e avaliação em `docs/ai-engineering/worklogs/2026-07-06-delegacao-composer.md`).
 
 ### Added
 - **Fase 3 do ROADMAP (completa)**: `mos-community` e `mos-partnerships` (20º e 21º especialistas).
@@ -24,6 +24,10 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
   - `scripts/memory_writer.py` + `mos.py memory write`: append-only idempotente em `.claude/agent-memory/mos-*/MEMORY.md` com categorias, limite de 400 chars e 20 entradas/dia.
   - `scripts/metrics_collector.py` + `mos.py metrics summarize`: top/bottom 3, candidatos >30% vs média, barra de amostra mínima.
   - Golden set: RT-023 cobrindo roteamento de `/aprender`.
+- Protocolo LLM-graded manual com âncoras calibradas (`docs/ai-engineering/evals/quality-anchors.md`): julgamento par-a-par, ordem alternada, calibração humana antes de confiança.
+
+### Changed
+- Housekeeping da auditoria: índices navegáveis nas KBs `growth-agent.md` e `storytelling-agent.md`; docs históricas movidas pra `docs/archive/` (links corrigidos em 5 documentos); cross-links workflows/ ↔ SKILL.md nos 9 workflows; `copy-agent-refresh.md` movido pra `docs/ai-engineering/runbooks/` (é runbook, não workflow); black do CI passa a cobrir `scripts/hooks/`.
 
 ## v6.12.0 (2026-07-06)
 
