@@ -50,6 +50,14 @@ Periodicamente (a cada release ou mudança em SKILL.md/descriptions), rode 5+ ca
 
 Cada caso declara o que a resposta final precisa conter (ex: post exige sugestão de enquete; artigo exige meta title/description; teste A/B exige hipótese se-X-então-Y-porque-Z e amostra mínima). Hoje servem de checklist pra camada viva; são o esqueleto da futura camada LLM-graded ([EVALS-STRATEGY.md](EVALS-STRATEGY.md) §4).
 
+## Execuções da camada viva (log)
+
+| Data | Método | Casos | Acerto | Divergências |
+|---|---|---|---|---|
+| 2026-07-06 | `claude -p "<briefing>" --plugin-dir <repo> --max-turns 2` de diretório limpo, com meta-instrução pedindo só a decisão de roteamento | RT-001, 002, 003, 015, 017, 019 | **6/6** | Nenhuma. RT-001 retornou o command com namespace (`marketing-os:criar-post`), mesma rota. RT-017/019 validaram o desempate do mos-offer no dia do lançamento dele |
+
+Limitação do método: mede a decisão de roteamento DECLARADA pelo orquestrador em modo headless, não o dispatch executado numa sessão interativa completa. Suficiente pra pegar F-ROUTE-02/04; um eval de dispatch executado fica como evolução futura.
+
 ## Como estender
 
 Protocolo em [EVALS-STRATEGY.md](EVALS-STRATEGY.md) §2. Resumo: motivo real → taxonomia primeiro se a falha for nova → caso no JSON → teste verde → atualizar o resumo aqui → worklog.

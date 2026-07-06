@@ -7,6 +7,19 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
 
 ---
 
+## [Unreleased]
+
+### Added
+- **`mos-offer`, o 19º agent**: arquitetura de ofertas (equação de valor, Grand Slam Offer, value stack e bônus, garantias com nota CDC art. 49, precificação BR, escassez ética, Offer Score System). Nasce com paridade completa: opus, memory opt-in, pre-flight, auto-iteração com scoring e red team. KB própria `subagents/offer-agent.md` com índice.
+- New command `/criar-oferta`: dispatch com decision tree (research antes quando falta insumo; handoff sequencial pra copy).
+- Regra de desempate `mos-offer` vs `mos-copy` vs `mos-infoproduct` vs `mos-funnel` na SKILL.md.
+- Golden set: RT-017 promovido de gap pra validação do desempate; RT-019 novo (precificação em linguagem natural).
+- Primeira execução da camada viva dos routing evals: 6/6 de acerto em sessões headless reais (log em `docs/ai-engineering/ROUTING-EVALS.md`).
+
+### Changed
+- **Onda P1 de paridade**: `mos-email` (Bash + memory, pre-flight de sequência high-stakes, auto-iteração de 8-12 subject lines com lint, red team de deliverability) e `mos-seo` (memory, pre-flight de money page exigindo keyword research, auto-iteração de title/meta, red team "SEO do concorrente"). Memory opt-in agora cobre 13 dos 19 agents.
+- Guard de contagem de agents (`test_repo_consistency`) com constante `EXPECTED_AGENT_COUNT` comentada, atualização consciente obrigatória.
+
 ## v6.9.0 (2026-07-06)
 
 ### Added
