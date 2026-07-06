@@ -7,7 +7,7 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
 
 ---
 
-## [Unreleased]
+## v6.11.0 (2026-07-06)
 
 ### Added
 - New command `/criar-teste-ab`: desenho de experimento A/B (hipótese formal, amostra mínima com premissas explícitas, duração, critério de parada sem peeking). Decision tree separa desenho de experimento da criação de variantes (sequencial com mos-copy/mos-ads/mos-offer quando a variante não existe). Fecha o último agent órfão de command.

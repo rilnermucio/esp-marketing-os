@@ -7,6 +7,17 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
 
 ---
 
+## v6.11.0 (2026-07-06)
+
+### Added
+- New command `/criar-teste-ab`: desenho de experimento A/B (hipótese formal, amostra mínima com premissas explícitas, duração, critério de parada sem peeking). Decision tree separa desenho de experimento da criação de variantes (sequencial com mos-copy/mos-ads/mos-offer quando a variante não existe). Fecha o último agent órfão de command.
+- `mos-ab-testing` ganha WebSearch (fact-check de benchmarks de plataforma).
+
+### Changed
+- **Onda P1 completa nos 4 agents restantes da matriz**: `mos-video` (memory de hooks/retenção/CTR, pre-flight de VSL exigindo oferta definida, auto-iteração de 8-12 hooks e 5-8 títulos com lint e cálculo de timing, red team "espectador com dedo no scroll") e `mos-storytelling` (WebSearch + Bash, o gate "sem fatos inventados" agora tem ferramenta e pre-flight de matéria-prima real que barra biografia inventada, memory com story bank da marca, auto-iteração da mesma história em 2-3 frameworks, red team "editor cético").
+- Memory opt-in cobre 15 dos 19 agents; docs usam lista invertida ("todos exceto...") pra reduzir drift.
+- Golden set sem gaps abertos: RT-013 promovido a validação (confirmado 1/1 na camada viva).
+
 ## v6.10.0 (2026-07-06)
 
 ### Added
