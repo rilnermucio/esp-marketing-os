@@ -412,7 +412,7 @@ Quando os subagents do marketing-os terminam sua parte, alguns outputs podem pre
 
 ## Slash commands rápidos
 
-43 commands em `commands/` são atalhos pra workflows comuns. Quando user invoca o command direto (ex: `/criar-carrossel`), segue a lógica do command file. Quando user pede em linguagem natural ("cria um carrossel sobre X"), este SKILL dispatcha conforme tabela e workflows acima.
+44 commands em `commands/` são atalhos pra workflows comuns. Quando user invoca o command direto (ex: `/criar-carrossel`), segue a lógica do command file. Quando user pede em linguagem natural ("cria um carrossel sobre X"), este SKILL dispatcha conforme tabela e workflows acima.
 
 | Categoria | Commands |
 |---|---|
@@ -429,7 +429,7 @@ Quando os subagents do marketing-os terminam sua parte, alguns outputs podem pre
 | Análise | `/analisar-concorrencia`, `/analisar-video`, `/clonar-estrategia`, `/auditoria`, `/auditoria-pro` |
 | Testes A/B | `/criar-teste-ab` (hipótese, amostra, duração, critério de parada) |
 | Visual | `/criar-brief-design`, `/gerar-imagem`, `/renderizar-imagem` (prompt → PNG), `/gerar-thumbnail` (16:9 com overlay tipográfico), `/capturar-tela` |
-| Operação | `/batch`, `/criar-artigo`, `/publicar-notion`, `/projeto`, `/datas-sazonais` |
+| Operação | `/batch`, `/criar-artigo`, `/publicar-notion`, `/projeto`, `/datas-sazonais`, `/aprender` (métricas → memory) |
 | Campanhas (presets) | `/campanha` (índice), `/campanha-lancamento`, `/campanha-prospeccao`, `/campanha-retencao`, `/campanha-autoridade`, `/campanha-growth`, `/campanha-black-friday` |
 
 ## Arquitetura (two-tier)

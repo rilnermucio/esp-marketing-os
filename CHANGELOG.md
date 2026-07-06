@@ -7,6 +7,17 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
 
 ---
 
+---
+
+## [Unreleased]
+
+### Added
+- **Fase 4 do ROADMAP (loop de aprendizado)**: métricas reais alimentam as memories dos agents.
+  - New command `/aprender`: coleta no runtime (MCP ou export manual) → `metrics_collector.py` (normalização stdlib) → `mos-analytics` (interpretação por agent-dono) → `memory_writer.py` (persistência aprovada).
+  - `scripts/memory_writer.py` + `mos.py memory write`: append-only idempotente em `.claude/agent-memory/mos-*/MEMORY.md` com categorias, limite de 400 chars e 20 entradas/dia.
+  - `scripts/metrics_collector.py` + `mos.py metrics summarize`: top/bottom 3, candidatos >30% vs média, barra de amostra mínima.
+  - Golden set: RT-023 cobrindo roteamento de `/aprender`.
+
 ## v6.12.0 (2026-07-06)
 
 ### Added

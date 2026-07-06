@@ -21,6 +21,7 @@ WORKSPACE_REF_ALLOWLIST = {
     "commands/renderizar-imagem.md",  # salva PNGs gerados em workspace/media/imagens/
     "commands/gerar-thumbnail.md",  # salva fundo+thumb em workspace/media/thumbnails/
     "commands/produzir-reels.md",  # pipeline de áudio/composição/vídeo em workspace/media/reels/
+    "commands/aprender.md",  # lê exports de métricas do usuário em workspace/ antes do metrics_collector
 }
 
 

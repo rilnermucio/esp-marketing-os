@@ -210,6 +210,20 @@
       "min_output_fields": ["degrau alcançado declarado", "roteiro com timeline de legendas", "narração ou instrução de gravação", "vídeo mp4 ou composição pronta com comando de render"],
       "detects": ["F-ROUTE-02", "F-DISP-01"],
       "notes": "Pipeline em degraus: roteiro → áudio → render dependem um do outro (sequencial); fallback declara o degrau."
+    },
+    {
+      "id": "RT-023",
+      "prompt": "aprende com as métricas do último mês do Instagram e guarda o que funcionou",
+      "expected_command": "aprender",
+      "expected_agents": ["mos-analytics"],
+      "dispatch": "simples",
+      "min_output_fields": [
+        "resumo do que performou",
+        "aprendizados por agent-dono",
+        "confirmação do que foi persistido na memory"
+      ],
+      "detects": ["F-ROUTE-02"],
+      "notes": "Loop Fase 4: coleta runtime → metrics_collector → mos-analytics → memory_writer com aprovação humana."
     }
   ]
 }

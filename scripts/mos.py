@@ -159,6 +159,18 @@ COMMAND_MAP: Dict[str, Dict[str, Tuple[str, str]]] = {
             "Compõe thumbnail 1280x720 com overlay tipográfico",
         ),
     },
+    "memory": {
+        "write": (
+            "memory_writer.py",
+            "Persiste aprendizado na memory opt-in do agent",
+        ),
+    },
+    "metrics": {
+        "summarize": (
+            "metrics_collector.py",
+            "Resume métricas para o loop /aprender",
+        ),
+    },
 }
 
 # Comandos especiais que precisam de argumentos transformados

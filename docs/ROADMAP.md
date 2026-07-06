@@ -36,8 +36,8 @@ O plugin **gera e valida**; quem executa/agenda é o MCP ou a ferramenta dedicad
 - **mos-partnerships + `/prospectar-creators`** — descoberta e outreach de creators (Gmail create_draft, nunca envio direto).
 
 ### Fase 4: loop de aprendizado (deixa as skills melhores com o tempo)
-- **`scripts/memory_writer.py`** — API append-only idempotente que escreve aprendizados datados em `.claude/agent-memory/mos-*/MEMORY.md` com schema anti-poluição.
-- **`/aprender` + `metrics_collector.py`** — puxa métricas reais via MCP (instagram_get_insights, tiktok/threads insights, Meta Ads get_insights, youtube_analytics, gsc) e escreve "o que performou" na memory dos agents.
+- ~~**`scripts/memory_writer.py`**~~ **ENTREGUE (jul/2026)**: API append-only idempotente com schema anti-poluição (categorias, 400 chars, 20/dia) em `.claude/agent-memory/mos-*/MEMORY.md`.
+- ~~**`/aprender` + `metrics_collector.py`**~~ **ENTREGUE (jul/2026)**: coleta no runtime (MCP ou export manual) → normalização stdlib → interpretação mos-analytics → persistência aprovada via memory_writer.
 
 Nota: atribuição peça↔métrica fica aproximada (manual) sem pipeline de publicação. Aceitável: o loop pull-de-métrica + writeback já fecha o ciclo sem precisar de infra de publishing.
 
