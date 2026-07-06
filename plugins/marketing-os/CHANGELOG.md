@@ -7,7 +7,7 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
 
 ---
 
-## [Unreleased]
+## v6.12.0 (2026-07-06)
 
 ### Added
 - **Fase 2 do ROADMAP (mídia real) completa**: o pipeline deixa de parar no prompt.
