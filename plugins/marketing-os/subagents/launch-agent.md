@@ -46,6 +46,27 @@ EXECUÇÃO
 └── Automações
 ```
 
+## ÍNDICE
+
+- PARTE I: A CIÊNCIA DOS LANÇAMENTOS
+- PARTE II: TIPOS DE LANÇAMENTO EM PROFUNDIDADE
+- PARTE III: FÓRMULA DE LANÇAMENTO (PLF) AVANÇADO
+- PARTE IV: TRÁFEGO PAGO PARA LANÇAMENTO (AVANÇADO)
+- PARTE V: LANÇAMENTO PAGO vs LANÇAMENTO ORGÂNICO
+- PARTE VI: ESTRATÉGIAS POR TICKET (DETALHADO)
+- PARTE VII: SEQUÊNCIAS DE EMAIL DE LANÇAMENTO
+- PARTE VIII: CRIATIVOS E COPY DE ADS
+- PARTE IX: FERRAMENTAS PARA LANÇAMENTO
+- PARTE X: CHECKLISTS DE LANÇAMENTO
+- PARTE XI: VOICE CLONES PARA LAUNCH (35 disponíveis)
+- PARTE XII: CONAR + CDC + BR COMPLIANCE PARA LANÇAMENTOS
+- PARTE XIII: BR LAUNCH PLATFORMS (Stack 2026)
+- PARTE XIV: AI-NATIVE LAUNCH 2026
+- PARTE XV: POST-LAUNCH RETROSPECTIVE + CONTINUOUS
+- PARTE XVI: INFLUENCER LAUNCH PLAYBOOK
+- APÊNDICE A: TEMPLATES DE PÁGINAS
+- APÊNDICE B: GLOSSÁRIO DE LANÇAMENTO
+
 ---
 
 ## PARTE I: A CIÊNCIA DOS LANÇAMENTOS
@@ -2883,6 +2904,8 @@ EXEMPLO - MENTORIA ELITE R$ 30.000:
 
 ## PARTE VII: SEQUÊNCIAS DE EMAIL DE LANÇAMENTO
 
+> Anatomia de email, fórmulas de subject line, preheader e deliverability: `subagents/email-agent.md` (PARTE III e 12.1). Nesta KB, apenas sequências, timing e copy por fase de lançamento (PPL, PL, CPL, carrinho).
+
 ### 7.1 Sequência PPL (Pré-Pré-Lançamento)
 
 ```
@@ -4146,6 +4169,8 @@ URGÊNCIA E ESCASSEZ
 
 ### 12.4 Regulação Setorial (varia por categoria)
 
+> **SNAPSHOT DATADO (2023-2026)**: esta seção fotografa um momento. Antes de recomendar dado, preço, ferramenta ou regra daqui, confirme o estado atual via WebSearch. Princípios envelhecem bem; números, nomes e políticas envelhecem mal.
+
 ```
 SE O PRODUTO/CURSO É DA CATEGORIA:
 
@@ -4207,6 +4232,8 @@ Falha em qualquer um → ajustar antes de subir tráfego.
 ---
 
 ## PARTE XIII: BR LAUNCH PLATFORMS (Stack 2026)
+
+> **SNAPSHOT DATADO (2026)**: esta seção fotografa um momento. Antes de recomendar dado, preço, ferramenta ou regra daqui, confirme o estado atual via WebSearch. Princípios envelhecem bem; números, nomes e políticas envelhecem mal.
 
 Plataforma de lançamento BR-specific. Escolher errado = problema operacional grande.
 
@@ -4404,6 +4431,8 @@ LAUNCH MASSIVO (R$50k+ revenue):
 ---
 
 ## PARTE XIV: AI-NATIVE LAUNCH 2026
+
+> **SNAPSHOT DATADO (2026)**: esta seção fotografa um momento. Antes de recomendar dado, preço, ferramenta ou regra daqui, confirme o estado atual via WebSearch. Princípios envelhecem bem; números, nomes e políticas envelhecem mal.
 
 Em 2026, AI tools transformam fases-chave do lançamento. Não substitui strategy, mas acelera execução em 5-10x.
 

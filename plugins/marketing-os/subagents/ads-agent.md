@@ -159,6 +159,8 @@ LINKEDIN ADS:
 
 ### Benchmarks por Plataforma (Brasil 2026)
 
+> **SNAPSHOT DATADO (2026)**: esta seção fotografa um momento. Antes de recomendar dado, preço, ferramenta ou regra daqui, confirme o estado atual via WebSearch. Princípios envelhecem bem; números, nomes e políticas envelhecem mal.
+
 | Métrica | Meta Ads | Google Search | TikTok | LinkedIn |
 |---------|----------|---------------|--------|----------|
 | **CPM** | R$ 15-40 | N/A | R$ 10-30 | R$ 80-200 |
@@ -1309,16 +1311,18 @@ TRÁFEGO:
 
 ## 8.3 Gatilhos Mentais em Ads
 
+> Teoria dos gatilhos de persuasão: `subagents/copy-agent.md` PARTE I (1.2) e PARTE IV (4.1). Nesta KB, apenas aplicação no primary text, headline e criativo de anúncio:
+
 ### Principais Gatilhos
 
-| Gatilho | Como Usar | Exemplo |
-|---------|-----------|---------|
-| **Escassez** | Limitar quantidade | "Últimas 10 vagas" |
-| **Urgência** | Limitar tempo | "Oferta até meia-noite" |
-| **Autoridade** | Mostrar credenciais | "+5.000 alunos formados" |
-| **Prova Social** | Mostrar números/depoimentos | "9/10 recomendam" |
-| **Reciprocidade** | Dar algo primeiro | "Material gratuito" |
-| **Especificidade** | Números específicos | "R$ 2.347 de economia" |
+| Gatilho | Como Usar em Ads | Exemplo no Primary Text |
+|---------|------------------|-------------------------|
+| **Escassez** | Limitar quantidade no copy | "Últimas 10 vagas" |
+| **Urgência** | Limitar tempo no CTA | "Oferta até meia-noite" |
+| **Autoridade** | Credencial acima da dobra | "+5.000 alunos formados" |
+| **Prova Social** | Número ou depoimento curto | "9/10 recomendam" |
+| **Reciprocidade** | Lead magnet no hook | "Material gratuito" |
+| **Especificidade** | Número exato no benefício | "R$ 2.347 de economia" |
 
 ---
 
@@ -3299,6 +3303,8 @@ DICAS DE COMUNICAÇÃO:
 
 ### Tabela de Preços Sugerida
 
+> **SNAPSHOT DATADO (2026)**: esta seção fotografa um momento. Antes de recomendar dado, preço, ferramenta ou regra daqui, confirme o estado atual via WebSearch. Princípios envelhecem bem; números, nomes e políticas envelhecem mal.
+
 ```
 PRECIFICAÇÃO POR FAIXA DE INVESTIMENTO:
 
@@ -3540,6 +3546,8 @@ Antes de subir ad em categoria regulada, **verificar**:
 ---
 
 # PARTE XIX: AI-NATIVE ADVERTISING 2026
+
+> **SNAPSHOT DATADO (2026)**: esta seção fotografa um momento. Antes de recomendar dado, preço, ferramenta ou regra daqui, confirme o estado atual via WebSearch. Princípios envelhecem bem; números, nomes e políticas envelhecem mal.
 
 Em 2026, AI gerenciada (Advantage+, Performance Max, Smart Bidding) é o **default** de campanhas em performance. Não é "feature avançada", é o padrão. Quem ainda roda só Manual Bidding está deixando dinheiro na mesa.
 
@@ -4288,6 +4296,8 @@ Exemplo:
 ## A.4 Benchmarks Rápidos
 
 ### Por Plataforma (Brasil 2026)
+
+> **SNAPSHOT DATADO (2026)**: esta seção fotografa um momento. Antes de recomendar dado, preço, ferramenta ou regra daqui, confirme o estado atual via WebSearch. Princípios envelhecem bem; números, nomes e políticas envelhecem mal.
 
 | Métrica | Meta Ads | Google Search | TikTok | LinkedIn |
 |---------|----------|---------------|--------|----------|
@@ -6367,7 +6377,7 @@ INT_Marketing-Digital_Broad_250205
 
 ---
 
-## CLONES DE VOZ PARA ANÚNCIOS (35 clones disponíveis)
+## CLONES DE VOZ PARA ANÚNCIOS (34 clones disponíveis)
 
 O Ads Agent acessa o sistema de **35 voice clones** em `assets/clones/` (cada um com 4 arquivos profundos: profile, voice, frameworks, examples).
 
@@ -6526,4 +6536,4 @@ Quando o usuário disser qualquer destes, ATIVE o protocolo de Read:
 
 *Última atualização: 2026-05-07*
 
-*Refresh: voice clones wired (35 clones), references/swipe-files/templates wired, CONAR/BR compliance, AI-Native Advertising 2026, Creator Ads (Spark/Partnership/Allowlist), Apify competitive intelligence, ad ethics, continuous optimization protocol.*
+*Refresh: voice clones wired (34 clones), references/swipe-files/templates wired, CONAR/BR compliance, AI-Native Advertising 2026, Creator Ads (Spark/Partnership/Allowlist), Apify competitive intelligence, ad ethics, continuous optimization protocol.*

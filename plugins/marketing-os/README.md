@@ -79,9 +79,9 @@ Invocados pelo orquestrador (skill `/marketing-os`) ou diretamente via `@<agente
 | `@mos-seo` | Otimização de busca (keywords, on-page, E-E-A-T, AI-SEO) | sim |
 | `@mos-social` | Posts e estratégia em redes sociais (cross-platform) | sim |
 | `@mos-video` | Roteiros (YouTube, Reels, TikTok, VSL, Shorts) | sim |
-| `@mos-audio` | Podcasts, audiobooks, spots, sound design | não |
+| `@mos-audio` | Podcasts, audiobooks, spots, sound design | sim |
 | `@mos-design` | Direção visual, paletas, tipografia, design specs | sim |
-| `@mos-ai-tools` | Prompts pra Midjourney, Flux, Runway, Sora, etc. | não |
+| `@mos-ai-tools` | Prompts pra Midjourney, Flux, Runway, Sora, etc. | sim |
 | `@mos-analytics` | Métricas, KPIs, dashboards, GA4 | sim |
 | `@mos-email` | Email marketing (welcome, nurture, vendas, automação) | sim |
 | `@mos-ads` | Anúncios pagos (Meta, Google, TikTok, LinkedIn) | sim |
@@ -89,15 +89,15 @@ Invocados pelo orquestrador (skill `/marketing-os`) ou diretamente via `@<agente
 | `@mos-brand` | Identidade de marca, arquétipos, manifesto | sim |
 | `@mos-storytelling` | Narrativa aplicada (hero's journey, StoryBrand) | sim |
 | `@mos-funnel` | Funis de conversão, jornada (TOFU/MOFU/BOFU) | sim |
-| `@mos-growth` | Growth hacking, AARRR, retention | não |
+| `@mos-growth` | Growth hacking, AARRR, retention | sim |
 | `@mos-launch` | Lançamentos (PLF, semente, relâmpago, perpétuo) | sim |
 | `@mos-infoproduct` | Cursos, memberships, mentorias, ebooks | sim |
 | `@mos-offer` | Arquitetura de ofertas (value stack, preço, garantia, bônus) | sim |
 | `@mos-community` | Gestão de comentários/DMs (triagem, rascunhos, moderação) | sim |
 | `@mos-partnerships` | Parcerias com creators (sourcing, fit, outreach) | sim |
-| `@mos-ab-testing` | A/B/MVT, ICE prioritization, significância estatística | não |
+| `@mos-ab-testing` | A/B/MVT, ICE prioritization, significância estatística | sim |
 
-**Memory opt-in (17 agents).** Todos exceto `mos-ai-tools`, `mos-audio`, `mos-growth` e `mos-ab-testing` podem persistir aprendizados entre sessões em `.claude/agent-memory/mos-*/MEMORY.md`. Para ativar, rode o bootstrap uma vez na raiz do projeto:
+**Memory opt-in (21 agents).** Todos os agents podem persistir aprendizados entre sessões em `.claude/agent-memory/mos-*/MEMORY.md`. Para ativar, rode o bootstrap uma vez na raiz do projeto:
 
 ```bash
 python3 scripts/init_agent_memory.py
@@ -207,7 +207,7 @@ python scripts/build_codex_plugin.py
 python scripts/build_codex_plugin.py --check
 python scripts/validate_codex_plugin.py plugins/marketing-os
 
-# Bootstrap memory (opt-in, 17 agents)
+# Bootstrap memory (opt-in, 21 agents)
 python3 scripts/init_agent_memory.py
 
 # CLI unificado das ferramentas

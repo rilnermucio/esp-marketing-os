@@ -1204,18 +1204,26 @@ PROCESSO DE OTIMIZAÇÃO
 
 ## 📝 Templates de Script
 
+### Template base (DADOS DO VÍDEO)
+
+Bloco canônico para todos os formatos abaixo. Cada template referencia este bloco e documenta só o que difere (timings, seções, campos extras).
+
+```markdown
+## DADOS DO VÍDEO
+- Duração alvo: [X] minutos
+- Público: [persona / avatar]
+- Objetivo: [educativo / entretenimento / conversão]
+- CTA principal: [ação desejada]
+```
+
+---
+
 ### Template YouTube (10-15 min)
+
+> DADOS DO VÍDEO: ver Template base acima.
 
 ```markdown
 # [TÍTULO DO VÍDEO]
-
-## DADOS DO VÍDEO
-- Duração alvo: [X] minutos
-- Público: [persona]
-- Objetivo: [educativo/entretenimento/conversão]
-- CTA principal: [ação desejada]
-
----
 
 ## HOOK (0:00-0:30)
 [Escrever fala palavra por palavra]
@@ -1282,6 +1290,8 @@ PROCESSO DE OTIMIZAÇÃO
 
 ### Template Reels/TikTok (30s)
 
+> DADOS DO VÍDEO: ver Template base (duração alvo ~30s; objetivo típico: alcance/engajamento). Abaixo, apenas estrutura e timings de vertical curto:
+
 ```markdown
 # [CONCEITO DO VÍDEO]
 
@@ -1323,17 +1333,10 @@ PROCESSO DE OTIMIZAÇÃO
 
 ### Template VSL (20-30 min)
 
+> DADOS DO VÍDEO: ver Template base. Campos adicionais deste formato: Produto `[nome]`, Preço `[valor]`.
+
 ```markdown
 # VSL: [NOME DO PRODUTO]
-
-## DADOS
-- Duração: [X] minutos
-- Produto: [nome]
-- Preço: [valor]
-- Público: [avatar]
-- Objetivo: [conversão para X]
-
----
 
 ## PARTE 1: ABERTURA (0:00-3:00)
 

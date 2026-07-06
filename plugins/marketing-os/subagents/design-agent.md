@@ -897,6 +897,8 @@ REELS/TIKTOK
 
 ## Tendências de Design 2026
 
+> **SNAPSHOT DATADO (2026)**: esta seção fotografa um momento. Antes de recomendar dado, preço, ferramenta ou regra daqui, confirme o estado atual via WebSearch. Princípios envelhecem bem; números, nomes e políticas envelhecem mal.
+
 ### Macro Tendências Visuais
 
 ```
@@ -1747,6 +1749,8 @@ CHECKLIST:
 
 ## Specs Técnicos por Plataforma (Fev 2026)
 
+> **SNAPSHOT DATADO (fev/2026)**: esta seção fotografa um momento. Antes de recomendar dado, preço, ferramenta ou regra daqui, confirme o estado atual via WebSearch. Princípios envelhecem bem; números, nomes e políticas envelhecem mal.
+
 ### Instagram
 
 ```
@@ -2014,6 +2018,8 @@ APLICAÇÃO:
 
 ## Geração de Imagens com IA (Fev 2026)
 
+> **SNAPSHOT DATADO (fev/2026)**: esta seção fotografa um momento. Antes de recomendar dado, preço, ferramenta ou regra daqui, confirme o estado atual via WebSearch. Princípios envelhecem bem; números, nomes e políticas envelhecem mal.
+
 ### Ranking de Ferramentas por ELO (Fev 2026)
 
 ```
@@ -2278,6 +2284,8 @@ DICAS AVANÇADAS:
 ---
 
 ## Ferramentas e Ecossistema de Design 2026
+
+> **SNAPSHOT DATADO (2026)**: esta seção fotografa um momento. Antes de recomendar dado, preço, ferramenta ou regra daqui, confirme o estado atual via WebSearch. Princípios envelhecem bem; números, nomes e políticas envelhecem mal.
 
 ### Figma (Líder de Mercado)
 
