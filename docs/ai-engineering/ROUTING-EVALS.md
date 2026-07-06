@@ -29,6 +29,9 @@ Briefings de usuário em PT-BR (como chegam de verdade, sem jargão de sistema) 
 | RT-017 | montar oferta high-ticket | `/criar-oferta` | offer | simples |
 | RT-018 | bio do Instagram | nenhum (linguagem natural) | copy | simples |
 | RT-019 | "quanto cobrar pela mentoria?" | nenhum (linguagem natural) | offer | simples |
+| RT-020 | renderizar prompt em PNG | `/renderizar-imagem` | ai-tools | simples |
+| RT-021 | thumbnail com texto | `/gerar-thumbnail` | video + ai-tools | sequencial (pipeline) |
+| RT-022 | reels renderizado com legenda | `/produzir-reels` | video → audio | sequencial |
 
 RT-013 e RT-017 eram gaps documentados (agent órfão de command; ambiguidade sem desempate) e viraram validações das correções: `/criar-teste-ab` e `mos-offer` + desempate na SKILL, ambos em jul/2026. O golden set não tem gaps abertos no momento; casos novos entram pelo protocolo da EVALS-STRATEGY §2.
 
@@ -56,6 +59,7 @@ Cada caso declara o que a resposta final precisa conter (ex: post exige sugestã
 |---|---|---|---|---|
 | 2026-07-06 | `claude -p "<briefing>" --plugin-dir <repo> --max-turns 2` de diretório limpo, com meta-instrução pedindo só a decisão de roteamento | RT-001, 002, 003, 015, 017, 019 | **6/6** | Nenhuma. RT-001 retornou o command com namespace (`marketing-os:criar-post`), mesma rota. RT-017/019 validaram o desempate do mos-offer no dia do lançamento dele |
 | 2026-07-06 | Mesmo método | RT-013 (pós /criar-teste-ab) | **1/1** | Nenhuma. O command criado na mesma rodada roteou exato (`criar-teste-ab`, ab-testing, simples) |
+| 2026-07-06 | Mesmo método | RT-021 (pós Fase 2) | **1/1 em rota** (command + agents exatos) | Dispatch veio `sequencial` vs `paralelo` do gabarito: divergência de CONVENÇÃO, não de rota. O gabarito rotulava o paralelismo interno da Fase 1; a leitura correta (e consistente com RT-022) é o pipeline inteiro. Gabarito calibrado + convenção documentada abaixo |
 
 Limitação do método: mede a decisão de roteamento DECLARADA pelo orquestrador em modo headless, não o dispatch executado numa sessão interativa completa. Suficiente pra pegar F-ROUTE-02/04; um eval de dispatch executado fica como evolução futura.
 

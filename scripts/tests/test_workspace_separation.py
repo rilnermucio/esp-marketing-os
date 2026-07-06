@@ -18,6 +18,9 @@ WORKSPACE_REF_ALLOWLIST = {
     "agents/mos-copy.md",  # swipe file pessoal: lê/escreve winners em workspace/swipe-files/aprovados.md
     "subagents/copy-agent.md",  # documenta o loop de swipe-files vivos (trilho 1 em workspace/)
     "commands/otimizar-copy.md",  # aponta winners do teste pro swipe file pessoal em workspace/
+    "commands/renderizar-imagem.md",  # salva PNGs gerados em workspace/media/imagens/
+    "commands/gerar-thumbnail.md",  # salva fundo+thumb em workspace/media/thumbnails/
+    "commands/produzir-reels.md",  # pipeline de áudio/composição/vídeo em workspace/media/reels/
 }
 
 

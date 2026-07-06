@@ -180,6 +180,36 @@
       "min_output_fields": ["faixa de preço com racional", "modelo de precificação", "âncora sugerida", "próximo passo de validação"],
       "detects": ["F-ROUTE-02", "F-ROUTE-04"],
       "notes": "Linguagem natural de precificação roteia pro mos-offer (não pro infoproduct nem pro funnel)."
+    },
+    {
+      "id": "RT-020",
+      "prompt": "gera a imagem em PNG desse prompt que a gente criou pro anúncio",
+      "expected_command": "renderizar-imagem",
+      "expected_agents": ["mos-ai-tools"],
+      "dispatch": "simples",
+      "min_output_fields": ["arquivo PNG em workspace/media/imagens/", "prompt usado", "skill de geração usada ou fallback declarado"],
+      "detects": ["F-ROUTE-02"],
+      "notes": "Renderizar (arquivo real) roteia pro /renderizar-imagem; só criar prompt segue no /gerar-imagem."
+    },
+    {
+      "id": "RT-021",
+      "prompt": "faz a thumbnail do vídeo sobre juros compostos, texto: NINGUÉM TE CONTA ISSO",
+      "expected_command": "gerar-thumbnail",
+      "expected_agents": ["mos-video", "mos-ai-tools"],
+      "dispatch": "sequencial",
+      "min_output_fields": ["thumbnail 1280x720 em workspace/media/thumbnails/", "conceito do brief", "variações de texto", "fundo sem texto embutido"],
+      "detects": ["F-ROUTE-02", "F-DISP-01"],
+      "notes": "Convenção: dispatch rotula o pipeline inteiro (brief/prompt → render → overlay é sequencial), mesmo que a Fase 1 paralelize internamente. Calibrado pela camada viva em 2026-07-06."
+    },
+    {
+      "id": "RT-022",
+      "prompt": "produz o reels de 30 segundos sobre mitos da nutrição, já renderizado com legenda",
+      "expected_command": "produzir-reels",
+      "expected_agents": ["mos-video", "mos-audio"],
+      "dispatch": "sequencial",
+      "min_output_fields": ["degrau alcançado declarado", "roteiro com timeline de legendas", "narração ou instrução de gravação", "vídeo mp4 ou composição pronta com comando de render"],
+      "detects": ["F-ROUTE-02", "F-DISP-01"],
+      "notes": "Pipeline em degraus: roteiro → áudio → render dependem um do outro (sequencial); fallback declara o degrau."
     }
   ]
 }

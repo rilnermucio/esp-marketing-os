@@ -412,14 +412,14 @@ Quando os subagents do marketing-os terminam sua parte, alguns outputs podem pre
 
 ## Slash commands rápidos
 
-40 commands em `commands/` são atalhos pra workflows comuns. Quando user invoca o command direto (ex: `/criar-carrossel`), segue a lógica do command file. Quando user pede em linguagem natural ("cria um carrossel sobre X"), este SKILL dispatcha conforme tabela e workflows acima.
+43 commands em `commands/` são atalhos pra workflows comuns. Quando user invoca o command direto (ex: `/criar-carrossel`), segue a lógica do command file. Quando user pede em linguagem natural ("cria um carrossel sobre X"), este SKILL dispatcha conforme tabela e workflows acima.
 
 | Categoria | Commands |
 |---|---|
 | Meta-orquestrador | `/mo` (briefing aberto, roteia automaticamente pro command apropriado) |
 | Conteúdo social | `/criar-post`, `/criar-carrossel`, `/criar-calendario` |
 | Copy | `/otimizar-copy` (diagnóstico + score + reescrita de copy existente) |
-| Vídeo/áudio | `/criar-video`, `/criar-podcast`, `/narrar-roteiro` |
+| Vídeo/áudio | `/criar-video`, `/criar-podcast`, `/narrar-roteiro`, `/produzir-reels` (roteiro → vídeo legendado renderizado) |
 | Páginas/funis | `/criar-landing-page`, `/criar-funil`, `/criar-webinar` |
 | Email | `/criar-email`, `/criar-sequencia` |
 | Ads | `/criar-anuncio`, `/publicar-anuncio` |
@@ -428,7 +428,7 @@ Quando os subagents do marketing-os terminam sua parte, alguns outputs podem pre
 | Voice clones | `/criar-clone` (expert externo via web research), `/criar-meu-clone` (suas amostras locais em `workspace/`) |
 | Análise | `/analisar-concorrencia`, `/analisar-video`, `/clonar-estrategia`, `/auditoria`, `/auditoria-pro` |
 | Testes A/B | `/criar-teste-ab` (hipótese, amostra, duração, critério de parada) |
-| Visual | `/criar-brief-design`, `/gerar-imagem`, `/capturar-tela` |
+| Visual | `/criar-brief-design`, `/gerar-imagem`, `/renderizar-imagem` (prompt → PNG), `/gerar-thumbnail` (16:9 com overlay tipográfico), `/capturar-tela` |
 | Operação | `/batch`, `/criar-artigo`, `/publicar-notion`, `/projeto`, `/datas-sazonais` |
 | Campanhas (presets) | `/campanha` (índice), `/campanha-lancamento`, `/campanha-prospeccao`, `/campanha-retencao`, `/campanha-autoridade`, `/campanha-growth`, `/campanha-black-friday` |
 

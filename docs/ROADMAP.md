@@ -26,9 +26,9 @@ O plugin **gera e valida**; quem executa/agenda é o MCP ou a ferramenta dedicad
 - **`seasonal_calendar_br.py` + `/datas-sazonais`** — efemérides comerciais BR (Carnaval/Páscoa via Computus) pro calendário.
 
 ### Fase 2: geração real de mídia (fecha o gap "só gera prompt")
-- **`/renderizar-imagem`** — prompt do mos-ai-tools vira PNG (skills gpt-image-2 / ai-image-generation).
-- **`/gerar-thumbnail`** — o "Thumbnail Brief" do mos-video vira imagem 16:9 (geração de fundo + overlay tipográfico separado pra texto legível).
-- **`/produzir-reels`** — roteiro → vídeo legendado renderizado (hyperframes + ai-video). Depende de `/narrar-roteiro`.
+- ~~**`/renderizar-imagem`**~~ **ENTREGUE (jul/2026)**: prompt do mos-ai-tools vira PNG via skill do ambiente (gpt-image-2 / ai-image-generation), com fallback pra entrega do prompt.
+- ~~**`/gerar-thumbnail`**~~ **ENTREGUE (jul/2026)**: Thumbnail Brief do mos-video vira 1280x720 (fundo sem texto via skill + overlay tipográfico determinístico em `scripts/thumbnail_composer.py`).
+- ~~**`/produzir-reels`**~~ **ENTREGUE (jul/2026)**: pipeline em degraus roteiro → narração (/narrar-roteiro) → HyperFrames, com fallback honesto por degrau. Visão geral em `docs/MEDIA-PIPELINE.md`.
 
 ### Fase 3: novos agents (puro "mais skill", encaixa no Tier-1/Tier-2)
 - ~~**mos-offer + `/criar-oferta`**~~ **ENTREGUE (jul/2026)**: arquitetura de oferta (Grand Slam, value stack, garantia, bônus) com desempate offer/copy/funnel/infoproduct na SKILL.md, memory opt-in e KB própria (`subagents/offer-agent.md`).

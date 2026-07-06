@@ -7,6 +7,18 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
 
 ---
 
+## [Unreleased]
+
+### Added
+- **Fase 2 do ROADMAP (mídia real) completa**: o pipeline deixa de parar no prompt.
+  - New command `/renderizar-imagem`: prompt do mos-ai-tools vira PNG via skill do ambiente (gpt-image-2 / ai-image-generation), salvo em `workspace/media/imagens/`; fallback entrega o prompt com instruções.
+  - New command `/gerar-thumbnail`: Thumbnail Brief (mos-video) + prompt de fundo sem texto (mos-ai-tools) + overlay tipográfico determinístico. Fundo por IA, texto por tipografia: cada camada falha de um jeito e por isso são separadas.
+  - New command `/produzir-reels`: pipeline em degraus roteiro (com timeline de legendas) → narração via /narrar-roteiro → composição e render HyperFrames 1080x1920; fallback declara o degrau alcançado, nunca reporta vídeo não renderizado.
+  - `scripts/thumbnail_composer.py` + `mos.py thumbnail compose`: overlay 1280x720 com stroke, faixa de contraste, quebra por largura medida e autoajuste de fonte (11 testes).
+  - `docs/MEDIA-PIPELINE.md`: dependências de ambiente, fallbacks e regras do pipeline.
+  - Golden set: RT-020/021/022 cobrindo o roteamento dos commands novos.
+- Dependência nova: `Pillow>=10,<12` (overlay tipográfico).
+
 ## v6.11.0 (2026-07-06)
 
 ### Added

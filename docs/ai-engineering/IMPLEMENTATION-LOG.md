@@ -63,3 +63,4 @@ Todos os campos do template. "Evidências" exige dado verificado (output real de
 | 2026-07-06 | Release v6.10.0 | [2026-07-06-release-v6.10.0.md](worklogs/2026-07-06-release-v6.10.0.md) |
 | 2026-07-06 | P1 final (video/storytelling) + /criar-teste-ab | [2026-07-06-p1-final-teste-ab.md](worklogs/2026-07-06-p1-final-teste-ab.md) |
 | 2026-07-06 | Release v6.11.0 | [2026-07-06-release-v6.11.0.md](worklogs/2026-07-06-release-v6.11.0.md) |
+| 2026-07-06 | Fase 2: mídia real (3 commands + composer) | [2026-07-06-fase2-midia-real.md](worklogs/2026-07-06-fase2-midia-real.md) |
