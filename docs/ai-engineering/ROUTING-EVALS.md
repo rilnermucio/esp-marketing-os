@@ -64,6 +64,7 @@ Cada caso declara o que a resposta final precisa conter (ex: post exige sugestã
 | 2026-07-06 | Mesmo método | RT-013 (pós /criar-teste-ab) | **1/1** | Nenhuma. O command criado na mesma rodada roteou exato (`criar-teste-ab`, ab-testing, simples) |
 | 2026-07-06 | Mesmo método | RT-021 (pós Fase 2) | **1/1 em rota** (command + agents exatos) | Dispatch veio `sequencial` vs `paralelo` do gabarito: divergência de CONVENÇÃO, não de rota. O gabarito rotulava o paralelismo interno da Fase 1; a leitura correta (e consistente com RT-022) é o pipeline inteiro. Gabarito calibrado + convenção documentada abaixo |
 | 2026-07-06 | Mesmo método | RT-023, 024, 025 (pós Fases 3-4 delegadas ao Composer) | **3/3** | Nenhuma. Os 3 roteamentos criados por executor delegado rotearam exatos ao vivo (RT-025 listou o par de agents em ordem invertida, mesma rota sequencial). Acumulado do dia: 12/12 em rota |
+| 2026-07-06 | `claude -p` SEM `--plugin-dir` (plugin INSTALADO do marketplace, v6.13.0) | RT-024 | **1/1** | Nenhuma. Valida o artefato distribuído de ponta a ponta (install → load → roteamento) e fecha a F-REL-03 das 5 releases do dia. Acumulado: 13/13 |
 
 Limitação do método: mede a decisão de roteamento DECLARADA pelo orquestrador em modo headless, não o dispatch executado numa sessão interativa completa. Suficiente pra pegar F-ROUTE-02/04; um eval de dispatch executado fica como evolução futura.
 
