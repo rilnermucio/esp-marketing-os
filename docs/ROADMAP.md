@@ -31,7 +31,7 @@ O plugin **gera e valida**; quem executa/agenda é o MCP ou a ferramenta dedicad
 - **`/produzir-reels`** — roteiro → vídeo legendado renderizado (hyperframes + ai-video). Depende de `/narrar-roteiro`.
 
 ### Fase 3: novos agents (puro "mais skill", encaixa no Tier-1/Tier-2)
-- **mos-offer + `/criar-oferta`** — arquitetura de oferta (Grand Slam, value stack, garantia, bônus). Maior alavanca de marketing sem dono hoje. Regra de desempate com mos-copy/funnel/infoproduct na SKILL.md.
+- ~~**mos-offer + `/criar-oferta`**~~ **ENTREGUE (jul/2026)**: arquitetura de oferta (Grand Slam, value stack, garantia, bônus) com desempate offer/copy/funnel/infoproduct na SKILL.md, memory opt-in e KB própria (`subagents/offer-agent.md`).
 - **mos-community + `/responder-comentarios`** — triagem e resposta de comentários/DMs no tom da marca (social-media-remote MCP, modo rascunho com confirmação humana).
 - **mos-partnerships + `/prospectar-creators`** — descoberta e outreach de creators (Gmail create_draft, nunca envio direto).
 

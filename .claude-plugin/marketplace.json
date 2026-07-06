@@ -9,7 +9,7 @@
     {
       "name": "marketing-os",
       "source": "./",
-      "description": "Marketing OS — sistema operacional de marketing digital com 18 subagentes especializados: Copy, SEO, Social, Video, Audio, Design, AI Tools, Analytics, Email, Ads, Research, Brand, Storytelling, Funnel, Growth, Launch, Infoproduct Builder e AB Testing.",
+      "description": "Marketing OS — sistema operacional de marketing digital com 19 subagentes especializados: Copy, SEO, Social, Video, Audio, Design, AI Tools, Analytics, Email, Ads, Research, Brand, Storytelling, Funnel, Growth, Launch, Infoproduct Builder, AB Testing e Offer.",
       "version": "6.9.0",
       "author": {
         "name": "rilnermucio"

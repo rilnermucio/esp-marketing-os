@@ -6,7 +6,7 @@ argument-hint: "[tipo-conteúdo] [nicho] [plataforma]"
 
 # Marketing OS: Sistema Operacional de Marketing Digital
 
-Este skill é um **orquestrador** para 18 especialistas de marketing. No Claude Code, ele usa subagents nativos. No Codex, ele usa a mesma arquitetura em modo compatível: roteia o briefing para o especialista correto, lê os arquivos Tier 1/Tier 2 necessários e, quando houver ferramenta de multi-agent disponível, pode paralelizar as etapas independentes.
+Este skill é um **orquestrador** para 19 especialistas de marketing. No Claude Code, ele usa subagents nativos. No Codex, ele usa a mesma arquitetura em modo compatível: roteia o briefing para o especialista correto, lê os arquivos Tier 1/Tier 2 necessários e, quando houver ferramenta de multi-agent disponível, pode paralelizar as etapas independentes.
 
 ## Modo de Operação: Orquestração por Ambiente
 
@@ -44,9 +44,9 @@ Quando o usuário não fornece contexto suficiente, **NÃO chute** — pergunte 
 
 ### Memory opt-in
 
-12 dos 18 agents têm `memory: project` no frontmatter e instruem persistir aprendizados em `.claude/agent-memory/mos-<agent>/MEMORY.md`:
+13 dos 19 agents têm `memory: project` no frontmatter e instruem persistir aprendizados em `.claude/agent-memory/mos-<agent>/MEMORY.md`:
 
-`mos-copy`, `mos-funnel`, `mos-design`, `mos-brand`, `mos-launch`, `mos-research`, `mos-social`, `mos-infoproduct`, `mos-ads`, `mos-analytics`, `mos-email`, `mos-seo`
+`mos-copy`, `mos-funnel`, `mos-design`, `mos-brand`, `mos-launch`, `mos-research`, `mos-social`, `mos-infoproduct`, `mos-ads`, `mos-analytics`, `mos-email`, `mos-seo`, `mos-offer`
 
 Memory é **opt-in**: o diretório `.claude/agent-memory/` está gitignored (memory é per-projeto, não distribuída pelo plugin). Pra ativar nesse projeto, rode uma vez:
 
@@ -54,11 +54,11 @@ Memory é **opt-in**: o diretório `.claude/agent-memory/` está gitignored (mem
 python3 scripts/init_agent_memory.py
 ```
 
-Isso cria os 12 arquivos `MEMORY.md` placeholder. Depois disso os agents passam a gravar/ler patterns transferíveis (não conteúdo bruto). Sem o bootstrap, os agents seguem funcionando normalmente — só não persistem memory entre sessões.
+Isso cria os 13 arquivos `MEMORY.md` placeholder. Depois disso os agents passam a gravar/ler patterns transferíveis (não conteúdo bruto). Sem o bootstrap, os agents seguem funcionando normalmente — só não persistem memory entre sessões.
 
-Quando dispatchar qualquer dos 12 agents acima e o memory estiver ativo, **explicite no prompt**: "considere memory existente do cliente neste projeto". Os outros 6 agents (`mos-ai-tools`, `mos-audio`, `mos-storytelling`, `mos-video`, `mos-growth`, `mos-ab-testing`) não têm memory — passe todos os inputs no prompt.
+Quando dispatchar qualquer dos 13 agents acima e o memory estiver ativo, **explicite no prompt**: "considere memory existente do cliente neste projeto". Os outros 6 agents (`mos-ai-tools`, `mos-audio`, `mos-storytelling`, `mos-video`, `mos-growth`, `mos-ab-testing`) não têm memory — passe todos os inputs no prompt.
 
-## Mapa de Dispatch (18 Agents)
+## Mapa de Dispatch (19 Agents)
 
 | Briefing típico do usuário | Agent | Arquivo |
 |----|----|----|
@@ -79,6 +79,7 @@ Quando dispatchar qualquer dos 12 agents acima e o memory estiver ativo, **expli
 | "growth hacking / aquisição / crescimento" | `mos-growth` | `agents/mos-growth.md` |
 | "lançamento de produto / campanha de lançamento / PLF" | `mos-launch` | `agents/mos-launch.md` |
 | "infoproduto / curso / ebook / membership / mentoria" | `mos-infoproduct` | `agents/mos-infoproduct.md` |
+| "oferta / value stack / precificação / quanto cobrar / garantia / bônus / order bump" | `mos-offer` | `agents/mos-offer.md` |
 | "teste A/B / variação / otimização de conversão" | `mos-ab-testing` | `agents/mos-ab-testing.md` |
 
 ### Desempate: `mos-brand` vs `mos-storytelling`
@@ -86,6 +87,17 @@ Quando dispatchar qualquer dos 12 agents acima e o memory estiver ativo, **expli
 Ambos tocam em "narrativa de marca". Regra:
 - **`mos-brand`** quando o briefing é sobre **DEFINIR** a identidade — criar arquétipo, manifesto, voz/tom, brand book
 - **`mos-storytelling`** quando é sobre **APLICAR** narrativa numa peça — estruturar uma sales letter com hero's journey, escrever uma origin story específica, construir arco em um vídeo/post
+
+### Desempate: `mos-offer` vs `mos-copy` vs `mos-infoproduct` vs `mos-funnel`
+
+Briefings de "oferta" tocam 4 domínios. Regra pelo substantivo do pedido:
+
+- **`mos-offer`**: estruturar a OFERTA em si (o que entra, preço, garantia, bônus, condições, "quanto cobrar")
+- **`mos-copy`**: ESCREVER a peça que vende a oferta (página, anúncio, email); consome o handoff do offer
+- **`mos-infoproduct`**: o PRODUTO entregue (curriculum, módulos, formato de entrega)
+- **`mos-funnel`**: ONDE cada oferta entra na jornada (tripwire vs core vs upsell como sequência de funil)
+
+Pedido composto "cria a oferta e a página": sequencial `mos-offer` → `mos-copy`, nunca paralelo (a página depende do stack fechado).
 
 ### Caso composto: páginas (landing / aplicação / vendas)
 
@@ -400,7 +412,7 @@ Quando os subagents do marketing-os terminam sua parte, alguns outputs podem pre
 
 ## Slash commands rápidos
 
-38 commands em `commands/` são atalhos pra workflows comuns. Quando user invoca o command direto (ex: `/criar-carrossel`), segue a lógica do command file. Quando user pede em linguagem natural ("cria um carrossel sobre X"), este SKILL dispatcha conforme tabela e workflows acima.
+39 commands em `commands/` são atalhos pra workflows comuns. Quando user invoca o command direto (ex: `/criar-carrossel`), segue a lógica do command file. Quando user pede em linguagem natural ("cria um carrossel sobre X"), este SKILL dispatcha conforme tabela e workflows acima.
 
 | Categoria | Commands |
 |---|---|
@@ -412,6 +424,7 @@ Quando os subagents do marketing-os terminam sua parte, alguns outputs podem pre
 | Email | `/criar-email`, `/criar-sequencia` |
 | Ads | `/criar-anuncio`, `/publicar-anuncio` |
 | Infoproduto | `/criar-infoproduto` |
+| Oferta | `/criar-oferta` (arquitetura: value stack, preço, garantia, bônus) |
 | Voice clones | `/criar-clone` (expert externo via web research), `/criar-meu-clone` (suas amostras locais em `workspace/`) |
 | Análise | `/analisar-concorrencia`, `/analisar-video`, `/clonar-estrategia`, `/auditoria`, `/auditoria-pro` |
 | Visual | `/criar-brief-design`, `/gerar-imagem`, `/capturar-tela` |

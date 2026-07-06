@@ -1,7 +1,7 @@
 {
   "name": "marketing-os",
   "version": "6.9.0+codex.20260706",
-  "description": "Marketing OS para Codex: orquestrador de marketing digital em PT-BR com 18 especialistas, knowledge bases, templates e scripts Python.",
+  "description": "Marketing OS para Codex: orquestrador de marketing digital em PT-BR com 19 especialistas, knowledge bases, templates e scripts Python.",
   "author": {
     "name": "rilnermucio",
     "url": "https://github.com/rilnermucio"
@@ -24,7 +24,7 @@
   "interface": {
     "displayName": "Marketing OS",
     "shortDescription": "Crie copy, SEO, social, anúncios, emails, funis e lançamentos em PT-BR.",
-    "longDescription": "Marketing OS empacota para Codex o sistema de marketing digital deste repositório. Ele expõe a skill marketing-os como orquestrador e reutiliza os 18 especialistas, knowledge bases, templates, swipe files, workflows e scripts Python do projeto.",
+    "longDescription": "Marketing OS empacota para Codex o sistema de marketing digital deste repositório. Ele expõe a skill marketing-os como orquestrador e reutiliza os 19 especialistas, knowledge bases, templates, swipe files, workflows e scripts Python do projeto.",
     "developerName": "rilnermucio",
     "category": "Marketing",
     "capabilities": [

@@ -60,8 +60,16 @@ def test_readme_counts_match_filesystem():
             )
 
 
-def test_agents_count_is_eighteen():
-    assert len(AGENTS) == 18
+# Guard consciente: mudar este número exige atualizar contagens em README,
+# AGENTS.md, SKILL.md e manifests (tabela de sincronia no MAINTAINER-HANDBOOK).
+EXPECTED_AGENT_COUNT = 19  # 19º: mos-offer (jul/2026)
+
+
+def test_agents_count_matches_expected():
+    assert len(AGENTS) == EXPECTED_AGENT_COUNT, (
+        f"agents/mos-*.md tem {len(AGENTS)} arquivos, esperado {EXPECTED_AGENT_COUNT}. "
+        "Adicionou/removeu agent? Atualize EXPECTED_AGENT_COUNT e as contagens dos docs."
+    )
 
 
 def test_every_agent_references_an_existing_tier2_file():

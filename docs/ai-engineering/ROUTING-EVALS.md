@@ -26,10 +26,11 @@ Briefings de usuário em PT-BR (como chegam de verdade, sem jargão de sistema) 
 | RT-014 | narrar roteiro em áudio | `/narrar-roteiro` | audio | simples |
 | RT-015 | "por que o engajamento caiu?" | nenhum (linguagem natural) | analytics | simples |
 | RT-016 | carrossel 10 slides | `/criar-carrossel` | social + copy + design | paralelo |
-| RT-017 | montar oferta high-ticket | nenhum (ambiguidade conhecida) | infoproduct + copy | paralelo |
+| RT-017 | montar oferta high-ticket | `/criar-oferta` | offer | simples |
 | RT-018 | bio do Instagram | nenhum (linguagem natural) | copy | simples |
+| RT-019 | "quanto cobrar pela mentoria?" | nenhum (linguagem natural) | offer | simples |
 
-Casos RT-013 e RT-017 documentam gaps reais (agent órfão de command; ambiguidade sem regra de desempate). Eles existem pra medir se as futuras correções resolveram: quando `/criar-teste-ab` ou `mos-offer` existirem, atualize o gabarito no mesmo diff (e este resumo).
+RT-013 segue documentando um gap real (mos-ab-testing órfão de command); quando `/criar-teste-ab` existir, atualize o gabarito no mesmo diff (e este resumo). RT-017 era gap de ambiguidade e virou validação do desempate offer/copy/infoproduct/funnel criado com o `mos-offer` (jul/2026).
 
 ## Validação em duas camadas
 

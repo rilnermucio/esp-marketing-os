@@ -30,6 +30,7 @@ AGENTS_WITH_MEMORY = [
     "mos-funnel",
     "mos-infoproduct",
     "mos-launch",
+    "mos-offer",
     "mos-research",
     "mos-seo",
     "mos-social",

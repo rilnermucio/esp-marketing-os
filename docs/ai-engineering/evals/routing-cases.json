@@ -154,12 +154,12 @@
     {
       "id": "RT-017",
       "prompt": "monta minha oferta high-ticket com bônus e garantia",
-      "expected_command": null,
-      "expected_agents": ["mos-infoproduct", "mos-copy"],
-      "dispatch": "paralelo",
-      "min_output_fields": ["value stack", "precificação dos bônus", "estrutura de garantia", "comparação valor percebido vs preço"],
-      "detects": ["F-ROUTE-04"],
-      "notes": "Ambiguidade conhecida entre infoproduct/funnel/copy sem regra de desempate; mos-offer previsto no ROADMAP Fase 3. Atualizar quando existir."
+      "expected_command": "criar-oferta",
+      "expected_agents": ["mos-offer"],
+      "dispatch": "simples",
+      "min_output_fields": ["value stack com justificativa por item", "preço com ancoragem e parcelamento", "garantia com termos e sustentabilidade", "motivo real para agir", "offer score das arquiteturas"],
+      "detects": ["F-ROUTE-04", "F-ROUTE-02"],
+      "notes": "Era gap conhecido; mos-offer + desempate offer/copy/infoproduct/funnel entraram na SKILL em jul/2026. Este caso valida o desempate."
     },
     {
       "id": "RT-018",
@@ -170,6 +170,16 @@
       "min_output_fields": ["variações de bio dentro do limite de 150 caracteres", "CTA de bio"],
       "detects": ["F-COPY-03", "F-COST-01"],
       "notes": "Deve consultar assets/swipe-files/bios-instagram.md, não a KB inteira."
+    },
+    {
+      "id": "RT-019",
+      "prompt": "quanto devo cobrar pela minha mentoria em grupo de 6 meses?",
+      "expected_command": null,
+      "expected_agents": ["mos-offer"],
+      "dispatch": "simples",
+      "min_output_fields": ["faixa de preço com racional", "modelo de precificação", "âncora sugerida", "próximo passo de validação"],
+      "detects": ["F-ROUTE-02", "F-ROUTE-04"],
+      "notes": "Linguagem natural de precificação roteia pro mos-offer (não pro infoproduct nem pro funnel)."
     }
   ]
 }
