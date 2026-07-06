@@ -65,3 +65,4 @@ Todos os campos do template. "Evidências" exige dado verificado (output real de
 | 2026-07-06 | Release v6.11.0 | [2026-07-06-release-v6.11.0.md](worklogs/2026-07-06-release-v6.11.0.md) |
 | 2026-07-06 | Fase 2: mídia real (3 commands + composer) | [2026-07-06-fase2-midia-real.md](worklogs/2026-07-06-fase2-midia-real.md) |
 | 2026-07-06 | Release v6.12.0 | [2026-07-06-release-v6.12.0.md](worklogs/2026-07-06-release-v6.12.0.md) |
+| 2026-07-06 | Backlog via delegação Composer (3 ondas: housekeeping, Fase 4, Fase 3) | [2026-07-06-delegacao-composer.md](worklogs/2026-07-06-delegacao-composer.md) |

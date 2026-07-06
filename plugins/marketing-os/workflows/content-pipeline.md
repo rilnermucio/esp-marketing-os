@@ -1,5 +1,7 @@
 # Content Pipeline — Workflow de Produção Integrado
 
+> Workflow do Marketing OS. A numeração e os padrões de orquestração canônicos estão em `skills/marketing-os/SKILL.md` (seção "Padrões de Orquestração").
+
 ## Visão Geral
 
 O Content Pipeline é um workflow de produção de conteúdo que orquestra múltiplos subagentes em sequência para garantir qualidade e consistência em cada peça produzida.

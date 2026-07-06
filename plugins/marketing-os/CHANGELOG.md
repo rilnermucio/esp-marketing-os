@@ -7,6 +7,24 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
 
 ---
 
+---
+
+## [Unreleased]
+
+### Added
+- **Fase 3 do ROADMAP (completa)**: `mos-community` e `mos-partnerships` (20º e 21º especialistas).
+  - `agents/mos-community.md` + `subagents/community-agent.md`: triagem de comentários/DMs, fila de rascunhos com aprovação humana obrigatória, red team condicional em casos sensíveis.
+  - `agents/mos-partnerships.md` + `subagents/partnerships-agent.md`: sourcing de creators, fit score justificado, rascunhos de outreach (Gmail create_draft ou texto pronto, nunca send).
+  - New commands `/responder-comentarios` e `/prospectar-creators`.
+  - Desempates na SKILL: community vs social, partnerships vs research.
+  - Golden set: RT-024 e RT-025.
+  - Memory opt-in: 17 dos 21 agents (mos-community e mos-partnerships).
+- **Fase 4 do ROADMAP (loop de aprendizado)**: métricas reais alimentam as memories dos agents.
+  - New command `/aprender`: coleta no runtime (MCP ou export manual) → `metrics_collector.py` (normalização stdlib) → `mos-analytics` (interpretação por agent-dono) → `memory_writer.py` (persistência aprovada).
+  - `scripts/memory_writer.py` + `mos.py memory write`: append-only idempotente em `.claude/agent-memory/mos-*/MEMORY.md` com categorias, limite de 400 chars e 20 entradas/dia.
+  - `scripts/metrics_collector.py` + `mos.py metrics summarize`: top/bottom 3, candidatos >30% vs média, barra de amostra mínima.
+  - Golden set: RT-023 cobrindo roteamento de `/aprender`.
+
 ## v6.12.0 (2026-07-06)
 
 ### Added
@@ -162,7 +180,7 @@ Minor release adicionando integração opt-in com Apify Actors pra dois agents.
 
 ## [6.5.1] — 2026-05-09 (path canonicalization + post-v6.5.0 polish + validation docs)
 
-Patch release que distribui dois commits acumulados desde o tag v6.5.0 (1aa2a44, 1303771) e adiciona docs derivadas da validação completa da v6.5.0 ([VALIDATION-RESULTS-v6.5.0.md](docs/VALIDATION-RESULTS-v6.5.0.md)).
+Patch release que distribui dois commits acumulados desde o tag v6.5.0 (1aa2a44, 1303771) e adiciona docs derivadas da validação completa da v6.5.0 ([VALIDATION-RESULTS-v6.5.0.md](docs/archive/VALIDATION-RESULTS-v6.5.0.md)).
 
 ### Fixed
 
@@ -172,13 +190,13 @@ Patch release que distribui dois commits acumulados desde o tag v6.5.0 (1aa2a44,
 
 ### Added
 
-- `docs/VALIDATION-RESULTS-v6.5.0.md` — execução completa da VALIDATION-GUIDE 15 tests via `claude -p` (14/15 PASS, 1 deferido pra teste manual longitudinal).
+- `docs/archive/VALIDATION-RESULTS-v6.5.0.md` — execução completa da VALIDATION-GUIDE 15 tests via `claude -p` (14/15 PASS, 1 deferido pra teste manual longitudinal).
 - `CONTRIBUTING.md` — secao "Testando dispatches via `claude -p`" cobrindo namespace quirk (`/marketing-os:criar-X` em vez de `/criar-X`), AskUserQuestion limitation em -p, e flags uteis pra captura de dispatches.
 - `docs/TROUBLESHOOTING.md` — workaround para `claude plugin update marketing-os` falhar com "Plugin not found" (CLI): reinstall (`uninstall` + `install`) em vez de `update`.
 
 ### Notes
 
-Validacao end-to-end (memory persistence cross-session, T7 da VALIDATION-GUIDE) ainda pendente — agendado para 2026-05-11 (Calendar event externo). Resultados serao adicionados a VALIDATION-RESULTS-v6.5.0.md como `## T7 — Memory persistente (resultado)`.
+Validacao end-to-end (memory persistence cross-session, T7 da VALIDATION-GUIDE) ainda pendente — agendado para 2026-05-11 (Calendar event externo). Resultados serao adicionados a `docs/archive/VALIDATION-RESULTS-v6.5.0.md` como `## T7 — Memory persistente (resultado)`.
 
 ---
 

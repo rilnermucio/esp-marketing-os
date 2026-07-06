@@ -1,5 +1,7 @@
 # End-to-End Campaign Workflow — Da Estratégia à Publicação
 
+> Workflow do Marketing OS. A numeração e os padrões de orquestração canônicos estão em `skills/marketing-os/SKILL.md` (seção "Padrões de Orquestração").
+
 ## Visão Geral
 
 O End-to-End Campaign Workflow orquestra **todos os subagentes** do Marketing OS em uma cadeia completa: da definição de objetivo até a análise pós-campanha. É o workflow mais completo do sistema, ideal para campanhas de lançamento, promoções e conteúdo de alto impacto.

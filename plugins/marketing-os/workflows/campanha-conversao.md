@@ -1,5 +1,7 @@
 # 💰 Workflow: Campanha de Conversão
 
+> Workflow do Marketing OS. A numeração e os padrões de orquestração canônicos estão em `skills/marketing-os/SKILL.md` (seção "Padrões de Orquestração").
+
 Workflow para campanhas focadas em conversão (vendas, leads, inscrições).
 
 ---

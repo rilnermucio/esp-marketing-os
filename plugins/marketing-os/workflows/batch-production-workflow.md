@@ -1,5 +1,7 @@
 # Workflow: Produção em Batch de Conteúdo
 
+> Workflow do Marketing OS. A numeração e os padrões de orquestração canônicos estão em `skills/marketing-os/SKILL.md` (seção "Padrões de Orquestração").
+
 Processo completo para produzir Reels, Carrosséis e Cards Únicos em lote, maximizando eficiência e qualidade.
 
 ---

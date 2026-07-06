@@ -1,5 +1,7 @@
 # 🔍 Workflow: Buscar Trends TikTok via Chrome
 
+> Workflow do Marketing OS. A numeração e os padrões de orquestração canônicos estão em `skills/marketing-os/SKILL.md` (seção "Padrões de Orquestração").
+
 Este workflow permite que eu (Claude) navegue no TikTok usando o browser para encontrar vídeos virais por nicho, hashtag ou assunto.
 
 ---

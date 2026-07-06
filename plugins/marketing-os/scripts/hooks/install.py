@@ -16,6 +16,7 @@ Por que esse script existe:
     propagam via git. Quem cria novos mos-*.md localmente deve rodar este
     script para garantir que o quality gate esteja ativo em todos.
 """
+
 import os
 import re
 import sys
@@ -29,7 +30,9 @@ HOOK_BLOCK = """hooks:
           command: "python3 scripts/hooks/quality_gate_hook.py"
 """
 
-PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+PROJECT_ROOT = os.path.dirname(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+)
 AGENTS_DIR = os.path.join(PROJECT_ROOT, ".claude", "agents")
 
 
@@ -76,8 +79,10 @@ def main() -> int:
         name = os.path.basename(fp)
         print(f"  {result}: {name}")
 
-    print(f"\nTotal: {len(files)} arquivos | adicionados: {counts['ok']} | "
-          f"ja-tinham: {counts['skip-existing']} | pulados: {counts['skip-malformed']}")
+    print(
+        f"\nTotal: {len(files)} arquivos | adicionados: {counts['ok']} | "
+        f"ja-tinham: {counts['skip-existing']} | pulados: {counts['skip-malformed']}"
+    )
     return 0
 
 

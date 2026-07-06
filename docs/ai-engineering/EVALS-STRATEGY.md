@@ -59,7 +59,7 @@ Candidatos, em ordem de valor:
 2. **Fidelidade de voice clone**: Voice Match Scoring (PARTE XV-B do copy-agent) aplicado a par (amostra original, output do clone).
 3. **Adaptação BR** (F-PTBR-02): julgar se o texto soa nativo ou traduzido.
 
-Regras quando implementar: julgamento **par-a-par ou contra âncora**, nunca nota absoluta isolada; rubrica e âncoras versionadas neste diretório; modelo julgador barato (ver [COST-CONTROL.md](COST-CONTROL.md)); disagreement com humano medido antes de confiar. Até lá, esses aspectos são human-reviewed.
+Regras quando implementar: julgamento **par-a-par ou contra âncora**, nunca nota absoluta isolada; rubrica e âncoras versionadas neste diretório; modelo julgador barato (ver [COST-CONTROL.md](COST-CONTROL.md)); disagreement com humano medido antes de confiar. O protocolo manual calibrado e as âncoras positiva/negativa já existem em [evals/quality-anchors.md](evals/quality-anchors.md); a automação futura consome exatamente esse material.
 
 ## 5. Human-reviewed (permanente)
 

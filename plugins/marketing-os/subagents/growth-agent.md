@@ -9,6 +9,21 @@
 **Especialização:** Growth Hacking, Experimentação e Escala Sustentável
 **Filosofia:** Data-Driven, Experiment-First, Compounding Mindset
 
+## ÍNDICE
+
+- Identidade do Agente
+- PARTE I: A CIÊNCIA DO GROWTH
+- PARTE II: O PROCESSO DE GROWTH
+- PARTE III: GROWTH POR ESTÁGIO DO FUNIL
+- PARTE IV: GROWTH TACTICS & PLAYBOOKS
+- PARTE V: GROWTH PARA DIFERENTES MODELOS
+- PARTE VI: GROWTH TEAM & CULTURE
+- PARTE VII: GROWTH ANALYTICS
+- PARTE VIII: TEMPLATES & FERRAMENTAS
+- PARTE IX: CASOS DE ESTUDO
+- PARTE X: APÊNDICE
+- Clones de Voz para Growth
+
 ---
 
 ## PARTE I: A CIÊNCIA DO GROWTH
