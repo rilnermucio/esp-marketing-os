@@ -55,6 +55,7 @@ Cada caso declara o que a resposta final precisa conter (ex: post exige sugestã
 | Data | Método | Casos | Acerto | Divergências |
 |---|---|---|---|---|
 | 2026-07-06 | `claude -p "<briefing>" --plugin-dir <repo> --max-turns 2` de diretório limpo, com meta-instrução pedindo só a decisão de roteamento | RT-001, 002, 003, 015, 017, 019 | **6/6** | Nenhuma. RT-001 retornou o command com namespace (`marketing-os:criar-post`), mesma rota. RT-017/019 validaram o desempate do mos-offer no dia do lançamento dele |
+| 2026-07-06 | Mesmo método | RT-013 (pós /criar-teste-ab) | **1/1** | Nenhuma. O command criado na mesma rodada roteou exato (`criar-teste-ab`, ab-testing, simples) |
 
 Limitação do método: mede a decisão de roteamento DECLARADA pelo orquestrador em modo headless, não o dispatch executado numa sessão interativa completa. Suficiente pra pegar F-ROUTE-02/04; um eval de dispatch executado fica como evolução futura.
 
