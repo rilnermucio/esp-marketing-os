@@ -6375,7 +6375,7 @@ INT_Marketing-Digital_Broad_250205
 
 ---
 
-## CLONES DE VOZ PARA ANÚNCIOS (35 clones disponíveis)
+## CLONES DE VOZ PARA ANÚNCIOS (34 clones disponíveis)
 
 O Ads Agent acessa o sistema de **35 voice clones** em `assets/clones/` (cada um com 4 arquivos profundos: profile, voice, frameworks, examples).
 
@@ -6534,4 +6534,4 @@ Quando o usuário disser qualquer destes, ATIVE o protocolo de Read:
 
 *Última atualização: 2026-05-07*
 
-*Refresh: voice clones wired (35 clones), references/swipe-files/templates wired, CONAR/BR compliance, AI-Native Advertising 2026, Creator Ads (Spark/Partnership/Allowlist), Apify competitive intelligence, ad ethics, continuous optimization protocol.*
+*Refresh: voice clones wired (34 clones), references/swipe-files/templates wired, CONAR/BR compliance, AI-Native Advertising 2026, Creator Ads (Spark/Partnership/Allowlist), Apify competitive intelligence, ad ethics, continuous optimization protocol.*

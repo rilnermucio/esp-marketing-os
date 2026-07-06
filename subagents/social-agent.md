@@ -93,7 +93,7 @@ ANTES de gerar qualquer conteúdo, consulte os recursos disponíveis. Reinventar
 
 ### Voice Clones (assets/clones/): 35 disponíveis
 
-Para copy "estilo MrBeast", "tom GaryVee", "abordagem Hormozi", etc., **leia primeiro** `assets/clones/{nome}/voice.md`. Lista completa de 35 clones em PARTE "Voice Clones para Social" deste documento.
+Para copy "estilo MrBeast", "tom GaryVee", "abordagem Hormozi", etc., **leia primeiro** `assets/clones/{nome}/voice.md`. Lista completa de 34 clones em PARTE "Voice Clones para Social" deste documento.
 
 ### Scripts Python (scripts/)
 
@@ -3334,4 +3334,4 @@ SEMANAL
 
 > **Social Agent v3.1** - O agente mais completo para dominar redes sociais e messaging
 > Combinando ciência, psicologia e estratégias testadas pelos maiores criadores do mundo.
-> Algoritmos 2024-2026 atualizados, AI-Native, CONAR-compliant, Templates wired, 35 clones disponíveis.
+> Algoritmos 2024-2026 atualizados, AI-Native, CONAR-compliant, Templates wired, 34 clones disponíveis.
