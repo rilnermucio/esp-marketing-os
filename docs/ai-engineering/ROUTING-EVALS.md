@@ -33,6 +33,8 @@ Briefings de usuário em PT-BR (como chegam de verdade, sem jargão de sistema) 
 | RT-021 | thumbnail com texto | `/gerar-thumbnail` | video + ai-tools | sequencial (pipeline) |
 | RT-022 | reels renderizado com legenda | `/produzir-reels` | video → audio | sequencial |
 | RT-023 | aprender com métricas reais | `/aprender` | analytics | simples |
+| RT-024 | responder comentários com haters | `/responder-comentarios` | community | simples |
+| RT-025 | achar influencers skincare collab | `/prospectar-creators` | research → partnerships | sequencial |
 
 RT-013 e RT-017 eram gaps documentados (agent órfão de command; ambiguidade sem desempate) e viraram validações das correções: `/criar-teste-ab` e `mos-offer` + desempate na SKILL, ambos em jul/2026. O golden set não tem gaps abertos no momento; casos novos entram pelo protocolo da EVALS-STRATEGY §2.
 

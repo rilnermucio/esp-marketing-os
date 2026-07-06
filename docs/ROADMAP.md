@@ -32,8 +32,8 @@ O plugin **gera e valida**; quem executa/agenda é o MCP ou a ferramenta dedicad
 
 ### Fase 3: novos agents (puro "mais skill", encaixa no Tier-1/Tier-2)
 - ~~**mos-offer + `/criar-oferta`**~~ **ENTREGUE (jul/2026)**: arquitetura de oferta (Grand Slam, value stack, garantia, bônus) com desempate offer/copy/funnel/infoproduct na SKILL.md, memory opt-in e KB própria (`subagents/offer-agent.md`).
-- **mos-community + `/responder-comentarios`** — triagem e resposta de comentários/DMs no tom da marca (social-media-remote MCP, modo rascunho com confirmação humana).
-- **mos-partnerships + `/prospectar-creators`** — descoberta e outreach de creators (Gmail create_draft, nunca envio direto).
+- ~~**mos-community + `/responder-comentarios`**~~ **ENTREGUE (jul/2026)**: triagem e resposta de comentários/DMs no tom da marca (modo rascunho com confirmação humana; nunca publica sem aprovação).
+- ~~**mos-partnerships + `/prospectar-creators`**~~ **ENTREGUE (jul/2026)**: descoberta e outreach de creators (Gmail create_draft quando MCP disponível, nunca envio direto).
 
 ### Fase 4: loop de aprendizado (deixa as skills melhores com o tempo)
 - ~~**`scripts/memory_writer.py`**~~ **ENTREGUE (jul/2026)**: API append-only idempotente com schema anti-poluição (categorias, 400 chars, 20/dia) em `.claude/agent-memory/mos-*/MEMORY.md`.

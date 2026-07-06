@@ -6,7 +6,7 @@ This file provides guidance to AI coding agents (Claude Code, Codex CLI, Cursor,
 
 ## O que é este repositório
 
-Marketing OS é um **plugin do Claude Code e do Codex** (manifests em `.claude-plugin/` e `.codex-plugin/`) que distribui 19 subagents nativos especializados em marketing digital, mais 44 slash commands, knowledge bases, voice clones e scripts Python. O conteúdo é majoritariamente PT-BR e otimizado para o mercado brasileiro.
+Marketing OS é um **plugin do Claude Code e do Codex** (manifests em `.claude-plugin/` e `.codex-plugin/`) que distribui 21 subagents nativos especializados em marketing digital, mais 46 slash commands, knowledge bases, voice clones e scripts Python. O conteúdo é majoritariamente PT-BR e otimizado para o mercado brasileiro.
 
 Arquivos manifesto: `.claude-plugin/plugin.json` e `.claude-plugin/marketplace.json` (listagem de marketplace). O entrypoint da skill é `skills/marketing-os/SKILL.md`.
 
@@ -48,12 +48,12 @@ Processo canônico de manutenção do plugin, para humanos e agentes de IA. Ante
 
 A arquitetura crítica de entender antes de mexer em qualquer agent:
 
-- **Tier 1** — `agents/mos-*.md` (19 arquivos, ~250 linhas cada). System prompts enxutos com YAML frontmatter (`name`, `description`, `tools`, `model`, `color`, `hooks`, opcional `memory`). Carregados automaticamente pelo Claude Code quando a sessão abre. Contêm dispatch protocol, output schema e quality gates.
-- **Tier 2** — `subagents/*-agent.md` (19 arquivos, profundidade variável de ~400 a ~6,5 mil linhas). Knowledge base profunda: frameworks, cases, tabelas, exemplos. Lida sob demanda via `Read` pelos agents tier-1 quando precisam de profundidade. Os mais densos hoje: `copy-agent.md` (~5,3 mil linhas, inclui PARTE II-C Big Idea + Value Stack) e `funnel-agent.md` (~3,5 mil linhas, inclui Webinar Funnel 3.4, Página de Aplicação BOFU 3.5 e Anti-Avatar 4.6).
+- **Tier 1** — `agents/mos-*.md` (21 arquivos, ~250 linhas cada). System prompts enxutos com YAML frontmatter (`name`, `description`, `tools`, `model`, `color`, `hooks`, opcional `memory`). Carregados automaticamente pelo Claude Code quando a sessão abre. Contêm dispatch protocol, output schema e quality gates.
+- **Tier 2** — `subagents/*-agent.md` (21 arquivos, profundidade variável de ~400 a ~6,5 mil linhas). Knowledge base profunda: frameworks, cases, tabelas, exemplos. Lida sob demanda via `Read` pelos agents tier-1 quando precisam de profundidade. Os mais densos hoje: `copy-agent.md` (~5,3 mil linhas, inclui PARTE II-C Big Idea + Value Stack) e `funnel-agent.md` (~3,5 mil linhas, inclui Webinar Funnel 3.4, Página de Aplicação BOFU 3.5 e Anti-Avatar 4.6).
 
 Isso mantém contextos leves, carrega profundidade só quando precisa, e permite evoluir knowledge sem mexer no dispatch.
 
-15 dos 19 agents declaram `memory: project` no frontmatter (todos exceto `mos-ai-tools`, `mos-audio`, `mos-growth` e `mos-ab-testing`). Ver "Memory opt-in (per-projeto)" abaixo.
+17 dos 21 agents declaram `memory: project` no frontmatter (todos exceto `mos-ai-tools`, `mos-audio`, `mos-growth` e `mos-ab-testing`). Ver "Memory opt-in (per-projeto)" abaixo.
 
 A skill em `skills/marketing-os/SKILL.md` é um **orquestrador** — ela mapeia briefings de usuário para `Agent(subagent_type: "mos-*")` calls. Os symlinks dentro de `skills/marketing-os/` (`assets`, `references`, `scripts`, `subagents`, `workflows`) apontam para os diretórios da raiz.
 
@@ -71,7 +71,7 @@ Para qualquer pedido de produção de marketing (copy, SEO, post, anúncio, víd
 
 Mapeamento completo briefing → agent em `skills/marketing-os/SKILL.md` (seção "Mapa de Dispatch").
 
-Hoje 40 dos 44 slash commands em `commands/` dispatcham subagents. Os 2 commands premium na v6.8.0+ são `/auditoria` (multi-modal básico, ver `docs/AUDIT-CONFIG.md`) e `/auditoria-pro` (landing agency-grade com radar/screenshots/roadmap, ver `docs/AUDITORIA-PRO.md`). Os 4 sem dispatch são intencionais: `/publicar-notion` (utility do Notion MCP), `/campanha` (índice dos 6 sub-commands `/campanha-{preset}`), `/projeto` (workflow orchestrator com dispatch dinâmico por etapa) e `/datas-sazonais` (utilitário de dados do calendário sazonal BR, ver `scripts/seasonal_calendar_br.py`). Existe ainda `/mo` (meta-orquestrador) que recebe briefing aberto e roteia automaticamente. O teste `scripts/tests/test_commands_dispatch.py` trava regressão de cobertura: se você adicionar um command novo de produção, ele precisa dispatchar ou o teste falha.
+Hoje 42 dos 46 slash commands em `commands/` dispatcham subagents. Os 2 commands premium na v6.8.0+ são `/auditoria` (multi-modal básico, ver `docs/AUDIT-CONFIG.md`) e `/auditoria-pro` (landing agency-grade com radar/screenshots/roadmap, ver `docs/AUDITORIA-PRO.md`). Os 4 sem dispatch são intencionais: `/publicar-notion` (utility do Notion MCP), `/campanha` (índice dos 6 sub-commands `/campanha-{preset}`), `/projeto` (workflow orchestrator com dispatch dinâmico por etapa) e `/datas-sazonais` (utilitário de dados do calendário sazonal BR, ver `scripts/seasonal_calendar_br.py`). Existe ainda `/mo` (meta-orquestrador) que recebe briefing aberto e roteia automaticamente. O teste `scripts/tests/test_commands_dispatch.py` trava regressão de cobertura: se você adicionar um command novo de produção, ele precisa dispatchar ou o teste falha.
 
 ## Quality Gates Globais (aplicar SEMPRE antes de entregar)
 

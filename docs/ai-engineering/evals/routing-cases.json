@@ -224,6 +224,32 @@
       ],
       "detects": ["F-ROUTE-02"],
       "notes": "Loop Fase 4: coleta runtime → metrics_collector → mos-analytics → memory_writer com aprovação humana."
+    },
+    {
+      "id": "RT-024",
+      "prompt": "responde os comentários do meu último reels, tem uns haters lá",
+      "expected_command": "responder-comentarios",
+      "expected_agents": ["mos-community"],
+      "dispatch": "simples",
+      "min_output_fields": [
+        "fila de rascunhos classificados",
+        "ação recomendada por comentário",
+        "nada publicado sem aprovação"
+      ],
+      "detects": ["F-ROUTE-02"]
+    },
+    {
+      "id": "RT-025",
+      "prompt": "acha influenciadores de skincare pra fazer collab com a minha marca",
+      "expected_command": "prospectar-creators",
+      "expected_agents": ["mos-research", "mos-partnerships"],
+      "dispatch": "sequencial",
+      "min_output_fields": [
+        "shortlist com fit score justificado",
+        "rascunhos de outreach",
+        "modelo de parceria sugerido"
+      ],
+      "detects": ["F-ROUTE-02", "F-DISP-01"]
     }
   ]
 }

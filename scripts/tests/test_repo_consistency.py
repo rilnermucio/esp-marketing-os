@@ -62,7 +62,7 @@ def test_readme_counts_match_filesystem():
 
 # Guard consciente: mudar este número exige atualizar contagens em README,
 # AGENTS.md, SKILL.md e manifests (tabela de sincronia no MAINTAINER-HANDBOOK).
-EXPECTED_AGENT_COUNT = 19  # 19º: mos-offer (jul/2026)
+EXPECTED_AGENT_COUNT = 21  # 20º: mos-community, 21º: mos-partnerships (jul/2026)
 
 
 def test_agents_count_matches_expected():

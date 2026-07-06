@@ -12,6 +12,13 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
 ## [Unreleased]
 
 ### Added
+- **Fase 3 do ROADMAP (completa)**: `mos-community` e `mos-partnerships` (20º e 21º especialistas).
+  - `agents/mos-community.md` + `subagents/community-agent.md`: triagem de comentários/DMs, fila de rascunhos com aprovação humana obrigatória, red team condicional em casos sensíveis.
+  - `agents/mos-partnerships.md` + `subagents/partnerships-agent.md`: sourcing de creators, fit score justificado, rascunhos de outreach (Gmail create_draft ou texto pronto, nunca send).
+  - New commands `/responder-comentarios` e `/prospectar-creators`.
+  - Desempates na SKILL: community vs social, partnerships vs research.
+  - Golden set: RT-024 e RT-025.
+  - Memory opt-in: 17 dos 21 agents (mos-community e mos-partnerships).
 - **Fase 4 do ROADMAP (loop de aprendizado)**: métricas reais alimentam as memories dos agents.
   - New command `/aprender`: coleta no runtime (MCP ou export manual) → `metrics_collector.py` (normalização stdlib) → `mos-analytics` (interpretação por agent-dono) → `memory_writer.py` (persistência aprovada).
   - `scripts/memory_writer.py` + `mos.py memory write`: append-only idempotente em `.claude/agent-memory/mos-*/MEMORY.md` com categorias, limite de 400 chars e 20 entradas/dia.

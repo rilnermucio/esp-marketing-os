@@ -6,7 +6,7 @@ argument-hint: "[tipo-conteúdo] [nicho] [plataforma]"
 
 # Marketing OS: Sistema Operacional de Marketing Digital
 
-Este skill é um **orquestrador** para 19 especialistas de marketing. No Claude Code, ele usa subagents nativos. No Codex, ele usa a mesma arquitetura em modo compatível: roteia o briefing para o especialista correto, lê os arquivos Tier 1/Tier 2 necessários e, quando houver ferramenta de multi-agent disponível, pode paralelizar as etapas independentes.
+Este skill é um **orquestrador** para 21 especialistas de marketing. No Claude Code, ele usa subagents nativos. No Codex, ele usa a mesma arquitetura em modo compatível: roteia o briefing para o especialista correto, lê os arquivos Tier 1/Tier 2 necessários e, quando houver ferramenta de multi-agent disponível, pode paralelizar as etapas independentes.
 
 ## Modo de Operação: Orquestração por Ambiente
 
@@ -44,9 +44,9 @@ Quando o usuário não fornece contexto suficiente, **NÃO chute** — pergunte 
 
 ### Memory opt-in
 
-15 dos 19 agents têm `memory: project` no frontmatter e instruem persistir aprendizados em `.claude/agent-memory/mos-<agent>/MEMORY.md`:
+17 dos 21 agents têm `memory: project` no frontmatter e instruem persistir aprendizados em `.claude/agent-memory/mos-<agent>/MEMORY.md`:
 
-`mos-copy`, `mos-funnel`, `mos-design`, `mos-brand`, `mos-launch`, `mos-research`, `mos-social`, `mos-infoproduct`, `mos-ads`, `mos-analytics`, `mos-email`, `mos-seo`, `mos-offer`, `mos-storytelling`, `mos-video`
+`mos-ads`, `mos-analytics`, `mos-brand`, `mos-community`, `mos-copy`, `mos-design`, `mos-email`, `mos-funnel`, `mos-infoproduct`, `mos-launch`, `mos-offer`, `mos-partnerships`, `mos-research`, `mos-seo`, `mos-social`, `mos-storytelling`, `mos-video`
 
 Memory é **opt-in**: o diretório `.claude/agent-memory/` está gitignored (memory é per-projeto, não distribuída pelo plugin). Pra ativar nesse projeto, rode uma vez:
 
@@ -54,11 +54,11 @@ Memory é **opt-in**: o diretório `.claude/agent-memory/` está gitignored (mem
 python3 scripts/init_agent_memory.py
 ```
 
-Isso cria os 15 arquivos `MEMORY.md` placeholder. Depois disso os agents passam a gravar/ler patterns transferíveis (não conteúdo bruto). Sem o bootstrap, os agents seguem funcionando normalmente — só não persistem memory entre sessões.
+Isso cria os 17 arquivos `MEMORY.md` placeholder. Depois disso os agents passam a gravar/ler patterns transferíveis (não conteúdo bruto). Sem o bootstrap, os agents seguem funcionando normalmente — só não persistem memory entre sessões.
 
-Quando dispatchar qualquer dos 15 agents acima e o memory estiver ativo, **explicite no prompt**: "considere memory existente do cliente neste projeto". Os outros 4 agents (`mos-ai-tools`, `mos-audio`, `mos-growth`, `mos-ab-testing`) não têm memory — passe todos os inputs no prompt.
+Quando dispatchar qualquer dos 17 agents acima e o memory estiver ativo, **explicite no prompt**: "considere memory existente do cliente neste projeto". Os outros 4 agents (`mos-ai-tools`, `mos-audio`, `mos-growth`, `mos-ab-testing`) não têm memory — passe todos os inputs no prompt.
 
-## Mapa de Dispatch (19 Agents)
+## Mapa de Dispatch (21 Agents)
 
 | Briefing típico do usuário | Agent | Arquivo |
 |----|----|----|
@@ -80,6 +80,8 @@ Quando dispatchar qualquer dos 15 agents acima e o memory estiver ativo, **expli
 | "lançamento de produto / campanha de lançamento / PLF" | `mos-launch` | `agents/mos-launch.md` |
 | "infoproduto / curso / ebook / membership / mentoria" | `mos-infoproduct` | `agents/mos-infoproduct.md` |
 | "oferta / value stack / precificação / quanto cobrar / garantia / bônus / order bump" | `mos-offer` | `agents/mos-offer.md` |
+| "responder comentários / DMs / moderação / haters / caixa de perguntas / gestão de comentários" | `mos-community` | `agents/mos-community.md` |
+| "parceria / influenciador / creator / collab / permuta / embaixador / prospectar creators / outreach" | `mos-partnerships` | `agents/mos-partnerships.md` |
 | "teste A/B / variação / otimização de conversão" | `mos-ab-testing` | `agents/mos-ab-testing.md` |
 
 ### Desempate: `mos-brand` vs `mos-storytelling`
@@ -98,6 +100,22 @@ Briefings de "oferta" tocam 4 domínios. Regra pelo substantivo do pedido:
 - **`mos-funnel`**: ONDE cada oferta entra na jornada (tripwire vs core vs upsell como sequência de funil)
 
 Pedido composto "cria a oferta e a página": sequencial `mos-offer` → `mos-copy`, nunca paralelo (a página depende do stack fechado).
+
+### Desempate: `mos-community` vs `mos-social`
+
+Ambos tocam em redes sociais. Regra:
+- **`mos-social`**: CRIAR conteúdo novo (post, carrossel, calendário, legenda, bio)
+- **`mos-community`**: RESPONDER interações existentes (comentários, DMs, moderação, triagem de haters)
+
+Pedido "responde os comentários do meu último reels" → `mos-community`, não `mos-social`.
+
+### Desempate: `mos-partnerships` vs `mos-research`
+
+Ambos pesquisam mercado e audiência. Regra:
+- **`mos-research`**: analisar mercado, tendências, concorrentes, validar nicho (output = research brief)
+- **`mos-partnerships`**: fechar parceria com creator (output = shortlist + fit score + rascunhos de outreach acionáveis)
+
+Pedido composto "acha influencers e manda mensagem": sequencial `mos-research` → `mos-partnerships`. Sourcing sem outreach é só research; outreach sem validação de fit é só partnerships com lista fornecida.
 
 ### Caso composto: páginas (landing / aplicação / vendas)
 
@@ -412,7 +430,7 @@ Quando os subagents do marketing-os terminam sua parte, alguns outputs podem pre
 
 ## Slash commands rápidos
 
-44 commands em `commands/` são atalhos pra workflows comuns. Quando user invoca o command direto (ex: `/criar-carrossel`), segue a lógica do command file. Quando user pede em linguagem natural ("cria um carrossel sobre X"), este SKILL dispatcha conforme tabela e workflows acima.
+46 commands em `commands/` são atalhos pra workflows comuns. Quando user invoca o command direto (ex: `/criar-carrossel`), segue a lógica do command file. Quando user pede em linguagem natural ("cria um carrossel sobre X"), este SKILL dispatcha conforme tabela e workflows acima.
 
 | Categoria | Commands |
 |---|---|
@@ -425,6 +443,8 @@ Quando os subagents do marketing-os terminam sua parte, alguns outputs podem pre
 | Ads | `/criar-anuncio`, `/publicar-anuncio` |
 | Infoproduto | `/criar-infoproduto` |
 | Oferta | `/criar-oferta` (arquitetura: value stack, preço, garantia, bônus) |
+| Comunidade | `/responder-comentarios` (triagem + rascunhos de comentários/DMs) |
+| Parcerias | `/prospectar-creators` (shortlist + outreach de creators) |
 | Voice clones | `/criar-clone` (expert externo via web research), `/criar-meu-clone` (suas amostras locais em `workspace/`) |
 | Análise | `/analisar-concorrencia`, `/analisar-video`, `/clonar-estrategia`, `/auditoria`, `/auditoria-pro` |
 | Testes A/B | `/criar-teste-ab` (hipótese, amostra, duração, critério de parada) |
