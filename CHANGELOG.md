@@ -7,7 +7,7 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
 
 ---
 
-## [Unreleased]
+## v6.10.0 (2026-07-06)
 
 ### Added
 - **`mos-offer`, o 19º agent**: arquitetura de ofertas (equação de valor, Grand Slam Offer, value stack e bônus, garantias com nota CDC art. 49, precificação BR, escassez ética, Offer Score System). Nasce com paridade completa: opus, memory opt-in, pre-flight, auto-iteração com scoring e red team. KB própria `subagents/offer-agent.md` com índice.
