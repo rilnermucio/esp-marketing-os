@@ -2244,6 +2244,8 @@ FLUXO BÁSICO:
 
 ## Mestres das Redes Sociais e Suas Estratégias
 
+> **SNAPSHOT DATADO (início de 2026)**: estratégias de creators e algoritmos mudam trimestralmente. Antes de citar creator, tática ou benchmark desta seção, confirme o estado atual via WebSearch. Princípios de valor e consistência envelhecem bem; nomes, métricas e hacks específicos envelhecem mal.
+
 ### Referências por Plataforma
 
 ```

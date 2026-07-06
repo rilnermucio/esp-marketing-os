@@ -2904,6 +2904,8 @@ EXEMPLO - MENTORIA ELITE R$ 30.000:
 
 ## PARTE VII: SEQUÊNCIAS DE EMAIL DE LANÇAMENTO
 
+> Anatomia de email, fórmulas de subject line, preheader e deliverability: `subagents/email-agent.md` (PARTE III e 12.1). Nesta KB, apenas sequências, timing e copy por fase de lançamento (PPL, PL, CPL, carrinho).
+
 ### 7.1 Sequência PPL (Pré-Pré-Lançamento)
 
 ```

@@ -2958,6 +2958,8 @@ Use linear para email marketing geral
 
 ## PARTE XII: COMPLIANCE E REGULAMENTAÇÕES
 
+> Cobertura multi-canal completa (CONAR, LGPD, CDC, setoriais): `subagents/ads-agent.md` PARTE XVIII. Seções locais mantêm requisitos específicos de email e consentimento.
+
 ### 12.1 LGPD (Brasil)
 
 ```
