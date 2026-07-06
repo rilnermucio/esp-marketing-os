@@ -76,25 +76,25 @@ Invocados pelo orquestrador (skill `/marketing-os`) ou diretamente via `@<agente
 | Agente | Domínio | Memory |
 |---|---|---|
 | `@mos-copy` | Copywriting persuasivo (headlines, CTAs, sales letters) | sim |
-| `@mos-seo` | Otimização de busca (keywords, on-page, E-E-A-T, AI-SEO) | nao |
+| `@mos-seo` | Otimização de busca (keywords, on-page, E-E-A-T, AI-SEO) | não |
 | `@mos-social` | Posts e estratégia em redes sociais (cross-platform) | sim |
-| `@mos-video` | Roteiros (YouTube, Reels, TikTok, VSL, Shorts) | nao |
-| `@mos-audio` | Podcasts, audiobooks, spots, sound design | nao |
+| `@mos-video` | Roteiros (YouTube, Reels, TikTok, VSL, Shorts) | não |
+| `@mos-audio` | Podcasts, audiobooks, spots, sound design | não |
 | `@mos-design` | Direção visual, paletas, tipografia, design specs | sim |
-| `@mos-ai-tools` | Prompts pra Midjourney, Flux, Runway, Sora, etc. | nao |
-| `@mos-analytics` | Métricas, KPIs, dashboards, GA4 | nao |
-| `@mos-email` | Email marketing (welcome, nurture, vendas, automação) | nao |
+| `@mos-ai-tools` | Prompts pra Midjourney, Flux, Runway, Sora, etc. | não |
+| `@mos-analytics` | Métricas, KPIs, dashboards, GA4 | sim |
+| `@mos-email` | Email marketing (welcome, nurture, vendas, automação) | não |
 | `@mos-ads` | Anúncios pagos (Meta, Google, TikTok, LinkedIn) | sim |
 | `@mos-research` | Trend spotting, audience research, validação | sim |
 | `@mos-brand` | Identidade de marca, arquétipos, manifesto | sim |
-| `@mos-storytelling` | Narrativa aplicada (hero's journey, StoryBrand) | nao |
+| `@mos-storytelling` | Narrativa aplicada (hero's journey, StoryBrand) | não |
 | `@mos-funnel` | Funis de conversão, jornada (TOFU/MOFU/BOFU) | sim |
-| `@mos-growth` | Growth hacking, AARRR, retention | nao |
+| `@mos-growth` | Growth hacking, AARRR, retention | não |
 | `@mos-launch` | Lançamentos (PLF, semente, relâmpago, perpétuo) | sim |
 | `@mos-infoproduct` | Cursos, memberships, mentorias, ebooks | sim |
-| `@mos-ab-testing` | A/B/MVT, ICE prioritization, significância estatística | nao |
+| `@mos-ab-testing` | A/B/MVT, ICE prioritization, significância estatística | não |
 
-**Memory opt-in (9 agents).** `mos-copy`, `mos-funnel`, `mos-design`, `mos-brand`, `mos-launch`, `mos-research`, `mos-social`, `mos-infoproduct` e `mos-ads` podem persistir aprendizados entre sessões em `.claude/agent-memory/mos-*/MEMORY.md`. Para ativar, rode o bootstrap uma vez na raiz do projeto:
+**Memory opt-in (10 agents).** `mos-ads`, `mos-analytics`, `mos-brand`, `mos-copy`, `mos-design`, `mos-funnel`, `mos-infoproduct`, `mos-launch`, `mos-research` e `mos-social` podem persistir aprendizados entre sessões em `.claude/agent-memory/mos-*/MEMORY.md`. Para ativar, rode o bootstrap uma vez na raiz do projeto:
 
 ```bash
 python3 scripts/init_agent_memory.py
@@ -162,7 +162,7 @@ Marketing OS/
 │   ├── swipe-files/
 │   └── templates/
 ├── references/             # Guias técnicos por domínio
-├── scripts/                # 29 ferramentas Python + Tier 1 tests
+├── scripts/                # ferramentas Python, validações e Tier 1 tests
 │   ├── hooks/              # Quality gate hook (PreToolUse)
 │   └── tests/              # Suite pytest
 ├── docs/                   # Documentação técnica
@@ -172,7 +172,7 @@ Marketing OS/
 └── workspace/              # Área pessoal (gitignored)
 ```
 
-## Voice clones (36 perfis em `assets/clones/`)
+## Voice clones (34 perfis em `assets/clones/`)
 
 Copywriters/marketers lendários referenciados pelo `mos-copy` quando o briefing pede estilo específico:
 
@@ -200,14 +200,14 @@ python scripts/build_codex_plugin.py
 python scripts/build_codex_plugin.py --check
 python scripts/validate_codex_plugin.py plugins/marketing-os
 
-# Bootstrap memory (opt-in, 9 agents)
+# Bootstrap memory (opt-in, 10 agents)
 python3 scripts/init_agent_memory.py
 
 # CLI unificado das ferramentas
 python scripts/mos.py --help
 ```
 
-CI rodando em `.github/workflows/tests.yml`: 1070 testes Tier 1 (incluindo 148 test cases de dispatch dos commands), cobertura ≥50%, e job `validate-agents` em modo `--strict` em todo PR/push (pega regressão de frontmatter, knowledge refs quebrados, name collisions). Estado atual: **18/18 agents clean** no validator.
+CI rodando em `.github/workflows/tests.yml`: suite Tier 1, cobertura ≥50%, validação do pacote Codex e job `validate-agents` em modo `--strict` em todo PR/push (pega regressão de frontmatter, knowledge refs quebrados, name collisions). Estado atual: **18/18 agents clean** no validator.
 
 ## Documentação adicional
 
