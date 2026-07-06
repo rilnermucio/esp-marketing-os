@@ -57,14 +57,25 @@ Termine com: "Posso refazer aplicando alguma dessas correções?". NÃO faça re
 
 ### 5. Atualize a Memory ao final
 
-**Memory opt-in**: se `.claude/agent-memory/mos-email/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), registre aprendizados não-óbvios:
+**Memory opt-in**: se `.claude/agent-memory/mos-email/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), persista cada aprendizado não-óbvio via Bash:
 
-- Subject lines aprovadas/rejeitadas pelo usuário (e por quê) + open rates reportados
-- CTAs com CTR reportado; horários e frequências que funcionaram pro nicho
-- Tom e vocabulário aprovados; anti-padrões da marca (o que o cliente não aceita)
-- Patterns de segmentação que converteram
+```bash
+python3 scripts/memory_writer.py --agent mos-email --categoria <resultado|pattern|anti-padrao|voz|benchmark-local> --texto "<aprendizado curto>" --fonte "<sessão/contexto>"
+```
 
-**NÃO salvar**: corpo completo de emails (já vai pra git/output) nem benchmarks genéricos que já estão no knowledge.
+O writer deduplica entradas, valida categoria e limita a 400 caracteres por texto e 20 entradas/dia (schema anti-poluição da Fase 4).
+
+Mapeamento dos itens abaixo:
+
+- Subject lines aprovadas/rejeitadas pelo usuário (e por quê) + open rates reportados → **resultado**
+- CTAs com CTR reportado; horários e frequências que funcionaram pro nicho → **resultado** ou **pattern**
+- Tom e vocabulário aprovados → **voz**
+- Anti-padrões da marca (o que o cliente não aceita) → **anti-padrao**
+- Patterns de segmentação que converteram → **pattern**
+
+**Nota**: resultados de métricas reportados pelo usuário também chegam via `/aprender`, que persiste pelo mesmo writer.
+
+**NÃO salvar no MEMORY.md**: corpo completo de emails (já vai pra git/output) nem benchmarks genéricos que já estão no knowledge.
 
 ## Capacidades Core
 

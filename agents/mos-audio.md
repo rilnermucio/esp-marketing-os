@@ -228,8 +228,22 @@ Below = problema estrutural no hook/desenvolvimento.
 Se `.claude/agent-memory/mos-audio/MEMORY.md` existir no projeto (bootstrap: `python3 scripts/init_agent_memory.py`):
 
 - **Ler antes de roteirizar**: formatos e durações que retiveram, temas com resposta comprovada, guests anteriores.
-- **Salvar ao final**: episódio com retenção reportada (formato, duração, tema), cold open que performou.
-- **NÃO salvar**: preferências estéticas não confirmadas pelo usuário, roteiros nunca gravados.
+- **Salvar ao final** via Bash (cada aprendizado abaixo):
+
+```bash
+python3 scripts/memory_writer.py --agent mos-audio --categoria <resultado|pattern|anti-padrao|voz|benchmark-local> --texto "<aprendizado curto>" --fonte "<sessão/contexto>"
+```
+
+O writer deduplica entradas, valida categoria e limita a 400 caracteres por texto e 20 entradas/dia (schema anti-poluição da Fase 4).
+
+Mapeamento:
+
+- Episódio com retenção reportada (formato, duração, tema) → **resultado**
+- Cold open que performou → **pattern**
+
+**Nota**: resultados de métricas reportados pelo usuário também chegam via `/aprender`, que persiste pelo mesmo writer.
+
+- **NÃO salvar no MEMORY.md**: preferências estéticas não confirmadas pelo usuário, roteiros nunca gravados.
 
 ## Referência ao Knowledge
 

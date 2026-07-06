@@ -102,17 +102,27 @@ Apresente o critique LOGO ABAIXO do conteúdo. Termine com: "Vale ajustar antes 
 
 **OBRIGATÓRIO em posts de impacto** (alta performance, baixa performance surpreendente, post de lançamento):
 
-**Memory opt-in**: se `.claude/agent-memory/mos-social/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), atualize-o com:
+**Memory opt-in**: se `.claude/agent-memory/mos-social/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), persista cada aprendizado não-óbvio via Bash:
 
-- Hooks que funcionaram melhor por nicho/plataforma
-- Hashtags com performance comprovada (vs estimadas)
-- Horários ótimos descobertos pra audiência específica
-- Formats que pegaram (carrossel vs reels vs static) por nicho
-- Tons que ressoaram com a audiência
-- Trends que adaptamos com sucesso
-- Patterns de engajamento (qual tipo de pergunta gerou mais comentários)
+```bash
+python3 scripts/memory_writer.py --agent mos-social --categoria <resultado|pattern|anti-padrao|voz|benchmark-local> --texto "<aprendizado curto>" --fonte "<sessão/contexto>"
+```
 
-**NÃO salvar**: posts específicos, apenas patterns transferíveis.
+O writer deduplica entradas, valida categoria e limita a 400 caracteres por texto e 20 entradas/dia (schema anti-poluição da Fase 4).
+
+Mapeamento dos itens abaixo:
+
+- Hooks que funcionaram melhor por nicho/plataforma → **pattern** ou **resultado**
+- Hashtags com performance comprovada (vs estimadas) → **resultado**
+- Horários ótimos descobertos pra audiência específica → **pattern**
+- Formats que pegaram (carrossel vs reels vs static) por nicho → **pattern**
+- Tons que ressoaram com a audiência → **voz**
+- Trends que adaptamos com sucesso → **pattern**
+- Patterns de engajamento (qual tipo de pergunta gerou mais comentários) → **pattern**
+
+**Nota**: resultados de métricas reportados pelo usuário também chegam via `/aprender`, que persiste pelo mesmo writer.
+
+**NÃO salvar no MEMORY.md**: posts específicos, apenas patterns transferíveis.
 
 ### 8. Retorne no Output Schema
 

@@ -214,8 +214,23 @@ A régua é única para todo o Marketing OS e vive em `subagents/ab-testing-agen
 Se `.claude/agent-memory/mos-growth/MEMORY.md` existir no projeto (bootstrap: `python3 scripts/init_agent_memory.py`):
 
 - **Ler antes de propor**: experimentos já rodados (veredito ship/kill), canais que performam no nicho, benchmarks locais.
-- **Salvar ao final**: resultado de experimento com métrica e veredito, canal validado, benchmark local confirmado pelo usuário.
-- **NÃO salvar**: hipóteses não testadas, opiniões, playbook genérico (já está na KB).
+- **Salvar ao final** via Bash (cada aprendizado abaixo):
+
+```bash
+python3 scripts/memory_writer.py --agent mos-growth --categoria <resultado|pattern|anti-padrao|voz|benchmark-local> --texto "<aprendizado curto>" --fonte "<sessão/contexto>"
+```
+
+O writer deduplica entradas, valida categoria e limita a 400 caracteres por texto e 20 entradas/dia (schema anti-poluição da Fase 4).
+
+Mapeamento:
+
+- Resultado de experimento com métrica e veredito → **resultado**
+- Canal validado → **pattern**
+- Benchmark local confirmado pelo usuário → **benchmark-local**
+
+**Nota**: resultados de métricas reportados pelo usuário também chegam via `/aprender`, que persiste pelo mesmo writer.
+
+- **NÃO salvar no MEMORY.md**: hipóteses não testadas, opiniões, playbook genérico (já está na KB).
 
 ## Referência ao Knowledge
 

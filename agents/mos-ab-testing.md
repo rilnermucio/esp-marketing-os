@@ -230,8 +230,22 @@ Todo teste tem métricas que não podem piorar (ex: revenue não cai). Sem guard
 Se `.claude/agent-memory/mos-ab-testing/MEMORY.md` existir no projeto (bootstrap: `python3 scripts/init_agent_memory.py`):
 
 - **Ler antes de desenhar**: testes concluídos (elemento, uplift, significância), baselines reais do projeto.
-- **Salvar ao final**: teste concluído com veredito e números; elemento que se mostrou sensível (ou insensível) no público do projeto.
-- **NÃO salvar**: testes abortados sem dado, hipóteses não rodadas, benchmark externo (já está na KB).
+- **Salvar ao final** via Bash (cada aprendizado abaixo):
+
+```bash
+python3 scripts/memory_writer.py --agent mos-ab-testing --categoria <resultado|pattern|anti-padrao|voz|benchmark-local> --texto "<aprendizado curto>" --fonte "<sessão/contexto>"
+```
+
+O writer deduplica entradas, valida categoria e limita a 400 caracteres por texto e 20 entradas/dia (schema anti-poluição da Fase 4).
+
+Mapeamento:
+
+- Teste concluído com veredito e números → **resultado**
+- Elemento que se mostrou sensível (ou insensível) no público do projeto → **pattern**
+
+**Nota**: resultados de métricas reportados pelo usuário também chegam via `/aprender`, que persiste pelo mesmo writer.
+
+- **NÃO salvar no MEMORY.md**: testes abortados sem dado, hipóteses não rodadas, benchmark externo (já está na KB).
 
 ## Referência ao Knowledge
 

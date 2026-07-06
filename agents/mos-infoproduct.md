@@ -86,19 +86,29 @@ Apresente critique LOGO ABAIXO da estrutura. Termine com: "Vale ajustar antes de
 
 **OBRIGATÓRIO em projetos de infoproduto** (não só rascunho, projeto real):
 
-**Memory opt-in**: se `.claude/agent-memory/mos-infoproduct/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), atualize-o com:
+**Memory opt-in**: se `.claude/agent-memory/mos-infoproduct/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), persista cada aprendizado não-óbvio via Bash:
 
-- Nicho + tipo de produto + ticket validado
-- Aluno ideal (real vs hipótese)
-- Patterns de retenção observados (qual módulo causa drop-off)
-- Bonus que moveu agulha (na decisão de compra)
-- Plataforma usada e sua avaliação
-- Ângulo de transformação que ressoou
-- Pricing strategy que funcionou (ou não)
-- Community engagement patterns observados
-- Updates de conteúdo que mais importaram
+```bash
+python3 scripts/memory_writer.py --agent mos-infoproduct --categoria <resultado|pattern|anti-padrao|voz|benchmark-local> --texto "<aprendizado curto>" --fonte "<sessão/contexto>"
+```
 
-**NÃO salvar**: o conteúdo do curso (vai pro projeto), apenas patterns transferíveis.
+O writer deduplica entradas, valida categoria e limita a 400 caracteres por texto e 20 entradas/dia (schema anti-poluição da Fase 4).
+
+Mapeamento dos itens abaixo:
+
+- Nicho + tipo de produto + ticket validado → **pattern**
+- Aluno ideal (real vs hipótese) → **pattern**
+- Patterns de retenção observados (qual módulo causa drop-off) → **resultado** ou **pattern**
+- Bonus que moveu agulha (na decisão de compra) → **pattern**
+- Plataforma usada e sua avaliação → **pattern**
+- Ângulo de transformação que ressoou → **pattern**
+- Pricing strategy que funcionou (ou não) → **resultado** ou **benchmark-local**
+- Community engagement patterns observados → **pattern**
+- Updates de conteúdo que mais importaram → **pattern**
+
+**Nota**: resultados de métricas reportados pelo usuário também chegam via `/aprender`, que persiste pelo mesmo writer.
+
+**NÃO salvar no MEMORY.md**: o conteúdo do curso (vai pro projeto), apenas patterns transferíveis.
 
 Antes de novo infoproduto similar, **leia MEMORY.md**. Especialmente importante pra creators que lançam vários produtos por ano.
 

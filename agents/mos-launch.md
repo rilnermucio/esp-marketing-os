@@ -79,21 +79,31 @@ Apresente critique LOGO ABAIXO do plano. Termine com: "Vale ajustar antes de sub
 
 **OBRIGATÓRIO em todo lançamento que aconteceu** (não só plejado):
 
-**Memory opt-in**: se `.claude/agent-memory/mos-launch/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), atualize-o com:
+**Memory opt-in**: se `.claude/agent-memory/mos-launch/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), persista cada aprendizado não-óbvio via Bash:
 
-- Tipo de lançamento + ticket + audiência + duração
-- Conversion rate carrinho real vs estimada
-- ROAS real vs target
-- Email com maior open rate (subject line + posição na sequência)
-- Email com maior CTR (subject line + posição)
-- Ângulo de CPL que mais funcionou
-- Bonus que moveu agulha vs irrelevante
-- Hora de abertura/fechamento que performou melhor
-- Objeções recorrentes da audiência
-- O que FALHOU (lançamentos têm muito mais aprendizado em failure)
-- Plataforma usada (Hotmart/Kiwify/etc) + observações
+```bash
+python3 scripts/memory_writer.py --agent mos-launch --categoria <resultado|pattern|anti-padrao|voz|benchmark-local> --texto "<aprendizado curto>" --fonte "<sessão/contexto>"
+```
 
-**NÃO salvar**: assets do lançamento (já no projeto), apenas patterns transferíveis.
+O writer deduplica entradas, valida categoria e limita a 400 caracteres por texto e 20 entradas/dia (schema anti-poluição da Fase 4).
+
+Mapeamento dos itens abaixo:
+
+- Tipo de lançamento + ticket + audiência + duração → **pattern**
+- Conversion rate carrinho real vs estimada → **resultado**
+- ROAS real vs target → **resultado**
+- Email com maior open rate (subject line + posição na sequência) → **resultado**
+- Email com maior CTR (subject line + posição) → **resultado**
+- Ângulo de CPL que mais funcionou → **pattern**
+- Bonus que moveu agulha vs irrelevante → **pattern**
+- Hora de abertura/fechamento que performou melhor → **pattern**
+- Objeções recorrentes da audiência → **pattern**
+- O que FALHOU (lançamentos têm muito mais aprendizado em failure) → **anti-padrao**
+- Plataforma usada (Hotmart/Kiwify/etc) + observações → **pattern**
+
+**Nota**: resultados de métricas reportados pelo usuário também chegam via `/aprender`, que persiste pelo mesmo writer.
+
+**NÃO salvar no MEMORY.md**: assets do lançamento (já no projeto), apenas patterns transferíveis.
 
 Antes de novo lançamento similar, **leia MEMORY.md**. Padrões em lançamentos compoundam fortemente.
 

@@ -233,16 +233,26 @@ Matemática básica: sem essa relação, funil não escala. Validar ou alertar.
 
 **OBRIGATÓRIO em funis que entraram em produção** (não rascunho, funil real rodando com tráfego):
 
-**Memory opt-in**: se `.claude/agent-memory/mos-funnel/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), atualize-o com:
+**Memory opt-in**: se `.claude/agent-memory/mos-funnel/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), persista cada aprendizado não-óbvio via Bash:
 
-- Conversion rate por etapa (real vs estimada) por nicho/ticket
-- Lead magnets que validaram-se (qualificação real do lead capturado)
-- Tripwires que aumentaram conversão do core offer (vs hipótese)
-- Pontos de queda recorrentes no funil (etapa onde mais perde lead)
-- Sequências de email dentro do funil que converteram melhor (assunto + posição)
-- Upsell/downsell que moveram agulha (oferta + posição no checkout)
+```bash
+python3 scripts/memory_writer.py --agent mos-funnel --categoria <resultado|pattern|anti-padrao|voz|benchmark-local> --texto "<aprendizado curto>" --fonte "<sessão/contexto>"
+```
 
-**NÃO salvar**: o desenho do funil em si (vai pra git/output), info genérica que está no Tier 2.
+O writer deduplica entradas, valida categoria e limita a 400 caracteres por texto e 20 entradas/dia (schema anti-poluição da Fase 4).
+
+Mapeamento dos itens abaixo:
+
+- Conversion rate por etapa (real vs estimada) por nicho/ticket → **resultado** ou **benchmark-local**
+- Lead magnets que validaram-se (qualificação real do lead capturado) → **pattern**
+- Tripwires que aumentaram conversão do core offer (vs hipótese) → **resultado**
+- Pontos de queda recorrentes no funil (etapa onde mais perde lead) → **pattern**
+- Sequências de email dentro do funil que converteram melhor (assunto + posição) → **resultado**
+- Upsell/downsell que moveram agulha (oferta + posição no checkout) → **resultado**
+
+**Nota**: resultados de métricas reportados pelo usuário também chegam via `/aprender`, que persiste pelo mesmo writer.
+
+**NÃO salvar no MEMORY.md**: o desenho do funil em si (vai pra git/output), info genérica que está no Tier 2.
 
 ## Referência ao Knowledge
 

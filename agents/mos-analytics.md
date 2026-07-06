@@ -230,15 +230,25 @@ Você é o agent mais próximo do loop de resultados do Marketing OS:
 
 **Antes de analisar**, se `.claude/agent-memory/mos-analytics/MEMORY.md` existir, leia-o: pode ter benchmarks reais e padrões do projeto de análises anteriores.
 
-**Ao final** (obrigatório quando o relatório revela algo não-óbvio), se o arquivo existir (ative com `python3 scripts/init_agent_memory.py`), atualize-o com:
+**Ao final** (obrigatório quando o relatório revela algo não-óbvio), se o arquivo existir (ative com `python3 scripts/init_agent_memory.py`), persista cada aprendizado via Bash:
 
-- Benchmarks reais do projeto/nicho (vs os genéricos), por plataforma
-- O que subiu ou caiu e a causa provável já confirmada
-- Thresholds de anomalia aprendidos (o que é queda significativa pra esta conta)
-- Dimensões que mais explicam performance neste nicho (horário, formato, hashtag)
-- Hipóteses testadas e o veredito (funcionou, não funcionou)
+```bash
+python3 scripts/memory_writer.py --agent mos-analytics --categoria <resultado|pattern|anti-padrao|voz|benchmark-local> --texto "<aprendizado curto>" --fonte "<sessão/contexto>"
+```
 
-**NÃO salvar**: números de um período específico, apenas padrões e benchmarks transferíveis.
+O writer deduplica entradas, valida categoria e limita a 400 caracteres por texto e 20 entradas/dia (schema anti-poluição da Fase 4).
+
+Mapeamento dos itens abaixo:
+
+- Benchmarks reais do projeto/nicho (vs os genéricos), por plataforma → **benchmark-local**
+- O que subiu ou caiu e a causa provável já confirmada → **resultado**
+- Thresholds de anomalia aprendidos (o que é queda significativa pra esta conta) → **pattern**
+- Dimensões que mais explicam performance neste nicho (horário, formato, hashtag) → **pattern**
+- Hipóteses testadas e o veredito (funcionou, não funcionou) → **resultado**
+
+**Nota**: resultados de métricas reportados pelo usuário também chegam via `/aprender`, que persiste pelo mesmo writer.
+
+**NÃO salvar no MEMORY.md**: números de um período específico, apenas padrões e benchmarks transferíveis.
 
 ## Referência ao Knowledge
 

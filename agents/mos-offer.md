@@ -31,8 +31,9 @@ Antes de arquitetar, **se a peça for oferta core, high-ticket ou reformulação
 
 1. **SEMPRE leia primeiro** a seção relevante de `subagents/offer-agent.md` (fundamentos e equação de valor, Grand Slam Offer, value stack e bônus, garantias, precificação, escassez ética, Offer Score, ofertas por modelo de negócio).
 2. **Memory opt-in**: se `.claude/agent-memory/mos-offer/MEMORY.md` existir, leia antes: pode ter ofertas que converteram neste projeto, garantias que seguraram refund e objeções recorrentes do nicho.
-3. **Aplicação em copy**: a escrita persuasiva do stack (como apresentar na página) está em `subagents/copy-agent.md` PARTE II-C; aqui mora a engenharia. Ao terminar, o handoff natural é pro `mos-copy`.
-4. **Use WebSearch** para validar preços de alternativas/concorrentes citados e claims de mercado (fact-check obrigatório).
+3. **Swipe file pessoal (vivo)**: se `workspace/swipe-files/ofertas-aprovadas.md` existir no projeto, leia ANTES de arquitetar. Ele contém ofertas aprovadas deste usuário e pesa mais que referência genérica.
+4. **Aplicação em copy**: a escrita persuasiva do stack (como apresentar na página) está em `subagents/copy-agent.md` PARTE II-C; aqui mora a engenharia. Ao terminar, o handoff natural é pro `mos-copy`.
+5. **Use WebSearch** para validar preços de alternativas/concorrentes citados e claims de mercado (fact-check obrigatório).
 
 ### 2. Auto-iteração de arquiteturas (antes de entregar)
 
@@ -57,14 +58,26 @@ Termine com: "Posso refazer aplicando alguma dessas correções?". NÃO faça re
 
 ### 5. Atualize a Memory ao final
 
-**Memory opt-in**: se `.claude/agent-memory/mos-offer/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), registre aprendizados não-óbvios:
+**Memory opt-in**: se `.claude/agent-memory/mos-offer/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), persista cada aprendizado não-óbvio via Bash:
 
-- Ofertas aprovadas e resultados reportados (take rate, refund, ticket médio)
-- Garantias que o usuário aceitou operar (e as que recusou, com motivo)
-- Bônus com percepção de valor alta no nicho; objeções recorrentes e o elemento de oferta que as neutralizou
-- Faixas de preço validadas por nicho/modelo
+```bash
+python3 scripts/memory_writer.py --agent mos-offer --categoria <resultado|pattern|anti-padrao|voz|benchmark-local> --texto "<aprendizado curto>" --fonte "<sessão/contexto>"
+```
 
-**NÃO salvar**: a oferta completa (vai pra git/output) nem frameworks genéricos que já estão no knowledge.
+O writer deduplica entradas, valida categoria e limita a 400 caracteres por texto e 20 entradas/dia (schema anti-poluição da Fase 4).
+
+Mapeamento dos itens abaixo:
+
+- Ofertas aprovadas e resultados reportados (take rate, refund, ticket médio) → **resultado**
+- Garantias que o usuário aceitou operar (e as que recusou, com motivo) → **pattern** ou **anti-padrao**
+- Bônus com percepção de valor alta no nicho; objeções recorrentes e o elemento de oferta que as neutralizou → **pattern**
+- Faixas de preço validadas por nicho/modelo → **benchmark-local**
+
+**Nota**: resultados de métricas reportados pelo usuário também chegam via `/aprender`, que persiste pelo mesmo writer.
+
+**Swipe file pessoal**: quando o usuário aprovar a oferta ou reportar resultado (take rate, refund), faça append em `workspace/swipe-files/ofertas-aprovadas.md` (crie o arquivo na primeira vez; `workspace/` é pessoal e gitignored). Formato: modelo, promessa, stack resumido, preço, take rate/refund se houver, data. Lido no início de toda sessão (ver Protocolo §1).
+
+**NÃO salvar no MEMORY.md**: a oferta completa (vai pro swipe file pessoal acima ou git/output) nem frameworks genéricos que já estão no knowledge.
 
 ## Capacidades Core
 

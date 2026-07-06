@@ -101,16 +101,26 @@ Apresente critique LOGO ABAIXO do brief. Termine com: "Vale ajustar antes de pro
 
 **OBRIGATÓRIO em projetos de impacto** (identidade visual nova, KV de campaign, design system):
 
-**Memory opt-in**: se `.claude/agent-memory/mos-design/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), atualize-o com:
+**Memory opt-in**: se `.claude/agent-memory/mos-design/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), persista cada aprendizado não-óbvio via Bash:
 
-- Paletas que ressoaram com a audiência específica (vs hipótese)
-- Fonts que validaram-se em uso real (legibilidade, brand fit)
-- Tendências que aplicamos com sucesso (e que envelheceram)
-- Briefs que se traduziram em design forte (vs briefs que falharam)
-- Patterns culturais BR observados em audiência específica
-- Plataformas com peculiaridades aprendidas
+```bash
+python3 scripts/memory_writer.py --agent mos-design --categoria <resultado|pattern|anti-padrao|voz|benchmark-local> --texto "<aprendizado curto>" --fonte "<sessão/contexto>"
+```
 
-**NÃO salvar**: briefs específicos (ficam no projeto), apenas patterns transferíveis.
+O writer deduplica entradas, valida categoria e limita a 400 caracteres por texto e 20 entradas/dia (schema anti-poluição da Fase 4).
+
+Mapeamento dos itens abaixo:
+
+- Paletas que ressoaram com a audiência específica (vs hipótese) → **resultado** ou **pattern**
+- Fonts que validaram-se em uso real (legibilidade, brand fit) → **pattern**
+- Tendências que aplicamos com sucesso (e que envelheceram) → **pattern** ou **anti-padrao**
+- Briefs que se traduziram em design forte (vs briefs que falharam) → **pattern**
+- Patterns culturais BR observados em audiência específica → **pattern**
+- Plataformas com peculiaridades aprendidas → **pattern**
+
+**Nota**: resultados de métricas reportados pelo usuário também chegam via `/aprender`, que persiste pelo mesmo writer.
+
+**NÃO salvar no MEMORY.md**: briefs específicos (ficam no projeto), apenas patterns transferíveis.
 
 ### 7. Para gerar a imagem em si
 

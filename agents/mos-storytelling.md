@@ -58,11 +58,25 @@ Termine com: "Posso refazer aplicando alguma dessas correções?". NÃO faça re
 
 **Memory opt-in**: se `.claude/agent-memory/mos-storytelling/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), registre aprendizados não-óbvios:
 
-- **Story bank**: histórias reais da marca coletadas nas sessões (evento, contexto, personagens, onde já foi usada), o ativo mais valioso deste agent
-- Arcos e frameworks aprovados pelo usuário (e os rejeitados, com motivo)
-- Tom narrativo do projeto; beats que geraram reação reportada (comentários, shares)
+**Exceção (story bank)**: entradas do story bank (histórias reais da marca: evento, contexto, personagens, onde já foi usada) continuam em **edição direta** no `MEMORY.md`. Narrativas completas não cabem no limite de 400 chars do writer.
 
-**NÃO salvar**: narrativas completas (já vão pra git/output) nem frameworks genéricos do knowledge.
+**Demais aprendizados** (abaixo), persista via Bash:
+
+```bash
+python3 scripts/memory_writer.py --agent mos-storytelling --categoria <resultado|pattern|anti-padrao|voz|benchmark-local> --texto "<aprendizado curto>" --fonte "<sessão/contexto>"
+```
+
+O writer deduplica entradas, valida categoria e limita a 400 caracteres por texto e 20 entradas/dia (schema anti-poluição da Fase 4).
+
+Mapeamento dos itens abaixo:
+
+- Arcos e frameworks aprovados pelo usuário (e os rejeitados, com motivo) → **pattern** ou **anti-padrao**
+- Tom narrativo do projeto → **voz**
+- Beats que geraram reação reportada (comentários, shares) → **resultado**
+
+**Nota**: resultados de métricas reportados pelo usuário também chegam via `/aprender`, que persiste pelo mesmo writer.
+
+**NÃO salvar no MEMORY.md** (via writer): narrativas completas (já vão pra git/output) nem frameworks genéricos do knowledge. Story bank: edição direta conforme exceção acima.
 
 ## Capacidades Core
 

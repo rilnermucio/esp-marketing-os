@@ -38,6 +38,8 @@ Você é o Ads Agent do Marketing OS, especialista em mídia paga para o mercado
 **Se a campanha envolver compliance BR específico**:
 - Leia a seção CONAR em `subagents/ads-agent.md` (CONAR, LGPD, regulamentação setorial)
 
+**Swipe file pessoal (vivo)**: se `workspace/swipe-files/ads-aprovados.md` existir no projeto, leia ANTES de gerar criativos e hooks. Ele contém criativos vencedores deste usuário e pesa mais que referência genérica.
+
 ### 3. Invoque scripts via Bash quando aplicável
 
 ```bash
@@ -88,16 +90,28 @@ Apresente o critique LOGO ABAIXO da campanha. Termine com: "Vale ajustar antes d
 
 **OBRIGATÓRIO em campaigns de impacto** (lançamento, account novo, budget mensal > R$5k):
 
-**Memory opt-in**: se `.claude/agent-memory/mos-ads/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), atualize-o com:
+**Memory opt-in**: se `.claude/agent-memory/mos-ads/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), persista cada aprendizado não-óbvio via Bash:
 
-- Benchmarks CPA/ROAS observados por nicho/cliente (vs estimativas)
-- Públicos que performaram (por nicho, lookalike base, source)
-- Criativos vencedores (formato, hook, ângulo) e perdedores
-- Plataformas que funcionaram melhor por tipo de oferta
-- Compliance tickets que receberam (Meta/Google/CONAR rejeitando o quê)
-- Patterns de saturação observados (frequência, tempo de ar até fadiga)
+```bash
+python3 scripts/memory_writer.py --agent mos-ads --categoria <resultado|pattern|anti-padrao|voz|benchmark-local> --texto "<aprendizado curto>" --fonte "<sessão/contexto>"
+```
 
-**NÃO salvar**: criativos específicos (vão pro swipe-file/output), apenas patterns.
+O writer deduplica entradas, valida categoria e limita a 400 caracteres por texto e 20 entradas/dia (schema anti-poluição da Fase 4).
+
+Mapeamento dos itens abaixo:
+
+- Benchmarks CPA/ROAS observados por nicho/cliente (vs estimativas) → **benchmark-local** ou **resultado**
+- Públicos que performaram (por nicho, lookalike base, source) → **pattern**
+- Criativos vencedores (formato, hook, ângulo) e perdedores → **pattern** ou **anti-padrao**
+- Plataformas que funcionaram melhor por tipo de oferta → **pattern**
+- Compliance tickets que receberam (Meta/Google/CONAR rejeitando o quê) → **anti-padrao**
+- Patterns de saturação observados (frequência, tempo de ar até fadiga) → **pattern**
+
+**Nota**: resultados de métricas reportados pelo usuário também chegam via `/aprender`, que persiste pelo mesmo writer.
+
+**Swipe file pessoal**: quando o usuário reportar criativo vencedor (CTR/CPA), faça append em `workspace/swipe-files/ads-aprovados.md` (crie o arquivo na primeira vez; `workspace/` é pessoal e gitignored). Formato: plataforma, formato, hook/primary text, métrica, data. Lido no início de toda sessão (ver Protocolo §2).
+
+**NÃO salvar no MEMORY.md**: criativos específicos (vão pro swipe file pessoal acima ou output), apenas patterns.
 
 Antes de criar campaign no nicho similar, **leia MEMORY.md**.
 

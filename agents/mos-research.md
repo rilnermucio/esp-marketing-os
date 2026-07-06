@@ -105,16 +105,26 @@ Apresente o critique LOGO ABAIXO do Brief. Termine com: "Vale ajustar alguma con
 
 **OBRIGATÓRIO em research de impacto** (research que vai informar lançamento, decisão de pivot, ou que descobriu insight significativo):
 
-**Memory opt-in**: se `.claude/agent-memory/mos-research/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), atualize-o com:
+**Memory opt-in**: se `.claude/agent-memory/mos-research/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), persista cada aprendizado não-óbvio via Bash:
 
-- Hipóteses iniciais → validadas/invalidadas (com evidência)
-- Fontes BR confiáveis descobertas no nicho
-- Personas validadas (e onde foram salvas se viraram persona pré-construída nova)
-- Concorrentes descobertos no nicho com posicionamento
-- Patterns de research que funcionaram (queries, ângulos)
-- Sources com viés conhecido (a evitar ou contextualizar)
+```bash
+python3 scripts/memory_writer.py --agent mos-research --categoria <resultado|pattern|anti-padrao|voz|benchmark-local> --texto "<aprendizado curto>" --fonte "<sessão/contexto>"
+```
 
-**NÃO salvar**: dados específicos com data (envelhecem rápido), apenas patterns/aprendizados sobre o processo.
+O writer deduplica entradas, valida categoria e limita a 400 caracteres por texto e 20 entradas/dia (schema anti-poluição da Fase 4).
+
+Mapeamento dos itens abaixo:
+
+- Hipóteses iniciais → validadas/invalidadas (com evidência) → **resultado**
+- Fontes BR confiáveis descobertas no nicho → **pattern**
+- Personas validadas (e onde foram salvas se viraram persona pré-construída nova) → **pattern**
+- Concorrentes descobertos no nicho com posicionamento → **pattern**
+- Patterns de research que funcionaram (queries, ângulos) → **pattern**
+- Sources com viés conhecido (a evitar ou contextualizar) → **anti-padrao**
+
+**Nota**: resultados de métricas reportados pelo usuário também chegam via `/aprender`, que persiste pelo mesmo writer.
+
+**NÃO salvar no MEMORY.md**: dados específicos com data (envelhecem rápido), apenas patterns/aprendizados sobre o processo.
 
 Antes de iniciar research no mesmo nicho, **leia MEMORY.md** se existir.
 

@@ -217,8 +217,22 @@ Cada ferramenta tem params próprios. Não misturar. Ex: `--ar 9:16 --v 6 --styl
 Se `.claude/agent-memory/mos-ai-tools/MEMORY.md` existir no projeto (bootstrap: `python3 scripts/init_agent_memory.py`):
 
 - **Ler antes de escrever**: prompts que geraram resultado aprovado (ferramenta + modelo + contexto), estilos recorrentes da marca.
-- **Salvar ao final**: prompt aprovado pelo usuário com ferramenta/modelo/params usados; artefato recorrente e o negative prompt que o resolveu.
-- **NÃO salvar**: prompts entregues mas nunca avaliados, params não verificados.
+- **Salvar ao final** via Bash (cada aprendizado abaixo):
+
+```bash
+python3 scripts/memory_writer.py --agent mos-ai-tools --categoria <resultado|pattern|anti-padrao|voz|benchmark-local> --texto "<aprendizado curto>" --fonte "<sessão/contexto>"
+```
+
+O writer deduplica entradas, valida categoria e limita a 400 caracteres por texto e 20 entradas/dia (schema anti-poluição da Fase 4).
+
+Mapeamento:
+
+- Prompt aprovado pelo usuário com ferramenta/modelo/params usados → **resultado** ou **pattern**
+- Artefato recorrente e o negative prompt que o resolveu → **pattern**
+
+**Nota**: resultados de métricas reportados pelo usuário também chegam via `/aprender`, que persiste pelo mesmo writer.
+
+- **NÃO salvar no MEMORY.md**: prompts entregues mas nunca avaliados, params não verificados.
 
 ## Referência ao Knowledge
 

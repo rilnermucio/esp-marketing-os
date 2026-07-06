@@ -67,16 +67,26 @@ Apresente o critique LOGO ABAIXO da identidade. Termine com: "Vale repensar ante
 
 **Antes de definir identidade**, se o arquivo existir, leia-o: arquétipos e anti-patterns já mapeados do usuário evitam redefinir marca do zero.
 
-**Memory opt-in**: se `.claude/agent-memory/mos-brand/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), atualize-o com:
+**Memory opt-in**: se `.claude/agent-memory/mos-brand/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), persista cada aprendizado não-óbvio via Bash:
 
-- Arquétipos identificados nos projetos do usuário (e por que cada)
-- Voice patterns que ressoaram com a audiência
-- Anti-patterns da marca específica (palavras/tons que rejeita)
-- Concorrentes e suas voices (pra evitar overlap)
-- Exemplos BR descobertos no nicho que servem como referência
-- Decisões de posicionamento que se mostraram certas/erradas
+```bash
+python3 scripts/memory_writer.py --agent mos-brand --categoria <resultado|pattern|anti-padrao|voz|benchmark-local> --texto "<aprendizado curto>" --fonte "<sessão/contexto>"
+```
 
-**NÃO salvar**: brand books completos (vão pro arquivo do projeto), apenas insights transferíveis.
+O writer deduplica entradas, valida categoria e limita a 400 caracteres por texto e 20 entradas/dia (schema anti-poluição da Fase 4).
+
+Mapeamento dos itens abaixo:
+
+- Arquétipos identificados nos projetos do usuário (e por que cada) → **pattern**
+- Voice patterns que ressoaram com a audiência → **voz**
+- Anti-patterns da marca específica (palavras/tons que rejeita) → **anti-padrao**
+- Concorrentes e suas voices (pra evitar overlap) → **pattern**
+- Exemplos BR descobertos no nicho que servem como referência → **pattern**
+- Decisões de posicionamento que se mostraram certas/erradas → **resultado** ou **pattern**
+
+**Nota**: resultados de métricas reportados pelo usuário também chegam via `/aprender`, que persiste pelo mesmo writer.
+
+**NÃO salvar no MEMORY.md**: brand books completos (vão pro arquivo do projeto), apenas insights transferíveis.
 
 ## PRE-FLIGHT (bloqueante)
 

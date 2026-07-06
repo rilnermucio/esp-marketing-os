@@ -16,6 +16,8 @@ WORKSPACE_REF_ALLOWLIST = {
     "commands/projeto.md",  # manages user-side projects in workspace/projects/<slug>/
     "skills/marketing-os/SKILL.md",  # documents that /criar-meu-clone reads from workspace/
     "agents/mos-copy.md",  # swipe file pessoal: lê/escreve winners em workspace/swipe-files/aprovados.md
+    "agents/mos-ads.md",  # swipe file pessoal: lê/escreve criativos vencedores em workspace/swipe-files/ads-aprovados.md
+    "agents/mos-offer.md",  # swipe file pessoal: lê/escreve ofertas aprovadas em workspace/swipe-files/ofertas-aprovadas.md
     "subagents/copy-agent.md",  # documenta o loop de swipe-files vivos (trilho 1 em workspace/)
     "commands/otimizar-copy.md",  # aponta winners do teste pro swipe file pessoal em workspace/
     "commands/renderizar-imagem.md",  # salva PNGs gerados em workspace/media/imagens/
