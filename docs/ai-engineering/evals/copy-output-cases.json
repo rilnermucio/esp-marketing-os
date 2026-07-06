@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "descricao": "Golden briefs do eval de output do mos-copy. Cenarios fixos com TODOS os inputs de pre-flight preenchidos (o agent nao pode bloquear nem perguntar). Protocolo de julgamento: quality-anchors.md (par-a-par, 2 rodadas com ordem invertida). Baseline registrada em copy-output-baseline.md; outputs versionados em baselines/copy/.",
+  "cases": [
+    {
+      "id": "CO-001",
+      "formato": "headline",
+      "quality_gate_type": "landing-page",
+      "peca": "Headlines de landing page (top 3 entregues)",
+      "briefing": "Escreva headlines para a landing page de um curso online de ingles. Produto: metodo de ingles para profissionais, 15 minutos por dia, focado em situacoes de trabalho (reuniao, call com gringo, apresentacao), 6 meses de acesso, R$ 897 ou 12x de R$ 89. Publico: gerentes e analistas seniores de 35 a 50 anos que ja perderam promocao ou travaram em reuniao por causa do ingles; estudaram ingles no passado e desistiram. Nivel de consciencia: consciente da solucao (sabem que cursos existem, nao conhecem este metodo). Objetivo: fazer o visitante assistir a VSL na landing. Tom: direto, respeitoso com a dor, zero hype. Entregue as top 3 headlines com a hipotese de cada uma."
+    },
+    {
+      "id": "CO-002",
+      "formato": "post",
+      "quality_gate_type": "post",
+      "peca": "Post Instagram feed (legenda completa)",
+      "briefing": "Escreva a legenda de um post de Instagram para uma nutricionista comportamental. Produto: consultoria de nutricao comportamental (o post e conteudo organico do perfil, sem venda direta). Tema: por que dieta restritiva devolve o peso (efeito sanfona) e o que fazer no lugar. Publico: mulheres de 30 a 45 anos que ja tentaram varias dietas, sentem culpa ao comer e desconfiam de promessa de dieta milagrosa. Nivel de consciencia: consciente do problema (sentem o efeito sanfona, nao conhecem a abordagem comportamental). Objetivo do post: salvamento (conteudo de valor pra guardar). Tom: acolhedor e direto, sem terrorismo nutricional. CTA desejado: salvar o post. Plataforma: Instagram feed, legenda de ate 200 palavras, incluir sugestao de enquete pros stories."
+    },
+    {
+      "id": "CO-003",
+      "formato": "email",
+      "quality_gate_type": "email",
+      "peca": "Email de fechamento de carrinho (ultimas 24h)",
+      "briefing": "Escreva o email das ultimas 24 horas do carrinho de uma mentoria de precificacao para designers freelancers. Produto: mentoria em grupo de 8 semanas, ensina a precificar por valor e sair da cobranca por hora, R$ 1.497 ou 12x de R$ 149, carrinho fecha hoje as 23h59 (urgencia real, turma limitada a 30 pessoas, proxima turma so em 4 meses). Publico: lista aquecida que assistiu ao workshop gratuito de precificacao esta semana. Nivel de consciencia: consciente do produto (conhecem a mentoria, ainda nao decidiram). Objetivo: converter os indecisos da lista em matricula antes do fechamento. Objecao principal: 'e se eu nao conseguir aplicar e perder o investimento' (ha garantia incondicional de 14 dias). Tom: direto e pessoal, sem drama artificial. Entregue: subject line com 2 alternativas, corpo de 150 a 250 palavras, e um PS."
+    },
+    {
+      "id": "CO-004",
+      "formato": "ad",
+      "quality_gate_type": "anuncio",
+      "peca": "Primary text Meta Ads TOFU (3 angulos)",
+      "briefing": "Escreva primary texts de Meta Ads (topo de funil, publico frio) para um app brasileiro de controle de gastos pelo WhatsApp. Produto: o usuario manda os gastos por mensagem no WhatsApp e o app categoriza e mostra pra onde o salario foi; plano gratuito existe, premium a R$ 19,90/mes. Publico: CLT de 25 a 40 anos que chega no dia 20 sem saber pra onde foi o salario; ja tentou planilha e abandonou. Nivel de consciencia: consciente do problema (sente o aperto, nao procura app). Objetivo: clique pra instalar o app (campanha de instalacao). Compliance: nenhuma promessa de ganhar dinheiro ou enriquecer; e organizacao financeira. Tom: leve e concreto, sem sermao de educacao financeira. Entregue 3 primary texts com angulos distintos, cada um com a primeira linha forte (125 caracteres visiveis antes do 'ver mais')."
+    },
+    {
+      "id": "CO-005",
+      "formato": "sales",
+      "quality_gate_type": "landing-page",
+      "peca": "Dobra de sales page BOFU (headline + subhead + lead + prova)",
+      "briefing": "Escreva a primeira dobra da sales page de um curso de confeitaria lucrativa. Produto: curso online que ensina a produzir e vender brigadeiros gourmet (producao, precificacao, embalagem e primeiros clientes), R$ 497 ou 12x de R$ 51, acesso vitalicio, certificado. Publico: mulheres de 30 a 55 anos que querem renda extra trabalhando de casa, muitas ja fazem doce pra familia; medo principal: 'sera que alguem vai comprar de mim'. Nivel de consciencia: consciente do desejo (querem renda extra com doces, estao avaliando como). Prova disponivel (real, fornecida pela cliente): 4.200 alunas formadas; caso da aluna Marcia de Contagem/MG que faturou R$ 2.300 no primeiro mes vendendo pra escolas; nota 4,8 na plataforma. Objetivo da dobra: fazer a leitora rolar pra secao de oferta. Tom: proximo e concreto, sem promessa de riqueza. Entregue: headline, subhead, lead de ate 150 palavras e um bloco curto de prova."
+    }
+  ]
+}

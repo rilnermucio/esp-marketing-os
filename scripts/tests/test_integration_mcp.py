@@ -292,6 +292,7 @@ class TestCoberturaDeSscripts:
         "audit_premium_template.py",  # helper interno do /auditoria-pro (HTML/CSS render)
         "build_codex_plugin.py",  # utilitario de release Codex (nao CLI MOS)
         "validate_codex_plugin.py",  # utilitario de validacao Codex (nao CLI MOS)
+        "copy_output_eval.py",  # eval de output do mantenedor (docs/ai-engineering/evals), nao CLI MOS
     }
 
     def test_scripts_relevantes_estao_no_command_map(self):

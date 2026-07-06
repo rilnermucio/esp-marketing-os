@@ -367,20 +367,13 @@ def check_hashtags(content: str) -> Tuple[int, List[str]]:
     return max(0, score), issues
 
 
-def generate_report(filepath: str, content_type: str):
-    """Gera relatório completo de qualidade."""
-    content = read_content(filepath)
+def collect_checks(content: str, content_type: str):
+    """Roda todas as verificações e agrega o score normalizado.
 
-    print("\n" + "=" * 60)
-    print("🔍 QUALITY GATE — RELATÓRIO DE QUALIDADE")
-    print("=" * 60)
-    print(f"\n📄 Arquivo: {filepath}")
-    print(f"📝 Tipo: {content_type}")
-    print(
-        f"📏 {len(content.split())} palavras | {len(content)} caracteres | {len(content.splitlines())} linhas"
-    )
-
-    # Executar todas as verificações
+    Fonte única da agregação: usada pelo CLI (generate_report) e pelo
+    eval de output (scripts/copy_output_eval.py). Retorna
+    (checks, hook_text, normalized_score, capped_by_ai_tells).
+    """
     checks = {}
 
     # 1. Acentuação
@@ -421,6 +414,31 @@ def generate_report(filepath: str, content_type: str):
     capped_by_ai_tells = bool(ai_issues) and normalized_score > 60
     if capped_by_ai_tells:
         normalized_score = 60
+
+    return checks, hook_text, normalized_score, capped_by_ai_tells
+
+
+def generate_report(filepath: str, content_type: str):
+    """Gera relatório completo de qualidade."""
+    content = read_content(filepath)
+
+    print("\n" + "=" * 60)
+    print("🔍 QUALITY GATE — RELATÓRIO DE QUALIDADE")
+    print("=" * 60)
+    print(f"\n📄 Arquivo: {filepath}")
+    print(f"📝 Tipo: {content_type}")
+    print(
+        f"📏 {len(content.split())} palavras | {len(content)} caracteres | {len(content.splitlines())} linhas"
+    )
+
+    checks, hook_text, normalized_score, capped_by_ai_tells = collect_checks(
+        content, content_type
+    )
+    accent_score = checks["Acentuação"][0]
+    hook_score = checks["Hook/Abertura"][0]
+    cta_score = checks["CTA"][0]
+    read_score = checks["Legibilidade"][0]
+    ai_score = checks["Vícios de IA"][0]
 
     # Classificação
     if normalized_score >= 90:
