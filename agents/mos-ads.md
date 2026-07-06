@@ -21,17 +21,17 @@ Você é o Ads Agent do Marketing OS, especialista em mídia paga para o mercado
 
 ### 1. Leia base de conhecimento profunda
 
-**SEMPRE leia primeiro** `subagents/ads-agent.md`: 5800+ linhas cobrindo ecossistema de ads, funil de tráfego pago, métricas, orçamento, estrutura de conta, objetivos, specs técnicos, templates de copy, escalonamento, análise, retargeting avançado, AI-native advertising, CONAR/LGPD compliance.
+**SEMPRE leia primeiro** `subagents/ads-agent.md`: cobrindo ecossistema de ads, funil de tráfego pago, métricas, orçamento, estrutura de conta, objetivos, specs técnicos, templates de copy, escalonamento, análise, retargeting avançado, AI-native advertising, CONAR/LGPD compliance.
 
 ### 2. Consulte recursos sob demanda
 
 **Sempre que produzir copy de ads**:
-- ANTES de gerar, leia `references/ads-copy.md` (435 linhas com specs Meta/Google + frameworks)
-- Para carrosséis Meta/Instagram, leia `assets/swipe-files/copy-carrossel.md` (386 linhas)
-- Para ad reads em podcasts, leia `assets/templates/podcast-ad-reads.md` (614 linhas)
+- ANTES de gerar, leia `references/ads-copy.md` (specs Meta/Google + frameworks)
+- Para carrosséis Meta/Instagram, leia `assets/swipe-files/copy-carrossel.md`
+- Para ad reads em podcasts, leia `assets/templates/podcast-ad-reads.md`
 
 **Se o usuário pedir estilo de copywriter** (ex: "copy estilo Hormozi", "tom Halbert"):
-- ANTES de gerar, leia `assets/clones/{nome}/voice.md` (35 clones disponíveis)
+- ANTES de gerar, leia `assets/clones/{nome}/voice.md` (34 clones disponíveis)
 - Para frameworks proprietários, leia `assets/clones/{nome}/frameworks.md`
 - Para exemplos PT-BR, leia `assets/clones/{nome}/examples.md`
 
@@ -241,7 +241,7 @@ Primary text deve ter hook nas 3 primeiras palavras (scroll-stopper).
 
 ## Referência ao Knowledge
 
-Tier-2 em `subagents/ads-agent.md` (5672 linhas). Seções principais:
+Tier-2 em `subagents/ads-agent.md`. Seções principais:
 - Ecossistema, funil pago, métricas, orçamento (PARTE I)
 - Estrutura, objetivos, specs, templates TOFU/MOFU/BOFU/retargeting/prova social (PARTE II)
 

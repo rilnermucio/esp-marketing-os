@@ -77,6 +77,8 @@ Prompt engineering é a disciplina de projetar, otimizar e estruturar instruçõ
 
 > **Insight 2026:** Um estudo da Wharton (junho/2025) revelou que a eficácia do CoT varia significativamente por tipo de modelo. Reasoning models (o1, o3, Claude com extended thinking) ganham apenas benefícios marginais do CoT explícito, pois já raciocinam internamente.
 
+> **AVISO DE FACT-CHECK**: Citação de estudo (Wharton, jun/2025). Antes de usar em recomendação publicada, confirme a fonte primária via WebSearch.
+
 ## 1.2 Taxonomia de Prompts
 
 ### Por Complexidade
@@ -387,6 +389,8 @@ texto ilegível em mobile
 
 ## 1.7 Tendência Central 2026: De Prompt Engineering para Agent Orchestration
 
+> **SNAPSHOT DATADO (2026)**: esta seção fotografa um momento. Antes de recomendar dado, preço, ferramenta ou regra daqui, confirme o estado atual via WebSearch. Princípios envelhecem bem; números, nomes e políticas envelhecem mal.
+
 O campo está em transição fundamental:
 
 | Antes (2023-2024) | Agora (2025-2026) |
@@ -493,6 +497,8 @@ Modelo autogressivo (entende contexto) + Diffusion (gera imagem)
 
 ### Janela de Contexto (Fevereiro 2026)
 
+> **SNAPSHOT DATADO (fev/2026)**: esta seção fotografa um momento. Antes de recomendar dado, preço, ferramenta ou regra daqui, confirme o estado atual via WebSearch. Princípios envelhecem bem; números, nomes e políticas envelhecem mal.
+
 | Modelo | Contexto Máximo | Observação |
 |--------|----------------|------------|
 | Llama 4 Scout | **10M tokens** | Maior do mercado (open-weight) |
@@ -539,6 +545,8 @@ Modelo base → Pensamento estendido → Resposta refinada
 - **DeepSeek R1:** Chain-of-thought interno
 
 ## 2.3 Benchmarks e Rankings Públicos (Fevereiro 2026)
+
+> **SNAPSHOT DATADO (fev/2026)**: esta seção fotografa um momento. Antes de recomendar dado, preço, ferramenta ou regra daqui, confirme o estado atual via WebSearch. Princípios envelhecem bem; números, nomes e políticas envelhecem mal.
 
 ### LM Arena (arena.ai): Texto
 
@@ -635,6 +643,8 @@ Ranking baseado em preferência humana (ELO):
 # Part III: Ferramentas de Imagem
 
 ## 3.1 Ranking Geral (Fevereiro 2026)
+
+> **SNAPSHOT DATADO (fev/2026)**: esta seção fotografa um momento. Antes de recomendar dado, preço, ferramenta ou regra daqui, confirme o estado atual via WebSearch. Princípios envelhecem bem; números, nomes e políticas envelhecem mal.
 
 | Tier | Ferramenta | Força Principal | ELO/Benchmark |
 |------|-----------|-----------------|---------------|
@@ -985,6 +995,8 @@ Qualidade máxima? → GPT Image 1.5 ou Gemini 3 Pro Image
 
 ## 4.1 Ranking Geral (Fevereiro 2026)
 
+> **SNAPSHOT DATADO (fev/2026)**: esta seção fotografa um momento. Antes de recomendar dado, preço, ferramenta ou regra daqui, confirme o estado atual via WebSearch. Princípios envelhecem bem; números, nomes e políticas envelhecem mal.
+
 | Tier | Ferramenta | Res. Max | Duração | Áudio Nativo | Preço |
 |------|-----------|---------|---------|-------------|-------|
 | S+ | Veo 3.1 | **4K** | ~148s ext. | Sim | $19.99/mês |
@@ -1174,6 +1186,8 @@ at 5 seconds. 10 seconds.
 # Part VI: Ferramentas de Texto e LLMs
 
 ## 6.1 Tabela Comparativa: LLMs Frontier (Fevereiro 2026)
+
+> **SNAPSHOT DATADO (fev/2026)**: esta seção fotografa um momento. Antes de recomendar dado, preço, ferramenta ou regra daqui, confirme o estado atual via WebSearch. Princípios envelhecem bem; números, nomes e políticas envelhecem mal.
 
 | Modelo | Contexto | Input/1M | Output/1M | SWE-bench | GPQA | Open |
 |--------|---------|----------|-----------|-----------|------|------|
@@ -1382,6 +1396,8 @@ Podcast background? → Soundraw
 # Part X: 3D e Spatial Computing
 
 ## 10.1 Ferramentas de 3D (Fevereiro 2026)
+
+> **SNAPSHOT DATADO (fev/2026)**: esta seção fotografa um momento. Antes de recomendar dado, preço, ferramenta ou regra daqui, confirme o estado atual via WebSearch. Princípios envelhecem bem; números, nomes e políticas envelhecem mal.
 
 | Ferramenta | Tipo | Velocidade | Formatos | Preço |
 |-----------|------|-----------|----------|-------|
@@ -2281,6 +2297,8 @@ ACT (Agir):
 | **VLM** | Vision-Language Model |
 
 ## Apêndice B: Preços Consolidados (Fevereiro 2026)
+
+> **SNAPSHOT DATADO (fev/2026)**: esta seção fotografa um momento. Antes de recomendar dado, preço, ferramenta ou regra daqui, confirme o estado atual via WebSearch. Princípios envelhecem bem; números, nomes e políticas envelhecem mal.
 
 ### Imagem (por imagem/geração)
 

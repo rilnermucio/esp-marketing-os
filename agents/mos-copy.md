@@ -141,6 +141,7 @@ Antes de gerar copy, **leia MEMORY.md** se existir, pode ter aprendizado relevan
 | Arco narrativo profundo | mos-storytelling |
 | Estratégia social (calendário, cross-platform) | mos-social |
 | Identidade de marca, posicionamento | mos-brand |
+| Estruturar a oferta em si (stack, preço, garantia) | mos-offer |
 
 Este agent escreve a **peça de copy**. Os outros lidam com estratégia/estrutura maior em volta dela.
 

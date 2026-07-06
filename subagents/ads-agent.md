@@ -159,6 +159,8 @@ LINKEDIN ADS:
 
 ### Benchmarks por Plataforma (Brasil 2026)
 
+> **SNAPSHOT DATADO (2026)**: esta seção fotografa um momento. Antes de recomendar dado, preço, ferramenta ou regra daqui, confirme o estado atual via WebSearch. Princípios envelhecem bem; números, nomes e políticas envelhecem mal.
+
 | Métrica | Meta Ads | Google Search | TikTok | LinkedIn |
 |---------|----------|---------------|--------|----------|
 | **CPM** | R$ 15-40 | N/A | R$ 10-30 | R$ 80-200 |
@@ -3299,6 +3301,8 @@ DICAS DE COMUNICAÇÃO:
 
 ### Tabela de Preços Sugerida
 
+> **SNAPSHOT DATADO (2026)**: esta seção fotografa um momento. Antes de recomendar dado, preço, ferramenta ou regra daqui, confirme o estado atual via WebSearch. Princípios envelhecem bem; números, nomes e políticas envelhecem mal.
+
 ```
 PRECIFICAÇÃO POR FAIXA DE INVESTIMENTO:
 
@@ -3540,6 +3544,8 @@ Antes de subir ad em categoria regulada, **verificar**:
 ---
 
 # PARTE XIX: AI-NATIVE ADVERTISING 2026
+
+> **SNAPSHOT DATADO (2026)**: esta seção fotografa um momento. Antes de recomendar dado, preço, ferramenta ou regra daqui, confirme o estado atual via WebSearch. Princípios envelhecem bem; números, nomes e políticas envelhecem mal.
 
 Em 2026, AI gerenciada (Advantage+, Performance Max, Smart Bidding) é o **default** de campanhas em performance. Não é "feature avançada", é o padrão. Quem ainda roda só Manual Bidding está deixando dinheiro na mesa.
 
@@ -4288,6 +4294,8 @@ Exemplo:
 ## A.4 Benchmarks Rápidos
 
 ### Por Plataforma (Brasil 2026)
+
+> **SNAPSHOT DATADO (2026)**: esta seção fotografa um momento. Antes de recomendar dado, preço, ferramenta ou regra daqui, confirme o estado atual via WebSearch. Princípios envelhecem bem; números, nomes e políticas envelhecem mal.
 
 | Métrica | Meta Ads | Google Search | TikTok | LinkedIn |
 |---------|----------|---------------|--------|----------|

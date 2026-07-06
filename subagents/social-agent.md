@@ -577,6 +577,8 @@ APLICAÇÃO EM REDES SOCIAIS:
 
 #### Como o Algoritmo do Instagram Funciona (2024-2025)
 
+> **SNAPSHOT DATADO (2024-2025)**: esta seção fotografa um momento. Antes de recomendar dado, preço, ferramenta ou regra daqui, confirme o estado atual via WebSearch. Princípios envelhecem bem; números, nomes e políticas envelhecem mal.
+
 ```
 SINAIS DO ALGORITMO INSTAGRAM
 
@@ -659,6 +661,8 @@ SLIDE 10 (CTA)
 ### LinkedIn
 
 #### Como o Algoritmo do LinkedIn Funciona (2024-2025)
+
+> **SNAPSHOT DATADO (2024-2025)**: esta seção fotografa um momento. Antes de recomendar dado, preço, ferramenta ou regra daqui, confirme o estado atual via WebSearch. Princípios envelhecem bem; números, nomes e políticas envelhecem mal.
 
 ```
 SINAIS DO ALGORITMO LINKEDIN
@@ -968,6 +972,8 @@ WHEN TO USE:
 ### YouTube Shorts
 
 #### Como o Algoritmo do YouTube Shorts Funciona (2024-2025)
+
+> **SNAPSHOT DATADO (2024-2025)**: esta seção fotografa um momento. Antes de recomendar dado, preço, ferramenta ou regra daqui, confirme o estado atual via WebSearch. Princípios envelhecem bem; números, nomes e políticas envelhecem mal.
 
 ```
 SINAIS DO ALGORITMO YOUTUBE SHORTS
@@ -1731,6 +1737,8 @@ PÁGINA 10: CTA (seguir, salvar)
 
 ### WhatsApp Business: O Canal de Maior Conversão
 
+> **SNAPSHOT DATADO (2024-2025)**: esta seção fotografa um momento. Antes de recomendar dado, preço, ferramenta ou regra daqui, confirme o estado atual via WebSearch. Princípios envelhecem bem; números, nomes e políticas envelhecem mal.
+
 ```
 POR QUE WHATSAPP É ESSENCIAL
 
@@ -2492,6 +2500,8 @@ ANTES de gerar, **sempre** Read em `assets/clones/{nome}/voice.md`. NÃO improvi
 
 ## Algorithm Updates 2024-2026
 
+> **SNAPSHOT DATADO (2024-2026)**: esta seção fotografa um momento. Antes de recomendar dado, preço, ferramenta ou regra daqui, confirme o estado atual via WebSearch. Princípios envelhecem bem; números, nomes e políticas envelhecem mal.
+
 Algoritmos mudam. Esta seção é o delta vs Fundamentos. Outdated significa post não distribui.
 
 ### Instagram (2024-2026)
@@ -2724,6 +2734,8 @@ CADÊNCIA SUGERIDA:
 ---
 
 ## AI Features 2026
+
+> **SNAPSHOT DATADO (2026)**: esta seção fotografa um momento. Antes de recomendar dado, preço, ferramenta ou regra daqui, confirme o estado atual via WebSearch. Princípios envelhecem bem; números, nomes e políticas envelhecem mal.
 
 Em 2026, AI integrada às plataformas é parte do workflow padrão.
 

@@ -19,7 +19,7 @@ Você é o Analytics Agent do Marketing OS, especialista em medição, análise 
 
 ## Protocolo de Invocação
 
-1. **SEMPRE leia primeiro** `subagents/analytics-agent.md`: 3084 linhas cobrindo analytics para criadores, hierarquia de métricas, framework SMART para KPIs, funil de métricas, ciclo de análise, deep dives (Instagram, YouTube, LinkedIn, TikTok, email, paid ads), GA4 vs UA, relatórios.
+1. **SEMPRE leia primeiro** `subagents/analytics-agent.md`: cobrindo analytics para criadores, hierarquia de métricas, framework SMART para KPIs, funil de métricas, ciclo de análise, deep dives (Instagram, YouTube, LinkedIn, TikTok, email, paid ads), GA4 vs UA, relatórios.
 2. **Invoque scripts via Bash**:
    - `python scripts/weekly_report.py`
    - `python scripts/gsc_analyzer.py` (Search Console)

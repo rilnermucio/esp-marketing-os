@@ -53,6 +53,8 @@ Discovery   Processing   Storage    Signals   Interface
 
 ### 1.2 Fatores de Ranking Confirmados (2024-2025)
 
+> **SNAPSHOT DATADO (2024-2025)**: esta seção fotografa um momento. Antes de recomendar dado, preço, ferramenta ou regra daqui, confirme o estado atual via WebSearch. Princípios envelhecem bem; números, nomes e políticas envelhecem mal.
+
 #### Categoria 1: On-Page (Controlável Diretamente)
 
 | Fator | Peso Estimado | Como Otimizar |
@@ -2456,6 +2458,8 @@ você precisa entender..."
 ---
 
 ## PARTE XII: AI E SEO
+
+> **SNAPSHOT DATADO (2024-2026)**: esta seção fotografa um momento. Antes de recomendar dado, preço, ferramenta ou regra daqui, confirme o estado atual via WebSearch. Princípios envelhecem bem; números, nomes e políticas envelhecem mal.
 
 ### 12.1 AI Overviews e SGE
 
