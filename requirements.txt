@@ -57,4 +57,5 @@ jsonschema>=4.0,<5
 
 # Dependencias para /auditoria-pro v6.8.0
 matplotlib>=3.7,<4
+numpy>=1.26,<3   # import direto em audit_radar_chart.py (matplotlib ja o traz; declarado por clareza)
 playwright>=1.40,<2

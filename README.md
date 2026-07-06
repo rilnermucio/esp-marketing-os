@@ -155,7 +155,7 @@ Marketing OS/
 ├── commands/               # 38 slash commands (34 com dispatch + /publicar-notion + /campanha índice + /projeto + /datas-sazonais)
 ├── workflows/              # 10 workflows end-to-end documentados
 ├── assets/                 # Frameworks, personas, prompts, swipe files,
-│   ├── clones/             #   templates, 34 voice clones
+│   ├── clones/             #   templates, 34 voice clones (+ design-dna)
 │   ├── frameworks/
 │   ├── personas/
 │   ├── prompts/

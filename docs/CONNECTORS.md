@@ -4,6 +4,8 @@ This plugin integrates with external tools via MCP (Model Context Protocol).
 
 ## Available Connectors
 
+> These are MCP servers installed and authenticated by the user; the plugin ships no servers or credentials. Availability and exact names vary per environment.
+
 | Connector | Purpose | Authentication |
 |-----------|---------|----------------|
 | **Notion** | Content calendar, planning, documentation | OAuth via Notion |
@@ -11,7 +13,7 @@ This plugin integrates with external tools via MCP (Model Context Protocol).
 | **Canva** | Graphics, social media designs, templates | OAuth via Canva |
 | **Slack** | Team notifications, content approvals | OAuth via Slack |
 | **Similarweb** | Competitor analysis, traffic data, trends | API key required |
-| **Meta Ads (Especializei)** | Create/manage Meta ad campaigns, audiences, creatives | OAuth via Meta |
+| **Meta Ads** | Create/manage Meta ad campaigns, audiences, creatives | OAuth via Meta |
 | **Playwright** | Browser automation, screenshot capture, web testing | Local (no auth) |
 
 ## Connector Usage
@@ -46,7 +48,7 @@ Analyze competitors and market trends.
 - Competitor benchmarking
 - Trend identification
 
-### Meta Ads (Especializei)
+### Meta Ads
 Create and manage advertising campaigns on Meta platforms.
 - Create campaigns, ad sets, and ads
 - Target audiences with interests, demographics, and behaviors

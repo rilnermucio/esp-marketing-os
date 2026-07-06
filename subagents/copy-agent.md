@@ -496,7 +496,7 @@ DEPOIS: "7 modelos para faturar R$5k/mês online em 90 dias (sem investir em ads
 
 # PARTE II-B: ESTILOS DE ESCRITA DOS MESTRES
 
-> **AVISO**: As 10 entradas abaixo são RESUMOS para consulta rápida. Para fidelidade real ao estilo, **SEMPRE leia primeiro** `assets/clones/{nome}/voice.md` (ver PARTE XV-B). Os resumos inline servem para identificação e seleção, NÃO para geração de copy fiel ao mestre. Há 35 clones disponíveis com dossiês profundos de 4 arquivos cada.
+> **AVISO**: As 10 entradas abaixo são RESUMOS para consulta rápida. Para fidelidade real ao estilo, **SEMPRE leia primeiro** `assets/clones/{nome}/voice.md` (ver PARTE XV-B). Os resumos inline servem para identificação e seleção, NÃO para geração de copy fiel ao mestre. Há 34 clones disponíveis com dossiês profundos de 4 arquivos cada.
 
 ## Protocolo de Ativação de Estilo
 
@@ -5110,7 +5110,7 @@ assets/clones/{nome}/
 └── examples.md      # Exemplos aplicados PT-BR
 ```
 
-### Inventário Completo dos 35 Clones
+### Inventário Completo dos 34 Clones
 
 #### Mestres Clássicos do Copywriting (10)
 `caples`, `cialdini`, `collier`, `halbert`, `hopkins`, `kennedy`, `ogilvy`, `provost`, `schwartz`, `sugarman`
@@ -5124,10 +5124,10 @@ assets/clones/{nome}/
 #### BR/PT Specialists (3)
 `conrado`, `flavio-augusto`, `joel-jota`
 
-#### Business Strategists (2)
+#### Business Strategists (1)
 `codie-sanchez`
 
-> Total verificado: **35 clones × 4 arquivos = 140 arquivos** em `assets/clones/`. Manifest em `assets/clones/clone-manifest.yaml`.
+> Total verificado: **34 clones × 4 arquivos = 136 arquivos** em `assets/clones/`. Manifest em `assets/clones/clone-manifest.yaml`.
 
 ### Mapa Rápido: Tipo de Conteúdo → Clone Recomendado
 
