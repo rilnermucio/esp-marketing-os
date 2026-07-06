@@ -62,3 +62,4 @@ Todos os campos do template. "Evidências" exige dado verificado (output real de
 | 2026-07-06 | Onda P1 + mos-offer + camada viva 6/6 | [2026-07-06-p1-offer-camada-viva.md](worklogs/2026-07-06-p1-offer-camada-viva.md) |
 | 2026-07-06 | Release v6.10.0 | [2026-07-06-release-v6.10.0.md](worklogs/2026-07-06-release-v6.10.0.md) |
 | 2026-07-06 | P1 final (video/storytelling) + /criar-teste-ab | [2026-07-06-p1-final-teste-ab.md](worklogs/2026-07-06-p1-final-teste-ab.md) |
+| 2026-07-06 | Release v6.11.0 | [2026-07-06-release-v6.11.0.md](worklogs/2026-07-06-release-v6.11.0.md) |
