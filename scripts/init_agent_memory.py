@@ -26,10 +26,12 @@ AGENTS_WITH_MEMORY = [
     "mos-brand",
     "mos-copy",
     "mos-design",
+    "mos-email",
     "mos-funnel",
     "mos-infoproduct",
     "mos-launch",
     "mos-research",
+    "mos-seo",
     "mos-social",
 ]
 

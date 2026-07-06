@@ -76,14 +76,14 @@ Invocados pelo orquestrador (skill `/marketing-os`) ou diretamente via `@<agente
 | Agente | Domínio | Memory |
 |---|---|---|
 | `@mos-copy` | Copywriting persuasivo (headlines, CTAs, sales letters) | sim |
-| `@mos-seo` | Otimização de busca (keywords, on-page, E-E-A-T, AI-SEO) | não |
+| `@mos-seo` | Otimização de busca (keywords, on-page, E-E-A-T, AI-SEO) | sim |
 | `@mos-social` | Posts e estratégia em redes sociais (cross-platform) | sim |
 | `@mos-video` | Roteiros (YouTube, Reels, TikTok, VSL, Shorts) | não |
 | `@mos-audio` | Podcasts, audiobooks, spots, sound design | não |
 | `@mos-design` | Direção visual, paletas, tipografia, design specs | sim |
 | `@mos-ai-tools` | Prompts pra Midjourney, Flux, Runway, Sora, etc. | não |
 | `@mos-analytics` | Métricas, KPIs, dashboards, GA4 | sim |
-| `@mos-email` | Email marketing (welcome, nurture, vendas, automação) | não |
+| `@mos-email` | Email marketing (welcome, nurture, vendas, automação) | sim |
 | `@mos-ads` | Anúncios pagos (Meta, Google, TikTok, LinkedIn) | sim |
 | `@mos-research` | Trend spotting, audience research, validação | sim |
 | `@mos-brand` | Identidade de marca, arquétipos, manifesto | sim |
@@ -94,7 +94,7 @@ Invocados pelo orquestrador (skill `/marketing-os`) ou diretamente via `@<agente
 | `@mos-infoproduct` | Cursos, memberships, mentorias, ebooks | sim |
 | `@mos-ab-testing` | A/B/MVT, ICE prioritization, significância estatística | não |
 
-**Memory opt-in (10 agents).** `mos-ads`, `mos-analytics`, `mos-brand`, `mos-copy`, `mos-design`, `mos-funnel`, `mos-infoproduct`, `mos-launch`, `mos-research` e `mos-social` podem persistir aprendizados entre sessões em `.claude/agent-memory/mos-*/MEMORY.md`. Para ativar, rode o bootstrap uma vez na raiz do projeto:
+**Memory opt-in (12 agents).** `mos-ads`, `mos-analytics`, `mos-brand`, `mos-copy`, `mos-design`, `mos-email`, `mos-funnel`, `mos-infoproduct`, `mos-launch`, `mos-research`, `mos-seo` e `mos-social` podem persistir aprendizados entre sessões em `.claude/agent-memory/mos-*/MEMORY.md`. Para ativar, rode o bootstrap uma vez na raiz do projeto:
 
 ```bash
 python3 scripts/init_agent_memory.py
