@@ -1,0 +1,175 @@
+{
+  "version": 1,
+  "updated": "2026-07-06",
+  "description": "Golden set de roteamento: briefings PT-BR reais e o roteamento esperado. Validado por scripts/tests/test_routing_evals.py; protocolo em ../ROUTING-EVALS.md",
+  "cases": [
+    {
+      "id": "RT-001",
+      "prompt": "cria um post pro Instagram sobre gestão de tempo pra empreendedores",
+      "expected_command": "criar-post",
+      "expected_agents": ["mos-social", "mos-copy"],
+      "dispatch": "paralelo",
+      "min_output_fields": ["hook nas 2 primeiras linhas", "legenda completa", "hashtags", "sugestão de enquete", "CTA"],
+      "detects": ["F-ROUTE-01", "F-ROUTE-02", "F-COPY-01", "F-PTBR-01"]
+    },
+    {
+      "id": "RT-002",
+      "prompt": "o que é AIDA?",
+      "expected_command": null,
+      "expected_agents": [],
+      "dispatch": "nenhum",
+      "min_output_fields": ["definição das 4 etapas com exemplo curto"],
+      "detects": ["F-COST-02"],
+      "notes": "Pergunta conceitual responde inline; dispatchar aqui é overhead."
+    },
+    {
+      "id": "RT-003",
+      "prompt": "melhora essa headline: 'Curso de marketing digital completo e atualizado'",
+      "expected_command": "otimizar-copy",
+      "expected_agents": ["mos-copy"],
+      "dispatch": "simples",
+      "min_output_fields": ["diagnóstico da original", "score antes e depois", "variações com hipótese A/B", "métrica primária"],
+      "detects": ["F-ROUTE-02", "F-COPY-02"]
+    },
+    {
+      "id": "RT-004",
+      "prompt": "monta a campanha completa de lançamento do meu curso de confeitaria",
+      "expected_command": "campanha-lancamento",
+      "expected_agents": ["mos-research", "mos-launch", "mos-funnel", "mos-copy", "mos-email", "mos-ads"],
+      "dispatch": "sequencial",
+      "min_output_fields": ["fases do lançamento", "cronograma", "peças por fase", "KPIs por fase"],
+      "detects": ["F-ROUTE-02", "F-DISP-01", "F-DISP-02"]
+    },
+    {
+      "id": "RT-005",
+      "prompt": "escreve um artigo SEO sobre alfabetização infantil pro blog da escola",
+      "expected_command": "criar-artigo",
+      "expected_agents": ["mos-research", "mos-seo", "mos-copy"],
+      "dispatch": "sequencial",
+      "min_output_fields": ["keyword primária e secundárias", "meta title", "meta description", "estrutura H2/H3", "sugestões de internal linking"],
+      "detects": ["F-DISP-01", "F-CLAIM-01", "F-PTBR-01"]
+    },
+    {
+      "id": "RT-006",
+      "prompt": "cria um anúncio pro Meta Ads do meu e-book de finanças",
+      "expected_command": "criar-anuncio",
+      "expected_agents": ["mos-research", "mos-ads"],
+      "dispatch": "paralelo",
+      "min_output_fields": ["primary text com hook nas 3 primeiras palavras", "headline", "variações para teste", "segmentação sugerida"],
+      "detects": ["F-ROUTE-02", "F-COPY-03", "F-CLAIM-02"]
+    },
+    {
+      "id": "RT-007",
+      "prompt": "preciso do roteiro de uma VSL pra minha mentoria de 6 meses",
+      "expected_command": "criar-video",
+      "expected_agents": ["mos-storytelling", "mos-copy", "mos-video"],
+      "dispatch": "sequencial",
+      "min_output_fields": ["big idea", "estrutura com timestamps", "hook", "apresentação da oferta", "CTA"],
+      "detects": ["F-DISP-01", "F-ROUTE-04"]
+    },
+    {
+      "id": "RT-008",
+      "prompt": "sequência de email pra quem abandonou o carrinho",
+      "expected_command": "criar-email",
+      "expected_agents": ["mos-email", "mos-copy"],
+      "dispatch": "paralelo",
+      "min_output_fields": ["3 emails com timing", "3 variações de subject por email", "CTA por email"],
+      "detects": ["F-DISP-02", "F-COPY-02"]
+    },
+    {
+      "id": "RT-009",
+      "prompt": "analisa o Instagram do meu concorrente @exemplo e me diz o que ele faz melhor",
+      "expected_command": "analisar-concorrencia",
+      "expected_agents": ["mos-research", "mos-brand", "mos-copy"],
+      "dispatch": "paralelo",
+      "min_output_fields": ["pontos fortes e fracos", "padrões de conteúdo identificados", "oportunidades acionáveis"],
+      "detects": ["F-CLAIM-01", "F-DISP-02"]
+    },
+    {
+      "id": "RT-010",
+      "prompt": "landing page de captação pra minha mentoria high-ticket",
+      "expected_command": "criar-landing-page",
+      "expected_agents": ["mos-funnel", "mos-copy", "mos-design"],
+      "dispatch": "sequencial",
+      "min_output_fields": ["estrutura BOFU", "headline", "prova social", "oferta", "FAQ", "brief visual"],
+      "detects": ["F-DISP-01", "F-ROUTE-04", "F-CLAIM-02"]
+    },
+    {
+      "id": "RT-011",
+      "prompt": "quais datas comerciais de setembro servem pro meu nicho de estética?",
+      "expected_command": "datas-sazonais",
+      "expected_agents": [],
+      "dispatch": "nenhum",
+      "min_output_fields": ["datas do mês com relevância por nicho"],
+      "detects": ["F-ROUTE-02", "F-COST-02"],
+      "notes": "Utility de dados (seasonal_calendar_br.py); dispatch aqui é overhead."
+    },
+    {
+      "id": "RT-012",
+      "prompt": "publica esse post que a gente acabou de fazer no Notion",
+      "expected_command": "publicar-notion",
+      "expected_agents": [],
+      "dispatch": "nenhum",
+      "min_output_fields": ["confirmação da página criada com link"],
+      "detects": ["F-ROUTE-02"]
+    },
+    {
+      "id": "RT-013",
+      "prompt": "desenha um teste A/B pro CTA da minha landing, tenho tráfego pago alto",
+      "expected_command": null,
+      "expected_agents": ["mos-ab-testing"],
+      "dispatch": "simples",
+      "min_output_fields": ["hipótese no formato se-X-então-Y-porque-Z", "métrica primária", "tamanho mínimo de amostra", "duração estimada"],
+      "detects": ["F-ROUTE-03"],
+      "notes": "Gap conhecido: mos-ab-testing não tem command dedicado (auditoria jun/2026). Ao criar /criar-teste-ab, atualizar este caso."
+    },
+    {
+      "id": "RT-014",
+      "prompt": "narra esse roteiro em áudio pra eu ouvir como ficou",
+      "expected_command": "narrar-roteiro",
+      "expected_agents": ["mos-audio"],
+      "dispatch": "simples",
+      "min_output_fields": ["áudio gerado ou comando tts_runner pronto para execução"],
+      "detects": ["F-ROUTE-02"]
+    },
+    {
+      "id": "RT-015",
+      "prompt": "por que meu engajamento caiu esse mês?",
+      "expected_command": null,
+      "expected_agents": ["mos-analytics"],
+      "dispatch": "simples",
+      "min_output_fields": ["hipóteses ranqueadas", "métricas a verificar", "plano de diagnóstico"],
+      "detects": ["F-ROUTE-02", "F-CLAIM-01"],
+      "notes": "Linguagem natural sem command: SKILL roteia direto pro agent."
+    },
+    {
+      "id": "RT-016",
+      "prompt": "carrossel de 10 slides sobre finanças pessoais pra classe média",
+      "expected_command": "criar-carrossel",
+      "expected_agents": ["mos-social", "mos-copy", "mos-design"],
+      "dispatch": "paralelo",
+      "min_output_fields": ["conteúdo slide a slide", "hook no slide 1", "CTA no slide final", "legenda", "sugestão de enquete"],
+      "detects": ["F-DISP-01", "F-COPY-01"]
+    },
+    {
+      "id": "RT-017",
+      "prompt": "monta minha oferta high-ticket com bônus e garantia",
+      "expected_command": null,
+      "expected_agents": ["mos-infoproduct", "mos-copy"],
+      "dispatch": "paralelo",
+      "min_output_fields": ["value stack", "precificação dos bônus", "estrutura de garantia", "comparação valor percebido vs preço"],
+      "detects": ["F-ROUTE-04"],
+      "notes": "Ambiguidade conhecida entre infoproduct/funnel/copy sem regra de desempate; mos-offer previsto no ROADMAP Fase 3. Atualizar quando existir."
+    },
+    {
+      "id": "RT-018",
+      "prompt": "escreve a bio do meu Instagram, sou nutricionista esportiva",
+      "expected_command": null,
+      "expected_agents": ["mos-copy"],
+      "dispatch": "simples",
+      "min_output_fields": ["variações de bio dentro do limite de 150 caracteres", "CTA de bio"],
+      "detects": ["F-COPY-03", "F-COST-01"],
+      "notes": "Deve consultar assets/swipe-files/bios-instagram.md, não a KB inteira."
+    }
+  ]
+}

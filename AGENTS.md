@@ -28,12 +28,21 @@ python scripts/validate_agents.py --strict   # falha em warnings também
 python3 scripts/init_agent_memory.py            # todos os agents com memory: project
 python3 scripts/init_agent_memory.py mos-copy   # apenas um agent
 
-# CLI unificado das ferramentas (mos.py expõe um subconjunto dos 48 scripts)
+# CLI unificado das ferramentas (mos.py expõe um subconjunto dos scripts)
 python scripts/mos.py seo analyze artigo.md "keyword"
 python scripts/mos.py headlines score "Sua headline"
 ```
 
 Não há `npm run lint` / `npm run build` — o repositório é Python + Markdown puro.
+
+## Camada de engenharia de IA (`docs/ai-engineering/`)
+
+Processo canônico de manutenção do plugin, para humanos e agentes de IA. Antes de qualquer rodada não-trivial, leia `docs/ai-engineering/OPERATING-MODEL.md` (como trabalhar, quando auditar, quando pedir aprovação). Regras que valem sempre:
+
+1. **Medir antes de refatorar**: refactor amplo só com rubrica/eval existente (`docs/ai-engineering/RUBRICS.md`, `EVALS-STRATEGY.md`).
+2. **Toda rodada gera worklog** em `docs/ai-engineering/worklogs/` (template em `IMPLEMENTATION-LOG.md`).
+3. **Decisão estrutural vira ADR** em `docs/ai-engineering/adr/`; bug/eval referencia IDs de `FAILURE-TAXONOMY.md`.
+4. **Roteamento tem gabarito**: mexeu em SKILL.md, descriptions ou commands, rode `python -m pytest scripts/tests/test_routing_evals.py` e revise `ROUTING-EVALS.md`.
 
 ## Arquitetura (two-tier)
 
@@ -90,7 +99,7 @@ Conteúdos de redes sociais (Reels, posts, carrosséis, stories) **devem** inclu
 
 ## Ferramentas Python relevantes
 
-48 scripts em `scripts/` (CLI unificado em `scripts/mos.py`). Os agents Tier 1 com acesso a `Bash` invocam-nos para tarefas determinísticas: `seo_analyzer.py`, `hashtag_generator.py`, `hook_generator.py`, `reels_script_generator.py`, `carousel_structure_generator.py`, `caption_generator.py`, `trend_tracker.py`, `quality_gate.py`, `headline_scorer.py`, `competitor_analyzer.py`, etc.
+Os scripts Python em `scripts/` (CLI unificado em `scripts/mos.py`) são invocados pelos agents Tier 1 com acesso a `Bash` para tarefas determinísticas: `seo_analyzer.py`, `hashtag_generator.py`, `hook_generator.py`, `reels_script_generator.py`, `carousel_structure_generator.py`, `caption_generator.py`, `trend_tracker.py`, `quality_gate.py`, `headline_scorer.py`, `competitor_analyzer.py`, etc.
 
 Hook de quality gate: `scripts/hooks/quality_gate_hook.py` é invocado via `PreToolUse` matcher `Write|Edit|MultiEdit` em vários agents Tier 1 (ver frontmatter `hooks` em `agents/mos-*.md`).
 
