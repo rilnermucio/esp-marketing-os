@@ -31,5 +31,5 @@
 ## Validação de fechamento
 
 - Suite 2107 passed + validate_agents --strict 21/21 após CADA onda (execução independente do revisor, não só a do executor).
-- Camada viva de routing evals na integração final (ver seção de fechamento do worklog seguinte, se rodada em separado).
+- Camada viva na integração final: RT-013/014/015/021/023 com 5/5 em command (4/5 exatos em todos os campos); a divergência do RT-021 foi provada instabilidade do método via controle no main pré-nivelamento (refinamento de critério documentado em ROUTING-EVALS.md: caso com command é pontuado por expected_command).
 - black no CI scope; zero travessão em prosa nova de todas as ondas (grep no diff por onda).
