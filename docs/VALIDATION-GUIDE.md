@@ -316,6 +316,6 @@ Se <12 passam: abrir issue com casos que falharam.
 
 ## Conhecidos limites
 
-- **24/25 slash commands dispatcham `mos-*` diretamente a partir da v6.5.0** (a reescritura cobriu os 16 commands que ainda não dispatchavam na v6.4.x). O único utility puro é `/publicar-notion`, que roteia para outros `/criar-*` quando precisa gerar conteúdo e só usa o Notion MCP diretamente.
-- **Validação estática automatizada:** rodar `python -m pytest scripts/tests/test_commands_dispatch.py -v` valida estrutura de dispatch dos 25 commands em CI sem precisar Claude Code interativo (~148 test cases).
+- **34 dos 38 slash commands dispatcham `mos-*` diretamente** (padrão dispatch-based desde a v6.5.0). Os 4 utilities intencionais sem dispatch são `/publicar-notion`, `/campanha` (índice), `/projeto` e `/datas-sazonais`; a lista canônica é o set `UTILITY_COMMANDS` em `scripts/tests/test_commands_dispatch.py`.
+- **Validação estática automatizada:** rodar `python -m pytest scripts/tests/test_commands_dispatch.py -v` valida estrutura de dispatch de todos os commands em CI sem precisar Claude Code interativo (test cases parametrizados por arquivo, cobrem commands novos automaticamente).
 - **Tier 2 smoke tests deferred:** rodar localmente com `python -m pytest scripts/tests/test_agents_smoke.py -v -m smoke` se quiser cobertura mais profunda (precisa Claude Code rodando).

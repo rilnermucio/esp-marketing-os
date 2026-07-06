@@ -1,0 +1,138 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "_meta": {
+    "name": "{{PROJECT_NAME}} Design Tokens",
+    "version": "0.1.0",
+    "description": "W3C Design Tokens — three-layer architecture"
+  },
+  "core": {
+    "color": {
+      "neutral": {
+        "0":   {"$value": "#FFFFFF", "$type": "color"},
+        "50":  {"$value": "#F9FAFB", "$type": "color"},
+        "100": {"$value": "#F3F4F6", "$type": "color"},
+        "200": {"$value": "#E5E7EB", "$type": "color"},
+        "300": {"$value": "#D1D5DB", "$type": "color"},
+        "400": {"$value": "#9CA3AF", "$type": "color"},
+        "500": {"$value": "#6B7280", "$type": "color"},
+        "600": {"$value": "#4B5563", "$type": "color"},
+        "700": {"$value": "#374151", "$type": "color"},
+        "800": {"$value": "#1F2937", "$type": "color"},
+        "900": {"$value": "#111827", "$type": "color"},
+        "1000": {"$value": "#000000", "$type": "color"}
+      },
+      "brand": {
+        "primary": {"$value": "{{BRAND_PRIMARY}}", "$type": "color", "$description": "Replace with hex value"},
+        "secondary": {"$value": "{{BRAND_SECONDARY}}", "$type": "color"},
+        "accent": {"$value": "{{BRAND_ACCENT}}", "$type": "color"}
+      }
+    },
+    "dimension": {
+      "spacing": {
+        "0":   {"$value": "0px",    "$type": "dimension"},
+        "1":   {"$value": "4px",    "$type": "dimension"},
+        "2":   {"$value": "8px",    "$type": "dimension"},
+        "3":   {"$value": "12px",   "$type": "dimension"},
+        "4":   {"$value": "16px",   "$type": "dimension"},
+        "6":   {"$value": "24px",   "$type": "dimension"},
+        "8":   {"$value": "32px",   "$type": "dimension"},
+        "12":  {"$value": "48px",   "$type": "dimension"},
+        "16":  {"$value": "64px",   "$type": "dimension"},
+        "24":  {"$value": "96px",   "$type": "dimension"}
+      },
+      "radius": {
+        "none":  {"$value": "0px",     "$type": "dimension"},
+        "sm":    {"$value": "4px",     "$type": "dimension"},
+        "md":    {"$value": "8px",     "$type": "dimension"},
+        "lg":    {"$value": "12px",    "$type": "dimension"},
+        "xl":    {"$value": "16px",    "$type": "dimension"},
+        "full":  {"$value": "9999px",  "$type": "dimension"}
+      }
+    },
+    "typography": {
+      "fontFamily": {
+        "sans":  {"$value": "Inter, system-ui, sans-serif", "$type": "fontFamily"},
+        "serif": {"$value": "Merriweather, Georgia, serif", "$type": "fontFamily"},
+        "mono":  {"$value": "JetBrains Mono, monospace",    "$type": "fontFamily"}
+      },
+      "fontWeight": {
+        "regular":  {"$value": 400, "$type": "fontWeight"},
+        "medium":   {"$value": 500, "$type": "fontWeight"},
+        "semibold": {"$value": 600, "$type": "fontWeight"},
+        "bold":     {"$value": 700, "$type": "fontWeight"}
+      },
+      "fontSize": {
+        "xs":   {"$value": "12px", "$type": "dimension"},
+        "sm":   {"$value": "14px", "$type": "dimension"},
+        "base": {"$value": "16px", "$type": "dimension"},
+        "lg":   {"$value": "18px", "$type": "dimension"},
+        "xl":   {"$value": "20px", "$type": "dimension"},
+        "2xl":  {"$value": "24px", "$type": "dimension"},
+        "3xl":  {"$value": "30px", "$type": "dimension"},
+        "4xl":  {"$value": "36px", "$type": "dimension"},
+        "5xl":  {"$value": "48px", "$type": "dimension"}
+      },
+      "lineHeight": {
+        "tight":  {"$value": 1.2,  "$type": "number"},
+        "normal": {"$value": 1.5,  "$type": "number"},
+        "loose":  {"$value": 1.75, "$type": "number"}
+      }
+    },
+    "duration": {
+      "instant": {"$value": "100ms", "$type": "duration"},
+      "fast":    {"$value": "150ms", "$type": "duration"},
+      "normal":  {"$value": "250ms", "$type": "duration"},
+      "slow":    {"$value": "400ms", "$type": "duration"},
+      "slower":  {"$value": "700ms", "$type": "duration"}
+    },
+    "easing": {
+      "linear":    {"$value": [0, 0, 1, 1],       "$type": "cubicBezier"},
+      "easeIn":    {"$value": [0.4, 0, 1, 1],     "$type": "cubicBezier"},
+      "easeOut":   {"$value": [0, 0, 0.2, 1],     "$type": "cubicBezier"},
+      "easeInOut": {"$value": [0.4, 0, 0.2, 1],   "$type": "cubicBezier"}
+    }
+  },
+  "semantic": {
+    "color": {
+      "background": {
+        "primary":   {"$value": "{core.color.neutral.0}",   "$type": "color"},
+        "secondary": {"$value": "{core.color.neutral.50}",  "$type": "color"},
+        "elevated":  {"$value": "{core.color.neutral.0}",   "$type": "color"},
+        "overlay":   {"$value": "{core.color.neutral.900}", "$type": "color"}
+      },
+      "text": {
+        "primary":   {"$value": "{core.color.neutral.900}", "$type": "color"},
+        "secondary": {"$value": "{core.color.neutral.600}", "$type": "color"},
+        "muted":     {"$value": "{core.color.neutral.400}", "$type": "color"},
+        "inverse":   {"$value": "{core.color.neutral.0}",   "$type": "color"}
+      },
+      "border": {
+        "default": {"$value": "{core.color.neutral.200}", "$type": "color"},
+        "strong":  {"$value": "{core.color.neutral.400}", "$type": "color"},
+        "focus":   {"$value": "{core.color.brand.primary}", "$type": "color"}
+      },
+      "feedback": {
+        "success": {"$value": "#10B981", "$type": "color"},
+        "warning": {"$value": "#F59E0B", "$type": "color"},
+        "danger":  {"$value": "#EF4444", "$type": "color"},
+        "info":    {"$value": "#3B82F6", "$type": "color"}
+      }
+    }
+  },
+  "component": {
+    "button": {
+      "padding": {
+        "sm": {"$value": "{core.dimension.spacing.2} {core.dimension.spacing.3}", "$type": "dimension"},
+        "md": {"$value": "{core.dimension.spacing.3} {core.dimension.spacing.4}", "$type": "dimension"},
+        "lg": {"$value": "{core.dimension.spacing.4} {core.dimension.spacing.6}", "$type": "dimension"}
+      },
+      "radius": {"$value": "{core.dimension.radius.md}", "$type": "dimension"},
+      "fontWeight": {"$value": "{core.typography.fontWeight.medium}", "$type": "fontWeight"}
+    },
+    "card": {
+      "padding":    {"$value": "{core.dimension.spacing.6}",  "$type": "dimension"},
+      "radius":     {"$value": "{core.dimension.radius.lg}",  "$type": "dimension"},
+      "background": {"$value": "{semantic.color.background.elevated}", "$type": "color"}
+    }
+  }
+}

@@ -90,6 +90,28 @@ jobs:
       - name: Rodar validate_agents.py (modo strict)
         run: python scripts/validate_agents.py --strict
 
+  validate-codex-plugin:
+    name: Validar pacote Codex
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v5
+
+      - name: Configurar Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Instalar PyYAML
+        run: pip install pyyaml
+
+      - name: Verificar pacote Codex gerado
+        run: python scripts/build_codex_plugin.py --check
+
+      - name: Validar manifesto Codex
+        run: python scripts/validate_codex_plugin.py plugins/marketing-os
+
   validate-yaml:
     name: Validar arquivos YAML
     runs-on: ubuntu-latest

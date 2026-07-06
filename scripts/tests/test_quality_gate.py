@@ -8,11 +8,13 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from quality_gate import (
     check_accents,
+    check_ai_tells,
     check_hook,
     check_cta,
     check_readability,
     check_format_compliance,
     check_hashtags,
+    AI_TELL_PATTERNS,
     MUST_ACCENT_WORDS,
     PLATFORM_LIMITS,
     STRONG_CTA_WORDS,
@@ -299,6 +301,69 @@ class TestCheckHashtags:
         """Score deve estar entre 0 e 10."""
         score, _ = check_hashtags("#tag1 #tag2 #tag3")
         assert 0 <= score <= 10
+
+
+class TestCheckAITells:
+    """Testes para detecção de vícios de IA (travessão, 'brutal', antíteses)."""
+
+    def test_clean_text_full_score(self):
+        score, issues = check_ai_tells(
+            "Texto direto, sem vícios. Você vai entender o método em 5 minutos."
+        )
+        assert score == 10
+        assert issues == []
+
+    def test_detects_em_dash(self):
+        score, issues = check_ai_tells("Marketing digital — a arte de vender online")
+        assert score == 0
+        assert any("Travessão" in i for i in issues)
+
+    def test_detects_brutal(self):
+        score, issues = check_ai_tells("A verdade brutal sobre crescer no Instagram")
+        assert score == 0
+        assert any("brutal" in i for i in issues)
+
+    def test_brutal_inside_word_not_flagged(self):
+        score, issues = check_ai_tells("A brutalidade do algoritmo é conhecida")
+        assert all("brutal" not in i for i in issues)
+
+    def test_detects_antithesis_with_period(self):
+        score, issues = check_ai_tells("Não é sobre dinheiro. É sobre tempo.")
+        assert score == 0
+        assert any("Antítese" in i for i in issues)
+
+    def test_detects_antithesis_with_comma(self):
+        score, issues = check_ai_tells("Não é magia, é método.")
+        assert score == 0
+
+    def test_detects_antithesis_repeated_verb(self):
+        score, issues = check_ai_tells(
+            "Não faça mais cursos aleatórios. Faça um plano de estudo."
+        )
+        assert score == 0
+        assert any("verbo repetido" in i for i in issues)
+
+    def test_detects_antithesis_foi(self):
+        score, issues = check_ai_tells("Não foi sorte. Foi estratégia.")
+        assert score == 0
+
+    def test_plain_negation_not_flagged(self):
+        score, issues = check_ai_tells(
+            "Não é fácil crescer no Instagram. Esse caminho exige consistência."
+        )
+        assert score == 10
+
+    def test_negation_across_clauses_not_flagged(self):
+        """Verbo repetido em frase nova não relacionada não deve disparar."""
+        score, issues = check_ai_tells(
+            "Você não sabe por onde começar, comece pelo básico. Sabe qual é o maior erro?"
+        )
+        assert score == 10
+
+    def test_patterns_have_messages(self):
+        for pattern, message in AI_TELL_PATTERNS:
+            assert len(pattern) > 0
+            assert len(message) > 0
 
 
 class TestConstants:

@@ -1,0 +1,120 @@
+# Design Review — {{ARTIFACT_NAME}}
+
+> **Reviewer:** {{REVIEWER}}
+> **Data:** {{DATE}}
+> **Artefato:** {{ARTIFACT_TYPE}} ({{COMPONENT/SCREEN/BRAND/CAMPAIGN}})
+> **Versão revisada:** {{VERSION}}
+> **Veredito:** {{PASS / CONCERNS / FAIL}}
+
+---
+
+## Contexto
+
+{{BRIEF_SUMMARY}}
+
+**Links:**
+- Figma: {{FIGMA_LINK}}
+- Spec: {{SPEC_LINK}}
+- Brief: {{BRIEF_LINK}}
+- Jira/Issue: {{ISSUE_LINK}}
+
+---
+
+## Checklist (15 pontos)
+
+### Estratégia e Propósito
+- [ ] **1. Alinhado com brief** — entrega o que foi pedido (comparar spec x artefato)
+- [ ] **2. Audience clara** — design comunica com a persona-alvo
+- [ ] **3. Mensagem/hierarquia** — ponto principal identificável em <= 3s
+
+### Hierarquia Visual
+- [ ] **4. Hierarquia tipográfica** — H1 > H2 > H3 > body é visualmente clara
+- [ ] **5. Focal point** — um ponto principal de atenção (não competindo com outros)
+- [ ] **6. White space** — respira, densidade adequada ao contexto
+
+### Cor e Contraste
+- [ ] **7. Paleta coerente** — usa tokens da marca, sem cores ad-hoc
+- [ ] **8. Contraste WCAG 2.2 AA** — todos pares texto/bg >= 4.5:1 (normal) ou 3:1 (large/UI)
+- [ ] **9. Dark mode funcional** — testado (se aplicável); não é só inversão
+
+### Tipografia
+- [ ] **10. Famílias corretas** — usa fontes do DS/brand, sem extras
+- [ ] **11. Scale consistente** — usa tokens de font-size; nada arbitrário
+- [ ] **12. Line-height adequado** — 1.5 em body, 1.2 em display, 1.4 em headers
+
+### Layout e Responsive
+- [ ] **13. Grid respeitado** — alinhamento em colunas definidas
+- [ ] **14. Responsive** — testado em mobile / tablet / desktop
+- [ ] **15. Densidade consistente** — spacing em múltiplos de 4px, não ad-hoc
+
+---
+
+## Severity Matrix
+
+| Severidade | Descrição | Ação |
+|------------|-----------|------|
+| **Critical** | Bloqueia release. Quebra a11y, compromete marca ou funcionalidade. | Bloquear merge; corrigir antes |
+| **High** | Afeta experiência significativamente. Deve corrigir antes do release. | Corrigir nesse ciclo |
+| **Medium** | Melhoria notável mas não bloqueante. | Criar tech-debt ticket |
+| **Low** | Nitpick, polimento. | Opcional; documentar se quiser |
+
+---
+
+## Issues Encontrados
+
+### Critical
+{{CRITICAL_ISSUES_OR_NONE}}
+
+Formato por issue:
+- **Título curto** — descrição do problema
+  - *Localização:* Figma frame X / arquivo linha Y
+  - *Por que é critical:* impacto concreto
+  - *Fix sugerido:* ação acionável
+
+### High
+{{HIGH_ISSUES_OR_NONE}}
+
+### Medium
+{{MEDIUM_ISSUES_OR_NONE}}
+
+### Low
+{{LOW_ISSUES_OR_NONE}}
+
+---
+
+## Veredito Final
+
+**{{PASS / CONCERNS / FAIL}}**
+
+### Rubrica
+
+| Veredito | Critério |
+|----------|----------|
+| **PASS** | Zero Critical, <= 2 High |
+| **CONCERNS** | Zero Critical, 3-5 High (aprovado com fixes documentados em follow-ups) |
+| **FAIL** | >= 1 Critical OU >= 6 High (retorna para revisão) |
+
+### Próximos passos
+- {{ACTION_1}}
+- {{ACTION_2}}
+- {{ACTION_3}}
+
+### Follow-ups (se CONCERNS)
+| # | Issue | Assignee | Deadline |
+|---|-------|----------|----------|
+| 1 | {{FOLLOWUP_1}} | {{OWNER_1}} | {{DATE_1}} |
+| 2 | {{FOLLOWUP_2}} | {{OWNER_2}} | {{DATE_2}} |
+
+---
+
+## Aprovação
+
+- [ ] **Reviewer:** {{REVIEWER}} — {{DATE}}
+- [ ] **Design Lead:** {{DESIGN_LEAD}} — {{DATE}}
+- [ ] **Product Owner:** {{PRODUCT_OWNER}} — {{DATE}}
+- [ ] **Engineering (opcional):** {{ENG_LEAD}} — {{DATE}}
+
+---
+
+**Notas livres:**
+{{NOTAS_LIVRES}}

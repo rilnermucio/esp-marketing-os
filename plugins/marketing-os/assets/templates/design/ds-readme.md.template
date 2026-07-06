@@ -1,0 +1,177 @@
+# {{DS_NAME}}
+
+> {{ONE_LINE_TAGLINE}}
+
+![version](https://img.shields.io/badge/version-{{VERSION}}-blue)
+![a11y](https://img.shields.io/badge/WCAG-2.2_AA-green)
+![coverage](https://img.shields.io/badge/coverage-{{PCT}}%25-brightgreen)
+
+**Status:** {{STATUS}} | **Última release:** {{DATE}} | **Licença:** {{LICENSE}}
+
+---
+
+## O que é
+
+{{DS_NAME}} é o design system de {{COMPANY}} — biblioteca unificada de componentes, tokens e padrões para construir produtos consistentes, acessíveis e rápidos.
+
+### Princípios
+
+1. **{{PRINCIPLE_1}}** — {{PRINCIPLE_1_DESCRIPTION}}
+2. **{{PRINCIPLE_2}}** — {{PRINCIPLE_2_DESCRIPTION}}
+3. **{{PRINCIPLE_3}}** — {{PRINCIPLE_3_DESCRIPTION}}
+4. **{{PRINCIPLE_4}}** — {{PRINCIPLE_4_DESCRIPTION}}
+
+---
+
+## Instalação
+
+### NPM
+```bash
+npm install @{{ORG}}/{{DS_PACKAGE}}
+```
+
+### Yarn
+```bash
+yarn add @{{ORG}}/{{DS_PACKAGE}}
+```
+
+### PNPM
+```bash
+pnpm add @{{ORG}}/{{DS_PACKAGE}}
+```
+
+---
+
+## Uso Rápido
+
+### 1. Importar o tema
+
+```tsx
+// No entry point do app (ex: main.tsx, _app.tsx)
+import '@{{ORG}}/{{DS_PACKAGE}}/theme.css';
+```
+
+### 2. Usar componentes
+
+```tsx
+import { Button, Card, Input } from '@{{ORG}}/{{DS_PACKAGE}}';
+
+function SignupForm() {
+  return (
+    <Card>
+      <h2>Inscreva-se</h2>
+      <Input placeholder="Seu email" type="email" />
+      <Button variant="primary" type="submit">Inscrever</Button>
+    </Card>
+  );
+}
+```
+
+### 3. Trocar para dark mode
+
+```tsx
+<html data-theme="dark">...</html>
+```
+
+Ou via JS:
+```tsx
+document.documentElement.setAttribute('data-theme', 'dark');
+```
+
+---
+
+## Estrutura do Pacote
+
+```
+{{DS_PACKAGE}}/
+├── tokens/                 # W3C design tokens (JSON)
+│   ├── core.json
+│   ├── semantic.json
+│   └── components.json
+├── theme/                  # CSS compilado
+│   ├── theme.css
+│   └── theme.dark.css
+├── components/             # Componentes React
+├── icons/                  # Biblioteca de ícones
+└── docs/                   # Storybook builds
+```
+
+---
+
+## Componentes
+
+| Componente | Status | Versão | Docs |
+|------------|--------|--------|------|
+| Button | Stable | {{BTN_VERSION}} | [link]({{BTN_DOCS}}) |
+| Card | Stable | {{CARD_VERSION}} | [link]({{CARD_DOCS}}) |
+| Input | Stable | {{INPUT_VERSION}} | [link]({{INPUT_DOCS}}) |
+| Modal | Beta | {{MODAL_VERSION}} | [link]({{MODAL_DOCS}}) |
+| Toast | Stable | {{TOAST_VERSION}} | [link]({{TOAST_DOCS}}) |
+| Table | Beta | {{TABLE_VERSION}} | [link]({{TABLE_DOCS}}) |
+| ... | ... | ... | ... |
+
+Status legenda: Stable (pronto para produção) | Beta (API pode mudar) | Deprecated (migrar para alternativa)
+
+---
+
+## Design Tokens
+
+Arquitetura de 3 camadas (W3C Design Tokens spec 2025.10):
+
+1. **Core** — valores base (cores neutras, espaçamento, tipografia)
+2. **Semantic** — significado contextual (background primary, text secondary)
+3. **Component** — tokens específicos de componente (button padding, card radius)
+
+**Consumir via CSS:**
+```css
+.minha-classe {
+  color: var(--color-text-primary);
+  padding: var(--space-4);
+}
+```
+
+**Consumir via JS:**
+```tsx
+import { tokens } from '@{{ORG}}/{{DS_PACKAGE}}/tokens';
+const primaryColor = tokens.semantic.color.text.primary;
+```
+
+---
+
+## Acessibilidade
+
+- **WCAG 2.2 AA** mínimo em todos os componentes (target AAA onde aplicável)
+- Testado com axe-core + NVDA + VoiceOver + Voice Control + TalkBack
+- Keyboard-first navigation
+- `prefers-reduced-motion` respeitado
+- Focus indicators sempre visíveis (WCAG 2.4.11)
+- Target size >= 24×24 CSS pixels (WCAG 2.5.8)
+
+---
+
+## Contribuir
+
+1. Leia o [CONTRIBUTING.md]({{CONTRIBUTING_LINK}})
+2. Abra issue para discussão antes de PR grande
+3. Siga o RFC process para novos componentes
+4. Todo PR precisa:
+   - Testes (unit + integration + visual)
+   - Documentação (Storybook)
+   - A11y audit (axe-core 0 violations)
+   - Review de 2+ maintainers
+
+---
+
+## Links
+
+- [Storybook]({{STORYBOOK_URL}})
+- [Figma Library]({{FIGMA_URL}})
+- [Changelog](./CHANGELOG.md)
+- [Roadmap]({{ROADMAP_URL}})
+- [Release notes]({{RELEASES_URL}})
+
+---
+
+## Licença
+
+{{LICENSE}} © {{YEAR}} {{COMPANY}}

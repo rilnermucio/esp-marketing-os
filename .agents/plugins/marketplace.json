@@ -1,0 +1,20 @@
+{
+  "name": "marketing-os-marketplace",
+  "interface": {
+    "displayName": "Marketing OS"
+  },
+  "plugins": [
+    {
+      "name": "marketing-os",
+      "source": {
+        "source": "local",
+        "path": "./plugins/marketing-os"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Marketing"
+    }
+  ]
+}

@@ -1,0 +1,255 @@
+# Componente: {{COMPONENT_NAME}}
+
+> **Status:** {{STATUS}} (Draft / Ready / Deprecated)
+> **Versão:** {{VERSION}} (semver: major.minor.patch)
+> **Última revisão:** {{DATE}}
+> **Owner:** {{OWNER}}
+
+---
+
+## 1. Propósito
+
+{{ONE_LINE_PURPOSE}}
+
+**Quando usar:**
+- {{USE_CASE_1}}
+- {{USE_CASE_2}}
+- {{USE_CASE_3}}
+
+**Quando NÃO usar:**
+- {{ANTI_USE_CASE_1}} — use `{{ALTERNATIVE_COMPONENT}}` em vez disso
+- {{ANTI_USE_CASE_2}}
+
+---
+
+## 2. Anatomia
+
+```
+┌─────────────────────────────────────┐
+│  [ícone]  Label principal    [seta] │
+└─────────────────────────────────────┘
+     A         B                 C
+```
+
+| Parte | Nome técnico | Opcional? | Descrição |
+|-------|--------------|-----------|-----------|
+| A | `{{part-icon-slot}}` | Sim | Ícone leading |
+| B | `{{part-label-slot}}` | Não | Label principal |
+| C | `{{part-trailing-slot}}` | Sim | Ícone/ação trailing |
+
+---
+
+## 3. Props API
+
+| Prop | Tipo | Default | Descrição |
+|------|------|---------|-----------|
+| `variant` | `"primary" \| "secondary" \| "ghost" \| "danger"` | `"primary"` | Intent visual |
+| `size` | `"sm" \| "md" \| "lg"` | `"md"` | Tamanho |
+| `disabled` | `boolean` | `false` | Desativa interação |
+| `loading` | `boolean` | `false` | Estado de loading (mostra spinner) |
+| `fullWidth` | `boolean` | `false` | Ocupa 100% do container |
+| `leadingIcon` | `ReactNode` | — | Ícone antes do label |
+| `trailingIcon` | `ReactNode` | — | Ícone após o label |
+| `aria-label` | `string` | — | Label para screen readers (obrigatório se só ícone) |
+| `onClick` | `(e: MouseEvent) => void` | — | Handler de clique |
+| `children` | `ReactNode` | — | Conteúdo textual (label) |
+
+---
+
+## 4. Variantes Visuais
+
+### `primary`
+- Background: `var(--color-brand-primary)`
+- Text: `var(--color-text-inverse)`
+- Border: none
+- Contraste: {{X.X}}:1 ({{AA/AAA}})
+- Uso: ação principal da tela
+
+### `secondary`
+- Background: `transparent`
+- Border: `1px solid var(--color-border-strong)`
+- Text: `var(--color-text-primary)`
+- Uso: ação alternativa ou secundária
+
+### `ghost`
+- Background: `transparent`
+- Border: none
+- Text: `var(--color-text-primary)`
+- Uso: ações de baixa hierarquia (close, cancel, etc.)
+
+### `danger`
+- Background: `var(--color-danger)`
+- Text: white
+- Uso: ações destrutivas (delete, remove, force)
+
+---
+
+## 5. Estados
+
+| Estado | Quando ativa | Visual | Interação |
+|--------|--------------|--------|-----------|
+| `default` | Padrão | Base | Clicável |
+| `hover` | Ponteiro por cima | Shade escuro 8% | Clicável |
+| `active` | Pressionado | Shade escuro 12% | Clicável |
+| `focus-visible` | Foco via teclado | Ring 2px `var(--color-focus)` offset 2px | Clicável |
+| `disabled` | `disabled=true` | Opacidade 50%, cursor not-allowed | Não clicável |
+| `loading` | `loading=true` | Spinner substitui `leadingIcon`, `aria-busy=true` | Não clicável |
+
+### Transições
+- Cor background: `var(--duration-fast)` com `var(--easing-ease-out)`
+- Transform active: `scale(0.98)` em `var(--duration-instant)`
+
+---
+
+## 6. Acessibilidade (WCAG 2.2)
+
+**Requisitos obrigatórios:**
+
+- [ ] Contraste texto/background >= 4.5:1 (AA) ou 7:1 (AAA)
+- [ ] Target size >= 24×24 CSS pixels (WCAG 2.5.8)
+- [ ] Focus indicator visível e com contraste >= 3:1 (WCAG 2.4.11)
+- [ ] Keyboard: Enter e Space ativam o botão
+- [ ] Screen reader: anuncia role="button" + label + estado (disabled/busy)
+- [ ] `aria-label` obrigatório quando o botão tem apenas ícone
+- [ ] `aria-busy="true"` durante loading
+- [ ] `aria-disabled="true"` preferível a `disabled` se o botão precisa permanecer focável (para screen reader conseguir anunciar o estado)
+- [ ] Respeitar `prefers-reduced-motion` (transições reduzidas)
+
+**Testing:**
+- Axe-core: 0 violations
+- NVDA/JAWS/VoiceOver: anúncio correto
+- Keyboard: Tab para focar, Enter/Space para ativar, Esc sai de estado loading
+- Reduced motion: testado com flag ativa
+
+---
+
+## 7. Exemplos de Código
+
+### React — básico
+```tsx
+import { {{ComponentName}} } from '@/components/{{component-name}}';
+
+<{{ComponentName}} variant="primary" size="md" onClick={handleSubmit}>
+  Salvar
+</{{ComponentName}}>
+```
+
+### React — com ícone
+```tsx
+<{{ComponentName}}
+  variant="ghost"
+  aria-label="Fechar modal"
+  leadingIcon={<XIcon />}
+/>
+```
+
+### React — loading state
+```tsx
+const [isSubmitting, setIsSubmitting] = useState(false);
+
+<{{ComponentName}}
+  variant="primary"
+  loading={isSubmitting}
+  disabled={isSubmitting}
+  onClick={async () => {
+    setIsSubmitting(true);
+    await submit();
+    setIsSubmitting(false);
+  }}
+>
+  {isSubmitting ? 'Enviando...' : 'Enviar'}
+</{{ComponentName}}>
+```
+
+### HTML/CSS puro (sem framework)
+```html
+<button type="button" class="btn btn--primary btn--md">
+  Salvar
+</button>
+```
+
+---
+
+## 8. Do / Don't
+
+### DO
+- Use `primary` para a ação principal da tela (máximo 1 por view)
+- Use labels curtos e acionáveis (1-3 palavras idealmente: "Salvar", "Cancelar", "Enviar mensagem")
+- Ordene de prioridade visual: primary > secondary > ghost
+- Combine com ícone para reforçar significado (não substitua texto)
+- Use `danger` apenas para ações destrutivas irreversíveis
+
+### DON'T
+- Não use mais de 1 `primary` por view (cria competição de atenção)
+- Não use só ícone sem `aria-label` (inacessível para screen readers)
+- Não embed o componente dentro de texto corrido — use um link
+- Não use `ghost` isolado em fundo branco sem contexto (some visualmente)
+- Não misture tamanhos diferentes na mesma row de ações
+
+---
+
+## 9. Figma
+
+- **Library:** {{FIGMA_LIBRARY_LINK}}
+- **Component key:** {{COMPONENT_KEY}}
+- **Variants mapeadas:** variant, size, state, leadingIcon (boolean), trailingIcon (boolean)
+
+### Code Connect mapping
+
+Em `{{component-name}}.figma.tsx`:
+```tsx
+import figma from '@figma/code-connect';
+import { {{ComponentName}} } from './{{component-name}}';
+
+figma.connect({{ComponentName}}, '{{FIGMA_NODE_URL}}', {
+  props: {
+    variant: figma.enum('Variant', {
+      Primary: 'primary',
+      Secondary: 'secondary',
+      Ghost: 'ghost',
+      Danger: 'danger',
+    }),
+    size: figma.enum('Size', {
+      Small: 'sm',
+      Medium: 'md',
+      Large: 'lg',
+    }),
+    disabled: figma.boolean('Disabled'),
+    loading: figma.boolean('Loading'),
+    children: figma.string('Label'),
+  },
+  example: (props) => <{{ComponentName}} {...props} />,
+});
+```
+
+---
+
+## 10. Tokens Usados
+
+| Token | Uso |
+|-------|-----|
+| `core.color.brand.primary` | Background `primary` variant |
+| `core.color.neutral.0` | Text inverse em `primary` |
+| `semantic.color.border.strong` | Border do `secondary` |
+| `semantic.color.text.primary` | Text em `secondary`/`ghost` |
+| `semantic.color.feedback.danger` | Background `danger` |
+| `component.button.padding.md` | Padding por tamanho |
+| `component.button.radius` | Border radius |
+| `component.button.fontWeight` | Font weight |
+| `core.duration.fast` | Transição de hover |
+
+---
+
+## 11. Dependências
+
+- **Icon system** — ícones seguem `{{ICON_SIZE_TOKEN}}` (geralmente 16px ou 20px por size)
+- **Typography** — font-family de `{{core.typography.fontFamily.sans}}`
+- **Spinner** (para loading) — componente interno `<Spinner size={size} />`
+
+---
+
+## 12. Changelog
+
+| Versão | Data | Mudança | Breaking? |
+|--------|------|---------|-----------|
+| {{VERSION}} | {{DATE}} | Versão inicial | — |

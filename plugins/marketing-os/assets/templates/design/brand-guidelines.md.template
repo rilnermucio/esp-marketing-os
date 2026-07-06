@@ -1,0 +1,642 @@
+# Brand Guidelines — {{BRAND_NAME}}
+
+> **Versão:** {{VERSION}} | **Última atualização:** {{DATE}} | **Owner:** {{OWNER}}
+
+Este documento define a identidade visual e verbal de {{BRAND_NAME}}. Siga-o em toda comunicação — digital, impresso, ambiente, merch e produto.
+
+---
+
+## Índice
+
+1. [Manifesto](#1-manifesto)
+2. [Missão, Visão, Valores](#2-missao-visao-valores)
+3. [Personas](#3-personas)
+4. [Voz e Tom](#4-voz-e-tom)
+5. [Vocabulário](#5-vocabulario)
+6. [Elevator Pitches](#6-elevator-pitches)
+7. [Logo System](#7-logo-system)
+8. [Logo — Clear Space](#8-logo-clear-space)
+9. [Logo — Minimum Size](#9-logo-minimum-size)
+10. [Logo — Don'ts](#10-logo-donts)
+11. [Paleta Primária](#11-paleta-primaria)
+12. [Paleta Secundária](#12-paleta-secundaria)
+13. [Paleta Funcional](#13-paleta-funcional)
+14. [Contraste e Acessibilidade](#14-contraste-e-acessibilidade)
+15. [Tipografia — Famílias](#15-tipografia-familias)
+16. [Tipografia — Hierarquia](#16-tipografia-hierarquia)
+17. [Tipografia — Pareamento e Regras](#17-tipografia-pareamento)
+18. [Grid e Layout](#18-grid-e-layout)
+19. [Direção de Fotografia](#19-direcao-de-fotografia)
+20. [Sistema de Ilustração](#20-sistema-de-ilustracao)
+21. [Sistema de Ícones](#21-sistema-de-icones)
+22. [Motion Principles](#22-motion-principles)
+23. [Sonic Brand](#23-sonic-brand)
+24. [Aplicações — Digital](#24-aplicacoes-digital)
+25. [Aplicações — Print](#25-aplicacoes-print)
+26. [Aplicações — Merch](#26-aplicacoes-merch)
+27. [Aplicações — Ambiente](#27-aplicacoes-ambiente)
+28. [Aplicações — Embalagem](#28-aplicacoes-embalagem)
+29. [Co-branding](#29-co-branding)
+30. [Contato, Revisão, Changelog](#30-contato-revisao-changelog)
+
+---
+
+## 1. Manifesto
+
+{{MANIFESTO_PARAGRAFO_1}}
+
+{{MANIFESTO_PARAGRAFO_2}}
+
+{{MANIFESTO_PARAGRAFO_3}}
+
+**Guidance:** 3 parágrafos. Primeiro: a dor/oportunidade que existe no mundo. Segundo: por que {{BRAND_NAME}} existe. Terceiro: o futuro que a marca promete. Tom: emocional, direto, memorável. 300-450 palavras totais.
+
+---
+
+## 2. Missão, Visão, Valores
+
+### Missão
+{{MISSAO_UMA_FRASE}}
+
+### Visão
+{{VISAO_UMA_FRASE}}
+
+### Valores
+1. **{{VALOR_1}}** — {{VALOR_1_DESCRICAO}}
+2. **{{VALOR_2}}** — {{VALOR_2_DESCRICAO}}
+3. **{{VALOR_3}}** — {{VALOR_3_DESCRICAO}}
+4. **{{VALOR_4}}** — {{VALOR_4_DESCRICAO}}
+5. **{{VALOR_5}}** — {{VALOR_5_DESCRICAO}}
+
+**Guidance:** 3-5 valores. Cada um é uma palavra + 1 frase acionável. Evite clichês ("inovação", "excelência", "paixão") a não ser que você defina o que significa concretamente na sua operação.
+
+---
+
+## 3. Personas
+
+### Persona Primária: {{PERSONA_1_NOME}}
+- **Idade:** {{IDADE}}
+- **Contexto:** {{CONTEXTO}}
+- **Dor principal:** {{DOR}}
+- **O que ela quer:** {{DESEJO}}
+- **Como fala:** {{ESTILO_FALA}}
+- **Quote representativa:** "{{QUOTE}}"
+
+### Persona Secundária: {{PERSONA_2_NOME}}
+[Mesma estrutura]
+
+### Persona Terciária (opcional): {{PERSONA_3_NOME}}
+[Mesma estrutura]
+
+**Guidance:** 2-3 personas. Cada uma baseada em pesquisa real (entrevistas, dados), não invenção. Use a persona primária como default para decisões ambíguas.
+
+---
+
+## 4. Voz e Tom
+
+### Voz (constante)
+{{VOZ_DESCRICAO}}
+
+Exemplos de atributos: clara, direta, provocadora, acolhedora, técnica, irreverente, profissional, pop.
+
+### Tom (varia por contexto)
+
+| Contexto | Tom | Exemplo |
+|----------|-----|---------|
+| Onboarding / primeiro contato | Acolhedor, entusiasmado | "Bem-vindo! Vamos começar juntos." |
+| Erro / bug / problema | Honesto, empático, acionável | "Algo deu errado. Aqui está o que fazer:" |
+| Sucesso / conquista | Celebrador, mas moderado | "Feito. Próximo passo: [...]" |
+| Convite a ação (marketing) | Urgente sem ser agressivo | "Inscreva-se antes de sexta." |
+| Documentação técnica | Claro, preciso, exemplificado | "Execute `npm install` no terminal." |
+
+**Guidance:** Voz é o DNA (não muda). Tom é a roupa (muda com o contexto). Documente pelo menos 5 contextos comuns.
+
+---
+
+## 5. Vocabulário
+
+### Palavras que USAMOS
+{{PALAVRAS_ON_BRAND_LISTA}}
+
+### Palavras que NÃO USAMOS
+{{PALAVRAS_OFF_BRAND_LISTA}}
+
+### Banned list (nunca usar)
+- {{BANNED_1}} — motivo: {{RAZAO}}
+- {{BANNED_2}} — motivo: {{RAZAO}}
+
+**Guidance:** 10-20 palavras on-brand + 10-20 off-brand + banned list. Inclui razão para banned (evita virar arbitrário).
+
+---
+
+## 6. Elevator Pitches
+
+### 15 segundos
+{{PITCH_15S}}
+
+### 30 segundos
+{{PITCH_30S}}
+
+### 60 segundos
+{{PITCH_60S}}
+
+### 1 frase (tagline)
+{{TAGLINE_UMA_FRASE}}
+
+**Guidance:** Todos devem poder recitar o de 15s de cor. Tagline curta (5-8 palavras max).
+
+---
+
+## 7. Logo System
+
+### Primary
+{{LOGO_PRIMARY_IMAGEM}}
+
+Uso: aplicação padrão em todos contextos onde houver espaço suficiente.
+
+### Secondary (mark / símbolo)
+{{LOGO_SYMBOL_IMAGEM}}
+
+Uso: favicon, avatar social, aplicações muito pequenas onde o wordmark não caiba.
+
+### Lockups
+
+- Horizontal: {{LOCKUP_H}}
+- Vertical: {{LOCKUP_V}}
+- Com tagline: {{LOCKUP_COM_TAG}}
+
+### Versões de cor
+
+- Full color (padrão)
+- Monocromático preto
+- Monocromático branco (para uso em fundos escuros)
+- Inverso (silhueta)
+
+---
+
+## 8. Logo — Clear Space
+
+Espaço livre mínimo ao redor do logo: **{{CLEAR_SPACE_UNIDADE}}** igual à altura da letra "{{LETRA_REFERENCIA}}" do wordmark.
+
+```
+        [Clear space: X]
+ [X]  LOGO  [X]
+        [Clear space: X]
+```
+
+Nunca coloque outros elementos visuais dentro dessa zona.
+
+---
+
+## 9. Logo — Minimum Size
+
+| Mídia | Tamanho mínimo |
+|-------|----------------|
+| Digital (web) | {{MIN_DIGITAL}} px de largura |
+| Digital (mobile) | {{MIN_MOBILE}} px |
+| Print (alta resolução) | {{MIN_PRINT}} mm |
+| Favicon | {{MIN_FAVICON}} px |
+| Impressão em tecido/merch | {{MIN_MERCH}} mm |
+
+Abaixo do mínimo, use o símbolo isolado.
+
+---
+
+## 10. Logo — Don'ts
+
+Nunca:
+
+1. **Não distorça proporções** (não estique, espreme ou rotacione)
+2. **Não mude as cores** (use apenas paletas oficiais)
+3. **Não aplique sombras, gradientes ou efeitos** (stroke, glow, bevel)
+4. **Não use sobre fundos de baixo contraste** (mínimo 4.5:1)
+5. **Não coloque dentro de formas geométricas** (caixas, círculos, triângulos) sem autorização
+6. **Não reproduza o logo em baixa qualidade** (pixelado, serrilhado)
+7. **Não combine com outro logo sem espaçamento e linha divisória** (ver §29 Co-branding)
+8. **Não reescreva ou trace o wordmark** (use só o arquivo oficial)
+9. **Não altere a proporção entre símbolo e wordmark**
+10. **Não use versões antigas** (verifique data no arquivo)
+
+Exemplos visuais: {{DONTS_VISUAIS_LINK}}
+
+---
+
+## 11. Paleta Primária
+
+| Nome | Hex | RGB | HSL | CMYK | Pantone | Uso |
+|------|-----|-----|-----|------|---------|-----|
+| Primary | {{HEX_PRIMARY}} | {{RGB_PRIMARY}} | {{HSL_PRIMARY}} | {{CMYK_PRIMARY}} | {{PANTONE_PRIMARY}} | Botão CTA, links, destaques |
+| Primary Dark | {{HEX_PRIMARY_DARK}} | {{RGB_PRIMARY_DARK}} | — | — | — | Hover, estados ativos |
+| Primary Light | {{HEX_PRIMARY_LIGHT}} | — | — | — | — | Backgrounds sutis, highlights |
+
+---
+
+## 12. Paleta Secundária
+
+| Nome | Hex | Uso |
+|------|-----|-----|
+| Secondary | {{HEX_SECONDARY}} | Elementos de suporte |
+| Accent 1 | {{HEX_ACCENT_1}} | Destaques eventuais |
+| Accent 2 | {{HEX_ACCENT_2}} | Gradientes, categorias |
+
+### Neutros
+| Nome | Hex |
+|------|-----|
+| Neutral 0 | #FFFFFF |
+| Neutral 50-900 | (escala tonal, ver tokens.json) |
+| Neutral 1000 | #000000 |
+
+---
+
+## 13. Paleta Funcional
+
+| Significado | Nome | Hex | Uso |
+|-------------|------|-----|-----|
+| Sucesso | Success | #10B981 | Confirmações, completado |
+| Aviso | Warning | #F59E0B | Atenção, pendente |
+| Erro | Danger | #EF4444 | Erros, ações destrutivas |
+| Informação | Info | #3B82F6 | Alertas neutros, dicas |
+
+Estas cores são reservadas a feedback de sistema. Não use para decoração.
+
+---
+
+## 14. Contraste e Acessibilidade
+
+Todos pares de cor texto/background em nosso sistema atingem **WCAG 2.2 AA mínimo (4.5:1)**. Buscamos **AAA (7:1)** sempre que viável.
+
+### Matriz de pares aprovados
+
+| Texto | Fundo | Ratio | WCAG |
+|-------|-------|-------|------|
+| {{HEX_TEXT_1}} | {{HEX_BG_1}} | {{RATIO_1}}:1 | AAA |
+| {{HEX_TEXT_2}} | {{HEX_BG_2}} | {{RATIO_2}}:1 | AA |
+| ... | ... | ... | ... |
+
+### Pares PROIBIDOS (contraste insuficiente)
+- {{HEX_TEXT_FAIL_1}} sobre {{HEX_BG_FAIL_1}} — {{RATIO_FAIL}}:1 (FAIL)
+
+Ferramenta: https://webaim.org/resources/contrastchecker/
+
+---
+
+## 15. Tipografia — Famílias
+
+### Display (manchetes, impacto)
+**{{FONT_DISPLAY}}** | Peso: {{PESO_DISPLAY}} | Uso: títulos grandes (>= 32px), hero sections, editorial.
+
+### Body (texto corrente)
+**{{FONT_BODY}}** | Pesos: {{PESOS_BODY}} | Uso: parágrafos, descrições, corpo de artigos.
+
+### UI (interface)
+**{{FONT_UI}}** | Pesos: {{PESOS_UI}} | Uso: botões, labels, menus, navegação.
+
+### Mono (código / dados)
+**{{FONT_MONO}}** | Uso: snippets de código, valores numéricos tabulares.
+
+### Licenças e fontes
+- {{FONT_NAME_1}}: {{LICENSE_1}} — hosted em {{HOST_1}}
+- {{FONT_NAME_2}}: {{LICENSE_2}} — hosted em {{HOST_2}}
+
+---
+
+## 16. Tipografia — Hierarquia
+
+| Nível | Tamanho | Line-height | Peso | Uso |
+|-------|---------|-------------|------|-----|
+| H1 | 48px / 3rem | 1.1 | Bold (700) | Página principal, uma por view |
+| H2 | 36px / 2.25rem | 1.2 | Bold (700) | Seções principais |
+| H3 | 30px / 1.875rem | 1.25 | Semibold (600) | Subseções |
+| H4 | 24px / 1.5rem | 1.3 | Semibold (600) | Grupos internos |
+| H5 | 20px / 1.25rem | 1.4 | Medium (500) | Headers de blocos |
+| H6 | 18px / 1.125rem | 1.4 | Medium (500) | Headers menores |
+| Body | 16px / 1rem | 1.5 | Regular (400) | Parágrafos |
+| Small | 14px / 0.875rem | 1.5 | Regular (400) | Legendas, metadados |
+| Caption | 12px / 0.75rem | 1.5 | Regular (400) | Notas de rodapé, labels mínimos |
+
+Escala modular: fator 1.25 (major third).
+
+---
+
+## 17. Tipografia — Pareamento e Regras
+
+### Regras universais
+1. Nunca mais de 2 famílias por composição (exceção: mono para código)
+2. Pareamento clássico: serif display + sans body ou sans display + sans body
+3. Line-length ideal: 50-75 caracteres por linha (parágrafos)
+4. Mantenha hierarquia visual através de tamanho + peso (evite depender só de cor)
+5. Evite tracking excessivo em corpo (menos 0.02em)
+
+### Quando usar cada família
+- **Editorial / storytelling longo:** serif body + sans display
+- **Interface de produto:** sans everywhere (mais limpo, mais legível em telas pequenas)
+- **Marcas técnicas:** mono em números e dados
+
+---
+
+## 18. Grid e Layout
+
+### Canvas 1 — Web (desktop)
+- Max width: {{MAX_WIDTH_DESKTOP}}px
+- Colunas: 12 | Gutter: 24px | Margin: 64px
+- Breakpoints: 1440 / 1024 / 768 / 480 / 360
+
+### Canvas 2 — Mobile
+- Colunas: 4 | Gutter: 16px | Margin: 16px
+
+### Canvas 3 — Print
+- Grids de 6 ou 12 colunas
+- Margens: 20mm top, 15mm lateral
+- Bleed: 3mm
+
+### Canvas 4 — Social media
+- Ver especificações por plataforma em `references/design-specs.md`
+
+### Canvas 5 — Merch e embalagem
+- Definido caso-a-caso (camiseta, caneca, caixa, etiqueta)
+
+### Espaçamento vertical (rhythm)
+Baseado em múltiplos de 4px (base 4): 4, 8, 12, 16, 24, 32, 48, 64, 96.
+
+---
+
+## 19. Direção de Fotografia
+
+### Estilo
+{{ESTILO_FOTOGRAFICO}}
+
+Referências: {{MOOD_BOARD_LINK}}
+
+### Paleta visual
+- Predominância: {{PALETA_DOMINANTE}}
+- Temperatura: {{QUENTE_NEUTRO_FRIO}}
+- Contraste: {{ALTO_MEDIO_BAIXO}}
+
+### Composição
+- Enquadramento preferido: {{ENQUADRAMENTO}}
+- Profundidade de campo: {{DOF}}
+- Ponto focal: {{PF}}
+
+### Pessoas
+- Diversidade obrigatória (idade, etnia, gênero, corpo, habilidade)
+- Expressões: autênticas, nunca "stock-y" artificial
+- Contexto: real, próximo do uso do produto
+
+### O que evitar
+- Stock photos genéricas
+- Pessoas olhando direto pra câmera sorrindo artificialmente
+- Iluminação clínica (a menos que seja o estilo intencional)
+- Composições simétricas centralizadas (exceto para fins específicos)
+
+---
+
+## 20. Sistema de Ilustração
+
+### Estilo
+{{ESTILO_ILUSTRACAO}}
+
+Exemplos: flat 2D, isométrico, line-art minimalista, texturizado handmade, 3D estilizado.
+
+### Paleta
+Usa exclusivamente cores da paleta oficial (§§ 11-13).
+
+### Construção
+- Geometria: {{FORMAS_BASE}}
+- Peso de linha: {{PESO_LINHA}}
+- Cantos: {{ARREDONDADOS_OU_AGUDOS}}
+- Sombras: {{SOMBRAS_SIM_NAO}}
+
+### Bank de ilustrações
+{{ILLUSTRATION_BANK_LINK}}
+
+---
+
+## 21. Sistema de Ícones
+
+### Metáfora
+{{METAFORA_VISUAL}} (ex: linha fina, contorno sólido, duotone, flat)
+
+### Grid
+- Tamanho base: 24×24 px
+- Keyline: 20×20 px (padding 2px em cada lado)
+- Stroke weight: 1.5px (consistente em todos ícones)
+- Cantos: radius 2px (arredondados suaves)
+
+### Anatomia
+- Use apenas formas primárias (linha, círculo, quadrado, triângulo)
+- Evite detalhes sub-pixel
+- Teste em 16, 24, 32, 48 px para legibilidade
+
+### Bank de ícones
+{{ICON_BANK_LINK}}
+
+Formato: SVG otimizado. Cada ícone deve ter `aria-label` quando usado standalone em UI.
+
+---
+
+## 22. Motion Principles
+
+### Personalidade em motion
+{{PERSONALIDADE_MOTION}}
+
+Exemplos: energética e bouncy / sutil e elegante / rígida e institucional / brincalhona.
+
+### Tokens de motion
+- Duração: 100 / 150 / 250 / 400 / 700 ms
+- Easing padrão: `cubic-bezier(0, 0, 0.2, 1)` (ease-out)
+- Easing de saída: `cubic-bezier(0.4, 0, 1, 1)` (ease-in)
+
+### Grammar
+- **Entrada:** fade-in + subtle scale (1 → 1.02 → 1) ou slide-up
+- **Saída:** fade-out + scale-down sutil
+- **Feedback:** micro-bounce em click, subtle shake em erro
+- **Continuidade:** shared element transitions entre rotas
+
+### Reduced motion
+Respeitar `prefers-reduced-motion: reduce` sempre. Nunca desabilitar transições importantes, reduzir drasticamente (preferível 50ms a 0ms em alguns casos).
+
+---
+
+## 23. Sonic Brand
+
+### Se aplicável (produtos com áudio/UI sounds)
+
+- **Jingle principal:** {{JINGLE_LINK}}
+- **UI sounds:**
+  - Success: {{SOUND_SUCCESS}}
+  - Error: {{SOUND_ERROR}}
+  - Notification: {{SOUND_NOTIFICATION}}
+  - Message: {{SOUND_MESSAGE}}
+
+### Princípios
+- Volume moderado (não invasivo)
+- Curtos (< 500ms para UI sounds)
+- Sempre com opção de mute
+- Consistente entre plataformas
+
+Se {{BRAND_NAME}} não tem aplicação sonora: **N/A**.
+
+---
+
+## 24. Aplicações — Digital
+
+### Site institucional
+- Hero: logo + tagline + CTA principal
+- Tipografia: display em H1 do hero, sans body em todo restante
+- Paleta: neutros predominam, primary só em CTAs e destaques
+- Imagens: fotografia + ilustração combinadas conforme §§ 19-20
+
+### App/produto
+- Tema primary em ações principais, neutros em toda UI
+- Dark mode obrigatório
+- Motion: sutil, rápido (<= 250ms)
+
+### Email
+- Largura máxima: 600px
+- Fallback fonts (Arial, Georgia)
+- Dark mode compatível (use `@media (prefers-color-scheme: dark)`)
+- CTA único por email ideal
+
+### Social media
+- Ver specs dimensionais em `references/design-specs.md`
+- Manter assinatura visual consistente entre plataformas (grids, paleta, fontes)
+
+---
+
+## 25. Aplicações — Print
+
+### Cartão de visita
+- Formato: {{CARTAO_FORMATO}} (padrão 85×55 mm)
+- Frente: logo + nome + cargo
+- Verso: tagline + contato
+- Papel: {{PAPEL_SUGERIDO}}
+
+### Papel timbrado
+- Tamanho: A4 (210×297 mm)
+- Margens: 20mm sup/inf, 15mm lateral
+- Logo no topo, rodapé com endereço + site
+
+### Folder / brochura
+- Formato típico: {{FORMATO_FOLDER}} (A5 tri-fold)
+- Grid: 6 colunas por página
+- Fontes: display para chamadas, body para texto
+
+### Outdoor / large format
+- Hierarquia simplificada (1-2 elementos visuais dominantes)
+- Legibilidade a distância: fonte mínima {{FONTE_MIN_OUTDOOR}}
+- Contraste máximo
+
+---
+
+## 26. Aplicações — Merch
+
+### Camisetas
+- Logo primário no peito esquerdo OU centralizado no peito
+- Tamanho: {{TAM_LOGO_CAMISETA}} mm de largura
+- Cores: conforme paleta (preferir mono em tecidos texturizados)
+
+### Canecas
+- Logo + tagline opcional
+- Evitar versão muito pequena (mínimo 40mm)
+
+### Adesivos
+- Formato: {{FORMATO_ADESIVO}}
+- Versão: logo primário ou símbolo isolado
+- Fundo: transparente ou cor sólida da paleta
+
+### Outros brindes (canetas, blocos, chaveiros, ecobags)
+- Sempre usar versão oficial do logo
+- Ajustar tamanho conforme área disponível
+- Testar legibilidade antes de produção
+
+---
+
+## 27. Aplicações — Ambiente
+
+### Fachada / sinalização externa
+- Letreiro iluminado ou não, seguindo logo primário
+- Material: {{MATERIAL_FACHADA}}
+- Iluminação: backlight ou frontlight conforme contexto
+
+### Sinalização interna
+- Wayfinding: ícones + tipografia (fonte UI)
+- Contraste alto (WCAG 2.2 AA)
+- Altura de texto mínima: 15mm para leitura a 3m
+
+### Escritório / espaço
+- Paleta: neutros + accent em poucos pontos
+- Arte na parede: ilustrações do sistema oficial
+- Ambiente reforça a voz da marca (casual / formal / criativo)
+
+---
+
+## 28. Aplicações — Embalagem
+
+### Se aplicável (produto físico)
+
+- Estrutura: caixa + label + manual
+- Material: {{MATERIAL_EMBALAGEM}}
+- Impressão: {{TECNICA_IMPRESSAO}}
+- Hierarquia:
+  1. Logo + nome do produto
+  2. Descrição curta
+  3. Especificações técnicas
+  4. Brand elements (paleta, ilustração)
+
+### Sustentabilidade
+- Preferir materiais recicláveis
+- Minimizar camadas de embalagem
+- Tintas à base de água
+
+Se {{BRAND_NAME}} não tem produto físico: **N/A**.
+
+---
+
+## 29. Co-branding
+
+### Quando usar
+- Parcerias comerciais oficiais
+- Eventos conjuntos
+- Produtos colaborativos
+- Certificações / selos
+
+### Regras
+1. Logos lado-a-lado, separados por linha divisória vertical (1px)
+2. Espaçamento entre logos: igual ao clear space do nosso (§8)
+3. Logos em mesma altura visual (não em pixels, mas em altura perceptiva — o "x-height" do wordmark)
+4. Se um logo tem muito mais peso visual, diminua o outro proporcionalmente
+5. Nunca combine logos em sobreposição
+6. Ordem: cliente/parceiro à esquerda, nós à direita (ou conforme contrato)
+
+### Exemplos
+{{COBRANDING_EXEMPLOS_LINK}}
+
+---
+
+## 30. Contato, Revisão, Changelog
+
+### Contato
+- **Guardião da marca:** {{NOME_GUARDIAO}} | {{EMAIL_GUARDIAO}}
+- **Dúvidas de aplicação:** {{EMAIL_BRAND_OPS}}
+- **Acesso a ativos (logo, fontes, templates):** {{BRAND_PORTAL_LINK}}
+
+### Processo de revisão
+Antes de aplicar esta brand em material público:
+1. Revise o checklist: §§ 7-10 (logo), §§ 11-14 (cor), §§ 15-17 (tipo), §14 (a11y)
+2. Submeta ao guardião para aprovação (turnaround: {{TURNAROUND_DIAS}})
+3. Aguarde sign-off por escrito
+
+### Changelog
+
+| Versão | Data | Mudança |
+|--------|------|---------|
+| {{VERSION}} | {{DATE}} | Versão inicial |
+
+---
+
+**Guidance final para quem preenche este template:**
+- Substitua todos `{{PLACEHOLDER}}` por valores reais
+- Remova seções marcadas "N/A" se não aplicáveis
+- Adicione screenshots, exemplos visuais, links vivos onde couber
+- Comita em repositório de marca (ex: `brand/`) e versione com semver
+- Revise a cada release de produto importante ou a cada 12 meses mínimo

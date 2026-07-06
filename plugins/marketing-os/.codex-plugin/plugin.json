@@ -1,0 +1,44 @@
+{
+  "name": "marketing-os",
+  "version": "6.8.0+codex.20260706",
+  "description": "Marketing OS para Codex: orquestrador de marketing digital em PT-BR com 18 especialistas, knowledge bases, templates e scripts Python.",
+  "author": {
+    "name": "rilnermucio",
+    "url": "https://github.com/rilnermucio"
+  },
+  "homepage": "https://github.com/rilnermucio/esp-marketing-os",
+  "repository": "https://github.com/rilnermucio/esp-marketing-os",
+  "license": "MIT",
+  "keywords": [
+    "marketing",
+    "copywriting",
+    "seo",
+    "social-media",
+    "ads",
+    "email-marketing",
+    "content-strategy",
+    "funnels",
+    "pt-br"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Marketing OS",
+    "shortDescription": "Crie copy, SEO, social, anúncios, emails, funis e lançamentos em PT-BR.",
+    "longDescription": "Marketing OS empacota para Codex o sistema de marketing digital deste repositório. Ele expõe a skill marketing-os como orquestrador e reutiliza os 18 especialistas, knowledge bases, templates, swipe files, workflows e scripts Python do projeto.",
+    "developerName": "rilnermucio",
+    "category": "Marketing",
+    "capabilities": [
+      "Marketing strategy",
+      "Content generation",
+      "Copywriting",
+      "SEO",
+      "Campaign planning"
+    ],
+    "brandColor": "#0F766E",
+    "defaultPrompt": [
+      "Crie um carrossel Instagram usando Marketing OS.",
+      "Monte uma landing page BOFU para meu produto.",
+      "Planeje uma campanha de lançamento em PT-BR."
+    ]
+  }
+}

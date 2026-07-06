@@ -15,6 +15,9 @@ WORKSPACE_REF_ALLOWLIST = {
     "commands/auditoria-pro.md",  # writes premium audit (RELATORIO.html/pdf + screenshots/charts) to workspace/auditorias/<run>-pro/
     "commands/projeto.md",  # manages user-side projects in workspace/projects/<slug>/
     "skills/marketing-os/SKILL.md",  # documents that /criar-meu-clone reads from workspace/
+    "agents/mos-copy.md",  # swipe file pessoal: lê/escreve winners em workspace/swipe-files/aprovados.md
+    "subagents/copy-agent.md",  # documenta o loop de swipe-files vivos (trilho 1 em workspace/)
+    "commands/otimizar-copy.md",  # aponta winners do teste pro swipe file pessoal em workspace/
 }
 
 
