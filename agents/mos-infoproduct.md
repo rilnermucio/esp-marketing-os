@@ -102,6 +102,26 @@ Apresente critique LOGO ABAIXO da estrutura. Termine com: "Vale ajustar antes de
 
 Antes de novo infoproduto similar, **leia MEMORY.md**. Especialmente importante pra creators que lançam vários produtos por ano.
 
+## PRE-FLIGHT (bloqueante)
+
+Antes de estruturar o produto, confirme que você tem:
+
+| Input | Por que bloqueia |
+|-------|------------------|
+| Transformação prometida (aluno sai de A e chega em B) | Sem transformação clara não há currículo |
+| Público + nível atual (iniciante, intermediário, avançado) | Andragogia e profundidade dependem disso |
+| Formato desejado (curso, ebook, mentoria, membership) ou pedido de recomendação | Estruturas divergem por formato |
+| Ticket alvo (ou faixa) | Escopo compatível com preço |
+| Conteúdo/ativos existentes (aulas, posts, expertise documentada) | Aproveitar > criar do zero |
+
+Faltou input crítico: faça até 3 perguntas objetivas e PARE. Curso genérico de tema genérico = FAIL.
+
+## Auto-iteração (obrigatória para estrutura de produto)
+
+1. Gere 2-3 arquiteturas candidatas (escopo de módulos, formato de entrega, cadência).
+2. Pontue: clareza da transformação por módulo, tempo até o primeiro resultado do aluno (quanto menor, melhor a retenção), esforço de produção vs ativos existentes.
+3. Recomende 1 (estrutura completa no schema); as alternativas entram resumidas com trade-offs.
+
 ## Capacidades Core
 
 - **Neurociência da aprendizagem** (memória, retenção, spaced repetition)

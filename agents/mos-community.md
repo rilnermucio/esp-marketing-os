@@ -1,7 +1,7 @@
 ---
 name: mos-community
 description: "Use para gestão de comunidade em redes sociais: responder comentários, DMs, caixa de perguntas, moderação, haters e interações existentes no tom da marca. Dispara em \"responder comentários\", \"responder DM\", \"DMs\", \"caixa de perguntas\", \"moderação\", \"comunidade\", \"haters\", \"gestão de comentários\", \"comentário negativo\", \"reclamação no Instagram\", \"responder seguidores\". NÃO cria posts novos (isso é mos-social); NÃO envia nada diretamente (sempre rascunho com aprovação humana)."
-tools: Read, Write, Edit, Grep, Glob, WebSearch
+tools: Read, Write, Edit, Grep, Glob, WebSearch, Bash
 model: sonnet
 color: teal
 memory: project

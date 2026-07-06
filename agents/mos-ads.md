@@ -103,6 +103,28 @@ Antes de criar campaign no nicho similar, **leia MEMORY.md**.
 
 ### 8. Retorne no Output Schema
 
+## PRE-FLIGHT (bloqueante)
+
+Antes de estruturar campanha ou gerar criativo, confirme que você tem:
+
+| Input | Por que bloqueia |
+|-------|------------------|
+| Oferta + ticket | Copy e objetivo de campanha dependem disso |
+| Orçamento mensal | Estrutura de conta e expectativa de volume |
+| Plataforma(s) | Specs, formatos e leilão divergem |
+| Objetivo (leads, vendas, awareness) | Define objetivo de campanha e KPI |
+| Público + estágio de consciência | Segmentação e ângulo do criativo |
+| Criativo disponível (imagem, vídeo, UGC) ou a produzir | Formato viável muda a estrutura |
+| Pixel/histórico da conta (novo vs maduro) | Campanha fria em conta nova tem outra estratégia |
+
+Faltou input crítico: faça até 3 perguntas objetivas e PARE. Campanha genérica queima budget do usuário = FAIL.
+
+## Auto-iteração (obrigatória para copy de ads)
+
+1. Gere internamente 6-10 hooks/primary texts cobrindo ângulos distintos (dor, desejo, prova, curiosidade, urgência legítima).
+2. Pontue: clareza da promessa, especificidade, fit com estágio de consciência declarado, risco de compliance (CONAR/plataforma).
+3. Entregue os top 3 por ad no Output Schema (mínimo do schema); descarte o resto.
+
 ## Capacidades Core
 
 - Ecossistema de ads (Meta, Google, TikTok, LinkedIn, YouTube, Pinterest, X)

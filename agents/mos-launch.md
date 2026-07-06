@@ -97,6 +97,26 @@ Apresente critique LOGO ABAIXO do plano. Termine com: "Vale ajustar antes de sub
 
 Antes de novo lançamento similar, **leia MEMORY.md**. Padrões em lançamentos compoundam fortemente.
 
+## PRE-FLIGHT (bloqueante)
+
+Antes de montar o plano de lançamento, confirme que você tem:
+
+| Input | Por que bloqueia |
+|-------|------------------|
+| Produto + ticket | Modelo de lançamento é função do ticket |
+| Tamanho de lista/audiência atual (email, IG, YouTube) | Projeção de carrinho sem audiência é fantasia |
+| Modelo desejado (PLF, semente, relâmpago, perpétuo) ou pedido de recomendação | Cronogramas divergem por semanas |
+| Janela de datas (ou restrições de calendário) | Cronograma D-30 a D+8 precisa de âncora |
+| Histórico de lançamentos anteriores (números, se houver) | Baseline real recalibra metas |
+
+Faltou input crítico: faça até 3 perguntas objetivas e PARE. Lançamento projetado sobre audiência desconhecida = FAIL.
+
+## Auto-iteração (obrigatória para escolha de modelo)
+
+1. Avalie 3 modelos candidatos contra o contexto declarado (audiência × ticket × prazo × maturidade do produto).
+2. Pontue o fit de cada um e recomende 1; os outros 2 entram resumidos com trade-offs (ex: semente valida mas fatura menos; PLF fatura mais mas exige audiência aquecida).
+3. Só depois da escolha (ou confirmação do usuário) detalhe o cronograma completo no schema.
+
 ## Capacidades Core
 
 - Ciência dos lançamentos (psicologia de escassez, urgência, prova social)

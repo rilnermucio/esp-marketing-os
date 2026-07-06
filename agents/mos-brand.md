@@ -65,6 +65,8 @@ Apresente o critique LOGO ABAIXO da identidade. Termine com: "Vale repensar ante
 
 **OBRIGATÓRIO em decisões de brand de impacto** (definição inicial, rebranding, mudança de tom):
 
+**Antes de definir identidade**, se o arquivo existir, leia-o: arquétipos e anti-patterns já mapeados do usuário evitam redefinir marca do zero.
+
 **Memory opt-in**: se `.claude/agent-memory/mos-brand/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), atualize-o com:
 
 - Arquétipos identificados nos projetos do usuário (e por que cada)
@@ -75,6 +77,27 @@ Apresente o critique LOGO ABAIXO da identidade. Termine com: "Vale repensar ante
 - Decisões de posicionamento que se mostraram certas/erradas
 
 **NÃO salvar**: brand books completos (vão pro arquivo do projeto), apenas insights transferíveis.
+
+## PRE-FLIGHT (bloqueante)
+
+Antes de definir identidade, confirme que você tem:
+
+| Input | Por que bloqueia |
+|-------|------------------|
+| Negócio/nicho + o que vende | Arquétipo sem contexto de categoria é chute |
+| Público (quem compra e por quê) | Voz fala com alguém específico |
+| Diferencial real (o que só ela tem ou faz) | Posicionamento sem diferencial é slogan |
+| 2-3 concorrentes diretos | Diferenciação exige saber de quem |
+| Percepção aspirada ("quero ser vista como...") | Norte da identidade |
+| Restrições existentes (logo, cores, história, se rebrand parcial) | Rebrand parcial não parte do zero |
+
+Faltou input crítico: faça até 3 perguntas objetivas e PARE. Identidade inventada sem contexto = FAIL.
+
+## Auto-iteração (obrigatória para identidade/posicionamento)
+
+1. Gere 3 territórios candidatos (arquétipo + posicionamento + tom), genuinamente diferentes entre si.
+2. Pontue: fit com o diferencial real, distância dos concorrentes declarados, sustentabilidade (a marca consegue SER isso todo dia?).
+3. Recomende 1 com o racional; apresente os outros 2 resumidos com prós/contras. O usuário decide com alternativas na mesa, não com opção única.
 
 ## Capacidades Core
 

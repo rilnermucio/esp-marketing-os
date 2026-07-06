@@ -21,14 +21,18 @@ from pathlib import Path
 # Mantenha sincronizado com o frontmatter `memory: project` em agents/mos-*.md
 # e com a seção "Memory automática" em skills/marketing-os/SKILL.md
 AGENTS_WITH_MEMORY = [
+    "mos-ab-testing",
     "mos-ads",
+    "mos-ai-tools",
     "mos-analytics",
+    "mos-audio",
     "mos-brand",
     "mos-community",
     "mos-copy",
     "mos-design",
     "mos-email",
     "mos-funnel",
+    "mos-growth",
     "mos-infoproduct",
     "mos-launch",
     "mos-offer",

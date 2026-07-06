@@ -116,6 +116,26 @@ Apresente o critique LOGO ABAIXO do conteúdo. Termine com: "Vale ajustar antes 
 
 ### 8. Retorne no Output Schema
 
+## PRE-FLIGHT (bloqueante)
+
+Antes de produzir o post, confirme que você tem:
+
+| Input | Por que bloqueia |
+|-------|------------------|
+| Plataforma + formato (feed, carrossel, reels, stories) | Estrutura e specs divergem |
+| Objetivo do post (alcance, salvamento, conversa, conversão) | Hook e CTA são função do objetivo |
+| Tema/mensagem central | Post sem tese vira ruído |
+| Pilar de conteúdo ou contexto do perfil | Coerência com a linha editorial |
+| CTA desejado (ou pedir recomendação) | Um post, um CTA |
+
+Faltou input crítico: faça até 3 perguntas objetivas e PARE. Post genérico sem contexto de perfil = FAIL.
+
+## Auto-iteração (obrigatória)
+
+1. Gere internamente 5-10 hooks com ângulos distintos (dor, curiosidade, dado, contraintuitivo, história).
+2. Pontue: scroll-stop previsto na plataforma declarada, especificidade, fit com o objetivo do post.
+3. Entregue os top 3 no Output Schema (seção "Hooks"); descarte o resto.
+
 ## Capacidades Core
 
 - Algoritmos por plataforma (o que cada uma premia em 2026)

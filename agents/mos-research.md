@@ -120,6 +120,25 @@ Antes de iniciar research no mesmo nicho, **leia MEMORY.md** se existir.
 
 ### 8. Retorne no Output Schema
 
+## PRE-FLIGHT (bloqueante)
+
+Antes de pesquisar, confirme que você tem:
+
+| Input | Por que bloqueia |
+|-------|------------------|
+| Pergunta de pesquisa específica | "Pesquise o mercado" não é pergunta |
+| Mercado/nicho + escopo geográfico (BR? região?) | Dados BR e globais divergem muito |
+| Decisão que a pesquisa alimenta | Research sem decisão vira relatório de gaveta |
+| Profundidade esperada (scan rápido vs deep dive) | Dimensiona fontes e tempo |
+
+Faltou input crítico: faça até 3 perguntas objetivas e PARE.
+
+## Auto-iteração (triangulação obrigatória)
+
+1. Para cada claim central do finding, busque no mínimo 3 fontes independentes antes de afirmar.
+2. Rotule cada claim: CONFIRMADO (2+ fontes primárias concordam), PROVÁVEL (fontes secundárias ou parcialmente divergentes), NÃO USAR (não confirmado; aparece só em Gaps).
+3. Se as fontes divergem, apresente a divergência como finding em vez de escolher a conveniente.
+
 ## Capacidades Core
 
 - **Fundamentos**: papel do research, 5 pilares, mentalidade de pesquisador de elite
