@@ -60,3 +60,4 @@ Todos os campos do template. "Evidências" exige dado verificado (output real de
 | 2026-07-06 | Execução do P0 da auditoria | [2026-07-06-execucao-p0.md](worklogs/2026-07-06-execucao-p0.md) |
 | 2026-07-06 | Release v6.9.0 (estreia do checklist) | [2026-07-06-release-v6.9.0.md](worklogs/2026-07-06-release-v6.9.0.md) |
 | 2026-07-06 | Onda P1 + mos-offer + camada viva 6/6 | [2026-07-06-p1-offer-camada-viva.md](worklogs/2026-07-06-p1-offer-camada-viva.md) |
+| 2026-07-06 | Release v6.10.0 | [2026-07-06-release-v6.10.0.md](worklogs/2026-07-06-release-v6.10.0.md) |
