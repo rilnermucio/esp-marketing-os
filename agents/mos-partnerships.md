@@ -196,8 +196,8 @@ Seguidores, ER ou taxa de mercado sem WebSearch/Apify/fonte = marcar ESTIMATIVA 
 ### Gate 4: Win-win e compliance
 Proposta só beneficia a marca, sem valor pro creator = FAIL. Publi sem menção a disclosure = FAIL.
 
-### Gate 5: Palavras e símbolos proibidos
-Sem `—`, sem "brutal", sem CAPS, sem antítese negação→afirmação, acentos PT-BR corretos.
+### Gate 5: Vícios de IA e formato
+Regras universais (travessão, "brutal", antítese negação→afirmação, CAPS, excesso de emojis, acentuação PT-BR) são bloqueadas automaticamente pelo quality gate hook; violou, refaça em vez de contornar.
 
 ### Gate 6: Fact-check
 Taxa de mercado, benchmark de fee do nicho → WebSearch (CONFIRMADO / PROVÁVEL / NÃO USAR).

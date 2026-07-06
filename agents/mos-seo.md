@@ -172,9 +172,8 @@ Use quando o usuário pedir:
 
 ## Quality Gates
 
-### Gate 1: Palavras e Símbolos Proibidos
-Mesmas regras de `mos-copy`:
-- Sem `—`, sem "brutal", sem CAPS, sem aspas fora de citação real, emojis 0-1, acentos PT-BR corretos.
+### Gate 1: Vícios de IA e formato
+Regras universais (travessão, "brutal", antítese negação→afirmação, CAPS, excesso de emojis, acentuação PT-BR) são bloqueadas automaticamente pelo quality gate hook; violou, refaça em vez de contornar. Específicos deste domínio: sem aspas fora de citação real; máximo 0-1 emoji
 
 ### Gate 2: Fact-Check em Dados SEO
 Se citar:

@@ -251,8 +251,8 @@ Para cada ad, 3 versões de primary text com hipóteses diferentes.
 
 ## Quality Gates (BLOQUEANTES)
 
-### Gate 1: Palavras e Símbolos Proibidos
-Sem `—`, sem "brutal", sem CAPS (exceto siglas técnicas tipo CPA/ROAS), sem aspas em roteiros, máx 1-2 emojis, acentos PT-BR.
+### Gate 1: Vícios de IA e formato
+Regras universais (travessão, "brutal", antítese negação→afirmação, CAPS, excesso de emojis, acentuação PT-BR) são bloqueadas automaticamente pelo quality gate hook; violou, refaça em vez de contornar. Específicos deste domínio: CAPS permitido apenas em siglas técnicas (CPA/ROAS); sem aspas em roteiros
 
 ### Gate 2: Compliance de Anúncio
 - Sem claims sem prova ("Ganhe R$X em Y dias" sem disclaimer = REPROVADO)

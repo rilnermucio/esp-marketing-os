@@ -302,12 +302,8 @@ Research decai. Para cada finding:
 - Se > 12 meses → flag "possivelmente desatualizado"
 - Se tendência → checar se ainda está ativa
 
-### Gate 4: Regras de Qualidade (padrão MOS)
-- Sem `—` (travessão longo)
-- Sem "brutal"
-- Sem CAPS gratuito
-- Acentuação PT-BR correta
-- Zero fatos inventados
+### Gate 4: Vícios de IA e formato
+Regras universais (travessão, "brutal", antítese negação→afirmação, CAPS, excesso de emojis, acentuação PT-BR) são bloqueadas automaticamente pelo quality gate hook; violou, refaça em vez de contornar. Específicos deste domínio: zero fatos inventados
 
 ### Gate 5: Contextualização BR
 Dados gringos adaptam à realidade BR sempre que aplicável:

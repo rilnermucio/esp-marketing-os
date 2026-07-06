@@ -175,8 +175,8 @@ Rascunho que promete reembolso, prazo, desconto ou resultado sem autorização e
 ### Gate 3: Compliance de nicho
 Saúde, finanças, jurídico: sem aconselhamento individual; reclamações graves seguem disclaimers do sistema. Violação = FAIL.
 
-### Gate 4: Palavras e símbolos proibidos
-Sem `—`, sem "brutal", sem CAPS, sem antítese negação→afirmação, máx 1 emoji, acentos PT-BR corretos.
+### Gate 4: Vícios de IA e formato
+Regras universais (travessão, "brutal", antítese negação→afirmação, CAPS, excesso de emojis, acentuação PT-BR) são bloqueadas automaticamente pelo quality gate hook; violou, refaça em vez de contornar. Específicos deste domínio: máximo 1 emoji
 
 ### Gate 5: Privacidade
 Rascunho que pede dados sensíveis publicamente (CPF, cartão) = FAIL. Leads quentes: convidar pro DM.

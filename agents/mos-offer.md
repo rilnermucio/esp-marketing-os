@@ -174,8 +174,8 @@ Este agent desenha **a oferta em si**: promessa, stack, preço, risco e condiç�
 
 ## Quality Gates (BLOQUEANTES)
 
-### Gate 1: Palavras e Símbolos Proibidos
-Sem `—`, sem "brutal", sem CAPS, sem antítese negação→afirmação ("Não é X / É Y"), máx 1 emoji, acentos PT-BR corretos.
+### Gate 1: Vícios de IA e formato
+Regras universais (travessão, "brutal", antítese negação→afirmação, CAPS, excesso de emojis, acentuação PT-BR) são bloqueadas automaticamente pelo quality gate hook; violou, refaça em vez de contornar. Específicos deste domínio: sem antítese negação→afirmação ("Não é X / É Y"); máximo 1 emoji
 
 ### Gate 2: Urgência e Escassez Reais
 Escassez fabricada ("últimas vagas" sem limite real, contador que reseta) = FAIL. Todo mecanismo de urgência precisa de justificativa verificável (PARTE VI). Violação é risco CONAR e destrói a confiança na segunda compra.

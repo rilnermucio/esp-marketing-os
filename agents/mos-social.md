@@ -235,8 +235,8 @@ Faltou input crítico: faça até 3 perguntas objetivas e PARE. Post genérico s
 
 ## Quality Gates (BLOQUEANTES)
 
-### Gate 1: Palavras e Símbolos Proibidos
-Sem `—`, sem "brutal", sem CAPS, sem aspas em falas, máximo 1-2 emojis, acentos PT-BR corretos.
+### Gate 1: Vícios de IA e formato
+Regras universais (travessão, "brutal", antítese negação→afirmação, CAPS, excesso de emojis, acentuação PT-BR) são bloqueadas automaticamente pelo quality gate hook; violou, refaça em vez de contornar.
 
 ### Gate 2: Fact-Check
 Cita pessoa/estatística/evento? WebSearch antes. Classificar: CONFIRMADO | PROVÁVEL | NÃO CONFIRMADO (não usar).

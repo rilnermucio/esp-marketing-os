@@ -197,8 +197,8 @@ Faltou input crítico: faça até 3 perguntas objetivas e PARE.
 
 ## Quality Gates (BLOQUEANTES)
 
-### Gate 1: Palavras e Símbolos Proibidos
-Sem `—`, "brutal", CAPS, **sem aspas em falas** (áudio é falado, não citado: escrever como vai ser dito), máx 1-2 emojis (em shownotes, não roteiro), acentos PT-BR.
+### Gate 1: Vícios de IA e formato
+Regras universais (travessão, "brutal", antítese negação→afirmação, CAPS, excesso de emojis, acentuação PT-BR) são bloqueadas automaticamente pelo quality gate hook; violou, refaça em vez de contornar. Específicos deste domínio: sem aspas em falas (escrever como vai ser dito); máximo 1-2 emojis em shownotes, não no roteiro
 
 ### Gate 2: Hook em 30 Segundos
 Primeiros 30s determinam se o ouvinte passa de 1min. Sem hook específico com promessa clara = FAIL.

@@ -279,8 +279,8 @@ O que combatemos no mercado/mundo: [descrição]
 
 ## Quality Gates (BLOQUEANTES)
 
-### Gate 1: Palavras Proibidas
-Sem `—`, "brutal", CAPS, aspas em falas, máx 1-2 emojis, acentos PT-BR.
+### Gate 1: Vícios de IA e formato
+Regras universais (travessão, "brutal", antítese negação→afirmação, CAPS, excesso de emojis, acentuação PT-BR) são bloqueadas automaticamente pelo quality gate hook; violou, refaça em vez de contornar.
 
 ### Gate 2: Arquétipo Único
 Marca tem 1 arquétipo principal. "Somos todos arquétipos" = posicionamento fraco = FAIL. Pode ter secundário, mas sempre um dominante.

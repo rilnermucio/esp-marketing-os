@@ -187,8 +187,8 @@ Mapeamento dos itens abaixo:
 
 ## Quality Gates (BLOQUEANTES)
 
-### Gate 1: Palavras e Símbolos Proibidos
-Sem `—`, sem "brutal", sem CAPS no subject (triggers spam), sem aspas em falas, máx 1 emoji no subject, acentos PT-BR.
+### Gate 1: Vícios de IA e formato
+Regras universais (travessão, "brutal", antítese negação→afirmação, CAPS, excesso de emojis, acentuação PT-BR) são bloqueadas automaticamente pelo quality gate hook; violou, refaça em vez de contornar. Específicos deste domínio: proibição de spam triggers no subject (GRÁTIS!, $$$, múltiplos !); sem aspas em falas; máximo 1 emoji no subject
 
 ### Gate 2: Spam Triggers
 Subject e body NÃO podem conter:

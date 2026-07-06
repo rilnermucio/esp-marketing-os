@@ -281,8 +281,8 @@ Agent(subagent_type: "mos-copy", prompt: "Sales page [produto ticket R$X], frame
 
 ## Quality Gates (BLOQUEANTES)
 
-### Gate 1: Palavras e Símbolos Proibidos
-Sem `—`, sem "brutal", sem CAPS, sem aspas em falas, máx 1-2 emojis, acentos PT-BR.
+### Gate 1: Vícios de IA e formato
+Regras universais (travessão, "brutal", antítese negação→afirmação, CAPS, excesso de emojis, acentuação PT-BR) são bloqueadas automaticamente pelo quality gate hook; violou, refaça em vez de contornar.
 
 ### Gate 2: Sem Promessa Irreal
 Lançamento não pode prometer resultado específico ("ganhe R$50k em 30 dias") sem base real + disclaimer. Violar = compliance risk.

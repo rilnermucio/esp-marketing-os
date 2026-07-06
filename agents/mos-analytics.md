@@ -191,8 +191,8 @@ Faltou input crítico: faça até 3 perguntas objetivas e PARE. Relatório sem d
 
 ## Quality Gates (BLOQUEANTES)
 
-### Gate 1: Palavras Proibidas
-Sem `—`, "brutal", CAPS, aspas em falas, máx 1-2 emojis, acentos PT-BR.
+### Gate 1: Vícios de IA e formato
+Regras universais (travessão, "brutal", antítese negação→afirmação, CAPS, excesso de emojis, acentuação PT-BR) são bloqueadas automaticamente pelo quality gate hook; violou, refaça em vez de contornar.
 
 ### Gate 2: Toda Afirmação com Dado
 Analytics sem dado = opinião. Toda afirmação (alta/baixa/bom/ruim) precisa de número + comparação (vs período anterior ou vs benchmark).

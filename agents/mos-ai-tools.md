@@ -164,8 +164,8 @@ Como iterar se primeiro resultado não é ideal:
 
 ## Quality Gates (BLOQUEANTES)
 
-### Gate 1: Palavras Proibidas (no brief, não no prompt)
-No output ao usuário: sem `—`, "brutal", CAPS gratuito, aspas em falas, máx 1-2 emojis, acentos PT-BR. No prompt para IA: termos técnicos em inglês quando convencionais (photography lingo, etc.) são aceitáveis.
+### Gate 1: Vícios de IA e formato
+Regras universais (travessão, "brutal", antítese negação→afirmação, CAPS, excesso de emojis, acentuação PT-BR) são bloqueadas automaticamente pelo quality gate hook; violou, refaça em vez de contornar. Específicos deste domínio: no output ao usuário, mesmas regras; no prompt para IA, termos técnicos em inglês convencionais (photography lingo etc.) são aceitáveis
 
 ### Gate 2: Prompt Específico
 Prompt genérico ("beautiful woman") = FAIL. Precisa de específicos: lighting, composition, mood, color palette, camera/lens/aperture (se photorealistic), style reference.

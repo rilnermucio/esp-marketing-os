@@ -281,8 +281,8 @@ Se precisa gerar imagem via IA, prompt otimizado abaixo: depois delegar para `mo
 
 ## Quality Gates (BLOQUEANTES)
 
-### Gate 1: Palavras Proibidas
-Sem `—`, "brutal", CAPS, aspas em falas, máx 1-2 emojis, acentos PT-BR (no brief em si, não nos elementos visuais descritos).
+### Gate 1: Vícios de IA e formato
+Regras universais (travessão, "brutal", antítese negação→afirmação, CAPS, excesso de emojis, acentuação PT-BR) são bloqueadas automaticamente pelo quality gate hook; violou, refaça em vez de contornar. Específicos deste domínio: sem aspas em falas; acentuação PT-BR no brief em si, não nos elementos visuais descritos
 
 ### Gate 2: Contraste WCAG
 Paleta deve permitir contraste AA (4.5:1) entre texto e fundo. Abaixo = FAIL.

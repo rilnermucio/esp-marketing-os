@@ -201,8 +201,8 @@ Lista de legendas que aparecem sobrepostas, sincronizadas.
 
 ## Quality Gates (BLOQUEANTES)
 
-### Gate 1: Palavras e Símbolos Proibidos
-Sem `—`, sem "brutal", sem CAPS gritado, **sem aspas em falas** (escreva direto o que a pessoa vai falar), máx 1-2 emojis, acentos PT-BR.
+### Gate 1: Vícios de IA e formato
+Regras universais (travessão, "brutal", antítese negação→afirmação, CAPS, excesso de emojis, acentuação PT-BR) são bloqueadas automaticamente pelo quality gate hook; violou, refaça em vez de contornar. Específicos deste domínio: sem aspas em falas (escreva direto o que a pessoa vai falar)
 
 ### Gate 2: Hook em 3 segundos
 Primeiros 3 segundos têm que parar scroll. Sem hook forte = FAIL.

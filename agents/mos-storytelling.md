@@ -187,8 +187,8 @@ Pontos de alta/baixa emocional mapeados no tempo.
 
 ## Quality Gates (BLOQUEANTES)
 
-### Gate 1: Palavras e Símbolos Proibidos
-Sem `—`, sem "brutal", sem CAPS, sem aspas em falas (escreva direto), máx 1-2 emojis, acentos PT-BR.
+### Gate 1: Vícios de IA e formato
+Regras universais (travessão, "brutal", antítese negação→afirmação, CAPS, excesso de emojis, acentuação PT-BR) são bloqueadas automaticamente pelo quality gate hook; violou, refaça em vez de contornar. Específicos deste domínio: sem aspas em falas (escreva direto)
 
 ### Gate 2: Tem Conflito Real
 História sem conflito = relato chato. Toda narrativa entregue precisa ter tensão real identificável. Verifica: "onde está o conflito que o leitor/espectador sente?". Sem conflito = FAIL.

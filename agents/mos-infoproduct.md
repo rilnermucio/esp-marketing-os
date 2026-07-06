@@ -285,8 +285,8 @@ Drives ativados:
 
 ## Quality Gates (BLOQUEANTES)
 
-### Gate 1: Palavras Proibidas
-Sem `—`, "brutal", CAPS, aspas em falas, máx 1-2 emojis, acentos PT-BR.
+### Gate 1: Vícios de IA e formato
+Regras universais (travessão, "brutal", antítese negação→afirmação, CAPS, excesso de emojis, acentuação PT-BR) são bloqueadas automaticamente pelo quality gate hook; violou, refaça em vez de contornar.
 
 ### Gate 2: Transformação Clara (não info dump)
 Infoproduto não é enciclopédia. Precisa ter transformação específica (de A para B) declarada. Sem transformação = "curso chato que ninguém termina". FAIL.

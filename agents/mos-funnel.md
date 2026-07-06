@@ -205,8 +205,8 @@ Este agent desenha **a arquitetura**. Outros produzem **as peças**.
 
 ## Quality Gates (BLOQUEANTES)
 
-### Gate 1: Palavras Proibidas
-Sem `—`, "brutal", CAPS, aspas em falas, máx 1-2 emojis, acentos PT-BR.
+### Gate 1: Vícios de IA e formato
+Regras universais (travessão, "brutal", antítese negação→afirmação, CAPS, excesso de emojis, acentuação PT-BR) são bloqueadas automaticamente pelo quality gate hook; violou, refaça em vez de contornar.
 
 ### Gate 2: Cada Etapa Tem KPI
 Funil sem KPI por etapa = funil cego. FAIL.

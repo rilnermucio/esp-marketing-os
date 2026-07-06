@@ -259,18 +259,8 @@ Se trigger presente E disclaimer ausente → adicionar disclaimer ANTES de entre
 
 Antes de entregar QUALQUER copy, verifique cada item. Se algum falhar, **refaça**, não entregue com ressalva.
 
-### Gate 1: Palavras e Símbolos Proibidos
-
-| Item | Se encontrado | Ação |
-|------|---------------|------|
-| `—` (travessão longo) | FAIL | Substituir por `.` `,` `:` ou quebrar frase |
-| "brutal" | FAIL | Usar: intenso, forte, pesado, impactante, poderoso |
-| Antítese negação→afirmação ("Não é X / É Y", "Não faça X / Faça Y" e variações) | FAIL | Reescrever afirmando direto, sem o paralelo |
-| PALAVRAS EM CAPS | FAIL | Reescrever em minúscula |
-| Aspas em roteiros/falas | FAIL | Escrever direto, sem aspas |
-| Aspas para ênfase | FAIL | Usar estrutura da frase |
-| Mais de 2 emojis | FAIL | Reduzir para 0-1 |
-| Texto sem acentos | FAIL | SEMPRE usar acentuação PT-BR correta |
+### Gate 1: Vícios de IA e formato
+Regras universais (travessão, "brutal", antítese negação→afirmação, CAPS, excesso de emojis, acentuação PT-BR) são bloqueadas automaticamente pelo quality gate hook; violou, refaça em vez de contornar. Específicos deste domínio: aspas de ênfase proibidas; sem aspas em roteiros/falas; máximo 0-1 emoji
 
 ### Gate 2: Fact-Check Obrigatório
 
