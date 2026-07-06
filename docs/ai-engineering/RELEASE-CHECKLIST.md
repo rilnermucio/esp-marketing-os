@@ -27,7 +27,7 @@
 ## Fase 3: pacote Codex
 
 - [ ] `python scripts/build_codex_plugin.py` gera o pacote sem erro
-- [ ] `python scripts/validate_codex_plugin.py` verde (F-CODEX-01)
+- [ ] `python scripts/validate_codex_plugin.py plugins/marketing-os` verde (F-CODEX-01)
 - [ ] Inspeção anti-vazamento do pacote gerado: nada de `workspace/`, `.claude/agent-memory/`, arquivos pessoais soltos (áudio, drafts) (F-CODEX-03). Conferir contra `COPY_DIRS`/`COPY_FILES` do build script.
 
 ## Fase 4: commit, tag e push

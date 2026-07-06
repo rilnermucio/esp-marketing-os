@@ -58,3 +58,4 @@ Todos os campos do template. "Evidências" exige dado verificado (output real de
 | 2026-06-12 | Hardening de copy + auditoria geral (retroativo) | [2026-06-12-copy-hardening-e-auditoria.md](worklogs/2026-06-12-copy-hardening-e-auditoria.md) |
 | 2026-07-06 | Criação da camada de engenharia de IA | [2026-07-06-camada-ai-engineering.md](worklogs/2026-07-06-camada-ai-engineering.md) |
 | 2026-07-06 | Execução do P0 da auditoria | [2026-07-06-execucao-p0.md](worklogs/2026-07-06-execucao-p0.md) |
+| 2026-07-06 | Release v6.9.0 (estreia do checklist) | [2026-07-06-release-v6.9.0.md](worklogs/2026-07-06-release-v6.9.0.md) |
