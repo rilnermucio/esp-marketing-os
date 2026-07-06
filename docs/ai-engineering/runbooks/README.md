@@ -5,5 +5,6 @@ Procedimentos de diagnóstico pra quando algo quebra. Um runbook nasce de incide
 | Runbook | Cobre |
 |---|---|
 | [install-failure-debug.md](install-failure-debug.md) | Install do plugin falhando (marketplace, validação, sync) |
+| [copy-agent-refresh.md](copy-agent-refresh.md) | Refresh anual das seções datadas das KBs (cadência: janeiro) |
 
-Relacionados fora desta pasta: `workflows/copy-agent-refresh.md` (refresh anual das KBs datadas), tabela "Como diagnosticar falhas" do [MAINTAINER-HANDBOOK.md](../MAINTAINER-HANDBOOK.md).
+Tabela "Como diagnosticar falhas" do [MAINTAINER-HANDBOOK.md](../MAINTAINER-HANDBOOK.md).

@@ -107,7 +107,7 @@ Briefings tipo **"cria página de aplicação"**, **"landing page"**, **"página
 
 ## Padrões de Orquestração
 
-Nos exemplos abaixo, `Agent(subagent_type: "mos-*")` é a sintaxe nativa do Claude Code. No Codex, trate cada chamada como uma etapa de roteamento: consulte o Tier 1 em `agents/mos-*.md`, aprofunde com o Tier 2 em `subagents/*-agent.md`, rode scripts determinísticos quando fizer sentido e consolide o resultado no protocolo de entrega.
+Nos exemplos abaixo, `Agent(subagent_type: "mos-*")` é a sintaxe nativa do Claude Code. No Codex, trate cada chamada como uma etapa de roteamento: consulte o Tier 1 em `agents/mos-*.md`, aprofunde com o Tier 2 em `subagents/*-agent.md`, rode scripts determinísticos quando fizer sentido e consolide o resultado no protocolo de entrega. Profundidade adicional de alguns workflows mora em `workflows/` (arquivos standalone).
 
 ### 1. Dispatch Simples (1 agent, caso mais comum)
 

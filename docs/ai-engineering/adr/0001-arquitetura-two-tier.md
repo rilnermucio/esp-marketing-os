@@ -38,7 +38,7 @@ O racional central é custo de contexto com profundidade preservada: o conhecime
 
 **Gap na direção oposta**: existe demanda sem dono (oferta/monetização, caso RT-017 do golden set). `mos-offer` está previsto no ROADMAP Fase 3 e é prioridade maior que qualquer consolidação.
 
-**Regra desta decisão**: remoção ou fusão de agent é mudança irreversível pra usuários (briefings roteados, memórias por projeto). Só acontece com dado de uso, nunca por estética de arquitetura. O plano histórico de expandir para 32 agents (`docs/SUBAGENTS-EXPANSION-PLAN.md`) permanece rejeitado: o overhead de roteamento e desempate cresce combinatoriamente e já há 3 agents subexpostos com 18.
+**Regra desta decisão**: remoção ou fusão de agent é mudança irreversível pra usuários (briefings roteados, memórias por projeto). Só acontece com dado de uso, nunca por estética de arquitetura. O plano histórico de expandir para 32 agents (`docs/archive/SUBAGENTS-EXPANSION-PLAN.md`) permanece rejeitado: o overhead de roteamento e desempate cresce combinatoriamente e já há 3 agents subexpostos com 18.
 
 ## Alternativas consideradas
 

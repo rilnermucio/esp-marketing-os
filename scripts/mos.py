@@ -154,7 +154,10 @@ COMMAND_MAP: Dict[str, Dict[str, Tuple[str, str]]] = {
         "narrate": ("tts_runner.py", "Narra roteiro em áudio PT-BR (say/kokoro)"),
     },
     "thumbnail": {
-        "compose": ("thumbnail_composer.py", "Compõe thumbnail 1280x720 com overlay tipográfico"),
+        "compose": (
+            "thumbnail_composer.py",
+            "Compõe thumbnail 1280x720 com overlay tipográfico",
+        ),
     },
 }
 

@@ -122,7 +122,7 @@ O orquestrador (skill `marketing-os`) dispara os 3 agents simultaneamente, cada 
 
 - **Primeira vez aqui?** Comece com `/criar-post` ou `/criar-artigo` para sentir o sistema.
 - **Quer entender a arquitetura?** Leia `skills/marketing-os/SKILL.md` (orquestrador) e `docs/architecture/subagents-migration.md`.
-- **Quer estender o sistema?** Veja `docs/SUBAGENTS-EXPANSION-PLAN.md`.
+- **Quer estender o sistema?** Veja `docs/archive/SUBAGENTS-EXPANSION-PLAN.md`.
 
 ## Quality gates (sempre aplicados)
 

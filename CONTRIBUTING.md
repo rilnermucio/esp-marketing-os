@@ -84,7 +84,7 @@ claude -p "/marketing-os:criar-anuncio Meta Ads pra curso de Copy"
 claude -p "/marketing-os escreve 5 headlines pra curso de Python"
 ```
 
-**Por que:** o resolver de slash commands em print mode nao herda o namespace default; em sessao interativa (`claude` sem `-p`), o `/criar-X` resolve direto. Detalhes de validacao em `docs/VALIDATION-RESULTS-v6.5.0.md`.
+**Por que:** o resolver de slash commands em print mode nao herda o namespace default; em sessao interativa (`claude` sem `-p`), o `/criar-X` resolve direto. Detalhes de validacao em `docs/archive/VALIDATION-RESULTS-v6.5.0.md`.
 
 **Outras gotchas do `-p`:**
 

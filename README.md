@@ -156,7 +156,7 @@ Marketing OS/
 ├── skills/marketing-os/    # Skill entrypoint (SKILL.md = orquestrador)
 ├── subagents/              # Tier 2 knowledge bases (~3500 linhas cada)
 ├── commands/               # 43 slash commands (39 com dispatch + /publicar-notion + /campanha índice + /projeto + /datas-sazonais)
-├── workflows/              # 10 workflows end-to-end documentados
+├── workflows/              # 9 workflows end-to-end documentados
 ├── assets/                 # Frameworks, personas, prompts, swipe files,
 │   ├── clones/             #   templates, 34 voice clones (+ design-dna)
 │   ├── frameworks/

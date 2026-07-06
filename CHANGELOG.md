@@ -162,7 +162,7 @@ Minor release adicionando integração opt-in com Apify Actors pra dois agents.
 
 ## [6.5.1] — 2026-05-09 (path canonicalization + post-v6.5.0 polish + validation docs)
 
-Patch release que distribui dois commits acumulados desde o tag v6.5.0 (1aa2a44, 1303771) e adiciona docs derivadas da validação completa da v6.5.0 ([VALIDATION-RESULTS-v6.5.0.md](docs/VALIDATION-RESULTS-v6.5.0.md)).
+Patch release que distribui dois commits acumulados desde o tag v6.5.0 (1aa2a44, 1303771) e adiciona docs derivadas da validação completa da v6.5.0 ([VALIDATION-RESULTS-v6.5.0.md](docs/archive/VALIDATION-RESULTS-v6.5.0.md)).
 
 ### Fixed
 
@@ -172,13 +172,13 @@ Patch release que distribui dois commits acumulados desde o tag v6.5.0 (1aa2a44,
 
 ### Added
 
-- `docs/VALIDATION-RESULTS-v6.5.0.md` — execução completa da VALIDATION-GUIDE 15 tests via `claude -p` (14/15 PASS, 1 deferido pra teste manual longitudinal).
+- `docs/archive/VALIDATION-RESULTS-v6.5.0.md` — execução completa da VALIDATION-GUIDE 15 tests via `claude -p` (14/15 PASS, 1 deferido pra teste manual longitudinal).
 - `CONTRIBUTING.md` — secao "Testando dispatches via `claude -p`" cobrindo namespace quirk (`/marketing-os:criar-X` em vez de `/criar-X`), AskUserQuestion limitation em -p, e flags uteis pra captura de dispatches.
 - `docs/TROUBLESHOOTING.md` — workaround para `claude plugin update marketing-os` falhar com "Plugin not found" (CLI): reinstall (`uninstall` + `install`) em vez de `update`.
 
 ### Notes
 
-Validacao end-to-end (memory persistence cross-session, T7 da VALIDATION-GUIDE) ainda pendente — agendado para 2026-05-11 (Calendar event externo). Resultados serao adicionados a VALIDATION-RESULTS-v6.5.0.md como `## T7 — Memory persistente (resultado)`.
+Validacao end-to-end (memory persistence cross-session, T7 da VALIDATION-GUIDE) ainda pendente — agendado para 2026-05-11 (Calendar event externo). Resultados serao adicionados a `docs/archive/VALIDATION-RESULTS-v6.5.0.md` como `## T7 — Memory persistente (resultado)`.
 
 ---
 

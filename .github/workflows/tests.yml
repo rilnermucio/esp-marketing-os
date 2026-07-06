@@ -66,7 +66,7 @@ jobs:
           pip install "black==26.5.1" flake8
 
       - name: Verificar formatação com Black
-        run: black --check --diff scripts/*.py
+        run: black --check --diff scripts/*.py scripts/hooks/
 
       - name: Verificar estilo com Flake8
         run: flake8 scripts/
