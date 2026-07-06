@@ -116,12 +116,12 @@
     {
       "id": "RT-013",
       "prompt": "desenha um teste A/B pro CTA da minha landing, tenho tráfego pago alto",
-      "expected_command": null,
+      "expected_command": "criar-teste-ab",
       "expected_agents": ["mos-ab-testing"],
       "dispatch": "simples",
-      "min_output_fields": ["hipótese no formato se-X-então-Y-porque-Z", "métrica primária", "tamanho mínimo de amostra", "duração estimada"],
-      "detects": ["F-ROUTE-03"],
-      "notes": "Gap conhecido: mos-ab-testing não tem command dedicado (auditoria jun/2026). Ao criar /criar-teste-ab, atualizar este caso."
+      "min_output_fields": ["hipótese no formato se-X-então-Y-porque-Z", "métrica primária", "tamanho mínimo de amostra com premissas", "duração estimada", "critério de parada"],
+      "detects": ["F-ROUTE-03", "F-ROUTE-02"],
+      "notes": "Era o último agent órfão de command (auditoria jun/2026); /criar-teste-ab criado em jul/2026 fecha o gap."
     },
     {
       "id": "RT-014",

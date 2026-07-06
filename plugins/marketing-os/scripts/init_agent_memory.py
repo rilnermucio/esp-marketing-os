@@ -34,6 +34,8 @@ AGENTS_WITH_MEMORY = [
     "mos-research",
     "mos-seo",
     "mos-social",
+    "mos-storytelling",
+    "mos-video",
 ]
 
 MEMORY_ROOT = Path(".claude/agent-memory")

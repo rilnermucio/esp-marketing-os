@@ -1,6 +1,6 @@
 # Marketing OS
 
-> Plugin Claude Code e Codex com **19 especialistas** em marketing digital + 39 slash commands Claude + 34 voice clones de copywriters lendários.
+> Plugin Claude Code e Codex com **19 especialistas** em marketing digital + 40 slash commands Claude + 34 voice clones de copywriters lendários.
 
 [![Version](https://img.shields.io/badge/version-6.10.0-blue.svg)](./CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
@@ -9,7 +9,7 @@
 
 Marketing OS é um plugin para o [Claude Code](https://www.anthropic.com/claude-code) e para o Codex que orquestra 19 especialistas nativos em domínios distintos do marketing digital. O plugin reivindica território explícito sobre briefings de marketing. Quando você pede "cria página de aplicação" ou "monta um webinar", ele roteia os especialistas corretos em paralelo, com camada estratégica antes de qualquer execução técnica.
 
-**35 dos 39 slash commands** dispatcham subagents `mos-*`. Os 4 que não dispatcham são intencionais: `/publicar-notion` (utility do Notion MCP), `/campanha` (índice dos 6 sub-commands de preset), `/projeto` (orquestrador de workflow com dispatch dinâmico) e `/datas-sazonais` (utilitário de dados do calendário sazonal BR). Use `/mo` pra briefing aberto se não souber qual command escolher. **Conteúdo PT-BR otimizado para o mercado brasileiro.**
+**36 dos 40 slash commands** dispatcham subagents `mos-*`. Os 4 que não dispatcham são intencionais: `/publicar-notion` (utility do Notion MCP), `/campanha` (índice dos 6 sub-commands de preset), `/projeto` (orquestrador de workflow com dispatch dinâmico) e `/datas-sazonais` (utilitário de dados do calendário sazonal BR). Use `/mo` pra briefing aberto se não souber qual command escolher. **Conteúdo PT-BR otimizado para o mercado brasileiro.**
 
 ## Instalação
 
@@ -78,7 +78,7 @@ Invocados pelo orquestrador (skill `/marketing-os`) ou diretamente via `@<agente
 | `@mos-copy` | Copywriting persuasivo (headlines, CTAs, sales letters) | sim |
 | `@mos-seo` | Otimização de busca (keywords, on-page, E-E-A-T, AI-SEO) | sim |
 | `@mos-social` | Posts e estratégia em redes sociais (cross-platform) | sim |
-| `@mos-video` | Roteiros (YouTube, Reels, TikTok, VSL, Shorts) | não |
+| `@mos-video` | Roteiros (YouTube, Reels, TikTok, VSL, Shorts) | sim |
 | `@mos-audio` | Podcasts, audiobooks, spots, sound design | não |
 | `@mos-design` | Direção visual, paletas, tipografia, design specs | sim |
 | `@mos-ai-tools` | Prompts pra Midjourney, Flux, Runway, Sora, etc. | não |
@@ -87,7 +87,7 @@ Invocados pelo orquestrador (skill `/marketing-os`) ou diretamente via `@<agente
 | `@mos-ads` | Anúncios pagos (Meta, Google, TikTok, LinkedIn) | sim |
 | `@mos-research` | Trend spotting, audience research, validação | sim |
 | `@mos-brand` | Identidade de marca, arquétipos, manifesto | sim |
-| `@mos-storytelling` | Narrativa aplicada (hero's journey, StoryBrand) | não |
+| `@mos-storytelling` | Narrativa aplicada (hero's journey, StoryBrand) | sim |
 | `@mos-funnel` | Funis de conversão, jornada (TOFU/MOFU/BOFU) | sim |
 | `@mos-growth` | Growth hacking, AARRR, retention | não |
 | `@mos-launch` | Lançamentos (PLF, semente, relâmpago, perpétuo) | sim |
@@ -95,7 +95,7 @@ Invocados pelo orquestrador (skill `/marketing-os`) ou diretamente via `@<agente
 | `@mos-offer` | Arquitetura de ofertas (value stack, preço, garantia, bônus) | sim |
 | `@mos-ab-testing` | A/B/MVT, ICE prioritization, significância estatística | não |
 
-**Memory opt-in (13 agents).** `mos-ads`, `mos-analytics`, `mos-brand`, `mos-copy`, `mos-design`, `mos-email`, `mos-funnel`, `mos-infoproduct`, `mos-launch`, `mos-offer`, `mos-research`, `mos-seo` e `mos-social` podem persistir aprendizados entre sessões em `.claude/agent-memory/mos-*/MEMORY.md`. Para ativar, rode o bootstrap uma vez na raiz do projeto:
+**Memory opt-in (15 agents).** Todos exceto `mos-ai-tools`, `mos-audio`, `mos-growth` e `mos-ab-testing` podem persistir aprendizados entre sessões em `.claude/agent-memory/mos-*/MEMORY.md`. Para ativar, rode o bootstrap uma vez na raiz do projeto:
 
 ```bash
 python3 scripts/init_agent_memory.py
@@ -124,7 +124,7 @@ Ver SKILL.md pra detalhes de cada workflow e "por que essa ordem importa". Tier 
 
 ## Slash commands rápidos
 
-39 commands em `commands/` cobrindo workflows comuns. **35 deles dispatcham subagents `mos-*`** seguindo os workflows da tabela acima (os 4 sem dispatch são utilities intencionais: `/publicar-notion`, `/campanha` índice, `/projeto` e `/datas-sazonais`). Quando você invoca direto (`/criar-carrossel`), segue lógica do command file. Quando pede em linguagem natural ("cria carrossel sobre X"), o orquestrador da skill dispatcha conforme tabela.
+40 commands em `commands/` cobrindo workflows comuns. **36 deles dispatcham subagents `mos-*`** seguindo os workflows da tabela acima (os 4 sem dispatch são utilities intencionais: `/publicar-notion`, `/campanha` índice, `/projeto` e `/datas-sazonais`). Quando você invoca direto (`/criar-carrossel`), segue lógica do command file. Quando pede em linguagem natural ("cria carrossel sobre X"), o orquestrador da skill dispatcha conforme tabela.
 
 | Categoria | Commands |
 |---|---|
@@ -139,6 +139,7 @@ Ver SKILL.md pra detalhes de cada workflow e "por que essa ordem importa". Tier 
 | Oferta | `/criar-oferta` (value stack, preço, garantia, bônus) |
 | Voice clones | `/criar-clone` (expert externo), `/criar-meu-clone` (suas amostras) |
 | Análise | `/analisar-concorrencia`, `/analisar-video`, `/clonar-estrategia`, `/auditoria`, `/auditoria-pro` |
+| Testes A/B | `/criar-teste-ab` (hipótese, amostra, duração, critério de parada) |
 | Visual | `/criar-brief-design`, `/gerar-imagem`, `/capturar-tela` |
 | Operação | `/batch`, `/criar-artigo`, `/publicar-notion`, `/projeto`, `/datas-sazonais` |
 | Campanhas (presets) | `/campanha` (índice), `/campanha-lancamento`, `/campanha-prospeccao`, `/campanha-retencao`, `/campanha-autoridade`, `/campanha-growth`, `/campanha-black-friday` |
@@ -154,7 +155,7 @@ Marketing OS/
 ├── agents/                 # 19 native subagents (mos-*.md)
 ├── skills/marketing-os/    # Skill entrypoint (SKILL.md = orquestrador)
 ├── subagents/              # Tier 2 knowledge bases (~3500 linhas cada)
-├── commands/               # 39 slash commands (35 com dispatch + /publicar-notion + /campanha índice + /projeto + /datas-sazonais)
+├── commands/               # 40 slash commands (36 com dispatch + /publicar-notion + /campanha índice + /projeto + /datas-sazonais)
 ├── workflows/              # 10 workflows end-to-end documentados
 ├── assets/                 # Frameworks, personas, prompts, swipe files,
 │   ├── clones/             #   templates, 34 voice clones (+ design-dna)

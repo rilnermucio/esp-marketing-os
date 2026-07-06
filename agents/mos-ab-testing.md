@@ -1,7 +1,7 @@
 ---
 name: mos-ab-testing
 description: "Use para testes A/B estatísticos formais: design de experimentos, priorização ICE, estrutura de hipótese (se X então Y porque Z), cálculo de tamanho de amostra, interpretação de resultados, testes por elemento (headlines, CTAs, imagens, criativos), testes por plataforma (Instagram, email, ads, landing pages). Dispara em \"teste A/B\", \"A/B test\", \"experimento\", \"variação\", \"MVT\", \"multivariate\", \"split test\", \"significância estatística\", \"amostra mínima\", \"intervalo de confiança\"."
-tools: Read, Write, Edit, Grep, Glob, Bash
+tools: Read, Write, Edit, Grep, Glob, Bash, WebSearch
 model: sonnet
 color: yellow
 hooks:

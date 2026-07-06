@@ -22,7 +22,7 @@ Briefings de usuário em PT-BR (como chegam de verdade, sem jargão de sistema) 
 | RT-010 | landing page high-ticket | `/criar-landing-page` | funnel → copy → design | sequencial |
 | RT-011 | datas comerciais do mês | `/datas-sazonais` (utility) | nenhum | nenhum |
 | RT-012 | publicar no Notion | `/publicar-notion` (utility) | nenhum | nenhum |
-| RT-013 | desenhar teste A/B | nenhum (gap: sem command) | ab-testing | simples |
+| RT-013 | desenhar teste A/B | `/criar-teste-ab` | ab-testing | simples |
 | RT-014 | narrar roteiro em áudio | `/narrar-roteiro` | audio | simples |
 | RT-015 | "por que o engajamento caiu?" | nenhum (linguagem natural) | analytics | simples |
 | RT-016 | carrossel 10 slides | `/criar-carrossel` | social + copy + design | paralelo |
@@ -30,7 +30,7 @@ Briefings de usuário em PT-BR (como chegam de verdade, sem jargão de sistema) 
 | RT-018 | bio do Instagram | nenhum (linguagem natural) | copy | simples |
 | RT-019 | "quanto cobrar pela mentoria?" | nenhum (linguagem natural) | offer | simples |
 
-RT-013 segue documentando um gap real (mos-ab-testing órfão de command); quando `/criar-teste-ab` existir, atualize o gabarito no mesmo diff (e este resumo). RT-017 era gap de ambiguidade e virou validação do desempate offer/copy/infoproduct/funnel criado com o `mos-offer` (jul/2026).
+RT-013 e RT-017 eram gaps documentados (agent órfão de command; ambiguidade sem desempate) e viraram validações das correções: `/criar-teste-ab` e `mos-offer` + desempate na SKILL, ambos em jul/2026. O golden set não tem gaps abertos no momento; casos novos entram pelo protocolo da EVALS-STRATEGY §2.
 
 ## Validação em duas camadas
 
