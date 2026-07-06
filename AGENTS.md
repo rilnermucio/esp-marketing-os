@@ -53,7 +53,7 @@ A arquitetura crítica de entender antes de mexer em qualquer agent:
 
 Isso mantém contextos leves, carrega profundidade só quando precisa, e permite evoluir knowledge sem mexer no dispatch.
 
-17 dos 21 agents declaram `memory: project` no frontmatter (todos exceto `mos-ai-tools`, `mos-audio`, `mos-growth` e `mos-ab-testing`). Ver "Memory opt-in (per-projeto)" abaixo.
+Todos os 21 agents declaram `memory: project` no frontmatter (completado no nivelamento de jul/2026). Ver "Memory opt-in (per-projeto)" abaixo.
 
 A skill em `skills/marketing-os/SKILL.md` é um **orquestrador** — ela mapeia briefings de usuário para `Agent(subagent_type: "mos-*")` calls. Os symlinks dentro de `skills/marketing-os/` (`assets`, `references`, `scripts`, `subagents`, `workflows`) apontam para os diretórios da raiz.
 

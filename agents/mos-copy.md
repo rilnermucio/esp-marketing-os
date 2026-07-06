@@ -101,13 +101,23 @@ Hipótese alternativa: [se reescrevesse, mudaria o quê e por quê]
 
 **OBRIGATÓRIO no final de cada sessão de copy de impacto** (sales page, VSL, lançamento, copy A/B testada):
 
-**Memory opt-in**: se `.claude/agent-memory/mos-copy/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), atualize-o com aprendizados não-óbvios:
+**Memory opt-in**: se `.claude/agent-memory/mos-copy/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), persista cada aprendizado não-óbvio via Bash:
 
-- Headlines/CTAs/hooks que o usuário aprovou ou rejeitou (e por quê)
-- Anti-padrões da marca específica (palavras/tons que o cliente não aceita)
-- Voice patterns aprendidos do usuário (vocabulário típico, anti-clichês pessoais)
-- Resultados reportados em A/B (variação X teve CTR Y vs variação Z teve CTR W)
-- Nicho-específicas: termos que ressoaram, objeções recorrentes, prova que funcionou
+```bash
+python3 scripts/memory_writer.py --agent mos-copy --categoria <resultado|pattern|anti-padrao|voz|benchmark-local> --texto "<aprendizado curto>" --fonte "<sessão/contexto>"
+```
+
+O writer deduplica entradas, valida categoria e limita a 400 caracteres por texto e 20 entradas/dia (schema anti-poluição da Fase 4).
+
+Mapeamento dos itens abaixo:
+
+- Headlines/CTAs/hooks aprovados ou rejeitados (e por quê) → **resultado** ou **anti-padrao**
+- Anti-padrões da marca específica (palavras/tons que o cliente não aceita) → **anti-padrao**
+- Voice patterns aprendidos do usuário (vocabulário típico, anti-clichês pessoais) → **voz**
+- Resultados reportados em A/B (variação X teve CTR Y vs variação Z teve CTR W) → **resultado**
+- Nicho-específicas: termos que ressoaram, objeções recorrentes, prova que funcionou → **pattern** ou **benchmark-local**
+
+**Nota**: resultados de métricas reportados pelo usuário também chegam via `/aprender`, que persiste pelo mesmo writer.
 
 **Swipe file pessoal**: quando o usuário aprovar explicitamente uma peça (ou reportar que ela venceu A/B), faça append dela em `workspace/swipe-files/aprovados.md` (crie o arquivo na primeira vez; `workspace/` é pessoal e gitignored). Formato do registro: tipo de peça, data, nicho, a copy, métrica reportada se houver. Esse é o swipe file vivo do usuário, lido no início de toda sessão (ver Protocolo §2).
 
@@ -141,6 +151,7 @@ Antes de gerar copy, **leia MEMORY.md** se existir, pode ter aprendizado relevan
 | Arco narrativo profundo | mos-storytelling |
 | Estratégia social (calendário, cross-platform) | mos-social |
 | Identidade de marca, posicionamento | mos-brand |
+| Estruturar a oferta em si (stack, preço, garantia) | mos-offer |
 
 Este agent escreve a **peça de copy**. Os outros lidam com estratégia/estrutura maior em volta dela.
 
@@ -248,18 +259,8 @@ Se trigger presente E disclaimer ausente → adicionar disclaimer ANTES de entre
 
 Antes de entregar QUALQUER copy, verifique cada item. Se algum falhar, **refaça**, não entregue com ressalva.
 
-### Gate 1: Palavras e Símbolos Proibidos
-
-| Item | Se encontrado | Ação |
-|------|---------------|------|
-| `—` (travessão longo) | FAIL | Substituir por `.` `,` `:` ou quebrar frase |
-| "brutal" | FAIL | Usar: intenso, forte, pesado, impactante, poderoso |
-| Antítese negação→afirmação ("Não é X / É Y", "Não faça X / Faça Y" e variações) | FAIL | Reescrever afirmando direto, sem o paralelo |
-| PALAVRAS EM CAPS | FAIL | Reescrever em minúscula |
-| Aspas em roteiros/falas | FAIL | Escrever direto, sem aspas |
-| Aspas para ênfase | FAIL | Usar estrutura da frase |
-| Mais de 2 emojis | FAIL | Reduzir para 0-1 |
-| Texto sem acentos | FAIL | SEMPRE usar acentuação PT-BR correta |
+### Gate 1: Vícios de IA e formato
+Regras universais (travessão, "brutal", antítese negação→afirmação, CAPS, excesso de emojis, acentuação PT-BR) são bloqueadas automaticamente pelo quality gate hook; violou, refaça em vez de contornar. Específicos deste domínio: aspas de ênfase proibidas; sem aspas em roteiros/falas; máximo 0-1 emoji
 
 ### Gate 2: Fact-Check Obrigatório
 

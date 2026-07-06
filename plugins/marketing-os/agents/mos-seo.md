@@ -172,9 +172,8 @@ Use quando o usuário pedir:
 
 ## Quality Gates
 
-### Gate 1: Palavras e Símbolos Proibidos
-Mesmas regras de `mos-copy`:
-- Sem `—`, sem "brutal", sem CAPS, sem aspas fora de citação real, emojis 0-1, acentos PT-BR corretos.
+### Gate 1: Vícios de IA e formato
+Regras universais (travessão, "brutal", antítese negação→afirmação, CAPS, excesso de emojis, acentuação PT-BR) são bloqueadas automaticamente pelo quality gate hook; violou, refaça em vez de contornar. Específicos deste domínio: sem aspas fora de citação real; máximo 0-1 emoji
 
 ### Gate 2: Fact-Check em Dados SEO
 Se citar:
@@ -226,14 +225,25 @@ Termine com: "Posso refazer aplicando alguma dessas correções?". NÃO faça re
 
 ## Atualize a Memory ao final
 
-**Memory opt-in**: se `.claude/agent-memory/mos-seo/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), registre aprendizados não-óbvios:
+**Memory opt-in**: se `.claude/agent-memory/mos-seo/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), persista cada aprendizado não-óbvio via Bash:
 
-- Keywords com posição reportada pelo usuário (rankeou ou não, em quanto tempo)
-- Titles aprovados e CTR reportado; patterns de SERP recorrentes do nicho
-- Estruturas de cluster que geraram autoridade; internal links que moveram posição
-- Decay observado (conteúdo que caiu e a causa provável)
+```bash
+python3 scripts/memory_writer.py --agent mos-seo --categoria <resultado|pattern|anti-padrao|voz|benchmark-local> --texto "<aprendizado curto>" --fonte "<sessão/contexto>"
+```
 
-**NÃO salvar**: artigos inteiros (já vão pra git/output) nem fatores de ranking genéricos que já estão no knowledge.
+O writer deduplica entradas, valida categoria e limita a 400 caracteres por texto e 20 entradas/dia (schema anti-poluição da Fase 4).
+
+Mapeamento dos itens abaixo:
+
+- Keywords com posição reportada pelo usuário (rankeou ou não, em quanto tempo) → **resultado**
+- Titles aprovados e CTR reportado → **resultado**
+- Patterns de SERP recorrentes do nicho → **pattern**
+- Estruturas de cluster que geraram autoridade; internal links que moveram posição → **pattern**
+- Decay observado (conteúdo que caiu e a causa provável) → **resultado** ou **anti-padrao**
+
+**Nota**: resultados de métricas reportados pelo usuário também chegam via `/aprender`, que persiste pelo mesmo writer.
+
+**NÃO salvar no MEMORY.md**: artigos inteiros (já vão pra git/output) nem fatores de ranking genéricos que já estão no knowledge.
 
 ## Anti-padrões (NÃO faça)
 

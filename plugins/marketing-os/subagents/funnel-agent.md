@@ -9,6 +9,21 @@
 **Especialização:** Arquitetura de Funis, Conversão e Jornada do Cliente
 **Filosofia:** Conversion-First, Data-Driven, Psychology-Powered
 
+## ÍNDICE
+
+- PARTE I: A CIÊNCIA DOS FUNIS
+- PARTE II: FRAMEWORKS DE FUNIS
+- PARTE III: TIPOS DE FUNIS
+- PARTE IV: ELEMENTOS DE ALTA CONVERSÃO
+- PARTE V: SEQUÊNCIAS DE EMAIL
+- PARTE VI: OTIMIZAÇÃO E TESTES
+- PARTE VII: FUNIS POR NICHO
+- PARTE VIII: AUTOMAÇÃO DE FUNIS
+- PARTE IX: TEMPLATES DE FUNIS
+- PARTE X: CASOS DE ESTUDO
+- PARTE I-B: CLONES POR ETAPA DO FUNIL
+- APÊNDICE
+
 ---
 
 ## PARTE I: A CIÊNCIA DOS FUNIS
@@ -93,36 +108,32 @@ IMPLICAÇÕES PARA FUNIS:
 
 #### Os 6 Princípios de Cialdini nos Funis
 
+> Definições teóricas dos 6 princípios de influência: `subagents/copy-agent.md` PARTE I (1.2) e PARTE IV (4.1). Nesta KB, apenas aplicação na jornada do funil:
+
 ```
-1. RECIPROCIDADE
-   ├── Dê valor antes de pedir
-   ├── Lead magnets, conteúdo gratuito
-   └── "Depois de tudo que recebi, devo retribuir"
+1. RECIPROCIDADE (funil)
+   ├── Lead magnets e conteúdo gratuito no TOFU
+   └── Micro-ofertas antes do pedido principal
 
-2. COMPROMISSO E CONSISTÊNCIA
-   ├── Pequenos "sins" levam a grandes "sins"
-   ├── Tripwire, micro-compromissos
-   └── "Já comecei, vou continuar"
+2. COMPROMISSO E CONSISTÊNCIA (funil)
+   ├── Tripwire, quiz, micro-compromissos na escada
+   └── Cada etapa entrega valor antes do próximo "sim"
 
-3. PROVA SOCIAL
-   ├── Depoimentos, números, logos
-   ├── "Se tantos usam, deve ser bom"
-   └── Posicione onde há hesitação
+3. PROVA SOCIAL (funil)
+   ├── Depoimentos e números onde há hesitação (pricing, checkout)
+   └── Logos e cases no MOFU antes da sales page
 
-4. AUTORIDADE
-   ├── Credenciais, mídia, especialistas
-   ├── "Se ele recomenda, confio"
-   └── Certificações, publicações, resultados
+4. AUTORIDADE (funil)
+   ├── Credenciais na sales page, VSL e webinar
+   └── Especialistas convidados no momento BOFU
 
-5. AFEIÇÃO/SIMPATIA
-   ├── Conexão pessoal, vulnerabilidade
-   ├── "Gosto dele, confio nele"
-   └── Storytelling, bastidores
+5. AFEIÇÃO/SIMPATIA (funil)
+   ├── Origin story na welcome sequence
+   └── Bastidores e vulnerabilidade na nurture
 
-6. ESCASSEZ
-   ├── Limitação de tempo ou quantidade
-   ├── "Preciso decidir agora"
-   └── Deadlines reais, não falsas
+6. ESCASSEZ (funil)
+   ├── Deadlines reais no carrinho e replay de webinar
+   └── Vagas limitadas em funil de aplicação (high-ticket)
 ```
 
 #### Modelo AIDA Expandido
@@ -166,54 +177,33 @@ S - SATISFACTION (Satisfação)
 
 #### Vieses Cognitivos Aplicáveis
 
-```
-VIÉS DE ANCORAGEM
-Primeira informação ancora julgamentos futuros.
+> Teoria dos vieses cognitivos: `subagents/copy-agent.md` PARTE I (1.2). Nesta KB, apenas aplicação na fricção e conversão do funil:
 
-APLICAÇÃO:
+```
+VIÉS DE ANCORAGEM (funil)
 - Mostre preço "de" antes do preço "por"
-- Apresente opção premium primeiro
+- Apresente opção premium primeiro na página de pricing
 - "De R$2.997 por apenas R$497"
 
----
+AVERSÃO À PERDA (funil)
+- "Não perca" > "Ganhe" em emails de carrinho e deadline
+- "Última chance" > "Ótima oportunidade" no BOFU
+- "Você está deixando passar..." na sequência de abandono
 
-AVERSÃO À PERDA
-Perder dói 2x mais que ganhar agrada.
-
-APLICAÇÃO:
-- "Não perca" > "Ganhe"
-- "Última chance" > "Ótima oportunidade"
-- "Você está deixando passar..."
-
----
-
-EFEITO DE DOTAÇÃO
-Valorizamos mais o que já "possuímos".
-
-APLICAÇÃO:
+EFEITO DE DOTAÇÃO (funil)
 - Trials: "Seu acesso está pronto"
-- "Seu desconto reservado"
+- "Seu desconto reservado" antes do checkout
 - Linguagem de posse antes da compra
 
----
+PARADOXO DA ESCOLHA (funil)
+- Máximo 3 planos na sales page
+- Destaque "mais popular" no pricing
+- Padrão pré-selecionado no formulário
 
-PARADOXO DA ESCOLHA
-Muitas opções causam paralisia.
-
-APLICAÇÃO:
-- Máximo 3 planos
-- Destaque "mais popular"
-- Padrão pré-selecionado
-
----
-
-VIÉS DO STATUS QUO
-Preferimos não mudar.
-
-APLICAÇÃO:
-- Reduza fricção da mudança
-- Mostre custo de NÃO mudar
-- "Continue como está = X de prejuízo"
+VIÉS DO STATUS QUO (funil)
+- Reduza fricção da mudança (menos campos, menos cliques)
+- Mostre custo de NÃO mudar na agitação do problema
+- "Continue como está = X de prejuízo" no VSL/webinar
 ```
 
 ---
@@ -2330,6 +2320,8 @@ desperdício de espaço de copy.
 
 ## PARTE V: SEQUÊNCIAS DE EMAIL
 
+> Anatomia de email, fórmulas de subject line, preheader e deliverability: `subagents/email-agent.md` (PARTE III e 12.1). Nesta KB, apenas cadência, posição no funil, timing e templates por etapa.
+
 ### 5.1 Sequência de Boas-Vindas
 
 #### Welcome Sequence (5-7 emails)
@@ -2536,23 +2528,7 @@ TIPOS DE EMAIL:
 6. PROMOTIONAL
    └── Ofertas, lançamentos
 
-TEMPLATE DE NURTURE:
-
-Subject: [Curiosidade ou benefício]
-
-[Nome],
-
-[Hook - 1-2 linhas]
-
-[História ou contexto - 3-4 parágrafos]
-
-[Lição ou insight - 1-2 parágrafos]
-
-[CTA suave ou pergunta]
-
-[Assinatura pessoal]
-
-P.S. [Teaser do próximo email ou oferta]
+> Estrutura de abertura, corpo, CTA e assinatura: `subagents/email-agent.md` PARTE III. Use a proporção e os tipos acima como mapa de cadência no funil de nurture.
 ```
 
 ---

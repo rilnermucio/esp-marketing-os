@@ -93,7 +93,7 @@ ANTES de gerar qualquer conteúdo, consulte os recursos disponíveis. Reinventar
 
 ### Voice Clones (assets/clones/): 35 disponíveis
 
-Para copy "estilo MrBeast", "tom GaryVee", "abordagem Hormozi", etc., **leia primeiro** `assets/clones/{nome}/voice.md`. Lista completa de 35 clones em PARTE "Voice Clones para Social" deste documento.
+Para copy "estilo MrBeast", "tom GaryVee", "abordagem Hormozi", etc., **leia primeiro** `assets/clones/{nome}/voice.md`. Lista completa de 34 clones em PARTE "Voice Clones para Social" deste documento.
 
 ### Scripts Python (scripts/)
 
@@ -577,6 +577,8 @@ APLICAÇÃO EM REDES SOCIAIS:
 
 #### Como o Algoritmo do Instagram Funciona (2024-2025)
 
+> **SNAPSHOT DATADO (2024-2025)**: esta seção fotografa um momento. Antes de recomendar dado, preço, ferramenta ou regra daqui, confirme o estado atual via WebSearch. Princípios envelhecem bem; números, nomes e políticas envelhecem mal.
+
 ```
 SINAIS DO ALGORITMO INSTAGRAM
 
@@ -659,6 +661,8 @@ SLIDE 10 (CTA)
 ### LinkedIn
 
 #### Como o Algoritmo do LinkedIn Funciona (2024-2025)
+
+> **SNAPSHOT DATADO (2024-2025)**: esta seção fotografa um momento. Antes de recomendar dado, preço, ferramenta ou regra daqui, confirme o estado atual via WebSearch. Princípios envelhecem bem; números, nomes e políticas envelhecem mal.
 
 ```
 SINAIS DO ALGORITMO LINKEDIN
@@ -968,6 +972,8 @@ WHEN TO USE:
 ### YouTube Shorts
 
 #### Como o Algoritmo do YouTube Shorts Funciona (2024-2025)
+
+> **SNAPSHOT DATADO (2024-2025)**: esta seção fotografa um momento. Antes de recomendar dado, preço, ferramenta ou regra daqui, confirme o estado atual via WebSearch. Princípios envelhecem bem; números, nomes e políticas envelhecem mal.
 
 ```
 SINAIS DO ALGORITMO YOUTUBE SHORTS
@@ -1731,6 +1737,8 @@ PÁGINA 10: CTA (seguir, salvar)
 
 ### WhatsApp Business: O Canal de Maior Conversão
 
+> **SNAPSHOT DATADO (2024-2025)**: esta seção fotografa um momento. Antes de recomendar dado, preço, ferramenta ou regra daqui, confirme o estado atual via WebSearch. Princípios envelhecem bem; números, nomes e políticas envelhecem mal.
+
 ```
 POR QUE WHATSAPP É ESSENCIAL
 
@@ -2236,6 +2244,8 @@ FLUXO BÁSICO:
 
 ## Mestres das Redes Sociais e Suas Estratégias
 
+> **SNAPSHOT DATADO (início de 2026)**: estratégias de creators e algoritmos mudam trimestralmente. Antes de citar creator, tática ou benchmark desta seção, confirme o estado atual via WebSearch. Princípios de valor e consistência envelhecem bem; nomes, métricas e hacks específicos envelhecem mal.
+
 ### Referências por Plataforma
 
 ```
@@ -2492,6 +2502,8 @@ ANTES de gerar, **sempre** Read em `assets/clones/{nome}/voice.md`. NÃO improvi
 
 ## Algorithm Updates 2024-2026
 
+> **SNAPSHOT DATADO (2024-2026)**: esta seção fotografa um momento. Antes de recomendar dado, preço, ferramenta ou regra daqui, confirme o estado atual via WebSearch. Princípios envelhecem bem; números, nomes e políticas envelhecem mal.
+
 Algoritmos mudam. Esta seção é o delta vs Fundamentos. Outdated significa post não distribui.
 
 ### Instagram (2024-2026)
@@ -2724,6 +2736,8 @@ CADÊNCIA SUGERIDA:
 ---
 
 ## AI Features 2026
+
+> **SNAPSHOT DATADO (2026)**: esta seção fotografa um momento. Antes de recomendar dado, preço, ferramenta ou regra daqui, confirme o estado atual via WebSearch. Princípios envelhecem bem; números, nomes e políticas envelhecem mal.
 
 Em 2026, AI integrada às plataformas é parte do workflow padrão.
 
@@ -3322,4 +3336,4 @@ SEMANAL
 
 > **Social Agent v3.1** - O agente mais completo para dominar redes sociais e messaging
 > Combinando ciência, psicologia e estratégias testadas pelos maiores criadores do mundo.
-> Algoritmos 2024-2026 atualizados, AI-Native, CONAR-compliant, Templates wired, 35 clones disponíveis.
+> Algoritmos 2024-2026 atualizados, AI-Native, CONAR-compliant, Templates wired, 34 clones disponíveis.

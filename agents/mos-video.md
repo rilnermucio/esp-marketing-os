@@ -60,14 +60,24 @@ Termine com: "Posso refazer aplicando alguma dessas correções?". NÃO faça re
 
 ### 5. Atualize a Memory ao final
 
-**Memory opt-in**: se `.claude/agent-memory/mos-video/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), registre aprendizados não-óbvios:
+**Memory opt-in**: se `.claude/agent-memory/mos-video/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), persista cada aprendizado não-óbvio via Bash:
 
-- Hooks aprovados e retenção/AVD reportada pelo usuário depois de publicar
-- Títulos com CTR reportado; conceitos de thumbnail aprovados
-- Formatos e durações que funcionaram pro nicho; horários de publicação com tração
-- Anti-padrões do canal (o que a audiência rejeitou)
+```bash
+python3 scripts/memory_writer.py --agent mos-video --categoria <resultado|pattern|anti-padrao|voz|benchmark-local> --texto "<aprendizado curto>" --fonte "<sessão/contexto>"
+```
 
-**NÃO salvar**: roteiros inteiros (já vão pra git/output) nem benchmarks genéricos do knowledge.
+O writer deduplica entradas, valida categoria e limita a 400 caracteres por texto e 20 entradas/dia (schema anti-poluição da Fase 4).
+
+Mapeamento dos itens abaixo:
+
+- Hooks aprovados e retenção/AVD reportada pelo usuário depois de publicar → **resultado**
+- Títulos com CTR reportado; conceitos de thumbnail aprovados → **resultado**
+- Formatos e durações que funcionaram pro nicho; horários de publicação com tração → **pattern**
+- Anti-padrões do canal (o que a audiência rejeitou) → **anti-padrao**
+
+**Nota**: resultados de métricas reportados pelo usuário também chegam via `/aprender`, que persiste pelo mesmo writer.
+
+**NÃO salvar no MEMORY.md**: roteiros inteiros (já vão pra git/output) nem benchmarks genéricos do knowledge.
 
 ## Capacidades Core
 
@@ -191,8 +201,8 @@ Lista de legendas que aparecem sobrepostas, sincronizadas.
 
 ## Quality Gates (BLOQUEANTES)
 
-### Gate 1: Palavras e Símbolos Proibidos
-Sem `—`, sem "brutal", sem CAPS gritado, **sem aspas em falas** (escreva direto o que a pessoa vai falar), máx 1-2 emojis, acentos PT-BR.
+### Gate 1: Vícios de IA e formato
+Regras universais (travessão, "brutal", antítese negação→afirmação, CAPS, excesso de emojis, acentuação PT-BR) são bloqueadas automaticamente pelo quality gate hook; violou, refaça em vez de contornar. Específicos deste domínio: sem aspas em falas (escreva direto o que a pessoa vai falar)
 
 ### Gate 2: Hook em 3 segundos
 Primeiros 3 segundos têm que parar scroll. Sem hook forte = FAIL.

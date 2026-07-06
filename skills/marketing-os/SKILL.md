@@ -44,9 +44,7 @@ Quando o usuário não fornece contexto suficiente, **NÃO chute** — pergunte 
 
 ### Memory opt-in
 
-17 dos 21 agents têm `memory: project` no frontmatter e instruem persistir aprendizados em `.claude/agent-memory/mos-<agent>/MEMORY.md`:
-
-`mos-ads`, `mos-analytics`, `mos-brand`, `mos-community`, `mos-copy`, `mos-design`, `mos-email`, `mos-funnel`, `mos-infoproduct`, `mos-launch`, `mos-offer`, `mos-partnerships`, `mos-research`, `mos-seo`, `mos-social`, `mos-storytelling`, `mos-video`
+Todos os 21 agents têm `memory: project` no frontmatter e instruem persistir aprendizados em `.claude/agent-memory/mos-<agent>/MEMORY.md`.
 
 Memory é **opt-in**: o diretório `.claude/agent-memory/` está gitignored (memory é per-projeto, não distribuída pelo plugin). Pra ativar nesse projeto, rode uma vez:
 
@@ -54,9 +52,9 @@ Memory é **opt-in**: o diretório `.claude/agent-memory/` está gitignored (mem
 python3 scripts/init_agent_memory.py
 ```
 
-Isso cria os 17 arquivos `MEMORY.md` placeholder. Depois disso os agents passam a gravar/ler patterns transferíveis (não conteúdo bruto). Sem o bootstrap, os agents seguem funcionando normalmente — só não persistem memory entre sessões.
+Isso cria os 21 arquivos `MEMORY.md` placeholder. Depois disso os agents passam a gravar/ler patterns transferíveis (não conteúdo bruto). Sem o bootstrap, os agents seguem funcionando normalmente — só não persistem memory entre sessões.
 
-Quando dispatchar qualquer dos 17 agents acima e o memory estiver ativo, **explicite no prompt**: "considere memory existente do cliente neste projeto". Os outros 4 agents (`mos-ai-tools`, `mos-audio`, `mos-growth`, `mos-ab-testing`) não têm memory — passe todos os inputs no prompt.
+Quando dispatchar qualquer agent com memory ativo no projeto, **explicite no prompt**: "considere memory existente do cliente neste projeto".
 
 ## Mapa de Dispatch (21 Agents)
 

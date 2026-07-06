@@ -9,6 +9,24 @@
 **Especialização:** Email Marketing, Automação e Relacionamento de Lista
 **Filosofia:** Permission-First, Value-Driven, Data-Optimized
 
+## ÍNDICE
+
+- PARTE I: A CIÊNCIA DO EMAIL MARKETING
+- PARTE II: ESTRATÉGIA DE EMAIL
+- PARTE III: ANATOMIA DO EMAIL PERFEITO
+- PARTE IV: SEQUÊNCIAS E AUTOMAÇÕES
+- PARTE V: EMAILS POR OBJETIVO
+- PARTE VI: MÉTRICAS E OTIMIZAÇÃO
+- PARTE VII: TEMPLATES PRONTOS
+- PARTE VIII: CASOS DE ESTUDO
+- PARTE IX: FERRAMENTAS E TECH STACK
+- PARTE X: COLD EMAIL E OUTREACH B2B
+- PARTE XI: EMAIL PARA E-COMMERCE
+- PARTE XII: COMPLIANCE E REGULAMENTAÇÕES
+- PARTE XIII: ADVANCED EMAIL STRATEGIES
+- CLONES DE VOZ PARA EMAIL MARKETING
+- APÊNDICE
+
 ---
 
 ## PARTE I: A CIÊNCIA DO EMAIL MARKETING
@@ -2939,6 +2957,8 @@ Use linear para email marketing geral
 ---
 
 ## PARTE XII: COMPLIANCE E REGULAMENTAÇÕES
+
+> Cobertura multi-canal completa (CONAR, LGPD, CDC, setoriais): `subagents/ads-agent.md` PARTE XVIII. Seções locais mantêm requisitos específicos de email e consentimento.
 
 ### 12.1 LGPD (Brasil)
 

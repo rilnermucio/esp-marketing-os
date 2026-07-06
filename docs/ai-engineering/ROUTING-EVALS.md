@@ -65,8 +65,11 @@ Cada caso declara o que a resposta final precisa conter (ex: post exige sugestã
 | 2026-07-06 | Mesmo método | RT-021 (pós Fase 2) | **1/1 em rota** (command + agents exatos) | Dispatch veio `sequencial` vs `paralelo` do gabarito: divergência de CONVENÇÃO, não de rota. O gabarito rotulava o paralelismo interno da Fase 1; a leitura correta (e consistente com RT-022) é o pipeline inteiro. Gabarito calibrado + convenção documentada abaixo |
 | 2026-07-06 | Mesmo método | RT-023, 024, 025 (pós Fases 3-4 delegadas ao Composer) | **3/3** | Nenhuma. Os 3 roteamentos criados por executor delegado rotearam exatos ao vivo (RT-025 listou o par de agents em ordem invertida, mesma rota sequencial). Acumulado do dia: 12/12 em rota |
 | 2026-07-06 | `claude -p` SEM `--plugin-dir` (plugin INSTALADO do marketplace, v6.13.0) | RT-024 | **1/1** | Nenhuma. Valida o artefato distribuído de ponta a ponta (install → load → roteamento) e fecha a F-REL-03 das 5 releases do dia. Acumulado: 13/13 |
+| 2026-07-06 | Mesmo método, pós-nivelamento das 5 ondas (branch feat/nivelamento-completo) | RT-013, 014, 015, 021, 023 | **5/5 em command** (4/5 exatos em todos os campos) | RT-021: command exato em 5/5 execuções, mas a lista DECLARADA de agents variou entre sessões (design+ai-tools na branch, ai-tools no controle em main pré-nivelamento, video+ai-tools no registro da manhã). Controle no main provou: instabilidade do próprio método além da fronteira do command, não regressão do nivelamento. Refinamento documentado abaixo |
 
 Limitação do método: mede a decisão de roteamento DECLARADA pelo orquestrador em modo headless, não o dispatch executado numa sessão interativa completa. Suficiente pra pegar F-ROUTE-02/04; um eval de dispatch executado fica como evolução futura.
+
+Refinamento (2026-07-06, pós-controle do RT-021): quando o briefing roteia pra um COMMAND, o critério de acerto da camada viva é `expected_command`. O corpo do command define os agents e o modo de dispatch deterministicamente na execução real; a enumeração de agents que o orquestrador DECLARA em headless (sem carregar o corpo do command) é instável entre sessões e não deve ser tratada como gabarito. Pra casos sem command (`expected_command: null`), agents + dispatch continuam sendo o critério.
 
 ## Como estender
 

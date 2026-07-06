@@ -107,6 +107,8 @@ ESTÍMULO → PROCESSAMENTO → CONSOLIDAÇÃO → APLICAÇÃO
 
 #### O Problema da Carga Cognitiva (Sweller, 2024-2026)
 
+> **SNAPSHOT DATADO (2024-2026)**: esta seção fotografa um momento. Antes de recomendar dado, preço, ferramenta ou regra daqui, confirme o estado atual via WebSearch. Princípios envelhecem bem; números, nomes e políticas envelhecem mal.
+
 ```
 MEMÓRIA DE TRABALHO: LIMITADA A 3-7 ELEMENTOS SIMULTÂNEOS
 
@@ -133,6 +135,8 @@ IMPLICAÇÕES PARA INFOPRODUTOS:
 ```
 
 #### A Curva do Esquecimento (Ebbinghaus + ReMindAI 2025)
+
+> **SNAPSHOT DATADO (2025)**: esta seção fotografa um momento. Antes de recomendar dado, preço, ferramenta ou regra daqui, confirme o estado atual via WebSearch. Princípios envelhecem bem; números, nomes e políticas envelhecem mal.
 
 ```
 RETENÇÃO SEM REVISÃO:
@@ -358,6 +362,8 @@ NÍVEL SUPERIOR: Transformacional (R$ 997-25.000+)
 
 ### Dados de Microlearning (2025-2026)
 
+> **SNAPSHOT DATADO (2025-2026)**: esta seção fotografa um momento. Antes de recomendar dado, preço, ferramenta ou regra daqui, confirme o estado atual via WebSearch. Princípios envelhecem bem; números, nomes e políticas envelhecem mal.
+
 ```
 DADOS CIENTÍFICOS:
 
@@ -518,6 +524,8 @@ CUIDADOS:
 
 ## 2.2 Escada de Valor Otimizada (2026)
 
+> **SNAPSHOT DATADO (2026)**: esta seção fotografa um momento. Antes de recomendar dado, preço, ferramenta ou regra daqui, confirme o estado atual via WebSearch. Princípios envelhecem bem; números, nomes e políticas envelhecem mal.
+
 ### Arquitetura de Produtos em Camadas
 
 ```
@@ -566,6 +574,8 @@ CAMADA 4: PREMIUM (R$ 5.000-25.000+)
 
 ## 2.3 Dados do Mercado Brasileiro de Infoprodutos (2025-2026)
 
+> **SNAPSHOT DATADO (2025-2026)**: esta seção fotografa um momento. Antes de recomendar dado, preço, ferramenta ou regra daqui, confirme o estado atual via WebSearch. Princípios envelhecem bem; números, nomes e políticas envelhecem mal.
+
 ### Números do Ecossistema
 
 ```
@@ -611,6 +621,8 @@ MERCADO GERAL:
 
 ### Tendências 2026 no Brasil
 
+> **SNAPSHOT DATADO (2026)**: esta seção fotografa um momento. Antes de recomendar dado, preço, ferramenta ou regra daqui, confirme o estado atual via WebSearch. Princípios envelhecem bem; números, nomes e políticas envelhecem mal.
+
 ```
 1. ASSINATURAS/RECORRÊNCIA
    Negócios com assinaturas crescem 4,6x mais rápido que vendas únicas
@@ -635,6 +647,8 @@ MERCADO GERAL:
 ```
 
 ## 1.7 IA na Criação de Infoprodutos (2025-2026)
+
+> **SNAPSHOT DATADO (2025-2026)**: esta seção fotografa um momento. Antes de recomendar dado, preço, ferramenta ou regra daqui, confirme o estado atual via WebSearch. Princípios envelhecem bem; números, nomes e políticas envelhecem mal.
 
 ### O Impacto da IA no Mercado Educacional
 

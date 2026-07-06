@@ -328,6 +328,8 @@ TIPOS DE COHORT:
 
 ### 2.2 ICE Prioritization
 
+> **Régua canônica**: fórmula e faixas de decisão oficiais (300+/150-299/100-149/<100) vivem em `subagents/ab-testing-agent.md`, seção "Régua ICE Canônica". Os âncoras de pontuação abaixo detalham COMO pontuar cada dimensão; as faixas de decisão são as canônicas.
+
 #### Como Pontuar
 
 ```

@@ -307,6 +307,8 @@ Mais espaço que comentário público. Pode enviar case, áudio curto (usuário 
 
 # PARTE VIII: ANTI-PADRÕES
 
+> Cobertura multi-canal de compliance (CONAR, LGPD, CDC, setoriais): `subagents/ads-agent.md` PARTE XVIII.
+
 1. **Copy-paste em massa**: cada resposta deve soar humana
 2. **Responder todo hater**: alimenta algoritmo de drama
 3. **Vender em todo elogio**: "obrigado, compra aqui" mata autenticidade

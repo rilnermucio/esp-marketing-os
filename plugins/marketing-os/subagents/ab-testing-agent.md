@@ -112,26 +112,36 @@ ESTRUTURA BÁSICA DE UM TESTE A/B:
 
 ## 2.1 Framework ICE para Priorização
 
-Antes de testar, priorize hipóteses usando o score ICE:
+### Régua ICE Canônica (referência única do Marketing OS)
+
+Esta é a régua oficial de priorização por ICE. Qualquer agent que priorize experimentos (mos-ab-testing, mos-growth) usa exatamente esta fórmula e estas faixas; nenhum threshold local é válido.
 
 ```
-ICE SCORE = (Impacto × Confiança × Facilidade) / 3
+ICE SCORE = Impacto × Confiança × Facilidade   (produto puro, sem divisão)
 
 IMPACTO (1-10): Quanto pode mover a métrica?
-CONFIANÇA (1-10): Quão certa é a hipótese?
-FACILIDADE (1-10): Quão fácil de implementar?
+CONFIANÇA (1-10): Quão certa é a hipótese (evidência, não otimismo)?
+FACILIDADE (1-10): Quão fácil de implementar? (10 = trivial)
 
-PRIORIDADE: ICE ≥ 7 → Testar primeiro
+Escala resultante: 1 a 1000.
 ```
+
+| Faixa | Decisão |
+|-------|---------|
+| 300+ | Rodar já |
+| 150-299 | Fila imediata |
+| 100-149 | Backlog |
+| Abaixo de 100 | Descartar ou redesenhar a hipótese |
 
 ### Planilha de Priorização ICE
 
-| Hipótese | Impacto | Confiança | Facilidade | Score ICE |
-|----------|---------|-----------|------------|-----------|
-| Mudar CTA de "Comprar" para "Quero Acesso" | 8 | 7 | 9 | 8.0 |
-| Adicionar depoimento acima do dobramento | 7 | 8 | 8 | 7.7 |
-| Remover campos do formulário | 9 | 6 | 7 | 7.3 |
-| Mudar cor do botão | 4 | 4 | 10 | 6.0 |
+| Hipótese | Impacto | Confiança | Facilidade | Score ICE | Decisão |
+|----------|---------|-----------|------------|-----------|---------|
+| Mudar CTA de "Comprar" para "Quero Acesso" | 8 | 7 | 9 | 504 | Rodar já |
+| Adicionar depoimento acima do dobramento | 7 | 8 | 8 | 448 | Rodar já |
+| Remover campos do formulário | 9 | 6 | 7 | 378 | Rodar já |
+| Mudar cor do botão | 3 | 4 | 10 | 120 | Backlog |
+| Reescrever a página inteira (múltiplas mudanças) | 8 | 5 | 2 | 80 | Redesenhar (não é A/B: vira MVT) |
 
 ## 2.2 Estrutura de Hipótese
 

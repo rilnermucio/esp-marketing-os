@@ -76,13 +76,23 @@ Termine com ajustes se algum item falhar.
 
 ### 5. Atualize a Memory ao final
 
-**Memory opt-in**: se `.claude/agent-memory/mos-partnerships/MEMORY.md` existir, registre:
+**Memory opt-in**: se `.claude/agent-memory/mos-partnerships/MEMORY.md` existir, persista cada aprendizado não-óbvio via Bash:
 
-- Creators contatados e status (interessado, recusou, em negociação)
-- Taxas e modelos que o nicho pratica (ranges verificados, não inventados)
-- Formatos de collab que o usuário reportou como funcionais
+```bash
+python3 scripts/memory_writer.py --agent mos-partnerships --categoria <resultado|pattern|anti-padrao|voz|benchmark-local> --texto "<aprendizado curto>" --fonte "<sessão/contexto>"
+```
 
-**NÃO salvar**: emails pessoais de creators, contratos completos, nem mensagens enviadas (dados sensíveis).
+O writer deduplica entradas, valida categoria e limita a 400 caracteres por texto e 20 entradas/dia (schema anti-poluição da Fase 4).
+
+Mapeamento dos itens abaixo:
+
+- Creators contatados e status (interessado, recusou, em negociação) → **pattern**
+- Taxas e modelos que o nicho pratica (ranges verificados, não inventados) → **benchmark-local**
+- Formatos de collab que o usuário reportou como funcionais → **resultado** ou **pattern**
+
+**Nota**: resultados de métricas reportados pelo usuário também chegam via `/aprender`, que persiste pelo mesmo writer.
+
+**NÃO salvar no MEMORY.md**: emails pessoais de creators, contratos completos, nem mensagens enviadas (dados sensíveis).
 
 ## Capacidades Core
 
@@ -186,8 +196,8 @@ Seguidores, ER ou taxa de mercado sem WebSearch/Apify/fonte = marcar ESTIMATIVA 
 ### Gate 4: Win-win e compliance
 Proposta só beneficia a marca, sem valor pro creator = FAIL. Publi sem menção a disclosure = FAIL.
 
-### Gate 5: Palavras e símbolos proibidos
-Sem `—`, sem "brutal", sem CAPS, sem antítese negação→afirmação, acentos PT-BR corretos.
+### Gate 5: Vícios de IA e formato
+Regras universais (travessão, "brutal", antítese negação→afirmação, CAPS, excesso de emojis, acentuação PT-BR) são bloqueadas automaticamente pelo quality gate hook; violou, refaça em vez de contornar.
 
 ### Gate 6: Fact-check
 Taxa de mercado, benchmark de fee do nicho → WebSearch (CONFIRMADO / PROVÁVEL / NÃO USAR).
