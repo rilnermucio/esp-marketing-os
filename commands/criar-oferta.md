@@ -15,6 +15,47 @@ Desenha a oferta em si (promessa, stack, preço, garantia, condições, motivo p
 4. **Ticket pretendido** (opcional): faixa de preço alvo ou "me recomenda"
 5. **Posição no funil** (opcional, default core): core, tripwire, upsell, downsell
 6. **Dados atuais** (opcional, valioso): preço atual, taxa de conversão, refund, objeções ouvidas em call
+7. **Dossiê de USP** (opcional, recomendado): Handoff Context aprovado pelo `mos-brand`, com versão, maturidade, USP principal, reason to believe, mecanismo, provas e limites da promessa
+8. **Research de público e mercado** (opcional): Dossiê de Avatar, entrevistas, alternativas, capacidade de pagamento e objeções
+
+## Contrato de Handoff da USP
+
+Quando houver Dossiê de USP, passe seu Handoff Context integralmente ao
+`mos-offer`. Preserve estes campos como fonte estratégica da oferta:
+
+```json
+{
+  "usp_version": "...",
+  "maturity": "exploratoria | validada | operacional",
+  "primary_usp": "...",
+  "reason_to_believe": ["..."],
+  "mechanism_or_differentiator": "...",
+  "evidence_ids": ["E01"],
+  "claim_limits": ["..."],
+  "open_hypotheses": ["H01"]
+}
+```
+
+O `mos-offer` pode adaptar a expressão da promessa ao modelo comercial, desde
+que preserve o sentido, as provas e os limites da USP aprovada. Qualquer mudança
+material vira proposta de nova versão e precisa de aprovação explícita.
+
+## Protocolo de Evidências
+
+Toda afirmação material da oferta recebe ID, classe, confiança, fonte, data e
+escopo:
+
+- **EVIDÊNCIA CONFIRMADA**: dado, documento, demonstração ou fonte verificável
+  que sustenta diretamente a afirmação.
+- **INFERÊNCIA**: conclusão derivada de evidências identificadas, com racional
+  explícito.
+- **HIPÓTESE**: suposição ainda pendente de teste.
+
+Preserve IDs recebidos da USP. Use `OE01`, `OI01` e `OH01` para evidências,
+inferências e hipóteses específicas da arquitetura da oferta. Preços de
+concorrentes, comparáveis de valor, capacidade, urgência, garantia e promessa
+precisam aparecer no ledger. O resultado separa claims aprovados de claims
+bloqueados e transforma toda hipótese central em item do plano de validação.
 
 ## Dispatch Decision Tree
 
@@ -35,7 +76,7 @@ Briefing recebido
 ## Dispatch Simples
 
 ```
-Agent(subagent_type: "mos-offer", prompt: "Arquitete a oferta. Produto: [produto]. Público: [público + consciência]. Modelo: [modelo]. Ticket alvo: [faixa ou 'recomendar']. Posição no funil: [posição]. Dados atuais: [dados ou 'nenhum']. Research disponível: [resumo do research]. Considere memory existente do cliente neste projeto. Entregue no Output Schema do agent: promessa central, value stack com justificativa de valor por item, preço + ancoragem + parcelamento BR, garantia com termos e sustentabilidade, motivo real para agir, mapa objeção→elemento, top 2 arquiteturas com Offer Score e red team critique. Aplicar quality gates (urgência real, garantia sustentável, valor justificado, fact-check de comparáveis).")
+Agent(subagent_type: "mos-offer", prompt: "Arquitete a oferta. Produto: [produto]. Público: [público + consciência]. Modelo: [modelo]. Ticket alvo: [faixa ou 'recomendar']. Posição no funil: [posição]. Dados atuais: [dados ou 'nenhum']. Research disponível: [resumo integral ou 'nenhum']. Dossiê de USP e Handoff Context: [JSON integral ou 'nenhum']. Se houver Dossiê de USP, preserve usp_version, maturity, primary_usp, reason_to_believe, mechanism_or_differentiator, evidence_ids, claim_limits e open_hypotheses; qualquer mudança material vira proposta de nova versão. Considere memory existente do cliente neste projeto. Entregue no Output Schema do agent: promessa central, value stack com justificativa de valor por item, preço + ancoragem + parcelamento BR, garantia com termos e sustentabilidade, motivo real para agir, mapa objeção→elemento, top 2 arquiteturas com Offer Score e red team critique. Inclua Protocolo de Evidências com EVIDÊNCIA CONFIRMADA, INFERÊNCIA e HIPÓTESE, fonte e data, confiança e escopo; Claims Aprovados; Claims Bloqueados; Plano de Validação; e Handoff Context com os IDs preservados. Aplicar quality gates (urgência real, garantia sustentável, valor justificado, fact-check de comparáveis).")
 ```
 
 ## Escalações
@@ -50,6 +91,27 @@ Entregue ao usuário:
 
 ```markdown
 ## Oferta: [nome]
+
+### Fundação estratégica
+- USP de origem: [primary_usp ou hipótese proposta]
+- Versão e maturidade: [usp_version + maturity]
+- Reason to believe: [itens com evidence_ids]
+- Mecanismo ou diferencial: [mechanism_or_differentiator]
+- Limites da promessa: [claim_limits]
+- Hipóteses abertas: [open_hypotheses]
+
+### Protocolo de Evidências
+| ID | Afirmação | Classe | Confiança | Fonte e data | Escopo | Uso na oferta |
+|---|---|---|---|---|---|---|
+| OE01 | [...] | EVIDÊNCIA CONFIRMADA | alta | [...] | [...] | [...] |
+| OI01 | [...] | INFERÊNCIA | média | deriva de [IDs] | [...] | [...] |
+| OH01 | [...] | HIPÓTESE | baixa | validação pendente | [...] | [...] |
+
+### Claims Aprovados
+- [claim permitido + IDs de suporte + limites]
+
+### Claims Bloqueados
+- [claim sem suporte ou fora dos limites + motivo]
 
 ### A oferta em 1 parágrafo
 [Promessa + stack resumido + preço + garantia + deadline]
@@ -70,6 +132,14 @@ Valor total: R$ X | Preço: R$ Y | Ratio X:Y
 ### Red Team (o que um comprador cético atacaria)
 [3 fraquezas + resposta recomendada]
 
+### Plano de Validação
+| Hipótese | Método | Amostra ou fonte | Métrica ou sinal | Critério de decisão | Prioridade |
+|---|---|---|---|---|---|
+| OH01 | [...] | [...] | [...] | [...] | alta |
+
+### Handoff Context
+[JSON do mos-offer com USP de origem, evidence_ids, claims aprovados, claims bloqueados, hipóteses e plano de validação]
+
 ### Próximos passos
 - Copy da página de vendas com esse stack (mos-copy / workflow #5 da SKILL)
 - Posicionamento no funil (mos-funnel) e mecânica de lançamento (mos-launch)
@@ -83,6 +153,10 @@ Aplicar gates globais do `skills/marketing-os/SKILL.md` + os específicos do mos
 - Garantia sustentável (refund × conversão calculado)
 - Valor percebido com comparável real por item do stack
 - Fact-check via WebSearch para preços de concorrentes e claims de mercado
+- Ledger com fonte e data para toda afirmação material da oferta
+- Claims aprovados respeitam os limites da USP e os IDs de evidência
+- Claims bloqueados permanecem fora de copy, ads e páginas
+- Plano de validação cobre toda hipótese central
 - Sem `—`, sem "brutal", sem antítese negação→afirmação, acentos PT-BR
 
 ## Por que esse dispatch

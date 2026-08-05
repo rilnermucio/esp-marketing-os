@@ -6,8 +6,47 @@ on:
       - "v*.*.*"
 
 jobs:
+  verify:
+    name: Verificar commit da tag
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v5
+
+      - name: Configurar Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Instalar dependências
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pytest pytest-cov "black==26.5.1" flake8
+
+      - name: Rodar suite com cobertura
+        run: |
+          python -m pytest scripts/tests/ -m "not smoke" -q \
+            --cov=scripts \
+            --cov-report=term-missing \
+            --cov-fail-under=70
+
+      - name: Validar estilo Python
+        run: |
+          black --check --diff scripts/*.py scripts/hooks/
+          flake8 scripts/
+
+      - name: Validar agents e pacote Codex
+        run: |
+          python scripts/validate_agents.py --strict
+          python scripts/build_codex_plugin.py --check
+          python scripts/validate_codex_plugin.py plugins/marketing-os
+
   release:
     name: Create GitHub Release
+    needs: verify
     runs-on: ubuntu-latest
     permissions:
       contents: write

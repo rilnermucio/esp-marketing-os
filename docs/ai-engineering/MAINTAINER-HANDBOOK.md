@@ -1,6 +1,6 @@
 # Manual do mantenedor
 
-> Canônico. Atualizado em 2026-07-06. Receitas passo a passo pras tarefas recorrentes. Cada receita termina na mesma linha: validar + atualizar contagens + registrar. Público: humano ou agente de IA.
+> Canônico. Atualizado em 2026-08-03. Receitas passo a passo pras tarefas recorrentes. Cada receita termina na mesma linha: validar + atualizar contagens + registrar. Público: humano ou agente de IA.
 
 ## Pontos de sincronia (decorar isto evita 80% do drift)
 
@@ -9,7 +9,7 @@ Quando algo muda, estes lugares carregam contagens ou listas que precisam acompa
 | Mudança | Sincronizar em |
 |---|---|
 | Command novo/removido | `README.md` (linha 3, seção "Slash commands" + tabela, seção "Estrutura"), `AGENTS.md` (§"O que é" + §dispatch), `SKILL.md` (§"Slash commands rápidos" + tabela), `test_commands_dispatch.py` (`UTILITY_COMMANDS` se utility) |
-| Agent novo/removido | os mesmos 3 docs (contagem "18") + `SKILL.md` mapa de dispatch + routing evals |
+| Agent novo/removido | os mesmos 3 docs (contagem atual protegida por teste) + `SKILL.md` mapa de dispatch + routing evals |
 | Memory num agent | `init_agent_memory.py`, contagem de memory nos 3 docs, tabela de agents do README |
 | Clone novo | `assets/clones/clone-manifest.yaml`, PARTE XV-B do `copy-agent.md` (inventário), contagem de clones nos docs |
 | Regra de gate | ver [QUALITY-GATES.md](QUALITY-GATES.md) §atualização (hook → testes → CLI → tabelas derivadas) |
@@ -24,7 +24,7 @@ Heurística permanente: prefira reescrever a frase sem o número (H8.5).
    - `description` com triggers concretos em PT-BR (palavras que o usuário digita).
    - `tools` coerentes com o prompt (H1.2): fact-check exige WebSearch; rodar scripts exige Bash.
    - `model` por capacidade (ver [COST-CONTROL.md](COST-CONTROL.md) §2): opus só pra raciocínio pesado.
-   - `hooks` PreToolUse com `${CLAUDE_PLUGIN_ROOT}/scripts/hooks/quality_gate_hook.py` (path relativo quebra fora do dev local: gotcha documentado).
+   - `hooks` PreToolUse com `${CLAUDE_PLUGIN_ROOT}/scripts/hooks/quality_gate_hook.py` (path relativo quebra fora do dev local: gotcha documentado). O `SubagentStop` global já é registrado em `hooks/hooks.json`.
    - Corpo: use `agents/mos-copy.md` como referência de estrutura (protocolo, gates, output schema, anti-padrões).
 3. `memory: project`? Só se passa no critério H1.3. Se sim: bloco de memory no prompt (o que salvar / o que NÃO salvar), entrada no `scripts/init_agent_memory.py`, contagens.
 4. Crie a KB `subagents/<nome>-agent.md` com índice no topo (H2.2) e snapshot guards em seções datadas (H2.3). O Tier 1 referencia PARTEs específicas.

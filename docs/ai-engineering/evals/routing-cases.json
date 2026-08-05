@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-07-06",
+  "updated": "2026-08-04",
   "description": "Golden set de roteamento: briefings PT-BR reais e o roteamento esperado. Validado por scripts/tests/test_routing_evals.py; protocolo em ../ROUTING-EVALS.md",
   "cases": [
     {
@@ -155,11 +155,11 @@
       "id": "RT-017",
       "prompt": "monta minha oferta high-ticket com bônus e garantia",
       "expected_command": "criar-oferta",
-      "expected_agents": ["mos-offer"],
-      "dispatch": "simples",
-      "min_output_fields": ["value stack com justificativa por item", "preço com ancoragem e parcelamento", "garantia com termos e sustentabilidade", "motivo real para agir", "offer score das arquiteturas"],
-      "detects": ["F-ROUTE-04", "F-ROUTE-02"],
-      "notes": "Era gap conhecido; mos-offer + desempate offer/copy/infoproduct/funnel entraram na SKILL em jul/2026. Este caso valida o desempate."
+      "expected_agents": ["mos-research", "mos-offer"],
+      "dispatch": "sequencial",
+      "min_output_fields": ["ledger de evidências, claims e hipóteses", "value stack com justificativa por item", "preço com ancoragem e parcelamento", "garantia com termos e sustentabilidade", "motivo real para agir", "offer score das arquiteturas", "plano de validação", "handoff com USP e IDs preservados"],
+      "detects": ["F-ROUTE-04", "F-ROUTE-02", "F-DISP-02", "F-CLAIM-01"],
+      "notes": "Oferta high-ticket sem research exige mos-research antes de mos-offer. O caso valida o desempate e a dependência real de dados."
     },
     {
       "id": "RT-018",
@@ -250,6 +250,44 @@
         "modelo de parceria sugerido"
       ],
       "detects": ["F-ROUTE-02", "F-DISP-01"]
+    },
+    {
+      "id": "RT-026",
+      "prompt": "cria o avatar completo do cliente ideal da minha mentoria para donos de clínica",
+      "expected_command": "criar-avatar",
+      "expected_agents": ["mos-research"],
+      "dispatch": "simples",
+      "min_output_fields": [
+        "evidências separadas de inferências e hipóteses",
+        "avatar principal e segmentos secundários condicionais",
+        "anti-avatar",
+        "jobs to be done e nível de consciência",
+        "dores, desejos, objeções, gatilhos e jornada",
+        "linguagem real com fontes",
+        "handoff para copy, ads, oferta, funil e social"
+      ],
+      "detects": ["F-ROUTE-02", "F-DISP-02", "F-CLAIM-01"],
+      "notes": "Pedido recorrente com inputs estruturáveis. O command concentra o contrato e o mos-research executa a pesquisa com fontes."
+    },
+    {
+      "id": "RT-027",
+      "prompt": "cria a USP da minha mentoria para donos de clínica, ainda não mapeei os concorrentes",
+      "expected_command": "criar-usp",
+      "expected_agents": ["mos-research", "mos-brand"],
+      "dispatch": "sequencial",
+      "min_output_fields": [
+        "evidências separadas de inferências e hipóteses",
+        "categoria, público e job to be done",
+        "alternativas e contexto competitivo",
+        "candidatos de USP com score",
+        "USP principal e reason to believe",
+        "mecanismo ou diferencial defensável",
+        "limites da promessa",
+        "plano de validação",
+        "handoff para oferta, copy, ads e funil"
+      ],
+      "detects": ["F-ROUTE-02", "F-DISP-02", "F-CLAIM-01"],
+      "notes": "Sem mapa competitivo, mos-research coleta evidências antes de mos-brand formular e testar a USP."
     }
   ]
 }

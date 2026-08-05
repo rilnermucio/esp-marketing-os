@@ -1,6 +1,6 @@
-# Âncoras e protocolo de julgamento LLM-graded (v1 manual)
+# Âncoras e protocolo de julgamento LLM-graded (v2 assistido)
 
-> Materializa a EVALS-STRATEGY §4. Enquanto não há automação, este é o protocolo manual calibrado; quando a automação vier, ela usa exatamente estas âncoras e regras. Criado em 2026-07-06.
+> Materializa a EVALS-STRATEGY §4. O runner monta as duas ordens e consolida os veredictos; a chamada ao modelo julgador continua externa. Criado em 2026-07-06 e atualizado em 2026-08-03.
 
 ## Regras de julgamento (anti-fragilidade)
 
@@ -42,16 +42,19 @@ Poste com consistência brutal e veja a mágica acontecer! 🚀✨💪
 
 Por que reprova: travessão, antítese negação→afirmação, "brutal", clichês ("conteúdo é rei", "agregue valor"), superlativo vago, 3 emojis, zero especificidade, sem CTA concreto, sem enquete. Serve de calibração: um julgador que não reprova isto está quebrado.
 
-## Procedimento manual (até a automação)
+## Procedimento assistido
 
 1. Pegue o output real do agent + o briefing que o gerou.
 2. Monte o par: output vs âncora positiva (mesmo formato de peça; adapte a âncora ao formato quando necessário e registre a adaptação).
-3. Prompt do julgador: rubrica R4 + Copy Score + "compare A e B critério a critério; declare o vencedor por critério com 1 frase; sem nota numérica".
-4. Rode 2x com ordem invertida. Consolide: vitória só quando consistente nas duas.
-5. Registre no worklog da rodada: peça julgada, resultado por critério, ação tomada (aprovar, refazer, ajustar agent).
+3. Gere o prompt normal com `python3 scripts/copy_output_eval.py pair --candidato output.md --referencia baseline.md --briefing briefing.md --profile <perfil>`.
+4. Gere a segunda ordem repetindo o comando com `--inverter`.
+5. Salve somente os JSONs retornados pelo julgador e rode `python3 scripts/copy_output_eval.py consolidate --normal normal.json --invertida invertida.json --profile <perfil>`.
+6. Trate `inconclusivo` como ausência de vitória. Arbitre com revisão humana ou com um modelo de fronteira.
+7. Registre no worklog: peça julgada, resultado por critério e ação tomada.
 
 ## Escopo e evolução
 
-- Cobre: qualidade de copy/output (R4). Voice match de clones usa o Voice Match Scoring da PARTE XV-B do copy-agent com este mesmo protocolo par-a-par.
-- Não cobre: roteamento (camada determinística + viva já cobrem) e estratégia (human-review permanente).
-- Automação futura: quando implementada, roda por amostragem pós-sessão, nunca inline no fluxo de produção (custo e latência).
+- Cobre hoje: quality gate determinístico e critérios par-a-par para os perfis versionados em `scripts/evals/output-profiles.json`. Voice match de clones usa o Voice Match Scoring da PARTE XV-B do copy-agent com o mesmo protocolo.
+- Baseline calibrado disponível: copy. E-mail, anúncios, oferta, funil, SEO e vídeo ainda precisam de âncoras positivas próprias.
+- Continua fora do escopo: roteamento, já coberto pelas camadas determinística e viva, e aprovação estratégica final, que permanece humana.
+- Execução: amostragem pós-sessão. O fluxo de produção inline não chama o julgador por custo e latência.

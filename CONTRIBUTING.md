@@ -10,7 +10,7 @@ Obrigado por considerar contribuir com o **Marketing OS**! Este documento fornec
 
 Se encontrar um bug:
 
-1. Verifique se já não foi reportado nas [Issues](https://github.com/rilnermucio/Agents/issues)
+1. Verifique se já não foi reportado nas [Issues](https://github.com/rilnermucio/esp-marketing-os/issues)
 2. Se não, crie uma nova issue com:
    - Descricao clara do problema
    - Passos para reproduzir
@@ -34,17 +34,25 @@ Para sugerir novas funcionalidades:
 
 ```bash
 # Clone o repositorio
-git clone https://github.com/rilnermucio/Agents.git
-cd "Marketing OS"
+git clone https://github.com/rilnermucio/esp-marketing-os.git
+cd esp-marketing-os
 
 # (Opcional) Crie um ambiente virtual
-python -m venv venv
-source venv/bin/activate  # Linux/Mac
+python3.12 -m venv .venv
+source .venv/bin/activate  # Linux/Mac
 # ou
-venv\Scripts\activate     # Windows
+.venv\Scripts\activate     # Windows
 
-# Os scripts usam apenas biblioteca padrao do Python 3.8+
-# Nenhuma dependencia externa necessaria
+# Instale runtime e ferramentas de desenvolvimento
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+pip install pytest pytest-cov "black==26.5.1" flake8
+
+# Valide o checkout
+python -m pytest scripts/tests/ -m "not smoke"
+python scripts/validate_agents.py --strict
+python scripts/build_codex_plugin.py --check
+python scripts/validate_codex_plugin.py plugins/marketing-os
 ```
 
 #### Workflow de Desenvolvimento
@@ -98,8 +106,8 @@ claude -p "/marketing-os escreve 5 headlines pra curso de Python"
 
 ### Python
 
-- **Python 3.8+** compativel
-- Apenas **biblioteca padrao** (sem dependencias externas)
+- **Python 3.12**, mesma versão usada na CI
+- Dependências de runtime declaradas em `requirements.txt`
 - Docstrings em todas as funcoes publicas
 - Type hints quando possivel
 - Nomes de variaveis em ingles ou portugues (consistente no arquivo)
@@ -153,8 +161,9 @@ docs: atualiza README com novos scripts
 
 ### Alta Prioridade
 
-- [ ] Testes unitarios para scripts Python
-- [ ] Documentacao de API dos scripts
+- [ ] Aumentar cobertura dos scripts com menor cobertura medida
+- [ ] Calibrar âncoras positivas para e-mail, anúncios, oferta, funil, SEO e vídeo
+- [ ] Documentação de API dos scripts
 - [ ] Type hints em todos os scripts
 
 ### Media Prioridade
@@ -166,38 +175,28 @@ docs: atualiza README com novos scripts
 
 ### Baixa Prioridade
 
-- [ ] GitHub Actions para CI
-- [ ] Scripts de automacao de instalacao
-- [ ] Dashboard de metricas
+- [ ] Dashboard de métricas de qualidade e custo
+- [ ] Melhorias de ergonomia no setup local
 
 ---
 
 ## Estrutura do Projeto
 
 ```
-Marketing OS/
-|
-+-- Skill.md                    # Arquivo principal da skill
-+-- README.md                   # Documentacao
-+-- CHANGELOG.md                # Historico de versoes
-+-- CONTRIBUTING.md             # Este arquivo
-|
-+-- subagents/                  # 11 subagentes especializados
-+-- scripts/                    # 19 scripts Python
-+-- assets/
-|   +-- templates/              # 26 templates de conteúdo
-|   +-- swipe-files/            # Exemplos e referencias
-|   +-- personas/               # Personas por nicho
-|   +-- prompts/                # Prompts para IA
-|   +-- frameworks/             # Frameworks de crescimento
-|
-+-- references/                 # Guias de referencia
-+-- workflows/                  # 7 workflows de campanha
-+-- docs/
-    +-- stories/                # Stories de desenvolvimento
-        +-- active/             # Em andamento
-        +-- backlog/            # Pendentes
-        +-- completed/          # Concluidas
+esp-marketing-os/
+├── .claude-plugin/             # Manifestos Claude Code/Desktop
+├── .codex-plugin/              # Manifesto-fonte do pacote Codex
+├── agents/                     # Tier 1: prompts nativos mos-*
+├── subagents/                  # Tier 2: knowledge bases profundas
+├── commands/                   # Slash commands Claude
+├── skills/marketing-os/        # Orquestrador e symlinks distribuíveis
+├── scripts/                    # CLIs, validadores, hooks e testes
+├── scripts/evals/              # Perfis versionados de avaliação de output
+├── hooks/                      # Registro global de hooks Claude
+├── plugins/marketing-os/       # Pacote Codex gerado
+├── assets/                     # Templates, clones, personas e frameworks
+├── workflows/                  # Workflows de campanha
+└── docs/                       # Produto, operação e engenharia de IA
 ```
 
 ---

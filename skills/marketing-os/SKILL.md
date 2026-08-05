@@ -63,6 +63,7 @@ Quando dispatchar qualquer agent com memory ativo no projeto, **explicite no pro
 | "escreve headline / CTA / sales letter / microcopy" | `mos-copy` | `agents/mos-copy.md` |
 | "cria artigo SEO / keyword research / on-page" | `mos-seo` | `agents/mos-seo.md` |
 | "pesquisa tendências / concorrentes / audience / validar produto" | `mos-research` | `agents/mos-research.md` |
+| "cria avatar completo / cliente ideal / buyer persona / ICP / anti-avatar" ou `/criar-avatar` | `mos-research` | `agents/mos-research.md` |
 | "post Instagram / LinkedIn / TikTok / Twitter / cross-platform / bio Instagram / about / calendário editorial / planejamento de conteúdo / weekly plan" | `mos-social` | `agents/mos-social.md` |
 | "roteiro YouTube / Reels / VSL / Shorts" | `mos-video` | `agents/mos-video.md` |
 | "podcast / roteiro de áudio / spot / audiobook" | `mos-audio` | `agents/mos-audio.md` |
@@ -72,6 +73,7 @@ Quando dispatchar qualquer agent com memory ativo no projeto, **explicite no pro
 | "sequência de email / newsletter / automação / subject line / drip" | `mos-email` | `agents/mos-email.md` |
 | "campanha Meta Ads / Google Ads / TikTok Ads (completa)" | `mos-ads` | `agents/mos-ads.md` |
 | "identidade de marca / posicionamento / tom de voz / manifesto da marca / arquétipo / brand guidelines" | `mos-brand` | `agents/mos-brand.md` |
+| "cria USP / UVP / proposta única de venda / proposta de valor / diferencial da oferta" ou `/criar-usp` | `mos-brand` | `agents/mos-brand.md` |
 | "storytelling / narrativa / arco de história / hero's journey aplicado em peça" | `mos-storytelling` | `agents/mos-storytelling.md` |
 | "funil de vendas / sales funnel / jornada do cliente / TOFU MOFU BOFU" | `mos-funnel` | `agents/mos-funnel.md` |
 | "growth hacking / aquisição / crescimento" | `mos-growth` | `agents/mos-growth.md` |
@@ -82,11 +84,44 @@ Quando dispatchar qualquer agent com memory ativo no projeto, **explicite no pro
 | "parceria / influenciador / creator / collab / permuta / embaixador / prospectar creators / outreach" | `mos-partnerships` | `agents/mos-partnerships.md` |
 | "teste A/B / variação / otimização de conversão" | `mos-ab-testing` | `agents/mos-ab-testing.md` |
 
+### Rota condicional: USP e UVP
+
+Pedidos de USP usam o contrato de `/criar-usp`:
+
+- Público/JTBD, alternativas e provas mapeados: dispatch simples para `mos-brand`.
+- Faltam público validado, contexto competitivo, alternativas ou claims atuais:
+  dispatch sequencial `mos-research` seguido de `mos-brand`.
+- USP já aprovada e pedido limitado a uma peça: `mos-copy` adapta a proposta sem
+  redefini-la.
+
+O `mos-brand` formula, pontua e valida a proposta central. O `mos-offer` usa essa
+proposta para estruturar promessa, mecanismo, preço, garantia, bônus e value
+stack. O `mos-copy` transforma a proposta aprovada em mensagem para uma peça.
+Quando o briefing mistura as etapas, preserve a dependência:
+`mos-research` seguido de `mos-brand`, depois `mos-offer` e por fim `mos-copy`.
+
 ### Desempate: `mos-brand` vs `mos-storytelling`
 
 Ambos tocam em "narrativa de marca". Regra:
 - **`mos-brand`** quando o briefing é sobre **DEFINIR** a identidade — criar arquétipo, manifesto, voz/tom, brand book
 - **`mos-storytelling`** quando é sobre **APLICAR** narrativa numa peça — estruturar uma sales letter com hero's journey, escrever uma origin story específica, construir arco em um vídeo/post
+
+### Rota condicional: Oferta
+
+Pedidos de arquitetura comercial usam o contrato de `/criar-oferta`:
+
+- Produto ou entrega ainda indefinidos: `mos-infoproduct` antes de `mos-offer`.
+- Oferta core ou high-ticket sem research de público e mercado: `mos-research`
+  seguido de `mos-offer`.
+- Research e dados suficientes já fornecidos: dispatch simples para `mos-offer`.
+- Dossiê de USP disponível: passe o Handoff Context integral e preserve versão,
+  proposta principal, reason to believe, mecanismo, IDs, limites e hipóteses.
+- Pedido inclui página, anúncio ou email: `mos-offer` seguido de `mos-copy`, pois
+  a mensagem depende da arquitetura aprovada.
+
+O output de oferta inclui Protocolo de Evidências, Claims Aprovados, Claims
+Bloqueados e Plano de Validação. Agentes consumidores preservam esses campos no
+handoff.
 
 ### Desempate: `mos-offer` vs `mos-copy` vs `mos-infoproduct` vs `mos-funnel`
 
@@ -428,7 +463,7 @@ Quando os subagents do marketing-os terminam sua parte, alguns outputs podem pre
 
 ## Slash commands rápidos
 
-46 commands em `commands/` são atalhos pra workflows comuns. Quando user invoca o command direto (ex: `/criar-carrossel`), segue a lógica do command file. Quando user pede em linguagem natural ("cria um carrossel sobre X"), este SKILL dispatcha conforme tabela e workflows acima.
+48 commands em `commands/` são atalhos pra workflows comuns. Quando user invoca o command direto (ex: `/criar-carrossel`), segue a lógica do command file. Quando user pede em linguagem natural ("cria um carrossel sobre X"), este SKILL dispatcha conforme tabela e workflows acima.
 
 | Categoria | Commands |
 |---|---|
@@ -440,7 +475,9 @@ Quando os subagents do marketing-os terminam sua parte, alguns outputs podem pre
 | Email | `/criar-email`, `/criar-sequencia` |
 | Ads | `/criar-anuncio`, `/publicar-anuncio` |
 | Infoproduto | `/criar-infoproduto` |
-| Oferta | `/criar-oferta` (arquitetura: value stack, preço, garantia, bônus) |
+| Oferta | `/criar-oferta` (USP preservada, evidências, value stack, preço, garantia, score e validação) |
+| Audience research | `/criar-avatar` (avatar principal, segmentos, anti-avatar, JTBD e handoff) |
+| Marca e posicionamento | `/criar-usp` (USP principal, evidências, diferenciação, score, validação e handoff) |
 | Comunidade | `/responder-comentarios` (triagem + rascunhos de comentários/DMs) |
 | Parcerias | `/prospectar-creators` (shortlist + outreach de creators) |
 | Voice clones | `/criar-clone` (expert externo via web research), `/criar-meu-clone` (suas amostras locais em `workspace/`) |

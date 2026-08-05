@@ -1374,12 +1374,12 @@ Se você já tem audiência, use:
 
 > **PROTOCOLO OBRIGATÓRIO antes de criar persona do zero:**
 >
-> 1. **LEIA PRIMEIRO** `assets/personas/personas-por-nicho.md` (1593 linhas com personas BR pré-construídas por nicho — IA, finanças, empreendedorismo, saúde, educação, produtividade, tech, marketing digital). Provavelmente já tem persona base para o nicho do briefing.
-> 2. **Se não há match**, use `assets/personas/persona-template.md` (293 linhas de template detalhado) como ponto de partida.
-> 3. **Só use o template inline abaixo** se os dois acima não existirem ou não servirem.
-> 4. **Quando criar persona NOVA validada**, considere salvá-la em `assets/personas/personas-por-nicho.md` para reuso em projetos futuros (continuous knowledge growth).
+> 1. **LEIA PRIMEIRO** `assets/personas/personas-por-nicho.md`, que contém personas BR pré-construídas por nicho. Use-as como referências e hipóteses iniciais.
+> 2. **LEIA SEMPRE** `assets/personas/persona-template.md` em pedidos de avatar completo, buyer persona, ICP ou anti-avatar. Ele é o contrato canônico de evidência, segmentação, output e handoff.
+> 3. **Use o template inline abaixo** apenas como fallback resumido quando o arquivo canônico não estiver disponível.
+> 4. **Salve outputs específicos do cliente** apenas na área local e gitignored definida pelo projeto, quando o usuário pedir persistência. Uma persona só entra no banco distribuível após validação ampla e decisão explícita de manutenção.
 >
-> Reinventar persona quando há banco pronto = desperdício de tempo + inconsistência entre projetos.
+> O banco acelera a pesquisa. Fonte, data e escopo definem quais elementos sobrevivem à validação.
 
 ```
 TEMPLATE DE PERSONA DETALHADA
@@ -3620,31 +3620,18 @@ Seja específico e baseie-se em dados quando possível.
 PROMPT: PERSONA DETALHADA
 ═══════════════════════════════════════════════════════════════
 
-Crie uma persona detalhada para [NICHO] incluindo:
+Crie um Dossiê de Avatar completo para [PRODUTO/OFERTA] no
+[NICHO E GEOGRAFIA], seguindo integralmente
+assets/personas/persona-template.md.
 
-DEMOGRÁFICO:
-- Nome, idade, localização, profissão, renda
-
-PSICOGRÁFICO:
-- Valores, crenças, identidade
-
-DORES:
-- 5 dores principais com frases que ela diria
-
-DESEJOS:
-- 5 desejos com visualização do resultado
-
-COMPORTAMENTO:
-- Plataformas que usa
-- Horários de consumo
-- Tipo de conteúdo preferido
-- Influenciadores que segue
-
-LINGUAGEM:
-- Termos e expressões que usa
-- Tom que ressoa
-
-Use linguagem natural e seja específico.
+Separe EVIDÊNCIA CONFIRMADA, INFERÊNCIA e HIPÓTESE. Inclua
+ledger de fontes, segmentação, avatar principal, segmentos
+secundários condicionais, anti-avatar, Jobs To Be Done, nível
+de consciência, jornada, dores, desejos, alternativas,
+objeções, gatilhos, critérios de decisão, canais, linguagem
+real, plano de validação e Handoff Context para os agents de
+execução. Omita demografia que não afete a compra. Declare
+limitações e não preencha lacunas com estereótipos.
 
 ═══════════════════════════════════════════════════════════════
 PROMPT: ANÁLISE DE CONTEÚDO COMPETITIVO

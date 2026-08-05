@@ -31,6 +31,77 @@
 
 O mesmo produto suporta ofertas radicalmente diferentes. Mudar a oferta costuma mover conversão mais que reescrever a copy, porque ataca a decisão econômica do comprador, e é mais barato que comprar mais tráfego.
 
+### Entrada do Dossiê de USP
+
+O Dossiê de USP é uma entrada estratégica opcional e preferencial. Quando ele
+existir, a arquitetura da oferta consome o Handoff Context sem perder sua
+rastreabilidade:
+
+| Campo recebido | Uso na oferta | Regra de preservação |
+|---|---|---|
+| `usp_version` e `maturity` | Identificam a fonte e o grau de validação | Repetir no output e no handoff final |
+| `primary_usp` | Norte da promessa central | Adaptar a expressão sem trocar o sentido |
+| `reason_to_believe` | Base da credibilidade e da garantia | Manter junto dos IDs de evidência |
+| `mechanism_or_differentiator` | Mecanismo da oferta e naming | Preservar causalidade e limites |
+| `evidence_ids` | Provas permitidas | Propagar até copy, ads e funil |
+| `claim_limits` | Teto da promessa | Bloquear qualquer arquitetura que ultrapasse o teto |
+| `open_hypotheses` | Riscos ainda exploratórios | Levar ao plano de validação |
+
+Uma tensão entre USP e economics da oferta gera uma proposta de alteração com
+racional, impacto e nova versão sugerida. Redefinição silenciosa da USP é FAIL.
+
+Sem Dossiê de USP, promessa e mecanismo formulados pelo `mos-offer` começam como
+hipóteses de oferta. Eles podem sustentar exploração interna, mas dependem de
+validação antes de claims competitivos ou campanhas de alto investimento.
+
+### Protocolo de Evidências da Oferta
+
+O ledger da oferta combina os IDs recebidos da USP com IDs próprios da
+arquitetura comercial:
+
+```text
+OE01, OE02... para EVIDÊNCIA CONFIRMADA específica da oferta
+OI01, OI02... para INFERÊNCIA derivada de evidências identificadas
+OH01, OH02... para HIPÓTESE pendente de validação
+```
+
+| Elemento | Evidência mínima | Exemplo de escopo |
+|---|---|---|
+| Promessa e prazo | Prova de entrega, histórico ou hipótese declarada | público, produto, período e condições |
+| Reason to believe | Demonstração, processo, ativo ou dado verificável | versão do mecanismo e contexto |
+| Valor percebido | Comparável real ou cálculo reproduzível | mercado, data e alternativa usada |
+| Preço de concorrente | Página, checkout ou fonte atual identificada | plano, moeda, geografia e data |
+| Escassez | Capacidade, calendário ou condição operacional | quantidade, prazo e responsável |
+| Garantia | Premissas de conversão, refund, margem e capacidade | cenário analisado e fonte dos números |
+
+Template:
+
+| ID | Afirmação | Classe | Confiança | Fonte e data | Escopo | Uso permitido |
+|---|---|---|---|---|---|---|
+| OE01 | [...] | EVIDÊNCIA CONFIRMADA | alta | [...] | [...] | [...] |
+| OI01 | [...] | INFERÊNCIA | média | deriva de E01 + OE01 | [...] | [...] |
+| OH01 | [...] | HIPÓTESE | baixa | validação pendente | [...] | [...] |
+
+#### Registro de claims
+
+- **Claims Aprovados**: afirmações sustentadas pelos IDs citados e dentro dos
+  limites da USP, da entrega e do compliance.
+- **Claims Bloqueados**: afirmações sem suporte suficiente, fora do escopo das
+  fontes ou acima dos limites da promessa.
+- Cada claim registra IDs, condicionantes, canal permitido e data de revisão.
+- Copy, ads e páginas recebem apenas Claims Aprovados. Claims Bloqueados seguem
+  no handoff como alerta e insumo de validação.
+
+#### Plano de Validação
+
+| Hipótese | Método | Amostra ou fonte | Métrica ou sinal | Critério de decisão | Prioridade |
+|---|---|---|---|---|---|
+| OH01 | entrevista, análise operacional, teste de preço ou smoke test | [...] | [...] | aprovar, revisar ou descartar | alta |
+
+Toda hipótese central aparece no plano. O resultado do teste promove a hipótese
+para evidência, mantém sua condição exploratória ou bloqueia o claim. A mudança
+atualiza IDs, data e versão para impedir redefinição silenciosa no handoff.
+
 ## 1.2 A equação de valor (Hormozi)
 
 ```

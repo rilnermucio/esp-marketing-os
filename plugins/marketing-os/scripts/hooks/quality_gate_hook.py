@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """
-Marketing OS — PreToolUse Quality Gate Hook
+Marketing OS — Quality Gate Hook
 
-Valida escritas (Write/Edit/MultiEdit) contra regras de qualidade do Marketing OS.
-Ativado via frontmatter `hooks:` em cada `agents/mos-*.md`.
+Valida escritas (Write/Edit/MultiEdit) e a resposta final dos agents mos-* contra
+as regras de qualidade do Marketing OS. Ativado pelo frontmatter dos agents e
+pelo hook SubagentStop do plugin.
 
 Tres niveis de validacao:
 
@@ -23,7 +24,7 @@ Paths ignorados: arquivos de tooling, config, docs internas, knowledge
 bases didaticas.
 
 Protocolo Claude Code hooks:
-- Stdin: JSON com tool_name, tool_input
+- Stdin: JSON do evento, com tool_name/tool_input ou last_assistant_message
 - Exit 0: permitir (com warnings opcionais em stderr)
 - Exit 2: bloquear (com mensagem em stderr)
 
@@ -33,6 +34,20 @@ Defensivo: qualquer excecao interna -> exit 0 (nao quebrar agent).
 import json
 import re
 import sys
+from dataclasses import dataclass, field
+
+
+@dataclass
+class GateResult:
+    """Resultado observável do quality gate para qualquer adapter de hook."""
+
+    blocked: bool = False
+    hard: list[str] = field(default_factory=list)
+    warnings: list[str] = field(default_factory=list)
+    compliance: list[str] = field(default_factory=list)
+    context: str = "conteúdo"
+    retry_exhausted: bool = False
+
 
 SKIP_PATH_PATTERNS = [
     r"\.claude/",
@@ -285,48 +300,86 @@ def find_compliance_warnings(content: str) -> list:
     return warnings
 
 
+def evaluate_event(data: dict) -> GateResult:
+    """Valida um evento Claude Code sem executar I/O.
+
+    Esta é a interface comum dos adapters PreToolUse e SubagentStop. Um stop já
+    reativado recebe no máximo uma tentativa de correção para evitar loop.
+    """
+    event_name = data.get("hook_event_name", "") or ""
+    tool_name = data.get("tool_name", "")
+    tool_input = data.get("tool_input", {}) or {}
+
+    if event_name in ("Stop", "SubagentStop"):
+        agent_type = data.get("agent_type", "") or ""
+        if not agent_type.startswith("mos-"):
+            return GateResult(context="resposta final")
+        content = data.get("last_assistant_message", "") or ""
+        context = f"resposta final de {agent_type}"
+        retry_exhausted = bool(data.get("stop_hook_active"))
+    elif tool_name in ("Write", "Edit", "MultiEdit"):
+        file_path = tool_input.get("file_path", "") or ""
+        if should_skip(file_path):
+            return GateResult(context=file_path or "arquivo")
+        content = extract_content(tool_name, tool_input)
+        context = file_path or "arquivo"
+        retry_exhausted = False
+    else:
+        return GateResult()
+
+    if not content:
+        return GateResult(context=context)
+
+    hard = find_hard_violations(content)
+    warns = find_warnings(content)
+    compliance = find_compliance_warnings(content)
+
+    return GateResult(
+        blocked=bool(hard) and not retry_exhausted,
+        hard=hard,
+        warnings=warns,
+        compliance=compliance,
+        context=context,
+        retry_exhausted=bool(hard) and retry_exhausted,
+    )
+
+
 def main() -> int:
     try:
         data = json.load(sys.stdin)
     except Exception:
         return 0
 
-    tool_name = data.get("tool_name", "")
-    tool_input = data.get("tool_input", {}) or {}
-    file_path = tool_input.get("file_path", "") or ""
-
-    if tool_name not in ("Write", "Edit", "MultiEdit"):
-        return 0
-
-    if should_skip(file_path):
-        return 0
-
-    content = extract_content(tool_name, tool_input)
-    if not content:
-        return 0
-
-    hard = find_hard_violations(content)
-    warns = find_warnings(content)
-    compliance = find_compliance_warnings(content)
+    result = evaluate_event(data)
 
     # Print warnings to stderr (always shown to agent)
-    if warns or compliance:
-        print(f"Quality Gate (Marketing OS) avisos em {file_path}:", file=sys.stderr)
-        for w in warns:
+    if result.warnings or result.compliance:
+        print(
+            f"Quality Gate (Marketing OS) avisos em {result.context}:",
+            file=sys.stderr,
+        )
+        for w in result.warnings:
             print(f"  WARN: {w}", file=sys.stderr)
-        for c in compliance:
+        for c in result.compliance:
             print(f"  COMPLIANCE: {c}", file=sys.stderr)
 
     # Hard block: fail with exit 2
-    if hard:
+    if result.blocked:
         print(
-            f"Quality Gate (Marketing OS) bloqueou escrita em {file_path}:",
+            f"Quality Gate (Marketing OS) bloqueou {result.context}:",
             file=sys.stderr,
         )
-        for v in hard:
+        for v in result.hard:
             print(f"  BLOCK: {v}", file=sys.stderr)
         print("Reescreva eliminando as violacoes e tente novamente.", file=sys.stderr)
         return 2
+
+    if result.retry_exhausted:
+        print(
+            "Quality Gate (Marketing OS): a tentativa de correção da resposta final "
+            "ainda contém violação. Liberando para evitar loop infinito.",
+            file=sys.stderr,
+        )
 
     # Warns alone don't block
     return 0

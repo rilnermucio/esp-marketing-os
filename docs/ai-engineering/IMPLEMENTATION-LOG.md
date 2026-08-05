@@ -67,3 +67,7 @@ Todos os campos do template. "Evidências" exige dado verificado (output real de
 | 2026-07-06 | Release v6.12.0 | [2026-07-06-release-v6.12.0.md](worklogs/2026-07-06-release-v6.12.0.md) |
 | 2026-07-06 | Backlog via delegação Composer (3 ondas: housekeeping, Fase 4, Fase 3) | [2026-07-06-delegacao-composer.md](worklogs/2026-07-06-delegacao-composer.md) |
 | 2026-07-06 | Release v6.13.0 (ROADMAP 100%) | [2026-07-06-release-v6.13.0.md](worklogs/2026-07-06-release-v6.13.0.md) |
+| 2026-08-03 | Hardening de CI, output, evals e pacote Codex | [2026-08-03-hardening-ci-output-evals-codex.md](worklogs/2026-08-03-hardening-ci-output-evals-codex.md) |
+| 2026-08-04 | Criação de avatar como feature explícita | [2026-08-04-criar-avatar-completo.md](worklogs/2026-08-04-criar-avatar-completo.md) |
+| 2026-08-04 | Criação de USP como feature explícita | [2026-08-04-criar-usp.md](worklogs/2026-08-04-criar-usp.md) |
+| 2026-08-04 | Hardening da arquitetura de oferta | [2026-08-04-hardening-criar-oferta.md](worklogs/2026-08-04-hardening-criar-oferta.md) |

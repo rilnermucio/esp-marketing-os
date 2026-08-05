@@ -2,9 +2,8 @@
 # Marketing OS - Dependências Python
 # ============================================================
 #
-# A maioria dos scripts utiliza apenas módulos da biblioteca padrão
-# do Python 3.8+. Algumas funcionalidades específicas requerem
-# dependências opcionais listadas abaixo.
+# A maioria dos scripts utiliza módulos da biblioteca padrão do Python 3.12.
+# Funcionalidades específicas requerem as dependências declaradas abaixo.
 #
 # Módulos padrão utilizados pelos scripts:
 #   - json          (seo_analyzer, hashtag_generator, ab_generator,
@@ -46,6 +45,11 @@
 # python-dotenv>=1.0.0      # Para gerenciamento de variáveis de ambiente
 # schedule>=1.2.0           # Para agendamento de publicações
 # Pillow>=10.0.0            # Para manipulação de imagens
+
+# ============================================================
+# Dependência de runtime do /projeto (frontmatter YAML)
+# ============================================================
+PyYAML>=6.0,<7
 
 # ============================================================
 # Dependências para /auditoria (multi-modal PDF report)

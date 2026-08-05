@@ -29,7 +29,7 @@
 ## 4. Melhorar a skill orquestradora (`skills/marketing-os/SKILL.md`)
 
 - **H4.1: a SKILL roteia, não executa.** Mapa de dispatch + regras de desempate + padrões de orquestração. Conteúdo de domínio que crescer ali deve descer pra um agent.
-- **H4.2: toda ambiguidade recorrente de roteamento vira regra de desempate escrita** (ex: mos-brand vs mos-storytelling já tem; oferta high-ticket entre infoproduct/funnel/copy ainda não tem: gap conhecido, ver ADR-0001).
+- **H4.2: toda ambiguidade recorrente de roteamento vira regra de desempate escrita** (ex: mos-brand vs mos-storytelling; oferta high-ticket entre research/offer/infoproduct/funnel/copy, corrigida e travada por RT-017 em ago/2026).
 - **H4.3: mudou description de agent, mudou SKILL, mudou command? Rode os routing evals** (`pytest scripts/tests/test_routing_evals.py`) e revise a matriz em [ROUTING-EVALS.md](ROUTING-EVALS.md).
 
 ## 5. Reduzir contexto e tokens

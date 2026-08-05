@@ -1,0 +1,182 @@
+{
+  "version": 1,
+  "criteria_sets": {
+    "copy": [
+      {
+        "id": "hook",
+        "description": "Qual peça segura melhor a atenção do público declarado no briefing?"
+      },
+      {
+        "id": "especificidade",
+        "description": "Qual peça apresenta mecanismo e promessa mais concretos?"
+      },
+      {
+        "id": "prova",
+        "description": "Qual peça sustenta melhor os claims com número, caso ou contexto verificável?"
+      },
+      {
+        "id": "cta",
+        "description": "Qual peça pede uma ação mais clara e adequada ao objetivo?"
+      },
+      {
+        "id": "naturalidade",
+        "description": "Qual peça soa mais humana em PT-BR e evita vícios recorrentes de texto gerado?"
+      },
+      {
+        "id": "fit",
+        "description": "Qual peça respeita melhor público, consciência, tom e canal do briefing?"
+      }
+    ],
+    "offer": [
+      {
+        "id": "clareza",
+        "description": "Qual saída torna produto, público e transformação mais fáceis de entender?"
+      },
+      {
+        "id": "valor",
+        "description": "Qual saída articula melhor benefícios, entregáveis e percepção de valor?"
+      },
+      {
+        "id": "prova",
+        "description": "Qual saída usa evidências mais relevantes e verificáveis?"
+      },
+      {
+        "id": "risco",
+        "description": "Qual saída trata melhor objeções, garantia e risco percebido?"
+      },
+      {
+        "id": "coerencia",
+        "description": "Qual saída mantém maior coerência entre promessa, mecanismo e entrega?"
+      },
+      {
+        "id": "fit",
+        "description": "Qual saída está mais alinhada ao mercado e ao estágio de consciência?"
+      }
+    ],
+    "strategy": [
+      {
+        "id": "coerencia",
+        "description": "Qual plano conecta melhor objetivo, mensagem, etapas e conversão?"
+      },
+      {
+        "id": "sequencia",
+        "description": "Qual plano ordena melhor as etapas e dependências da jornada?"
+      },
+      {
+        "id": "friccao",
+        "description": "Qual plano identifica e reduz melhor os pontos de abandono?"
+      },
+      {
+        "id": "mensuracao",
+        "description": "Qual plano define eventos, métricas e critérios de decisão mais úteis?"
+      },
+      {
+        "id": "viabilidade",
+        "description": "Qual plano é mais executável com os recursos e restrições informados?"
+      },
+      {
+        "id": "fit",
+        "description": "Qual plano respeita melhor público, oferta e canal do briefing?"
+      }
+    ],
+    "seo": [
+      {
+        "id": "intencao",
+        "description": "Qual conteúdo atende melhor à intenção de busca principal?"
+      },
+      {
+        "id": "cobertura",
+        "description": "Qual conteúdo cobre melhor as dúvidas e subtópicos necessários?"
+      },
+      {
+        "id": "credibilidade",
+        "description": "Qual conteúdo apresenta sinais mais fortes de experiência, precisão e fontes?"
+      },
+      {
+        "id": "estrutura",
+        "description": "Qual conteúdo organiza melhor títulos, progressão e escaneabilidade?"
+      },
+      {
+        "id": "conversao",
+        "description": "Qual conteúdo conduz melhor o leitor ao próximo passo adequado?"
+      },
+      {
+        "id": "naturalidade",
+        "description": "Qual conteúdo soa mais útil e humano em PT-BR?"
+      }
+    ],
+    "video": [
+      {
+        "id": "hook",
+        "description": "Qual roteiro cria uma abertura mais forte para o público e o canal?"
+      },
+      {
+        "id": "retencao",
+        "description": "Qual roteiro sustenta melhor curiosidade e progressão até o final?"
+      },
+      {
+        "id": "ritmo",
+        "description": "Qual roteiro distribui melhor informação, pausas e mudanças de estímulo?"
+      },
+      {
+        "id": "direcao_visual",
+        "description": "Qual roteiro oferece indicações visuais mais claras e executáveis?"
+      },
+      {
+        "id": "cta",
+        "description": "Qual roteiro encerra com uma ação mais clara e adequada ao objetivo?"
+      },
+      {
+        "id": "fit",
+        "description": "Qual roteiro respeita melhor duração, plataforma, público e tom?"
+      }
+    ]
+  },
+  "profiles": {
+    "copy-headline": {
+      "agent": "mos-copy",
+      "quality_gate_type": "landing-page",
+      "criteria_set": "copy"
+    },
+    "copy-post": {
+      "agent": "mos-copy",
+      "quality_gate_type": "post",
+      "criteria_set": "copy"
+    },
+    "copy-sales": {
+      "agent": "mos-copy",
+      "quality_gate_type": "landing-page",
+      "criteria_set": "copy"
+    },
+    "email": {
+      "agent": "mos-email",
+      "quality_gate_type": "email",
+      "criteria_set": "copy"
+    },
+    "ads": {
+      "agent": "mos-ads",
+      "quality_gate_type": "anuncio",
+      "criteria_set": "copy"
+    },
+    "offer": {
+      "agent": "mos-offer",
+      "quality_gate_type": "landing-page",
+      "criteria_set": "offer"
+    },
+    "funnel": {
+      "agent": "mos-funnel",
+      "quality_gate_type": "landing-page",
+      "criteria_set": "strategy"
+    },
+    "seo": {
+      "agent": "mos-seo",
+      "quality_gate_type": "artigo",
+      "criteria_set": "seo"
+    },
+    "video": {
+      "agent": "mos-video",
+      "quality_gate_type": "video",
+      "criteria_set": "video"
+    }
+  }
+}

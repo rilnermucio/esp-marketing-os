@@ -1,6 +1,6 @@
-# Validation Guide — Marketing OS v6.5.0
+# Validation Guide: Marketing OS v6.x
 
-Test cases pra validar que o orquestrador está dispatching corretamente nos workflows da v6.x e que os 25 slash commands cumprem o contrato de dispatch padronizado a partir da v6.5.0.
+Test cases pra validar que o orquestrador está dispatching corretamente nos workflows da v6.x e que os 48 slash commands cumprem o contrato de dispatch padronizado.
 
 ## Como rodar os testes
 
@@ -291,6 +291,69 @@ Test cases pra validar que o orquestrador está dispatching corretamente nos wor
 
 ---
 
+### Test 16: Avatar completo baseado em evidências
+
+**Briefing:**
+```text
+/criar-avatar mentoria para donos de clínica, B2B, Brasil, ticket R$ 5 mil
+```
+
+**Esperado:**
+- ✅ Dispatch simples para `mos-research`
+- ✅ Ledger separando evidência confirmada, inferência e hipótese
+- ✅ Avatar principal, segmentos secundários condicionais e anti-avatar
+- ✅ JTBD, nível de consciência, jornada, dores, desejos, objeções e gatilhos
+- ✅ Linguagem real com fontes e plano de validação
+- ✅ Handoff estruturado para copy, ads, oferta, funil e social
+
+**Como saber se está certo:** dados demográficos, citações ou comportamentos sem fonte devem aparecer como hipótese ou ser omitidos. Persona pré-construída serve como referência e precisa passar pela validação do dossiê.
+
+---
+
+### Test 17: USP baseada em evidências
+
+**Briefing:**
+```text
+/criar-usp mentoria para donos de clínica, ainda não mapeei os concorrentes
+```
+
+**Esperado:**
+- ✅ Dispatch sequencial: `mos-research` seguido de `mos-brand`
+- ✅ Ledger separando evidência confirmada, inferência e hipótese
+- ✅ Categoria, público, Job To Be Done, alternativas e contexto competitivo
+- ✅ Três candidatos com Score de USP e justificativa por critério
+- ✅ Uma USP principal com reason to believe, mecanismo e limites da promessa
+- ✅ Plano de validação e Handoff Context para oferta, copy, ads e funil
+
+**Como saber se está certo:** exclusividade, superioridade ou resultado sem
+suporte ficam registrados como hipótese. O `mos-brand` recebe as fontes e os IDs
+gerados pelo `mos-research`, sem refazer a análise a partir de suposições.
+
+---
+
+### Test 18: Oferta baseada em evidências e USP preservada
+
+**Briefing:**
+```text
+/criar-oferta mentoria high-ticket para donos de clínica, use o Dossiê de USP atual; ainda não tenho research de preços, alternativas e capacidade de pagamento
+```
+
+**Esperado:**
+- ✅ Dispatch sequencial: `mos-research` seguido de `mos-offer`
+- ✅ Handoff da USP preservando versão, proposta principal, reason to believe, mecanismo, IDs, limites e hipóteses
+- ✅ Ledger separando evidência confirmada, inferência e hipótese
+- ✅ Claims aprovados separados dos claims bloqueados
+- ✅ Value stack, preço, garantia, motivo para agir e Offer Score
+- ✅ Plano de validação para hipóteses centrais
+- ✅ Handoff final com USP de origem e IDs de evidência
+
+**Como saber se está certo:** o `mos-offer` recebe integralmente o research e o
+Dossiê de USP. Mudança material na USP aparece como proposta de nova versão.
+Comparáveis, preço, garantia e escassez sem suporte permanecem como hipótese ou
+claim bloqueado.
+
+---
+
 ## Checklist de validação completa
 
 Marque cada um após rodar:
@@ -310,12 +373,15 @@ Marque cada um após rodar:
 - [ ] Test 13: `/criar-clone` → mos-research → mos-copy (4 arquivos)
 - [ ] Test 14: `/campanha lancamento` → workflow multi-fase
 - [ ] Test 15: `/batch` → multi-paralelo com rotação
+- [ ] Test 16: `/criar-avatar` → mos-research com dossiê baseado em evidências
+- [ ] Test 17: `/criar-usp` → mos-research → mos-brand com dossiê baseado em evidências
+- [ ] Test 18: `/criar-oferta` → mos-research → mos-offer com USP e evidências preservadas
 
-Se 13+ passam: orquestração está saudável.
-Se <12 passam: abrir issue com casos que falharam.
+Se 16+ passam: orquestração está saudável.
+Se 15 ou menos passam: abrir issue com casos que falharam.
 
 ## Conhecidos limites
 
-- **34 dos 38 slash commands dispatcham `mos-*` diretamente** (padrão dispatch-based desde a v6.5.0). Os 4 utilities intencionais sem dispatch são `/publicar-notion`, `/campanha` (índice), `/projeto` e `/datas-sazonais`; a lista canônica é o set `UTILITY_COMMANDS` em `scripts/tests/test_commands_dispatch.py`.
+- **44 dos 48 slash commands dispatcham `mos-*` diretamente.** Os 4 utilities intencionais sem dispatch são `/publicar-notion`, `/campanha` (índice), `/projeto` e `/datas-sazonais`; a lista canônica é o set `UTILITY_COMMANDS` em `scripts/tests/test_commands_dispatch.py`.
 - **Validação estática automatizada:** rodar `python -m pytest scripts/tests/test_commands_dispatch.py -v` valida estrutura de dispatch de todos os commands em CI sem precisar Claude Code interativo (test cases parametrizados por arquivo, cobrem commands novos automaticamente).
 - **Tier 2 smoke tests deferred:** rodar localmente com `python -m pytest scripts/tests/test_agents_smoke.py -v -m smoke` se quiser cobertura mais profunda (precisa Claude Code rodando).

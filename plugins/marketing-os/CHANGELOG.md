@@ -7,6 +7,36 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
 
 ---
 
+## v6.15.0 (2026-08-05)
+
+Esta release completa a trilha estratégica baseada em evidências, do Avatar à USP e à Oferta, e fortalece os gates de output, a CI e a distribuição Codex.
+
+### Added
+
+- Novo command `/criar-avatar`, executado por `mos-research`, com ledger de evidências, avatar principal, segmentos secundários condicionais, anti-avatar, JTBD, linguagem documentada, plano de validação e handoff reutilizável.
+- Novo command `/criar-usp`, com rota condicional `mos-research` seguida de `mos-brand`, Dossiê de USP versionado, reason to believe, diferenciação, score, limites da promessa, hipóteses e handoff para Oferta, Copy, Ads e Funil.
+- Baseline de qualidade do `mos-copy` com 5 golden briefs, artefatos versionados, perfis de output por domínio, score determinístico e consolidação A/B com justificativa obrigatória.
+- Gate global `SubagentStop` para validar a resposta final dos `mos-*`, compartilhando o mesmo núcleo puro do `PreToolUse` e limitando a correção a uma tentativa.
+- Testes dedicados para Avatar, USP, Oferta, contratos de CI, distribuição Codex, output evals e comportamento do hook final.
+
+### Changed
+
+- `/criar-oferta` agora usa `mos-research` antes de `mos-offer` em ofertas core ou high-ticket sem pesquisa suficiente, preserva o Dossiê de USP e entrega ledger de evidências, Claims Aprovados, Claims Bloqueados e plano de validação.
+- `mos-research`, `mos-brand` e `mos-offer`, com suas knowledge bases, passaram a compartilhar contratos rastreáveis de Avatar, USP e Oferta.
+- A skill canônica e o meta-roteador `/mo` agora descobrem as três etapas e preservam suas dependências sequenciais.
+- A antiga skill migrada `source-command-marketing-os` virou um adaptador fino para `skills/marketing-os/SKILL.md`, removendo a arquitetura duplicada de 18 agents.
+- O inventário público passa a 48 commands, dos quais 44 fazem dispatch para agents `mos-*`.
+- O workflow de release só publica depois de testes, cobertura, Black, Flake8, validação dos agents e validação do pacote Codex.
+- O pacote Codex foi regenerado com os novos commands, agents, knowledge bases, hooks, perfis de eval e documentação sincronizada.
+
+### Fixed
+
+- Input `files` do Codecov corrigido para enviar o relatório de cobertura esperado.
+- `PyYAML` declarado nas dependências usadas pela CI e pelo runtime dos validadores.
+- Identificador do metaschema Draft 7 corrigido em `audit_config.py`.
+- Gate de qualidade final deixa de depender apenas de operações de escrita do subagent.
+- Guards adicionais impedem drift entre fontes canônicas, pacote Codex, contagens públicas, commands e routing evals.
+
 ## v6.14.0 (2026-07-06)
 
 Nivelamento completo dos 21 agents + 21 KBs em 5 ondas (auditoria → execução com revisão entre ondas; worklog em `docs/ai-engineering/worklogs/2026-07-06-nivelamento-21-agents.md`).

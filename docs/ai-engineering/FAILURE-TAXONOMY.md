@@ -1,6 +1,6 @@
 # Taxonomia de falhas do Marketing OS
 
-> Canônico. Atualizado em 2026-07-06. Todo bug, eval e post-mortem referencia estas falhas por ID. Formato do ID: `F-<CATEGORIA>-<NN>`. Os IDs são estáveis: nunca renumere; deprecie com nota e crie novo.
+> Canônico. Atualizado em 2026-08-03. Todo bug, eval e post-mortem referencia estas falhas por ID. Formato do ID: `F-<CATEGORIA>-<NN>`. Os IDs são estáveis: nunca renumere; deprecie com nota e crie novo.
 >
 > "Exemplo real" cita incidente deste repositório quando existe; "hipotético" marca risco com precedente externo. Detecção aponta o mecanismo executável quando há.
 
@@ -28,6 +28,7 @@
 | F-COPY-01 | AI-tells: travessão, "brutal", antítese negação→afirmação, clichês | Recorrente até jun/2026 (motivou o gate de antítese em 3 camadas) | `quality_gate_hook.py` (HARD BLOCK) + `quality_gate.py` (score capado em 60) | [QUALITY-GATES.md](QUALITY-GATES.md) |
 | F-COPY-02 | Hook fraco, CTA fraco, promessa sem prova | Medido, não bloqueado | `quality_gate.py` (checks de hook/CTA) + Copy Score System | Auto-iteração com scoring (H1.1) |
 | F-COPY-03 | Estouro de limite de plataforma (chars, formato) | Hipotético | `quality_gate.py --type` + Gate 4 do mos-copy | Tabela de limites no agent |
+| F-COPY-04 | Resposta final escapa do gate por ser entregue diretamente no chat | Baseline jul/2026: output sem Write/Edit preservou padrões bloqueantes | `SubagentStop` em `hooks/hooks.json` + `test_quality_gate_hook.py` | Núcleo compartilhado `evaluate_event`; ADR-0003 |
 
 ## F-PTBR: Língua
 
@@ -97,6 +98,7 @@
 | F-EVAL-01 | Assert de valor exato onde range/presença basta | Risco padrão; suite atual usa ranges (`0 <= score <= 100`) | Revisão de PR de teste | [EVALS-STRATEGY.md](EVALS-STRATEGY.md) §anti-fragilidade |
 | F-EVAL-02 | Eval não parametrizado: arquivo novo escapa da cobertura | Evitado por design em `test_commands_dispatch.py` (glob + parametrize) | Revisão | Padrão glob+parametrize pra qualquer coleção de arquivos |
 | F-EVAL-03 | Flaky tratado como quebrado (ou ignorado como flaky sem registro) | `test_pdf_generator::test_cli_basic` flaca sob carga, passa isolado | Re-rodar isolado antes de debugar | Registro do flake conhecido (memória + este doc) |
+| F-EVAL-04 | Julgamento par a par muda com a posição A/B | Risco observado no protocolo manual de quality anchors | `copy_output_eval.py consolidate` + testes de ordem invertida | Duas rodadas obrigatórias; divergência vira `inconclusivo` |
 
 ## F-COST: Custo e contexto
 

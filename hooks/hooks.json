@@ -1,0 +1,17 @@
+{
+  "description": "Valida deterministicamente a resposta final dos agents Marketing OS",
+  "hooks": {
+    "SubagentStop": [
+      {
+        "matcher": "mos-.*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/scripts/hooks/quality_gate_hook.py\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -189,21 +189,11 @@ Lista plugins instalados com versão. Se mostrar `6.x.y` → versão atual carre
 
 ## Bugs conhecidos / Limitações
 
-### 23 dos 25 slash commands não dispatcham `mos-*` agents diretamente
+### Commands de produção sem dispatch para `mos-*`
 
-**Status:** Conhecido (descoberto na auditoria de v6.3.0). Apenas `/criar-post` e `/criar-meu-clone` dispatcham agents nativos. Os outros 23 commands têm lógica inline — funcionam, mas não aproveitam a profundidade dos subagents.
+**Status:** Resolvido desde v6.5.0. Todos os commands de produção passam pelo contrato de dispatch. Quatro utilities permanecem sem dispatch por desenho: `/publicar-notion`, `/campanha`, `/projeto` e `/datas-sazonais`.
 
-**Workaround:** Use `/marketing-os` em linguagem natural em vez do slash command — o orquestrador da skill dispatcha corretamente.
-
-```
-# Em vez de:
-/criar-carrossel 10 erros de copy
-
-# Prefira (até v6.3.0+):
-/marketing-os cria carrossel sobre 10 erros de copy
-```
-
-**Fix planejado:** v6.4.x — atualizar os 23 commands pra dispatcham os workflows correspondentes do SKILL.md.
+Se um command novo executar produção inline, rode `python -m pytest scripts/tests/test_commands_dispatch.py -v`. A suite identifica o arquivo que não declarou `Agent(subagent_type: "mos-*")`.
 
 ### Tier 2 smoke tests deferred
 

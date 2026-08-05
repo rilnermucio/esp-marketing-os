@@ -12,7 +12,7 @@ from pathlib import Path
 import jsonschema
 
 SCHEMA = {
-    "$schema": "https://json-schema.org/draft-07/schema#",
+    "$schema": "http://json-schema.org/draft-07/schema#",
     "type": "object",
     "required": ["brand_name"],
     "properties": {

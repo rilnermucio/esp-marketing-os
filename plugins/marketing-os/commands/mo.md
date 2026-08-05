@@ -51,6 +51,9 @@ Use a tabela abaixo. Para casos não cobertos, consulte o **Mapa de Dispatch** e
 | "podcast / áudio / spot" | Sugerir `/criar-podcast` |
 | "calendário editorial / planejamento mensal" | Sugerir `/criar-calendario` |
 | "infoproduto / curso / membership / mentoria" | Sugerir `/criar-infoproduto` (workflow #7) |
+| "avatar / cliente ideal / buyer persona / ICP / anti-avatar" | Sugerir `/criar-avatar` ou dispatch `mos-research` |
+| "USP / UVP / proposta única de venda / proposta de valor / diferencial da oferta" | Sugerir `/criar-usp`; se faltam evidências, usar `mos-research` seguido de `mos-brand` |
+| "oferta / value stack / garantia / preço / quanto cobrar" | Sugerir `/criar-oferta`; oferta core ou high-ticket sem research usa `mos-research` seguido de `mos-offer` |
 | "lançamento / PLF / abrir carrinho" | Sugerir `/campanha lancamento` (preset 1) |
 | "prospecção / leads / topo de funil" | Sugerir `/campanha prospeccao` (preset 2) |
 | "retenção / reativar inativos / churn / LTV" | Sugerir `/campanha retencao` (preset 3) |

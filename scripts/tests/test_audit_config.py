@@ -4,13 +4,22 @@ from __future__ import annotations
 import json
 import os
 import sys
+import warnings
 from pathlib import Path
+
+from jsonschema.validators import validator_for
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import pytest
 
-from audit_config import load
+from audit_config import SCHEMA, load
+
+
+def test_schema_metaschema_is_registered():
+    with warnings.catch_warnings():
+        warnings.simplefilter("error", DeprecationWarning)
+        validator_for(SCHEMA)
 
 
 class TestConfigLoad:

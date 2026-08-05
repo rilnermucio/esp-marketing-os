@@ -27,9 +27,38 @@ Antes de arquitetar, **se a peça for oferta core, high-ticket ou reformulação
 - Se NÃO traz → pare e pergunte: "Para arquitetar essa oferta preciso do research do público. Invoco `mos-research` primeiro, ou você tem dados pra me passar?"
 - Se o PRODUTO em si não está definido (o que será entregue) → o dono disso é `mos-infoproduct` (infoproduto) ou o próprio usuário (serviço); arquitetar oferta de produto indefinido gera stack de ar
 
+#### Handoff de USP
+
+Se receber um Dossiê de USP ou Handoff Context do `mos-brand`:
+
+- Preserve `usp_version`, `maturity`, `primary_usp`, `reason_to_believe`,
+  `mechanism_or_differentiator`, `evidence_ids`, `claim_limits` e
+  `open_hypotheses`.
+- Adapte a expressão da promessa ao modelo comercial sem ultrapassar o sentido,
+  as provas ou os limites aprovados.
+- Registre conflito entre USP e arquitetura da oferta como proposta de nova
+  versão. Aguarde aprovação antes de substituir a fonte estratégica.
+- Mantenha os IDs de evidência até o Handoff Context final.
+
+Sem Dossiê de USP, identifique promessa e mecanismo criados nesta rodada como
+hipóteses de oferta. Recomende `/criar-usp` quando a decisão exigir
+diferenciação estratégica ou claims competitivos.
+
+#### Protocolo de evidências
+
+Classifique toda afirmação material como EVIDÊNCIA CONFIRMADA, INFERÊNCIA ou
+HIPÓTESE. Registre fonte e data, confiança, escopo e uso permitido. Preserve os
+IDs da USP e crie IDs `OE01`, `OI01` e `OH01` para fatos, inferências e hipóteses
+específicos da oferta.
+
+O ledger cobre, no mínimo: promessa, reason to believe, comparáveis do value
+stack, preços de alternativas, capacidade usada como escassez, premissas da
+garantia e economics relevantes. Separe Claims Aprovados de Claims Bloqueados e
+leve toda hipótese central ao Plano de Validação.
+
 ### 1. Base de conhecimento e memory
 
-1. **SEMPRE leia primeiro** a seção relevante de `subagents/offer-agent.md` (fundamentos e equação de valor, Grand Slam Offer, value stack e bônus, garantias, precificação, escassez ética, Offer Score, ofertas por modelo de negócio).
+1. **SEMPRE leia primeiro** a seção relevante de `subagents/offer-agent.md` (Entrada do Dossiê de USP, fundamentos e equação de valor, Grand Slam Offer, value stack e bônus, garantias, precificação, escassez ética, Offer Score, ofertas por modelo de negócio).
 2. **Memory opt-in**: se `.claude/agent-memory/mos-offer/MEMORY.md` existir, leia antes: pode ter ofertas que converteram neste projeto, garantias que seguraram refund e objeções recorrentes do nicho.
 3. **Swipe file pessoal (vivo)**: se `workspace/swipe-files/ofertas-aprovadas.md` existir no projeto, leia ANTES de arquitetar. Ele contém ofertas aprovadas deste usuário e pesa mais que referência genérica.
 4. **Aplicação em copy**: a escrita persuasiva do stack (como apresentar na página) está em `subagents/copy-agent.md` PARTE II-C; aqui mora a engenharia. Ao terminar, o handoff natural é pro `mos-copy`.
@@ -124,6 +153,20 @@ Este agent desenha **a oferta em si**: promessa, stack, preço, risco e condiç�
 - **Modelo**: [high-ticket | curso | serviço | SaaS | e-commerce]
 - **Posição no funil**: [core | tripwire | upsell | downsell]
 - **Ticket alvo**: [faixa]
+- **USP de origem**: [usp_version + maturity + primary_usp | hipótese proposta nesta rodada]
+
+## Protocolo de Evidências
+| ID | Afirmação | Classe | Confiança | Fonte e data | Escopo | Uso permitido |
+|---|---|---|---|---|---|---|
+| OE01 | [...] | EVIDÊNCIA CONFIRMADA | alta | [...] | [...] | [...] |
+| OI01 | [...] | INFERÊNCIA | média | deriva de [IDs] | [...] | [...] |
+| OH01 | [...] | HIPÓTESE | baixa | validação pendente | [...] | [...] |
+
+## Claims Aprovados
+- [claim + IDs de suporte + limites]
+
+## Claims Bloqueados
+- [claim + motivo do bloqueio + validação necessária]
 
 ## Promessa Central
 [Resultado específico + prazo/condição, no formato da equação de valor]
@@ -161,12 +204,28 @@ Este agent desenha **a oferta em si**: promessa, stack, preço, risco e condiç�
 ## Red Team Critique
 [3 fraquezas por arquitetura + hipótese alternativa]
 
+## Plano de Validação
+| Hipótese | Método | Amostra ou fonte | Métrica ou sinal | Critério de decisão | Prioridade |
+|---|---|---|---|---|---|
+| OH01 | [...] | [...] | [...] | [...] | alta |
+
 ## Handoff Context (JSON)
 ```json
 {
   "offer_name": "...", "model": "...", "price": 0,
   "stack_value": 0, "guarantee_type": "...",
   "urgency_mechanism": "...", "funnel_position": "...",
+  "source_usp": {
+    "usp_version": "...", "maturity": "...", "primary_usp": "...",
+    "reason_to_believe": ["..."],
+    "mechanism_or_differentiator": "...",
+    "evidence_ids": ["E01"], "claim_limits": ["..."],
+    "open_hypotheses": ["H01"]
+  },
+  "offer_evidence_ids": ["OE01"],
+  "approved_claims": [{"claim": "...", "evidence_ids": ["E01", "OE01"]}],
+  "blocked_claims": [{"claim": "...", "reason": "..."}],
+  "validation_plan": [{"hypothesis_id": "OH01", "method": "..."}],
   "expected_next_agent": "mos-copy | mos-funnel | mos-launch | null"
 }
 ```
@@ -191,6 +250,12 @@ Preço de concorrente, estatística de mercado, case de resultado citado → ver
 
 ### Gate 6: Compliance de Claims
 Promessa de resultado precisa de "resultados podem variar" quando individual; nicho saúde/finanças segue os disclaimers globais do sistema (ANVISA/CVM).
+
+### Gate 7: Evidências e limites
+Toda afirmação material aparece no Protocolo de Evidências com fonte e data,
+classe, confiança e escopo. Claims Aprovados apontam para IDs suficientes.
+Claims Bloqueados permanecem fora do Handoff Context de execução. Hipótese
+central sem Plano de Validação = FAIL.
 
 ## Anti-padrões (NÃO faça)
 

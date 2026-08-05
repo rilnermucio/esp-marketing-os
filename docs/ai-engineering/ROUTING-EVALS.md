@@ -1,6 +1,6 @@
 # Routing Evals: matriz de roteamento esperado
 
-> Canônico. Atualizado em 2026-07-06. O gabarito vivo está em [evals/routing-cases.json](evals/routing-cases.json); este documento explica a matriz e o protocolo. A tabela abaixo é um resumo de leitura; **em divergência, o JSON vence**.
+> Canônico. Atualizado em 2026-08-04. O gabarito vivo está em [evals/routing-cases.json](evals/routing-cases.json); este documento explica a matriz e o protocolo. A tabela abaixo é um resumo de leitura; **em divergência, o JSON vence**.
 
 ## O que a matriz cobre
 
@@ -26,7 +26,7 @@ Briefings de usuário em PT-BR (como chegam de verdade, sem jargão de sistema) 
 | RT-014 | narrar roteiro em áudio | `/narrar-roteiro` | audio | simples |
 | RT-015 | "por que o engajamento caiu?" | nenhum (linguagem natural) | analytics | simples |
 | RT-016 | carrossel 10 slides | `/criar-carrossel` | social + copy + design | paralelo |
-| RT-017 | montar oferta high-ticket | `/criar-oferta` | offer | simples |
+| RT-017 | montar oferta high-ticket sem research | `/criar-oferta` | research → offer | sequencial |
 | RT-018 | bio do Instagram | nenhum (linguagem natural) | copy | simples |
 | RT-019 | "quanto cobrar pela mentoria?" | nenhum (linguagem natural) | offer | simples |
 | RT-020 | renderizar prompt em PNG | `/renderizar-imagem` | ai-tools | simples |
@@ -35,8 +35,10 @@ Briefings de usuário em PT-BR (como chegam de verdade, sem jargão de sistema) 
 | RT-023 | aprender com métricas reais | `/aprender` | analytics | simples |
 | RT-024 | responder comentários com haters | `/responder-comentarios` | community | simples |
 | RT-025 | achar influencers skincare collab | `/prospectar-creators` | research → partnerships | sequencial |
+| RT-026 | criar avatar completo para mentoria | `/criar-avatar` | research | simples |
+| RT-027 | criar USP sem concorrentes mapeados | `/criar-usp` | research → brand | sequencial |
 
-RT-013 e RT-017 eram gaps documentados (agent órfão de command; ambiguidade sem desempate) e viraram validações das correções: `/criar-teste-ab` e `mos-offer` + desempate na SKILL, ambos em jul/2026. O golden set não tem gaps abertos no momento; casos novos entram pelo protocolo da EVALS-STRATEGY §2.
+RT-013 e RT-017 eram gaps documentados e viraram validações das correções. RT-017 agora também trava a dependência de dados: oferta core ou high-ticket sem research usa `mos-research` antes de `mos-offer`; pedido pontual de precificação com contexto suficiente continua simples em RT-019. RT-026 guarda a interface explícita de avatar completo e sua rota natural para `mos-research`. RT-027 guarda a interface de USP e sua dependência de pesquisa quando o contexto competitivo ainda não foi mapeado. O golden set não tem gaps abertos no momento; casos novos entram pelo protocolo da EVALS-STRATEGY §2.
 
 ## Validação em duas camadas
 
@@ -66,10 +68,16 @@ Cada caso declara o que a resposta final precisa conter (ex: post exige sugestã
 | 2026-07-06 | Mesmo método | RT-023, 024, 025 (pós Fases 3-4 delegadas ao Composer) | **3/3** | Nenhuma. Os 3 roteamentos criados por executor delegado rotearam exatos ao vivo (RT-025 listou o par de agents em ordem invertida, mesma rota sequencial). Acumulado do dia: 12/12 em rota |
 | 2026-07-06 | `claude -p` SEM `--plugin-dir` (plugin INSTALADO do marketplace, v6.13.0) | RT-024 | **1/1** | Nenhuma. Valida o artefato distribuído de ponta a ponta (install → load → roteamento) e fecha a F-REL-03 das 5 releases do dia. Acumulado: 13/13 |
 | 2026-07-06 | Mesmo método, pós-nivelamento das 5 ondas (branch feat/nivelamento-completo) | RT-013, 014, 015, 021, 023 | **5/5 em command** (4/5 exatos em todos os campos) | RT-021: command exato em 5/5 execuções, mas a lista DECLARADA de agents variou entre sessões (design+ai-tools na branch, ai-tools no controle em main pré-nivelamento, video+ai-tools no registro da manhã). Controle no main provou: instabilidade do próprio método além da fronteira do command, não regressão do nivelamento. Refinamento documentado abaixo |
+| 2026-08-04 | `claude -p` com `--plugin-dir .`, schema JSON e instrução de decidir sem executar | RT-026 | **1/1** | Nenhuma. Retorno estruturado exato: `/criar-avatar`, `mos-research`, dispatch `simples` |
 
 Limitação do método: mede a decisão de roteamento DECLARADA pelo orquestrador em modo headless, não o dispatch executado numa sessão interativa completa. Suficiente pra pegar F-ROUTE-02/04; um eval de dispatch executado fica como evolução futura.
 
 Refinamento (2026-07-06, pós-controle do RT-021): quando o briefing roteia pra um COMMAND, o critério de acerto da camada viva é `expected_command`. O corpo do command define os agents e o modo de dispatch deterministicamente na execução real; a enumeração de agents que o orquestrador DECLARA em headless (sem carregar o corpo do command) é instável entre sessões e não deve ser tratada como gabarito. Pra casos sem command (`expected_command: null`), agents + dispatch continuam sendo o critério.
+
+Consequência para RT-017: a execução viva de 2026-07-06 comprovou a escolha de
+`/criar-oferta`. Ela não comprova o pipeline interno corrigido em 2026-08-04,
+que permanece coberto deterministicamente pelo command e por
+`test_offer_command.py` até nova execução interativa.
 
 ## Como estender
 

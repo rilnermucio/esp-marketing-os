@@ -1,6 +1,9 @@
 """Testes para quality_gate_hook.py — regexes de HARD BLOCK, WARN e skip de paths."""
 
+import json
 import os
+from pathlib import Path
+import subprocess
 import sys
 
 sys.path.insert(
@@ -9,10 +12,15 @@ sys.path.insert(
 )
 
 from quality_gate_hook import (
+    evaluate_event,
     find_hard_violations,
     find_warnings,
     should_skip,
 )
+
+
+ROOT = Path(__file__).resolve().parents[2]
+HOOK = ROOT / "scripts" / "hooks" / "quality_gate_hook.py"
 
 
 class TestHardViolations:
@@ -121,3 +129,88 @@ class TestShouldSkip:
 
     def test_does_not_skip_workspace_content(self):
         assert should_skip("workspace/outputs/post-instagram.md") is False
+
+
+class TestFinalResponseGate:
+    """SubagentStop valida a mensagem que realmente volta ao usuário."""
+
+    def test_blocks_marketing_agent_with_hard_violation(self):
+        result = evaluate_event(
+            {
+                "hook_event_name": "SubagentStop",
+                "agent_type": "mos-copy",
+                "stop_hook_active": False,
+                "last_assistant_message": "O segredo — que ninguém conta",
+            }
+        )
+
+        assert result.blocked is True
+        assert any("Em-dash" in item for item in result.hard)
+
+    def test_allows_clean_marketing_agent_response(self):
+        result = evaluate_event(
+            {
+                "hook_event_name": "SubagentStop",
+                "agent_type": "mos-email",
+                "stop_hook_active": False,
+                "last_assistant_message": "Assunto: três passos para vender com clareza.",
+            }
+        )
+
+        assert result.blocked is False
+        assert result.hard == []
+
+    def test_second_failed_stop_does_not_create_infinite_loop(self):
+        result = evaluate_event(
+            {
+                "hook_event_name": "SubagentStop",
+                "agent_type": "mos-copy",
+                "stop_hook_active": True,
+                "last_assistant_message": "A verdade brutal sobre vendas",
+            }
+        )
+
+        assert result.blocked is False
+        assert result.retry_exhausted is True
+        assert result.hard
+
+    def test_ignores_non_marketing_subagent(self):
+        result = evaluate_event(
+            {
+                "hook_event_name": "SubagentStop",
+                "agent_type": "Explore",
+                "stop_hook_active": False,
+                "last_assistant_message": "O segredo — que ninguém conta",
+            }
+        )
+
+        assert result.blocked is False
+        assert result.hard == []
+
+    def test_cli_blocks_bad_final_response(self):
+        payload = {
+            "hook_event_name": "SubagentStop",
+            "agent_type": "mos-copy",
+            "stop_hook_active": False,
+            "last_assistant_message": "Não foi sorte. Foi estratégia.",
+        }
+
+        completed = subprocess.run(
+            [sys.executable, str(HOOK)],
+            input=json.dumps(payload),
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+
+        assert completed.returncode == 2
+        assert "resposta final" in completed.stderr
+
+
+def test_plugin_registers_subagent_stop_gate():
+    config = json.loads((ROOT / "hooks" / "hooks.json").read_text(encoding="utf-8"))
+    entries = config["hooks"]["SubagentStop"]
+    gate = next(entry for entry in entries if entry.get("matcher") == "mos-.*")
+    command = gate["hooks"][0]["command"]
+
+    assert "${CLAUDE_PLUGIN_ROOT}/scripts/hooks/quality_gate_hook.py" in command

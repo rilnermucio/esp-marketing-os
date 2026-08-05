@@ -835,54 +835,336 @@ PASSO 4: Decidir onde posicionar sua marca
 
 ### 3.3 Unique Value Proposition (UVP)
 
-#### Fórmulas de UVP
+USP e UVP pertencem à arquitetura de posicionamento, mas cumprem escopos
+diferentes:
 
+| Conceito | Escopo | Pergunta respondida | Output típico |
+|---|---|---|---|
+| **USP** | Produto ou oferta específica | Por que esta oferta merece preferência nesta decisão? | Proposta central de venda + reason to believe |
+| **UVP** | Marca, empresa ou portfólio | Qual valor distintivo a organização cria de forma recorrente? | Arquitetura de valor mais ampla |
+| **Posicionamento** | Lugar competitivo pretendido | Como queremos ser percebidos em relação às alternativas? | Declaração de posicionamento |
+| **Tagline** | Expressão verbal | Como condensar uma ideia já definida? | Frase curta memorável |
+
+Quando o briefing pedir uma USP, o trabalho termina com uma proposta priorizada,
+suas provas, limites e plano de validação. Uma lista de benefícios, um slogan ou
+uma frase bonita isolada não satisfaz esse contrato.
+
+#### Contrato Canônico do Dossiê de USP
+
+O `Dossiê de USP` é a fonte de verdade que alimenta oferta, copy, anúncios e
+funil. Ele precisa responder, em sequência:
+
+1. **Quem decide**: público prioritário, situação de compra e Job To Be Done.
+2. **Em qual categoria**: referência mental que o comprador usa para comparar.
+3. **Contra quais alternativas**: concorrentes diretos, indiretos, fazer sozinho,
+   adiar e manter o status quo.
+4. **Qual progresso importa**: resultado funcional, emocional e social que move
+   a decisão.
+5. **Por que esta opção merece preferência**: mecanismo, capacidade ou ativo que
+   muda a experiência ou o resultado.
+6. **Por que acreditar**: prova observável, demonstração, dado, credencial ou
+   processo verificável.
+7. **Até onde a promessa pode ir**: escopo, condicionantes, riscos e claims ainda
+   sem suporte.
+8. **Como validar**: hipótese, método, amostra, sinal esperado e critério de
+   decisão.
+
+##### Rotas de produção
+
+| Situação de entrada | Rota | Regra |
+|---|---|---|
+| Público/JTBD, alternativas e provas já mapeados | `mos-brand` | Formular, pontuar e selecionar a USP |
+| Faltam público validado, contexto competitivo ou claims atuais | `mos-research` seguido de `mos-brand` | Pesquisar primeiro e preservar fontes no dossiê |
+| USP aprovada e pedido limitado a uma peça | Handoff para `mos-copy` | Adaptar sem redefinir a proposta |
+
+##### Níveis de maturidade
+
+| Nível | Condição | Linguagem permitida |
+|---|---|---|
+| **Exploratória** | Há hipóteses centrais sem validação | Candidata, hipótese, a validar |
+| **Validada** | Público reconhece relevância e a prova sustenta o claim | USP recomendada, com limites explícitos |
+| **Operacional** | A proposta foi aplicada e acompanhada em canais reais | USP vigente, com versão, data e métricas |
+
+A maturidade pertence ao dossiê inteiro. Uma frase não se torna validada apenas
+porque recebeu uma pontuação alta na análise estratégica.
+
+#### Protocolo de Evidências
+
+Toda afirmação material recebe ID, classe, confiança, fonte, data e escopo.
+
+| Classe | Definição | Exemplos de suporte | Uso permitido |
+|---|---|---|---|
+| **EVIDÊNCIA CONFIRMADA** | A fonte observada sustenta diretamente a afirmação dentro do escopo declarado | dado próprio auditável, entrevista registrada, demonstração, página atual de concorrente, documento ou pesquisa identificável | Pode fundamentar recomendação e reason to believe |
+| **INFERÊNCIA** | Conclusão derivada de uma ou mais evidências, com raciocínio explícito | padrão recorrente em entrevistas, gap sugerido por comparação, consequência provável de uma capacidade | Pode orientar candidato, sempre citando os IDs de origem |
+| **HIPÓTESE** | Suposição relevante que ainda precisa de teste | dor presumida, preferência não observada, exclusividade, resultado futuro | Pode entrar no plano de validação, sem virar claim factual |
+
+Use identificadores estáveis:
+
+```text
+E01, E02... para evidências confirmadas
+I01, I02... para inferências
+H01, H02... para hipóteses
 ```
-FÓRMULA 1: BENEFÍCIO PRINCIPAL
-"[Produto] ajuda [público] a [benefício principal] através de [diferencial]"
 
-Exemplo: "Slack ajuda equipes a se comunicar melhor
-através de canais organizados que substituem email."
+Regras operacionais:
 
-FÓRMULA 2: PROBLEMA → SOLUÇÃO
-"Para [público] frustrado com [problema],
-[marca] oferece [solução] que [resultado]"
+- Fonte fornecida pelo cliente precisa de data, contexto e escopo. A declaração
+  de uma pessoa confirma que ela declarou aquilo; generalização para o mercado
+  exige amostra ou validação adicional.
+- Claim de concorrente precisa de URL e data de acesso. Ausência de um claim em
+  uma busca não comprova exclusividade.
+- Números de resultado precisam indicar população, período, método e condições.
+- Inferência sempre aponta para os IDs que a originaram.
+- Hipótese central aparece também no plano de validação.
+- Informação conflitante permanece visível no ledger, com nota sobre a
+  divergência.
+- Exclusividade literal, liderança, superioridade e garantias exigem suporte
+  específico e revisão de compliance quando aplicável.
 
-Exemplo: "Para profissionais frustrados com reuniões improdutivas,
-Notion oferece um workspace unificado que elimina ferramentas fragmentadas."
+Template do ledger:
 
-FÓRMULA 3: ALTERNATIVA SUPERIOR
-"A alternativa a [concorrente/método atual]
-que [benefício diferenciador]"
+| ID | Afirmação | Classe | Confiança | Fonte e data | Escopo | Implicação |
+|---|---|---|---|---|---|---|
+| E01 | [...] | EVIDÊNCIA CONFIRMADA | alta | [...] | [...] | [...] |
+| I01 | [...] | INFERÊNCIA | média | deriva de E01 + E02 | [...] | [...] |
+| H01 | [...] | HIPÓTESE | baixa | validação pendente | [...] | [...] |
 
-Exemplo: "A alternativa ao Excel que
-permite colaboração em tempo real sem perder fórmulas."
+#### Inputs Mínimos
 
-FÓRMULA 4: CATEGORIA + DIFERENCIAL
-"[Categoria] para [público específico]
-focado em [diferencial único]"
+O dossiê exige os seguintes campos. Se os três primeiros estiverem ausentes,
+faça até 3 perguntas objetivas antes de produzir:
 
-Exemplo: "CRM para pequenas empresas
-focado em simplicidade e WhatsApp integrado."
+1. Produto, serviço ou oferta e sua entrega principal.
+2. Público prioritário e situação que dispara a busca.
+3. Decisão atendida pela USP, como posicionamento, hero, pitch ou anúncio.
+4. Categoria percebida e geografia.
+5. Job To Be Done funcional, emocional e social.
+6. Alternativas diretas, indiretas e status quo.
+7. Diferencial, mecanismo, capacidade ou ativo próprio.
+8. Provas atuais e limites de entrega.
+9. Ticket, modelo comercial e restrições regulatórias relevantes.
+
+Se faltarem concorrentes, diferencial ou provas, a rota passa por pesquisa. O
+agente pode formular candidatos exploratórios, desde que registre essas lacunas
+como hipóteses e impeça claims absolutos.
+
+#### Categoria, Job To Be Done e Alternativas
+
+Antes de escrever candidatos, consolide:
+
+```markdown
+Categoria percebida: [como o comprador descreve a solução]
+Situação de compra: [evento que dispara a busca]
+Job funcional: [progresso prático]
+Job emocional: [como quer se sentir]
+Job social: [como quer ser percebido]
+Alternativa direta: [produto da mesma categoria]
+Alternativa indireta: [outra forma de obter o progresso]
+Fazer sozinho: [processo manual ou interno]
+Adiar: [postergar a decisão]
+Status quo: [manter a situação atual]
+Critérios de decisão: [ordem de importância com IDs]
 ```
 
-#### Teste da UVP
+O concorrente mais importante é a alternativa que o público realmente escolhe,
+mesmo que ela pertença a outra categoria ou consista em não agir agora.
 
+#### Inventário de Diferenciação
+
+Mapeie diferenças pela cadeia causal:
+
+```text
+CAPACIDADE OU ATIVO
+  -> muda um PROCESSO ou EXPERIÊNCIA
+  -> produz uma CONSEQUÊNCIA relevante
+  -> sustentada por PROVA
+  -> comparada a uma ALTERNATIVA real
 ```
-CHECKLIST: SUA UVP É BOA?
 
-[ ] CLARA - Entende-se em 5 segundos?
-[ ] ÚNICA - Só sua marca poderia dizer isso?
-[ ] RELEVANTE - O público se importa?
-[ ] CRÍVEL - Há evidência para suportar?
-[ ] MEMORÁVEL - Fácil de lembrar?
-[ ] ACIONÁVEL - Motiva a ação?
+| Capacidade, ativo ou mecanismo | Consequência para o cliente | Prova | Facilidade de cópia | Status |
+|---|---|---|---|---|
+| [...] | [...] | [IDs] | baixa, média ou alta | confirmado, inferido ou hipótese |
 
-TESTE PRÁTICO:
-Mostre para 5 pessoas do público-alvo.
-Pergunte: "O que essa empresa faz?"
-Se a resposta for sua UVP, funcionou.
+Um mecanismo útil precisa ser compreensível, causalmente plausível e conectado a
+uma diferença operacional observável. Dar nome proprietário a um processo comum
+não cria defensabilidade por si só.
+
+#### Fórmulas para Gerar Candidatos
+
+As fórmulas servem para exploração. A seleção depende das evidências e do score.
+
+```text
+FÓRMULA 1: PÚBLICO + PROGRESSO + MECANISMO
+[Oferta] ajuda [público] a [progresso prioritário] por meio de [mecanismo].
+
+FÓRMULA 2: SITUAÇÃO + CATEGORIA + DIFERENCIAL
+Para [público] em [situação], [oferta] é [categoria] que [benefício],
+sustentada por [reason to believe].
+
+FÓRMULA 3: ALTERNATIVA + CONSEQUÊNCIA
+Uma [categoria] para [público] que entrega [consequência relevante]
+com [diferença operacional], em comparação com [alternativa].
+
+FÓRMULA 4: RESTRIÇÃO REMOVIDA
+[Progresso] para [público] com [mecanismo], dentro de [limite verificável].
 ```
+
+Gere candidatos em territórios distintos, por exemplo: resultado, mecanismo,
+especialização, experiência, velocidade comprovada, redução de risco ou modelo
+de entrega. Evite apenas trocar sinônimos na mesma frase.
+
+#### Score de USP
+
+Pontue cada candidato de 1 a 5 e registre uma justificativa por critério.
+
+| Critério | Peso | Nota 1 | Nota 3 | Nota 5 |
+|---|---:|---|---|---|
+| **Clareza** | 15% | Categoria ou benefício confuso | Entendimento exige contexto | Público entende oferta e valor rapidamente |
+| **Relevância** | 20% | Benefício periférico | Resolve necessidade secundária | Atende progresso prioritário observado |
+| **Especificidade** | 10% | Linguagem genérica | Tem algum recorte | Público, situação e consequência estão concretos |
+| **Diferenciação** | 20% | Concorrente pode repetir literalmente | Há distinção parcial | Contraste importante e perceptível |
+| **Credibilidade** | 15% | Claim sem suporte | Suporte indireto ou parcial | Reason to believe direto e verificável |
+| **Defensabilidade** | 15% | Fácil de copiar | Exige alguma capacidade | Depende de ativo, sistema ou vantagem difícil de reproduzir |
+| **Sustentabilidade** | 5% | Entrega inconsistente | Viável com restrições | A operação consegue cumprir de forma recorrente |
+
+```text
+Score ponderado = soma(nota de 1 a 5 x peso) x 20
+Faixa final = 20 a 100
+```
+
+Critérios de decisão:
+
+- Candidato com credibilidade abaixo de 3 não pode virar USP validada.
+- Claim central baseado em hipótese mantém o dossiê como exploratório.
+- Score alto não compensa risco regulatório, promessa inexequível ou ausência de
+  reason to believe.
+- Em empate, priorize relevância, diferenciação, credibilidade e
+  defensabilidade, nessa ordem.
+- Entregue os 3 melhores candidatos, recomende 1 e registre por que os demais
+  ficaram como reserva ou foram descartados.
+
+Template da matriz:
+
+| Candidato | Clareza | Relevância | Especificidade | Diferenciação | Credibilidade | Defensabilidade | Sustentabilidade | Total | Justificativa | Decisão |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---|---|
+| [...] | 1-5 | 1-5 | 1-5 | 1-5 | 1-5 | 1-5 | 1-5 | 20-100 | racional por critério | recomendada, reserva ou descartada |
+
+#### Schema Obrigatório do Dossiê
+
+```markdown
+# Dossiê de USP: [produto ou oferta]
+
+## 1. Metadata e escopo
+[data, mercado, geografia, decisão, maturidade, versão e limitações]
+
+## 2. Resumo executivo
+[público, Job central, categoria, diferencial, USP recomendada e maior hipótese]
+
+## 3. Protocolo de evidências
+[ledger com IDs, classes, confiança, fontes, datas e implicações]
+
+## 4. Categoria e contexto competitivo
+[situação de compra, JTBD, alternativas, critérios, claims comuns e gaps]
+
+## 5. Inventário de diferenciação
+[capacidade, consequência, prova, facilidade de cópia e status]
+
+## 6. Matriz de candidatos
+[3 candidatos finais, notas, justificativas e decisão]
+
+## 7. USP principal
+- Frase central
+- Versão expandida
+- Reason to believe com IDs
+- Mecanismo ou diferencial com IDs
+- Provas necessárias
+- Limites da promessa
+- Claims proibidos ou pendentes
+
+## 8. Candidatos alternativos
+[vantagem, risco e contexto de teste de cada um]
+
+## 9. Adaptações da USP aprovada
+[hero, pitch, headline, descrição curta e brief interno]
+
+## 10. Plano de validação
+[hipótese, método, amostra, sinal, critério de decisão e prioridade]
+
+## 11. Handoff Context
+[JSON estável para agentes consumidores]
+
+## 12. Fontes
+[título, organização ou autor, URL, publicação, acesso e escopo]
+```
+
+#### Plano de Validação
+
+Escolha o método conforme a incerteza:
+
+| Hipótese | Método indicado | Sinal observado | Cuidado |
+|---|---|---|---|
+| Clareza de categoria e benefício | Teste dos 5 segundos | Compreensão sem explicação adicional | Familiaridade da amostra com a categoria |
+| Relevância do progresso | Entrevista de decisão ou switching interview | Linguagem espontânea e prioridade | Evitar perguntas que induzam aprovação |
+| Preferência entre candidatos | Escolha forçada com justificativa | Motivo da escolha e objeção | Preferência declarada ainda precisa de comportamento |
+| Credibilidade do mecanismo | Demonstração ou revisão de prova | Entendimento causal e confiança | Distinguir explicação atraente de prova real |
+| Desempenho em canal | Teste A/B ou smoke test | Métrica pré-definida | Definir amostra, duração e critério antes do teste |
+| Defensabilidade | Red team competitivo | Facilidade de cópia e resposta provável | Revisar novamente após mudanças da categoria |
+
+O plano registra a decisão que será tomada com o resultado. Teste sem critério de
+aprovação, revisão ou descarte produz atividade sem aprendizado acumulável.
+
+#### Handoff Context
+
+O bloco abaixo preserva a USP como fonte única de verdade:
+
+```json
+{
+  "usp_version": "1.0",
+  "maturity": "exploratoria | validada | operacional",
+  "product_or_offer": "...",
+  "primary_audience": "...",
+  "job_to_be_done": "...",
+  "category": "...",
+  "primary_usp": "...",
+  "reason_to_believe": ["..."],
+  "mechanism_or_differentiator": "...",
+  "alternatives": ["..."],
+  "evidence_ids": ["E01"],
+  "claim_limits": ["..."],
+  "open_hypotheses": ["H01"],
+  "handoffs": {
+    "mos-offer": ["promessa", "mecanismo", "prova", "limites"],
+    "mos-copy": ["USP aprovada", "RTB", "linguagem", "claims permitidos"],
+    "mos-ads": ["público", "ângulo", "prova", "alternativas"],
+    "mos-funnel": ["categoria", "consciência", "objeção", "prova necessária"]
+  }
+}
+```
+
+Regras de handoff:
+
+- `mos-offer` usa a USP para estruturar promessa, mecanismo, value stack e
+  garantia, respeitando limites.
+- `mos-copy` adapta a USP aprovada à peça e preserva reason to believe e claims
+  permitidos.
+- `mos-ads` transforma a proposta em ângulos testáveis e mantém a rastreabilidade
+  das provas.
+- `mos-funnel` distribui promessa, objeções e provas conforme consciência e etapa
+  da jornada.
+- Agente consumidor registra qualquer mudança proposta como nova versão. Ele não
+  substitui silenciosamente a USP aprovada.
+
+#### Quality Gates da USP
+
+- Uma USP principal domina o dossiê; as demais ficam como alternativas de teste.
+- Público, Job To Be Done, categoria e alternativa aparecem de forma concreta.
+- Reason to believe aponta para evidência identificada ou permanece hipótese.
+- Mecanismo tem consequência causal compreensível e diferença operacional real.
+- Limites da promessa e claims pendentes estão explícitos.
+- Cada nota do Score de USP possui justificativa.
+- A recomendação respeita credibilidade, compliance e capacidade de entrega.
+- O plano de validação cobre toda hipótese central.
+- O Handoff Context inclui versão, maturidade, IDs e agentes consumidores.
 
 ### 3.4 Positioning Statement
 

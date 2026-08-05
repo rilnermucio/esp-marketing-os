@@ -21,9 +21,9 @@ O plugin **gera e valida**; quem executa/agenda é o MCP ou a ferramenta dedicad
 ## Grupo A — construir (ordenado por impacto)
 
 ### Fase 1: quick wins (esforço S)
-- **`/narrar-roteiro`** — roteiro do mos-audio/mos-video vira áudio PT-BR (skill hyperframes TTS Kokoro, sem API key). Fecha um pedaço do gap de mídia real.
-- **mos-analytics + `memory: project`** — alinha o agent de dados com os outros 9; 1 linha de frontmatter + bloco de memory + entrada em `init_agent_memory.py`.
-- **`seasonal_calendar_br.py` + `/datas-sazonais`** — efemérides comerciais BR (Carnaval/Páscoa via Computus) pro calendário.
+- ~~**`/narrar-roteiro`**~~ **ENTREGUE (jul/2026)**: roteiro do mos-audio/mos-video vira áudio PT-BR com fallback explícito por ambiente.
+- ~~**mos-analytics + `memory: project`**~~ **ENTREGUE (jul/2026)**: agent nivelado e incluído no bootstrap idempotente de memória.
+- ~~**`seasonal_calendar_br.py` + `/datas-sazonais`**~~ **ENTREGUE (jul/2026)**: calendário comercial BR determinístico, com feriados móveis calculados e saída texto/JSON.
 
 ### Fase 2: geração real de mídia (fecha o gap "só gera prompt")
 - ~~**`/renderizar-imagem`**~~ **ENTREGUE (jul/2026)**: prompt do mos-ai-tools vira PNG via skill do ambiente (gpt-image-2 / ai-image-generation), com fallback pra entrega do prompt.
@@ -31,7 +31,7 @@ O plugin **gera e valida**; quem executa/agenda é o MCP ou a ferramenta dedicad
 - ~~**`/produzir-reels`**~~ **ENTREGUE (jul/2026)**: pipeline em degraus roteiro → narração (/narrar-roteiro) → HyperFrames, com fallback honesto por degrau. Visão geral em `docs/MEDIA-PIPELINE.md`.
 
 ### Fase 3: novos agents (puro "mais skill", encaixa no Tier-1/Tier-2)
-- ~~**mos-offer + `/criar-oferta`**~~ **ENTREGUE (jul/2026)**: arquitetura de oferta (Grand Slam, value stack, garantia, bônus) com desempate offer/copy/funnel/infoproduct na SKILL.md, memory opt-in e KB própria (`subagents/offer-agent.md`).
+- ~~**mos-offer + `/criar-oferta`**~~ **Entregue (jul/2026), hardening (ago/2026)**: arquitetura de oferta com value stack, garantia, preço, evidências e validação; preserva o Handoff da USP, usa research antes de oferta high-ticket sem dados e entrega claims aprovados/bloqueados. Possui desempate offer/copy/funnel/infoproduct, memory opt-in e KB própria (`subagents/offer-agent.md`).
 - ~~**mos-community + `/responder-comentarios`**~~ **ENTREGUE (jul/2026)**: triagem e resposta de comentários/DMs no tom da marca (modo rascunho com confirmação humana; nunca publica sem aprovação).
 - ~~**mos-partnerships + `/prospectar-creators`**~~ **ENTREGUE (jul/2026)**: descoberta e outreach de creators (Gmail create_draft quando MCP disponível, nunca envio direto).
 

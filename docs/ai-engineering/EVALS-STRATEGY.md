@@ -1,12 +1,12 @@
 # Estratégia de evals
 
-> Canônico. Atualizado em 2026-07-06. Como o Marketing OS mede a si mesmo, em ordem de preferência: determinístico > estrutural > LLM-graded > humano. Cada camada só entra quando a anterior não alcança.
+> Canônico. Atualizado em 2026-08-03. Como o Marketing OS mede a si mesmo, em ordem de preferência: determinístico > estrutural > LLM-graded > humano. Cada camada só entra quando a anterior não alcança.
 
 ## Pirâmide de avaliação
 
 ```
 4. HUMANO          voz de marca final, decisões de escopo, aprovação de release
-3. LLM-GRADED      qualidade de output vs rubrica (futuro controlado; ver §4)
+3. LLM-GRADED      qualidade de output vs rubrica (runner assistido; ver §4)
 2. GOLDEN SETS     roteamento e contratos esperados, validados por teste
 1. DETERMINÍSTICO  suite pytest (~1.900 testes), validadores, hooks, lint
 ```
@@ -30,7 +30,7 @@ Regra: se a propriedade é expressável como regex, glob, contagem, schema ou ex
 
 ## 2. Golden sets
 
-Dados em [evals/](evals/), consumidos por testes. Hoje: [routing-cases.json](evals/routing-cases.json) (matriz briefing → roteamento esperado, ver [ROUTING-EVALS.md](ROUTING-EVALS.md)).
+Dados em [evals/](evals/), consumidos por testes. O roteamento usa [routing-cases.json](evals/routing-cases.json), matriz briefing → roteamento esperado. A qualidade de copy usa [copy-output-cases.json](evals/copy-output-cases.json). Os critérios reutilizáveis por domínio ficam em [`scripts/evals/output-profiles.json`](../../scripts/evals/output-profiles.json).
 
 O teste valida o que dá pra validar sem modelo: casos bem-formados, commands/agents citados existem, IDs de falha existem na taxonomia, coerência dispatch↔agents. O acerto de roteamento em sessão real usa o mesmo arquivo como gabarito de revisão manual (protocolo em ROUTING-EVALS.md §validação viva).
 
@@ -51,15 +51,34 @@ O teste valida o que dá pra validar sem modelo: casos bem-formados, commands/ag
 6. **Flaky conhecido é registrado, não silenciado.** `test_pdf_generator::test_cli_basic` flaca sob carga da suite e passa isolado: re-rode isolado antes de debugar (F-EVAL-03).
 7. **Falso positivo tem teste também.** Todo detector (regex de gate) nasce com casos que NÃO devem disparar (precedente: `test_quality_gate_hook.py` cobre antíteses reais e frases legítimas parecidas).
 
-## 4. LLM-graded (futuro, com guarda-corpo)
+## 4. LLM-graded assistido, com guarda-corpo
 
-Candidatos, em ordem de valor:
+O runner `scripts/copy_output_eval.py` preserva o nome histórico, mas atende copy, e-mail, anúncios, oferta, funil, SEO e vídeo. Ele executa três partes:
+
+1. `score`: score determinístico via `quality_gate.collect_checks`.
+2. `pair`: prompt par-a-par com critérios do perfil escolhido e opção `--inverter`.
+3. `consolidate`: valida os dois JSONs do julgador, remapeia A/B para candidato/referência e só declara resultado consistente quando as duas ordens concordam.
+
+Exemplo:
+
+```bash
+python3 scripts/copy_output_eval.py pair \
+  --candidato output.md --referencia baseline.md --profile video > normal.txt
+python3 scripts/copy_output_eval.py pair \
+  --candidato output.md --referencia baseline.md --profile video --inverter > invertida.txt
+python3 scripts/copy_output_eval.py consolidate \
+  --normal normal.json --invertida invertida.json --profile video
+```
+
+A chamada ao modelo julgador continua externa e controlada. Isso mantém rede e token fora da suite Tier 1. Os perfis e a consolidação são determinísticos e testados.
+
+Casos priorizados, em ordem de valor:
 
 1. **Qualidade de copy vs rubrica R4 + Copy Score System**: amostra de outputs dos agents scoreada por modelo com rubrica fixa e exemplos âncora.
 2. **Fidelidade de voice clone**: Voice Match Scoring (PARTE XV-B do copy-agent) aplicado a par (amostra original, output do clone).
 3. **Adaptação BR** (F-PTBR-02): julgar se o texto soa nativo ou traduzido.
 
-Regras quando implementar: julgamento **par-a-par ou contra âncora**, nunca nota absoluta isolada; rubrica e âncoras versionadas neste diretório; modelo julgador barato (ver [COST-CONTROL.md](COST-CONTROL.md)); disagreement com humano medido antes de confiar. O protocolo manual calibrado e as âncoras positiva/negativa já existem em [evals/quality-anchors.md](evals/quality-anchors.md); a automação futura consome exatamente esse material.
+Regras de operação: julgamento **par-a-par ou contra âncora**, nunca nota absoluta isolada; rubrica e âncoras versionadas; modelo julgador barato (ver [COST-CONTROL.md](COST-CONTROL.md)); disagreement com humano medido antes de confiar. O protocolo e as âncoras positiva/negativa de copy existem em [evals/quality-anchors.md](evals/quality-anchors.md). Os demais domínios já têm critérios versionados, mas ainda precisam de baselines positivos calibrados antes de orientar uma release.
 
 ## 5. Human-reviewed (permanente)
 

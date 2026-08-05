@@ -1,28 +1,108 @@
-# 👤 Template de Persona
+# 👤 Template Canônico de Dossiê de Avatar
+
+Use este arquivo como contrato de saída para `/criar-avatar` e para pedidos de avatar, buyer persona ou ICP enviados ao `mos-research`. O banco `personas-por-nicho.md` fornece referências e hipóteses iniciais; este template define o que precisa ser pesquisado, classificado e entregue.
+
+## REGRAS DE USO
+
+1. Selecione um avatar principal pela força das evidências e pelo fit com a decisão informada no briefing.
+2. Inclua segmentos secundários somente quando houver diferença acionável de job, jornada, mensagem, oferta ou processo de compra.
+3. Omita demografia irrelevante. Campo sem evidência recebe o rótulo `HIPÓTESE` ou fica como `não verificado`.
+4. Faça cada afirmação material apontar para um ID do ledger de evidências.
+5. Em B2B, separe ICP, usuário, comprador econômico, influenciadores, bloqueadores e comitê de compra.
+6. Em B2C, registre a pessoa compradora, o contexto de uso e terceiros que participam da decisão.
+
+---
+
+## PROTOCOLO DE EVIDÊNCIAS
+
+### Classes obrigatórias
+
+| Classe | Quando usar | Pode orientar decisão? |
+|---|---|---|
+| **EVIDÊNCIA CONFIRMADA** | Dado próprio confiável ou sinal triangulado por fontes independentes | Sim, respeitando escopo e data |
+| **INFERÊNCIA** | Conclusão lógica derivada de evidências identificadas | Sim, com confiança e raciocínio explícitos |
+| **HIPÓTESE** | Suposição ainda sem suporte suficiente | Apenas como item de validação |
+
+### Ledger
+
+| ID | Afirmação | Classe | Confiança | Fonte e data | Escopo | Implicação |
+|---|---|---|---|---|---|---|
+| E01 | [afirmação] | EVIDÊNCIA CONFIRMADA | [alta/média/baixa] | [fonte, URL, publicação/acesso] | [BR/região/amostra] | [decisão afetada] |
+| I01 | [conclusão] | INFERÊNCIA | [alta/média/baixa] | [deriva de E01 + E02] | [limites] | [decisão afetada] |
+| H01 | [suposição] | HIPÓTESE | [alta/média/baixa] | [sem suporte suficiente] | [o que falta] | [como validar] |
+
+Fontes prioritárias: dados próprios, entrevistas, CRM, vendas, suporte, pesquisas primárias, reviews, fóruns e comunidades com linguagem espontânea. Relatórios, notícias e conteúdo de concorrentes complementam a triangulação. Registre recência, geografia, tamanho e viés da amostra.
+
+### Maturidade do dossiê
+
+| Nível | Evidência disponível | Uso recomendado |
+|---|---|---|
+| **Exploratório** | Fontes externas e poucas evidências próprias | Direcionar entrevistas, testes e primeiras mensagens |
+| **Validado** | Dados próprios triangulados com fontes externas | Orientar campanhas, oferta e funil com riscos declarados |
+| **Operacional** | Evidências validadas por comportamento, vendas e aprendizado contínuo | Fonte de verdade versionada para execução recorrente |
+
+- **Nível atual:** [exploratório/validado/operacional]
+- **O que falta para o próximo nível:** [...]
+
+---
+
+## SEGMENTAÇÃO E PRIORIZAÇÃO
+
+### Segmentos candidatos
+
+| Segmento | Job distinto | Fit com a oferta | Urgência | Capacidade de compra | Acessibilidade | Força das evidências | Decisão |
+|---|---|---:|---:|---:|---:|---:|---|
+| [segmento 1] | [job] | [1-5] | [1-5] | [1-5] | [1-5] | [1-5] | [principal/secundário/descartado] |
+
+### Avatar principal
+
+- **Segmento escolhido:** [segmento]
+- **Por que foi priorizado:** [evidências e critérios]
+- **Decisão que este avatar orienta:** [copy/ads/oferta/funil/social/posicionamento]
+- **Condições que poderiam mudar a escolha:** [hipóteses críticas]
 
 ---
 
 ## IDENTIFICAÇÃO
 
+Preencha somente os campos que alteram aquisição, uso, elegibilidade ou decisão. Anexe um ID do ledger a cada valor.
+
 ### Dados Básicos
-| Campo | Valor |
-|-------|-------|
-| **Nome fictício** | [Ex: Maria, a Empreendedora] |
-| **Idade** | [Faixa etária] |
-| **Gênero** | [M/F/Outro] |
-| **Localização** | [Cidade/Região] |
-| **Estado civil** | [Solteiro/Casado/etc] |
-| **Filhos** | [Sim/Não - quantos] |
+| Campo | Valor | Evidência |
+|-------|-------|---|
+| **Nome fictício** | [Ex: Maria, a Empreendedora] | [rótulo editorial, sem fingir ser dado] |
+| **Idade** | [Faixa etária] | [ID ou não verificado] |
+| **Gênero** | [M/F/Outro] | [ID ou não verificado] |
+| **Localização** | [Cidade/Região] | [ID] |
+| **Estado civil** | [Solteiro/Casado/etc] | [ID ou não verificado] |
+| **Filhos** | [Sim/Não - quantos] | [ID ou não verificado] |
 
 ### Profissional
-| Campo | Valor |
-|-------|-------|
-| **Profissão** | [Cargo/Função] |
-| **Setor** | [Indústria] |
-| **Tempo na área** | [Anos] |
-| **Renda mensal** | [Faixa] |
-| **Tamanho da empresa** | [MEI/PME/Corporação] |
-| **Nível hierárquico** | [Júnior/Pleno/Sênior/Gestão/C-Level] |
+| Campo | Valor | Evidência |
+|-------|-------|---|
+| **Profissão** | [Cargo/Função] | [ID] |
+| **Setor** | [Indústria] | [ID] |
+| **Tempo na área** | [Anos] | [ID ou não verificado] |
+| **Renda mensal** | [Faixa] | [ID ou não verificado] |
+| **Tamanho da empresa** | [MEI/PME/Corporação] | [ID] |
+| **Nível hierárquico** | [Júnior/Pleno/Sênior/Gestão/C-Level] | [ID] |
+
+---
+
+## CONTEXTO E PAPÉIS DE COMPRA
+
+| Papel | Quem é | Objetivo | Objeção ou risco | Influência na decisão | Evidência |
+|---|---|---|---|---|---|
+| Usuário | [...] | [...] | [...] | [baixa/média/alta] | [IDs] |
+| Comprador econômico | [...] | [...] | [...] | [baixa/média/alta] | [IDs] |
+| Influenciador | [...] | [...] | [...] | [baixa/média/alta] | [IDs] |
+| Bloqueador | [...] | [...] | [...] | [baixa/média/alta] | [IDs] |
+
+- **B2B:** [ICP, porte, setor, maturidade, orçamento, aprovação e comitê]
+- **B2C:** [pessoa compradora, contexto doméstico, uso e influência de terceiros]
+- **Ciclo de decisão:** [duração e etapas] [ID]
+- **Critérios de decisão:** [lista priorizada] [IDs]
+- **Condições de elegibilidade:** [restrições reais] [IDs]
 
 ---
 
@@ -40,6 +120,9 @@ O que é mais importante para essa pessoa?
 - [ ] Equilíbrio vida-trabalho
 
 ### Personalidade
+
+Use escalas somente quando houver dado observável. Caso contrário, omita o bloco.
+
 - **Introvertido/Extrovertido:** [1-10]
 - **Analítico/Intuitivo:** [1-10]
 - **Planejador/Espontâneo:** [1-10]
@@ -47,6 +130,37 @@ O que é mais importante para essa pessoa?
 
 ### Frase que define
 > "[Uma frase que essa persona diria]"
+
+---
+
+## JOBS TO BE DONE
+
+### Job funcional
+
+Quando [situação], quero [progresso ou ação], para [resultado funcional].
+
+### Job emocional
+
+Quando [situação], quero me sentir [estado], para [resultado emocional].
+
+### Job social
+
+Quando [situação], quero ser percebido como [identidade], para [resultado social].
+
+### Forças da mudança
+
+| Força | Descrição | Evidência |
+|---|---|---|
+| Pressão da situação atual | [o que empurra para mudar] | [IDs] |
+| Atração da solução | [resultado ou mecanismo que atrai] | [IDs] |
+| Ansiedade da mudança | [medos e riscos] | [IDs] |
+| Hábito da solução atual | [inércia e custos de troca] | [IDs] |
+
+### Alternativas atuais
+
+| Alternativa ou tentativa | Por que escolheu | O que funciona | Onde falha | Custo de troca |
+|---|---|---|---|---|
+| [alternativa] | [...] | [...] | [...] | [...] |
 
 ---
 
@@ -188,6 +302,14 @@ O que os faz decidir comprar?
 
 ## LINGUAGEM
 
+### Linguagem real documentada
+
+| Trecho curto | Contexto | Fonte | Classe |
+|---|---|---|---|
+| "[frase exata]" | [review, entrevista, comentário, busca] | [ID] | [EVIDÊNCIA CONFIRMADA/INFERÊNCIA/HIPÓTESE] |
+
+Paráfrases precisam ser identificadas como paráfrases. Uma frase inventada para humanizar o documento recebe `HIPÓTESE` e não entra como voz do cliente.
+
 ### Tom Preferido
 - [ ] Formal
 - [ ] Profissional
@@ -250,6 +372,28 @@ Quando eles mais precisam da solução?
 
 ---
 
+## SEGMENTOS SECUNDÁRIOS
+
+Preencha apenas quando a evidência indicar uma diferença que exija execução própria.
+
+| Segmento | Evidências | O que muda no job | O que muda na jornada | O que muda na mensagem/oferta |
+|---|---|---|---|---|
+| [segmento] | [IDs] | [...] | [...] | [...] |
+
+Se nenhuma diferença acionável estiver sustentada, registre: `Nenhum segmento secundário validado`.
+
+---
+
+## ANTI-AVATAR
+
+| Critério de exclusão | Sinal observável | Motivo do baixo fit | Alternativa ou orientação adequada |
+|---|---|---|---|
+| [critério] | [sinal] | [risco para cliente ou negócio] | [destino recomendado] |
+
+O anti-avatar descreve elegibilidade e fit. Evite caricaturas, juízos morais e critérios discriminatórios.
+
+---
+
 ## PARA O CONTEÚDO
 
 ### Temas que Interessam
@@ -291,3 +435,49 @@ Para essa persona, sucesso significa:
 - [Métrica que acompanham 1]
 - [Métrica que acompanham 2]
 - [Métrica que acompanham 3]
+
+---
+
+## PLANO DE VALIDAÇÃO
+
+| Hipótese | Método | Amostra ou fonte | Sinal de confirmação | Sinal de refutação | Prioridade |
+|---|---|---|---|---|---|
+| H01 | [entrevista/teste/dado] | [...] | [...] | [...] | [alta/média/baixa] |
+
+Priorize hipóteses que alterariam segmento, promessa, preço, canal ou jornada.
+
+---
+
+## HANDOFF CONTEXT
+
+```json
+{
+  "avatar_version": "1.0",
+  "primary_segment": "...",
+  "secondary_segments": [],
+  "anti_avatar": ["..."],
+  "jobs_to_be_done": {
+    "functional": ["..."],
+    "emotional": ["..."],
+    "social": ["..."]
+  },
+  "awareness_level": "...",
+  "top_pains": ["..."],
+  "top_desires": ["..."],
+  "objections": ["..."],
+  "purchase_triggers": ["..."],
+  "decision_criteria": ["..."],
+  "real_language": [
+    {"excerpt": "...", "source_id": "E01"}
+  ],
+  "evidence_ids": ["E01"],
+  "open_hypotheses": ["H01"],
+  "handoffs": {
+    "mos-copy": ["promessa", "dor", "desejo", "objeção", "linguagem"],
+    "mos-ads": ["segmento", "gatilho", "canal", "ângulo"],
+    "mos-offer": ["job", "alternativa", "critério", "risco percebido"],
+    "mos-funnel": ["consciência", "jornada", "fricção", "prova"],
+    "mos-social": ["tema", "pergunta", "formato", "vocabulário"]
+  }
+}
+```

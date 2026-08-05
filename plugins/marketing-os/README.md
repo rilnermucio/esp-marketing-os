@@ -1,15 +1,15 @@
 # Marketing OS
 
-> Plugin Claude Code e Codex com **21 especialistas** em marketing digital + 46 slash commands Claude + 34 voice clones de copywriters lendários.
+> Plugin Claude Code e Codex com **21 especialistas** em marketing digital + 48 slash commands Claude + 34 voice clones de copywriters lendários.
 
-[![Version](https://img.shields.io/badge/version-6.14.0-blue.svg)](./CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-6.15.0-blue.svg)](./CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
 
 ## O que é
 
 Marketing OS é um plugin para o [Claude Code](https://www.anthropic.com/claude-code) e para o Codex que orquestra 21 especialistas nativos em domínios distintos do marketing digital. O plugin reivindica território explícito sobre briefings de marketing. Quando você pede "cria página de aplicação" ou "monta um webinar", ele roteia os especialistas corretos em paralelo, com camada estratégica antes de qualquer execução técnica.
 
-**42 dos 46 slash commands** dispatcham subagents `mos-*`. Os 4 que não dispatcham são intencionais: `/publicar-notion` (utility do Notion MCP), `/campanha` (índice dos 6 sub-commands de preset), `/projeto` (orquestrador de workflow com dispatch dinâmico) e `/datas-sazonais` (utilitário de dados do calendário sazonal BR). Use `/mo` pra briefing aberto se não souber qual command escolher. **Conteúdo PT-BR otimizado para o mercado brasileiro.**
+**44 dos 48 slash commands** dispatcham subagents `mos-*`. Os 4 que não dispatcham são intencionais: `/publicar-notion` (utility do Notion MCP), `/campanha` (índice dos 6 sub-commands de preset), `/projeto` (orquestrador de workflow com dispatch dinâmico) e `/datas-sazonais` (utilitário de dados do calendário sazonal BR). Use `/mo` pra briefing aberto se não souber qual command escolher. **Conteúdo PT-BR otimizado para o mercado brasileiro.**
 
 ## Instalação
 
@@ -122,11 +122,11 @@ Sem o bootstrap os agents seguem funcionando normalmente, só não persistem pat
 | 9 | **VSL completa** | storytelling + copy + video |
 | 10 | **Análise de concorrente + clone** | research + brand → copy (voice clone) |
 
-Ver SKILL.md pra detalhes de cada workflow e "por que essa ordem importa". Tier 2 cobre profundidade: `subagents/funnel-agent.md` documenta webinar funnel, página de aplicação BOFU e anti-avatar (workflows #5, #6, #9); `subagents/copy-agent.md` cobre big idea e value stack.
+Ver SKILL.md pra detalhes de cada workflow e "por que essa ordem importa". Tier 2 cobre profundidade: `subagents/funnel-agent.md` documenta webinar funnel, página de aplicação BOFU e anti-avatar (workflows #5, #6, #9); `subagents/copy-agent.md` cobre big idea e value stack; `subagents/brand-agent.md` define o contrato de USP baseada em evidências.
 
 ## Slash commands rápidos
 
-46 commands em `commands/` cobrindo workflows comuns. **42 deles dispatcham subagents `mos-*`** seguindo os workflows da tabela acima (os 4 sem dispatch são utilities intencionais: `/publicar-notion`, `/campanha` índice, `/projeto` e `/datas-sazonais`). Quando você invoca direto (`/criar-carrossel`), segue lógica do command file. Quando pede em linguagem natural ("cria carrossel sobre X"), o orquestrador da skill dispatcha conforme tabela.
+48 commands em `commands/` cobrindo workflows comuns. **44 deles dispatcham subagents `mos-*`** seguindo os workflows da tabela acima (os 4 sem dispatch são utilities intencionais: `/publicar-notion`, `/campanha` índice, `/projeto` e `/datas-sazonais`). Quando você invoca direto (`/criar-carrossel`), segue lógica do command file. Quando pede em linguagem natural ("cria carrossel sobre X"), o orquestrador da skill dispatcha conforme tabela.
 
 | Categoria | Commands |
 |---|---|
@@ -138,7 +138,9 @@ Ver SKILL.md pra detalhes de cada workflow e "por que essa ordem importa". Tier 
 | Email | `/criar-email`, `/criar-sequencia` |
 | Ads | `/criar-anuncio`, `/publicar-anuncio` |
 | Infoproduto | `/criar-infoproduto` |
-| Oferta | `/criar-oferta` (value stack, preço, garantia, bônus) |
+| Oferta | `/criar-oferta` (USP preservada, evidências, value stack, preço, garantia, score e validação) |
+| Pesquisa de público | `/criar-avatar` (evidências, avatar principal, segmentos, anti-avatar, JTBD e handoff) |
+| Marca e posicionamento | `/criar-usp` (USP principal, evidências, diferenciação, score, validação e handoff) |
 | Comunidade | `/responder-comentarios` (triagem + rascunhos de comentários/DMs) |
 | Parcerias | `/prospectar-creators` (shortlist + outreach de creators) |
 | Voice clones | `/criar-clone` (expert externo), `/criar-meu-clone` (suas amostras) |
@@ -159,7 +161,7 @@ Marketing OS/
 ├── agents/                 # 21 native subagents (mos-*.md)
 ├── skills/marketing-os/    # Skill entrypoint (SKILL.md = orquestrador)
 ├── subagents/              # Tier 2 knowledge bases (~3500 linhas cada)
-├── commands/               # 46 slash commands (42 com dispatch + /publicar-notion + /campanha índice + /projeto + /datas-sazonais)
+├── commands/               # 48 slash commands (44 com dispatch + /publicar-notion + /campanha índice + /projeto + /datas-sazonais)
 ├── workflows/              # 9 workflows end-to-end documentados
 ├── assets/                 # Frameworks, personas, prompts, swipe files,
 │   ├── clones/             #   templates, 34 voice clones (+ design-dna)
@@ -170,8 +172,10 @@ Marketing OS/
 │   └── templates/
 ├── references/             # Guias técnicos por domínio
 ├── scripts/                # ferramentas Python, validações e Tier 1 tests
-│   ├── hooks/              # Quality gate hook (PreToolUse)
+│   ├── evals/              # perfis de avaliação por domínio
+│   ├── hooks/              # núcleo do gate PreToolUse/SubagentStop
 │   └── tests/              # Suite pytest
+├── hooks/                  # registro global de hooks do plugin Claude
 ├── docs/                   # Documentação técnica
 │   ├── GETTING-STARTED.md  # Começo rápido
 │   ├── TROUBLESHOOTING.md  # Bugs comuns
@@ -210,11 +214,14 @@ python scripts/validate_codex_plugin.py plugins/marketing-os
 # Bootstrap memory (opt-in, 21 agents)
 python3 scripts/init_agent_memory.py
 
+# Listar perfis do avaliador de outputs
+python3 scripts/copy_output_eval.py profiles
+
 # CLI unificado das ferramentas
 python scripts/mos.py --help
 ```
 
-CI rodando em `.github/workflows/tests.yml`: suite Tier 1, cobertura ≥50%, validação do pacote Codex e job `validate-agents` em modo `--strict` em todo PR/push (pega regressão de frontmatter, knowledge refs quebrados, name collisions). Estado atual: **21/21 agents clean** no validator.
+CI rodando em `.github/workflows/tests.yml`: suite Tier 1, cobertura ≥70%, validação do pacote Codex e job `validate-agents` em modo `--strict` em todo PR/push (pega regressão de frontmatter, knowledge refs quebrados, name collisions). O workflow de release repete esses gates antes de publicar. Estado atual: **21/21 agents clean** no validator.
 
 ## Documentação adicional
 

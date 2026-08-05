@@ -114,6 +114,20 @@ def test_marketplace_manifest_rules():
     assert src.startswith("./"), f"source deve começar com ./ (achei {src!r})"
 
 
+def test_project_manager_runtime_dependency_is_declared():
+    """O /projeto precisa funcionar após o install documentado do requirements."""
+    requirements = (ROOT / "requirements.txt").read_text(encoding="utf-8").lower()
+    declared = {
+        re.match(r"[a-z0-9_.-]+", line.split("#", 1)[0].strip()).group(0)
+        for line in requirements.splitlines()
+        if line.strip() and not line.lstrip().startswith("#")
+    }
+    assert "pyyaml" in declared, (
+        "project_manager.py importa yaml no startup; PyYAML precisa estar em "
+        "requirements.txt para /projeto e a suite funcionarem em ambiente limpo"
+    )
+
+
 # --------------------------------------------------------------- quality gate
 def test_memory_agents_match_init_script():
     # Trava o drift que o comentário de init_agent_memory.py avisa: o set de agents

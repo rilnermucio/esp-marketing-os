@@ -6,7 +6,7 @@ This file provides guidance to AI coding agents (Claude Code, Codex CLI, Cursor,
 
 ## O que é este repositório
 
-Marketing OS é um **plugin do Claude Code e do Codex** (manifests em `.claude-plugin/` e `.codex-plugin/`) que distribui 21 subagents nativos especializados em marketing digital, mais 46 slash commands, knowledge bases, voice clones e scripts Python. O conteúdo é majoritariamente PT-BR e otimizado para o mercado brasileiro.
+Marketing OS é um **plugin do Claude Code e do Codex** (manifests em `.claude-plugin/` e `.codex-plugin/`) que distribui 21 subagents nativos especializados em marketing digital, mais 48 slash commands, knowledge bases, voice clones e scripts Python. O conteúdo é majoritariamente PT-BR e otimizado para o mercado brasileiro.
 
 Arquivos manifesto: `.claude-plugin/plugin.json` e `.claude-plugin/marketplace.json` (listagem de marketplace). O entrypoint da skill é `skills/marketing-os/SKILL.md`.
 
@@ -71,7 +71,7 @@ Para qualquer pedido de produção de marketing (copy, SEO, post, anúncio, víd
 
 Mapeamento completo briefing → agent em `skills/marketing-os/SKILL.md` (seção "Mapa de Dispatch").
 
-Hoje 42 dos 46 slash commands em `commands/` dispatcham subagents. Os 2 commands premium na v6.8.0+ são `/auditoria` (multi-modal básico, ver `docs/AUDIT-CONFIG.md`) e `/auditoria-pro` (landing agency-grade com radar/screenshots/roadmap, ver `docs/AUDITORIA-PRO.md`). Os 4 sem dispatch são intencionais: `/publicar-notion` (utility do Notion MCP), `/campanha` (índice dos 6 sub-commands `/campanha-{preset}`), `/projeto` (workflow orchestrator com dispatch dinâmico por etapa) e `/datas-sazonais` (utilitário de dados do calendário sazonal BR, ver `scripts/seasonal_calendar_br.py`). Existe ainda `/mo` (meta-orquestrador) que recebe briefing aberto e roteia automaticamente. O teste `scripts/tests/test_commands_dispatch.py` trava regressão de cobertura: se você adicionar um command novo de produção, ele precisa dispatchar ou o teste falha.
+Hoje 44 dos 48 slash commands em `commands/` dispatcham subagents. Os 2 commands premium na v6.8.0+ são `/auditoria` (multi-modal básico, ver `docs/AUDIT-CONFIG.md`) e `/auditoria-pro` (landing agency-grade com radar/screenshots/roadmap, ver `docs/AUDITORIA-PRO.md`). Os 4 sem dispatch são intencionais: `/publicar-notion` (utility do Notion MCP), `/campanha` (índice dos 6 sub-commands `/campanha-{preset}`), `/projeto` (workflow orchestrator com dispatch dinâmico por etapa) e `/datas-sazonais` (utilitário de dados do calendário sazonal BR, ver `scripts/seasonal_calendar_br.py`). Existe ainda `/mo` (meta-orquestrador) que recebe briefing aberto e roteia automaticamente. O teste `scripts/tests/test_commands_dispatch.py` trava regressão de cobertura: se você adicionar um command novo de produção, ele precisa dispatchar ou o teste falha.
 
 ## Quality Gates Globais (aplicar SEMPRE antes de entregar)
 
@@ -101,7 +101,7 @@ Conteúdos de redes sociais (Reels, posts, carrosséis, stories) **devem** inclu
 
 Os scripts Python em `scripts/` (CLI unificado em `scripts/mos.py`) são invocados pelos agents Tier 1 com acesso a `Bash` para tarefas determinísticas: `seo_analyzer.py`, `hashtag_generator.py`, `hook_generator.py`, `reels_script_generator.py`, `carousel_structure_generator.py`, `caption_generator.py`, `trend_tracker.py`, `quality_gate.py`, `headline_scorer.py`, `competitor_analyzer.py`, etc.
 
-Hook de quality gate: `scripts/hooks/quality_gate_hook.py` é invocado via `PreToolUse` matcher `Write|Edit|MultiEdit` em vários agents Tier 1 (ver frontmatter `hooks` em `agents/mos-*.md`).
+Hook de quality gate: `scripts/hooks/quality_gate_hook.py` é invocado via `PreToolUse` matcher `Write|Edit|MultiEdit` em vários agents Tier 1 (ver frontmatter em `agents/mos-*.md`) e via `SubagentStop` global em `hooks/hooks.json` para validar a resposta final dos `mos-*`. O núcleo puro `evaluate_event` atende as duas superfícies e limita a correção final a uma tentativa para evitar loop.
 
 **Apify (opt-in)**: 6 scripts opcionais (`apify_client.py` + 5 scrapers: `apify_serp.py`, `apify_instagram.py`, `apify_meta_ads.py`, `apify_tiktok.py`, `apify_youtube.py`) habilitam scraping estruturado de SERP do Google, Instagram, Meta Ad Library, TikTok e YouTube. Usados pelos agents `mos-seo`, `mos-research`, `mos-ads` e `mos-video` quando a variável `APIFY_TOKEN` está disponível. Sem token, comportamento idêntico ao anterior (fallback automático para `WebSearch`). Setup, custo estimado, mapeamento Actor↔agent e FAQ em `docs/APIFY-INTEGRATION.md`.
 
