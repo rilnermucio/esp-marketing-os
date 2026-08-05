@@ -71,3 +71,4 @@ Todos os campos do template. "Evidências" exige dado verificado (output real de
 | 2026-08-04 | Criação de avatar como feature explícita | [2026-08-04-criar-avatar-completo.md](worklogs/2026-08-04-criar-avatar-completo.md) |
 | 2026-08-04 | Criação de USP como feature explícita | [2026-08-04-criar-usp.md](worklogs/2026-08-04-criar-usp.md) |
 | 2026-08-04 | Hardening da arquitetura de oferta | [2026-08-04-hardening-criar-oferta.md](worklogs/2026-08-04-hardening-criar-oferta.md) |
+| 2026-08-05 | Release v6.15.0 | [2026-08-05-release-v6.15.0.md](worklogs/2026-08-05-release-v6.15.0.md) |
