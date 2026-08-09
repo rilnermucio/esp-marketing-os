@@ -74,3 +74,4 @@ Todos os campos do template. "Evidências" exige dado verificado (output real de
 | 2026-08-05 | Release v6.15.0 | [2026-08-05-release-v6.15.0.md](worklogs/2026-08-05-release-v6.15.0.md) |
 | 2026-08-05 | Compatibilidade skills-only com ChatGPT Work | [2026-08-05-chatgpt-work-skills-only.md](worklogs/2026-08-05-chatgpt-work-skills-only.md) |
 | 2026-08-08 | Hardening após auditoria Grok | [2026-08-08-hardening-pos-auditoria-grok.md](worklogs/2026-08-08-hardening-pos-auditoria-grok.md) |
+| 2026-08-09 | Release v6.16.0 | [2026-08-09-release-v6.16.0.md](worklogs/2026-08-09-release-v6.16.0.md) |
