@@ -61,17 +61,19 @@ jobs:
         id: changelog
         run: |
           VERSION="${GITHUB_REF_NAME#v}"
-          # Extrai conteúdo entre "## [VERSION]" e o próximo "## [" ou EOF.
-          # Usa index() (literal, não regex) porque "## [X.Y.Z]" tem [ ] que são
-          # metacaracteres regex (character class) — match via $0 ~ ver falha silenciosamente.
+          # O changelog canônico usa "## vX.Y.Z (YYYY-MM-DD)". O formato com
+          # colchetes continua aceito para preservar compatibilidade histórica.
           NOTES=$(awk -v ver="$VERSION" '
-            index($0, "## [" ver "]") == 1 { found=1; next }
-            found && /^## \[/ { exit }
+            index($0, "## v" ver " ") == 1 || index($0, "## [" ver "]") == 1 {
+              found=1
+              next
+            }
+            found && (/^## v[0-9]/ || /^## \[/) { exit }
             found { print }
           ' CHANGELOG.md | sed '/^---$/d' | sed '/^$/N;/^\n$/d')
 
           if [ -z "$NOTES" ]; then
-            NOTES="Release $VERSION — ver CHANGELOG.md para detalhes."
+            NOTES="Release $VERSION: ver CHANGELOG.md para detalhes."
           fi
 
           # Salva multilinha pra step de output

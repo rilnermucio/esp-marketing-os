@@ -7,19 +7,32 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
 
 ---
 
-## Unreleased
+## v6.16.0 (2026-08-09)
+
+Esta release disponibiliza a arquitetura universal skills-only para ChatGPT Work e Codex, fortalece a validação do pacote e fecha drifts operacionais encontrados em auditoria externa.
 
 ### Added
 
 - Suporte explícito ao ChatGPT Work no orquestrador `skills-only`, com invocação por `@Marketing OS`, fallback sem subagent nativo e preservação do mapa Tier 1/Tier 2.
 - Guards de distribuição universal para limites públicos, categorias aceitas, starter prompts, fronteira skills-only e documentação de instalação.
 - Casos de roteamento ChatGPT para Avatar, USP, Oferta e pergunta conceitual sem dispatch.
+- Guards dinâmicos para paths de agent memory, inventário de voice clones e cobertura smoke dos 21 agents.
 
 ### Changed
 
 - Metadados do manifesto universal agora apresentam ChatGPT Work e Codex, usam categoria pública válida e respeitam o limite final da descrição curta.
 - README, AGENTS, rubrica de compatibilidade e checklist de release cobrem ChatGPT Work junto das superfícies Claude Code e Codex.
 - ADR-0004 registra a escolha de distribuir primeiro como plugin skills-only e adiar MCP até existir demanda por UI, estado remoto ou integrações autenticadas.
+- O validador universal aceita a raiz do repositório e o pacote gerado, com a mesma receita documentada para mantenedores e agentes.
+- Quatro integrações offline de `/auditoria` e `/auditoria-pro` passam a rodar na suíte padrão; o marker smoke fica reservado a runtime externo.
+- A matriz smoke agora contém um cenário explícito para cada um dos 21 agents Tier 1.
+
+### Fixed
+
+- Paths legados de agent memory em commands foram normalizados para `.claude/agent-memory/mos-*/`.
+- Alegações residuais de 35 voice clones foram corrigidas para o inventário real de 34 e protegidas por contagem derivada do filesystem.
+- F-CMD-02 e F-CODEX-03 deixaram de aparecer como P0 abertos depois da confirmação dos fixes históricos.
+- O workflow de release agora extrai notas do formato canônico `## vX.Y.Z (data)`, com teste executando o mesmo script usado no GitHub Actions.
 
 ## v6.15.0 (2026-08-05)
 
