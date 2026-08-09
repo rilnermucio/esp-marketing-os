@@ -1,21 +1,31 @@
 ---
 name: marketing-os
 description: "Use para produção de marketing digital: posts Instagram/LinkedIn/TikTok/Twitter, artigos SEO, email marketing, landing pages, anúncios Meta/Google Ads, calendários editoriais, vídeos YouTube/Reels/VSL, podcasts, geração de imagens e vídeos com IA, infoprodutos, testes A/B. NICHOS: Marketing Digital, IA, Dev Pessoal/Profissional, Tech, Empreendedorismo, Finanças, Saúde, Educação, Produtividade. TRIGGERS: conteúdo, post, blog, SEO, newsletter, copy, landing page, campanha, anúncio, carrossel, stories, reels, vídeo, podcast, design, imagem IA, infoproduto, teste A/B."
-argument-hint: "[tipo-conteúdo] [nicho] [plataforma]"
 ---
 
 # Marketing OS: Sistema Operacional de Marketing Digital
 
-Este skill é um **orquestrador** para 21 especialistas de marketing. No Claude Code, ele usa subagents nativos. No Codex, ele usa a mesma arquitetura em modo compatível: roteia o briefing para o especialista correto, lê os arquivos Tier 1/Tier 2 necessários e, quando houver ferramenta de multi-agent disponível, pode paralelizar as etapas independentes.
+Este skill é um **orquestrador** para 21 especialistas de marketing. No Claude Code, ele usa subagents nativos. No ChatGPT Work e no Codex, ele usa a mesma arquitetura em modo compatível: roteia o briefing para o especialista correto, lê os arquivos Tier 1/Tier 2 necessários e, quando houver ferramenta de multi-agent disponível, pode paralelizar as etapas independentes.
 
 ## Modo de Operação: Orquestração por Ambiente
 
 **REGRA FUNDAMENTAL**: Para qualquer pedido de produção de marketing (copy, SEO, research, social, ads, etc.), use o especialista certo antes de entregar.
 
 - **Claude Code**: dispare o subagent especializado via `Agent(subagent_type: "mos-*")`.
+- **ChatGPT Work**: preserve a intenção escolhida por `@Marketing OS`, remova esse prefixo antes de classificar o briefing e aplique o mesmo mapa de dispatch. Leia `agents/mos-*.md` e `subagents/*-agent.md` sob demanda. Use multi-agent e scripts somente quando o host oferecer essas ferramentas; caso contrário, execute no agente principal e declare qualquer validação que não pôde ser rodada.
 - **Codex**: se houver ferramenta de multi-agent disponível, use-a para as etapas independentes. Se não houver, execute no agente principal lendo primeiro `agents/mos-*.md` e depois a knowledge base correspondente em `subagents/*-agent.md`.
 
-Motivo: cada especialista tem contexto próprio, knowledge base profunda e output schema padronizado. O Codex não deve ignorar essa camada, mesmo quando precisar executar sem subagent nativo.
+Motivo: cada especialista tem contexto próprio, knowledge base profunda e output schema padronizado. ChatGPT Work e Codex devem preservar essa camada mesmo quando precisarem executar sem subagent nativo.
+
+## Invocação no ChatGPT Work
+
+O plugin funciona em conversas **Work** com o Marketing OS instalado. O usuário pode descrever o resultado diretamente ou selecionar o plugin com `@Marketing OS`.
+
+- Trate `@Marketing OS` como seleção do plugin e classifique o texto restante como briefing.
+- Pedidos como `@Marketing OS crie um avatar completo`, `crie uma USP` e `estruture minha oferta` seguem os mesmos contratos de `/criar-avatar`, `/criar-usp` e `/criar-oferta`.
+- Quando a interface não expuser slash commands, mapeie a intenção para o command correspondente e aplique seu decision tree, output schema e quality gates.
+- Leia apenas o Tier 1 e o Tier 2 dos especialistas necessários. Evite carregar as 21 knowledge bases para um pedido de domínio único.
+- Scripts Python são aceleradores determinísticos. Se o host não oferecer shell ou Python, cumpra o contrato por raciocínio e informe quais checks automatizados ficaram indisponíveis.
 
 ### Quando dispatch vs execução inline
 
@@ -158,7 +168,7 @@ Briefings tipo **"cria página de aplicação"**, **"landing page"**, **"página
 
 ## Padrões de Orquestração
 
-Nos exemplos abaixo, `Agent(subagent_type: "mos-*")` é a sintaxe nativa do Claude Code. No Codex, trate cada chamada como uma etapa de roteamento: consulte o Tier 1 em `agents/mos-*.md`, aprofunde com o Tier 2 em `subagents/*-agent.md`, rode scripts determinísticos quando fizer sentido e consolide o resultado no protocolo de entrega. Profundidade adicional de alguns workflows mora em `workflows/` (arquivos standalone).
+Nos exemplos abaixo, `Agent(subagent_type: "mos-*")` é a sintaxe nativa do Claude Code. No ChatGPT Work e no Codex, trate cada chamada como uma etapa de roteamento: consulte o Tier 1 em `agents/mos-*.md`, aprofunde com o Tier 2 em `subagents/*-agent.md`, rode scripts determinísticos quando fizer sentido e consolide o resultado no protocolo de entrega. Profundidade adicional de alguns workflows mora em `workflows/` (arquivos standalone).
 
 ### 1. Dispatch Simples (1 agent, caso mais comum)
 
@@ -489,7 +499,7 @@ Quando os subagents do marketing-os terminam sua parte, alguns outputs podem pre
 
 ## Arquitetura (two-tier)
 
-- **Tier 1** (`agents/mos-*.md`): system prompts enxutos (~250 linhas) com dispatch protocol, output schema, quality gates. Carregados pelo Claude Code automaticamente quando sessão abre.
+- **Tier 1** (`agents/mos-*.md`): system prompts enxutos (~250 linhas) com dispatch protocol, output schema e quality gates. Carregados automaticamente pelo Claude Code e consultados sob demanda no ChatGPT Work e no Codex.
 - **Tier 2** (`subagents/*-agent.md`): knowledge base profunda (~3500 linhas cada) com frameworks, cases, tabelas, exemplos. Lida sob demanda via Read pelos agents tier-1.
 
 Isso mantém contextos dos agents leves, carrega profundidade só quando precisa, e permite evoluir knowledge sem mexer no dispatch.

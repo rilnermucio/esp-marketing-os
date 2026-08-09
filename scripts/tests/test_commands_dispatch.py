@@ -95,6 +95,14 @@ class TestCommandStructure:
             f"{cmd.name} frontmatter is missing the 'description' field"
         )
 
+    @pytest.mark.parametrize("cmd", get_all_commands(), ids=lambda p: p.name)
+    def test_does_not_reference_legacy_memory_paths(self, cmd: Path) -> None:
+        content = cmd.read_text(encoding="utf-8")
+        assert ".claude/agent-memory/marketing-os-" not in content, (
+            f"{cmd.name} references the legacy marketing-os-* memory path; "
+            "use .claude/agent-memory/mos-*"
+        )
+
 
 class TestCommandDispatch:
     """Production commands must dispatch real, existing agents."""

@@ -34,7 +34,8 @@
 4. IMPLEMENTAR Menor fatia útil. Teste novo nasce junto do comportamento novo.
 5. VALIDAR    python -m pytest scripts/tests/ -m "not smoke" -q
               python scripts/validate_agents.py --strict
-              python scripts/validate_codex_plugin.py   (se tocou distribuição)
+              python scripts/validate_codex_plugin.py plugins/marketing-os
+                                                       (se tocou distribuição)
 6. DOCUMENTAR Contagens, tabelas, docs afetados no mesmo diff.
 7. REGISTRAR  Worklog da rodada + ADR se houve decisão estrutural.
 ```

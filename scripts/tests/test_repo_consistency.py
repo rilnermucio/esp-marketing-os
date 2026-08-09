@@ -8,6 +8,7 @@ testes apontam exatamente o que ficou inconsistente.
 """
 from __future__ import annotations
 
+import ast
 import json
 import re
 from pathlib import Path
@@ -19,6 +20,7 @@ AGENTS = sorted((ROOT / "agents").glob("mos-*.md"))
 COMMANDS = sorted((ROOT / "commands").glob("*.md"))
 CLONES = [d for d in (ROOT / "assets" / "clones").iterdir() if d.is_dir()]
 CONFORMING_CLONES = [d for d in CLONES if (d / "profile.md").exists()]
+SUBAGENTS = sorted((ROOT / "subagents").glob("*-agent.md"))
 
 # Linhas que DEFINEM a regra do travessão (mostram o caractere de propósito).
 _RULE = re.compile(r"travess|em[- ]dash|`—`|quality gate|gates? univers", re.I)
@@ -95,6 +97,63 @@ def test_all_clone_dirs_conform_or_are_documented_exception():
     assert non_conforming == ["design"], (
         f"clones fora do padrão inesperados: {non_conforming}"
     )
+
+
+_CLONE_INVENTORY_PATTERNS = (
+    re.compile(
+        r"(?:Inventário Completo dos|sistema de|tem acesso a|paralelo aos)\s+"
+        r"\**(?P<count>\d+)\s+(?:voice\s+)?clones?",
+        re.I,
+    ),
+    re.compile(
+        r"(?:voice\s+)?clones?[^\d\n]{0,80}(?P<count>\d+)\s+disponíveis",
+        re.I,
+    ),
+    re.compile(
+        r"(?P<count>\d+)\s+(?:voice\s+)?clones?\**\s+"
+        r"(?:disponíveis|profundos|wired)",
+        re.I,
+    ),
+)
+
+
+def test_clone_inventory_claims_match_filesystem():
+    """Inventory totals in distributed prompts must follow the real clone count."""
+    real = len(CONFORMING_CLONES)
+    mismatches = []
+    for path in AGENTS + SUBAGENTS:
+        for line_number, line in enumerate(
+            path.read_text(encoding="utf-8").splitlines(), 1
+        ):
+            for pattern in _CLONE_INVENTORY_PATTERNS:
+                match = pattern.search(line)
+                if match and int(match.group("count")) != real:
+                    mismatches.append(
+                        f"{path.relative_to(ROOT)}:{line_number} diz "
+                        f"{match.group('count')}, real {real}"
+                    )
+                    break
+    assert not mismatches, "contagens de clones divergentes:\n" + "\n".join(mismatches)
+
+
+def test_agent_smoke_matrix_covers_every_native_agent():
+    """Every Tier 1 agent needs an explicit external-runtime smoke scenario."""
+    path = ROOT / "scripts" / "tests" / "test_agents_smoke.py"
+    tree = ast.parse(path.read_text(encoding="utf-8"))
+    matrix = None
+    for node in tree.body:
+        if not isinstance(node, ast.Assign):
+            continue
+        if any(
+            isinstance(target, ast.Name) and target.id == "REPRESENTATIVE_AGENTS"
+            for target in node.targets
+        ):
+            matrix = ast.literal_eval(node.value)
+            break
+    assert matrix is not None, "REPRESENTATIVE_AGENTS não encontrado"
+    covered = {row[0] for row in matrix}
+    expected = {path.stem for path in AGENTS}
+    assert covered == expected, f"matriz smoke divergente: {covered ^ expected}"
 
 
 # --------------------------------------------------------------- manifesto

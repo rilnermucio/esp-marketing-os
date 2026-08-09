@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the distributable Codex plugin package."""
+"""Build the distributable ChatGPT Work and Codex plugin package."""
 
 from __future__ import annotations
 
@@ -166,7 +166,7 @@ def main() -> int:
         return check_plugin()
 
     build_plugin(DIST_ROOT)
-    print(f"Built Codex plugin package: {DIST_ROOT}")
+    print(f"Built ChatGPT Work and Codex plugin package: {DIST_ROOT}")
     return 0
 
 

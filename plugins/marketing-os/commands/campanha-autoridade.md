@@ -99,4 +99,4 @@ Aplicar gates globais do `skills/marketing-os/SKILL.md`:
 
 ## Memory note
 
-Os agents `mos-copy`, `mos-social`, `mos-seo` têm memory project em `.claude/agent-memory/marketing-os-<agent>/`. Sempre mencione no prompt que considere memory existente do cliente para manter consistência de voz e evitar repetir ângulos editoriais já usados.
+Os agents `mos-copy`, `mos-social`, `mos-seo` têm memory project em `.claude/agent-memory/mos-<agent>/`. Sempre mencione no prompt que considere memory existente do cliente para manter consistência de voz e evitar repetir ângulos editoriais já usados.

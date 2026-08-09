@@ -67,6 +67,11 @@ REPRESENTATIVE_AGENTS = [
         ["marca", "posicionamento", "arquetipo", "consultoria"],
     ),
     (
+        "mos-community",
+        "Use o agente mos-community para classificar e redigir um rascunho de resposta para UM comentario que pergunta o preco de uma mentoria. Formato: classificacao + resposta + acao recomendada.",
+        ["resposta", "comentario", "classificacao", "lead"],
+    ),
+    (
         "mos-design",
         "Use o agente mos-design para sugerir uma paleta de 3 cores (hex) e UMA fonte para um app de financas. Formato: lista.",
         ["#", "cor", "fonte", "paleta"],
@@ -90,6 +95,16 @@ REPRESENTATIVE_AGENTS = [
         "mos-launch",
         "Use o agente mos-launch para listar as 3 fases de um lancamento (pre, carrinho, pos). Lista.",
         ["lancamento", "fase", "carrinho", "email"],
+    ),
+    (
+        "mos-offer",
+        "Use o agente mos-offer para esbocar uma oferta curta para uma mentoria de copywriting. Formato: promessa + preco + bonus + garantia.",
+        ["oferta", "preco", "garantia", "bonus"],
+    ),
+    (
+        "mos-partnerships",
+        "Use o agente mos-partnerships para avaliar UM creator para uma parceria de curso online. Formato: fit score + modelo de parceria + rascunho de outreach.",
+        ["creator", "parceria", "fit", "outreach"],
     ),
     (
         "mos-research",

@@ -4097,7 +4097,7 @@ LIÇÃO: super-app brasileiro precisa visual coeso
 
 ## Design DNA System (25 Designers)
 
-Sistema paralelo aos 35 voice clones (copy/voice). 25 designers mestres com **DNA visual mapeado** em arquivo dedicado.
+Sistema paralelo aos 34 voice clones (copy/voice). 25 designers mestres com **DNA visual mapeado** em arquivo dedicado.
 
 ### Protocolo Obrigatório
 

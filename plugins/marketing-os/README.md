@@ -1,17 +1,43 @@
 # Marketing OS
 
-> Plugin Claude Code e Codex com **21 especialistas** em marketing digital + 48 slash commands Claude + 34 voice clones de copywriters lendários.
+> Plugin para ChatGPT Work, Claude Code e Codex com **21 especialistas** em marketing digital, 48 slash commands no Claude Code e 34 voice clones de copywriters.
 
 [![Version](https://img.shields.io/badge/version-6.15.0-blue.svg)](./CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
 
 ## O que é
 
-Marketing OS é um plugin para o [Claude Code](https://www.anthropic.com/claude-code) e para o Codex que orquestra 21 especialistas nativos em domínios distintos do marketing digital. O plugin reivindica território explícito sobre briefings de marketing. Quando você pede "cria página de aplicação" ou "monta um webinar", ele roteia os especialistas corretos em paralelo, com camada estratégica antes de qualquer execução técnica.
+Marketing OS é um plugin para ChatGPT Work, [Claude Code](https://www.anthropic.com/claude-code) e Codex que orquestra 21 especialistas em domínios distintos do marketing digital. O plugin reivindica território explícito sobre briefings de marketing. Quando você pede "cria página de aplicação" ou "monta um webinar", ele roteia os especialistas corretos, preserva dependências entre etapas e executa a camada estratégica antes do build técnico.
 
 **44 dos 48 slash commands** dispatcham subagents `mos-*`. Os 4 que não dispatcham são intencionais: `/publicar-notion` (utility do Notion MCP), `/campanha` (índice dos 6 sub-commands de preset), `/projeto` (orquestrador de workflow com dispatch dinâmico) e `/datas-sazonais` (utilitário de dados do calendário sazonal BR). Use `/mo` pra briefing aberto se não souber qual command escolher. **Conteúdo PT-BR otimizado para o mercado brasileiro.**
 
 ## Instalação
+
+### ChatGPT Work
+
+O pacote universal em `.codex-plugin/plugin.json` pode ser instalado no ChatGPT Work como plugin `skills-only`. Para testar a versão deste repositório no ChatGPT Desktop:
+
+1. Abra este repositório no ChatGPT Desktop.
+2. Selecione **ChatGPT** e ative **Work**.
+3. Abra **Plugins** e escolha a fonte **Marketing OS**.
+4. Instale o plugin e inicie uma conversa Work nova.
+5. Digite `@Marketing OS` ou descreva o resultado diretamente.
+
+Exemplos:
+
+```text
+@Marketing OS crie o avatar completo do meu cliente ideal.
+```
+
+```text
+@Marketing OS crie uma USP usando o avatar e as evidências disponíveis.
+```
+
+```text
+@Marketing OS estruture minha oferta com preço, bônus e garantia.
+```
+
+O marketplace repo-scoped usado pelo ChatGPT Desktop está em `.agents/plugins/marketplace.json`. A instalação local fica disponível no Desktop. O uso no ChatGPT Work pela web depende de publicação ou compartilhamento no diretório de plugins.
 
 ### Claude Code via marketplace
 
@@ -36,7 +62,7 @@ codex plugin add marketing-os@marketing-os-marketplace
 Para uma versão fixa, troque `main` pela tag da release:
 
 ```bash
-codex plugin marketplace add rilnermucio/esp-marketing-os --ref v6.8.0
+codex plugin marketplace add rilnermucio/esp-marketing-os --ref v6.15.0
 codex plugin add marketing-os@marketing-os-marketplace
 ```
 
@@ -155,9 +181,9 @@ Ver SKILL.md pra detalhes de cada workflow e "por que essa ordem importa". Tier 
 ```
 Marketing OS/
 ├── .claude-plugin/         # plugin.json + marketplace.json
-├── .codex-plugin/          # plugin.json para desenvolvimento local no Codex
-├── .agents/plugins/        # marketplace Codex repo-scoped
-├── plugins/marketing-os/   # pacote Codex distribuível, gerado por script
+├── .codex-plugin/          # manifesto universal para ChatGPT Work e Codex
+├── .agents/plugins/        # marketplace repo-scoped para ChatGPT Desktop e Codex
+├── plugins/marketing-os/   # pacote universal distribuível, gerado por script
 ├── agents/                 # 21 native subagents (mos-*.md)
 ├── skills/marketing-os/    # Skill entrypoint (SKILL.md = orquestrador)
 ├── subagents/              # Tier 2 knowledge bases (~3500 linhas cada)
@@ -206,7 +232,7 @@ python scripts/validate_agents.py --strict   # falha em warnings também
 # Validar plugin manifest
 claude plugin validate .
 
-# Gerar e validar pacote Codex oficial
+# Gerar e validar pacote universal ChatGPT Work e Codex
 python scripts/build_codex_plugin.py
 python scripts/build_codex_plugin.py --check
 python scripts/validate_codex_plugin.py plugins/marketing-os
@@ -221,7 +247,7 @@ python3 scripts/copy_output_eval.py profiles
 python scripts/mos.py --help
 ```
 
-CI rodando em `.github/workflows/tests.yml`: suite Tier 1, cobertura ≥70%, validação do pacote Codex e job `validate-agents` em modo `--strict` em todo PR/push (pega regressão de frontmatter, knowledge refs quebrados, name collisions). O workflow de release repete esses gates antes de publicar. Estado atual: **21/21 agents clean** no validator.
+CI rodando em `.github/workflows/tests.yml`: suite Tier 1, cobertura ≥70%, validação do pacote universal para ChatGPT Work e Codex e job `validate-agents` em modo `--strict` em todo PR/push (pega regressão de frontmatter, knowledge refs quebrados e name collisions). O workflow de release repete esses gates antes de publicar. Estado atual: **21/21 agents clean** no validator.
 
 ## Documentação adicional
 

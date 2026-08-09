@@ -1,7 +1,7 @@
 interface:
   display_name: Marketing OS
-  short_description: Orquestra copy, SEO, social, anúncios, emails, funis e lançamentos em PT-BR.
+  short_description: Marketing completo em PT-BR
   brand_color: "#0F766E"
-  default_prompt: Crie um carrossel Instagram para meu produto usando Marketing OS.
+  default_prompt: Crie o avatar completo do meu cliente ideal.
 policy:
   allow_implicit_invocation: true

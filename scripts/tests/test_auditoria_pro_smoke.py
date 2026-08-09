@@ -1,7 +1,4 @@
-"""Smoke test for /auditoria-pro pipeline. Mocks agent outputs + Playwright.
-
-Marked @pytest.mark.smoke to skip in default CI.
-"""
+"""Offline integration test for /auditoria-pro with deterministic fixtures."""
 from __future__ import annotations
 
 import os
@@ -10,17 +7,12 @@ from pathlib import Path
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-import pytest
-
 from audit_detector import detect
 from audit_scoring import RUBRICS, compute
 from audit_radar_chart import generate as generate_radar
 from audit_roadmap_generator import generate as generate_roadmap
 from audit_premium_template import render
 from pdf_generator import generate as generate_pdf
-
-pytestmark = pytest.mark.smoke
-
 
 def _mock_synthesis() -> dict:
     """Returns a complete synthesis dict for landing audit."""

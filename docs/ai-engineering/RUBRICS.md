@@ -57,14 +57,15 @@ Para peças de copy, aplicar também o Copy Score System (PARTE XV de `subagents
 | Variação | 5-10 geradas internamente, top 2-3 entregues com hipótese A/B e métrica | Variações entregues sem hipótese |
 | Social | Post/reels/carrossel inclui sugestão de enquete (gate global) | N/A: ausência é nota 1 |
 
-## R5: Compatibilidade Claude Code / Codex
+## R5: Compatibilidade ChatGPT Work / Claude Code / Codex
 
 | Critério | Nota 4 | Nota 2 |
 |---|---|---|
-| Manifests | `claude plugin validate .` + `python scripts/validate_codex_plugin.py` verdes | Um validado, outro pendente com motivo |
+| Manifests | `claude plugin validate .` + `python scripts/validate_codex_plugin.py plugins/marketing-os` + validador portátil de plugin verdes | Dois validados, um pendente com motivo |
 | Gotchas | Tabela de gotchas do AGENTS.md respeitada (author object, category singular, source `./`, sem field skills) | Conformidade não re-verificada em mudança que não toca manifests |
 | Paths portáveis | Hooks usam `${CLAUDE_PLUGIN_ROOT}/...`; nada assume CWD = raiz do plugin | Path relativo em contexto que só roda em dev local, anotado |
-| Pacote Codex | `build_codex_plugin.py` gera pacote e nada pessoal vaza (workspace/, memory) | Build ok, verificação de vazamento manual |
+| Pacote universal | `build_codex_plugin.py` gera o pacote ChatGPT Work/Codex e nada pessoal vaza (`workspace/`, memory) | Build ok, verificação de vazamento manual |
+| Skill OpenAI | `SKILL.md` usa frontmatter portátil; `agents/openai.yaml` válido; `@Marketing OS`, invocação implícita e fallback documentados | Metadados válidos, teste de host pendente com motivo |
 | Versões | Base semver sincronizada nos 3 pontos (plugin.json, marketplace.json x2) + sufixo `+codex.YYYYMMDD` atualizado quando o pacote muda | Sincronizado, sufixo esquecido |
 
 ## R6: Release
@@ -74,5 +75,5 @@ Para peças de copy, aplicar também o Copy Score System (PARTE XV de `subagents
 | Checklist | [RELEASE-CHECKLIST.md](RELEASE-CHECKLIST.md) executado item a item, com evidência por item | N/A: release aceita só nota ≥3 |
 | Tag | Tag aponta pra commit alcançável a partir do main (verificado com `git merge-base`) | N/A |
 | CHANGELOG | Cobre todo o range desde a última tag, agrupado Added/Changed/Fixed | N/A |
-| Install real | `/plugin install` testado em projeto limpo (Claude) + install Codex testado | Um dos dois testado, outro registrado como pendente |
+| Install real | Plugin testado em conversa nova no ChatGPT Work, em projeto limpo no Claude e em instalação Codex | Duas superfícies testadas, a terceira registrada como pendente |
 | Rollback | Passos de reversão anotados antes do push da tag | N/A |

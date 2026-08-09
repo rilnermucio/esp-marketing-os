@@ -40,7 +40,7 @@ A Anthropic cacheia estado por NOME de marketplace. Se o seu marketplace já tev
 
 ```bash
 python scripts/build_codex_plugin.py
-python scripts/validate_codex_plugin.py
+python scripts/validate_codex_plugin.py plugins/marketing-os
 ```
 
 Conferir: versão base semver + sufixo `+codex.YYYYMMDD`; estrutura do pacote em `plugins/marketing-os/`; nenhum conteúdo pessoal no pacote (workspace/, memory, mídia de teste). Install de referência:

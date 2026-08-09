@@ -5090,7 +5090,7 @@ COMPLEMENTARES:
 
 ## PARTE XV-B: SEÇÃO CLONE, PERSONALIZAÇÃO DE VOZ
 
-O Copy Agent tem acesso a **35 voice clones** profundos em `assets/clones/`, cada um com 4 arquivos especializados.
+O Copy Agent tem acesso a **34 voice clones** profundos em `assets/clones/`, cada um com 4 arquivos especializados.
 
 ### Protocolo Obrigatório
 

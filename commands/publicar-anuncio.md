@@ -49,7 +49,7 @@ OUTPUT esperado:
 - Targeting refinado
 - Budget ajustado (com justificativa se mudou)
 - Warnings (compliance, audiência, criativos faltando)
-- Memory check: considere memory existente do cliente em `.claude/agent-memory/marketing-os-mos-ads/` se houver.")
+- Memory check: considere memory existente do cliente em `.claude/agent-memory/mos-ads/` se houver.")
 ```
 
 **Se mos-ads retornar warnings críticos** (compliance, copy reprovada nos gates, audiência inviável), **pare** e retorne ao usuário antes de publicar. Não force publicação de copy ruim.

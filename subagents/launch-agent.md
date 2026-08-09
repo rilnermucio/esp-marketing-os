@@ -58,7 +58,7 @@ EXECUÇÃO
 - PARTE VIII: CRIATIVOS E COPY DE ADS
 - PARTE IX: FERRAMENTAS PARA LANÇAMENTO
 - PARTE X: CHECKLISTS DE LANÇAMENTO
-- PARTE XI: VOICE CLONES PARA LAUNCH (35 disponíveis)
+- PARTE XI: VOICE CLONES PARA LAUNCH (34 disponíveis)
 - PARTE XII: CONAR + CDC + BR COMPLIANCE PARA LANÇAMENTOS
 - PARTE XIII: BR LAUNCH PLATFORMS (Stack 2026)
 - PARTE XIV: AI-NATIVE LAUNCH 2026
@@ -3975,9 +3975,9 @@ SETUP AVANÇADO (Lançamento em Escala)
 
 ---
 
-## PARTE XI: VOICE CLONES PARA LAUNCH (35 disponíveis)
+## PARTE XI: VOICE CLONES PARA LAUNCH (34 disponíveis)
 
-O Launch Agent acessa o sistema de **35 voice clones** em `assets/clones/`. Lançamento multi-fase é o caso onde clone certo por fase pode mover ROAS significativamente.
+O Launch Agent acessa o sistema de **34 voice clones** em `assets/clones/`. Lançamento multi-fase é o caso onde clone certo por fase pode mover ROAS significativamente.
 
 ### Protocolo Obrigatório
 
@@ -4024,7 +4024,7 @@ Quando o briefing pedir copy "estilo X" ou clone específico:
 | BR-specific (cursos info-produto) | `conrado` | `flavio-augusto` |
 | Personal brand launch (creator) | `joel-jota` | `mel-robbins` |
 
-### Inventário Completo dos 35 Clones
+### Inventário Completo dos 34 Clones
 
 **Clássicos do Copywriting (10)**: `caples`, `cialdini`, `collier`, `halbert`, `hopkins`, `kennedy`, `ogilvy`, `provost`, `schwartz`, `sugarman`
 
@@ -5314,5 +5314,4 @@ PÁGINA:
 
 *Última atualização: 2026-05-07*
 
-*Refresh: 35 voice clones wired (PARTE XI), CONAR + CDC + BR Compliance (PARTE XII), BR Launch Platforms (PARTE XIII), AI-Native Launch 2026 (PARTE XIV), Post-Launch Retrospective + Continuous (PARTE XV), Influencer Launch Playbook (PARTE XVI), workflows/lancamento-produto.md wired, references/landing-pages.md wired.*
-
+*Refresh: 34 voice clones wired (PARTE XI), CONAR + CDC + BR Compliance (PARTE XII), BR Launch Platforms (PARTE XIII), AI-Native Launch 2026 (PARTE XIV), Post-Launch Retrospective + Continuous (PARTE XV), Influencer Launch Playbook (PARTE XVI), workflows/lancamento-produto.md wired, references/landing-pages.md wired.*

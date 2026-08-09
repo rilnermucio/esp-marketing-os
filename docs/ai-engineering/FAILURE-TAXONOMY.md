@@ -1,6 +1,6 @@
 # Taxonomia de falhas do Marketing OS
 
-> Canônico. Atualizado em 2026-08-03. Todo bug, eval e post-mortem referencia estas falhas por ID. Formato do ID: `F-<CATEGORIA>-<NN>`. Os IDs são estáveis: nunca renumere; deprecie com nota e crie novo.
+> Canônico. Atualizado em 2026-08-05. Todo bug, eval e post-mortem referencia estas falhas por ID. Formato do ID: `F-<CATEGORIA>-<NN>`. Os IDs são estáveis: nunca renumere; deprecie com nota e crie novo.
 >
 > "Exemplo real" cita incidente deste repositório quando existe; "hipotético" marca risco com precedente externo. Detecção aponta o mecanismo executável quando há.
 
@@ -57,7 +57,7 @@
 | ID | Falha | Exemplo real / risco | Detecção | Prevenção |
 |---|---|---|---|---|
 | F-CMD-01 | Command de produção sem dispatch e sem declarar utility | Motivou o guard em v6.5 | `test_commands_dispatch.py::test_no_unexpected_non_dispatch_commands` | Guard ativo |
-| F-CMD-02 | Referência temporal/stale dentro de command | `criar-post.md:54` ainda cita "durante migração" (aberto, P0) | Auditoria; grep por "ainda não existir", "durante a migração" | H3.5 |
+| F-CMD-02 | Referência temporal/stale dentro de command | Incidente em `criar-post.md` resolvido em 2026-07-06 (`467b7ff`) | Auditoria; grep por "ainda não existir", "durante a migração" | H3.5 |
 | F-CMD-03 | Contagem de commands divergente entre docs | 25/32/34/37 simultâneos até jun/2026 | Auditoria; guards de consistência | H8.5 |
 
 ## F-MAN: Manifests
@@ -71,9 +71,10 @@
 
 | ID | Falha | Exemplo real / risco | Detecção | Prevenção |
 |---|---|---|---|---|
-| F-CODEX-01 | Pacote com estrutura inválida | Risco desde 2026-07 (distribuição nova) | `python scripts/validate_codex_plugin.py` | Rodar no CI e no checklist de release |
+| F-CODEX-01 | Pacote com estrutura inválida | Risco desde 2026-07 (distribuição nova) | `python scripts/validate_codex_plugin.py plugins/marketing-os` | Rodar no CI e no checklist de release |
 | F-CODEX-02 | Versão base dessincronizada ou sufixo `+codex.YYYYMMDD` esquecido | Risco em release | validate_codex (semver) + checklist | R5 "Versões" |
-| F-CODEX-03 | Conteúdo pessoal vazando pro pacote (workspace/, memory, áudio de teste) | `narracao.aiff.txt` trackeado na raiz (aberto, P0) | Inspeção do output de `build_codex_plugin.py` | Lista COPY_DIRS/COPY_FILES explícita; nunca copiar raiz inteira |
+| F-CODEX-03 | Conteúdo pessoal vazando pro pacote (workspace/, memory, áudio de teste) | Incidente de `narracao.aiff.txt` resolvido em 2026-07-06 (`467b7ff`) | Inspeção do output de `build_codex_plugin.py` | Lista COPY_DIRS/COPY_FILES explícita; nunca copiar raiz inteira |
+| F-CODEX-04 | Atualização local segue link simbólico e atinge o repositório-fonte | Incidente 2026-08-05: `~/plugins/marketing-os` apontava para a raiz e um sync com `--delete` removeu arquivos exclusivos do repositório | `test ! -L <destino>` + comparação de `realpath` antes da cópia | Destino físico fora do repo; preservar link como backup; não usar `--delete` sem preflight comprovado |
 
 ## F-REL: Release
 

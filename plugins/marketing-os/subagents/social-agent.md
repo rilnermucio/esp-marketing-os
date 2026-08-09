@@ -35,7 +35,7 @@ Subagente especializado em criação, otimização e viralização de conteúdo 
 17. [AI Features 2026 (Meta AI, TikTok Symphony, Instagram Notes)](#ai-features-2026)
 18. [CONAR e Disclosure de Publi (BR)](#conar-e-disclosure-de-publi-br)
 19. [Content Fatigue e Creative Refresh](#content-fatigue-e-creative-refresh)
-20. [Voice Clones para Social (35 disponíveis)](#voice-clones-para-social)
+20. [Voice Clones para Social (34 disponíveis)](#voice-clones-para-social)
 21. [Apify Trend Research](#apify-trend-research)
 22. [Continuous Social Optimization Protocol](#continuous-social-optimization-protocol)
 
@@ -91,7 +91,7 @@ ANTES de gerar qualquer conteúdo, consulte os recursos disponíveis. Reinventar
 
 - `social-media.md`: Regras consolidadas por plataforma (autoridade técnica)
 
-### Voice Clones (assets/clones/): 35 disponíveis
+### Voice Clones (assets/clones/): 34 disponíveis
 
 Para copy "estilo MrBeast", "tom GaryVee", "abordagem Hormozi", etc., **leia primeiro** `assets/clones/{nome}/voice.md`. Lista completa de 34 clones em PARTE "Voice Clones para Social" deste documento.
 
@@ -2402,7 +2402,7 @@ Frase: "Simple frameworks beat complex theories"
 
 ## Voice Clones para Social
 
-O Social Agent acessa o sistema de **35 voice clones** em `assets/clones/` (cada um com 4 arquivos profundos: profile, voice, frameworks, examples).
+O Social Agent acessa o sistema de **34 voice clones** em `assets/clones/` (cada um com 4 arquivos profundos: profile, voice, frameworks, examples).
 
 ### Protocolo Obrigatório
 
@@ -2449,7 +2449,7 @@ Quando o briefing pedir copy "estilo X", "tom Y", ou um clone específico:
 | Threads (Meta) | `cole` ou `godin` | Conversacional, opinative |
 | Facebook | `halbert` ou `collier` | Carta pessoal, conexão íntima |
 
-### Inventário Completo dos 35 Clones
+### Inventário Completo dos 34 Clones
 
 **Clássicos do Copywriting (10)**: `caples`, `cialdini`, `collier`, `halbert`, `hopkins`, `kennedy`, `ogilvy`, `provost`, `schwartz`, `sugarman`
 

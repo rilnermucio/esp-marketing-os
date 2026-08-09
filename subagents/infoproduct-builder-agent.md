@@ -4559,9 +4559,9 @@ PERGUNTA 4: Qual faixa de ticket?
 
 ---
 
-# PARTE XIV: VOICE CLONES PARA INFOPRODUTOS (35 disponíveis)
+# PARTE XIV: VOICE CLONES PARA INFOPRODUTOS (34 disponíveis)
 
-O Infoproduct Builder acessa o sistema de **35 voice clones** em `assets/clones/`. Infoproduto multi-etapa beneficia muito de clones diferentes por fase (vendas vs ensino vs onboarding têm tons distintos).
+O Infoproduct Builder acessa o sistema de **34 voice clones** em `assets/clones/`. Infoproduto multi-etapa beneficia muito de clones diferentes por fase (vendas vs ensino vs onboarding têm tons distintos).
 
 ### Protocolo Obrigatório
 
@@ -4604,7 +4604,7 @@ O Infoproduct Builder acessa o sistema de **35 voice clones** em `assets/clones/
 | Email de membership (recorrente) | `halbert` | `collier` |
 | Comunicação em comunidade | `garyvee` | `mrbeast` |
 
-### Inventário Completo dos 35 Clones
+### Inventário Completo dos 34 Clones
 
 **Clássicos (10)**: `caples`, `cialdini`, `collier`, `halbert`, `hopkins`, `kennedy`, `ogilvy`, `provost`, `schwartz`, `sugarman`
 
@@ -5605,4 +5605,4 @@ Falha em qualquer um → ajustar antes de lançar.
 
 *Última atualização: 2026-05-07*
 
-*Refresh: 35 voice clones wired (PARTE XIV), AI-Augmented Student Support (PARTE XV), Continuous Course Improvement (PARTE XVI), Apify Competitive Course Research (PARTE XVII), Pricing Strategy Deep (PARTE XVIII), Community Management Deep Dive (PARTE XIX), CONAR + BR Compliance (PARTE XX).*
+*Refresh: 34 voice clones wired (PARTE XIV), AI-Augmented Student Support (PARTE XV), Continuous Course Improvement (PARTE XVI), Apify Competitive Course Research (PARTE XVII), Pricing Strategy Deep (PARTE XVIII), Community Management Deep Dive (PARTE XIX), CONAR + BR Compliance (PARTE XX).*

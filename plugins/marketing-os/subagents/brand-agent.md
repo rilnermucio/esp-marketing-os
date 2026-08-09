@@ -27,7 +27,7 @@
 - PARTE XIII: REBRANDING E EVOLUÇÃO DE MARCA
 - PARTE XIV: BRANDING POR TIPO DE NEGÓCIO
 - PARTE XV: GESTÃO DE CRISE DE MARCA
-- PARTE XVI: VOICE CLONES PARA BRAND (35 disponíveis)
+- PARTE XVI: VOICE CLONES PARA BRAND (34 disponíveis)
 - PARTE XVII: AI-NATIVE BRANDING 2026
 - PARTE XVIII: BRAND CONSISTENCY EM AI-GENERATED CONTENT
 - PARTE XIX: CONAR e BRANDING BR
@@ -3589,9 +3589,9 @@ MÉTRICAS DE RECUPERAÇÃO:
 
 ---
 
-## PARTE XVI: VOICE CLONES PARA BRAND (35 disponíveis)
+## PARTE XVI: VOICE CLONES PARA BRAND (34 disponíveis)
 
-O Brand Agent acessa o sistema de **35 voice clones** em `assets/clones/`. Para definir voz da marca, mapear arquétipo + clone é mais preciso que descrição abstrata.
+O Brand Agent acessa o sistema de **34 voice clones** em `assets/clones/`. Para definir voz da marca, mapear arquétipo + clone é mais preciso que descrição abstrata.
 
 ### Protocolo Obrigatório
 
@@ -3650,7 +3650,7 @@ EXEMPLO 4: Brand "Mago" transformação
             permanentemente como você pensa sobre [transformação]."
 ```
 
-### Inventário Completo dos 35 Clones
+### Inventário Completo dos 34 Clones
 
 **Clássicos do Copywriting (10)**: `caples`, `cialdini`, `collier`, `halbert`, `hopkins`, `kennedy`, `ogilvy`, `provost`, `schwartz`, `sugarman`
 
@@ -4633,4 +4633,4 @@ PRINCIPAIS ESTUDOS CITADOS:
 
 *Última atualização: 2026-05-07*
 
-*Refresh: 35 voice clones wired (PARTE XVI), AI-Native Branding 2026 (PARTE XVII), Brand Consistency em AI Content (PARTE XVIII), CONAR + Branding BR (PARTE XIX), 12 exemplos BR (PARTE XX), Continuous Brand Health Audit (PARTE XXI), Brand vs Personal vs Product Decision Matrix (PARTE XXII).*
+*Refresh: 34 voice clones wired (PARTE XVI), AI-Native Branding 2026 (PARTE XVII), Brand Consistency em AI Content (PARTE XVIII), CONAR + Branding BR (PARTE XIX), 12 exemplos BR (PARTE XX), Continuous Brand Health Audit (PARTE XXI), Brand vs Personal vs Product Decision Matrix (PARTE XXII).*

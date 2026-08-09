@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updated": "2026-08-04",
-  "description": "Golden set de roteamento: briefings PT-BR reais e o roteamento esperado. Validado por scripts/tests/test_routing_evals.py; protocolo em ../ROUTING-EVALS.md",
+  "updated": "2026-08-05",
+  "description": "Golden set de roteamento: briefings PT-BR reais, inclusive invocações do ChatGPT Work, e o roteamento esperado. Validado por scripts/tests/test_routing_evals.py; protocolo em ../ROUTING-EVALS.md",
   "cases": [
     {
       "id": "RT-001",
@@ -288,6 +288,67 @@
       ],
       "detects": ["F-ROUTE-02", "F-DISP-02", "F-CLAIM-01"],
       "notes": "Sem mapa competitivo, mos-research coleta evidências antes de mos-brand formular e testar a USP."
+    },
+    {
+      "id": "RT-028",
+      "prompt": "@Marketing OS crie o avatar completo do cliente ideal da minha consultoria para clínicas",
+      "expected_command": "criar-avatar",
+      "expected_agents": ["mos-research"],
+      "dispatch": "simples",
+      "min_output_fields": [
+        "evidências separadas de inferências e hipóteses",
+        "avatar principal e segmentos secundários condicionais",
+        "anti-avatar",
+        "jobs to be done e nível de consciência",
+        "dores, desejos, objeções, gatilhos e jornada",
+        "handoff para copy, ads, oferta, funil e social"
+      ],
+      "detects": ["F-ROUTE-02", "F-CLAIM-01"],
+      "notes": "O prefixo de seleção do ChatGPT Work é removido antes da classificação; a intenção preserva o contrato de /criar-avatar."
+    },
+    {
+      "id": "RT-029",
+      "prompt": "@Marketing OS crie a USP da minha mentoria, ainda não tenho um mapa dos concorrentes",
+      "expected_command": "criar-usp",
+      "expected_agents": ["mos-research", "mos-brand"],
+      "dispatch": "sequencial",
+      "min_output_fields": [
+        "evidências separadas de inferências e hipóteses",
+        "alternativas e contexto competitivo",
+        "candidatos de USP com score",
+        "USP principal e reason to believe",
+        "mecanismo ou diferencial defensável",
+        "limites da promessa e plano de validação"
+      ],
+      "detects": ["F-ROUTE-02", "F-DISP-02", "F-CLAIM-01"],
+      "notes": "Invocação explícita no ChatGPT Work mantém a dependência research para brand quando faltam evidências competitivas."
+    },
+    {
+      "id": "RT-030",
+      "prompt": "@Marketing OS estruture minha oferta high-ticket; anexei pesquisa, avatar e USP já validados",
+      "expected_command": "criar-oferta",
+      "expected_agents": ["mos-offer"],
+      "dispatch": "simples",
+      "min_output_fields": [
+        "ledger recebido com IDs preservados",
+        "value stack com justificativa por item",
+        "preço com ancoragem e parcelamento",
+        "bônus com função estratégica",
+        "garantia com termos e sustentabilidade",
+        "offer score e plano de validação"
+      ],
+      "detects": ["F-ROUTE-04", "F-ROUTE-02", "F-CLAIM-01"],
+      "notes": "Com research, avatar e USP anexados, o command reutiliza o material e despacha apenas mos-offer."
+    },
+    {
+      "id": "RT-031",
+      "prompt": "@Marketing OS o que é AIDA?",
+      "expected_command": null,
+      "expected_agents": [],
+      "dispatch": "nenhum",
+      "min_output_fields": ["definição das 4 etapas com exemplo curto"],
+      "detects": ["F-COST-02"],
+      "notes": "Selecionar o plugin no ChatGPT Work não transforma uma pergunta conceitual em pedido de produção."
     }
   ]
 }

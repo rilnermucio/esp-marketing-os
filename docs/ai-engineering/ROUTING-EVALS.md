@@ -1,10 +1,10 @@
 # Routing Evals: matriz de roteamento esperado
 
-> Canônico. Atualizado em 2026-08-04. O gabarito vivo está em [evals/routing-cases.json](evals/routing-cases.json); este documento explica a matriz e o protocolo. A tabela abaixo é um resumo de leitura; **em divergência, o JSON vence**.
+> Canônico. Atualizado em 2026-08-05. O gabarito vivo está em [evals/routing-cases.json](evals/routing-cases.json); este documento explica a matriz e o protocolo. A tabela abaixo é um resumo de leitura; **em divergência, o JSON vence**.
 
 ## O que a matriz cobre
 
-Briefings de usuário em PT-BR (como chegam de verdade, sem jargão de sistema) e o roteamento esperado: command de entrada, agents dispatchados, modo de dispatch e campos mínimos do output. Cada caso lista quais falhas da [FAILURE-TAXONOMY.md](FAILURE-TAXONOMY.md) ele detecta se o roteamento errar.
+Briefings de usuário em PT-BR, como chegam de verdade e sem jargão de sistema, e o roteamento esperado: command de entrada, agents dispatchados, modo de dispatch e campos mínimos do output. A matriz inclui linguagem natural, slash commands e seleção explícita por `@Marketing OS` no ChatGPT Work. Cada caso lista quais falhas da [FAILURE-TAXONOMY.md](FAILURE-TAXONOMY.md) ele detecta se o roteamento errar.
 
 ## Resumo dos casos (gabarito completo no JSON)
 
@@ -37,8 +37,12 @@ Briefings de usuário em PT-BR (como chegam de verdade, sem jargão de sistema) 
 | RT-025 | achar influencers skincare collab | `/prospectar-creators` | research → partnerships | sequencial |
 | RT-026 | criar avatar completo para mentoria | `/criar-avatar` | research | simples |
 | RT-027 | criar USP sem concorrentes mapeados | `/criar-usp` | research → brand | sequencial |
+| RT-028 | `@Marketing OS` criar avatar completo | `/criar-avatar` | research | simples |
+| RT-029 | `@Marketing OS` criar USP sem mapa competitivo | `/criar-usp` | research → brand | sequencial |
+| RT-030 | `@Marketing OS` criar oferta com inputs validados | `/criar-oferta` | offer | simples |
+| RT-031 | `@Marketing OS` explicar AIDA | nenhum (inline) | nenhum | nenhum |
 
-RT-013 e RT-017 eram gaps documentados e viraram validações das correções. RT-017 agora também trava a dependência de dados: oferta core ou high-ticket sem research usa `mos-research` antes de `mos-offer`; pedido pontual de precificação com contexto suficiente continua simples em RT-019. RT-026 guarda a interface explícita de avatar completo e sua rota natural para `mos-research`. RT-027 guarda a interface de USP e sua dependência de pesquisa quando o contexto competitivo ainda não foi mapeado. O golden set não tem gaps abertos no momento; casos novos entram pelo protocolo da EVALS-STRATEGY §2.
+RT-013 e RT-017 eram gaps documentados e viraram validações das correções. RT-017 agora também trava a dependência de dados: oferta core ou high-ticket sem research usa `mos-research` antes de `mos-offer`; pedido pontual de precificação com contexto suficiente continua simples em RT-019. RT-026 guarda a interface explícita de avatar completo e sua rota natural para `mos-research`. RT-027 guarda a interface de USP e sua dependência de pesquisa quando o contexto competitivo ainda não foi mapeado. RT-028 a RT-031 preservam esses contratos no ChatGPT Work: o prefixo `@Marketing OS` seleciona o plugin, mas o briefing restante continua governando command, dependências e decisão inline. O golden set não tem gaps abertos no momento; casos novos entram pelo protocolo da EVALS-STRATEGY §2.
 
 ## Validação em duas camadas
 

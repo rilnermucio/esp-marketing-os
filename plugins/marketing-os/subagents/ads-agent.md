@@ -6379,7 +6379,7 @@ INT_Marketing-Digital_Broad_250205
 
 ## CLONES DE VOZ PARA ANÚNCIOS (34 clones disponíveis)
 
-O Ads Agent acessa o sistema de **35 voice clones** em `assets/clones/` (cada um com 4 arquivos profundos: profile, voice, frameworks, examples).
+O Ads Agent acessa o sistema de **34 voice clones** em `assets/clones/` (cada um com 4 arquivos profundos: profile, voice, frameworks, examples).
 
 ### Protocolo Obrigatório
 
@@ -6417,7 +6417,7 @@ Quando o briefing pedir copy "estilo X" ou um clone específico:
 | Conversion (BOFU) | `hormozi`, `kennedy` | Oferta irresistível + venda direta |
 | Retention/Retargeting | `halbert`, `collier` | Reconexão íntima + urgência emocional |
 
-### Inventário Completo dos 35 Clones (use livremente)
+### Inventário Completo dos 34 Clones (use livremente)
 
 **Clássicos do Copywriting (10)**: `caples`, `cialdini`, `collier`, `halbert`, `hopkins`, `kennedy`, `ogilvy`, `provost`, `schwartz`, `sugarman`
 

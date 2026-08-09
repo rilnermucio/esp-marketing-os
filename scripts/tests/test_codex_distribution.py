@@ -62,6 +62,17 @@ def test_validator_accepts_generated_package(tmp_path):
     assert validator.validate(plugin) == []
 
 
+def test_validator_accepts_repository_root():
+    assert validator.validate(ROOT) == []
+
+
+def test_validator_finds_repo_from_source_and_generated_roots(tmp_path):
+    repo, plugin = _generated_repo(tmp_path)
+
+    assert validator.find_repo_root(repo) == repo
+    assert validator.find_repo_root(plugin) == repo
+
+
 def test_validator_rejects_invalid_manifest_and_escaping_symlink(tmp_path):
     repo, plugin = _generated_repo(tmp_path)
     manifest_path = plugin / ".codex-plugin" / "plugin.json"
@@ -83,3 +94,44 @@ def test_validator_rejects_invalid_manifest_and_escaping_symlink(tmp_path):
     assert any("semver" in error for error in errors)
     assert any('skills must be "./skills/"' in error for error in errors)
     assert any("Symlink escapes" in error for error in errors)
+
+
+def test_validator_rejects_invalid_public_listing_metadata(tmp_path):
+    _, plugin = _generated_repo(tmp_path)
+    manifest_path = plugin / ".codex-plugin" / "plugin.json"
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    manifest["interface"]["shortDescription"] = "x" * 31
+    manifest["interface"]["category"] = "Marketing"
+    manifest["interface"]["defaultPrompt"] = ["prompt"] * 4
+    manifest["mcpServers"] = {}
+    manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
+
+    errors = validator.validate(plugin)
+
+    assert any("shortDescription must be at most 30" in error for error in errors)
+    assert any("category must be one of" in error for error in errors)
+    assert any("defaultPrompt must contain at most 3" in error for error in errors)
+    assert any("must not declare mcpServers" in error for error in errors)
+
+
+def test_validator_rejects_nonportable_skill_metadata(tmp_path):
+    _, plugin = _generated_repo(tmp_path)
+    skill_root = plugin / "skills" / "marketing-os"
+    skill_path = skill_root / "SKILL.md"
+    skill = skill_path.read_text(encoding="utf-8")
+    skill_path.write_text(
+        skill.replace("\n---\n", "\nargument-hint: briefing\n---\n", 1),
+        encoding="utf-8",
+    )
+
+    metadata_path = skill_root / "agents" / "openai.yaml"
+    metadata = metadata_path.read_text(encoding="utf-8")
+    metadata_path.write_text(
+        metadata.rstrip() + "\n  products:\n    - codex\n",
+        encoding="utf-8",
+    )
+
+    errors = validator.validate(plugin)
+
+    assert any("unsupported frontmatter fields" in error for error in errors)
+    assert any("policy.products must be omitted" in error for error in errors)

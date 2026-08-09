@@ -1,7 +1,4 @@
-"""Smoke test for /auditoria pipeline. Mocks agent outputs.
-
-Marked @pytest.mark.smoke so CI skips it (run manually before release).
-"""
+"""Offline integration test for /auditoria with deterministic agent outputs."""
 from __future__ import annotations
 
 import json
@@ -11,14 +8,9 @@ from pathlib import Path
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-import pytest
-
 from audit_detector import detect
 from audit_scoring import RUBRICS, compute, format_priorities_md, format_scorecard_md
 from pdf_generator import generate
-
-
-pytestmark = pytest.mark.smoke
 
 
 def _mock_synthesis_landing() -> dict:

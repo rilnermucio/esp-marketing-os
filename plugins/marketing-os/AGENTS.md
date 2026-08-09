@@ -6,7 +6,7 @@ This file provides guidance to AI coding agents (Claude Code, Codex CLI, Cursor,
 
 ## O que é este repositório
 
-Marketing OS é um **plugin do Claude Code e do Codex** (manifests em `.claude-plugin/` e `.codex-plugin/`) que distribui 21 subagents nativos especializados em marketing digital, mais 48 slash commands, knowledge bases, voice clones e scripts Python. O conteúdo é majoritariamente PT-BR e otimizado para o mercado brasileiro.
+Marketing OS é um **plugin do ChatGPT Work, Claude Code e Codex**. A distribuição Claude usa `.claude-plugin/`; o pacote universal para ChatGPT Work e Codex usa `.codex-plugin/`. O sistema distribui 21 especialistas em marketing digital, mais 48 slash commands no Claude Code, knowledge bases, voice clones e scripts Python. O conteúdo é majoritariamente PT-BR e otimizado para o mercado brasileiro.
 
 Arquivos manifesto: `.claude-plugin/plugin.json` e `.claude-plugin/marketplace.json` (listagem de marketplace). O entrypoint da skill é `skills/marketing-os/SKILL.md`.
 
@@ -55,7 +55,7 @@ Isso mantém contextos leves, carrega profundidade só quando precisa, e permite
 
 Todos os 21 agents declaram `memory: project` no frontmatter (completado no nivelamento de jul/2026). Ver "Memory opt-in (per-projeto)" abaixo.
 
-A skill em `skills/marketing-os/SKILL.md` é um **orquestrador** — ela mapeia briefings de usuário para `Agent(subagent_type: "mos-*")` calls. Os symlinks dentro de `skills/marketing-os/` (`assets`, `references`, `scripts`, `subagents`, `workflows`) apontam para os diretórios da raiz.
+A skill em `skills/marketing-os/SKILL.md` é um **orquestrador**. Ela usa `Agent(subagent_type: "mos-*")` no Claude Code e mapeia o mesmo dispatch para leitura Tier 1/Tier 2 no ChatGPT Work e no Codex. Os symlinks dentro de `skills/marketing-os/` (`assets`, `references`, `scripts`, `subagents`, `workflows`) apontam para os diretórios da raiz.
 
 ## Protocolo de dispatch (regra fundamental)
 
@@ -148,6 +148,20 @@ Antes de mexer em `.claude-plugin/plugin.json` ou `.claude-plugin/marketplace.js
 6. **Teste real de install:** rode `/plugin install marketing-os@mos-marketplace` num projeto novo. `claude plugin validate` é necessário mas não suficiente.
 
 CI tem job `validate-agents` que roda `python scripts/validate_agents.py --strict` em todo PR/push e bloqueia merge em frontmatter inválido, name collision ou knowledge ref quebrado. Pega regressão antes de chegar em release.
+
+### Distribuição universal ChatGPT Work e Codex
+
+O pacote em `.codex-plugin/plugin.json` é `skills-only`, conforme ADR-0004. Regras:
+
+1. `description` e `interface.longDescription` citam ChatGPT Work e Codex.
+2. `interface.shortDescription` tem no máximo 30 caracteres.
+3. `interface.category` e a categoria do marketplace usam um valor oficial do diretório universal. Para este plugin: `Business & Operations`.
+4. `interface.defaultPrompt` contém de 1 a 3 prompts, cada um em uma linha e com no máximo 128 caracteres.
+5. O manifesto não declara `apps` nem `mcpServers` enquanto a arquitetura continuar skills-only.
+6. Mudanças em `skills/`, scripts ou metadados exigem rebuild, `--check`, validador do pacote e uma conversa nova no ChatGPT Work e no Codex.
+7. Antes de copiar o pacote para um marketplace pessoal, execute `test ! -L <destino>` e compare o `realpath` do destino com `pwd -P`. O destino precisa ser uma pasta física fora do repositório. Não use `rsync --delete` enquanto esse preflight não estiver comprovado (F-CODEX-04).
+
+O guard canônico dessas regras está em `scripts/validate_codex_plugin.py` e `scripts/tests/test_chatgpt_distribution.py`. O nome histórico do script foi preservado para não quebrar CI e documentação externa.
 
 **Quando o install falha sem mensagem clara:**
 

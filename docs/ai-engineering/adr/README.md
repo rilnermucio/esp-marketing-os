@@ -9,5 +9,6 @@ Numeração sequencial, status `proposto | aceito | substituído por ADR-NNNN`. 
 | [0001](0001-arquitetura-two-tier.md) | Arquitetura two-tier com skill orquestradora | Aceito |
 | [0002](0002-defesa-em-tres-camadas.md) | Quality gates: defesa em 3 camadas com hook canônico | Aceito |
 | [0003](0003-gate-na-fronteira-de-output.md) | Contrato de qualidade na fronteira de output | Aceito |
+| [0004](0004-chatgpt-work-skills-only.md) | ChatGPT Work e Codex por pacote universal skills-only | Aceito |
 
 Template: [TEMPLATE.md](TEMPLATE.md)

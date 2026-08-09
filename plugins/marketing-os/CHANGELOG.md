@@ -7,6 +7,20 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
 
 ---
 
+## Unreleased
+
+### Added
+
+- Suporte explícito ao ChatGPT Work no orquestrador `skills-only`, com invocação por `@Marketing OS`, fallback sem subagent nativo e preservação do mapa Tier 1/Tier 2.
+- Guards de distribuição universal para limites públicos, categorias aceitas, starter prompts, fronteira skills-only e documentação de instalação.
+- Casos de roteamento ChatGPT para Avatar, USP, Oferta e pergunta conceitual sem dispatch.
+
+### Changed
+
+- Metadados do manifesto universal agora apresentam ChatGPT Work e Codex, usam categoria pública válida e respeitam o limite final da descrição curta.
+- README, AGENTS, rubrica de compatibilidade e checklist de release cobrem ChatGPT Work junto das superfícies Claude Code e Codex.
+- ADR-0004 registra a escolha de distribuir primeiro como plugin skills-only e adiar MCP até existir demanda por UI, estado remoto ou integrações autenticadas.
+
 ## v6.15.0 (2026-08-05)
 
 Esta release completa a trilha estratégica baseada em evidências, do Avatar à USP e à Oferta, e fortalece os gates de output, a CI e a distribuição Codex.

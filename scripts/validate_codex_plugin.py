@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the Marketing OS Codex plugin package."""
+"""Validate the Marketing OS universal ChatGPT Work and Codex package."""
 
 from __future__ import annotations
 
@@ -26,6 +26,36 @@ SEMVER_RE = re.compile(
     r"(?:-[0-9A-Za-z.-]+)?"
     r"(?:\+[0-9A-Za-z.-]+)?$"
 )
+
+PUBLIC_CATEGORIES = {
+    "Productivity",
+    "Creativity",
+    "Developer Tools",
+    "Business & Operations",
+    "Data & Analytics",
+    "Communication",
+    "Education & Research",
+    "Security",
+    "Finance",
+    "Healthcare",
+    "Travel",
+    "Entertainment",
+    "Other",
+}
+SKILL_FRONTMATTER_FIELDS = {
+    "name",
+    "description",
+    "allowed-tools",
+    "license",
+    "metadata",
+}
+
+
+def validate_max_length(
+    value: str | None, maximum: int, errors: list[str], label: str
+) -> None:
+    if value is not None and len(value) > maximum:
+        errors.append(f"{label} must be at most {maximum} characters")
 
 
 def load_json(path: Path, errors: list[str]) -> dict[str, Any] | None:
@@ -106,23 +136,78 @@ def validate_manifest(plugin_root: Path, errors: list[str]) -> None:
         if "url" in author:
             validate_url(author["url"], errors, "plugin.json.author.url")
 
+    for field in ("apps", "mcpServers"):
+        if field in manifest:
+            errors.append(f"skills-only Marketing OS package must not declare {field}")
+
     interface = manifest.get("interface")
     if not isinstance(interface, dict):
         errors.append("plugin.json.interface must be an object")
         return
 
+    public_text_limits = {
+        "displayName": 30,
+        "shortDescription": 30,
+        "longDescription": 4_000,
+        "developerName": 80,
+    }
+    for field, maximum in public_text_limits.items():
+        value = require_string(interface, field, errors, "plugin.json.interface")
+        validate_max_length(value, maximum, errors, f"plugin.json.interface.{field}")
+
+    category = require_string(interface, "category", errors, "plugin.json.interface")
+    if category is not None and category not in PUBLIC_CATEGORIES:
+        errors.append(
+            "plugin.json.interface.category must be one of "
+            f"{sorted(PUBLIC_CATEGORIES)}"
+        )
+
+    capabilities = interface.get("capabilities")
+    if capabilities is not None:
+        if not isinstance(capabilities, list):
+            errors.append("plugin.json.interface.capabilities must be a list")
+        else:
+            if len(capabilities) > 20:
+                errors.append(
+                    "plugin.json.interface.capabilities must contain at most 20 entries"
+                )
+            for index, capability in enumerate(capabilities):
+                if not isinstance(capability, str) or not capability.strip():
+                    errors.append(
+                        "plugin.json.interface.capabilities"
+                        f"[{index}] must be a non-empty string"
+                    )
+                elif len(capability) > 120:
+                    errors.append(
+                        "plugin.json.interface.capabilities"
+                        f"[{index}] must be at most 120 characters"
+                    )
+
     for field in (
-        "displayName",
-        "shortDescription",
-        "longDescription",
-        "developerName",
-        "category",
+        "websiteURL",
+        "privacyPolicyURL",
+        "termsOfServiceURL",
+        "supportURL",
     ):
-        require_string(interface, field, errors, "plugin.json.interface")
+        if field in interface:
+            validate_url(interface[field], errors, f"plugin.json.interface.{field}")
 
     prompts = interface.get("defaultPrompt")
     if not isinstance(prompts, list) or not prompts:
         errors.append("plugin.json.interface.defaultPrompt must be a non-empty list")
+    else:
+        if len(prompts) > 3:
+            errors.append(
+                "plugin.json.interface.defaultPrompt must contain at most 3 prompts"
+            )
+        for index, prompt in enumerate(prompts):
+            label = f"plugin.json.interface.defaultPrompt[{index}]"
+            if not isinstance(prompt, str) or not prompt.strip():
+                errors.append(f"{label} must be a non-empty string")
+                continue
+            if "\n" in prompt or "\r" in prompt:
+                errors.append(f"{label} must fit on one line")
+            validate_max_length(prompt, 128, errors, label)
 
 
 def validate_skill_frontmatter(skill_root: Path, errors: list[str]) -> None:
@@ -155,8 +240,63 @@ def validate_skill_frontmatter(skill_root: Path, errors: list[str]) -> None:
         errors.append(f"Skill {skill_root.name} frontmatter must be an object")
         return
 
+    unsupported = set(frontmatter) - SKILL_FRONTMATTER_FIELDS
+    if unsupported:
+        errors.append(
+            f"Skill {skill_root.name} has unsupported frontmatter fields: "
+            f"{sorted(unsupported)}"
+        )
+
     require_string(frontmatter, "name", errors, f"skill {skill_root.name}")
     require_string(frontmatter, "description", errors, f"skill {skill_root.name}")
+
+
+def validate_skill_agent_metadata(skill_root: Path, errors: list[str]) -> None:
+    metadata_path = skill_root / "agents" / "openai.yaml"
+    if not metadata_path.exists():
+        return
+    if yaml is None:
+        errors.append("PyYAML is required to validate skill agent metadata")
+        return
+    try:
+        metadata = yaml.safe_load(metadata_path.read_text(encoding="utf-8"))
+    except yaml.YAMLError as exc:
+        errors.append(f"Skill {skill_root.name} agents/openai.yaml is invalid: {exc}")
+        return
+    if not isinstance(metadata, dict):
+        errors.append(f"Skill {skill_root.name} agents/openai.yaml must be an object")
+        return
+
+    interface = metadata.get("interface")
+    if not isinstance(interface, dict):
+        errors.append(f"Skill {skill_root.name} agents/openai.yaml needs interface")
+    else:
+        require_string(
+            interface,
+            "display_name",
+            errors,
+            f"skill {skill_root.name} agents/openai.yaml.interface",
+        )
+        require_string(
+            interface,
+            "short_description",
+            errors,
+            f"skill {skill_root.name} agents/openai.yaml.interface",
+        )
+
+    policy = metadata.get("policy")
+    if not isinstance(policy, dict):
+        errors.append(f"Skill {skill_root.name} agents/openai.yaml needs policy")
+        return
+    if "products" in policy:
+        errors.append(
+            f"Skill {skill_root.name} policy.products must be omitted for universal "
+            "host compatibility"
+        )
+    if policy.get("allow_implicit_invocation") is not True:
+        errors.append(
+            f"Skill {skill_root.name} policy.allow_implicit_invocation must be true"
+        )
 
 
 def validate_skills(plugin_root: Path, errors: list[str]) -> None:
@@ -172,6 +312,7 @@ def validate_skills(plugin_root: Path, errors: list[str]) -> None:
 
     for skill_root in sorted(skill_dirs):
         validate_skill_frontmatter(skill_root, errors)
+        validate_skill_agent_metadata(skill_root, errors)
 
 
 def validate_symlinks(plugin_root: Path, errors: list[str]) -> None:
@@ -228,20 +369,49 @@ def validate_marketplace(repo_root: Path, errors: list[str]) -> None:
             errors.append('marketing-os policy.installation must be "AVAILABLE"')
         if policy.get("authentication") != "ON_INSTALL":
             errors.append('marketing-os policy.authentication must be "ON_INSTALL"')
+        if "products" in policy:
+            errors.append("marketing-os marketplace policy must not gate products")
+
+    if entry.get("category") not in PUBLIC_CATEGORIES:
+        errors.append(
+            "marketing-os marketplace category must be one of "
+            f"{sorted(PUBLIC_CATEGORIES)}"
+        )
+
+
+def find_repo_root(plugin_root: Path) -> Path | None:
+    """Find the repository that owns a source or generated plugin root."""
+    for candidate in (plugin_root, *plugin_root.parents):
+        marketplace = candidate / ".agents" / "plugins" / "marketplace.json"
+        if marketplace.is_file():
+            return candidate
+    return None
 
 
 def validate(plugin_root: Path) -> list[str]:
+    plugin_root = plugin_root.resolve()
     errors: list[str] = []
     validate_manifest(plugin_root, errors)
     validate_skills(plugin_root, errors)
     validate_symlinks(plugin_root, errors)
-    validate_marketplace(plugin_root.parents[1], errors)
+    repo_root = find_repo_root(plugin_root)
+    if repo_root is None:
+        errors.append(
+            "Could not locate repository marketplace at "
+            '".agents/plugins/marketplace.json" from plugin root or its parents'
+        )
+    else:
+        validate_marketplace(repo_root, errors)
     return errors
 
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("plugin_root", type=Path)
+    parser.add_argument(
+        "plugin_root",
+        type=Path,
+        help="Repository root or generated plugins/marketing-os package root.",
+    )
     return parser.parse_args()
 
 
@@ -250,11 +420,11 @@ def main() -> int:
     plugin_root = args.plugin_root.resolve()
     errors = validate(plugin_root)
     if errors:
-        print("Codex plugin validation failed:")
+        print("ChatGPT Work and Codex plugin validation failed:")
         for error in errors:
             print(f"- {error}")
         return 1
-    print(f"Codex plugin validation passed: {plugin_root}")
+    print(f"ChatGPT Work and Codex plugin validation passed: {plugin_root}")
     return 0
 
 

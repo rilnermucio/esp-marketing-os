@@ -65,7 +65,7 @@ Receita completa em [QUALITY-GATES.md](QUALITY-GATES.md) §"Como atualizar sem q
 | Smoke (exige tokens/sessão) | `python -m pytest scripts/tests/ -m smoke -v` |
 | Validação de agents | `python scripts/validate_agents.py --strict` |
 | Manifests Claude | `claude plugin validate .` |
-| Pacote Codex | `python scripts/build_codex_plugin.py && python scripts/validate_codex_plugin.py` |
+| Pacote ChatGPT Work/Codex | `python scripts/build_codex_plugin.py && python scripts/validate_codex_plugin.py plugins/marketing-os` |
 | Lint (CI bloqueia) | `black --check scripts/ && flake8 scripts/` |
 | Routing evals | `python -m pytest scripts/tests/test_routing_evals.py -q` |
 
