@@ -7,9 +7,11 @@ Dados consumidos por testes determinísticos em `scripts/tests/`. Editar um arqu
 | [routing-cases.json](routing-cases.json) | `scripts/tests/test_routing_evals.py` | [../ROUTING-EVALS.md](../ROUTING-EVALS.md) |
 | [copy-output-cases.json](copy-output-cases.json) | `scripts/tests/test_copy_output_evals.py` | [copy-output-baseline.md](copy-output-baseline.md) |
 | [baselines/copy/](baselines/copy/) | (artefatos de referência par-a-par; comparados via `scripts/copy_output_eval.py pair`) | [copy-output-baseline.md](copy-output-baseline.md) |
+| [agent-output-cases.json](agent-output-cases.json) | `scripts/tests/test_agent_output_evals.py` | [agent-output-baseline.md](agent-output-baseline.md) |
+| [baselines/social/](baselines/social/), [baselines/email/](baselines/email/), [baselines/ads/](baselines/ads/) | (referências par a par de mos-social, mos-email e mos-ads) | [agent-output-baseline.md](agent-output-baseline.md) |
 | [`scripts/evals/output-profiles.json`](../../../scripts/evals/output-profiles.json) | `scripts/tests/test_copy_output_evals.py` | [quality-anchors.md](quality-anchors.md) |
 
-O arquivo de perfis fica sob `scripts/evals/` para entrar no pacote Codex. Ele define agent, tipo do quality gate e conjunto de critérios para copy, e-mail, anúncios, oferta, funil, SEO e vídeo. A CLI mantém os aliases legados de `--formato` e também aceita `--profile`.
+O arquivo de perfis fica sob `scripts/evals/` para entrar no pacote Codex. Ele define agent, tipo do quality gate e conjunto de critérios para copy, e-mail, anúncios, social, oferta, funil, SEO e vídeo. A CLI mantém os aliases legados de `--formato` e também aceita `--profile`.
 
 Formato dos routing cases: `id` (RT-NNN), `prompt` (briefing PT-BR literal), `expected_command` (nome do command sem barra, ou null), `expected_agents` (lista de `mos-*`), `dispatch` (`simples` | `paralelo` | `sequencial` | `nenhum`), `min_output_fields` (o que a resposta precisa conter), `detects` (IDs da FAILURE-TAXONOMY), `notes` (opcional).
 
