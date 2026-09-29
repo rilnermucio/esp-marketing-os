@@ -1266,6 +1266,20 @@ DEZEMBRO
 3. **Formatos nativos** - Performam melhor
 4. **Timing diferente** - Espaçar publicações
 
+### Reaproveitamento 1→N: de uma fonte pilar para várias peças
+
+Método usado pelo `/reaproveitar`. A fonte pilar é uma live, aula, podcast, vídeo longo ou artigo.
+
+1. **Mapa da fonte antes de escrever**: tese central em uma frase, 5 a 10 ideias-chave, falas fortes, números e provas, histórias. Em vídeo ou áudio, anote o tempo de cada trecho para virar corte.
+2. **Uma ideia por peça**: a tese é o fio condutor; o ângulo e o gancho mudam a cada peça.
+3. **Formato nativo** por plataforma (tabela acima), nunca a mesma peça colada em todas.
+4. **Ordem de publicação**: peças curtas primeiro validam os ganchos; a peça longa ou a oferta recolhe o interesse. Em lançamento de conteúdo longo, a ordem se inverte e as curtas repercutem a longa.
+5. **Voz e prova preservadas**: use as falas e os números da fonte, com a origem; nada de inventar dado para a peça derivada.
+6. **Aberturas diferentes**: a mesma frase de abertura em todas as peças canibaliza atenção e denuncia conteúdo em série.
+7. **Um CTA por peça**, apontando para a fonte ou para a oferta.
+
+Matriz de saída: ideia-chave, formato, plataforma, gancho, CTA e data sugerida.
+
 ## Métricas e Analytics Avançados
 
 ### Framework de Métricas: O Modelo AARRR Adaptado

@@ -135,6 +135,7 @@ O nicho é detectado pela memória do cliente, pela pasta atual ou pela primeira
 | Perfil de marca do projeto | `/configurar-marca` |
 | Um post, carrossel ou calendário | `/criar-post`, `/criar-carrossel`, `/criar-calendario` |
 | Várias peças de uma vez | `/batch` |
+| Transformar uma live, aula ou artigo em várias peças | `/reaproveitar` |
 | Email ou sequência | `/criar-email`, `/criar-sequencia` |
 | Anúncio | `/criar-anuncio` |
 | Vídeo, roteiro, thumbnail ou Reels produzido | `/criar-video`, `/gerar-thumbnail`, `/produzir-reels` |

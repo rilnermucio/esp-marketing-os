@@ -743,6 +743,26 @@
       "detects": [
         "F-ROUTE-02"
       ]
+    },
+    {
+      "id": "RT-038",
+      "prompt": "fiz uma live de 1 hora sobre precificação, quero transformar em posts, cortes de reels e uma newsletter",
+      "expected_command": "reaproveitar",
+      "expected_agents": [
+        "mos-social",
+        "mos-video",
+        "mos-email"
+      ],
+      "dispatch": "sequencial",
+      "min_output_fields": [
+        "mapa da fonte com tese central",
+        "cortes com tempo de início e fim",
+        "matriz ideia-formato-plataforma"
+      ],
+      "detects": [
+        "F-ROUTE-02",
+        "F-DISP-01"
+      ]
     }
   ]
 }

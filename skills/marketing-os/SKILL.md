@@ -395,6 +395,7 @@ Tabela canônica de roteamento por command; o `/mo` usa esta tabela. Quando o us
 | Carrossel | `/criar-carrossel` | Estrutura, texto por slide e design |
 | Calendário editorial | `/criar-calendario` | |
 | Várias peças de uma vez | `/batch` | Variações de hook, ângulo e framework |
+| Reaproveitar uma live, aula, podcast ou artigo em várias peças | `/reaproveitar` | Mapa da fonte primeiro, depois peças por formato |
 | Um email ou newsletter | `/criar-email` | Inclui sequências só de email (boas-vindas, nutrição, carrinho) |
 | Sequência coordenada entre canais | `/criar-sequencia` | Email + social + ads com mensagem única |
 | Anúncio | `/criar-anuncio` | Copy e estrutura; publicar é `/publicar-anuncio` |
