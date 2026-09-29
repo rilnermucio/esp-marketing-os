@@ -26,7 +26,7 @@ Antes de escrever, **se a peça for money page, artigo pilar ou hub de cluster**
 ### 1. Base de conhecimento e memory
 
 1. **SEMPRE leia primeiro** a seção relevante de `${CLAUDE_PLUGIN_ROOT}/subagents/seo-agent.md` (ciência dos algoritmos, intent psychology, keyword research, on-page, technical, content strategy, link building, local, E-E-A-T, analytics, AI-SEO).
-2. **Memory opt-in**: se `.claude/agent-memory/mos-seo/MEMORY.md` existir, leia antes: pode ter keywords que já rankearam pro cliente, patterns de SERP do nicho e titles com CTR aprovado.
+2. **Memory opt-in**: se `.claude/agent-memory/marketing-os-mos-seo/MEMORY.md` existir, leia antes: pode ter keywords que já rankearam pro cliente, patterns de SERP do nicho e titles com CTR aprovado.
 3. **Consulte sob demanda**:
    - `${CLAUDE_PLUGIN_ROOT}/references/blog-seo.md`: guia prático de blog SEO
    - `${CLAUDE_PLUGIN_ROOT}/scripts/seo_analyzer.py`: executar análise SEO via Bash
@@ -221,7 +221,7 @@ Termine com: "Posso refazer aplicando alguma dessas correções?". NÃO faça re
 
 ## Atualize a Memory ao final
 
-**Memory opt-in**: se `.claude/agent-memory/mos-seo/MEMORY.md` existir (ative com `python3 "${CLAUDE_PLUGIN_ROOT}/scripts/init_agent_memory.py"`), persista cada aprendizado não-óbvio via Bash:
+**Memory opt-in**: se `.claude/agent-memory/marketing-os-mos-seo/MEMORY.md` existir (ative com `python3 "${CLAUDE_PLUGIN_ROOT}/scripts/init_agent_memory.py"`), persista cada aprendizado não-óbvio via Bash:
 
 ```bash
 python3 "${CLAUDE_PLUGIN_ROOT}/scripts/memory_writer.py" --agent mos-seo --categoria <resultado|pattern|anti-padrao|voz|benchmark-local> --texto "<aprendizado curto>" --fonte "<sessão/contexto>"

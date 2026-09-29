@@ -28,7 +28,7 @@ python -m pytest scripts/tests/test_subagents.py::test_subagent_files_exist -v
 python scripts/validate_agents.py
 python scripts/validate_agents.py --strict   # falha em warnings também
 
-# Bootstrap memory opt-in (cria .claude/agent-memory/mos-*/MEMORY.md no projeto atual)
+# Bootstrap memory opt-in (cria .claude/agent-memory/marketing-os-mos-*/MEMORY.md no projeto atual)
 python3 scripts/init_agent_memory.py            # todos os agents com memory: project
 python3 scripts/init_agent_memory.py mos-copy   # apenas um agent
 
@@ -119,11 +119,11 @@ Caminhos em runtime (ADR-0005): instalado, o plugin roda com a sessão no projet
 
 ## Memory opt-in (per-projeto)
 
-Agents com `memory: project` no frontmatter persistem aprendizado por projeto em `.claude/agent-memory/mos-*/MEMORY.md` (path canônico, padronizado na v6.5.0). O bootstrap é explícito: o usuário roda `python3 scripts/init_agent_memory.py` no projeto pra criar os arquivos. Sem o bootstrap, a instrução do agent fica condicional (só lê se o diretório existir), evitando ruído em projetos novos.
+Agents com `memory: project` no frontmatter persistem aprendizado por projeto em `.claude/agent-memory/marketing-os-mos-*/MEMORY.md`. Esse é o diretório nativo que o Claude Code usa para agent de plugin (`<plugin>-<agent>`): a plataforma injeta o início do `MEMORY.md` no contexto do agent. Até 2026-09 o plugin usava `mos-*/`, que a plataforma não lê em agent de plugin; `init_agent_memory.py` e `memory_writer.py` migram esse legado sem perda (ADR-0006). O bootstrap continua explícito e idempotente: `python3 scripts/init_agent_memory.py` cria os arquivos e migra o legado.
 
 Regras pra mexer:
 
-1. Pra adicionar memory a um agent novo: declarar `memory: project` no frontmatter e referenciar `.claude/agent-memory/<nome-do-agent>/MEMORY.md` em modo condicional no system prompt.
+1. Pra adicionar memory a um agent novo: declarar `memory: project` no frontmatter, incluir o agent em `AGENTS_WITH_MEMORY` (`scripts/init_agent_memory.py`) e referenciar `.claude/agent-memory/marketing-os-<nome-do-agent>/MEMORY.md` no system prompt. Aprendizado se grava só via `memory_writer.py` (schema e limites anti-poluição).
 2. Não escrever no diretório de memory dentro do plugin install dir. É sempre relativo ao CWD do projeto do usuário.
 3. `init_agent_memory.py` é idempotente: roda quantas vezes quiser, não sobrescreve conteúdo existente.
 

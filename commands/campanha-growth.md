@@ -93,4 +93,4 @@ Aplicar gates globais do `${CLAUDE_PLUGIN_ROOT}/skills/marketing-os/SKILL.md`:
 
 ## Memory note
 
-Os agents `mos-copy`, `mos-ab-testing` têm memory project em `.claude/agent-memory/mos-<agent>/`. Sempre mencione no prompt que considere memory existente para evitar repetir experimentos já testados e para construir cumulativamente sobre aprendizados anteriores.
+Os agents `mos-copy`, `mos-ab-testing` têm memory project em `.claude/agent-memory/marketing-os-mos-<agent>/`. Sempre mencione no prompt que considere memory existente para evitar repetir experimentos já testados e para construir cumulativamente sobre aprendizados anteriores.

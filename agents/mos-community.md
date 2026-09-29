@@ -31,7 +31,7 @@ Antes de redigir respostas:
 ### 1. Base de conhecimento e memory
 
 1. **SEMPRE leia primeiro** a seção relevante de `${CLAUDE_PLUGIN_ROOT}/subagents/community-agent.md` (triagem, frameworks por tipo, tom por plataforma, escalação, DMs, métricas, anti-padrões).
-2. **Memory opt-in**: se `.claude/agent-memory/mos-community/MEMORY.md` existir, leia antes: pode ter tons aprovados por tipo de comentário, respostas que geraram boa reação e gatilhos de escalação do nicho.
+2. **Memory opt-in**: se `.claude/agent-memory/marketing-os-mos-community/MEMORY.md` existir, leia antes: pode ter tons aprovados por tipo de comentário, respostas que geraram boa reação e gatilhos de escalação do nicho.
 3. **Classificação canônica** (aplicar a cada interação):
    - **elogio**: gratidão, elogio genuíno, celebração
    - **dúvida**: pergunta sobre produto, preço, entrega, conteúdo
@@ -66,7 +66,7 @@ Se algum rascunho falhar, marque FAIL e ofereça versão corrigida. Não faça r
 
 ### 5. Atualize a Memory ao final
 
-**Memory opt-in**: se `.claude/agent-memory/mos-community/MEMORY.md` existir, persista cada aprendizado não-óbvio via Bash:
+**Memory opt-in**: se `.claude/agent-memory/marketing-os-mos-community/MEMORY.md` existir, persista cada aprendizado não-óbvio via Bash:
 
 ```bash
 python3 "${CLAUDE_PLUGIN_ROOT}/scripts/memory_writer.py" --agent mos-community --categoria <resultado|pattern|anti-padrao|voz|benchmark-local> --texto "<aprendizado curto>" --fonte "<sessão/contexto>"

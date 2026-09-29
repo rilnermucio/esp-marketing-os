@@ -99,10 +99,15 @@ class TestCommandStructure:
 
     @pytest.mark.parametrize("cmd", get_all_commands(), ids=lambda p: p.name)
     def test_does_not_reference_legacy_memory_paths(self, cmd: Path) -> None:
+        """Memória de agent de plugin mora em marketing-os-mos-* (ADR-0006).
+
+        Até 2026-09 este guard exigia o contrário (mos-*), o caminho que a
+        plataforma não lê para agent de plugin.
+        """
         content = cmd.read_text(encoding="utf-8")
-        assert ".claude/agent-memory/marketing-os-" not in content, (
-            f"{cmd.name} references the legacy marketing-os-* memory path; "
-            "use .claude/agent-memory/mos-*"
+        assert ".claude/agent-memory/mos-" not in content, (
+            f"{cmd.name} references the legacy mos-* memory path; "
+            "use .claude/agent-memory/marketing-os-mos-*"
         )
 
 

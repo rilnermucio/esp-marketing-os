@@ -82,7 +82,7 @@ Apresente critique LOGO ABAIXO da estrutura. Termine com: "Vale ajustar antes de
 
 **OBRIGATÓRIO em projetos de infoproduto** (não só rascunho, projeto real):
 
-**Memory opt-in**: se `.claude/agent-memory/mos-infoproduct/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), persista cada aprendizado não-óbvio via Bash:
+**Memory opt-in**: se `.claude/agent-memory/marketing-os-mos-infoproduct/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), persista cada aprendizado não-óbvio via Bash:
 
 ```bash
 python3 scripts/memory_writer.py --agent mos-infoproduct --categoria <resultado|pattern|anti-padrao|voz|benchmark-local> --texto "<aprendizado curto>" --fonte "<sessão/contexto>"

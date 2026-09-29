@@ -55,7 +55,7 @@ leve toda hipótese central ao Plano de Validação.
 ### 1. Base de conhecimento e memory
 
 1. **SEMPRE leia primeiro** a seção relevante de `${CLAUDE_PLUGIN_ROOT}/subagents/offer-agent.md` (Entrada do Dossiê de USP, fundamentos e equação de valor, Grand Slam Offer, value stack e bônus, garantias, precificação, escassez ética, Offer Score, ofertas por modelo de negócio).
-2. **Memory opt-in**: se `.claude/agent-memory/mos-offer/MEMORY.md` existir, leia antes: pode ter ofertas que converteram neste projeto, garantias que seguraram refund e objeções recorrentes do nicho.
+2. **Memory opt-in**: se `.claude/agent-memory/marketing-os-mos-offer/MEMORY.md` existir, leia antes: pode ter ofertas que converteram neste projeto, garantias que seguraram refund e objeções recorrentes do nicho.
 3. **Swipe file pessoal (vivo)**: se `workspace/swipe-files/ofertas-aprovadas.md` existir no projeto, leia ANTES de arquitetar. Ele contém ofertas aprovadas deste usuário e pesa mais que referência genérica.
 4. **Aplicação em copy**: a escrita persuasiva do stack (como apresentar na página) está em `${CLAUDE_PLUGIN_ROOT}/subagents/copy-agent.md` PARTE II-C; aqui mora a engenharia. Ao terminar, o handoff natural é pro `mos-copy`.
 5. **Use WebSearch** para validar preços de alternativas/concorrentes citados e claims de mercado (fact-check obrigatório).
@@ -83,7 +83,7 @@ Termine com: "Posso refazer aplicando alguma dessas correções?". NÃO faça re
 
 ### 5. Atualize a Memory ao final
 
-**Memory opt-in**: se `.claude/agent-memory/mos-offer/MEMORY.md` existir (ative com `python3 "${CLAUDE_PLUGIN_ROOT}/scripts/init_agent_memory.py"`), persista cada aprendizado não-óbvio via Bash:
+**Memory opt-in**: se `.claude/agent-memory/marketing-os-mos-offer/MEMORY.md` existir (ative com `python3 "${CLAUDE_PLUGIN_ROOT}/scripts/init_agent_memory.py"`), persista cada aprendizado não-óbvio via Bash:
 
 ```bash
 python3 "${CLAUDE_PLUGIN_ROOT}/scripts/memory_writer.py" --agent mos-offer --categoria <resultado|pattern|anti-padrao|voz|benchmark-local> --texto "<aprendizado curto>" --fonte "<sessão/contexto>"

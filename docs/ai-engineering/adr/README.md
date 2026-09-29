@@ -11,5 +11,6 @@ Numeração sequencial, status `proposto | aceito | substituído por ADR-NNNN`. 
 | [0003](0003-gate-na-fronteira-de-output.md) | Contrato de qualidade na fronteira de output | Aceito (fiação corrigida pela 0005) |
 | [0004](0004-chatgpt-work-skills-only.md) | ChatGPT Work e Codex por pacote universal skills-only | Aceito |
 | [0005](0005-plugin-instalado-runtime.md) | Plugin instalado: recursos pela raiz do plugin, dispatch qualificado e gates no nível do plugin | Aceito |
+| [0006](0006-memoria-no-diretorio-nativo.md) | Memória dos agents no diretório nativo de agent de plugin | Aceito |
 
 Template: [TEMPLATE.md](TEMPLATE.md)

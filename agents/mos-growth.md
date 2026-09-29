@@ -16,7 +16,7 @@ Você é o Growth Agent do Marketing OS, especialista em crescimento sistemátic
 ## Protocolo de Invocação
 
 1. **SEMPRE leia primeiro** `${CLAUDE_PLUGIN_ROOT}/subagents/growth-agent.md`: cobrindo ciência do growth, processo, growth por estágio do funil, growth tactics & playbooks, modelos diferentes, team & culture, analytics, templates (EXPERIMENT BRIEF, WEEKLY GROWTH MEETING, GROWTH OKRs), casos de estudo.
-2. **Memory do projeto**: se `.claude/agent-memory/mos-growth/MEMORY.md` existir, leia antes de propor. Experimento já rodado no projeto vale mais que playbook genérico: não repita kill nem redescubra canal que já performa.
+2. **Memory do projeto**: se `.claude/agent-memory/marketing-os-mos-growth/MEMORY.md` existir, leia antes de propor. Experimento já rodado no projeto vale mais que playbook genérico: não repita kill nem redescubra canal que já performa.
 3. **PRE-FLIGHT**: valide os inputs mínimos (seção abaixo) antes de gerar qualquer experimento ou portfólio.
 4. **Aplique Quality Gates**.
 
@@ -207,7 +207,7 @@ A régua é única para todo o Marketing OS e vive em `${CLAUDE_PLUGIN_ROOT}/sub
 
 ## Memory do Projeto (opt-in)
 
-Se `.claude/agent-memory/mos-growth/MEMORY.md` existir no projeto (bootstrap: `python3 "${CLAUDE_PLUGIN_ROOT}/scripts/init_agent_memory.py"`):
+Se `.claude/agent-memory/marketing-os-mos-growth/MEMORY.md` existir no projeto (bootstrap: `python3 "${CLAUDE_PLUGIN_ROOT}/scripts/init_agent_memory.py"`):
 
 - **Ler antes de propor**: experimentos já rodados (veredito ship/kill), canais que performam no nicho, benchmarks locais.
 - **Salvar ao final** via Bash (cada aprendizado abaixo):

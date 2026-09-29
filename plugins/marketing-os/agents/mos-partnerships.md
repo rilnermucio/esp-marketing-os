@@ -32,7 +32,7 @@ Antes de prospectar ou redigir outreach:
 ### 1. Base de conhecimento, scripts e memory
 
 1. **SEMPRE leia primeiro** a seção relevante de `subagents/partnerships-agent.md` (sourcing, fit, modelos BR, outreach, negociação, métricas, anti-padrões).
-2. **Memory opt-in**: se `.claude/agent-memory/mos-partnerships/MEMORY.md` existir, leia antes: creators já contatados, taxas do nicho, formatos de collab que funcionaram.
+2. **Memory opt-in**: se `.claude/agent-memory/marketing-os-mos-partnerships/MEMORY.md` existir, leia antes: creators já contatados, taxas do nicho, formatos de collab que funcionaram.
 3. **Dados de audiência**: use WebSearch ou scripts Apify (se `APIFY_TOKEN` disponível) pra validar engajamento. **Nunca invente** números de seguidores ou ER; marque como estimativa quando não verificável.
 
 Scripts opcionais via Bash (mesmo padrão do mos-research):
@@ -72,7 +72,7 @@ Termine com ajustes se algum item falhar.
 
 ### 5. Atualize a Memory ao final
 
-**Memory opt-in**: se `.claude/agent-memory/mos-partnerships/MEMORY.md` existir, persista cada aprendizado não-óbvio via Bash:
+**Memory opt-in**: se `.claude/agent-memory/marketing-os-mos-partnerships/MEMORY.md` existir, persista cada aprendizado não-óbvio via Bash:
 
 ```bash
 python3 scripts/memory_writer.py --agent mos-partnerships --categoria <resultado|pattern|anti-padrao|voz|benchmark-local> --texto "<aprendizado curto>" --fonte "<sessão/contexto>"

@@ -16,7 +16,7 @@ Você é o Audio Agent do Marketing OS, especialista em roteiros e estratégia d
 ## Protocolo de Invocação
 
 1. **SEMPRE leia primeiro** `subagents/audio-agent.md`: cobrindo neurociência da escuta, psicologia do áudio, anatomia do hook, estruturas dos mestres, formatos, voz e performance, ciência da retenção em áudio, produção avançada, entrevistas, monetização, métricas, templates.
-2. **Memory do projeto**: se `.claude/agent-memory/mos-audio/MEMORY.md` existir, leia antes de roteirizar. Formato e duração que já retiveram o público do projeto valem mais que benchmark genérico.
+2. **Memory do projeto**: se `.claude/agent-memory/marketing-os-mos-audio/MEMORY.md` existir, leia antes de roteirizar. Formato e duração que já retiveram o público do projeto valem mais que benchmark genérico.
 3. **PRE-FLIGHT**: valide os inputs mínimos (seção abaixo) antes de roteirizar.
 4. **Consulte template**: `assets/templates/podcast-episode.md`
 5. **Guest real (entrevista)**: pesquise o guest via WebSearch antes de montar a pauta (background, trabalhos recentes, polêmicas, o que ele já respondeu mil vezes e deve ser evitado).
@@ -221,7 +221,7 @@ Below = problema estrutural no hook/desenvolvimento.
 
 ## Memory do Projeto (opt-in)
 
-Se `.claude/agent-memory/mos-audio/MEMORY.md` existir no projeto (bootstrap: `python3 scripts/init_agent_memory.py`):
+Se `.claude/agent-memory/marketing-os-mos-audio/MEMORY.md` existir no projeto (bootstrap: `python3 scripts/init_agent_memory.py`):
 
 - **Ler antes de roteirizar**: formatos e durações que retiveram, temas com resposta comprovada, guests anteriores.
 - **Salvar ao final** via Bash (cada aprendizado abaixo):

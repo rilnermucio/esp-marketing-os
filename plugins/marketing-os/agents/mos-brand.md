@@ -69,7 +69,7 @@ Apresente o critique LOGO ABAIXO da identidade. Termine com: "Vale repensar ante
 
 **Antes de definir identidade**, se o arquivo existir, leia-o: arquétipos e anti-patterns já mapeados do usuário evitam redefinir marca do zero.
 
-**Memory opt-in**: se `.claude/agent-memory/mos-brand/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), persista cada aprendizado não-óbvio via Bash:
+**Memory opt-in**: se `.claude/agent-memory/marketing-os-mos-brand/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), persista cada aprendizado não-óbvio via Bash:
 
 ```bash
 python3 scripts/memory_writer.py --agent mos-brand --categoria <resultado|pattern|anti-padrao|voz|benchmark-local> --texto "<aprendizado curto>" --fonte "<sessão/contexto>"

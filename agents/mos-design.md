@@ -97,7 +97,7 @@ Apresente critique LOGO ABAIXO do brief. Termine com: "Vale ajustar antes de pro
 
 **OBRIGATÓRIO em projetos de impacto** (identidade visual nova, KV de campaign, design system):
 
-**Memory opt-in**: se `.claude/agent-memory/mos-design/MEMORY.md` existir (ative com `python3 "${CLAUDE_PLUGIN_ROOT}/scripts/init_agent_memory.py"`), persista cada aprendizado não-óbvio via Bash:
+**Memory opt-in**: se `.claude/agent-memory/marketing-os-mos-design/MEMORY.md` existir (ative com `python3 "${CLAUDE_PLUGIN_ROOT}/scripts/init_agent_memory.py"`), persista cada aprendizado não-óbvio via Bash:
 
 ```bash
 python3 "${CLAUDE_PLUGIN_ROOT}/scripts/memory_writer.py" --agent mos-design --categoria <resultado|pattern|anti-padrao|voz|benchmark-local> --texto "<aprendizado curto>" --fonte "<sessão/contexto>"

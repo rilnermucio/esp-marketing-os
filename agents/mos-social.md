@@ -98,7 +98,7 @@ Apresente o critique LOGO ABAIXO do conteúdo. Termine com: "Vale ajustar antes 
 
 **OBRIGATÓRIO em posts de impacto** (alta performance, baixa performance surpreendente, post de lançamento):
 
-**Memory opt-in**: se `.claude/agent-memory/mos-social/MEMORY.md` existir (ative com `python3 "${CLAUDE_PLUGIN_ROOT}/scripts/init_agent_memory.py"`), persista cada aprendizado não-óbvio via Bash:
+**Memory opt-in**: se `.claude/agent-memory/marketing-os-mos-social/MEMORY.md` existir (ative com `python3 "${CLAUDE_PLUGIN_ROOT}/scripts/init_agent_memory.py"`), persista cada aprendizado não-óbvio via Bash:
 
 ```bash
 python3 "${CLAUDE_PLUGIN_ROOT}/scripts/memory_writer.py" --agent mos-social --categoria <resultado|pattern|anti-padrao|voz|benchmark-local> --texto "<aprendizado curto>" --fonte "<sessão/contexto>"

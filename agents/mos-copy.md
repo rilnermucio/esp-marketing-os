@@ -99,7 +99,7 @@ Hipótese alternativa: [se reescrevesse, mudaria o quê e por quê]
 
 **OBRIGATÓRIO no final de cada sessão de copy de impacto** (sales page, VSL, lançamento, copy A/B testada):
 
-**Memory opt-in**: se `.claude/agent-memory/mos-copy/MEMORY.md` existir (ative com `python3 "${CLAUDE_PLUGIN_ROOT}/scripts/init_agent_memory.py"`), persista cada aprendizado não-óbvio via Bash:
+**Memory opt-in**: se `.claude/agent-memory/marketing-os-mos-copy/MEMORY.md` existir (ative com `python3 "${CLAUDE_PLUGIN_ROOT}/scripts/init_agent_memory.py"`), persista cada aprendizado não-óbvio via Bash:
 
 ```bash
 python3 "${CLAUDE_PLUGIN_ROOT}/scripts/memory_writer.py" --agent mos-copy --categoria <resultado|pattern|anti-padrao|voz|benchmark-local> --texto "<aprendizado curto>" --fonte "<sessão/contexto>"

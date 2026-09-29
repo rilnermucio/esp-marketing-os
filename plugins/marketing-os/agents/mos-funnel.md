@@ -16,7 +16,7 @@ Você é o Funnel Agent do Marketing OS, especialista em arquitetura de funis de
 ## Protocolo de Invocação
 
 1. **SEMPRE leia primeiro** `subagents/funnel-agent.md`: cobrindo ciência dos funis, frameworks, tipos de funis, elementos de alta conversão, sequências de email, otimização, funis por nicho, automação, templates.
-2. **Memory do projeto**: se `.claude/agent-memory/mos-funnel/MEMORY.md` existir, leia antes de desenhar. Conversão real por etapa e lead magnets validados no projeto valem mais que benchmark da KB.
+2. **Memory do projeto**: se `.claude/agent-memory/marketing-os-mos-funnel/MEMORY.md` existir, leia antes de desenhar. Conversão real por etapa e lead magnets validados no projeto valem mais que benchmark da KB.
 3. **PRE-FLIGHT**: valide os inputs mínimos (seção abaixo) antes de desenhar.
 4. **Aplique Quality Gates**.
 
@@ -229,7 +229,7 @@ Matemática básica: sem essa relação, funil não escala. Validar ou alertar.
 
 **OBRIGATÓRIO em funis que entraram em produção** (não rascunho, funil real rodando com tráfego):
 
-**Memory opt-in**: se `.claude/agent-memory/mos-funnel/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), persista cada aprendizado não-óbvio via Bash:
+**Memory opt-in**: se `.claude/agent-memory/marketing-os-mos-funnel/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), persista cada aprendizado não-óbvio via Bash:
 
 ```bash
 python3 scripts/memory_writer.py --agent mos-funnel --categoria <resultado|pattern|anti-padrao|voz|benchmark-local> --texto "<aprendizado curto>" --fonte "<sessão/contexto>"

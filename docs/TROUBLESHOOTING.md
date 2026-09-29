@@ -109,41 +109,34 @@ Lista todas as cópias do Marketing OS (cache, sincronizadas, registros de insta
 
 ### Memory de cliente caiu na pasta errada
 
-**Sintoma:** Você esperava memory em `<projeto-cliente>/.claude/agent-memory/` mas ela apareceu em outra pasta (ex: no próprio repo do marketing-os).
+**Sintoma:** você esperava memory em `<projeto-cliente>/.claude/agent-memory/` mas ela apareceu em outra pasta (ex: no próprio repo do marketing-os).
 
-**Causa:** Memory é escopada pelo CWD do Claude Code quando o agent foi invocado. Se você rodou `/marketing-os` enquanto a CWD era a pasta do plugin (não do cliente), a memory foi salva lá.
+**Causa:** memory é escopada pelo diretório em que a sessão do Claude Code roda. Se você rodou o Marketing OS com a sessão aberta na pasta do plugin, a memory foi salva lá.
 
-**Solução:** Migre manualmente:
+**Solução:** mova a pasta para o projeto certo, mantendo o nome nativo:
 ```bash
-# Cria pasta destino correta (note o "marketing-os-" prefix quando vem via plugin)
-mkdir -p "<projeto-cliente>/.claude/agent-memory/marketing-os-mos-copy/"
-
-# Move arquivos
-mv "<repo-marketing-os>/.claude/agent-memory/mos-copy/"*.md \
-   "<projeto-cliente>/.claude/agent-memory/marketing-os-mos-copy/"
-
-# Atualiza MEMORY.md (índice) na pasta destino se precisar
+mkdir -p "<projeto-cliente>/.claude/agent-memory/"
+mv "<repo-marketing-os>/.claude/agent-memory/marketing-os-mos-copy" \
+   "<projeto-cliente>/.claude/agent-memory/"
 ```
 
 ### Memory não carrega entre sessões
 
-**Causa:** O frontmatter do agent declara `memory: project` (escopo = pasta atual). Cada projeto tem memory isolada.
+**Causa:** o frontmatter do agent declara `memory: project` (escopo = pasta atual). Cada projeto tem memory isolada.
 
 **Comportamento esperado:**
 - Pasta A: agent tem memory A
 - Pasta B: agent começa do zero
 - Pasta A novamente: memory A volta
 
-**Se quiser memory compartilhada entre projetos:**
-- Editar `agents/mos-<agent>.md` frontmatter: trocar `memory: project` por `memory: user`
-- Memory user-scope vai pra `~/.claude/agent-memory/` (compartilhada)
+Se a memory existe mas o agent parece não enxergar, confira o nome do diretório (seção abaixo).
 
-### Diretório `marketing-os-mos-copy/` vs `mos-copy/` — qual é qual?
+### Diretório `marketing-os-mos-copy/` vs `mos-copy/`: qual é qual?
 
-- **`mos-copy/`** (sem prefixo): agent foi resolvido como **local** (você editou direto em `agents/mos-copy.md` no repo)
-- **`marketing-os-mos-copy/`** (com prefixo): agent foi resolvido como **vindo do plugin instalado** (namespace plugin name + agent name)
+- **`marketing-os-mos-copy/`**: diretório nativo que o Claude Code usa para o agent do plugin instalado. A plataforma injeta o início do `MEMORY.md` dele no contexto do agent. É o canônico desde a ADR-0006.
+- **`mos-copy/`**: diretório que o plugin usou entre as versões 6.5 e 6.16. A plataforma não o lê para agent de plugin, então aprendizados gravados ali não chegavam ao agent.
 
-São pastas diferentes pra contextos diferentes. Não há cross-contaminação.
+**Solução:** rode `python3 scripts/init_agent_memory.py` no projeto (ou apenas grave um aprendizado novo com `memory_writer.py`). O conteúdo de `mos-*/` é movido para `marketing-os-mos-*/`; se os dois existirem, o antigo é anexado ao novo e a pasta antiga vira `mos-*.migrado`, sem apagar nada.
 
 ---
 

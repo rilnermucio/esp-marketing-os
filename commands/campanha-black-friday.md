@@ -109,4 +109,4 @@ Aplicar gates globais do `${CLAUDE_PLUGIN_ROOT}/skills/marketing-os/SKILL.md`:
 
 ## Memory note
 
-Os agents `mos-copy`, `mos-email`, `mos-ads`, `mos-social`, `mos-launch` têm memory project em `.claude/agent-memory/mos-<agent>/`. Sempre mencione no prompt que considere memory de campanhas BF anteriores para evitar reciclar ângulos saturados e para escalar o que já performou bem.
+Os agents `mos-copy`, `mos-email`, `mos-ads`, `mos-social`, `mos-launch` têm memory project em `.claude/agent-memory/marketing-os-mos-<agent>/`. Sempre mencione no prompt que considere memory de campanhas BF anteriores para evitar reciclar ângulos saturados e para escalar o que já performou bem.

@@ -26,7 +26,7 @@ Antes de gerar, **se a peça for sequência de vendas, lançamento, carrinho aba
 ### 1. Base de conhecimento e memory
 
 1. **SEMPRE leia primeiro** `subagents/email-agent.md` (ciência do email marketing, estratégia, anatomia do email perfeito, sequências e automações, emails por objetivo, métricas/otimização, templates).
-2. **Memory opt-in**: se `.claude/agent-memory/mos-email/MEMORY.md` existir, leia antes de gerar: pode ter subject lines vencedoras, tom aprovado e anti-padrões da marca deste projeto.
+2. **Memory opt-in**: se `.claude/agent-memory/marketing-os-mos-email/MEMORY.md` existir, leia antes de gerar: pode ter subject lines vencedoras, tom aprovado e anti-padrões da marca deste projeto.
 3. **Consulte** `references/email-marketing.md` e `assets/swipe-files/emails-conversao.md`.
 4. **Use WebSearch** para validar benchmarks e boas práticas atuais (deliverability, GDPR/LGPD).
 
@@ -53,7 +53,7 @@ Termine com: "Posso refazer aplicando alguma dessas correções?". NÃO faça re
 
 ### 5. Atualize a Memory ao final
 
-**Memory opt-in**: se `.claude/agent-memory/mos-email/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), persista cada aprendizado não-óbvio via Bash:
+**Memory opt-in**: se `.claude/agent-memory/marketing-os-mos-email/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), persista cada aprendizado não-óbvio via Bash:
 
 ```bash
 python3 scripts/memory_writer.py --agent mos-email --categoria <resultado|pattern|anti-padrao|voz|benchmark-local> --texto "<aprendizado curto>" --fonte "<sessão/contexto>"

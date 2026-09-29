@@ -78,7 +78,7 @@ Para cada peça i de 1..N:
     Framework: [Framework #i]
     Audiência: [audiência]. Tom: [tom]. Clone: [clone se aplicável].
     Aplicar quality gates globais. Incluir: hook + body + CTA + hashtags + sugestão de enquete.
-    Considere memory existente em .claude/agent-memory/mos-social/ se houver.")
+    Considere memory existente em .claude/agent-memory/marketing-os-mos-social/ se houver.")
 ```
 
 ### Carousels (paralelo de workflows #8)
@@ -112,7 +112,7 @@ Para cada peça i de 1..N:
     Estrutura: [varia: PAS | AIDA | BAB | Story | Education]
     Inclui: subject line + preview text + body + CTA.
     Audiência: [audiência]. Tom: [tom]. Clone: [clone se aplicável].
-    Considere memory em .claude/agent-memory/mos-email/ se houver.")
+    Considere memory em .claude/agent-memory/marketing-os-mos-email/ se houver.")
 ```
 
 ### Articles (sequencial por peça, research é caro)
@@ -156,7 +156,7 @@ Cada bucket vira um conjunto de Agent calls em paralelo. Buckets independentes p
 
 ## Memory note
 
-Vários dos agents têm memory project (`.claude/agent-memory/mos-<agent>/`). Em batches do mesmo cliente, **mencione no prompt** que considere memory existente, evita repetir hooks já usados, mantém consistência de tom, e respeita restrições de compliance previamente registradas.
+Vários dos agents têm memory project (`.claude/agent-memory/marketing-os-mos-<agent>/`). Em batches do mesmo cliente, **mencione no prompt** que considere memory existente, evita repetir hooks já usados, mantém consistência de tom, e respeita restrições de compliance previamente registradas.
 
 ## Consolidação do output
 

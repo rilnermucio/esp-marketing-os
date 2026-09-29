@@ -102,7 +102,7 @@ Apresente o critique LOGO ABAIXO do Brief. Termine com: "Vale ajustar alguma con
 
 **OBRIGATÓRIO em research de impacto** (research que vai informar lançamento, decisão de pivot, ou que descobriu insight significativo):
 
-**Memory opt-in**: se `.claude/agent-memory/mos-research/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), persista cada aprendizado não-óbvio via Bash:
+**Memory opt-in**: se `.claude/agent-memory/marketing-os-mos-research/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), persista cada aprendizado não-óbvio via Bash:
 
 ```bash
 python3 scripts/memory_writer.py --agent mos-research --categoria <resultado|pattern|anti-padrao|voz|benchmark-local> --texto "<aprendizado curto>" --fonte "<sessão/contexto>"

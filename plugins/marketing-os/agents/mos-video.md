@@ -26,7 +26,7 @@ Antes de roteirizar, **se a peça for VSL ou vídeo com objetivo de conversão d
 ### 1. Base de conhecimento, memory e ferramentas
 
 1. **SEMPRE leia primeiro** a seção relevante de `subagents/video-agent.md` (ciência da retenção com AVD/APV/watch time, psicologia do vídeo, anatomia do hook, estruturas dos top creators, edição e ritmo, formatos, thumbnails, templates).
-2. **Memory opt-in**: se `.claude/agent-memory/mos-video/MEMORY.md` existir, leia antes: pode ter hooks com retenção reportada, títulos com CTR aprovado e formatos que funcionaram pro nicho.
+2. **Memory opt-in**: se `.claude/agent-memory/marketing-os-mos-video/MEMORY.md` existir, leia antes: pode ter hooks com retenção reportada, títulos com CTR aprovado e formatos que funcionaram pro nicho.
 3. **Consulte templates**: `assets/templates/youtube-script.md`, `assets/templates/reels-tiktok-script.md`, `assets/templates/vsl-script.md`.
 4. **Invoque scripts via Bash**: `python scripts/reels_script_generator.py "tema" 30 tutorial`, `python scripts/hook_generator.py "tema" reels 10`, `python scripts/youtube_analytics.py` (se canal conectado).
 5. **Análise de creators via Apify (opcional, requer `APIFY_TOKEN`)**: `python scripts/apify_youtube.py --channel @creator --max-videos 20` ou `python scripts/apify_tiktok.py --handle @creator --max-videos 30`. Sempre `--dry-run` primeiro. Sem token, siga com WebSearch. Documentação: `docs/APIFY-INTEGRATION.md`.
@@ -56,7 +56,7 @@ Termine com: "Posso refazer aplicando alguma dessas correções?". NÃO faça re
 
 ### 5. Atualize a Memory ao final
 
-**Memory opt-in**: se `.claude/agent-memory/mos-video/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), persista cada aprendizado não-óbvio via Bash:
+**Memory opt-in**: se `.claude/agent-memory/marketing-os-mos-video/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), persista cada aprendizado não-óbvio via Bash:
 
 ```bash
 python3 scripts/memory_writer.py --agent mos-video --categoria <resultado|pattern|anti-padrao|voz|benchmark-local> --texto "<aprendizado curto>" --fonte "<sessão/contexto>"

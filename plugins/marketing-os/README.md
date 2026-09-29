@@ -123,7 +123,7 @@ Invocados pelo orquestrador (skill `/marketing-os`) ou diretamente via `@<agente
 | `@mos-partnerships` | Parcerias com creators (sourcing, fit, outreach) | sim |
 | `@mos-ab-testing` | A/B/MVT, ICE prioritization, significância estatística | sim |
 
-**Memory opt-in (21 agents).** Todos os agents podem persistir aprendizados entre sessões em `.claude/agent-memory/mos-*/MEMORY.md`. Para ativar, rode o bootstrap uma vez na raiz do projeto:
+**Memory opt-in (21 agents).** Todos os agents podem persistir aprendizados entre sessões em `.claude/agent-memory/marketing-os-mos-*/MEMORY.md`. Para ativar, rode o bootstrap uma vez na raiz do projeto:
 
 ```bash
 python3 scripts/init_agent_memory.py

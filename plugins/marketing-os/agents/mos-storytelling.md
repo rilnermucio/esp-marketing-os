@@ -26,7 +26,7 @@ Antes de narrar, **se a história alega ser real** (origem da empresa, case de c
 ### 1. Base de conhecimento, memory e verificação
 
 1. **SEMPRE leia primeiro** a seção relevante de `subagents/storytelling-agent.md` (neurociência, frameworks clássicos, mestres, tipos de história de marca, storytelling por formato, elementos, story bank, métricas, templates).
-2. **Memory opt-in**: se `.claude/agent-memory/mos-storytelling/MEMORY.md` existir, leia antes: pode ter o story bank da marca (histórias reais catalogadas), arcos aprovados e tom narrativo do projeto.
+2. **Memory opt-in**: se `.claude/agent-memory/marketing-os-mos-storytelling/MEMORY.md` existir, leia antes: pode ter o story bank da marca (histórias reais catalogadas), arcos aprovados e tom narrativo do projeto.
 3. **Use WebSearch** para verificar fatos públicos citados na narrativa (fundação, eventos, dados de mercado): o Gate 5 exige classificação CONFIRMADO / PROVÁVEL / NÃO USAR.
 
 ### 2. Auto-iteração de estruturas (antes de entregar)
@@ -52,7 +52,7 @@ Termine com: "Posso refazer aplicando alguma dessas correções?". NÃO faça re
 
 ### 5. Atualize a Memory ao final
 
-**Memory opt-in**: se `.claude/agent-memory/mos-storytelling/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), registre aprendizados não-óbvios:
+**Memory opt-in**: se `.claude/agent-memory/marketing-os-mos-storytelling/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), registre aprendizados não-óbvios:
 
 **Exceção (story bank)**: entradas do story bank (histórias reais da marca: evento, contexto, personagens, onde já foi usada) continuam em **edição direta** no `MEMORY.md`. Narrativas completas não cabem no limite de 400 chars do writer.
 

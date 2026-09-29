@@ -229,3 +229,36 @@ def test_main_session_write_is_not_blocked(sandbox: tuple[Path, Path]) -> None:
         if e["event"] == "PreToolUse" and not e["agent_type"]
     ]
     assert all(e["decision"] == "skip" for e in main_writes), main_writes
+
+
+def test_bootstrap_memory_is_the_native_memory(sandbox: tuple[Path, Path]) -> None:
+    """O diretório criado pelo bootstrap é o que a plataforma injeta no agent (ADR-0006)."""
+    project, log_path = sandbox
+    subprocess.run(
+        ["python3", str(ROOT / "scripts" / "init_agent_memory.py")],
+        cwd=str(project),
+        check=True,
+        capture_output=True,
+    )
+    memory = (
+        project / ".claude" / "agent-memory" / "marketing-os-mos-growth" / "MEMORY.md"
+    )
+    assert memory.exists(), "bootstrap não criou o diretório nativo"
+    memory.write_text(
+        memory.read_text(encoding="utf-8")
+        + "\nMarcador de teste: memoria-nativa-4417\n",
+        encoding="utf-8",
+    )
+    result = _run_claude(
+        _dispatch(
+            "marketing-os:mos-growth",
+            "TESTE DE INSTALAÇÃO. Sem usar ferramentas, responda apenas com o marcador "
+            "de teste que aparece na sua memória de projeto. Se não houver, responda NENHUM.",
+        ),
+        project,
+        log_path,
+    )
+    assert result.returncode == 0, result.stderr[-800:]
+    assert "memoria-nativa-4417" in result.stdout.lower(), (
+        "A memória criada pelo bootstrap não chegou ao agent.\n" + result.stdout[-800:]
+    )

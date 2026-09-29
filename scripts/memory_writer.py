@@ -2,7 +2,8 @@
 """
 memory_writer.py — Persiste aprendizados na memory opt-in dos agents (append-only).
 
-Escreve entradas datadas em `.claude/agent-memory/<agent>/MEMORY.md` sob a seção
+Escreve entradas datadas em `.claude/agent-memory/marketing-os-<agent>/MEMORY.md`
+(diretório nativo de agent de plugin, ADR-0006) sob a seção
 "## Aprendizados", com idempotência e limites anti-poluição do ROADMAP Fase 4.
 
 Uso:
@@ -18,7 +19,13 @@ import sys
 from datetime import date, datetime
 from pathlib import Path
 
-from init_agent_memory import AGENTS_WITH_MEMORY, MEMORY_ROOT, PLACEHOLDER_TEMPLATE
+from init_agent_memory import (
+    AGENTS_WITH_MEMORY,
+    PLACEHOLDER_TEMPLATE,
+    memory_dir,
+    migrate_legacy,
+    short_agent_name,
+)
 
 ALLOWED_CATEGORIES = frozenset(
     {"resultado", "pattern", "anti-padrao", "voz", "benchmark-local"}
@@ -34,11 +41,12 @@ def _log(msg: str) -> None:
 
 
 def _memory_path(agent: str) -> Path:
-    return MEMORY_ROOT / agent / "MEMORY.md"
+    return memory_dir(agent) / "MEMORY.md"
 
 
 def _ensure_memory_file(agent: str) -> Path | None:
     """Cria MEMORY.md com o template do bootstrap se ainda não existir."""
+    migrate_legacy(agent)
     memory_file = _memory_path(agent)
     if memory_file.exists():
         return memory_file
@@ -46,7 +54,7 @@ def _ensure_memory_file(agent: str) -> Path | None:
     agent_dir = memory_file.parent
     agent_dir.mkdir(parents=True, exist_ok=True)
     memory_file.write_text(
-        PLACEHOLDER_TEMPLATE.format(agent=agent),
+        PLACEHOLDER_TEMPLATE.format(agent=short_agent_name(agent)),
         encoding="utf-8",
     )
     return memory_file
@@ -112,6 +120,7 @@ def append_learning(
 
     Retorna True se escreveu, False se recusou (motivo em stderr).
     """
+    agent = short_agent_name(agent)
     if agent not in AGENTS_WITH_MEMORY:
         allowed = ", ".join(sorted(AGENTS_WITH_MEMORY))
         _log(

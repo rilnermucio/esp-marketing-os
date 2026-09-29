@@ -75,7 +75,7 @@ Apresente critique LOGO ABAIXO do plano. Termine com: "Vale ajustar antes de sub
 
 **OBRIGATÓRIO em todo lançamento que aconteceu** (não só plejado):
 
-**Memory opt-in**: se `.claude/agent-memory/mos-launch/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), persista cada aprendizado não-óbvio via Bash:
+**Memory opt-in**: se `.claude/agent-memory/marketing-os-mos-launch/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), persista cada aprendizado não-óbvio via Bash:
 
 ```bash
 python3 scripts/memory_writer.py --agent mos-launch --categoria <resultado|pattern|anti-padrao|voz|benchmark-local> --texto "<aprendizado curto>" --fonte "<sessão/contexto>"

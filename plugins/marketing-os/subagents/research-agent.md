@@ -3964,7 +3964,7 @@ CHANGELOG no início do documento:
 
 ### Knowledge Compounding (Memory Layer)
 
-Cada research alimenta `.claude/agent-memory/mos-research/MEMORY.md` (se memory: project ativo). Patterns que se repetem entre projetos:
+Cada research alimenta `.claude/agent-memory/marketing-os-mos-research/MEMORY.md` (se memory: project ativo). Patterns que se repetem entre projetos:
 
 - "Audiência X tem dor Y consistente em 3 projetos diferentes"
 - "Fonte Z é confiável para nicho ABC"

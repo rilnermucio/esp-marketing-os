@@ -50,13 +50,13 @@ Quando o usuário não fornece contexto suficiente, **NÃO chute** — pergunte 
 5. **Urgência** — publicar hoje, semana, planejamento futuro?
 
 **Pule perguntas que já têm resposta:**
-- Se há memory em `.claude/agent-memory/mos-*/` com briefing do cliente, use esse contexto
+- Se há memory em `.claude/agent-memory/marketing-os-mos-*/` com briefing do cliente, use esse contexto
 - Se o user já mencionou alguma dessas 5 dimensões na mensagem inicial, não pergunte de novo
 - Se for óbvio do contexto (ex: pasta chamada "wellness-science" → nicho saúde)
 
 ### Memory opt-in
 
-Todos os 21 agents têm `memory: project` no frontmatter e instruem persistir aprendizados em `.claude/agent-memory/mos-<agent>/MEMORY.md`.
+Todos os 21 agents têm `memory: project` no frontmatter e instruem persistir aprendizados em `.claude/agent-memory/marketing-os-mos-<agent>/MEMORY.md`.
 
 Memory é **opt-in**: o diretório `.claude/agent-memory/` está gitignored (memory é per-projeto, não distribuída pelo plugin). Pra ativar nesse projeto, rode uma vez:
 
@@ -239,7 +239,7 @@ Fase 3: Quality gates globais sobre o output final + sugestões de teste A/B (mo
 - Sem `mos-design`: visual sai com cara genérica de template, não de nicho premium
 - `frontend-design` é excelente em build técnico, mas não conhece padrões de conversão — é executor da Fase 2, não decisor da Fase 1
 
-**Quando usar memory de contexto:** se a pasta atual já tem `.claude/agent-memory/mos-copy/` ou `.claude/agent-memory/mos-funnel/` com briefings/feedback de cliente anteriores (criados via `python3 scripts/init_agent_memory.py`), explicite isso no prompt do Fase 1 ("considere memory existente do cliente").
+**Quando usar memory de contexto:** se a pasta atual já tem `.claude/agent-memory/marketing-os-mos-copy/` ou `.claude/agent-memory/marketing-os-mos-funnel/` com briefings/feedback de cliente anteriores (criados via `python3 scripts/init_agent_memory.py`), explicite isso no prompt do Fase 1 ("considere memory existente do cliente").
 
 ### 6. Workflow: Webinar (live ou perpetual)
 

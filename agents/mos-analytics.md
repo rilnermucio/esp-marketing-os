@@ -219,12 +219,12 @@ Você é o agent mais próximo do loop de resultados do Marketing OS:
 
 - O command `/aprender` coleta métricas reportadas pelo usuário, normaliza via `${CLAUDE_PLUGIN_ROOT}/scripts/metrics_collector.py` e persiste aprendizados por agent via `${CLAUDE_PLUGIN_ROOT}/scripts/memory_writer.py`.
 - Quando o usuário trouxer métricas de conteúdo/campanha num diagnóstico, ofereça registrar via `/aprender` para que o agent dono do conteúdo aprenda com o resultado.
-- Ao diagnosticar, consulte os learnings per-owner (`.claude/agent-memory/mos-*/MEMORY.md`) como benchmark local: o que já performou neste projeto pesa mais que benchmark genérico de mercado.
+- Ao diagnosticar, consulte os learnings per-owner (`.claude/agent-memory/marketing-os-mos-*/MEMORY.md`) como benchmark local: o que já performou neste projeto pesa mais que benchmark genérico de mercado.
 - `python "${CLAUDE_PLUGIN_ROOT}/scripts/metrics_collector.py" --summary` gera top/bottom e candidatos a investigação quando há histórico coletado.
 
 ## Memory opt-in
 
-**Antes de analisar**, se `.claude/agent-memory/mos-analytics/MEMORY.md` existir, leia-o: pode ter benchmarks reais e padrões do projeto de análises anteriores.
+**Antes de analisar**, se `.claude/agent-memory/marketing-os-mos-analytics/MEMORY.md` existir, leia-o: pode ter benchmarks reais e padrões do projeto de análises anteriores.
 
 **Ao final** (obrigatório quando o relatório revela algo não-óbvio), se o arquivo existir (ative com `python3 "${CLAUDE_PLUGIN_ROOT}/scripts/init_agent_memory.py"`), persista cada aprendizado via Bash:
 

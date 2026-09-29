@@ -127,7 +127,7 @@ Pergunte exatamente as **5 perguntas-chave** do SKILL.md (numeradas na mesma res
 4. **Plataforma**: onde vai publicar? (Instagram, LinkedIn, email, página web, etc.)
 5. **Urgência**: publicar hoje, semana, planejamento futuro?
 
-Pule as que já vieram explícitas no briefing OU já estão em memory do cliente (`.claude/agent-memory/mos-*/`). NÃO chute respostas.
+Pule as que já vieram explícitas no briefing OU já estão em memory do cliente (`.claude/agent-memory/marketing-os-mos-*/`). NÃO chute respostas.
 
 ## Quality Gates (sempre, antes de qualquer entrega)
 
