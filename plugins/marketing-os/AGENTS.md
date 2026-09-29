@@ -142,6 +142,7 @@ Antes de mexer em `.claude-plugin/plugin.json` ou `.claude-plugin/marketplace.js
 | Hook em frontmatter de agent de plugin | **Ignorado pela plataforma** (junto com `mcpServers` e `permissionMode`). Registre hooks em `hooks/hooks.json` com `"${CLAUDE_PLUGIN_ROOT}/..."` entre aspas | Code + Desktop em runtime |
 | Nome de agent de plugin | Chega qualificado: `marketing-os:mos-copy` no dispatch (`subagent_type`) e no `agent_type` dos hooks. Nome curto falha com "Agent type not found" | Code + Desktop em runtime |
 | Caminho relativo a recurso do plugin | Só resolve com a sessão dentro do repo. Instalado, use `${CLAUDE_PLUGIN_ROOT}/...` (substituído em agents, commands e skills) | Code + Desktop em runtime |
+| Marketplace de conta claude.ai | Marketplace adicionado na conta sincroniza para `~/.claude/plugins/synced/` e pode congelar; o app desktop carrega essa cópia. Diagnóstico: `python3 scripts/mos.py install doctor` | Desktop |
 | Memória nativa de agent de plugin | Diretório `.claude/agent-memory/<plugin>-<agent>/` (ex: `marketing-os-mos-copy`), não o nome curto | Code + Desktop em runtime |
 | Marketplace name bug | Anthropic cacheia state por nome de marketplace server-side. Se seu marketplace teve syncs broken, rename pra bypass cache (ex: `marketing-os-marketplace` → `mos-marketplace`) | Desktop |
 | Reserved names | `claude-code-marketplace`, `claude-code-plugins`, `claude-plugins-official`, `anthropic-marketplace`, `anthropic-plugins`, `agent-skills` — não usar | Validator |

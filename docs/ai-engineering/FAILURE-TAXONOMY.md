@@ -87,6 +87,7 @@ Falhas que só aparecem quando o plugin roda instalado, com a sessão no projeto
 | F-DIST-03 | Estado do usuário gravado na pasta do plugin (some no update, mistura projetos) | Auditoria 2026-09-28: `/projeto`, relatório semanal e coleta do TikTok gravavam ao lado do script | `test_workspace_paths.py` | `scripts/workspace_paths.py::user_workspace()` |
 | F-DIST-04 | Hook declarado em superfície que a plataforma ignora | Auditoria 2026-09-28: gate de escrita no frontmatter dos 21 agents nunca rodou instalado (a plataforma ignora `hooks` em agent de plugin) | `test_quality_gate_hook.py::test_agents_do_not_declare_frontmatter_hooks` e `::test_plugin_registers_write_gate` + smoke | Hooks só em `hooks/hooks.json`; ADR-0005 |
 | F-DIST-05 | Nome de agent assumido sem o namespace do plugin | Auditoria 2026-09-28: dispatch `mos-growth` falhou com "Agent type not found"; hook descartava `marketing-os:mos-copy` | `test_plugin_runtime_paths.py::test_dispatch_uses_plugin_qualified_agent_name` + `TestMarketingAgent` + fixtures de payload real | `marketing-os:mos-*` no dispatch; `marketing_agent()` no hook |
+| F-DIST-07 | Cliente carrega cópia antiga do plugin (marketplace de conta claude.ai congelado) | Auditoria 2026-09-28: app desktop carregava a cópia sincronizada 6.1.5 enquanto a 6.16.0 estava instalada | `scripts/install_doctor.py` (`mos.py install doctor`) | Uma só origem do plugin por máquina; TROUBLESHOOTING |
 
 ## F-REL: Release
 

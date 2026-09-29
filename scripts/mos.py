@@ -171,6 +171,12 @@ COMMAND_MAP: Dict[str, Dict[str, Tuple[str, str]]] = {
             "Resume métricas para o loop /aprender",
         ),
     },
+    "install": {
+        "doctor": (
+            "install_doctor.py",
+            "Lista cópias instaladas do plugin e versões divergentes",
+        ),
+    },
 }
 
 # Comandos especiais que precisam de argumentos transformados
