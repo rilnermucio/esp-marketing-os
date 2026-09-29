@@ -6,7 +6,7 @@
 
 ---
 
-**O seu concorrente está roubando o seu tráfego. Aqui está como descobrir — e recuperar.**
+**O seu concorrente está roubando o seu tráfego. Aqui está como descobrir, e recuperar.**
 
 Você sabia que 90,63% das páginas na internet não recebem nenhum tráfego orgânico do Google?
 
@@ -46,9 +46,9 @@ Comece gratuitamente. Sem cartão de crédito. Sem compromisso.
 | **Dado de abertura** | Estatística de pesquisa real (90,63% das páginas sem tráfego) para criar urgência |
 | **Estrutura** | Problema → Dado → O que funciona (3 itens) → Ferramenta como solução |
 | **Lista de benefícios** | Cada item descreve o benefício real, não apenas a funcionalidade |
-| **Prova social** | "Mais de 2 milhões de profissionais" — número concreto, não vago |
-| **CTA** | Sem pressão ("gratuitamente, sem cartão, sem compromisso") — estilo Patel |
-| **Tom** | Educativo mesmo dentro da venda — ensina antes de pedir a ação |
+| **Prova social** | "Mais de 2 milhões de profissionais": número concreto, não vago |
+| **CTA** | Sem pressão ("gratuitamente, sem cartão, sem compromisso"): estilo Patel |
+| **Tom** | Educativo mesmo dentro da venda: ensina antes de pedir a ação |
 
 ---
 
@@ -85,7 +85,7 @@ Se o seu site não aparece no Google, não é porque SEO é difícil. É porque 
 
 O Ubersuggest te dá esses dados. De graça.
 
-[Comece agora — grátis]
+[Comece agora: grátis]
 
 ---
 
@@ -93,12 +93,12 @@ O Ubersuggest te dá esses dados. De graça.
 
 | Elemento | Técnica Aplicada |
 |----------|-----------------|
-| **Abertura** | História pessoal real — fracasso aos 16 anos cria empatia e curiosidade |
-| **Credibilidade** | Amazon, NBC, HP — nomes verificáveis que ancoram autoridade |
-| **Virada narrativa** | "Fiz algo que todo mundo disse que era loucura" — gera curiosidade |
+| **Abertura** | História pessoal real: fracasso aos 16 anos cria empatia e curiosidade |
+| **Credibilidade** | Amazon, NBC, HP: nomes verificáveis que ancoram autoridade |
+| **Virada narrativa** | "Fiz algo que todo mundo disse que era loucura": gera curiosidade |
 | **Filosofia** | Generosidade estratégica (ferramenta gratuita) reforça a marca pessoal |
 | **Benefícios** | Lista com 4 itens concretos, focados no que o usuário consegue fazer |
-| **Reframe** | "Não é porque SEO é difícil. É porque você não tem os dados certos." — muda a perspectiva |
+| **Reframe** | "Não é porque SEO é difícil. É porque você não tem os dados certos.": muda a perspectiva |
 | **CTA** | Suave, sem pressão, coerente com o tom educativo |
 | **Tom** | Conversacional, pessoal, como se estivesse contando uma história a um amigo |
 
@@ -136,7 +136,7 @@ Quando você adiciona um dado concreto ao seu conteúdo, três coisas acontecem:
 - Outros sites linkam para você como fonte
 - O Google reconhece a autoridade e te posiciona melhor
 
-Na próxima terça, vou publicar um guia completo no blog mostrando como encontrar e usar dados no seu conteúdo — mesmo que você não tenha equipe de pesquisa.
+Na próxima terça, vou publicar um guia completo no blog mostrando como encontrar e usar dados no seu conteúdo: mesmo que você não tenha equipe de pesquisa.
 
 [Quero receber o guia quando sair]
 
@@ -151,13 +151,13 @@ P.S. - Se você quiser começar agora, abra o Ubersuggest e pesquise as 3 palavr
 | Elemento | Técnica Aplicada |
 |----------|-----------------|
 | **Assunto** | Dado específico (90%) + pergunta pessoal que gera curiosidade e preocupação |
-| **Abertura** | Vai direto ao dado — sem saudação genérica nem introdução longa |
-| **Dado central** | Pesquisa real (50.000 posts, 2x engajamento) — fundamenta todo o argumento |
+| **Abertura** | Vai direto ao dado, sem saudação genérica nem introdução longa |
+| **Dado central** | Pesquisa real (50.000 posts, 2x engajamento): fundamenta todo o argumento |
 | **Cadeia lógica** | Sem dados → sem diferenciação → sem links → sem ranking → sem tráfego |
-| **Solução acessível** | Três formas de usar dados sem fazer pesquisa cara — remove a barreira |
+| **Solução acessível** | Três formas de usar dados sem fazer pesquisa cara: remove a barreira |
 | **Benefícios** | Lista com 3 resultados concretos de adicionar dados ao conteúdo |
-| **CTA** | Suave — pedir para receber um guia futuro, não para comprar algo |
-| **P.S.** | Ação imediata e gratuita (usar o Ubersuggest por 5 minutos) — reduz fricção |
+| **CTA** | Suave: pedir para receber um guia futuro, não para comprar algo |
+| **P.S.** | Ação imediata e gratuita (usar o Ubersuggest por 5 minutos): reduz fricção |
 
 ---
 
@@ -203,12 +203,12 @@ Qual dessas 3 ações você vai fazer primeiro? Me conta aqui nos comentários.
 
 | Elemento | Técnica Aplicada |
 |----------|-----------------|
-| **Abertura** | Dado de pesquisa própria (10.000 sites) — credibilidade imediata |
-| **Dados visuais** | Lista com porcentagens específicas — fácil de escanear e compartilhar |
-| **Insight contraintuitivo** | "SEO gera 8x mais tráfego que social" — desafia a crença popular |
-| **Equilíbrio** | "Não significa que redes sociais são inúteis" — evita extremismo |
+| **Abertura** | Dado de pesquisa própria (10.000 sites): credibilidade imediata |
+| **Dados visuais** | Lista com porcentagens específicas: fácil de escanear e compartilhar |
+| **Insight contraintuitivo** | "SEO gera 8x mais tráfego que social": desafia a crença popular |
+| **Equilíbrio** | "Não significa que redes sociais são inúteis": evita extremismo |
 | **Ações práticas** | 3 passos concretos que o leitor pode executar imediatamente |
-| **Ferramentas citadas** | Google Search Console e Ubersuggest — ambas gratuitas, coerente com acessibilidade |
-| **Reframe** | "SEO não é complicado. É consistente." — desmistifica e motiva |
-| **CTA social** | Pergunta no final que convida ao comentário — aumenta engajamento do algoritmo |
-| **Tom geral** | Educativo, baseado em dados, acessível — assinatura vocal de Neil Patel |
+| **Ferramentas citadas** | Google Search Console e Ubersuggest: ambas gratuitas, coerente com acessibilidade |
+| **Reframe** | "SEO não é complicado. É consistente.": desmistifica e motiva |
+| **CTA social** | Pergunta no final que convida ao comentário: aumenta engajamento do algoritmo |
+| **Tom geral** | Educativo, baseado em dados, acessível: assinatura vocal de Neil Patel |

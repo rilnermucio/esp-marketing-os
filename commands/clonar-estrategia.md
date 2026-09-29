@@ -1,11 +1,11 @@
 ---
-description: Analyze a competitor/expert and reverse-engineer their content strategy adapted for your brand. Dispatches workflow #10 (mos-research + mos-brand → mos-copy with voice clone extraction).
+description: "Engenharia reversa da estratégia de um concorrente ou expert (posicionamento, voz, conteúdo) adaptada à sua marca, com o que replicar e o que evitar. Use quando pedirem para clonar ou modelar a estratégia de alguém."
 argument-hint: "<profile or brand, e.g., '@hormozi Instagram strategy' or 'concorrente.com content analysis'>"
 ---
 
 # /clonar-estrategia: Análise + Clone de Estratégia (Workflow #10)
 
-Engenharia reversa de estratégia de concorrente/expert conforme **workflow #10** em `skills/marketing-os/SKILL.md`.
+Engenharia reversa de estratégia de concorrente/expert conforme **workflow #10** em `${CLAUDE_PLUGIN_ROOT}/skills/marketing-os/SKILL.md`.
 
 ## Required inputs (ask if missing)
 
@@ -17,15 +17,15 @@ Engenharia reversa de estratégia de concorrente/expert conforme **workflow #10*
 ## Dispatch, Fase 1 (paralelo, single message)
 
 ```
-- Agent(subagent_type: "mos-research", prompt: "Mapeamento completo de [alvo]: produtos vendidos + ticket, posicionamento (Schwartz nível, big idea), fontes de tráfego ativas, conteúdo orgânico (frequência/formatos/temas), ads ativos (Meta/Google ad library), depoimentos públicos, autoridade construída. WebSearch + análise de perfis públicos. Considere memory existente do cliente neste projeto.")
+- Agent(subagent_type: "marketing-os:mos-research", prompt: "Mapeamento completo de [alvo]: produtos vendidos + ticket, posicionamento (Schwartz nível, big idea), fontes de tráfego ativas, conteúdo orgânico (frequência/formatos/temas), ads ativos (Meta/Google ad library), depoimentos públicos, autoridade construída. WebSearch + análise de perfis públicos. Considere memory existente do cliente neste projeto.")
 
-- Agent(subagent_type: "mos-brand", prompt: "Extrair positioning, arquétipo, voz/tom de [alvo] a partir de samples reais (posts, lives, ads). Gerar brand spec replicável: arquétipo principal, sub-arquétipos, voz, tom, valores comunicados, vocabulário recorrente. Comparar com [sua marca] e identificar gaps/oportunidades. Considere memory existente do cliente neste projeto.")
+- Agent(subagent_type: "marketing-os:mos-brand", prompt: "Extrair positioning, arquétipo, voz/tom de [alvo] a partir de samples reais (posts, lives, ads). Gerar brand spec replicável: arquétipo principal, sub-arquétipos, voz, tom, valores comunicados, vocabulário recorrente. Comparar com [sua marca] e identificar gaps/oportunidades. Considere memory existente do cliente neste projeto.")
 ```
 
 ## Fase 2 (sequencial, depende dos outputs da Fase 1)
 
 ```
-- Agent(subagent_type: "mos-copy", prompt: "Voice clone de [alvo]: extrair padrões de copy a partir do mapeamento da Fase 1: estruturas de headline, padrões de CTA, vocabulário distintivo, ritmo de frase, gatilhos emocionais usados, framework de prova social. SE [alvo] é copywriter conhecido (Halbert, Hopkins, Sugarman, etc.), referenciar perfil em assets/clones/. Gerar 3-5 samples adaptados pra [sua marca/avatar/produto]. Considere memory existente do cliente neste projeto.")
+- Agent(subagent_type: "marketing-os:mos-copy", prompt: "Voice clone de [alvo]: extrair padrões de copy a partir do mapeamento da Fase 1: estruturas de headline, padrões de CTA, vocabulário distintivo, ritmo de frase, gatilhos emocionais usados, framework de prova social. SE [alvo] é copywriter conhecido (Halbert, Hopkins, Sugarman, etc.), referenciar perfil em ${CLAUDE_PLUGIN_ROOT}/assets/clones/. Gerar 3-5 samples adaptados pra [sua marca/avatar/produto]. Considere memory existente do cliente neste projeto.")
 ```
 
 ## Fase 3: Brief Consolidado de Estratégia Clonada
@@ -76,7 +76,7 @@ Saída final:
 
 ## Quality Gates (antes de entregar)
 
-Aplicar gates globais do `skills/marketing-os/SKILL.md`:
+Aplicar gates globais do `${CLAUDE_PLUGIN_ROOT}/skills/marketing-os/SKILL.md`:
 - Sem `—`, sem "brutal", sem CAPS gratuito
 - Acentuação PT-BR correta
 - Não usar nada que viole IP do concorrente (ideias e frameworks são ok; copy literal não)

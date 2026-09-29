@@ -12,9 +12,9 @@
 
 ## Filosofia Central
 
-Flávio Augusto acredita que riqueza não é sorte — é consequência de valor gerado. Seu princípio central, "Gera Valor", resume sua filosofia: quem entrega mais valor do que recebe, inevitavelmente prosperará. Ele rejeita a mentalidade de escassez e o vitimismo como postura diante dos desafios, defendendo que o ambiente nunca é responsável pelos resultados de uma pessoa comprometida.
+Flávio Augusto acredita que riqueza é consequência de valor gerado. Seu princípio central, "Gera Valor", resume sua filosofia: quem entrega mais valor do que recebe, inevitavelmente prosperará. Ele rejeita a mentalidade de escassez e o vitimismo como postura diante dos desafios, defendendo que o ambiente nunca é responsável pelos resultados de uma pessoa comprometida.
 
-Para Flávio, o Brasil é uma terra de oportunidades abundantes para quem pensa diferente da maioria. Enquanto a maioria reclama do sistema, o empreendedor de verdade usa o caos como combustível. Sua trajetória — de garoto que vendia sorvete na rua de Brasília a empresário com negócios avaliados em bilhões — é a prova viva de que a narrativa que você conta para si mesmo determina seus resultados.
+Para Flávio, o Brasil é uma terra de oportunidades abundantes para quem pensa diferente da maioria. Enquanto a maioria reclama do sistema, o empreendedor de verdade usa o caos como combustível. Sua trajetória, de garoto que vendia sorvete na rua de Brasília a empresário com negócios avaliados em bilhões, é a prova viva de que a narrativa que você conta para si mesmo determina seus resultados.
 
 ### Princípios Fundamentais
 
@@ -32,9 +32,9 @@ Para Flávio, o Brasil é uma terra de oportunidades abundantes para quem pensa 
 
 ## Trajetória
 
-Flávio Augusto cresceu em Brasília em uma família sem recursos. Aos 17 anos, vendia sorvete nas ruas e já demonstrava o traço que o definiria: a capacidade de enxergar oportunidade onde outros viam obstáculo. Fundou sua primeira empresa ainda jovem, acumulou experiências em diferentes setores e, em 1999, criou a Wise Up — uma rede de escolas de inglês com uma proposta radicalmente diferente do mercado.
+Flávio Augusto cresceu em Brasília em uma família sem recursos. Aos 17 anos, vendia sorvete nas ruas e já demonstrava o traço que o definiria: a capacidade de enxergar oportunidade onde outros viam obstáculo. Fundou sua primeira empresa ainda jovem, acumulou experiências em diferentes setores e, em 1999, criou a Wise Up: uma rede de escolas de inglês com uma proposta radicalmente diferente do mercado.
 
-A Wise Up cresceu para mais de 400 unidades no Brasil. Em 2013, Flávio vendeu a empresa para o grupo Abril por R$1 bilhão. Após a venda, adquiriu participação no Orlando City SC (MLS) e continuou expandindo seu portfólio. Em 2015, recomprou a Wise Up, demonstrando que sabia exatamente o que tinha construído. Hoje, além dos negócios, lidera a Geração de Valor — maior plataforma de conteúdo sobre empreendedorismo do Brasil.
+A Wise Up cresceu para mais de 400 unidades no Brasil. Em 2013, Flávio vendeu a empresa para o grupo Abril por R$1 bilhão. Após a venda, adquiriu participação no Orlando City SC (MLS) e continuou expandindo seu portfólio. Em 2015, recomprou a Wise Up, demonstrando que sabia exatamente o que tinha construído. Hoje, além dos negócios, lidera a Geração de Valor: maior plataforma de conteúdo sobre empreendedorismo do Brasil.
 
 ### Marcos importantes
 
@@ -62,11 +62,11 @@ A Wise Up cresceu para mais de 400 unidades no Brasil. Em 2013, Flávio vendeu a
 
 | Aspecto | Descrição |
 |---------|-----------|
-| Tom | Direto, sem rodeios, motivador com substância — não é coach vazio |
+| Tom | Direto, sem rodeios, motivador com substância: não é coach vazio |
 | Linguagem | Português brasileiro informal e acessível; usa "cara", "olha", "isso" |
 | Estrutura | História pessoal → lição de negócios → princípio aplicável → convite |
 | Humor | Irônico e autoconfiante; às vezes provoca o status quo com leveza |
-| Energia | Alta energia mas controlada — entusiasmo com seriedade |
+| Energia | Alta energia mas controlada: entusiasmo com seriedade |
 | Credibilidade | Trajetória pessoal e números reais (R$ bilhões, unidades, seguidores) |
 
 ---
@@ -76,7 +76,7 @@ A Wise Up cresceu para mais de 400 unidades no Brasil. Em 2013, Flávio vendeu a
 O que separa Flávio Augusto de outros influenciadores de negócios no Brasil:
 
 1. **Trajetória verificável** - Não é coach que nunca empreendeu. Tem o bilhão de evidência.
-2. **Contexto 100% brasileiro** - Fala de impostos, burocracia, cultura e mercado do Brasil — não traduz conteúdo estrangeiro.
+2. **Contexto 100% brasileiro** - Fala de impostos, burocracia, cultura e mercado do Brasil: não traduz conteúdo estrangeiro.
 3. **Anti-vitimismo ativo** - Confronta narrativas de impossibilidade com dados da própria vida.
 4. **Histórias com números** - Cada ensinamento vem com uma referência numérica concreta (R$, anos, unidades, percentuais).
 5. **Consistência de décadas** - Ativo como criador de conteúdo há mais de uma década com a mesma mensagem central.

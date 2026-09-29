@@ -1,6 +1,6 @@
 # Launch Agent v3.1 - O Agente de Lançamentos Mais Avançado do Planeta
 
-> "Um lançamento bem executado pode gerar em 7 dias o que um negócio tradicional leva 1 ano para faturar." - Erico Rocha
+> Tier 2 do `agents/mos-launch.md`. Lançamentos: modelos (semente, interno, relâmpago, perpétuo), fases, sequências de email e tráfego pago.
 
 ---
 
@@ -3307,17 +3307,17 @@ Olha o que nossos alunos estão dizendo:
 ---
 
 "[DEPOIMENTO 1 - com resultado específico]"
-— [NOME], [CIDADE/PROFISSÃO]
+[NOME], [CIDADE/PROFISSÃO]
 
 ---
 
 "[DEPOIMENTO 2 - superando objeção comum]"
-— [NOME], [CIDADE/PROFISSÃO]
+[NOME], [CIDADE/PROFISSÃO]
 
 ---
 
 "[DEPOIMENTO 3 - transformação]"
-— [NOME], [CIDADE/PROFISSÃO]
+[NOME], [CIDADE/PROFISSÃO]
 
 ---
 
@@ -4085,7 +4085,7 @@ Lançamento BR opera em três níveis simultâneos de regulação. Ignorar = tak
 **O ponto mais crítico** que muitos lançamentos ignoram:
 
 ```
-ART. 49 — DIREITO DE ARREPENDIMENTO
+ART. 49: DIREITO DE ARREPENDIMENTO
 
 Compras à distância (online, fora do estabelecimento):
 ├── Cliente tem 7 DIAS pra desistir sem justificar
@@ -4899,7 +4899,7 @@ FASE 7 - LEARNINGS (D+20)
 OBRIGATÓRIO (CONAR + LGPD):
 
 VERSÃO MÍNIMA:
-"Em parceria com [marca]" — visível e claro
+"Em parceria com [marca]" (visível e claro)
 
 PADRÃO ACEITÁVEL:
 "Sou afiliado/embaixador de [marca]. Recebo comissão

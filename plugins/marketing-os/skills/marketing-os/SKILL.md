@@ -1,9 +1,11 @@
 ---
 name: marketing-os
-description: "Use para produção de marketing digital: posts Instagram/LinkedIn/TikTok/Twitter, artigos SEO, email marketing, landing pages, anúncios Meta/Google Ads, calendários editoriais, vídeos YouTube/Reels/VSL, podcasts, geração de imagens e vídeos com IA, infoprodutos, testes A/B. NICHOS: Marketing Digital, IA, Dev Pessoal/Profissional, Tech, Empreendedorismo, Finanças, Saúde, Educação, Produtividade. TRIGGERS: conteúdo, post, blog, SEO, newsletter, copy, landing page, campanha, anúncio, carrossel, stories, reels, vídeo, podcast, design, imagem IA, infoproduto, teste A/B."
+description: "Marketing digital completo em PT-BR para o mercado brasileiro. Use para criar ou revisar posts, carrosséis e calendários (Instagram, LinkedIn, TikTok, Threads), roteiros de vídeo, Reels e VSL, podcasts, emails e sequências, anúncios (Meta, Google, TikTok), artigos SEO, landing pages e funis. Também para estratégia: avatar e persona, USP e posicionamento, oferta com value stack, preço e garantia, lançamento de infoproduto, pesquisa de mercado e concorrentes, testes A/B, growth, métricas e aprendizado com resultados, respostas a comentários e prospecção de creators. Gatilhos: conteúdo, post, copy, headline, anúncio, campanha, lançamento, funil, oferta, avatar, persona, USP, SEO, email, vídeo, Reels, landing page, métricas, concorrência."
 ---
 
 # Marketing OS: Sistema Operacional de Marketing Digital
+
+> As pastas `subagents`, `scripts`, `assets`, `references`, `workflows` e `docs` citadas aqui e dentro das knowledge bases ficam na raiz do plugin, nunca no diretório do projeto do usuário.
 
 Este skill é um **orquestrador** para 21 especialistas de marketing. No Claude Code, ele usa subagents nativos. No ChatGPT Work e no Codex, ele usa a mesma arquitetura em modo compatível: roteia o briefing para o especialista correto, lê os arquivos Tier 1/Tier 2 necessários e, quando houver ferramenta de multi-agent disponível, pode paralelizar as etapas independentes.
 
@@ -39,22 +41,23 @@ O plugin funciona em conversas **Work** com o Marketing OS instalado. O usuário
 
 ### Protocolo: briefing vago
 
-Quando o usuário não fornece contexto suficiente, **NÃO chute** — pergunte antes de dispatchar. As 5 perguntas-chave (em paralelo, lista numerada na mesma resposta):
+Quando o usuário não fornece contexto suficiente, **NÃO chute**: pergunte antes de dispatchar. As 5 perguntas-chave (em paralelo, lista numerada na mesma resposta):
 
-1. **Nicho** — qual área? (saúde, finanças, tech, educação, etc.)
-2. **Avatar** — quem é o público? (cargo/profissão, faixa de renda, dor principal)
-3. **Ticket** — preço do produto? (gratuito, low/mid/high-ticket)
-4. **Plataforma** — onde vai publicar? (Instagram, LinkedIn, email, página web, etc.)
-5. **Urgência** — publicar hoje, semana, planejamento futuro?
+1. **Nicho**: qual área? (saúde, finanças, tech, educação, etc.)
+2. **Avatar**: quem é o público? (cargo/profissão, faixa de renda, dor principal)
+3. **Ticket**: preço do produto? (gratuito, low/mid/high-ticket)
+4. **Plataforma**: onde vai publicar? (Instagram, LinkedIn, email, página web, etc.)
+5. **Urgência**: publicar hoje, semana, planejamento futuro?
 
 **Pule perguntas que já têm resposta:**
-- Se há memory em `.claude/agent-memory/mos-*/` com briefing do cliente, use esse contexto
+- Se existir `workspace/brand/perfil.md` no projeto (criado por `/configurar-marca`), ele responde nicho, avatar, ticket e plataforma; pergunte só o que faltar. Num projeto recorrente sem perfil, ofereça `/configurar-marca` uma vez
+- Se há memory em `.claude/agent-memory/marketing-os-mos-*/` com briefing do cliente, use esse contexto
 - Se o user já mencionou alguma dessas 5 dimensões na mensagem inicial, não pergunte de novo
 - Se for óbvio do contexto (ex: pasta chamada "wellness-science" → nicho saúde)
 
 ### Memory opt-in
 
-Todos os 21 agents têm `memory: project` no frontmatter e instruem persistir aprendizados em `.claude/agent-memory/mos-<agent>/MEMORY.md`.
+Todos os 21 agents têm `memory: project` no frontmatter e instruem persistir aprendizados em `.claude/agent-memory/marketing-os-mos-<agent>/MEMORY.md`.
 
 Memory é **opt-in**: o diretório `.claude/agent-memory/` está gitignored (memory é per-projeto, não distribuída pelo plugin). Pra ativar nesse projeto, rode uma vez:
 
@@ -62,9 +65,18 @@ Memory é **opt-in**: o diretório `.claude/agent-memory/` está gitignored (mem
 python3 scripts/init_agent_memory.py
 ```
 
-Isso cria os 21 arquivos `MEMORY.md` placeholder. Depois disso os agents passam a gravar/ler patterns transferíveis (não conteúdo bruto). Sem o bootstrap, os agents seguem funcionando normalmente — só não persistem memory entre sessões.
+Isso cria os arquivos `MEMORY.md` no diretório nativo de cada agent e migra o legado `mos-*/` sem perda (ADR-0006). A plataforma injeta o início desse arquivo no agent a cada sessão; os agents gravam patterns transferíveis (não conteúdo bruto) via `memory_writer.py`.
 
 Quando dispatchar qualquer agent com memory ativo no projeto, **explicite no prompt**: "considere memory existente do cliente neste projeto".
+
+### Pedidos de manutenção do plugin (execute direto, sem dispatch)
+
+| O usuário pede | Rode |
+|---|---|
+| "inicialize a memória do Marketing OS neste projeto" | `python3 scripts/init_agent_memory.py` |
+| "rode o diagnóstico de instalação do Marketing OS", "qual versão está ativa" | `python3 scripts/install_doctor.py` |
+| "os fatos de plataforma estão em dia?" | `python3 scripts/check_platform_facts.py` |
+| "essa peça tem risco de compliance?" (checagem rápida) | `python3 scripts/compliance_check.py --input <arquivo>` |
 
 ## Mapa de Dispatch (21 Agents)
 
@@ -113,8 +125,8 @@ Quando o briefing mistura as etapas, preserve a dependência:
 ### Desempate: `mos-brand` vs `mos-storytelling`
 
 Ambos tocam em "narrativa de marca". Regra:
-- **`mos-brand`** quando o briefing é sobre **DEFINIR** a identidade — criar arquétipo, manifesto, voz/tom, brand book
-- **`mos-storytelling`** quando é sobre **APLICAR** narrativa numa peça — estruturar uma sales letter com hero's journey, escrever uma origin story específica, construir arco em um vídeo/post
+- **`mos-brand`** quando o briefing é sobre **DEFINIR** a identidade: criar arquétipo, manifesto, voz/tom, brand book
+- **`mos-storytelling`** quando é sobre **APLICAR** narrativa numa peça: estruturar uma sales letter com hero's journey, escrever uma origin story específica, construir arco em um vídeo/post
 
 ### Rota condicional: Oferta
 
@@ -162,7 +174,7 @@ Pedido composto "acha influencers e manda mensagem": sequencial `mos-research` �
 
 ### Caso composto: páginas (landing / aplicação / vendas)
 
-Briefings tipo **"cria página de aplicação"**, **"landing page"**, **"página de vendas"**, **"sales page"** **NÃO** mapeiam pra um único agent — eles disparam o workflow #5 abaixo (`mos-funnel` + `mos-copy` + `mos-design` em paralelo, depois eventual handoff a um builder técnico).
+Briefings tipo **"cria página de aplicação"**, **"landing page"**, **"página de vendas"**, **"sales page"** **NÃO** mapeiam pra um único agent: eles disparam o workflow #5 abaixo (`mos-funnel` + `mos-copy` + `mos-design` em paralelo, depois eventual handoff a um builder técnico).
 
 **REGRA CRÍTICA:** o marketing-os reivindica esse território. NÃO delegue direto a skills de frontend (ex: `frontend-design` do plugin oficial) sem antes rodar a camada estratégica do plugin. Caso contrário a página sai sem padrões de conversão BOFU, sem quality gates de copy, e sem direção visual de nicho.
 
@@ -213,126 +225,23 @@ Fase 2 (paralelo onde possível):
 Fase 3: Quality gates + revisão humana
 ```
 
-### 5. Workflow: Página de Aplicação / Landing / Vendas (BOFU)
+### 5 a 10. Workflows compostos: siga o command
 
-Para briefings tipo "cria página de aplicação", "landing page", "página de vendas", "sales page". O marketing-os **DEVE** orquestrar a camada estratégica antes de qualquer build técnico.
+Estes workflows têm contrato completo no command correspondente: fases, prompts de dispatch, consolidação e o porquê de cada agent. Em linguagem natural, reconheça o gatilho e siga o command. No ChatGPT Work e no Codex, leia o command e execute o mesmo contrato.
 
-```
-Fase 1 (paralelo, single message com 3 Agent calls):
-  - Agent(subagent_type: "mos-funnel", prompt: "estruturar página BOFU para [produto/avatar]: CTA placement, escassez, anti-avatar, FAQ, prova social, stack value")
-  - Agent(subagent_type: "mos-copy", prompt: "revisar/melhorar copy fornecida [se houver: colar copy do PDF/DOCX], aplicar quality gates globais, sugerir variações de headline/CTA")
-  - Agent(subagent_type: "mos-design", prompt: "direção visual para página BOFU em [nicho]: paleta, tipografia, hierarquia, mood, exemplos de referência")
+| # | Gatilho | Command (contrato) | Agents |
+|---|---|---|---|
+| 5 | página de aplicação, landing page, página de vendas | `/criar-landing-page` | funnel + copy + design; build técnico só depois |
+| 6 | webinar ao vivo ou perpétuo | `/criar-webinar` | launch + funnel + video; depois copy + email |
+| 7 | lançar curso, lançamento de infoproduto | `/criar-infoproduto`; campanha inteira: `/campanha-lancamento` | research + brand + infoproduct; launch + funnel; copy + email + ads |
+| 8 | carrossel completo | `/criar-carrossel` | social + copy + design (+ ai-tools) |
+| 9 | VSL | `/criar-video` | storytelling + copy + video |
+| 10 | analisar e clonar a estratégia de um concorrente ou expert | `/clonar-estrategia` | research + brand; depois copy |
 
-Fase 2 (sequencial — depende dos outputs da Fase 1):
-  - Consolidar os 3 outputs num brief único (estrutura + copy revisada + design spec)
-  - SE o usuário pediu HTML/CSS de fato → delegar à skill `frontend-design` (plugin oficial Anthropic) com o brief consolidado como input
-  - SE o usuário pediu só specs (sem código) → parar na Fase 1 e entregar o brief
+Regras que valem para todos:
 
-Fase 3: Quality gates globais sobre o output final + sugestões de teste A/B (mos-ab-testing opcional)
-```
-
-**Por que essa ordem importa:**
-- Sem `mos-funnel`: estrutura sai genérica, sem padrões BOFU comprovados (escassez, anti-avatar, stack value)
-- Sem `mos-copy`: copy entregue não passa pelos quality gates (travessão, "brutal", CAPS), e oportunidade de melhoria fica em cima da mesa
-- Sem `mos-design`: visual sai com cara genérica de template, não de nicho premium
-- `frontend-design` é excelente em build técnico, mas não conhece padrões de conversão — é executor da Fase 2, não decisor da Fase 1
-
-**Quando usar memory de contexto:** se a pasta atual já tem `.claude/agent-memory/mos-copy/` ou `.claude/agent-memory/mos-funnel/` com briefings/feedback de cliente anteriores (criados via `python3 scripts/init_agent_memory.py`), explicite isso no prompt do Fase 1 ("considere memory existente do cliente").
-
-### 6. Workflow: Webinar (live ou perpetual)
-
-Triggers: "monta um webinar", "webinar de vendas pra X", "webinar funnel".
-
-```
-Fase 1 (paralelo, single message):
-  - Agent(subagent_type: "mos-launch", prompt: "estratégia de webinar [live/perpetual] para [produto]: posicionamento da oferta, pitch timing, escassez")
-  - Agent(subagent_type: "mos-funnel", prompt: "funil de webinar: registro → confirmação → reminder → live → reposicionamento → encerramento; pontos de queda esperados")
-  - Agent(subagent_type: "mos-video", prompt: "estrutura do webinar de [duração] minutos: hook, pitch, agenda, conteúdo de valor, transição pra oferta, garantia, FAQ ao vivo")
-
-Fase 2 (sequencial, depende dos 3 outputs):
-  - Agent(subagent_type: "mos-copy", prompt: "página de registro + headline + 3 emails (registro/reminder/no-show) com base no posicionamento da Fase 1")
-  - Agent(subagent_type: "mos-email", prompt: "sequência completa de webinar: 4 emails pré, 1 lembrete dia, 3 emails pós-webinar (replay → últimas vagas → encerramento)")
-
-Fase 3: Quality gates + recomendação de tracking (mos-analytics opcional pra setup de eventos)
-```
-
-**Por que essa ordem:** sem `mos-launch` o webinar não tem estratégia de oferta (vira aula sem venda). Sem `mos-funnel` cada step do funil sai isolado. Sem `mos-video` o roteiro não respeita ciência de retenção. Os Fase 2 (copy + email) dependem de saber QUAL é a oferta e onde está o pitch — por isso sequencial.
-
-### 7. Workflow: Lançamento de Infoproduto
-
-Triggers: "vou lançar um curso", "lançamento de infoproduto", "criar e lançar [produto digital]".
-
-```
-Fase 1 (paralelo):
-  - Agent(subagent_type: "mos-research", prompt: "validação de mercado: tamanho do nicho, concorrentes, ticket médio praticado, dores não atendidas")
-  - Agent(subagent_type: "mos-brand", prompt: "posicionamento e voz da marca/expert para o produto") — só se marca nova ou pivô
-  - Agent(subagent_type: "mos-infoproduct", prompt: "estrutura do infoproduto: módulos, formato (curso/membership/mentoria), pricing strategy, bônus")
-
-Fase 2 (sequencial — depende da estrutura definida na Fase 1):
-  - Agent(subagent_type: "mos-launch", prompt: "estratégia de lançamento (PLF / semente / relâmpago / perpétuo) baseada no produto e nicho")
-  - Agent(subagent_type: "mos-funnel", prompt: "funil completo: TOFU (CPL/anúncios) → MOFU (lead magnet/webinar) → BOFU (página de vendas/aplicação)")
-
-Fase 3 (paralelo, depende da estratégia de lançamento):
-  - Agent(subagent_type: "mos-copy", prompt: "página de vendas + headlines + CTAs alinhados com promessa do produto e estratégia de lançamento")
-  - Agent(subagent_type: "mos-email", prompt: "sequência completa de pré-lançamento + abertura de carrinho + última chamada")
-  - Agent(subagent_type: "mos-ads", prompt: "campanhas de tráfego pra cada fase do lançamento: pré (lista) + durante (conversão) + retargeting")
-
-Fase 4: Quality gates + setup de tracking + plano de teste A/B (mos-ab-testing)
-```
-
-**Por que esse encadeamento:** lançamento não é peça única — é orquestração de estratégia + estrutura + funil + execução. Pular fase 1 (research) é o erro #1 de quem lança no escuro. Pular fase 2 (escolha de modelo de lançamento) é o erro #2 de copiar PLF sem entender se cabe.
-
-### 8. Workflow: Carrossel Completo (Instagram / LinkedIn)
-
-Triggers: "cria carrossel sobre X", "carrossel Instagram pra [tema]".
-
-```
-Fase 1 (paralelo, single message):
-  - Agent(subagent_type: "mos-social", prompt: "estrutura de carrossel pra [plataforma]: número ideal de slides, hook na capa, padrão de retenção entre slides, CTA final")
-  - Agent(subagent_type: "mos-copy", prompt: "texto de cada slide: hook na capa, body com peso/leveza alternada, CTA específico — quality gates aplicados")
-  - Agent(subagent_type: "mos-design", prompt: "direção visual: paleta, tipografia, hierarquia, formato de capa vs body, consistência visual entre slides")
-
-Fase 2 (opcional, paralelo com Fase 1):
-  - Agent(subagent_type: "mos-ai-tools", prompt: "prompts pra IA gerar imagem da capa (Midjourney/Flux/Ideogram) com referência da Fase 1 design")
-
-Fase 3: Consolidação (texto + design spec + prompts) + caption + hashtags + sugestão de enquete obrigatória
-```
-
-**Por que: ** carrossel é o formato que mais sofre quando feito por 1 agent só. `mos-social` sem `mos-copy` = texto fraco. `mos-copy` sem `mos-design` = visual genérico. `mos-design` sem `mos-social` = sem entender ritmo de retenção da plataforma.
-
-### 9. Workflow: VSL Completa (Video Sales Letter)
-
-Triggers: "cria VSL pra [produto]", "roteiro de VSL", "video sales letter".
-
-```
-Fase 1 (paralelo):
-  - Agent(subagent_type: "mos-storytelling", prompt: "arco narrativo da VSL: hook → problema → vilão → solução → prova → oferta → urgência. Frameworks: hero's journey adaptado pra venda")
-  - Agent(subagent_type: "mos-copy", prompt: "estrutura de copy de venda no formato VSL: headline, big idea, mecanismo único, anti-avatar, stack value, garantia, FAQ falado")
-  - Agent(subagent_type: "mos-video", prompt: "ciência de retenção em VSL: timestamps de queda esperados, transições, B-roll, ritmo, duração ideal por nicho/ticket")
-
-Fase 2: Consolidação em roteiro único (texto narrado + cues visuais + timing de seções)
-
-Fase 3: Quality gates (incluindo gates de substância: promessas com backup, garantia clara) + sugestão de testes A/B em hook e mecanismo único
-```
-
-**Por que: ** VSL é o caso clássico de copy + storytelling + ciência de vídeo precisarem casar. Falta de qualquer um quebra a peça toda.
-
-### 10. Workflow: Análise de Concorrente + Clone de Estratégia
-
-Triggers: "analisa @fulano e clona", "engenharia reversa do [concorrente]", "como o [expert] vende?".
-
-```
-Fase 1 (paralelo):
-  - Agent(subagent_type: "mos-research", prompt: "mapeamento completo: produtos, ticket, posicionamento, fontes de tráfego, conteúdo orgânico, ads ativos, depoimentos. WebSearch + análise de perfis públicos")
-  - Agent(subagent_type: "mos-brand", prompt: "extrair positioning, arquétipo, voz/tom do concorrente analisado a partir de samples reais — gerar brand spec replicável")
-
-Fase 2 (sequencial, depende da Fase 1):
-  - Agent(subagent_type: "mos-copy", prompt: "voice clone: extrair padrões de copy do concorrente (estruturas de headline, padrões de CTA, vocabulário, ritmo). Aplicar nos assets/clones/ se for um copywriter conhecido (Halbert, Hopkins, etc.). Gerar samples adaptados pra cliente atual")
-
-Fase 3: Brief consolidado de "estratégia clonada e adaptada" + checklist de o-que-replicar / o-que-evitar / oportunidades de diferenciação
-```
-
-**Por que: ** clone sem `mos-research` é cópia rasa. Sem `mos-brand` é só pegar headlines (sem entender posicionamento). Sem `mos-copy` é análise sem aplicação prática.
+- Estratégia antes de build: quando a peça pede HTML/CSS de fato, o brief consolidado dos agents vai para a skill de frontend. Sem pedido de código, entregue o brief.
+- Com memória do cliente no projeto (`.claude/agent-memory/marketing-os-mos-*/`), diga no prompt de cada fase: "considere memory existente do cliente".
 
 ## Quality Gates Globais (aplicam SEMPRE)
 
@@ -369,20 +278,26 @@ Para qualquer copy de venda, anúncio, sales letter, página de aplicação, VSL
 | Comparativo competitivo | Citou concorrente direto? Tem fundamento factual ou é especulativo? |
 | Garantia | Promessa de garantia tem termo claro (período, condições)? |
 | Linguagem absoluta | Evitar "garantido", "100%", "todos", "sempre" sem qualificador |
-| Placeholder publicado | Sem "XXX", "X reais", "Lorem ipsum" — checar antes de entregar |
+| Placeholder publicado | Sem "XXX", "X reais", "Lorem ipsum"; checar antes de entregar |
 
 ### Compliance regulatório (saúde / finanças / suplementos)
 
 Aplicar SEMPRE quando o nicho envolve. Detectar via memory do cliente, pasta atual, ou pergunta-chave #1.
 
-| Nicho | Órgão | Regras-chave |
-|-------|-------|--------------|
-| Saúde / médico / dental / nutrição | **CFM/CRM, CONAR** | Disclaimer "resultados variam" em depoimentos; proibido "cura"/"tratamento" sem registro; CRM visível em médicos |
-| Suplementos / produtos naturais | **ANVISA** | Não pode prometer cura, tratar doença, dosagem específica sem registro; só "auxilia/contribui" |
-| Finanças / investimentos | **CVM** | "Rentabilidade passada não garante futura" obrigatório; sem promessa de retorno; risco explícito |
-| Cosméticos / dermato | **ANVISA** | Sem prometer tratar doença de pele; "pode auxiliar" é o limite |
+| Nicho | Norma vigente | Regras-chave |
+|-------|---------------|--------------|
+| Medicina | **CFM 2.336/2023** | Nome, CRM, MÉDICO, especialidade e RQE na peça e na bio; sem prometer resultado; antes e depois só educativo; preço e selfie permitidos |
+| Odontologia | **Código CFO + CFO-196/2019** | Nome e CRO em toda imagem; sem preço, gratuidade, "sem compromisso", sorteio ou "popular"; antes e depois só diagnóstico e conclusão, com TCLE |
+| Nutrição | **CFN 599/2018** (a 856/2026 vale de 23/01/2027) | Nome e CRN; sem garantia de resultado, preço, promoção ou sorteio; sem imagem corporal atribuindo resultado, mesmo autorizada |
+| Psicologia | **CFP, art. 20 + NT 1/2022** | Nome, CRP; sem preço como propaganda ("preço social", pacote), sem previsão de resultado |
+| Advocacia | **Prov. OAB 205/2021** | Informativa e sóbria; sem honorários, gratuidade, promessa de resultado, caso concreto ou ostentação |
+| Suplementos | **RDC 243/2018 + IN 28** | Só alegação da lista oficial, com texto exato; sem finalidade terapêutica |
+| Cosméticos | **RDC 907/2024** | Sem alegação terapêutica; benefício com dado de eficácia |
+| Finanças | **CVM 20 e 19 + Lei 6.385** | Recomendar ativo exige registro; "não é recomendação" não protege; fundo com aviso de rentabilidade passada |
+| Infoproduto | **CONAR + CDC + Hotmart + Meta** | "Fature R$ X" obriga e precisa de base; sem ganho fácil ou garantido; depoimento autorizado por escrito |
+| Influenciador | **Guia CONAR 2026 + Portaria Conjunta 3/2026** | #publi ou ferramenta de parceria visível de cara; collab sozinho não basta |
 
-Quando o briefing entrar nesses nichos, o orquestrador adiciona disclaimer apropriado em qualquer peça final, sem perguntar.
+Fonte canônica com artigos e links: `references/compliance-br.md` (verificada em 2026-09-28). Revisão completa de uma peça: `/checar-compliance`. Quando o briefing entrar nesses nichos, o orquestrador adiciona disclaimer apropriado em qualquer peça final, sem perguntar.
 
 ### Enquetes para Engajamento
 
@@ -422,7 +337,7 @@ Detalhes em `references/niches.md`.
 - `headlines-virais.md`, `hooks-reels.md`, `ctas-conversao.md`, `copy-carrossel.md`, `bios-instagram.md`, `transicoes-reels.md`, `paletas-cores.md`, `emails-conversao.md`, `trends-adaptaveis.md`.
 
 ### Scripts Python (`scripts/`)
-29 ferramentas + CLI unificado `mos.py`. Os agents com acesso a `Bash` podem invocar:
+Scripts Python determinísticos e o CLI unificado `mos.py`. Os agents com acesso a `Bash` podem invocar:
 - `seo_analyzer.py`, `hashtag_generator.py`, `hook_generator.py`, `reels_script_generator.py`, `carousel_structure_generator.py`, `caption_generator.py`, `trend_tracker.py`, `project_manager.py`, `quality_gate.py`, etc.
 
 ### Workflows (`workflows/`)
@@ -451,12 +366,12 @@ Após o agent (ou agents em paralelo) retornar(em):
 3. 2-3 variações A/B (copy, headlines, CTAs, hooks)
 
 **Condicionais:**
-4. **Hashtags / keywords** — apenas se for conteúdo de social ou SEO
-5. **Prompts de IA** — apenas se envolveu `mos-ai-tools` ou geração de imagem/vídeo
-6. **Métricas sugeridas** — apenas se é peça de conversão/campanha (não pra peça artística/branded)
-7. **Recomendações de otimização** — sempre que cabível
-8. **Enquete para engajamento** — OBRIGATÓRIO em conteúdos de redes sociais (Reels, posts, carrosséis, stories)
-9. **Disclaimer regulatório** — OBRIGATÓRIO em peças de saúde/finanças/suplementos (ver "Compliance regulatório")
+4. **Hashtags / keywords**: apenas se for conteúdo de social ou SEO
+5. **Prompts de IA**: apenas se envolveu `mos-ai-tools` ou geração de imagem/vídeo
+6. **Métricas sugeridas**: apenas se é peça de conversão/campanha (não pra peça artística/branded)
+7. **Recomendações de otimização**: sempre que cabível
+8. **Enquete para engajamento**: OBRIGATÓRIO em conteúdos de redes sociais (Reels, posts, carrosséis, stories)
+9. **Disclaimer regulatório**: OBRIGATÓRIO em peças de saúde/finanças/suplementos (ver "Compliance regulatório")
 
 ## Política de delegação a skills externas
 
@@ -471,36 +386,70 @@ Quando os subagents do marketing-os terminam sua parte, alguns outputs podem pre
 
 **REGRA:** delegação acontece **DEPOIS** dos workflows do marketing-os, **nunca antes**. O marketing-os entrega brief estratégico/copy/design; skills externas executam o build técnico. Inverter a ordem é o bug que originou o workflow #5 (página de aplicação).
 
-## Slash commands rápidos
+## Slash commands: qual usar para cada necessidade
 
-48 commands em `commands/` são atalhos pra workflows comuns. Quando user invoca o command direto (ex: `/criar-carrossel`), segue a lógica do command file. Quando user pede em linguagem natural ("cria um carrossel sobre X"), este SKILL dispatcha conforme tabela e workflows acima.
+Tabela canônica de roteamento por command; o `/mo` usa esta tabela. Quando o usuário invoca o command direto, siga o arquivo do command. Em linguagem natural, escolha pela tabela e, se nenhum command encaixar, despache o agent pelo Mapa de Dispatch.
 
-| Categoria | Commands |
-|---|---|
-| Meta-orquestrador | `/mo` (briefing aberto, roteia automaticamente pro command apropriado) |
-| Conteúdo social | `/criar-post`, `/criar-carrossel`, `/criar-calendario` |
-| Copy | `/otimizar-copy` (diagnóstico + score + reescrita de copy existente) |
-| Vídeo/áudio | `/criar-video`, `/criar-podcast`, `/narrar-roteiro`, `/produzir-reels` (roteiro → vídeo legendado renderizado) |
-| Páginas/funis | `/criar-landing-page`, `/criar-funil`, `/criar-webinar` |
-| Email | `/criar-email`, `/criar-sequencia` |
-| Ads | `/criar-anuncio`, `/publicar-anuncio` |
-| Infoproduto | `/criar-infoproduto` |
-| Oferta | `/criar-oferta` (USP preservada, evidências, value stack, preço, garantia, score e validação) |
-| Audience research | `/criar-avatar` (avatar principal, segmentos, anti-avatar, JTBD e handoff) |
-| Marca e posicionamento | `/criar-usp` (USP principal, evidências, diferenciação, score, validação e handoff) |
-| Comunidade | `/responder-comentarios` (triagem + rascunhos de comentários/DMs) |
-| Parcerias | `/prospectar-creators` (shortlist + outreach de creators) |
-| Voice clones | `/criar-clone` (expert externo via web research), `/criar-meu-clone` (suas amostras locais em `workspace/`) |
-| Análise | `/analisar-concorrencia`, `/analisar-video`, `/clonar-estrategia`, `/auditoria`, `/auditoria-pro` |
-| Testes A/B | `/criar-teste-ab` (hipótese, amostra, duração, critério de parada) |
-| Visual | `/criar-brief-design`, `/gerar-imagem`, `/renderizar-imagem` (prompt → PNG), `/gerar-thumbnail` (16:9 com overlay tipográfico), `/capturar-tela` |
-| Operação | `/batch`, `/criar-artigo`, `/publicar-notion`, `/projeto`, `/datas-sazonais`, `/aprender` (métricas → memory) |
-| Campanhas (presets) | `/campanha` (índice), `/campanha-lancamento`, `/campanha-prospeccao`, `/campanha-retencao`, `/campanha-autoridade`, `/campanha-growth`, `/campanha-black-friday` |
+| Necessidade | Command | Observação |
+|---|---|---|
+| Não sei qual usar | `/mo` | Meta-orquestrador: classifica o briefing e diz qual rota escolheu |
+| Configurar o perfil de marca do projeto | `/configurar-marca` | Uma vez por projeto; todos os especialistas leem `workspace/brand/perfil.md` |
+| Um post | `/criar-post` | Peça única; para várias peças use `/batch` |
+| Carrossel | `/criar-carrossel` | Estrutura, texto por slide e design |
+| Calendário editorial | `/criar-calendario` | |
+| Várias peças de uma vez | `/batch` | Variações de hook, ângulo e framework |
+| Reaproveitar uma live, aula, podcast ou artigo em várias peças | `/reaproveitar` | Mapa da fonte primeiro, depois peças por formato |
+| Um email ou newsletter | `/criar-email` | Inclui sequências só de email (boas-vindas, nutrição, carrinho) |
+| Sequência coordenada entre canais | `/criar-sequencia` | Email + social + ads com mensagem única |
+| Anúncio | `/criar-anuncio` | Copy e estrutura; publicar é `/publicar-anuncio` |
+| Publicar anúncio no Meta | `/publicar-anuncio` | Exige confirmação humana |
+| Roteiro de vídeo ou VSL | `/criar-video` | |
+| Reels produzido (roteiro, narração e vídeo) | `/produzir-reels` | |
+| Narrar um roteiro em áudio | `/narrar-roteiro` | |
+| Podcast | `/criar-podcast` | |
+| Thumbnail | `/gerar-thumbnail` | |
+| Prompt de imagem | `/gerar-imagem` | Entrega só o prompt |
+| Imagem gerada (PNG) | `/renderizar-imagem` | Gera a imagem a partir do prompt |
+| Brief de design | `/criar-brief-design` | |
+| Artigo SEO | `/criar-artigo` | |
+| Landing page ou página de aplicação | `/criar-landing-page` | |
+| Funil | `/criar-funil` | Para funil de lançamento de curso, prefira `/criar-infoproduto` |
+| Webinar | `/criar-webinar` | |
+| Curso, ebook, mentoria ou membership | `/criar-infoproduto` | |
+| Avatar ou persona | `/criar-avatar` | |
+| Voz do cliente: dores, desejos e objeções literais de reviews ou comentários | `/minerar-voc` | Salva em `workspace/brand/voc.md` |
+| USP ou proposta de valor | `/criar-usp` | |
+| Oferta (value stack, preço, garantia) | `/criar-oferta` | |
+| Melhorar ou revisar uma peça pronta (copy, roteiro, carrossel, sequência, artigo, página) | `/otimizar-copy` | Diagnóstico, score e reescritas; o especialista do formato revisa a estrutura |
+| Saber se uma peça pode ser publicada: conselho profissional, ANVISA, CVM, CONAR, CDC, LGPD | `/checar-compliance` | Veredito, trechos com a norma e a peça corrigida |
+| Coletar depoimentos e cases de clientes com autorização | `/coletar-prova` | Pedido, entrevista, modelo de case e termo de autorização (CONAR e LGPD) |
+| Teste A/B | `/criar-teste-ab` | |
+| Responder comentários e DMs | `/responder-comentarios` | Rascunhos; nunca publica |
+| Prospectar creators | `/prospectar-creators` | Rascunhos de outreach; nunca envia |
+| Analisar concorrentes | `/analisar-concorrencia` | Mapa competitivo |
+| Clonar a estratégia de um concorrente ou expert | `/clonar-estrategia` | Engenharia reversa adaptada à sua marca |
+| Analisar um vídeo | `/analisar-video` | |
+| Capturar e analisar uma página | `/capturar-tela` | |
+| Auditoria rápida de página, perfil, anúncios ou canal | `/auditoria` | Relatório com score |
+| Auditoria premium para entregar ao cliente | `/auditoria-pro` | Screenshots, radar e roadmap em PDF |
+| Clone de voz de um expert | `/criar-clone` | Pesquisa o expert na web |
+| Clone da minha voz | `/criar-meu-clone` | Usa as suas amostras; salva em `workspace/clones/` |
+| Datas comerciais do ano | `/datas-sazonais` | |
+| Aprender com métricas | `/aprender` | Grava aprendizados na memória dos agents |
+| Projeto em etapas com aprovação | `/projeto` | |
+| Publicar no Notion | `/publicar-notion` | |
+| Campanha completa por objetivo | `/campanha` | Lista os presets abaixo |
+| Campanha de lançamento | `/campanha-lancamento` | |
+| Campanha de geração de leads | `/campanha-prospeccao` | |
+| Campanha de retenção | `/campanha-retencao` | |
+| Campanha de autoridade | `/campanha-autoridade` | |
+| Campanha de growth | `/campanha-growth` | |
+| Campanha de Black Friday | `/campanha-black-friday` | |
 
 ## Arquitetura (two-tier)
 
 - **Tier 1** (`agents/mos-*.md`): system prompts enxutos (~250 linhas) com dispatch protocol, output schema e quality gates. Carregados automaticamente pelo Claude Code e consultados sob demanda no ChatGPT Work e no Codex.
-- **Tier 2** (`subagents/*-agent.md`): knowledge base profunda (~3500 linhas cada) com frameworks, cases, tabelas, exemplos. Lida sob demanda via Read pelos agents tier-1.
+- **Tier 2** (`subagents/*-agent.md`): knowledge base profunda (de algumas centenas a milhares de linhas) com frameworks, cases, tabelas, exemplos. Lida sob demanda via Read pelos agents tier-1.
 
 Isso mantém contextos dos agents leves, carrega profundidade só quando precisa, e permite evoluir knowledge sem mexer no dispatch.
 

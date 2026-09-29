@@ -18,7 +18,7 @@ Enquanto isso, os Pilares 2 e 3 ficam completamente abandonados.
 
 Aqui está a matemática que poucos enxergam:
 
-Se você melhora apenas 30% em cada pilar simultaneamente, o resultado total não é 90% — é 119%. Porque os efeitos se multiplicam entre si.
+Se você melhora apenas 30% em cada pilar simultaneamente, o resultado total chega a 119%, bem acima dos 90% da soma simples, porque os efeitos se multiplicam entre si.
 
 Pergunta que vale alguns minutos de reflexão: quando foi a última vez que você fez uma campanha específica para clientes inativos? Para aumentar a frequência de compra dos atuais?
 
@@ -63,17 +63,17 @@ Em uma sessão estratégica de 90 minutos, identificamos em média 3-5 fontes de
 
 A maioria dos consultores vai te dizer para conseguir mais clientes.
 
-Eu vou te mostrar como extrair significativamente mais valor dos clientes que você já tem — e dos ativos que você já possui mas ainda não monetizou.
+Eu vou te mostrar como extrair significativamente mais valor dos clientes que você já tem, e dos ativos que você já possui mas ainda não monetizou.
 
 Depois de trabalhar com mais de 10.000 negócios em mais de 1.000 setores diferentes, aprendi que todo empresário está sentado sobre pelo menos uma dessas fontes de receita oculta:
 
-**Clientes inativos** — pessoas que compraram antes e simplesmente pararam. Uma campanha de reativação bem estruturada normalmente gera 20-40% de receita incremental sem nenhum custo de aquisição.
+**Clientes inativos**: pessoas que compraram antes e simplesmente pararam. Uma campanha de reativação bem estruturada normalmente gera 20-40% de receita incremental sem nenhum custo de aquisição.
 
-**Capacidade subutilizada** — tempo, infraestrutura ou conhecimento que você usa para seu negócio mas que outros pagariam para usar também.
+**Capacidade subutilizada**: tempo, infraestrutura ou conhecimento que você usa para seu negócio mas que outros pagariam para usar também.
 
-**Parcerias não exploradas** — fornecedores, clientes e parceiros que têm acesso exatamente à sua audiência ideal. Joint ventures bem estruturadas custam zero para implementar.
+**Parcerias não exploradas**: fornecedores, clientes e parceiros que têm acesso exatamente à sua audiência ideal. Joint ventures bem estruturadas custam zero para implementar.
 
-**Produtos/serviços complementares** — seus clientes existentes têm outros problemas que você poderia resolver. A maioria nunca perguntou.
+**Produtos/serviços complementares**: seus clientes existentes têm outros problemas que você poderia resolver. A maioria nunca perguntou.
 
 **O que acontece em 90 minutos:**
 

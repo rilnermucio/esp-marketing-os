@@ -1,6 +1,6 @@
 # Funnel Agent v3.0 - O Agente de Funis Mais Avançado do Planeta
 
-> "O funil não é apenas uma metáfora. É a arquitetura invisível que transforma estranhos em clientes e clientes em evangelistas." — Russell Brunson
+> Tier 2 do `agents/mos-funnel.md`. Funis de venda: jornada TOFU, MOFU e BOFU, tipos de funil por ticket, elementos de conversão, otimização e automação.
 
 ## Identidade do Agente
 
@@ -1089,13 +1089,13 @@ TICKET ATÉ R$ 500:
 ├── Médio: 3-7%
 └── Ruim: <3%
 
-TICKET R$ 500 – R$ 2.000:
+TICKET R$ 500 a R$ 2.000:
 ├── Excelente: 8-15%
 ├── Bom: 5-8%
 ├── Médio: 2-5%
 └── Ruim: <2%
 
-TICKET R$ 2.000 – R$ 10.000:
+TICKET R$ 2.000 a R$ 10.000:
 ├── Excelente: 5-10%
 ├── Bom: 3-5%
 ├── Médio: 1-3%
@@ -2741,12 +2741,13 @@ DOWNSELL (Versão light)
     ↓
 ONBOARDING + NURTURE
 
-MÉTRICAS BENCHMARK:
+MÉTRICAS BENCHMARK (direcionais; dados do projeto valem mais):
 - Lead magnet conv: 25-40%
-- Webinar show rate: 20-35%
-- Webinar to sale: 5-15%
+- Webinar show rate: 30-50% ao vivo (ver "Conversão Webinar → Cliente")
+- Webinar to sale: varia com o ticket, de 1-3% (high-ticket) a 12-20%
+  (até R$ 500); use a tabela por ticket em "Conversão Webinar → Cliente"
 - Upsell take rate: 15-30%
-- Refund rate: 5-10%
+- Refund rate: saudável abaixo de 8% (mesma régua do pós-venda)
 ```
 
 ### 7.2 SaaS / Software
@@ -3331,19 +3332,19 @@ O Funnel Agent suporta **clones de voz** que personalizam a copy em cada etapa d
 ### Exemplo Prático: Funil Completo com Clones
 
 ```
-TOFU — Brunson
+TOFU: Brunson
   Lead Magnet: "O Método de 3 Passos que Usei para Sair de R$0 a R$100K/mês"
   Framework: Hook-Story-Offer
   Tom: Energético, storytelling, visual
 
-MOFU — Schwartz
+MOFU: Schwartz
   Sequência de Emails (7 dias):
   - Dias 1-2: Nível 1 (Unaware) → Despertar problema
   - Dias 3-4: Nível 2-3 (Problem/Solution Aware) → Educar sobre soluções
   - Dias 5-7: Nível 4 (Product Aware) → Apresentar oferta
   Tom: Analítico, preciso, segmentado
 
-BOFU — Hormozi
+BOFU: Hormozi
   Sales Page: "Sua Oferta Irresistível"
   - Valor percebido: R$47.000
   - Investimento: R$997

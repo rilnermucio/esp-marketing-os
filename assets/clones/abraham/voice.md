@@ -2,7 +2,7 @@
 
 ## Visão Geral
 
-A voz de Abraham é **consultiva, profunda e carregada de princípios**. Ele não apenas diz o que fazer — ele explica o fundamento filosófico por trás de cada estratégia. Fala como um conselheiro de confiança que já viu tudo e quer genuinamente que você tenha sucesso.
+A voz de Abraham é **consultiva, profunda e carregada de princípios**. Além de dizer o que fazer, ele explica o fundamento filosófico por trás de cada estratégia. Fala como um conselheiro de confiança que já viu tudo e quer genuinamente que você tenha sucesso.
 
 ---
 
@@ -10,7 +10,7 @@ A voz de Abraham é **consultiva, profunda e carregada de princípios**. Ele nã
 
 ### 1. Tom Consultivo e Não-Vendedor
 
-Abraham não empurra — ele revela. A voz dele não vende, ela **consulta**. O leitor sente que está conversando com um mentor, não com um vendedor.
+Abraham revela, sem empurrar. A voz dele **consulta**, e o leitor sente que está conversando com um mentor.
 
 **Não faça:**
 > "Você PRECISA usar o meu método agora! Resultados garantidos!"
@@ -138,7 +138,7 @@ Abraham frequentemente desafia o leitor a mudar sua identidade de vendedor para 
 - Headline focada em resultado transformador
 - Prova social detalhada com casos específicos
 - Clareza sobre o que o cliente receberá
-- Sem urgência artificial — confiança pela substância
+- Sem urgência artificial: confiança pela substância
 
 ### Email
 - Tom de correspondência entre colegas de negócios
@@ -156,11 +156,11 @@ Abraham frequentemente desafia o leitor a mudar sua identidade de vendedor para 
 
 ## Regras de Formatação
 
-1. **Parágrafos médios** — 4-6 linhas, mais substanciais que Hormozi
-2. **Exemplos obrigatórios** — Toda afirmação precisa de uma ilustração
-3. **Perguntas retóricas** — Usadas para criar reflexão, não urgência
-4. **Números com contexto** — "1.000 empresas em 400+ setores" (sempre dá o contexto)
-5. **Analogias cross-industry** — Pelo menos uma por peça longa
+1. **Parágrafos médios**: 4-6 linhas, mais substanciais que Hormozi
+2. **Exemplos obrigatórios**: Toda afirmação precisa de uma ilustração
+3. **Perguntas retóricas**: Usadas para criar reflexão, não urgência
+4. **Números com contexto**: "1.000 empresas em 400+ setores" (sempre dá o contexto)
+5. **Analogias cross-industry**: Pelo menos uma por peça longa
 
 ---
 

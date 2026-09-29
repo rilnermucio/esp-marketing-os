@@ -1,5 +1,5 @@
 ---
-description: Create a design brief with specs, palettes, typography, and component requirements. Dispatches mos-design simples ou mos-design + mos-brand (+ opcional mos-ai-tools) em paralelo para identidade completa.
+description: "Cria brief de design com paleta, tipografia, hierarquia e especificação de componentes. Use quando pedirem direção visual, identidade visual ou um brief para designer."
 argument-hint: "<project type, e.g., 'Instagram carousel template' or 'landing page design for SaaS'>"
 ---
 
@@ -42,13 +42,13 @@ Briefing recebido
 ## Dispatch Simples (1 peça, identidade existente)
 
 ```
-Agent(subagent_type: "mos-design", prompt: "Brief de design completo para [project type]. Brand: [brand context]. Purpose: [purpose]. Audiência: [audiência]. Plataformas: [plataformas]. Style: [style]. Considere memory existente do cliente neste projeto. Entregue: visual direction (style + mood + 3-5 adjetivos descritivos + references), color palette completa (primary, secondary, accent, neutral, background, surface — 6 cores com hex e usage), typography (heading + body + accent fonts com weights e scale), layout principles (grid + spacing unit + border radius + shadows), component specs detalhadas (dimensões, layout, elementos, estados), dimensions table por plataforma com formatos e DPI, design checklist (cores, tipografia, espaçamento, mobile, contraste WCAG AA, exports). Aplicar quality gates globais (sem travessão, sem 'brutal', PT-BR correto).")
+Agent(subagent_type: "mos-design", prompt: "Brief de design completo para [project type]. Brand: [brand context]. Purpose: [purpose]. Audiência: [audiência]. Plataformas: [plataformas]. Style: [style]. Considere memory existente do cliente neste projeto. Entregue: visual direction (style + mood + 3-5 adjetivos descritivos + references), color palette completa (primary, secondary, accent, neutral, background, surface, 6 cores com hex e usage), typography (heading + body + accent fonts com weights e scale), layout principles (grid + spacing unit + border radius + shadows), component specs detalhadas (dimensões, layout, elementos, estados), dimensions table por plataforma com formatos e DPI, design checklist (cores, tipografia, espaçamento, mobile, contraste WCAG AA, exports). Aplicar quality gates globais (sem travessão, sem 'brutal', PT-BR correto).")
 ```
 
 ## Dispatch Paralelo (identidade completa, single message)
 
 ```
-- Agent(subagent_type: "mos-brand", prompt: "Identidade de marca para [brand name] em [indústria]. Audiência: [audiência]. Purpose: [purpose]. Style preference: [style]. Considere memory existente do cliente neste projeto. Entregue: arquétipo de marca, posicionamento, manifesto, tom de voz (3-5 atributos + do/don't), paleta de cores justificada por psicologia + nicho (primary, secondary, accent, neutral — com hex e racional), tipografia recomendada (heading + body + accent com personalidade da fonte), brand voice examples (3 exemplos curtos de copy no tom da marca), aplicação em diferentes contextos. Aplicar quality gates globais.")
+- Agent(subagent_type: "mos-brand", prompt: "Identidade de marca para [brand name] em [indústria]. Audiência: [audiência]. Purpose: [purpose]. Style preference: [style]. Considere memory existente do cliente neste projeto. Entregue: arquétipo de marca, posicionamento, manifesto, tom de voz (3-5 atributos + do/don't), paleta de cores justificada por psicologia + nicho (primary, secondary, accent, neutral, com hex e racional), tipografia recomendada (heading + body + accent com personalidade da fonte), brand voice examples (3 exemplos curtos de copy no tom da marca), aplicação em diferentes contextos. Aplicar quality gates globais.")
 
 - Agent(subagent_type: "mos-design", prompt: "Brief de design técnico para [project type]. Brand: [brand context]. Purpose: [purpose]. Plataformas: [plataformas]. Considere memory existente do cliente neste projeto. Aguarde paleta + tipografia do mos-brand e construa em cima delas. Entregue: layout principles (grid + spacing + border radius + shadows), component specs detalhadas (dimensões, layout, elementos, estados), dimensions table por plataforma com formatos e DPI, hierarquia visual, mobile responsive specs, design checklist (acessibilidade WCAG AA, exports). Aplicar quality gates globais.")
 ```
@@ -56,7 +56,7 @@ Agent(subagent_type: "mos-design", prompt: "Brief de design completo para [proje
 ## Adicional (paralelo, se usuário pediu prompts de IA)
 
 ```
-- Agent(subagent_type: "mos-ai-tools", prompt: "Prompts otimizados para gerar visuais com IA (Midjourney + Flux + Ideogram + DALL-E) para [project type]. Brand context: [brand context]. Style: [style]. Mood: [mood — pegar de mos-brand se houver]. Audiência: [audiência]. Entregue: 3-5 prompts por uso principal (hero image, supporting visual, background pattern, social asset, etc.), com aspect ratio e parâmetros específicos por ferramenta (--ar, --style, etc.), variações de tom/composição, prompt para variações A/B. Não use cenas com pessoas reais identificáveis sem aviso. Aplicar quality gates globais.")
+- Agent(subagent_type: "mos-ai-tools", prompt: "Prompts otimizados para gerar visuais com IA (Midjourney + Flux + Ideogram + DALL-E) para [project type]. Brand context: [brand context]. Style: [style]. Mood: [mood, pegar de mos-brand se houver]. Audiência: [audiência]. Entregue: 3-5 prompts por uso principal (hero image, supporting visual, background pattern, social asset, etc.), com aspect ratio e parâmetros específicos por ferramenta (--ar, --style, etc.), variações de tom/composição, prompt para variações A/B. Não use cenas com pessoas reais identificáveis sem aviso. Aplicar quality gates globais.")
 ```
 
 ## Consolidação

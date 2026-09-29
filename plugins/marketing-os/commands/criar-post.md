@@ -1,5 +1,5 @@
 ---
-description: Create a complete social media post optimized for the specified platform. Dispatches native Claude Code subagents (mos-social, mos-copy, optionally mos-research) in parallel or sequence for maximum quality.
+description: "Cria um post completo para Instagram, LinkedIn, TikTok, X ou Threads, com hook, legenda, CTA, hashtags e enquete. Use quando pedirem um post. Carrossel: /criar-carrossel; várias peças: /batch."
 argument-hint: "<platform and topic, e.g., 'Instagram post about productivity tips'>"
 ---
 
@@ -26,8 +26,8 @@ This command does NOT produce content inline. It **dispatches specialist subagen
 ```
 Briefing recebido
   ├── Tópico genérico ou novo nicho? (sim)
-  │     └── Dispatch PARALELO: mos-research + mos-copy
-  │         (research valida claims/tendências em paralelo com geração de hooks)
+  │     └── Dispatch PARALELO: mos-research + mos-social
+  │         (research valida claims/tendências em paralelo com a produção do post)
   │
   ├── Tópico conhecido + precisa de post polido? (sim)
   │     └── Dispatch SIMPLES: mos-social (ele já coordena com mos-copy via knowledge)

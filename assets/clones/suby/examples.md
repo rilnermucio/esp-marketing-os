@@ -37,7 +37,7 @@ Clique abaixo para ver como implementamos isso para uma empresa de cursos que au
 
 ---
 
-Se você é dono de negócio e está frustrado porque está gastando em marketing mas não vendo os resultados que merece — este vídeo foi feito especificamente para você.
+Se você é dono de negócio e está frustrado porque está gastando em marketing mas não vendo os resultados que merece: este vídeo foi feito especificamente para você.
 
 Nos próximos 20 minutos, vou te mostrar o sistema exato que usamos na King Kong para gerar mais de R$1 bilhão em faturamento para nossos clientes nos últimos 12 meses.
 
@@ -64,7 +64,7 @@ Deixa eu te mostrar como mudar isso agora...
 
 ## Exemplo 3: Email de Prospecção (B2B)
 
-**Assunto: [Nome da empresa] — vi algo que pode te interessar**
+**Assunto: [Nome da empresa], vi algo que pode te interessar**
 
 Olá [Nome],
 
@@ -72,7 +72,7 @@ Vi que a [Nome da Empresa] está rodando anúncios para [produto/serviço espec�
 
 Tenho observado o mercado de [nicho] e notei um padrão: a maioria das empresas nesse setor está brigando pelos mesmos 3% do mercado que já quer comprar, enquanto ignora os 97% restantes.
 
-Na King Kong, desenvolvemos uma estratégia específica para [nicho] que aborda todos os estágios de consciência do cliente — não apenas o fundo do funil.
+Na King Kong, desenvolvemos uma estratégia específica para [nicho] que aborda todos os estágios de consciência do cliente: não apenas o fundo do funil.
 
 Para [empresa similar] em [nicho], isso resultou em:
 - Redução de 45% no CPL
@@ -117,7 +117,7 @@ Qual parte do seu sistema de geração de clientes você ainda está improvisand
 
 **[Para empresas B2C de serviços]:**
 
-*Como Gerar 50-100 Leads Qualificados Por Semana No Piloto Automático — Mesmo se Você Nunca Anunciou Online Antes*
+*Como Gerar 50-100 Leads Qualificados Por Semana No Piloto Automático: Mesmo se Você Nunca Anunciou Online Antes*
 
 *O mesmo sistema que a King Kong usou para gerar R$1.2 bilhão em faturamento para 250+ negócios em 2024*
 
@@ -125,7 +125,7 @@ Qual parte do seu sistema de geração de clientes você ainda está improvisand
 
 **[Para coaches e consultores]:**
 
-*Preencha Sua Agenda com Clientes Ideais de Alto Valor Usando o Sistema HDIC — Sem Depender de Indicações, Redes Sociais Orgânicas ou Sorte*
+*Preencha Sua Agenda com Clientes Ideais de Alto Valor Usando o Sistema HDIC, Sem Depender de Indicações, Redes Sociais Orgânicas ou Sorte*
 
 *Veja Como 47 Coaches Usaram Esse Método Para Sair de 0 Para R$100K/Mês em 12 Meses*
 
@@ -139,7 +139,7 @@ Qual parte do seu sistema de geração de clientes você ainda está improvisand
 
 Eu ouço isso o tempo todo.
 
-E sei exatamente por que não funcionou: você estava pagando para falar com os 3% que já querem comprar — no mesmo momento que todos os seus concorrentes.
+E sei exatamente por que não funcionou: você estava pagando para falar com os 3% que já querem comprar, no mesmo momento que todos os seus concorrentes.
 
 Claro que o custo subiu e a conversão caiu.
 

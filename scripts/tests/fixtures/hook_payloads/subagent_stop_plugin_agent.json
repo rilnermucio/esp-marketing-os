@@ -1,0 +1,16 @@
+{
+  "session_id": "00000000-0000-4000-8000-000000000000",
+  "transcript_path": "/home/usuario/.claude/projects/-home-usuario-projeto/sessao.jsonl",
+  "cwd": "/home/usuario/projeto",
+  "scratchpad_dir": "/tmp/claude/scratchpad",
+  "prompt_id": "00000000-0000-4000-8000-000000000001",
+  "permission_mode": "acceptEdits",
+  "agent_id": "a00000000000000002",
+  "agent_type": "marketing-os:mos-copy",
+  "hook_event_name": "SubagentStop",
+  "stop_hook_active": false,
+  "agent_transcript_path": "/home/usuario/.claude/projects/-home-usuario-projeto/subagents/agent-a00000000000000002.jsonl",
+  "last_assistant_message": "Headline: produtividade com método em 3 passos.",
+  "background_tasks": [],
+  "session_crons": []
+}

@@ -1,11 +1,11 @@
 ---
-description: Create complete podcast episode scripts (solo, interview, co-hosted, storytelling, panel) with intros, segments, show notes and promo content. Dispatches mos-audio simples ou mos-research → mos-audio sequencial para entrevistas.
+description: "Cria roteiro de episódio de podcast (solo, entrevista, co-apresentado, narrativo, painel) com abertura, blocos, show notes e divulgação. Use quando pedirem podcast. Para gerar o áudio: /narrar-roteiro."
 argument-hint: "<format and topic, e.g., 'interview about productivity' or 'solo episode on marketing trends'>"
 ---
 
 # /criar-podcast: Roteiro de Podcast (Dispatch-Based)
 
-Cria roteiro completo de episódio orquestrando subagent(s) especializados via `Agent(subagent_type: "mos-*")`. Não produz inline.
+Cria roteiro completo de episódio orquestrando subagent(s) especializados via `Agent(subagent_type: "marketing-os:mos-*")`. Não produz inline.
 
 ## Required inputs (ask if missing)
 
@@ -38,7 +38,7 @@ Briefing recebido
 ## Dispatch Simples (solo, co-hosted, storytelling, panel)
 
 ```
-Agent(subagent_type: "mos-audio", prompt: "Roteiro completo de episódio [solo | co-hosted | storytelling | panel] sobre [tópico]. Show: [show name]. Duração-alvo: [N] minutos. Audiência: [audiência]. Tom: [tom]. Entregue: estrutura por timestamps (intro com hook + show intro + episode setup, segments com talking points e takeaways, ad breaks se aplicável, outro com summary + CTA + tease + sign-off), 3 opções de título de episódio, 3 social media clips (timestamp + hook), show notes completas (descrição SEO, key takeaways, timestamps, resources mencionados, CTA), copy promocional (Instagram caption + email teaser + Twitter thread). Aplicar quality gates globais (sem travessão, sem 'brutal', sem aspas em falas — escreva direto, PT-BR correto).")
+Agent(subagent_type: "marketing-os:mos-audio", prompt: "Roteiro completo de episódio [solo | co-hosted | storytelling | panel] sobre [tópico]. Show: [show name]. Duração-alvo: [N] minutos. Audiência: [audiência]. Tom: [tom]. Entregue: estrutura por timestamps (intro com hook + show intro + episode setup, segments com talking points e takeaways, ad breaks se aplicável, outro com summary + CTA + tease + sign-off), 3 opções de título de episódio, 3 social media clips (timestamp + hook), show notes completas (descrição SEO, key takeaways, timestamps, resources mencionados, CTA), copy promocional (Instagram caption + email teaser + Twitter thread). Aplicar quality gates globais (sem travessão, sem 'brutal', sem aspas em falas, escreva direto, PT-BR correto).")
 ```
 
 ## Dispatch Sequencial (interview)
@@ -46,7 +46,7 @@ Agent(subagent_type: "mos-audio", prompt: "Roteiro completo de episódio [solo |
 ### Passo 1, Research do guest
 
 ```
-Agent(subagent_type: "mos-research", prompt: "Research profundo sobre guest [nome do guest] para entrevista de podcast sobre [tópico]. Considere memory existente do projeto. Entregue: bio e credenciais verificadas, trajetória profissional (origem, momentos-chave, pivôs), trabalhos/produtos atuais, principais ideias e teses defendidas, histórias e cases que o guest costuma contar, posições polêmicas ou contrarian, gaps no que ele já abordou em outras entrevistas (ângulos novos), 3-5 stats/estudos relevantes do tópico, conexão com a audiência [audiência]. Fact-check tudo (CONFIRMADO/PROVÁVEL/NÃO USAR).")
+Agent(subagent_type: "marketing-os:mos-research", prompt: "Research profundo sobre guest [nome do guest] para entrevista de podcast sobre [tópico]. Considere memory existente do projeto. Entregue: bio e credenciais verificadas, trajetória profissional (origem, momentos-chave, pivôs), trabalhos/produtos atuais, principais ideias e teses defendidas, histórias e cases que o guest costuma contar, posições polêmicas ou contrarian, gaps no que ele já abordou em outras entrevistas (ângulos novos), 3-5 stats/estudos relevantes do tópico, conexão com a audiência [audiência]. Fact-check tudo (CONFIRMADO/PROVÁVEL/NÃO USAR).")
 
 → Aguarde research brief antes do passo 2.
 ```
@@ -54,7 +54,7 @@ Agent(subagent_type: "mos-research", prompt: "Research profundo sobre guest [nom
 ### Passo 2, Script da entrevista
 
 ```
-Agent(subagent_type: "mos-audio", prompt: "Roteiro completo de entrevista para podcast sobre [tópico]. Show: [show name]. Duração-alvo: [N] minutos. Guest: [nome]. Use este research como base [colar research brief do passo 1]. Entregue: estrutura por timestamps (pre-interview com hook + show intro + apresentação do guest + setup, opening questions 5-10min com background/journey, core questions 20-40min com 3-5 deep-dives + follow-ups + storytelling prompts + perguntas contrarian baseadas em pontos polêmicos do research, rapid-fire 5-10min, closing questions com best advice + recursos + onde encontrar guest, outro com thanks + insights + CTA), 3 opções de título de episódio, 3 social media clips (timestamp + hook + quote), show notes completas (descrição SEO, key takeaways, timestamps, resources do guest, CONNECT WITH GUEST com handles, sponsors), copy promocional (caption Instagram + email teaser + Twitter thread). Aplicar quality gates globais (sem travessão, sem 'brutal', sem aspas em falas — escreva direto, PT-BR correto).")
+Agent(subagent_type: "marketing-os:mos-audio", prompt: "Roteiro completo de entrevista para podcast sobre [tópico]. Show: [show name]. Duração-alvo: [N] minutos. Guest: [nome]. Use este research como base [colar research brief do passo 1]. Entregue: estrutura por timestamps (pre-interview com hook + show intro + apresentação do guest + setup, opening questions 5-10min com background/journey, core questions 20-40min com 3-5 deep-dives + follow-ups + storytelling prompts + perguntas contrarian baseadas em pontos polêmicos do research, rapid-fire 5-10min, closing questions com best advice + recursos + onde encontrar guest, outro com thanks + insights + CTA), 3 opções de título de episódio, 3 social media clips (timestamp + hook + quote), show notes completas (descrição SEO, key takeaways, timestamps, resources do guest, CONNECT WITH GUEST com handles, sponsors), copy promocional (caption Instagram + email teaser + Twitter thread). Aplicar quality gates globais (sem travessão, sem 'brutal', sem aspas em falas, escreva direto, PT-BR correto).")
 ```
 
 ## Consolidação
@@ -131,7 +131,7 @@ Formato: [solo | interview | co-hosted | storytelling | panel] | Duração-alvo:
 
 ## Quality Gates (antes de entregar)
 
-Aplicar gates globais do `skills/marketing-os/SKILL.md`:
+Aplicar gates globais do `${CLAUDE_PLUGIN_ROOT}/skills/marketing-os/SKILL.md`:
 - Sem `—`, sem "brutal", sem CAPS gratuito
 - **Sem aspas em falas/roteiros** (escrever direto)
 - Acentuação PT-BR correta

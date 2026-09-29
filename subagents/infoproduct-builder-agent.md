@@ -1,6 +1,6 @@
 # Infoproduct Builder Agent v3.1 - O Agente de Criação de Infoprodutos Mais Avançado do Planeta
 
-> "As pessoas não pagam por informação — pagam por transformação. Quanto mais clara e significativa a transformação, maior o valor e o preço que um curso pode comandar." — Amy Porterfield
+> Tier 2 do `agents/mos-infoproduct.md`. Infoprodutos: aprendizagem de adultos, estrutura de cursos, formatos, escada de valor e mercado brasileiro.
 
 ---
 
@@ -79,16 +79,25 @@ ESTRATÉGIA E MONETIZAÇÃO
 11. [PARTE XI: Memberships e Assinaturas](#parte-xi-memberships-e-assinaturas)
 12. [PARTE XII: Templates e Ferramentas Digitais](#parte-xii-templates-e-ferramentas-digitais)
 13. [PARTE XIII: Validação e Lançamento](#parte-xiii-validação-e-lançamento)
-14. [APÊNDICE A: Templates de Ebook](#apêndice-a-templates-de-ebook)
-15. [APÊNDICE B: Templates de Currículo](#apêndice-b-templates-de-currículo)
-16. [APÊNDICE C: Scripts de Aula](#apêndice-c-scripts-de-aula)
-17. [APÊNDICE D: Templates de Workbook](#apêndice-d-templates-de-workbook)
-18. [APÊNDICE E: Frameworks de Mentoria](#apêndice-e-frameworks-de-mentoria)
-19. [APÊNDICE F: Templates de Consultoria](#apêndice-f-templates-de-consultoria)
-20. [APÊNDICE G: Estruturas de Workshop](#apêndice-g-estruturas-de-workshop)
-21. [APÊNDICE H: Calendários de Challenge](#apêndice-h-calendários-de-challenge)
-22. [APÊNDICE I: Checklists de Produção](#apêndice-i-checklists-de-produção)
-
+14. [PARTE XIV: Voice Clones para Infoprodutos](#parte-xiv-voice-clones-para-infoprodutos)
+15. [PARTE XV: AI-Augmented Student Support](#parte-xv-ai-augmented-student-support)
+16. [PARTE XVI: Continuous Course Improvement Protocol](#parte-xvi-continuous-course-improvement-protocol)
+17. [PARTE XVII: Apify para Competitive Course Research](#parte-xvii-apify-para-competitive-course-research)
+18. [PARTE XVIII: Pricing Strategy Deep](#parte-xviii-pricing-strategy-deep)
+19. [PARTE XIX: Community Management Deep Dive](#parte-xix-community-management-deep-dive)
+20. [PARTE XX: CONAR e Compliance BR para Infoprodutos](#parte-xx-conar-e-compliance-br-para-infoprodutos)
+21. [APÊNDICE A: Templates de Ebook](#apêndice-a-templates-de-ebook)
+22. [APÊNDICE B: Templates de Currículo](#apêndice-b-templates-de-currículo)
+23. [APÊNDICE C: Scripts de Aula](#apêndice-c-scripts-de-aula)
+24. [APÊNDICE D: Templates de Workbook](#apêndice-d-templates-de-workbook)
+25. [APÊNDICE E: Frameworks de Mentoria](#apêndice-e-frameworks-de-mentoria)
+26. [APÊNDICE F: Templates de Consultoria](#apêndice-f-templates-de-consultoria)
+27. [APÊNDICE G: Estruturas de Workshop](#apêndice-g-estruturas-de-workshop)
+28. [APÊNDICE H: Calendários de Challenge](#apêndice-h-calendários-de-challenge)
+29. [APÊNDICE I: Checklists de Produção](#apêndice-i-checklists-de-produção)
+30. [APÊNDICE J: Glossário Completo de Infoprodutos](#apêndice-j-glossário-completo-de-infoprodutos)
+31. [APÊNDICE K: Recursos e Ferramentas Recomendadas](#apêndice-k-recursos-e-ferramentas-recomendadas)
+32. [APÊNDICE L: Framework de Decisão: Qual Infoproduto Criar?](#apêndice-l-framework-de-decisão-qual-infoproduto-criar)
 ---
 
 # PARTE I: A CIÊNCIA DO DESIGN INSTRUCIONAL
@@ -4642,7 +4651,7 @@ te mostrar no Módulo 4."
 
 ETAPA 4 - UPSELL PRÓXIMO MÓDULO (Hormozi):
 "Você terminou o curso base. Resultado: +3h livres/dia.
-Próximo nível: Sistema Masterclass — automação completa.
+Próximo nível: Sistema Masterclass, automação completa.
 Investimento: R$1.997. Se não dobrar suas horas livres
 em 60 dias, devolvemos."
 ```
@@ -4714,7 +4723,7 @@ PADRÃO:
 4. Tutor humano só vê questões que AI não resolveu
 
 PLATAFORMAS QUE SUPORTAM:
-├── Discord (com bots customizados — Mavix, OpenAI bots)
+├── Discord (com bots customizados: Mavix, OpenAI bots)
 ├── Circle (com Circle AI integrations)
 ├── Mighty Networks (com AI partner)
 ├── WhatsApp (com chatbot integrado)
@@ -4757,7 +4766,7 @@ PLATAFORMAS COM SUPORTE:
 ├── Thinkific (com Thinkific AI Course Builder)
 ├── Teachable (com adaptive paths)
 ├── Custom LMS com OpenAI/Claude integration
-└── Memberkit (BR) — features chegando
+└── Memberkit (BR): features chegando
 ```
 
 ## 15.4 AI Feedback em Exercícios
@@ -5181,7 +5190,7 @@ UNBUNDLING (separado):
 └── Use pra: testes, validação
 
 EXEMPLO:
-BUNDLE: Curso + Ebook + Templates + Comunidade — R$997
+BUNDLE: Curso + Ebook + Templates + Comunidade, R$997
 UNBUNDLED:
 ├── Curso: R$497
 ├── Ebook: R$97

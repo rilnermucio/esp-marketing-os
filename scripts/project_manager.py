@@ -29,8 +29,10 @@ from typing import Optional
 
 import yaml
 
+from workspace_paths import user_workspace
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
-PROJECTS_ROOT = REPO_ROOT / "workspace" / "projects"
+PROJECTS_ROOT = user_workspace() / "projects"
 TEMPLATES_DIR = REPO_ROOT / "scripts" / "templates" / "projeto"
 
 PROJECT_TYPES = ("lancamento", "perpetuo", "consultoria", "mentoria")

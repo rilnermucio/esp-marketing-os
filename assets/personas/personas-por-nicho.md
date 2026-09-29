@@ -580,7 +580,7 @@ Personas pré-definidas para os principais nichos do Marketing OS.
 - "Síndrome do impostor me paralisa"
 - "Não sei qual linguagem focar, tem muita opção"
 - "Portfólio vazio, ninguém me chama pra entrevista"
-- "Tutorial hell — assisto tudo mas não construo nada"
+- "Tutorial hell: assisto tudo mas não construo nada"
 
 **Desejos:**
 - Conseguir o primeiro emprego ou freela
@@ -597,7 +597,7 @@ Personas pré-definidas para os principais nichos do Marketing OS.
 - Projetos para portfólio com tutorial
 - Roadmap de carreira dev
 - Como se preparar para entrevistas técnicas
-- Linguagem X vs Y — qual escolher
+- Linguagem X vs Y: qual escolher
 - Como sair do tutorial hell
 
 ---
@@ -615,7 +615,7 @@ Personas pré-definidas para os principais nichos do Marketing OS.
 **Dores:**
 - "Tecnologias mudam rápido demais, não consigo acompanhar"
 - "Gestão de pessoas toma tempo do código"
-- "Burnout técnico — cansei de apagar incêndio"
+- "Burnout técnico: cansei de apagar incêndio"
 - "Difícil equilibrar liderança e mão na massa"
 
 **Desejos:**
@@ -632,7 +632,7 @@ Personas pré-definidas para os principais nichos do Marketing OS.
 **Conteúdo que funciona:**
 - Decisões de arquitetura com prós e contras
 - Como fazer 1:1 eficientes com devs
-- Tech radar — o que vale a pena aprender
+- Tech radar: o que vale a pena aprender
 - Gestão técnica vs gestão de pessoas
 - Como revisar código sem ser tóxico
 

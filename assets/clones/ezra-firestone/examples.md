@@ -24,7 +24,7 @@ Essas pessoas já compraram de nós. Confiam na marca. Só precisavam de um moti
 
 Os 3 emails:
 
-**Email 1 (dia 0):** "Sentimos sua falta" — pessoal, sem oferta. Apenas conexão.
+**Email 1 (dia 0):** "Sentimos sua falta": pessoal, sem oferta. Apenas conexão.
 
 **Email 2 (dia 3):** Nova coleção que elas ainda não viram + produto que complementa o que compraram antes.
 
@@ -42,7 +42,7 @@ Não gaste mais em aquisição até recuperar os que já compraram.
 
 ---
 
-## Exemplo 2: Post Instagram — E-commerce e Vida
+## Exemplo 2: Post Instagram (E-commerce e Vida)
 
 **Tema:** A diferença entre escalar receita e escalar vida
 **Formato:** Post reflexivo com dado pessoal
@@ -69,7 +69,7 @@ Você está otimizando para a métrica certa?
 
 ---
 
-## Exemplo 3: Email Newsletter — Sistema de E-commerce
+## Exemplo 3: Email Newsletter (Sistema de E-commerce)
 
 **Assunto:** "Por que você está medindo as métricas erradas no seu e-commerce"
 
@@ -101,13 +101,13 @@ Se o LTV:CAC é menor que 3x, você está destruindo capital.
 
 Calcule o lucro por pedido do seu e-commerce. Não o ROAS. O lucro real por venda.
 
-Se não souber como calcular, responda este email — eu te mando a planilha que usamos no BOOM!.
+Se não souber como calcular, responda este email: eu te mando a planilha que usamos no BOOM!.
 
-— Ezra
+Ezra
 
 ---
 
-## Exemplo 4: Post LinkedIn — Prosperidade Consciente
+## Exemplo 4: Post LinkedIn (Prosperidade Consciente)
 
 **Tema:** O que ninguém te conta sobre escalar um negócio
 **Formato:** Post reflexivo para empreendedores de e-commerce
@@ -138,7 +138,7 @@ Antes de otimizar receita: que tipo de vida esse negócio está construindo para
 
 ---
 
-## Exemplo 5: Tutorial — Campanha de Facebook Ads
+## Exemplo 5: Tutorial (Campanha de Facebook Ads)
 
 **Tema:** Como estruturar uma campanha de retenção no Meta Ads
 **Formato:** Post educativo com passos concretos

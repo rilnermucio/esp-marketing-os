@@ -9,19 +9,19 @@ Baseado em pesquisa com dezenas de fundadores e CPOs, Lenny criou um modelo para
 ```
 OS 3 TIPOS DE PMF:
 
-TIPO 1 — PMF de Crescimento Orgânico:
+TIPO 1: PMF de Crescimento Orgânico:
 ├── Sinal: Usuários compartilham sem incentivo
 ├── Métrica: NPS > 50 + growth rate orgânico > 10% mês
 ├── Produto típico: Ferramenta de produtividade, redes sociais
 └── Como medir: "Como você ficou sabendo do produto?" → 40%+ por indicação
 
-TIPO 2 — PMF de Retenção:
+TIPO 2: PMF de Retenção:
 ├── Sinal: Usuários que começam não param de usar
 ├── Métrica: D30 retention acima do benchmark da categoria
 ├── Produto típico: Ferramentas de trabalho, SaaS B2B
 └── Como medir: Curva de retenção se estabiliza (não vai a zero)
 
-TIPO 3 — PMF de Monetização:
+TIPO 3: PMF de Monetização:
 ├── Sinal: Usuários pagam sem fricção excessiva
 ├── Métrica: Trial → pago conversion acima de 15% (B2B) ou 5% (B2C)
 ├── Produto típico: Premium features, marketplace
@@ -96,25 +96,25 @@ Lenny popularizou a distinção entre diferentes loops de crescimento e quando c
 ```
 OS 4 PRINCIPAIS LOOPS DE CRESCIMENTO:
 
-LOOP 1 — VIRAL (Rede de Usuários):
+LOOP 1: VIRAL (Rede de Usuários):
 ├── Como funciona: Usuário convida outro usuário, que convida outro
 ├── Coeficiente viral: > 1.0 = crescimento exponencial
 ├── Exemplos: WhatsApp, Dropbox (convites), Zoom
 └── Quando usar: Produtos de comunicação, colaboração, redes sociais
 
-LOOP 2 — CONTEÚDO (SEO/UGC):
+LOOP 2: CONTEÚDO (SEO/UGC):
 ├── Como funciona: Usuários criam conteúdo que atrai busca orgânica
 ├── Métricas: Tráfego orgânico, % de novos usuários por busca
 ├── Exemplos: YouTube, Reddit, Quora, Glassdoor
 └── Quando usar: Plataformas onde usuários criam conteúdo público
 
-LOOP 3 — PERFORMANCE (Paid → Produto → Paid):
+LOOP 3: PERFORMANCE (Paid → Produto → Paid):
 ├── Como funciona: $ em ads → usuários → receita → mais $ em ads
 ├── Condição necessária: LTV > CAC × 3
 ├── Exemplos: DTC e-commerce, jogos mobile, fintech
 └── Quando usar: Quando margem permite reinvestimento agressivo
 
-LOOP 4 — PRODUTO (PLG — Product-Led Growth):
+LOOP 4: PRODUTO (PLG, Product-Led Growth):
 ├── Como funciona: Produto é o canal de aquisição e retenção
 ├── Métricas: Ativação de freemium, conversão trial → pago
 ├── Exemplos: Slack, Figma, Notion, Linear
@@ -200,7 +200,7 @@ OS 5 HÁBITOS DO PM DE ALTO IMPACTO:
 ├── 1. Fala com usuários toda semana (mínimo 3)
 ├── 2. Define métricas de sucesso antes de iniciar qualquer projeto
 ├── 3. Diz "não" para 80% das requests (dizer sim a tudo é não ter estratégia)
-├── 4. Escreve tudo — descobertas, decisões, raciocínio
+├── 4. Escreve tudo: descobertas, decisões, raciocínio
 └── 5. Compartilha contexto generosamente (bons PMs fazem equipe mais esperta)
 
 PERGUNTA DE DIAGNÓSTICO:

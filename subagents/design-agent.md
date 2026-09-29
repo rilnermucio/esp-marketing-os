@@ -1,6 +1,6 @@
 # Design Agent v3.2: Subagente de Design Visual
 
-> **O agente de design visual mais avançado do planeta — Maio 2026**
+> **O agente de design visual mais avançado do planeta (maio de 2026)**
 
 ## Identidade do Agente
 
@@ -213,7 +213,7 @@ APLICAÇÃO:
 ### A Ciência por Trás das Decisões Visuais
 
 ```
-NEURODESIGN — COMO O DESIGN AFETA O CÉREBRO
+NEURODESIGN: COMO O DESIGN AFETA O CÉREBRO
 
 ┌─────────────────────────────────────────────┐
 │              CIRCUITO DA ATENÇÃO             │
@@ -239,7 +239,7 @@ NEURODESIGN — COMO O DESIGN AFETA O CÉREBRO
 ### Os 3 Níveis de Design Emocional (Don Norman)
 
 ```
-DON NORMAN — DESIGN EMOCIONAL
+DON NORMAN: DESIGN EMOCIONAL
 
 ┌─────────────────────────────────────────────┐
 │ NÍVEL 3: REFLEXIVO (topo)                    │
@@ -487,7 +487,7 @@ CLASSIFICAÇÃO PRINCIPAL:
 ### Escala Tipográfica
 
 ```
-ESCALA MODULAR (ratio 1.250 — Major Third)
+ESCALA MODULAR (ratio 1.250: Major Third)
 
 Display:    48px / 3.052rem ─── Headlines impacto
 H1:         39px / 2.441rem ─── Título principal
@@ -499,9 +499,9 @@ Small:      13px / 0.8rem   ─── Legendas, notas
 Caption:    10px / 0.64rem  ─── Micro texto
 
 LINE-HEIGHT POR CONTEXTO:
-• Headlines: 1.1 — 1.2
-• Body text: 1.5 — 1.7
-• UI labels: 1.2 — 1.4
+• Headlines: 1.1 a 1.2
+• Body text: 1.5 a 1.7
+• UI labels: 1.2 a 1.4
 • CJK text: 1.7 (recomendado para ideogramas)
 
 LETTER-SPACING:
@@ -660,31 +660,31 @@ REGRAS DE COMPOSIÇÃO VISUAL
 ```
 HIERARQUIA VISUAL EM DESIGN
 
-NÍVEL 1 — HEADLINE (captura atenção)
+NÍVEL 1: HEADLINE (captura atenção)
 ├── Tamanho: 32-48px
 ├── Peso: Bold/Black (700-900)
 ├── Cor: Alto contraste
 └── Máximo: 6-8 palavras
 
-NÍVEL 2 — SUBHEADLINE (contextualiza)
+NÍVEL 2: SUBHEADLINE (contextualiza)
 ├── Tamanho: 20-28px
 ├── Peso: Semi-Bold (600)
 ├── Cor: Médio contraste
 └── Máximo: 15-20 palavras
 
-NÍVEL 3 — BODY (informa)
+NÍVEL 3: BODY (informa)
 ├── Tamanho: 16-18px
 ├── Peso: Regular (400)
 ├── Cor: Contraste legível
 └── Largura: 50-75 caracteres por linha
 
-NÍVEL 4 — CTA (converte)
+NÍVEL 4: CTA (converte)
 ├── Tamanho: 16-20px
 ├── Peso: Semi-Bold (600)
 ├── Cor: DESTAQUE MÁXIMO (cor primária)
 └── Formato: Botão ou link destacado
 
-NÍVEL 5 — META (suporta)
+NÍVEL 5: META (suporta)
 ├── Tamanho: 12-14px
 ├── Peso: Regular/Medium (400-500)
 ├── Cor: Baixo contraste
@@ -772,7 +772,7 @@ ESTRUTURA DE LANDING PAGE
 ### Design de CTAs de Alta Conversão
 
 ```
-CTA DESIGN — MAXIMIZAR CLIQUES
+CTA DESIGN: MAXIMIZAR CLIQUES
 
 TAMANHO:
 • Desktop: mínimo 44x44px, ideal 48x60px
@@ -902,7 +902,7 @@ REELS/TIKTOK
 ### Macro Tendências Visuais
 
 ```
-TENDÊNCIAS DE DESIGN — FEVEREIRO 2026
+TENDÊNCIAS DE DESIGN: FEVEREIRO 2026
 
 1. BENTO GRID DESIGN
    → Layouts inspirados na Apple
@@ -945,7 +945,7 @@ TENDÊNCIAS DE DESIGN — FEVEREIRO 2026
    → Mais acessível com WebGPU (performance)
 
 7. DARK MODE COMO PADRÃO
-   → Não mais "alternativo" — é a versão principal
+   → Não mais "alternativo" (é a versão principal)
    → Reduz fadiga visual e consumo de energia
    → Cores neon e gradientes brilham mais em dark
    → Contraste WCAG deve ser verificado em ambos modos
@@ -985,7 +985,7 @@ TENDÊNCIAS DE DESIGN — FEVEREIRO 2026
 ### Design System Trends 2026
 
 ```
-DESIGN SYSTEMS — TENDÊNCIAS 2026
+DESIGN SYSTEMS: TENDÊNCIAS 2026
 
 1. DESIGN TOKENS (W3C SPEC 2025.10)
    → Primeira versão estável da spec W3C
@@ -1044,7 +1044,7 @@ TIMING DE MICRO-INTERAÇÕES:
 ### Lottie vs Rive: Comparação Completa
 
 ```
-LOTTIE vs RIVE — QUAL ESCOLHER?
+LOTTIE vs RIVE: QUAL ESCOLHER?
 
 ┌─────────────────┬────────────────────┬────────────────────┐
 │ CRITÉRIO        │ LOTTIE             │ RIVE               │
@@ -1228,7 +1228,7 @@ BOAS PRÁTICAS:
 ### 10 Heurísticas de Nielsen
 
 ```
-HEURÍSTICAS DE USABILIDADE — JAKOB NIELSEN
+HEURÍSTICAS DE USABILIDADE: JAKOB NIELSEN
 
 1. VISIBILIDADE DO STATUS DO SISTEMA
    → Sempre informar o que está acontecendo
@@ -1274,7 +1274,7 @@ HEURÍSTICAS DE USABILIDADE — JAKOB NIELSEN
 ### Design Thinking (Stanford d.school)
 
 ```
-DESIGN THINKING — 5 FASES
+DESIGN THINKING: 5 FASES
 
 ┌──────────┐    ┌──────────┐    ┌──────────┐
 │ EMPATIZAR │───→│ DEFINIR  │───→│ IDEALIZAR│
@@ -1297,9 +1297,9 @@ PROCESSO É ITERATIVO, NÃO LINEAR
 ### Atomic Design (Brad Frost): 6 Níveis
 
 ```
-ATOMIC DESIGN — SISTEMA COMPLETO
+ATOMIC DESIGN: SISTEMA COMPLETO
 
-TOKENS (Nível 0 — novo)
+TOKENS (Nível 0: novo)
 → Valores fundamentais: cores, espaçamento, tipografia
 → Formato: JSON (W3C Design Tokens spec 2025.10)
 → Alimentam todos os níveis acima
@@ -1328,7 +1328,7 @@ PAGES (Nível 5)
 ### Responsive Design 2026
 
 ```
-RESPONSIVE DESIGN — ESTADO ATUAL
+RESPONSIVE DESIGN: ESTADO ATUAL
 
 BREAKPOINTS PADRÃO:
 • Mobile:  320-480px
@@ -1395,7 +1395,7 @@ MELHORES PRÁTICAS:
 ### WCAG 2.2: Compliance Completo
 
 ```
-WCAG 2.2 — PADRÃO ATUAL (ISO/IEC 40500:2025)
+WCAG 2.2: PADRÃO ATUAL (ISO/IEC 40500:2025)
 
 STATUS: ISO standard desde outubro 2025
 DEADLINE ADA TITLE II: 26 abril 2026 (pop. 50k+)
@@ -1436,7 +1436,7 @@ só precisa implementar os 6 novos critérios AA.
 ### Color Blindness no Design
 
 ```
-DALTONISMO — DESIGN INCLUSIVO
+DALTONISMO: DESIGN INCLUSIVO
 
 TIPOS E PREVALÊNCIA:
 • Protanopia (vermelho): 8% homens, 0.5% mulheres
@@ -1525,7 +1525,7 @@ PRINCÍPIOS DE DESIGN:
 5. Tempo suficiente para completar tarefas
 6. Suportar múltiplas modalidades de input
 
-WCAG 3.0 (PREVIEW — esperado 2026+):
+WCAG 3.0 (PREVIEW: esperado 2026+):
 → Avaliará acessibilidade por eficácia da tarefa
 → Não mais pass/fail rígido
 → Mecanismos de adaptação automática às preferências
@@ -1535,7 +1535,7 @@ WCAG 3.0 (PREVIEW — esperado 2026+):
 ### Design Inclusivo: Princípios Microsoft
 
 ```
-DESIGN INCLUSIVO — MICROSOFT TOOLKIT
+DESIGN INCLUSIVO: MICROSOFT TOOLKIT
 
 3 PRINCÍPIOS FUNDAMENTAIS:
 1. RECONHECER EXCLUSÃO → Exclusão acontece se não for
@@ -1623,7 +1623,7 @@ LEMBRETE: Ferramentas automatizadas sozinhas perdem
 ### Significado Cultural das Cores
 
 ```
-CORES POR CULTURA — REFERÊNCIA GLOBAL
+CORES POR CULTURA: REFERÊNCIA GLOBAL
 
 ┌──────────┬──────────────────┬──────────────────┬────────────────┐
 │ COR      │ OCIDENTAL        │ ORIENTAL/ASIA    │ ORIENTE MÉDIO  │
@@ -1660,7 +1660,7 @@ funciona nos EUA mas pode simbolizar funeral na Índia ou China.
 ### RTL (Right-to-Left) Layout
 
 ```
-DESIGN RTL — 600+ MILHÕES DE PESSOAS
+DESIGN RTL: 600+ MILHÕES DE PESSOAS
 
 IDIOMAS RTL: Árabe, Hebraico, Persa, Urdu
 
@@ -1720,7 +1720,7 @@ LOCALIZAÇÃO DE DESIGN:
 ### Sensibilidade de Imagem Cultural
 
 ```
-IMAGEM CULTURAL — BOAS PRÁTICAS
+IMAGEM CULTURAL: BOAS PRÁTICAS
 
 PRINCÍPIOS:
 → Cores, símbolos e imagens têm significados diversos
@@ -1754,7 +1754,7 @@ CHECKLIST:
 ### Instagram
 
 ```
-INSTAGRAM — SPECS FEVEREIRO 2026
+INSTAGRAM: SPECS FEVEREIRO 2026
 
 ┌────────────────────────┬──────────────────┬────────┐
 │ FORMATO                │ DIMENSÕES        │ RATIO  │
@@ -1781,7 +1781,7 @@ MUDANÇAS 2026:
 ### TikTok
 
 ```
-TIKTOK — SPECS FEVEREIRO 2026
+TIKTOK: SPECS FEVEREIRO 2026
 
 ┌─────────────────┬──────────────────┬───────────────────────┐
 │ FORMATO         │ DIMENSÕES        │ DETALHES              │
@@ -1800,13 +1800,13 @@ Duração: até 10 min (alguns 30 min). Melhor: 15-60s.
 ### YouTube
 
 ```
-YOUTUBE — SPECS FEVEREIRO 2026
+YOUTUBE: SPECS FEVEREIRO 2026
 
 ┌─────────────────────────┬──────────────────┬───────────────────┐
 │ FORMATO                 │ DIMENSÕES        │ DETALHES           │
 ├─────────────────────────┼──────────────────┼───────────────────┤
-│ Thumbnail (standard)    │ 1280 x 720 px    │ 16:9, max 2MB      │
-│ Shorts thumbnail        │ 1080 x 1920 px   │ 9:16               │
+│ Thumbnail (vídeo)       │ 3840 x 2160 px   │ 16:9, mín. 640 px  │
+│ Shorts thumbnail        │ 2160 x 3840 px   │ 9:16               │
 │ Community Post (square) │ 1000 x 1000 px   │ 1:1                │
 │ Community Post (portrait)│1080 x 1350 px   │ 4:5                │
 │ Community Post (max)    │ 1600 x 1600 px   │ Max 16MB           │
@@ -1822,7 +1822,7 @@ Não visíveis em mobile web (exceto iPad).
 ### LinkedIn
 
 ```
-LINKEDIN — SPECS FEVEREIRO 2026
+LINKEDIN: SPECS FEVEREIRO 2026
 
 ┌───────────────────────────┬──────────────────┬───────────────────┐
 │ FORMATO                   │ DIMENSÕES        │ DETALHES           │
@@ -1842,7 +1842,7 @@ Max 10MB/slide. 8-12 slides recomendado.
 ### Threads
 
 ```
-THREADS — SPECS FEVEREIRO 2026
+THREADS: SPECS FEVEREIRO 2026
 
 ┌──────────────────────┬──────────────────┬──────────────────────┐
 │ FORMATO              │ DIMENSÕES        │ DETALHES              │
@@ -1861,7 +1861,7 @@ Threads NÃO corta imagens, mesmo com tamanhos diferentes no post.
 ### BlueSky
 
 ```
-BLUESKY — SPECS FEVEREIRO 2026
+BLUESKY: SPECS FEVEREIRO 2026
 
 ┌──────────────────────┬──────────────────┬──────────────────────┐
 │ FORMATO              │ DIMENSÕES        │ DETALHES              │
@@ -1878,7 +1878,7 @@ BLUESKY — SPECS FEVEREIRO 2026
 ### WhatsApp Channels
 
 ```
-WHATSAPP CHANNELS — SPECS FEVEREIRO 2026
+WHATSAPP CHANNELS: SPECS FEVEREIRO 2026
 
 ┌─────────────────────────┬──────────────────┬──────────────────┐
 │ FORMATO                 │ DIMENSÕES        │ DETALHES          │
@@ -1896,7 +1896,7 @@ WhatsApp comprime imagens para ~1600px de largura por padrão.
 ### Pinterest
 
 ```
-PINTEREST — SPECS FEVEREIRO 2026
+PINTEREST: SPECS FEVEREIRO 2026
 
 ┌──────────────────────┬──────────────────┬──────────────────────┐
 │ FORMATO              │ DIMENSÕES        │ DETALHES              │
@@ -1915,7 +1915,7 @@ Video: 4s-15min (6-15s melhor performance).
 ### X/Twitter
 
 ```
-X/TWITTER — SPECS FEVEREIRO 2026
+X/TWITTER: SPECS FEVEREIRO 2026
 
 ┌──────────────────────┬──────────────────┬──────────────────────┐
 │ FORMATO              │ DIMENSÕES        │ DETALHES              │
@@ -1931,7 +1931,7 @@ X/TWITTER — SPECS FEVEREIRO 2026
 ### Snapchat Spotlight
 
 ```
-SNAPCHAT SPOTLIGHT — SPECS FEVEREIRO 2026
+SNAPCHAT SPOTLIGHT: SPECS FEVEREIRO 2026
 
 ┌──────────────────────┬──────────────────┬──────────────────────┐
 │ FORMATO              │ DIMENSÕES        │ DETALHES              │
@@ -1953,7 +1953,7 @@ Conteúdo deve ser original. Sem watermarks de outras plataformas.
 ### Elementos do Brand System
 
 ```
-SISTEMA DE MARCA — COMPONENTES
+SISTEMA DE MARCA: COMPONENTES
 
 1. IDENTIDADE VISUAL
    ├── Logo (primário, secundário, ícone)
@@ -2023,7 +2023,7 @@ APLICAÇÃO:
 ### Ranking de Ferramentas por ELO (Fev 2026)
 
 ```
-AI IMAGE GENERATION — RANKING FEVEREIRO 2026
+AI IMAGE GENERATION: RANKING FEVEREIRO 2026
 
 ┌───┬────────────────────────┬──────┬──────────────────────┐
 │ # │ FERRAMENTA             │ ELO  │ DESTAQUE              │
@@ -2031,14 +2031,14 @@ AI IMAGE GENERATION — RANKING FEVEREIRO 2026
 │ 1 │ GPT Image 1.5          │ 1264 │ Compreensão complexa  │
 │ 2 │ Gemini 3 Pro (Nano     │ 1235 │ 4K nativo, <10s       │
 │   │ Banana Pro)            │      │                       │
-│ 3 │ Midjourney V7          │  —   │ Estética artística    │
-│ 4 │ FLUX.2                 │  —   │ 4MP, tipografia       │
-│ 5 │ Ideogram 3.0           │  —   │ 90% text accuracy     │
-│ 6 │ Recraft V3             │  —   │ SVG/vetor nativo      │
-│ 7 │ Leonardo Phoenix       │  —   │ Integração Canva      │
-│ 8 │ Adobe Firefly 5        │  —   │ IP safe, comercial    │
-│ 9 │ Stable Diffusion 3.5   │  —   │ Open source, local    │
-│10 │ Grok Aurora-2           │  —   │ Cinema-grade physics  │
+│ 3 │ Midjourney V7          │  -   │ Estética artística    │
+│ 4 │ FLUX.2                 │  -   │ 4MP, tipografia       │
+│ 5 │ Ideogram 3.0           │  -   │ 90% text accuracy     │
+│ 6 │ Recraft V3             │  -   │ SVG/vetor nativo      │
+│ 7 │ Leonardo Phoenix       │  -   │ Integração Canva      │
+│ 8 │ Adobe Firefly 5        │  -   │ IP safe, comercial    │
+│ 9 │ Stable Diffusion 3.5   │  -   │ Open source, local    │
+│10 │ Grok Aurora-2           │  -   │ Cinema-grade physics  │
 └───┴────────────────────────┴──────┴──────────────────────┘
 ```
 
@@ -2259,7 +2259,7 @@ QUAL FERRAMENTA USAR POR TAREFA
 ### Prompt Engineering para Design
 
 ```
-PROMPT ENGINEERING — FÓRMULA UNIVERSAL
+PROMPT ENGINEERING: FÓRMULA UNIVERSAL
 
 [SUJEITO] + [ESTILO] + [COMPOSIÇÃO] + [ILUMINAÇÃO]
 + [PALETA] + [MOOD] + [DETALHES TÉCNICOS]
@@ -2290,7 +2290,7 @@ DICAS AVANÇADAS:
 ### Figma (Líder de Mercado)
 
 ```
-FIGMA — ESTADO FEVEREIRO 2026
+FIGMA: ESTADO FEVEREIRO 2026
 
 FIGMA MAKE ($20/mês beta)
 → Novo app separado para geração por prompt de texto
@@ -2369,37 +2369,37 @@ ADOBE XD → DESCONTINUADO
 PLUGINS FIGMA PARA DESIGNERS 2026
 
 AI DESIGN:
-• UX Pilot AI — Assistência IA, geração wireframe, UX writing
-• AI Image Generator (Freepik) — Imagens custom no Figma
-• Icons8 Background Remover — Remoção IA de background
+• UX Pilot AI: Assistência IA, geração wireframe, UX writing
+• AI Image Generator (Freepik): Imagens custom no Figma
+• Icons8 Background Remover: Remoção IA de background
 
 TIPOGRAFIA:
-• Typescales — Escalas tipográficas harmônicas
-• Better Font Picker — Preview visual de fontes
-• Font Explorer — Google Fonts no Figma
+• Typescales: Escalas tipográficas harmônicas
+• Better Font Picker: Preview visual de fontes
+• Font Explorer: Google Fonts no Figma
 
 CORES:
-• Coolors — Paletas IA, geração random
-• Tokens Studio — Design tokens multi-marca/tema
-• Color Shades — Variações tint/shade
-• Contrast — Verificação WCAG
+• Coolors: Paletas IA, geração random
+• Tokens Studio: Design tokens multi-marca/tema
+• Color Shades: Variações tint/shade
+• Contrast: Verificação WCAG
 
 ACESSIBILIDADE:
-• A11y Color Contrast Checker — WCAG + daltonismo
-• Stark — Contraste, daltonismo, análise WCAG
-• Include — Anotações de acessibilidade
+• A11y Color Contrast Checker: WCAG + daltonismo
+• Stark: Contraste, daltonismo, análise WCAG
+• Include: Anotações de acessibilidade
 
 EXPORT:
-• Export/Import Variables — JSON export/import
-• HTML to Figma — Importar sites como layers
-• Anima — Export React, Vue, HTML responsivo
+• Export/Import Variables: JSON export/import
+• HTML to Figma: Importar sites como layers
+• Anima: Export React, Vue, HTML responsivo
 
 DESIGN SYSTEM:
-• Tokens Studio — O plugin para design tokens
-• Variable Utilities — Renomear, mover variáveis em batch
-• Design System Organizer — Gerenciar componentes
-• Batch Styler — Atualizar estilos em massa
-• Brandfetch — Assets oficiais de marcas
+• Tokens Studio: O plugin para design tokens
+• Variable Utilities: Renomear, mover variáveis em batch
+• Design System Organizer: Gerenciar componentes
+• Batch Styler: Atualizar estilos em massa
+• Brandfetch: Assets oficiais de marcas
 ```
 
 ---
@@ -2464,7 +2464,7 @@ EVITAR: Pie charts com muitas fatias (>5),
 ### Design de Dashboards
 
 ```
-DASHBOARD DESIGN — PRINCÍPIOS
+DASHBOARD DESIGN: PRINCÍPIOS
 
 LAYOUT KPI:
 → Padrão F ou Z para posicionamento
@@ -2527,7 +2527,7 @@ DIMENSÕES RECOMENDADAS:
 ### Product Photography Direction
 
 ```
-FOTOGRAFIA DE PRODUTO — SETUP
+FOTOGRAFIA DE PRODUTO: SETUP
 
 BACKGROUND: Papel seamless branco ou lightbox
 ILUMINAÇÃO: 2 softbox a 45° + fill card (difusa, uniforme)
@@ -2548,7 +2548,7 @@ TENDÊNCIAS 2026:
 ### Checkout UX Design
 
 ```
-CHECKOUT UX — BOAS PRÁTICAS
+CHECKOUT UX: BOAS PRÁTICAS
 
 ESTATÍSTICAS:
 • Taxa de abandono de carrinho: 70-78.77% (Baymard Institute)
@@ -2623,10 +2623,10 @@ SOCIAL COMMERCE (Projeção $1.2 trilhão):
 ### Pricing Page Design
 
 ```
-PRICING PAGE — DESIGN DE PREÇOS
+PRICING PAGE: DESIGN DE PREÇOS
 
 ESTRUTURA IDEAL:
-• 2-3 planos (3 é o padrão — âncora no meio)
+• 2-3 planos (3 é o padrão: âncora no meio)
 • Plano recomendado visualmente destacado
 • Preço anual vs mensal com toggle
 • Feature comparison table
@@ -2653,7 +2653,7 @@ PREÇO ÂNCORA:
 ### Princípios de Slide Design
 
 ```
-SLIDE DESIGN — PRINCÍPIOS FUNDAMENTAIS
+SLIDE DESIGN: PRINCÍPIOS FUNDAMENTAIS
 
 1. UMA IDEIA POR SLIDE
    → Não sobrecarregar com informação
@@ -2686,7 +2686,7 @@ SLIDE DESIGN — PRINCÍPIOS FUNDAMENTAIS
 ### Pitch Deck Design
 
 ```
-PITCH DECK — ESTRUTURA VISUAL 2026
+PITCH DECK: ESTRUTURA VISUAL 2026
 
 SLIDES ESSENCIAIS (12-15):
 1. Capa (logo, nome, tagline)
@@ -2741,7 +2741,7 @@ FERRAMENTAS DE APRESENTAÇÃO 2026
 ### Composição Avançada
 
 ```
-COMPOSIÇÃO FOTOGRÁFICA — ALÉM DOS TERÇOS
+COMPOSIÇÃO FOTOGRÁFICA: ALÉM DOS TERÇOS
 
 ┌────────────────────┬────────────────────────┬────────────────┐
 │ REGRA              │ DESCRIÇÃO               │ MELHOR PARA     │
@@ -2847,7 +2847,7 @@ LIFESTYLE 2026:
 ### CMYK vs RGB
 
 ```
-ESPAÇOS DE COR — CMYK vs RGB
+ESPAÇOS DE COR: CMYK vs RGB
 
 ┌──────────────┬──────────────────┬──────────────────┐
 │ ATRIBUTO     │ RGB              │ CMYK             │
@@ -2911,7 +2911,7 @@ CONFIGURAÇÕES DE EXPORT PARA IMPRESSÃO
 ### Specs de Cartão de Visita
 
 ```
-CARTÃO DE VISITA — SPECS POR REGIÃO
+CARTÃO DE VISITA: SPECS POR REGIÃO
 
 ┌─────────────┬───────────────┬──────────────────┬──────────────┐
 │ REGIÃO      │ TRIM          │ COM BLEED (3mm)  │ SAFE ZONE     │
@@ -2931,7 +2931,7 @@ Texto e logos dentro do safe zone.
 ### Specs de Flyers e Posters
 
 ```
-FLYERS E POSTERS — SPECS
+FLYERS E POSTERS: SPECS
 
 ┌──────────────┬──────────────────┬──────────────────┬────────────────┐
 │ TAMANHO      │ DIMENSÕES        │ COM BLEED (3mm)  │ USO             │
@@ -2951,7 +2951,7 @@ Safe zone mínimo: 6mm (0.25") de cada borda.
 ### Packaging Design
 
 ```
-PACKAGING — FUNDAMENTOS
+PACKAGING: FUNDAMENTOS
 
 CONSIDERAÇÕES:
 • Design estrutural: Die line template define forma 3D→2D
@@ -2997,7 +2997,7 @@ Papel mais pesado = sensação mais premium e substancial.
 ### A/B Testing Visual
 
 ```
-A/B TESTING — ELEMENTOS VISUAIS
+A/B TESTING: ELEMENTOS VISUAIS
 
 O QUE TESTAR:
 ┌──────────────────┬──────────────────────┬────────────────┐
@@ -3026,7 +3026,7 @@ DADOS DE IMPACTO (Forrester):
 ### Heatmaps e Eye-Tracking
 
 ```
-HEATMAPS — TIPOS E INSIGHTS
+HEATMAPS: TIPOS E INSIGHTS
 
 ┌───────────────┬──────────────────────┬────────────────────────┐
 │ TIPO          │ O QUE MEDE            │ INSIGHT                 │
@@ -3084,7 +3084,7 @@ KPIs DE DESIGN
 ### User Testing para Design Visual
 
 ```
-TESTES DE DESIGN — MÉTODOS
+TESTES DE DESIGN: MÉTODOS
 
 ┌──────────────────┬──────────────────────┬──────────────────────┐
 │ TESTE            │ COMO FUNCIONA         │ O QUE MEDE            │
@@ -3134,7 +3134,7 @@ ESTATÍSTICAS (Forrester):
 ### YouTube Thumbnail Design
 
 ```
-YOUTUBE THUMBNAIL — METODOLOGIA
+YOUTUBE THUMBNAIL: METODOLOGIA
 
 PRINCÍPIOS:
 1. UM sujeito dominante preenchendo maior parte do frame
@@ -3149,7 +3149,9 @@ PERFORMANCE DATA:
 • Branding consistente melhora retenção
 • A/B testing mostra CTR improvements de 37-110%+
 
-SPECS: 1280 x 720 px, 16:9, max 2MB, JPG/PNG/GIF/BMP
+SPECS (Central de Ajuda do YouTube, verificado em 2026-09-28): recomendado
+3840 x 2160 px, 16:9, mínimo 640 px de largura, JPG ou PNG, até 2 MB no celular
+e 50 MB no computador. Shorts: 2160 x 3840 px, 9:16
 
 A/B TESTING THUMBNAILS:
 • YouTube "Test & Compare" nativo (expandindo 2026)
@@ -3167,7 +3169,7 @@ METODOLOGIA:
 ### Video Overlays Design
 
 ```
-VIDEO OVERLAYS — LOWER THIRDS E CAPTIONS
+VIDEO OVERLAYS: LOWER THIRDS E CAPTIONS
 
 LOWER THIRDS:
 • Posição: terço inferior esquerdo ou direito
@@ -3208,7 +3210,7 @@ BOAS PRÁTICAS:
 ### Animated Text Trends 2026
 
 ```
-TEXTO ANIMADO — TENDÊNCIAS 2026
+TEXTO ANIMADO: TENDÊNCIAS 2026
 
 ESTILOS TRENDING:
 • Fade-in reveals, sliding text, bouncing letters
@@ -3261,22 +3263,22 @@ AI background removal, smart B-roll) domina todos os tools.
 ```
 SISTEMA DE DESIGN PARA POSTS SOCIAIS
 
-CAMADA 1 — DESIGN SYSTEM
+CAMADA 1: DESIGN SYSTEM
 ├── Cores da marca (hex definidos)
 ├── Tipografia (2 fontes máx)
 ├── Grid system (margins, gutters)
 ├── Estilo de ícones (outline/fill)
 └── Tratamento de fotos (filtro/overlay)
 
-CAMADA 2 — TEMPLATES
+CAMADA 2: TEMPLATES
 ├── Feed post (1080 x 1350)
 ├── Carrossel (1080 x 1350 x N slides)
 ├── Stories (1080 x 1920)
 ├── Reels cover (1080 x 1920)
-├── Thumbnail YT (1280 x 720)
+├── Thumbnail YT (3840 x 2160, 16:9)
 └── LinkedIn (1080 x 1350 ou 1200 x 627)
 
-CAMADA 3 — CONTEÚDO
+CAMADA 3: CONTEÚDO
 ├── Headline (máx 6-8 palavras)
 ├── Body text (contextualiza)
 ├── Visual (foto, ilustração, gráfico)
@@ -3517,7 +3519,7 @@ DESIGN + ANALYTICS AGENT
 ### Checklist de Qualidade Final
 
 ```
-CHECKLIST DE QUALIDADE — DESIGN AGENT v3.1
+CHECKLIST DE QUALIDADE: DESIGN AGENT v3.1
 
 VISUAL:
 □ Hierarquia visual clara (headline > sub > body > CTA)
@@ -3982,7 +3984,7 @@ TIPOGRAFIA: serif moderna (display) + sans humana (body)
 COMPOSIÇÃO: muito espaço branco, fotografia clínica
 TENDÊNCIA APLICADA: editorial-clinical (médico + acessível)
 LIÇÃO: clean beauty BR funciona via "ciência humanizada"
-        — não pode ser frio, mas precisa de credibilidade
+        (não pode ser frio, mas precisa de credibilidade)
 ```
 
 ### Nubank: Minimalist Disruptor
@@ -4006,7 +4008,7 @@ TIPOGRAFIA: sans rounded friendly (Magalu Sans custom)
 COMPOSIÇÃO: dinâmica, com pessoas reais
 TENDÊNCIA APLICADA: inclusive + aspirational
 LIÇÃO: BR responde a representação real (Lu mascote, modelos diversos)
-       — design forte sem perder warmth
+       (design forte sem perder warmth)
 ```
 
 ### iFood: Bold Direct
@@ -4201,7 +4203,7 @@ ESPAÇO 1: HERO ZONE (50-70% acima da dobra)
 ├── Hero image/video: produto ou transformação visualizável
 ├── CTA Primary: contrasta brand color, 16-20px texto, padding 32x16
 ├── Social proof secundário (logos clientes, "X mil clientes")
-└── Scroll cue (sutil — seta ou animação)
+└── Scroll cue (sutil: seta ou animação)
 
 PROPORÇÕES:
 ├── Logo: top-left, 24-32px alto
@@ -4304,8 +4306,8 @@ ELEMENTOS DE TENSÃO:
 ├── Numbers grandes ("$10K", "30 days")
 
 PROPORÇÕES:
-├── 1280x720 px (16:9)
-├── Safe zones: 60px de margem cada lado
+├── 3840x2160 px recomendado (16:9); 1280x720 continua aceito
+├── Safe zones: margem de 5% em cada lado
 ├── Mobile preview: testar em 130x73px
 
 CORES:
@@ -4711,7 +4713,7 @@ PARTE original "Geração de Imagens com IA" cobre tools. Esta section é workfl
 ### Workflow Padrão (Direction → Generation)
 
 ```
-ETAPA 1 — BRIEF VISUAL (este agent)
+ETAPA 1: BRIEF VISUAL (este agent)
 ├── Definir conceito (1-2 frases)
 ├── Definir mood (3-5 adjetivos)
 ├── Definir composição (cropping, focal point)
@@ -4719,24 +4721,24 @@ ETAPA 1 — BRIEF VISUAL (este agent)
 ├── Listar elementos obrigatórios
 └── Listar anti-padrões
 
-ETAPA 2 — STYLE REFERENCES (este agent)
+ETAPA 2: STYLE REFERENCES (este agent)
 ├── Selecionar 3-5 imagens referência
 ├── Validar com brand guidelines
 ├── Anotar o que pegar / o que evitar
 └── Output: prompt + URLs de styles
 
-ETAPA 3 — PROMPT ENGINEERING (este agent)
+ETAPA 3: PROMPT ENGINEERING (este agent)
 ├── Estrutura: [main subject] + [composition] + [style refs] + [technical]
 ├── Negative prompt (que NÃO incluir)
 ├── Aspect ratio + quality settings
 └── Output: prompt pronto pra Midjourney/Ideogram/DALL-E
 
-ETAPA 4 — DELEGATE (mos-ai-tools)
+ETAPA 4: DELEGATE (mos-ai-tools)
 ├── Pass prompt + style refs
 ├── Generate 4-8 variações
 └── Receive output
 
-ETAPA 5 — REVIEW (este agent)
+ETAPA 5: REVIEW (este agent)
 ├── Brand fit check
 ├── Quality check (artefatos, consistência)
 ├── Brief alignment
@@ -4796,28 +4798,28 @@ Brand precisa de 200 imagens AI-generated por mês
 
 SISTEMA RECOMENDADO:
 
-LAYER 1 — BRAND VISUAL DNA (one-time setup)
+LAYER 1: BRAND VISUAL DNA (one-time setup)
 ├── Style reference master (sref code Midjourney)
 ├── Color palette tokens (W3C spec)
 ├── Typography pairing definida
 ├── Composition rules (centered, asymmetric, etc.)
 └── Anti-patterns documented
 
-LAYER 2 — PROMPT TEMPLATES (per use case)
+LAYER 2: PROMPT TEMPLATES (per use case)
 ├── Hero shot template: "[product] in [environment], [brand DNA sref], [aspect ratio], professional photography"
 ├── Lifestyle template
 ├── Product detail template
 ├── Conceptual/abstract template
 └── Each saves prompt structure as variable
 
-LAYER 3 — VALIDATION CHECKLIST
+LAYER 3: VALIDATION CHECKLIST
 ├── Brand fit check (paleta consistente?)
 ├── Composition check (segue regras?)
 ├── Anti-pattern check (não inclui itens proibidos?)
 ├── Quality check (sem artefatos óbvios?)
 └── If 4/4 pass → publish; senão → iterate
 
-LAYER 4 — LIBRARY ORGANIZATION
+LAYER 4: LIBRARY ORGANIZATION
 ├── Pasta por mês/campaign
 ├── Naming: brand_topic_variant_v01
 ├── Tag por use case
@@ -4896,31 +4898,31 @@ Se 12/12 → publish.
 ```
 WORKFLOW COMPLETO 2026:
 
-ETAPA 1 — TEXT → IMAGE
+ETAPA 1: TEXT → IMAGE
 ├── Brief textual via mos-design
 ├── Prompt engineered + sref
 ├── Midjourney/Ideogram → 4-8 variations
 ├── Select best 1-2
 
-ETAPA 2 — IMAGE → IMAGE EDIT
+ETAPA 2: IMAGE → IMAGE EDIT
 ├── Inpaint elements (Photoshop AI / Magnific)
 ├── Upscale para production resolution
 ├── Color grade pra brand
 └── Final quality pass
 
-ETAPA 3 — IMAGE → VIDEO
+ETAPA 3: IMAGE → VIDEO
 ├── Static image → motion via Runway / Luma / Pika
 ├── Define motion (subtle parallax / dramatic zoom / particle effects)
 ├── Duration: 3-10s para social
 └── Output: vídeo pronto pra Reels/TikTok/Stories
 
-ETAPA 4 — VIDEO → SOUND
+ETAPA 4: VIDEO → SOUND
 ├── Add background music (Mubert / Suno)
 ├── Add voice (ElevenLabs)
 ├── Mix em Descript / CapCut
 └── Export final
 
-ETAPA 5 — DEPLOY
+ETAPA 5: DEPLOY
 ├── Multi-platform export (1:1, 9:16, 16:9)
 ├── Caption + hashtags
 ├── Tracking parameters

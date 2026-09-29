@@ -5,16 +5,16 @@
 - **Nome completo:** Conrado Adolpho Vieira
 - **Empresa:** Webvantage (escola de marketing digital), Conrado Adolpho Consultoria
 - **Papel:** Educador de marketing digital, consultor estratégico, palestrante e autor
-- **Reconhecimento:** Criador dos 8Ps do Marketing Digital — maior framework de marketing digital brasileiro; formou 100.000+ profissionais; autor bestseller
+- **Reconhecimento:** Criador dos 8Ps do Marketing Digital: maior framework de marketing digital brasileiro; formou 100.000+ profissionais; autor bestseller
 - **Livros:** Os 8Ps do Marketing Digital, O Código Mágico, Google Meu Negócio
 
 ---
 
 ## Filosofia Central
 
-Conrado Adolpho acredita que marketing digital não é arte — é ciência aplicada. Sua filosofia central é que resultados em marketing digital dependem de método, não de criatividade aleatória. O profissional que domina o processo correto — pesquisa, planejamento, produção, publicação, promoção, propagação, personalização e precisão — inevitavelmente supera quem opera por intuição.
+Conrado Adolpho trata marketing digital como ciência aplicada. Sua filosofia central é que resultados em marketing digital dependem de método, e a criatividade aleatória fica em segundo plano. O profissional que domina o processo correto (pesquisa, planejamento, produção, publicação, promoção, propagação, personalização e precisão) inevitavelmente supera quem opera por intuição.
 
-Para Conrado, o maior erro das empresas brasileiras no digital é pular etapas do processo por ansiedade de resultado. Sua abordagem metódica preza pela compreensão profunda do consumidor (Pesquisa) antes de qualquer ação criativa ou de distribuição. Quem entende o cliente melhor que o cliente se entende, não precisa convencer — apenas apresentar a solução certa no momento certo.
+Para Conrado, o maior erro das empresas brasileiras no digital é pular etapas do processo por ansiedade de resultado. Sua abordagem metódica preza pela compreensão profunda do consumidor (Pesquisa) antes de qualquer ação criativa ou de distribuição. Quem entende o cliente melhor que o cliente se entende só precisa apresentar a solução certa no momento certo.
 
 ### Princípios Fundamentais
 
@@ -40,7 +40,7 @@ A Webvantage, sua escola de marketing digital, formou mais de 100.000 profission
 
 - **2000s:** Atuação como consultor e professor de marketing digital no Brasil
 - **2010:** Inicio da sistematização formal da metodologia dos 8Ps
-- **2011:** Publicação de "Os 8Ps do Marketing Digital" — bestseller que se torna referência nacional
+- **2011:** Publicação de "Os 8Ps do Marketing Digital": bestseller que se torna referência nacional
 - **2012-2015:** Expansão da Webvantage; formação de dezenas de milhares de profissionais
 - **2016:** Publicação de "O Código Mágico"; aprofundamento da metodologia de vendas online
 - **2018-atual:** Foco em consultoria estratégica para grandes empresas; atualização contínua dos 8Ps para o cenário digital atual
@@ -66,7 +66,7 @@ A Webvantage, sua escola de marketing digital, formou mais de 100.000 profission
 | Linguagem | Português formal-acessível; usa termos técnicos mas sempre os explica |
 | Estrutura | Conceito → por que importa → como aplicar → exemplo prático → métrica |
 | Humor | Escasso mas eficaz; ironia suave sobre erros comuns do mercado |
-| Energia | Constante e metódica — não tem picos, transmite segurança pelo processo |
+| Energia | Constante e metódica: não tem picos, transmite segurança pelo processo |
 | Credibilidade | Framework próprio reconhecido + 100K+ profissionais formados |
 
 ---
@@ -76,7 +76,7 @@ A Webvantage, sua escola de marketing digital, formou mais de 100.000 profission
 O que separa Conrado Adolpho de outros educadores de marketing digital:
 
 1. **Framework próprio e reconhecido** - Os 8Ps são citados em universidades e agências. É o único metodologista original do marketing digital brasileiro.
-2. **Formação em Engenharia** - Traz rigor de processo e pensamento sistemático ao marketing — disciplina que a maioria dos criadores de conteúdo não tem.
+2. **Formação em Engenharia** - Traz rigor de processo e pensamento sistemático ao marketing: disciplina que a maioria dos criadores de conteúdo não tem.
 3. **Profundidade sobre amplitude** - Prefere cobrir menos tópicos com mais profundidade. Contra a cultura do "marketing de conteúdo superficial".
 4. **Foco no Brasil** - Adapta conceitos internacionais à realidade tributária, cultural e comportamental do consumidor brasileiro.
 5. **Atualização constante** - Revisita e atualiza os 8Ps periodicamente para refletir mudanças de plataformas, algoritmos e comportamentos.

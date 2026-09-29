@@ -1,6 +1,14 @@
-"""Tier 2 smoke tests: invoke marketing-os agents via `claude -p` (uses subscription)."""
+"""Tier 2 smoke tests: invoke marketing-os agents via `claude -p` (uses subscription).
+
+Carrega o plugin da árvore de trabalho (`--plugin-dir`) com a sessão fora do repo,
+como numa instalação real, e desliga cópias instaladas do mesmo plugin. Antes de
+2026-09-28 rodava com cwd no repo e sem --plugin-dir, ou seja, testava a versão
+instalada na máquina e escondia caminhos relativos (ADR-0005).
+"""
+
 from __future__ import annotations
 
+import json
 import os
 import shutil
 import subprocess
@@ -147,21 +155,39 @@ def test_agent_responds_structurally(
     expected_markers: list[str],
     project_root: Path,
     baseline_dir: Path,
+    tmp_path: Path,
 ) -> None:
     """Invokes agent via claude -p, validates response is non-empty and has expected markers."""
+    isolation = {
+        "enabledPlugins": {
+            "marketing-os@mos-marketplace": False,
+            "marketing-os@synced": False,
+        }
+    }
     result = subprocess.run(
-        [CLAUDE_BIN, "-p", prompt],
+        [
+            CLAUDE_BIN,
+            "-p",
+            "--plugin-dir",
+            str(project_root),
+            "--settings",
+            json.dumps(isolation),
+            prompt,
+        ],
         capture_output=True,
         text=True,
-        cwd=str(project_root),
+        cwd=str(tmp_path),
         timeout=TIMEOUT_SECONDS,
+        stdin=subprocess.DEVNULL,
     )
     output = result.stdout.strip()
     assert result.returncode == 0, (
         f"{agent_name} invocation failed (exit {result.returncode}):\n"
         f"STDERR:\n{result.stderr[:500]}"
     )
-    assert len(output) > 50, f"{agent_name} output too short ({len(output)} chars):\n{output[:500]}"
+    assert (
+        len(output) > 50
+    ), f"{agent_name} output too short ({len(output)} chars):\n{output[:500]}"
 
     output_lower = output.lower()
     found = [m for m in expected_markers if m.lower() in output_lower]

@@ -7,13 +7,13 @@
 - **Ferramentas:** Ubersuggest, AnswerThePublic
 - **Empresas anteriores:** Co-fundador da Crazy Egg e KISSmetrics
 - **Reconhecimento:** Top 100 Empreendedores com menos de 30 anos (Barack Obama), Top 100 Empreendedores com menos de 35 anos (Nações Unidas), reconhecido pelo Wall Street Journal e Forbes
-- **Blog:** neilpatel.com — mais de 2 milhões de visitas mensais
+- **Blog:** neilpatel.com: mais de 2 milhões de visitas mensais
 
 ---
 
 ## Filosofia Central
 
-Neil Patel acredita que o marketing digital deve ser **acessível, prático e baseado em dados**. Sua missão é desmistificar o SEO e o marketing de conteúdo para que qualquer pessoa — de iniciantes a empresas da Fortune 500 — possa gerar tráfego e receita de forma previsível.
+Neil Patel acredita que o marketing digital deve ser **acessível, prático e baseado em dados**. Sua missão é desmistificar o SEO e o marketing de conteúdo para que qualquer pessoa, de iniciantes a empresas da Fortune 500, possa gerar tráfego e receita de forma previsível.
 
 ### Princípios Fundamentais
 
@@ -35,11 +35,11 @@ Neil Patel nasceu em Londres (1985) em uma família de imigrantes indianos e cre
 
 ### Marcos importantes
 
-- **2005:** Co-fundou a Crazy Egg aos 20 anos — ferramenta de heatmaps e rastreamento de comportamento em sites
-- **2008:** Co-fundou a KISSmetrics — plataforma de analytics focada em comportamento do usuário
+- **2005:** Co-fundou a Crazy Egg aos 20 anos: ferramenta de heatmaps e rastreamento de comportamento em sites
+- **2008:** Co-fundou a KISSmetrics: plataforma de analytics focada em comportamento do usuário
 - **2014:** Reconhecido pelo Presidente Obama como Top 100 Empreendedores com menos de 30 anos
 - **2017:** Adquiriu o Ubersuggest e o transformou em ferramenta gratuita de pesquisa de palavras-chave
-- **2017:** Co-fundou a NP Digital — agência de performance marketing
+- **2017:** Co-fundou a NP Digital: agência de performance marketing
 - **2023-2024:** NP Digital nomeada Performance Marketing Agency of the Year (PMW Global Awards)
 - **2025:** NP Digital com aproximadamente 1.000 funcionários em 6 continentes e faturamento superior a US$24 milhões anuais
 
@@ -77,7 +77,7 @@ O que separa Neil Patel de outros experts em marketing digital:
 2. **Praticante com portfólio real** - Trabalhou com Amazon, NBC, GM, HP e Viacom antes de ensinar
 3. **Data-driven por natureza** - Conduz pesquisas com dezenas de milhares de sites e compartilha os resultados abertamente
 4. **Acessibilidade radical** - Transforma conceitos complexos de SEO em linguagem que qualquer pessoa entende
-5. **Presença multiplataforma consistente** - Blog, YouTube, podcast, redes sociais — todos com o mesmo nível de profundidade e qualidade
+5. **Presença multiplataforma consistente** - Blog, YouTube, podcast, redes sociais: todos com o mesmo nível de profundidade e qualidade
 
 ---
 

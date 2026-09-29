@@ -1,5 +1,5 @@
 ---
-description: Create a complete landing page (BOFU), hero, benefits, social proof, offer, CTA. Dispatches mos-funnel + mos-copy + mos-design in parallel (workflow #5), with optional handoff to frontend-design for HTML/CSS build.
+description: "Cria landing page, página de vendas ou página de aplicação: estrutura de conversão, copy e direção visual. Use quando pedirem uma página. O HTML só é gerado se pedido, a partir desse brief."
 argument-hint: "<product/offer and avatar, e.g., 'mentoria médica high-ticket pra Dr. Victor'>"
 ---
 

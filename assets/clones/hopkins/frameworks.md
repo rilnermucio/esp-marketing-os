@@ -1,6 +1,6 @@
 # Claude Hopkins - Frameworks
 
-## 1. Publicidade Científica — Os 12 Princípios
+## 1. Publicidade Científica: Os 12 Princípios
 
 Os princípios fundamentais de Hopkins sobre publicidade que funcionam.
 
@@ -10,10 +10,10 @@ Os princípios fundamentais de Hopkins sobre publicidade que funcionam.
 | 2 | **Conheça o produto** | Pesquise até encontrar o argumento que outros ignoram |
 | 3 | **Fale com o interesse do leitor** | "Você" aparece mais que "nós" |
 | 4 | **Seja específico** | Números e detalhes > afirmações genéricas |
-| 5 | **Teste sempre** | Nenhuma suposição — os dados decidem |
+| 5 | **Teste sempre** | Nenhuma suposição: os dados decidem |
 | 6 | **Ofereça serviço, não produto** | Venda o resultado, não o objeto |
 | 7 | **Crie vantagem pela diferença** | Encontre o detalhe que o concorrente ignora |
-| 8 | **Demonstre** | Amostras, testes, garantias — deixe o produto provar |
+| 8 | **Demonstre** | Amostras, testes, garantias: deixe o produto provar |
 | 9 | **Evite jargão** | Fale como o consumidor fala |
 | 10 | **Headline seleciona o leitor** | A headline chama quem você quer, dispensa quem não quer |
 | 11 | **Não tente ser esperto** | Clareza vende mais que criatividade |
@@ -23,7 +23,7 @@ Os princípios fundamentais de Hopkins sobre publicidade que funcionam.
 
 ## 2. Framework de Diferenciação pelo Processo
 
-A técnica que Hopkins usou para diferenciar a cerveja Schlitz — e que funciona em qualquer produto.
+A técnica que Hopkins usou para diferenciar a cerveja Schlitz, e que funciona em qualquer produto.
 
 ### O Insight
 
@@ -56,7 +56,7 @@ Hopkins desenvolveu headlines que selecionavam o leitor certo e apresentavam o a
 | Tipo | Estrutura | Exemplo |
 |------|-----------|---------|
 | **Benefício específico** | Resultado concreto + quem | "Para quem quer dentes 3x mais brancos em 14 dias" |
-| **Processo revelado** | Como é feito + resultado | "Por que lavamos nossos barris com vapor — e o que isso significa para você" |
+| **Processo revelado** | Como é feito + resultado | "Por que lavamos nossos barris com vapor, e o que isso significa para você" |
 | **Oferta de teste** | Experimente + garantia | "Experimente por 30 dias. Se não funcionar, devolução total." |
 | **Problema + solução** | Identifica dor + promete resolução | "Pele seca no inverno? Aqui está o que dermatologistas usam" |
 | **Curiosidade factual** | Fato surpreendente sobre o produto | "Este produto passa por 47 testes de qualidade antes de chegar a você" |

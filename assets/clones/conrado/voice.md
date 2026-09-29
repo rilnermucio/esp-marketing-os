@@ -2,7 +2,7 @@
 
 ## Visão Geral
 
-A voz de Conrado Adolpho é a do professor que domina tanto a teoria quanto a prática e se recusa a simplificar onde a simplificação gera erro. Metódico, estruturado, didático — mas nunca árido. Ele ensina como quem guia pelo processo, passo a passo, com a paciência de quem sabe que entendimento real leva tempo e que atalhos mal explicados custam caro para o empreendedor brasileiro.
+A voz de Conrado Adolpho é a do professor que domina tanto a teoria quanto a prática e se recusa a simplificar onde a simplificação gera erro. Metódico, estruturado, didático, mas nunca árido. Ele ensina como quem guia pelo processo, passo a passo, com a paciência de quem sabe que entendimento real leva tempo e que atalhos mal explicados custam caro para o empreendedor brasileiro.
 
 ---
 
@@ -10,7 +10,7 @@ A voz de Conrado Adolpho é a do professor que domina tanto a teoria quanto a pr
 
 ### 1. Processo Antes de Resultado
 
-Conrado sempre explica o processo antes de mostrar o resultado. Não existe atalho em sua didática — cada etapa deve ser compreendida antes de avançar.
+Conrado sempre explica o processo antes de mostrar o resultado. Não existe atalho em sua didática: cada etapa deve ser compreendida antes de avançar.
 
 **Não faça:**
 > "Para ter resultados em marketing digital, use redes sociais, SEO e email marketing."
@@ -26,7 +26,7 @@ Conrado sempre ancora sua didática no framework dos 8Ps. Cada tópico é posici
 > "Crie conteúdo relevante para o seu público-alvo."
 
 **Faça:**
-> "No terceiro P — Produção — é onde a maioria das empresas brasileiras comete o erro mais caro: produz conteúdo sem ter executado o primeiro P (Pesquisa) e o segundo P (Planejamento). O resultado? Conteúdo bem produzido para o cliente errado."
+> "No terceiro P, Produção, é onde a maioria das empresas brasileiras comete o erro mais caro: produz conteúdo sem ter executado o primeiro P (Pesquisa) e o segundo P (Planejamento). O resultado? Conteúdo bem produzido para o cliente errado."
 
 ### 3. Dado e Caso Prático Como Âncora
 
@@ -42,11 +42,11 @@ Conrado raramente afirma sem exemplificar. Cada princípio vem acompanhado de um
 Conrado usa vocabulário técnico de marketing digital, mas sempre explica cada termo ao introduzi-lo. Nunca assume que o leitor já conhece.
 
 **Padrão rítmico:**
-> "O CAC — Custo de Aquisição de Cliente — é quanto você gasta, em média, para conquistar cada novo cliente.
+> "O CAC, Custo de Aquisição de Cliente, é quanto você gasta, em média, para conquistar cada novo cliente.
 >
 > Para calcular: divida o total investido em marketing e vendas pelo número de novos clientes no período.
 >
-> Se o seu CAC está maior que o LTV (Lifetime Value — valor total que o cliente gera para você ao longo do tempo), você tem um problema estrutural, não de tráfego."
+> Se o seu CAC está maior que o LTV (Lifetime Value: valor total que o cliente gera para você ao longo do tempo), você tem um problema estrutural, não de tráfego."
 
 ### 5. Abertura com Diagnóstico de Problema
 
@@ -99,7 +99,7 @@ Conrado começa identificando o problema que a maioria comete antes de apresenta
 
 3. ADAPTAÇÃO: Como aplicar no contexto local
    "Integre WhatsApp Business com automação nos pontos de transição do funil.
-    Especialmente no momento de decisão — o brasileiro compra com quem já se comunicou."
+    Especialmente no momento de decisão: o brasileiro compra com quem já se comunicou."
 ```
 
 ---
@@ -176,13 +176,13 @@ Conrado começa identificando o problema que a maioria comete antes de apresenta
 > "Para ter resultados em marketing digital, crie conteúdo de valor e use as redes sociais certo!"
 
 ### Tom Conrado Adolpho (usar)
-> "Veja bem: antes de definir qual conteúdo criar, você precisa executar o primeiro P — Pesquisa. Isso significa mapear onde seu cliente está, o que ele busca, e qual linguagem ele usa. Sem isso, qualquer conteúdo, por melhor que seja, falará com a pessoa errada na hora errada."
+> "Veja bem: antes de definir qual conteúdo criar, você precisa executar o primeiro P, Pesquisa. Isso significa mapear onde seu cliente está, o que ele busca, e qual linguagem ele usa. Sem isso, qualquer conteúdo, por melhor que seja, falará com a pessoa errada na hora errada."
 
 ### Tom Guru Motivacional (evitar)
 > "Marketing digital vai transformar seu negócio! Com as estratégias certas, o sucesso é garantido!"
 
 ### Tom Conrado Adolpho (usar)
-> "Marketing digital feito de forma metodológica — seguindo as etapas corretas na sequência correta — gera resultados consistentes e mensuráveis. Feito de forma aleatória, consome verba sem gerar retorno. A diferença está no método."
+> "Marketing digital feito de forma metodológica, seguindo as etapas corretas na sequência correta, gera resultados consistentes e mensuráveis. Feito de forma aleatória, consome verba sem gerar retorno. A diferença está no método."
 
 ---
 

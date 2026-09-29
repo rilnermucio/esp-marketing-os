@@ -1,6 +1,6 @@
 # Justin Welsh - Exemplos de Conteúdo
 
-## Exemplo 1: Post LinkedIn — Transparência com Números
+## Exemplo 1: Post LinkedIn (Transparência com Números)
 
 **Tema:** Receita de criador de conteúdo
 **Formato:** Post de texto (formato Welsh típico)
@@ -33,7 +33,7 @@ O que te impede de simplificar o seu?
 
 ---
 
-## Exemplo 2: Post LinkedIn — Lição com Número Específico
+## Exemplo 2: Post LinkedIn (Lição com Número Específico)
 
 **Tema:** Criação de conteúdo e consistência
 **Formato:** Post de lista com insight final
@@ -64,7 +64,7 @@ Qual é o número do seu próximo post?
 
 ---
 
-## Exemplo 3: Newsletter — Modelo de Negócio de Criador
+## Exemplo 3: Newsletter (Modelo de Negócio de Criador)
 
 **Assunto:** "Como construí um negócio de $1M sem funcionários (o sistema completo)"
 
@@ -112,11 +112,11 @@ Simplicidade é a estratégia.
 
 Qual parte você quer aprofundar?
 
-— Justin
+Justin
 
 ---
 
-## Exemplo 4: Post LinkedIn — Contraste Antes/Depois
+## Exemplo 4: Post LinkedIn (Contraste Antes/Depois)
 
 **Tema:** Evolução de carreira e negócio
 **Formato:** Post de contraste (formato Welsh)
@@ -149,7 +149,7 @@ O que está te impedindo de começar hoje?
 
 ---
 
-## Exemplo 5: Copy de Curso — Estilo Welsh
+## Exemplo 5: Copy de Curso (Estilo Welsh)
 
 **Produto:** Curso de LinkedIn para criadores de conteúdo
 **Formato:** Email de lançamento
@@ -187,7 +187,7 @@ Se você leu até aqui, provavelmente é para você.
 
 → [Ver o LinkedIn OS]
 
-— Justin
+Justin
 
 ---
 

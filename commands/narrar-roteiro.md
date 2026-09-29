@@ -1,5 +1,5 @@
 ---
-description: Transforma um roteiro (podcast, VSL, Reels, spot) em áudio narrado PT-BR. Prepara o texto via mos-audio (limpeza + gate de timing + voz) e gera o áudio com TTS local. Dispara em "narrar", "gerar áudio", "voz", "TTS", "locução", "narração", "podcast em áudio", "VSL narrada".
+description: "Transforma um roteiro (podcast, VSL, Reels, spot) em áudio narrado em PT-BR, com o texto preparado para fala. Use quando pedirem narração, locução, voz ou áudio de um roteiro."
 argument-hint: "<roteiro ou arquivo> [tom: energetico|calmo|autoridade|amigavel]"
 ---
 
@@ -12,7 +12,7 @@ Pega um roteiro e entrega um arquivo de áudio narrado. O plugin **prepara e val
 Despache o mos-audio pra preparar o roteiro:
 
 ```
-Agent(subagent_type: "mos-audio", prompt: "Prepare este roteiro para narração TTS:
+Agent(subagent_type: "marketing-os:mos-audio", prompt: "Prepare este roteiro para narração TTS:
 1. Limpe pra texto 100% falável (remova marcações de cena, timestamps, direções visuais, emojis).
 2. Aplique o Quality Gate de timing (140-160 palavras/min PT-BR): sinalize se está longo/curto pro tempo alvo.
 3. Recomende o tom (energetico, calmo, autoridade, amigavel) coerente com o conteúdo.
@@ -28,13 +28,13 @@ Com o texto falável e o tom da Fase 1, gere o áudio:
 
 ```bash
 # Salve o texto falável num arquivo e rode (motor auto: say no mac, kokoro fora)
-python scripts/tts_runner.py --file roteiro_falavel.txt --tom <tom> --output narracao.aiff
+python "${CLAUDE_PLUGIN_ROOT}/scripts/tts_runner.py" --file roteiro_falavel.txt --tom <tom> --output narracao.aiff
 
 # ou via CLI unificado
-python scripts/mos.py audio narrate --file roteiro_falavel.txt --tom energetico
+python "${CLAUDE_PLUGIN_ROOT}/scripts/mos.py" audio narrate --file roteiro_falavel.txt --tom energetico
 
 # Pré-visualizar sem gerar (mostra texto + comando)
-python scripts/tts_runner.py --file roteiro_falavel.txt --tom autoridade --dry-run
+python "${CLAUDE_PLUGIN_ROOT}/scripts/tts_runner.py" --file roteiro_falavel.txt --tom autoridade --dry-run
 ```
 
 ## Saída

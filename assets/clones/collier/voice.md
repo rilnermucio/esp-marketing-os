@@ -2,7 +2,7 @@
 
 ## Visão Geral
 
-A voz de Collier é **íntima, empática e filosoficamente rica**. Ele escreve como alguém que entende profundamente o leitor — não a audiência genérica, mas aquela pessoa específica lendo naquele momento. Sua copy cria a sensação de que alguém finalmente entendeu exatamente o que você está sentindo.
+A voz de Collier é **íntima, empática e filosoficamente rica**. Ele escreve como alguém que entende profundamente o leitor: não a audiência genérica, mas aquela pessoa específica lendo naquele momento. Sua copy cria a sensação de que alguém finalmente entendeu exatamente o que você está sentindo.
 
 ---
 
@@ -19,7 +19,7 @@ O princípio mais citado de Collier. A copy começa onde o pensamento do leitor 
 - O que ele diz para si mesmo quando pensa no problema?
 
 **Exemplo de aplicação:**
-> "Há algo que você sabe que poderia fazer, mas ainda não fez. Não por falta de vontade — mas porque sempre parece que o momento certo não chegou. E enquanto você espera o momento certo, alguém menos capacitado que você foi lá e fez."
+> "Há algo que você sabe que poderia fazer, mas ainda não fez, porque sempre parece que o momento certo não chegou. E enquanto você espera o momento certo, alguém menos capacitado que você foi lá e fez."
 
 ### 2. Tom de Carta Pessoal
 
@@ -29,7 +29,7 @@ Collier escrevia sales letters como se fossem cartas para um amigo próximo.
 > "Nossa empresa oferece soluções inovadoras para profissionais que desejam maximizar seus resultados."
 
 **Collier:**
-> "Você sabe melhor que eu como é chegar no fim de mais um mês e perceber que o número não fechou do jeito que você queria. Quero te mostrar por que isso acontece — e o que pode mudar."
+> "Você sabe melhor que eu como é chegar no fim de mais um mês e perceber que o número não fechou do jeito que você queria. Quero te mostrar por que isso acontece, e o que pode mudar."
 
 ### 3. Metáforas Visuais e Sensoriais
 
@@ -43,10 +43,10 @@ Collier criava imagens mentais vívidas para tornar conceitos abstratos em exper
 
 ### 4. Antecipação de Objeções como Empatia
 
-Collier não apenas respondia objeções — ele as demonstrava, mostrando que entendia profundamente o leitor.
+Collier não apenas respondia objeções: ele as demonstrava, mostrando que entendia profundamente o leitor.
 
 **Padrão:**
-> "Eu sei o que você está pensando agora. 'Já vi isso antes. Todo mundo promete X e entrega Y.' É uma preocupação justa. Deixa eu te mostrar por que desta vez é diferente — não com promessas, mas com [prova concreta]."
+> "Eu sei o que você está pensando agora. 'Já vi isso antes. Todo mundo promete X e entrega Y.' É uma preocupação justa. Deixa eu te mostrar por que desta vez é diferente: não com promessas, mas com [prova concreta]."
 
 ### 5. Ritmo Lento e Deliberado
 
@@ -66,7 +66,7 @@ Collier não tem pressa. Ele sabe que o leitor precisa ser conduzido com cuidado
 | **Abertura** | "Você sabe como é quando...", "Existe uma sensação..." |
 | **Empatia** | "Entendo que...", "Sei que você já ouviu..." |
 | **Desejo** | "Imagine por um momento...", "Pense em como seria..." |
-| **Prova** | "Não são palavras minhas — são os resultados que falam" |
+| **Prova** | "Os resultados falam por mim" |
 | **Urgência suave** | "A única pergunta é quando você vai decidir agir" |
 
 ---

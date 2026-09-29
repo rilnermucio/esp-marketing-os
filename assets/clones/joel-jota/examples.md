@@ -1,6 +1,6 @@
 # Joel Jota - Exemplos de Conteúdo
 
-## Exemplo 1: Post Instagram — Alta Performance
+## Exemplo 1: Post Instagram (Alta Performance)
 
 **Tema:** Disciplina vs. motivação
 **Formato:** Post motivacional de alto impacto
@@ -11,7 +11,7 @@ Motivação dura dias.
 
 Disciplina dura carreiras.
 
-Nenhum atleta de alto nível acorda toda manhã querendo treinar. Michael Jordan não acordava sentindo vontade. Ele acordava e executava o plano — porque era o plano.
+Nenhum atleta de alto nível acorda toda manhã querendo treinar. Michael Jordan não acordava sentindo vontade. Ele acordava e executava o plano, porque era o plano.
 
 Você não precisa querer. Você precisa decidir.
 
@@ -19,11 +19,11 @@ Decide treinar quando não quer.
 Decide focar quando está cansado.
 Decide agir quando está com medo.
 
-A neurociência comprova: cada vez que você escolhe a ação sobre o conforto, você cria uma via neural mais forte. Com repetição, a disciplina se torna seu padrão — não mais seu esforço.
+A neurociência comprova: cada vez que você escolhe a ação sobre o conforto, você cria uma via neural mais forte. Com repetição, a disciplina se torna seu padrão: não mais seu esforço.
 
 Para de esperar a motivação chegar.
 
-A motivação é consequência da ação — não a causa.
+A motivação é consequência da ação: não a causa.
 
 Você está disposto a agir hoje, independente de como está se sentindo?
 
@@ -31,7 +31,7 @@ SIM ou DESCULPA.
 
 ---
 
-## Exemplo 2: Post LinkedIn — Liderança Pelo Afeto
+## Exemplo 2: Post LinkedIn (Liderança Pelo Afeto)
 
 **Tema:** O que diferencia líderes que desenvolvem de líderes que apenas cobram
 **Formato:** Post reflexivo para gestores
@@ -47,7 +47,7 @@ Essas duas coisas juntas mudaram minha trajetória.
 Cobrança sem afeto cria medo, não resultado.
 Afeto sem cobrança cria conforto, não crescimento.
 
-A combinação — exigir porque se importa — é o que a Gestão pelo Afeto propõe.
+A combinação, exigir porque se importa, é o que a Gestão pelo Afeto propõe.
 
 Na prática:
 
@@ -70,7 +70,7 @@ Qual líder você é para seu time hoje?
 
 ---
 
-## Exemplo 3: Email Newsletter — Saudação Pessoal
+## Exemplo 3: Email Newsletter (Saudação Pessoal)
 
 **Assunto:** "O que separa o quase-campeão do campeão"
 
@@ -78,7 +78,7 @@ Qual líder você é para seu time hoje?
 
 Olá, campeão/campeã,
 
-Hoje quero falar sobre um momento que todo atleta conhece — e que todo profissional de alta performance vai reconhecer.
+Hoje quero falar sobre um momento que todo atleta conhece, e que todo profissional de alta performance vai reconhecer.
 
 É o momento em que você está 90% lá.
 
@@ -88,7 +88,7 @@ E aí vem a tentação: "Está bom o suficiente."
 
 O quase-campeão cede.
 
-O campeão entende que é exatamente ali — nos últimos 10% — que a diferença é construída.
+O campeão entende que é exatamente ali, nos últimos 10%, que a diferença é construída.
 
 Porque é fácil dar 100% quando você está descansado, motivado e com energia.
 
@@ -102,7 +102,7 @@ Não grande mudança. Um ajuste. Essa semana.
 
 Você consegue?
 
-— Joel Jota
+Joel Jota
 
 ---
 
@@ -113,10 +113,10 @@ Você consegue?
 
 ---
 
-[ABERTURA — 3 segundos, energia máxima]
+[ABERTURA: 3 segundos, energia máxima]
 "Seu maior adversário não está no mercado. Está no espelho."
 
-[DESENVOLVIMENTO — 40 segundos]
+[DESENVOLVIMENTO: 40 segundos]
 "Deixa eu te perguntar uma coisa:
 
 Quantas vezes esta semana você escolheu o conforto em vez do crescimento?
@@ -125,7 +125,7 @@ Ficou no scroll quando sabia que deveria estudar.
 Adiou a academia porque 'amanhã vai melhor'.
 Não mandou a mensagem porque 'ainda não é a hora'.
 
-Esse inimigo — o que te convence que amanhã é melhor do que hoje — está dentro da sua cabeça.
+Esse inimigo, o que te convence que amanhã é melhor do que hoje, está dentro da sua cabeça.
 
 E ele vai vencer se você não criar um sistema que é mais forte do que ele.
 
@@ -133,9 +133,9 @@ Protocolo. Rotina. Estrutura.
 
 Não espera motivação para agir.
 
-Cria a estrutura que produz a ação — mesmo quando não quer."
+Cria a estrutura que produz a ação: mesmo quando não quer."
 
-[ENCERRAMENTO — 15 segundos, CTA direto]
+[ENCERRAMENTO: 15 segundos, CTA direto]
 "Qual é o hábito que você vai instalar esta semana para vencer esse inimigo?
 
 Comenta aqui: UMA coisa. Não dez. Uma.
@@ -144,7 +144,7 @@ Bora."
 
 ---
 
-## Exemplo 5: Post LinkedIn — Esporte Como Metáfora
+## Exemplo 5: Post LinkedIn (Esporte Como Metáfora)
 
 **Tema:** O que a NBA ensina sobre gestão de erros
 **Formato:** Analogia esporte-negócios

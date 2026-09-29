@@ -16,7 +16,7 @@ Um par de óculos simples. Nada de design sofisticado. Nada de marca famosa. Só
 
 Coloquei. Olhei para a janela. E por um momento, fiquei parado sem conseguir tirar.
 
-O céu parecia diferente. Mais nítido. Com um contraste que eu nunca tinha percebido antes. Os carros lá embaixo pareciam mais definidos. Meus olhos — que normalmente começavam a arder depois de horas na frente do computador — simplesmente não ardiam.
+O céu parecia diferente. Mais nítido. Com um contraste que eu nunca tinha percebido antes. Os carros lá embaixo pareciam mais definidos. Meus olhos, que normalmente começavam a arder depois de horas na frente do computador, simplesmente não ardiam.
 
 "O que é isso?" perguntei.
 
@@ -24,18 +24,18 @@ A resposta levou quase uma hora para eu entender completamente. E quando entendi
 
 **O problema que você não sabia que tinha**
 
-A luz azul e ultravioleta que entra pelos seus olhos não é inofensiva. Ela dispersa dentro do olho, criando aquela névoa visual que você provavelmente nem percebe que existe — porque sempre foi assim.
+A luz azul e ultravioleta que entra pelos seus olhos não é inofensiva. Ela dispersa dentro do olho, criando aquela névoa visual que você provavelmente nem percebe que existe, porque sempre foi assim.
 
 A lente âmbar do BluBlocker filtra esse espectro de luz. O resultado? O mundo parece mais nítido. Mais definido. Com contraste real.
 
-Não é photoshop. Não é ilusão. É como limpar o vidro do carro depois de meses sem fazer isso — você nem sabia que estava tão embaçado.
+Não é photoshop. Não é ilusão. É como limpar o vidro do carro depois de meses sem fazer isso: você nem sabia que estava tão embaçado.
 
 **O que você ganha com isso:**
 
 - Visão mais nítida em qualquer ambiente, especialmente sol intenso
 - Menos fadiga ocular após longas horas na tela
 - Mais segurança ao dirigir (contraste melhorado)
-- Proteção real contra UV — não decorativa
+- Proteção real contra UV: não decorativa
 - Armação leve (28 gramas) que você esquece que está usando
 
 **Por que confio nisso com meu nome**
@@ -61,11 +61,11 @@ Mas tem uma coisa: o estoque atual é de 340 unidades. Quando acabar, leva 60 di
 | Elemento | Técnica Aplicada |
 |----------|-----------------|
 | **Headline** | Resultado numérico específico (20 milhões) + curiosidade |
-| **Primeira frase** | Ultra-curta, intrigante — "Era algo que eu jamais esperava vender" |
+| **Primeira frase** | Ultra-curta, intrigante: "Era algo que eu jamais esperava vender" |
 | **Abertura** | História pessoal que coloca o leitor na cena |
-| **Sensação antes da explicação** | "Fiquei parado sem conseguir tirar" — emoção antes da lógica |
+| **Sensação antes da explicação** | "Fiquei parado sem conseguir tirar": emoção antes da lógica |
 | **Educação** | Explica a ciência da luz azul de forma simples (trigger: educação) |
-| **Analogia** | "Como limpar o vidro do carro" — torna abstrato em concreto |
+| **Analogia** | "Como limpar o vidro do carro": torna abstrato em concreto |
 | **Especificidade** | 28 gramas, 340 unidades, 60 dias, 30 dias de garantia |
 | **Credibilidade com vulnerabilidade** | "Não quero que você acredite em mim" |
 | **Garantia** | Remove risco totalmente antes do preço |
@@ -90,17 +90,17 @@ Nada.
 
 Bem, não exatamente nada. Vendemos 12 unidades. Em uma tiragem de 200.000 exemplares.
 
-Por semanas, eu ficava acordado tentando entender onde errei. O produto era bom — eu sabia disso. O preço era justo. O anúncio era... bonito.
+Por semanas, eu ficava acordado tentando entender onde errei. O produto era bom: eu sabia disso. O preço era justo. O anúncio era... bonito.
 
 Aí entendi.
 
 Bonito não vende. A rampa estava quebrada.
 
-Minha headline falava sobre o produto. Mas o leitor não se importa com o produto — se importa com o que o produto vai fazer por ele.
+Minha headline falava sobre o produto. Mas o que importa ao leitor é o que o produto vai fazer por ele.
 
 Minha primeira frase era longa demais. O leitor parou ali.
 
-Meus benefícios eram vagos. "Melhora a qualidade" — o que isso significa?
+Meus benefícios eram vagos. "Melhora a qualidade": o que isso significa?
 
 Reescrevi tudo. Mesma revista, semana seguinte.
 
@@ -108,7 +108,7 @@ Vendemos 2.340 unidades.
 
 Não mudei o produto. Não mudei o preço. Mudei a copy.
 
-Essa diferença — entre 12 e 2.340 — é o que a copy certa faz.
+Essa diferença, entre 12 e 2.340, é o que a copy certa faz.
 
 Se você está vendendo algo que acredita, mas os números não aparecem... provavelmente é a rampa.
 
@@ -125,9 +125,9 @@ Joe Sugarman
 | Elemento | Técnica Aplicada |
 |----------|-----------------|
 | **Assunto** | Número específico de perda + curiosidade ("como aconteceu?") |
-| **Abertura** | Data exata — especificidade imediata = credibilidade |
-| **Vulnerabilidade** | Admite fracasso próprio — trigger de confiança |
-| **Contraste dramático** | 12 vs 2.340 — o mesmo produto, copy diferente |
+| **Abertura** | Data exata: especificidade imediata = credibilidade |
+| **Vulnerabilidade** | Admite fracasso próprio: trigger de confiança |
+| **Contraste dramático** | 12 vs 2.340: o mesmo produto, copy diferente |
 | **Lição** | Ensina algo real e valioso de graça (trigger: educação) |
 | **Aplicação ao leitor** | "Se você está vendendo algo que acredita..." |
 | **CTA** | Conectado diretamente ao problema apresentado |
@@ -156,7 +156,7 @@ Ele sorriu. "Porque não parece caro o suficiente."
 
 Comprei os direitos de distribuição naquele dia.
 
-O relógio que você está olhando tem esse movimento. Não parece um relógio de R$5.000 — e não pretende. Mas vai te dizer as horas com precisão que a maioria dos relógios de R$5.000 não consegue.
+O relógio que você está olhando tem esse movimento. Não parece um relógio de R$5.000, e não pretende. Mas vai te dizer as horas com precisão que a maioria dos relógios de R$5.000 não consegue.
 
 Garantia de 2 anos. Troca sem perguntas se der qualquer problema.
 
@@ -171,9 +171,9 @@ Estamos com 89 unidades em estoque.
 | Elemento | Técnica Aplicada |
 |----------|-----------------|
 | **Headline** | Paradoxo que desafia crença comum (cheap vs expensive) |
-| **Especificidade técnica** | ±15 segundos por ano, 5 minutos por mês — dados reais |
-| **História de origem** | Fábrica em Ohio, 1979 — âncora de credibilidade |
+| **Especificidade técnica** | ±15 segundos por ano, 5 minutos por mês: dados reais |
+| **História de origem** | Fábrica em Ohio, 1979: âncora de credibilidade |
 | **Diálogo** | Torna abstrato em concreto, humaniza a história |
-| **Honestidade sobre o produto** | "Não parece um relógio de R$5.000 — e não pretende" |
+| **Honestidade sobre o produto** | "Não parece um relógio de R$5.000, e não pretende" |
 | **Reframe** | O "defeito" (não parecer caro) torna-se irrelevante |
-| **Escassez específica** | 89 unidades — número exato, não "estoque limitado" |
+| **Escassez específica** | 89 unidades: número exato, não "estoque limitado" |

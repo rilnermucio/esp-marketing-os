@@ -7,6 +7,52 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
 
 ---
 
+## [Não lançado]
+
+Rodada de implementação da auditoria de 2026-09-28 (`docs/ai-engineering/worklogs/2026-09-28-auditoria-runtime-e-produto.md`). O foco foi fazer o plugin funcionar instalado, fora do repositório, e fechar lacunas de produto para o mercado brasileiro.
+
+### Added
+
+- `/configurar-marca`: perfil da marca em `workspace/brand/perfil.md`, lido por todos os especialistas.
+- `/reaproveitar`: uma fonte pilar (live, artigo, vídeo) vira várias peças.
+- `/minerar-voc` e `scripts/voc_extractor.py`: dores, desejos e objeções literais de reviews, comentários e pesquisas.
+- `/checar-compliance`, `scripts/compliance_check.py` e `references/compliance-br.md`: normas de publicidade brasileiras conferidas no texto integral (CFM 2.336/2023, Código CFO e CFO-196/2019, CFN 599/2018, CFP, Provimento OAB 205/2021, CONFEF, ANVISA, CVM, CONAR 2026, Guia de Influenciadores 2026, CDC, LGPD, ECA Digital).
+- `/coletar-prova`: pedido, entrevista, modelo de case e termo de autorização de depoimentos (CONAR e LGPD).
+- `scripts/utm_builder.py`: link com UTM e `piece_id` estável da peça, lido pelo `/aprender`.
+- `scripts/install_doctor.py` (`mos.py install doctor`): lista cópias instaladas do plugin e versões.
+- `references/platform-facts.md` e `scripts/check_platform_facts.py` (`mos.py facts check`): 25 fatos de plataforma com fonte e data de verificação.
+- Busca por IA (GEO e AEO) na PARTE XII do seo-agent: AI Overviews, AI Mode, ChatGPT, Perplexity, Copilot, robôs de IA, controles e medição, conferidos na documentação oficial.
+- Plataformas brasileiras: Kwai, Status e Canais do WhatsApp, custo por mensagem da Platform, Threads e documento do LinkedIn na KB de social; títulos de Mercado Livre, Shopee e Amazon na KB de copy; anúncios no Status, canal promovido e Kwai for Business na KB de ads.
+- Modo avaliações públicas no `/responder-comentarios`; `/otimizar-copy` revisa roteiro, carrossel, sequência, artigo e página com o especialista do formato.
+- Evals de output para mos-social, mos-email e mos-ads: perfil `social`, golden set `agent-output-cases.json` e baselines versionadas.
+- ADR-0005 (plugin instalado), ADR-0006 (memória no diretório nativo), ADR-0007 (command com `context: fork`) e ADR-0008 (gate da resposta final).
+- Smoke de instalação real (`test_install_smoke.py`, `MOS_SMOKE=1`) com o plugin carregado por `--plugin-dir` fora do repo.
+
+### Changed
+
+- Dispatch com nome qualificado `marketing-os:mos-*` e caminhos ancorados em `${CLAUDE_PLUGIN_ROOT}` em agents, commands e SKILL.md; o pacote universal reescreve para caminhos relativos e nome curto.
+- Quality gate registrado em `hooks/hooks.json` (PreToolUse e SubagentStop); hooks no frontmatter dos agents foram removidos porque a plataforma os ignora em agent de plugin.
+- `/gerar-imagem` roda dentro do `mos-ai-tools` via `context: fork` (piloto da ADR-0007).
+- Memória dos agents no diretório nativo `.claude/agent-memory/marketing-os-mos-*`, com migração sem perda do caminho antigo.
+- SKILL.md como fonte única do roteamento, abaixo de 500 linhas; descriptions de command em PT-BR com gatilho.
+- `quality_gate.py` carrega os padrões bloqueantes do hook (fonte única).
+- Estado do usuário (`/projeto`, relatório semanal, tendências do TikTok) gravado em `workspace/` do projeto, nunca na pasta do plugin.
+- Descriptions dos manifests sem travessão.
+
+### Fixed
+
+- Plugin instalado não alcançava as próprias knowledge bases, o gate não avaliava agents qualificados e o dispatch pelo nome curto falhava.
+- Três documentos de cliente saíram do índice do repositório, com guard contra a classe.
+- Antítese "Não é X. São Y." passava pelo gate; agora bloqueia, com "São Paulo" fora.
+- O gate da resposta final reabria o agent com avisos e trocava a entrega por uma nota de correção, em laço (baselines AO-005 e AO-007). Agora só o bloqueio fala com o agent e pede a entrega completa (ADR-0008).
+- Invocações de CLI que o argparse rejeitava; `KeyError` em 12% dos roteiros e legendas gerados; fatos de plataforma vencidos (Reels, Shorts, Stories, carrossel, Advantage+ Sales, SGE, FID).
+- Golden set de roteamento coerente com os commands, com teste cruzado.
+- Conteúdo distribuído sem travessão: knowledge bases (248), voice clones e demais assets (975), commands, workflows e references (65), com guard que vale também dentro de bloco de código, onde ficam os exemplos que os agents imitam. A regra citada entre crases continua permitida.
+- 87 frases de clones, templates e prompts reescritas em forma afirmativa onde o travessão fazia a junta de uma antítese (`não é talento — é sistema`), e prompts de imagem que pediam travessão como elemento visual.
+- Epígrafes de 9 knowledge bases trocadas pela linha de escopo: 7 usavam a antítese proibida e 2 tinham autoria não confirmada (Deming, Erico Rocha).
+- Exemplos regulados do copy-agent alinhados às normas: advocacia sem gratuidade nem honorários (Provimento OAB 205), saúde com a identificação da CFM 2.336, beleza com a RDC 907/2024, fintech sem aviso da CVM aplicado a software, e números com cara de reais (estudo, benchmark, notificação, OAB) trocados por campos a preencher.
+- Regra de gratuidade do hook passa a pegar "R$0" perto de consulta, avaliação, diagnóstico ou análise.
+
 ## v6.16.0 (2026-08-09)
 
 Esta release disponibiliza a arquitetura universal skills-only para ChatGPT Work e Codex, fortalece a validação do pacote e fecha drifts operacionais encontrados em auditoria externa.

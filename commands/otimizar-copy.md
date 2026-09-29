@@ -1,11 +1,11 @@
 ---
-description: Diagnose, score and rewrite existing copy. Dispatches mos-copy com diagnóstico (PARTE XVIII), Copy Score System (PARTE XV) e reescritas com hipóteses A/B.
+description: "Diagnostica, pontua e reescreve uma peça que já existe (headline, post, anúncio, email ou sequência, página, roteiro, carrossel, artigo), com hipóteses A/B. Use quando pedirem para melhorar, revisar ou avaliar uma peça pronta."
 argument-hint: "<copy colada, path de arquivo, ou o que otimizar (ex: 'headline da minha landing')>"
 ---
 
 # /otimizar-copy: Diagnóstico e Reescrita de Copy (Dispatch-Based)
 
-Recebe copy existente (colada na conversa ou em arquivo), diagnostica por que ela não performa e entrega reescritas escoradas com hipóteses de teste. Orquestra via `Agent(subagent_type: "mos-copy")`. Não produz inline.
+Recebe copy existente (colada na conversa ou em arquivo), diagnostica por que ela não performa e entrega reescritas escoradas com hipóteses de teste. Orquestra via `Agent(subagent_type: "marketing-os:mos-copy")`. Não produz inline.
 
 É o command pro trabalho de copy mais frequente do dia a dia: melhorar o que já existe, em vez de criar do zero.
 
@@ -18,12 +18,23 @@ Recebe copy existente (colada na conversa ou em arquivo), diagnostica por que el
 5. **Público + oferta** (opcional): contexto que aumenta a precisão da reescrita
 6. **Métricas atuais** (opcional): baseline para calibrar hipóteses A/B
 
+## Qual especialista revisa
+
+| Peça | Dispatch |
+|---|---|
+| Headline, post curto, anúncio, CTA, bio, microcopy | `mos-copy` (simples, abaixo) |
+| Roteiro de vídeo, Reels ou VSL | `mos-copy` + `mos-video` em paralelo (retenção, hook por segundo, ritmo) |
+| Carrossel | `mos-copy` + `mos-social` em paralelo (estrutura e ritmo entre slides) |
+| Sequência de emails | `mos-copy` + `mos-email` em paralelo (fluxo, timing, subject lines) |
+| Artigo de blog | `mos-copy` + `mos-seo` em paralelo (intenção, on-page, headline) |
+| Landing ou página de vendas | `mos-copy` + `mos-funnel` em paralelo (estrutura de conversão) |
+
 ## Dispatch
 
 Single message:
 
 ```
-Agent(subagent_type: "mos-copy", prompt: "Otimize a copy existente abaixo. Formato: [formato]. Objetivo: [objetivo]. Sintoma reportado: [sintoma ou 'nenhum']. Público: [público se informado]. Oferta: [oferta se informada]. Métricas atuais: [baseline ou 'não informadas'].
+Agent(subagent_type: "marketing-os:mos-copy", prompt: "Otimize a copy existente abaixo. Formato: [formato]. Objetivo: [objetivo]. Sintoma reportado: [sintoma ou 'nenhum']. Público: [público se informado]. Oferta: [oferta se informada]. Métricas atuais: [baseline ou 'não informadas'].
 
 COPY ORIGINAL:
 [copy completa]
@@ -33,15 +44,31 @@ Processo obrigatório:
 2. Score a peça original com o Copy Score System (PARTE XV): Clareza, Persuasão, Ação, Relevância, Legibilidade
 3. Identifique o nível de consciência real do público (PARTE I, 1.3) e diga se a copy original fala com o nível errado
 4. Reescreva: 3-5 variações com hipóteses A/B distintas, cada uma atacando um problema diagnosticado diferente
-5. Score cada variação com o mesmo sistema e rode o lint determinístico (scripts/quality_gate.py; headline_scorer.py se for headline)
+5. Score cada variação com o mesmo sistema e rode o lint determinístico (${CLAUDE_PLUGIN_ROOT}/scripts/quality_gate.py; headline_scorer.py se for headline)
 6. Entregue top 2-3 com: score antes vs depois, o que mudou e por quê, hipótese de teste no formato 'se X então Y porque Z', métrica primária
 
 Aplicar quality gates globais (sem travessão, sem 'brutal', sem antítese negação/afirmação, acentuação PT-BR, máx 1 emoji).")
 ```
 
+### Peças com dono de formato (mesma mensagem, em paralelo com o mos-copy)
+
+```
+Agent(subagent_type: "marketing-os:mos-video", prompt: "Revise a estrutura deste roteiro [formato e duração] sem reescrever a copy: hook dos primeiros segundos, pontos prováveis de queda de retenção, ritmo, transições e CTA. Entregue problemas em ordem de impacto e ajustes por trecho. ROTEIRO: [roteiro]")
+
+Agent(subagent_type: "marketing-os:mos-social", prompt: "Revise a estrutura deste carrossel [plataforma]: capa, número de slides, ritmo de retenção entre slides, slide de CTA e legenda. Entregue problemas em ordem de impacto e a estrutura corrigida. CARROSSEL: [slides]")
+
+Agent(subagent_type: "marketing-os:mos-email", prompt: "Revise esta sequência de [N] emails: objetivo de cada email, ordem, intervalo, subject lines e preheaders, e onde a sequência perde o leitor. SEQUÊNCIA: [emails]")
+
+Agent(subagent_type: "marketing-os:mos-seo", prompt: "Revise este artigo para a keyword [keyword]: aderência à intenção de busca, estrutura de headings, title e meta description, links internos e lacunas frente aos concorrentes. ARTIGO: [texto]")
+
+Agent(subagent_type: "marketing-os:mos-funnel", prompt: "Revise a estrutura de conversão desta página [tipo e ticket]: ordem das seções, prova, oferta, objeções, CTAs e atrito. PÁGINA: [conteúdo]")
+```
+
+Na consolidação, junte o diagnóstico de estrutura do especialista com as reescritas do `mos-copy`; se os dois apontarem a mesma causa, ela vira a primeira prioridade.
+
 **Escalações** (apenas se necessário):
-- Peça de venda high-stakes (sales page, VSL, lançamento) sem research de público: dispatchar `Agent(subagent_type: "mos-research")` ANTES, porque o pre-flight do mos-copy exige research pra esse tipo de peça
-- Sintoma é de funil, não de peça ("a página inteira converte mal"): redirecionar pra `/criar-landing-page` ou `Agent(subagent_type: "mos-funnel")`
+- Peça de venda high-stakes (sales page, VSL, lançamento) sem research de público: dispatchar `Agent(subagent_type: "marketing-os:mos-research")` ANTES, porque o pre-flight do mos-copy exige research pra esse tipo de peça
+- Sintoma é de funil, não de peça ("a página inteira converte mal"): redirecionar pra `/criar-landing-page` ou `Agent(subagent_type: "marketing-os:mos-funnel")`
 
 ## Consolidação
 
@@ -79,7 +106,7 @@ Score: [N]/100 | O que mudou: [...]
 
 ## Quality Gates (antes de entregar)
 
-Aplicar gates globais do `skills/marketing-os/SKILL.md`:
+Aplicar gates globais do `${CLAUDE_PLUGIN_ROOT}/skills/marketing-os/SKILL.md`:
 - Sem `—`, sem "brutal", sem antítese negação→afirmação ("Não é X / É Y"), sem CAPS gratuito
 - Acentuação PT-BR correta
 - Fact-check via WebSearch para stat/case/citação adicionada na reescrita

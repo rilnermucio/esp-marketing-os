@@ -1,4 +1,5 @@
 """Fixtures compartilhadas para testes do Marketing OS."""
+
 from __future__ import annotations
 
 import os
@@ -11,7 +12,24 @@ from pathlib import Path
 import pytest
 
 
+def pytest_collection_modifyitems(config, items):
+    """Smoke tests chamam o Claude real, rede ou browser: só rodam com MOS_SMOKE=1.
+
+    Sem esta trava, `pytest scripts/tests/` sem marker disparava 22+ execuções
+    reais por acidente (auditoria 2026-08-21, item 6).
+    """
+    if os.environ.get("MOS_SMOKE") == "1":
+        return
+    skip = pytest.mark.skip(
+        reason="smoke test: defina MOS_SMOKE=1 para rodar (custo, rede ou browser reais)"
+    )
+    for item in items:
+        if "smoke" in item.keywords:
+            item.add_marker(skip)
+
+
 # --- Plugin-structure fixtures (added by plugin-first refactor) ---
+
 
 @pytest.fixture(scope="session")
 def project_root() -> Path:
@@ -154,9 +172,11 @@ def tmp_dir():
 @pytest.fixture
 def tmp_file(tmp_dir):
     """Cria arquivo temporário com conteúdo."""
+
     def _create(content, filename="test.md"):
         filepath = os.path.join(tmp_dir, filename)
-        with open(filepath, 'w', encoding='utf-8') as f:
+        with open(filepath, "w", encoding="utf-8") as f:
             f.write(content)
         return filepath
+
     return _create

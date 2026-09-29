@@ -1,5 +1,5 @@
 ---
-description: Turn the mos-video Thumbnail Brief into an actual 16:9 image. Dispatches mos-video (brief) + mos-ai-tools (prompt do fundo SEM texto), renderiza via skill de imagem e aplica o texto com thumbnail_composer.py (overlay tipográfico legível).
+description: "Gera a thumbnail 16:9 pronta de um vídeo, com fundo por IA e texto legível sobreposto. Use quando pedirem thumbnail ou capa de vídeo."
 argument-hint: "<vídeo/tema + texto da thumb, ex: 'vídeo sobre juros compostos, texto: NUNCA TE CONTARAM ISSO'>"
 ---
 

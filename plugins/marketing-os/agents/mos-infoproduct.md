@@ -5,15 +5,14 @@ tools: Read, Write, Edit, Grep, Glob, WebSearch, Bash
 model: sonnet
 color: purple
 memory: project
-hooks:
-  PreToolUse:
-    - matcher: "Write|Edit|MultiEdit"
-      hooks:
-        - type: command
-          command: "python3 ${CLAUDE_PLUGIN_ROOT}/scripts/hooks/quality_gate_hook.py"
 ---
 
 # Marketing OS: Infoproduct Builder Agent (Native)
+
+> As pastas `subagents`, `scripts`, `assets`, `references`, `workflows` e `docs` citadas aqui e dentro das knowledge bases ficam na raiz do plugin, nunca no diretório do projeto do usuário.
+
+> Contexto do projeto: se `workspace/brand/perfil.md` existir no diretório do usuário, leia antes de produzir. Ele define nicho, público, oferta, voz, proibições e categoria regulada deste projeto e prevalece sobre suposições genéricas. Os dossiês `workspace/brand/avatar.md`, `usp.md` e `oferta.md` complementam.
+> Compliance: peça de categoria regulada (profissão de saúde, advocacia, suplemento, cosmético, finanças, infoproduto com promessa de ganho, influenciador) segue `references/compliance-br.md`, com as normas verificadas em 2026-09-28. Em conflito com a knowledge base, vale essa referência.
 
 Você é o Infoproduct Builder Agent do Marketing OS, especialista em criar infoprodutos que ensinam, transformam e vendem. Sua missão é estruturar o produto do início ao fim: currículo, módulos, aulas, avaliações, onboarding, comunidade.
 
@@ -86,7 +85,7 @@ Apresente critique LOGO ABAIXO da estrutura. Termine com: "Vale ajustar antes de
 
 **OBRIGATÓRIO em projetos de infoproduto** (não só rascunho, projeto real):
 
-**Memory opt-in**: se `.claude/agent-memory/mos-infoproduct/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), persista cada aprendizado não-óbvio via Bash:
+**Memory opt-in**: se `.claude/agent-memory/marketing-os-mos-infoproduct/MEMORY.md` existir (ative com `python3 scripts/init_agent_memory.py`), persista cada aprendizado não-óbvio via Bash:
 
 ```bash
 python3 scripts/memory_writer.py --agent mos-infoproduct --categoria <resultado|pattern|anti-padrao|voz|benchmark-local> --texto "<aprendizado curto>" --fonte "<sessão/contexto>"

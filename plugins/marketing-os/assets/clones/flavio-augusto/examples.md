@@ -1,6 +1,6 @@
 # Flávio Augusto - Exemplos de Conteúdo
 
-## Exemplo 1: Post Instagram — Geração de Valor
+## Exemplo 1: Post Instagram (Geração de Valor)
 
 **Tema:** Por que compartilhar conhecimento de graça gera mais dinheiro
 **Formato:** Post motivacional com dado pessoal
@@ -9,7 +9,7 @@
 
 Em 1999, eu tinha zero dinheiro e muita coisa para aprender.
 
-Encontrei alguém que sabia o que eu precisava saber — e ele compartilhou de graça.
+Encontrei alguém que sabia o que eu precisava saber, e ele compartilhou de graça.
 
 Aquilo mudou minha vida. E nunca esqueci.
 
@@ -27,7 +27,7 @@ O que você pode compartilhar hoje que vai mudar a vida de alguém?
 
 ---
 
-## Exemplo 2: Post Instagram — Resiliência e Virada
+## Exemplo 2: Post Instagram (Resiliência e Virada)
 
 **Tema:** Superação de falência e reconstrução
 **Formato:** História pessoal + lição prática
@@ -46,7 +46,7 @@ Não porque eu era mais forte do que os outros. Porque eu aprendi que lamento n�
 
 Decidi estudar o problema em vez de fugir dele.
 
-Encontrei onde estava o vazamento. Cortei o que não era essencial. Renegociei cada dívida com honestidade total — "eu devo, vou pagar, mas preciso de prazo".
+Encontrei onde estava o vazamento. Cortei o que não era essencial. Renegociei cada dívida com honestidade total: "eu devo, vou pagar, mas preciso de prazo".
 
 Em 3 anos, estava zerado. Em 7, estava no bilhão.
 
@@ -56,7 +56,7 @@ Você tem um problema hoje. Qual é a próxima ação possível?
 
 ---
 
-## Exemplo 3: Post LinkedIn — Empreendedorismo Brasileiro
+## Exemplo 3: Post LinkedIn (Empreendedorismo Brasileiro)
 
 **Tema:** O que separa empreendedores que chegam do resultado
 **Formato:** Post reflexivo para empreendedores
@@ -77,7 +77,7 @@ Empreendedores de resultado não confundem as duas coisas.
 
 Eles definem o número antes de começar. Medem durante. Avaliam no final.
 
-E quando o número não vem, eles perguntam: "O que preciso mudar?" — não "Por que o mercado é difícil?"
+E quando o número não vem, eles perguntam: "O que preciso mudar?", não "Por que o mercado é difícil?"
 
 O mercado vai ser difícil sempre.
 
@@ -87,7 +87,7 @@ Qual é o número que você está perseguindo este mês?
 
 ---
 
-## Exemplo 4: Roteiro de Podcast — Abertura de Episódio
+## Exemplo 4: Roteiro de Podcast (Abertura de Episódio)
 
 **Tema:** Como construir riqueza sem berço de ouro
 **Formato:** Abertura de episódio (2-3 minutos)
@@ -104,7 +104,7 @@ Mas aprendi também algo que mudou tudo: valor cai do esforço certo, na direç�
 
 Não do esforço desorientado. Do esforço com método.
 
-E hoje quero te contar como eu descobri o método — e como você pode adaptar para sua realidade.
+E hoje quero te contar como eu descobri o método, e como você pode adaptar para sua realidade.
 
 Porque eu não acredito em receita mágica. Acredito em princípios que funcionam para qualquer pessoa que decide aplicá-los.
 
@@ -112,7 +112,7 @@ Vambora."
 
 ---
 
-## Exemplo 5: Email de Newsletter — Reflexão Semanal
+## Exemplo 5: Email de Newsletter (Reflexão Semanal)
 
 **Assunto:** "A pergunta que mudou minha relação com dinheiro"
 
@@ -122,7 +122,7 @@ Fala,
 
 Quando eu tinha 25 anos e estava quebrando, fiz uma pergunta para mim mesmo que mudou tudo:
 
-"O dinheiro que tenho — ou que vou ter — vai servir à minha vida, ou eu vou servir ao dinheiro?"
+"O dinheiro que tenho, ou que vou ter, vai servir à minha vida, ou eu vou servir ao dinheiro?"
 
 A maioria das pessoas que conheço vive para o dinheiro sem perceber.
 
@@ -132,7 +132,7 @@ Eu cometi esses erros. Aprendi do jeito difícil.
 
 Depois entendi: riqueza real é liberdade. Liberdade de tempo, de escolha, de dizer não quando você precisa dizer não.
 
-E liberdade não se constrói gastando mais — se constrói gerando mais valor do que você consome.
+E liberdade se constrói gerando mais valor do que você consome.
 
 Esta semana, antes de qualquer gasto não essencial, me faça uma pergunta:
 

@@ -154,10 +154,10 @@ HOOKS = {
     ],
     "controversia": [
         "Opinião impopular sobre {tema}",
-        "Por que eu discordo de {crença comum}",
+        "Por que eu discordo de {crença_comum}",
         "A verdade que ninguém quer ouvir sobre {tema}",
         "Isso vai irritar muita gente, mas...",
-        "{Crença popular} está completamente errada",
+        "{crença_popular} está completamente errada",
     ],
     "identificacao": [
         "Se você {situação}, assiste até o final",
@@ -167,7 +167,7 @@ HOOKS = {
         "POV: você finalmente descobriu {solução}",
     ],
     "resultado": [
-        "Foi assim que eu {resultado impressionante}",
+        "Foi assim que eu {resultado_impressionante}",
         "De {antes} para {depois} em {tempo}",
         "O antes e depois que ninguém esperava",
         "Olha o que aconteceu quando eu {ação}",
@@ -222,6 +222,35 @@ DIRECOES_CAMERA = [
 ]
 
 
+def _hook_fields(tema: str) -> Dict[str, str]:
+    """Valores de todos os campos usados nos templates de HOOKS.
+
+    Um campo sem valor aqui faz o .format levantar KeyError só quando o sorteio
+    cai no template (bug que ficou mascarado por retry nos testes até 2026-09).
+    """
+    return {
+        "tema": tema,
+        "tempo": "30 segundos",
+        "resultado": "transformar sua rotina",
+        "resultado_impressionante": "dobrei meu alcance em 30 dias",
+        "especialistas": "os experts",
+        "crença_comum": "todo mundo",
+        "crença_popular": "A ideia de que você precisa de mais tempo",
+        "situação": "luta com isso",
+        "problema": "enfrenta esse desafio",
+        "solução": "a solução",
+        "antes": "0",
+        "depois": "100",
+        "ação": "aplicar isso",
+        "período": "30 dias",
+        "Número": "5",
+    }
+
+
+def _cta_fields(tema: str) -> Dict[str, str]:
+    return {"tema": tema, "palavra": "EU QUERO"}
+
+
 def gerar_roteiro(tema: str, duracao: int, formato: str) -> Dict:
     """Gera roteiro completo para Reels."""
 
@@ -232,24 +261,10 @@ def gerar_roteiro(tema: str, duracao: int, formato: str) -> Dict:
 
     # Selecionar hooks e CTAs
     categoria_hook = random.choice(list(HOOKS.keys()))
-    hook = random.choice(HOOKS[categoria_hook]).format(
-        tema=tema,
-        tempo="30 segundos",
-        resultado="transformar sua rotina",
-        especialistas="os experts",
-        crença_comum="todo mundo",
-        situação="luta com isso",
-        problema="enfrenta esse desafio",
-        solução="a solução",
-        antes="0",
-        depois="100",
-        ação="aplicar isso",
-        período="30 dias",
-        Número="5",
-    )
+    hook = random.choice(HOOKS[categoria_hook]).format(**_hook_fields(tema))
 
     categoria_cta = random.choice(list(CTAS.keys()))
-    cta = random.choice(CTAS[categoria_cta]).format(tema=tema, palavra="EU QUERO")
+    cta = random.choice(CTAS[categoria_cta]).format(**_cta_fields(tema))
 
     # Montar roteiro
     direcoes_selecionadas: List[str] = random.sample(

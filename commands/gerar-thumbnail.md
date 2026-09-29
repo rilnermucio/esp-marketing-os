@@ -1,11 +1,11 @@
 ---
-description: Turn the mos-video Thumbnail Brief into an actual 16:9 image. Dispatches mos-video (brief) + mos-ai-tools (prompt do fundo SEM texto), renderiza via skill de imagem e aplica o texto com thumbnail_composer.py (overlay tipográfico legível).
+description: "Gera a thumbnail 16:9 pronta de um vídeo, com fundo por IA e texto legível sobreposto. Use quando pedirem thumbnail ou capa de vídeo."
 argument-hint: "<vídeo/tema + texto da thumb, ex: 'vídeo sobre juros compostos, texto: NUNCA TE CONTARAM ISSO'>"
 ---
 
 # /gerar-thumbnail: Thumbnail Brief vira imagem 16:9 (Dispatch + Execução)
 
-Gera a thumbnail de verdade, em duas camadas separadas por design: o FUNDO vem do gerador de imagem (sem texto, porque IA renderiza texto mal) e o TEXTO entra por overlay tipográfico determinístico (`scripts/thumbnail_composer.py`, stroke grosso + faixa de contraste + quebra automática, 1280x720).
+Gera a thumbnail de verdade, em duas camadas separadas por design: o FUNDO vem do gerador de imagem (sem texto, porque IA renderiza texto mal) e o TEXTO entra por overlay tipográfico determinístico (`${CLAUDE_PLUGIN_ROOT}/scripts/thumbnail_composer.py`, stroke grosso + faixa de contraste + quebra automática, 1280x720).
 
 ## Required inputs (ask if missing)
 
@@ -17,9 +17,9 @@ Gera a thumbnail de verdade, em duas camadas separadas por design: o FUNDO vem d
 ## Fase 1: brief e prompt (dispatch paralelo)
 
 ```
-- Agent(subagent_type: "mos-video", prompt: "Gere o Thumbnail Brief para vídeo sobre [tema]. Considere memory existente do cliente neste projeto. Entregue: conceito visual (composição, expressão/ação, cor dominante contrastando com o feed), 3 opções de texto da thumb (máx 5 palavras cada, curiosity gap, sem clickbait vazio) e recomendação de posição do texto (top/center/bottom) baseada na composição.")
+- Agent(subagent_type: "marketing-os:mos-video", prompt: "Gere o Thumbnail Brief para vídeo sobre [tema]. Considere memory existente do cliente neste projeto. Entregue: conceito visual (composição, expressão/ação, cor dominante contrastando com o feed), 3 opções de texto da thumb (máx 5 palavras cada, curiosity gap, sem clickbait vazio) e recomendação de posição do texto (top/center/bottom) baseada na composição.")
 
-- Agent(subagent_type: "mos-ai-tools", prompt: "Gere prompt de imagem 16:9 para FUNDO de thumbnail YouTube sobre [tema]. Estilo: [estilo]. REGRAS: nenhum texto/letreiro na imagem; deixar área de respiro para overlay de texto em [posição]; alto contraste e leitura clara em tamanho pequeno (a thumb é vista com ~120px de altura). Entregue prompt principal em inglês + negative prompt.")
+- Agent(subagent_type: "marketing-os:mos-ai-tools", prompt: "Gere prompt de imagem 16:9 para FUNDO de thumbnail YouTube sobre [tema]. Estilo: [estilo]. REGRAS: nenhum texto/letreiro na imagem; deixar área de respiro para overlay de texto em [posição]; alto contraste e leitura clara em tamanho pequeno (a thumb é vista com ~120px de altura). Entregue prompt principal em inglês + negative prompt.")
 ```
 
 ## Fase 2: renderização do fundo (executa)
@@ -31,13 +31,13 @@ Renderize o prompt do fundo via skill disponível (`gpt-image-2` ou `ai-image-ge
 ## Fase 3: overlay tipográfico (executa, determinístico)
 
 ```bash
-python3 scripts/thumbnail_composer.py \
+python3 "${CLAUDE_PLUGIN_ROOT}/scripts/thumbnail_composer.py" \
   --bg workspace/media/thumbnails/fundo-<slug>.png \
   --texto "<texto escolhido do brief>" \
   --out workspace/media/thumbnails/thumb-<slug>-<YYYYMMDD>.png \
   --pos <posição do brief>
 
-# ou: python scripts/mos.py thumbnail compose --bg ... --texto "..." --out ...
+# ou: python "${CLAUDE_PLUGIN_ROOT}/scripts/mos.py" thumbnail compose --bg ... --texto "..." --out ...
 ```
 
 Sem Pillow instalado, o script instrui `pip install -r requirements.txt`. Gere as 3 opções de texto do brief como 3 arquivos se o usuário quiser comparar (é 1 comando por variação, custo zero).
@@ -63,7 +63,7 @@ Fundo: [skill usada | fornecido manualmente] | Texto: "[texto]" | Posição: [po
 
 ## Quality Gates (antes de entregar)
 
-Aplicar gates globais do `skills/marketing-os/SKILL.md`:
+Aplicar gates globais do `${CLAUDE_PLUGIN_ROOT}/skills/marketing-os/SKILL.md`:
 - Fundo SEM texto embutido (se o gerador colocou letreiro, re-renderizar; overlay é a única fonte de texto)
 - Texto da thumb com máximo ~5 palavras e legível em miniatura
 - Curiosity gap honesto: a thumb promete o que o vídeo paga (coerência com o título é gate do mos-video)

@@ -1,5 +1,5 @@
 ---
-description: Cria um dossiê completo do cliente ideal com pesquisa, evidências, JTBD, anti-avatar e handoff para execução de marketing.
+description: "Cria o dossiê completo do cliente ideal: pesquisa, evidências, dores, desejos, objeções, JTBD e anti-avatar. Use quando pedirem avatar, persona, ICP ou cliente ideal."
 argument-hint: "<produto ou oferta> <nicho> [B2B|B2C] [mercado ou região]"
 ---
 
@@ -42,6 +42,8 @@ Agent(subagent_type: "mos-research", prompt: "Crie um Dossiê de Avatar completo
 ```
 
 ## Consolidação
+
+> **Precedência**: o conteúdo mínimo do dossiê é o do contrato canônico `assets/personas/persona-template.md`, que o `mos-research` segue. O schema abaixo define só a ordem de apresentação da entrega consolidada; ao consolidar, reordene e resuma sem descartar campo obrigatório do contrato.
 
 Entregue o resultado final neste schema, removendo blocos realmente inaplicáveis e explicando a remoção:
 
@@ -158,6 +160,10 @@ Entregue o resultado final neste schema, removendo blocos realmente inaplicávei
 ## 12. Fontes
 1. [Título, organização ou autor, URL, publicação, acesso e contexto geográfico]
 ````
+
+## Salvar no projeto
+
+Depois de entregar, salve o dossiê em `workspace/brand/avatar.md`, no projeto do usuário, para os outros especialistas usarem como contexto. Se o arquivo já existir, preserve a versão anterior com a data no nome. Se `workspace/brand/perfil.md` existir (criado por `/configurar-marca`), atualize a seção Público com um resumo de 2 ou 3 linhas.
 
 ## Quality Gates (antes de entregar)
 

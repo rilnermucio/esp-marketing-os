@@ -12,25 +12,25 @@
 
 ## Filosofia Central
 
-Sugarman acredita que **toda copy tem um único propósito: fazer o leitor ler a próxima frase**. A arte do copywriting é criar uma "rampa escorregadia" (slippery slide) onde cada elemento — headline, subheadline, primeira frase, segundo parágrafo — puxa irresistivelmente o leitor para o próximo.
+Sugarman acredita que **toda copy tem um único propósito: fazer o leitor ler a próxima frase**. A arte do copywriting é criar uma "rampa escorregadia" (slippery slide) onde cada elemento (headline, subheadline, primeira frase, segundo parágrafo) puxa irresistivelmente o leitor para o próximo.
 
 ### Princípios Fundamentais
 
-1. **A rampa escorregadia** — O trabalho da headline é fazer o leitor ler a primeira frase. O trabalho da primeira frase é fazer o leitor ler a segunda. E assim por diante até o CTA.
+1. **A rampa escorregadia**: O trabalho da headline é fazer o leitor ler a primeira frase. O trabalho da primeira frase é fazer o leitor ler a segunda. E assim por diante até o CTA.
 
-2. **Compra é emocional, justificada com lógica** — As pessoas compram por emoção e racionalizam depois. A copy deve primeiro despertar emoção, depois fornecer a lógica que justifica a decisão.
+2. **Compra é emocional, justificada com lógica**: As pessoas compram por emoção e racionalizam depois. A copy deve primeiro despertar emoção, depois fornecer a lógica que justifica a decisão.
 
-3. **Triggers psicológicos** — Existem 30 gatilhos mentais que influenciam a decisão de compra. O copywriter deve conhecê-los e usá-los com precisão.
+3. **Triggers psicológicos**: Existem 30 gatilhos mentais que influenciam a decisão de compra. O copywriter deve conhecê-los e usá-los com precisão.
 
-4. **Ambiente de compra** — A copy deve criar um estado mental de abertura e confiança antes de apresentar o produto. O ambiente é tão importante quanto o produto.
+4. **Ambiente de compra**: A copy deve criar um estado mental de abertura e confiança antes de apresentar o produto. O ambiente é tão importante quanto o produto.
 
-5. **Especificidade gera credibilidade** — Detalhes específicos são mais convincentes que afirmações gerais. "47 clientes" é mais crível que "muitos clientes".
+5. **Especificidade gera credibilidade**: Detalhes específicos são mais convincentes que afirmações gerais. "47 clientes" é mais crível que "muitos clientes".
 
 ---
 
 ## Trajetória
 
-Sugarman começou sua carreira como agente da CIA e depois trabalhou em publicidade antes de fundar a JS&A Group nos anos 1970. Tornou-se famoso por vender produtos tecnológicos inovadores — calculadoras, relógios digitais, gadgets — exclusivamente por copy em anúncios de meia página em jornais e revistas nacionais, antes da internet existir.
+Sugarman começou sua carreira como agente da CIA e depois trabalhou em publicidade antes de fundar a JS&A Group nos anos 1970. Tornou-se famoso por vender produtos tecnológicos inovadores (calculadoras, relógios digitais, gadgets) exclusivamente por copy em anúncios de meia página em jornais e revistas nacionais, antes da internet existir.
 
 ### Marcos importantes
 
@@ -58,7 +58,7 @@ Sugarman começou sua carreira como agente da CIA e depois trabalhou em publicid
 |---------|-----------|
 | Tom | Conversacional, curioso, envolvente |
 | Linguagem | Simples mas sofisticada, acessível |
-| Estrutura | Rampa escorregadia — cada elemento puxa o próximo |
+| Estrutura | Rampa escorregadia: cada elemento puxa o próximo |
 | Humor | Presente, leve, natural |
 | Energia | Calma, confiante, hipnótica |
 | Credibilidade | Construída por especificidade e detalhes únicos do produto |
@@ -69,11 +69,11 @@ Sugarman começou sua carreira como agente da CIA e depois trabalhou em publicid
 
 O que separa Sugarman dos outros grandes copywriters:
 
-1. **Mestre do long copy** — Provava que textos longos vendem mais que textos curtos, quando bem escritos
-2. **Engenheiro da atenção** — Entendia a psicologia da leitura como poucos
-3. **Produto como protagonista** — Suas copies exploram o produto com curiosidade genuína
-4. **Storytelling de produto** — Conta a história do produto de forma que o leitor se torna fascinado
-5. **Testador obsessivo** — Testava headlines, preços, posicionamentos antes de escalar
+1. **Mestre do long copy**: Provava que textos longos vendem mais que textos curtos, quando bem escritos
+2. **Engenheiro da atenção**: Entendia a psicologia da leitura como poucos
+3. **Produto como protagonista**: Suas copies exploram o produto com curiosidade genuína
+4. **Storytelling de produto**: Conta a história do produto de forma que o leitor se torna fascinado
+5. **Testador obsessivo**: Testava headlines, preços, posicionamentos antes de escalar
 
 ---
 

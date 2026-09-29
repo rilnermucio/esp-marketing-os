@@ -6,7 +6,6 @@ import subprocess
 import sys
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parents[2]
 SCRIPTS = ROOT / "scripts"
 if str(SCRIPTS) not in sys.path:
@@ -135,3 +134,50 @@ def test_validator_rejects_nonportable_skill_metadata(tmp_path):
 
     assert any("unsupported frontmatter fields" in error for error in errors)
     assert any("policy.products must be omitted" in error for error in errors)
+
+
+def test_validator_ignores_foreign_ancestor_marketplace(tmp_path):
+    """Cópia staged sob ~/plugins não herda o marketplace pessoal de ~/.agents (v6.16.0)."""
+    home = tmp_path / "home"
+    foreign = home / ".agents" / "plugins" / "marketplace.json"
+    foreign.parent.mkdir(parents=True)
+    foreign.write_text(
+        json.dumps(
+            {"name": "plugins-cli", "plugins": [{"name": "outro", "source": "./x"}]}
+        ),
+        encoding="utf-8",
+    )
+    staged = home / "plugins" / "marketing-os"
+    builder.build_plugin(staged)
+
+    assert validator.find_repo_root(staged) is None
+    assert validator.validate(staged) == []
+
+
+def test_validator_still_requires_marketplace_in_source_repo(tmp_path):
+    repo, _ = _generated_repo(tmp_path)
+    (repo / ".agents" / "plugins" / "marketplace.json").unlink()
+    (repo / ".codex-plugin").mkdir()
+    shutil.copy2(
+        ROOT / ".codex-plugin" / "plugin.json", repo / ".codex-plugin" / "plugin.json"
+    )
+    errors = validator.validate(repo)
+    assert any("Could not locate repository marketplace" in e for e in errors)
+
+
+def test_validator_accepts_personal_marketplace_listing_the_plugin(tmp_path):
+    """Caso real da v6.16.0: ~/.agents/plugins/marketplace.json (plugins-cli) lista o plugin."""
+    home = tmp_path / "home"
+    personal = home / ".agents" / "plugins" / "marketplace.json"
+    personal.parent.mkdir(parents=True)
+    entry = json.loads(
+        (ROOT / ".agents" / "plugins" / "marketplace.json").read_text(encoding="utf-8")
+    )["plugins"][0]
+    personal.write_text(
+        json.dumps({"name": "plugins-cli", "plugins": [entry]}), encoding="utf-8"
+    )
+    staged = home / "plugins" / "marketing-os"
+    builder.build_plugin(staged)
+
+    assert validator.find_repo_root(staged) == home.resolve()
+    assert validator.validate(staged) == []

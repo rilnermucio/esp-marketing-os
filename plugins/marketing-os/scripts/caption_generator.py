@@ -119,7 +119,7 @@ HOOKS = {
         "Eu nunca tinha contado isso, mas...",
         "O dia em que tudo mudou",
         "Eu quase desisti de {tema}. Deixa eu te contar...",
-        "Há {tempo} atrás, eu estava {situação difícil}",
+        "Há {tempo}, eu estava {situação_difícil}",
         "Essa história me ensinou a lição mais importante da minha vida",
         "Hoje eu preciso compartilhar algo com vocês...",
     ],
@@ -138,7 +138,7 @@ HOOKS = {
         "A maioria dos 'experts' está errada sobre isso",
         "Vou te contar o que {anos} de experiência me ensinaram",
         "Essa é a verdade que o mercado não quer que você saiba",
-        "Por que eu discordo de {crença comum}",
+        "Por que eu discordo de {crença_comum}",
         "{Número} anos fazendo {atividade} me mostraram que...",
     ],
     "conexao": [
@@ -259,6 +259,37 @@ HASHTAGS: Dict[str, List[str]] = {
 }
 
 
+def _hook_fields(tema: str) -> Dict[str, str]:
+    """Valores de todos os campos usados nos templates de HOOKS (ver reels_script_generator)."""
+    return {
+        "tema": tema,
+        "Número": random.choice(["3", "5", "7", "10"]),
+        "tempo": random.choice(["30 dias", "1 semana", "6 meses"]),
+        "situação": f"lutando com {tema}",
+        "situação_difícil": f"travado com {tema}",
+        "resultado": "ter sucesso",
+        "área": tema,
+        "benefício": f"dominar {tema}",
+        "problema": f"dificuldade com {tema}",
+        "objetivo": "seus objetivos",
+        "solução": "a solução",
+        "anos": random.choice(["3", "5", "8", "10"]),
+        "atividade": tema,
+        "crença_comum": "quem diz que é preciso postar todo dia",
+    }
+
+
+def _cta_fields(tema: str) -> Dict[str, str]:
+    return {
+        "pergunta": f"qual sua experiência com {tema}?",
+        "tema": tema,
+        "palavra": "EU QUERO",
+        "área": tema,
+        "data": "sexta-feira",
+        "número": random.choice(["500", "1.000", "5.000"]),
+    }
+
+
 def gerar_legenda(tema: str, objetivo: str) -> Dict:
     """Gera legenda completa baseada no objetivo."""
 
@@ -268,30 +299,9 @@ def gerar_legenda(tema: str, objetivo: str) -> Dict:
     estrutura = ESTRUTURAS[objetivo]
 
     # Selecionar hook e CTA
-    hook = random.choice(HOOKS[objetivo]).format(
-        tema=tema,
-        Número=random.choice(["3", "5", "7", "10"]),
-        tempo=random.choice(["30 dias", "1 semana", "6 meses"]),
-        situação=f"lutando com {tema}",
-        resultado="ter sucesso",
-        área=tema,
-        benefício=f"dominar {tema}",
-        problema=f"dificuldade com {tema}",
-        objetivo="seus objetivos",
-        solução="a solução",
-        anos=random.choice(["3", "5", "8", "10"]),
-        atividade=tema,
-        crença_comum="a maioria",
-    )
+    hook = random.choice(HOOKS[objetivo]).format(**_hook_fields(tema))
 
-    cta = random.choice(CTAS[objetivo]).format(
-        pergunta=f"qual sua experiência com {tema}?",
-        tema=tema,
-        palavra="EU QUERO",
-        área=tema,
-        data="sexta-feira",
-        número=random.choice(["500", "1.000", "5.000"]),
-    )
+    cta = random.choice(CTAS[objetivo]).format(**_cta_fields(tema))
 
     # Selecionar hashtags
     nicho = "geral"

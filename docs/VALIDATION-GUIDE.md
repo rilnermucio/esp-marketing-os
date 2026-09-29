@@ -118,7 +118,7 @@ Test cases pra validar que o orquestrador está dispatching corretamente nos wor
    ```bash
    python3 scripts/init_agent_memory.py
    ```
-   Isso cria os 9 diretórios `.claude/agent-memory/mos-{copy,research,brand,seo,social,ads,email,funnel,design}/` no formato canônico.
+   Isso cria os diretórios `.claude/agent-memory/marketing-os-mos-*/` (um por agent com memória), que é o diretório nativo de agent de plugin, e migra qualquer `mos-*/` antigo.
 3. Rodar Test 3 acima nessa pasta
 4. Sair do Claude Code, voltar pra mesma pasta dias depois
 
@@ -128,7 +128,7 @@ Test cases pra validar que o orquestrador está dispatching corretamente nos wor
 ```
 
 **Esperado:**
-- ✅ `mos-copy` carrega memory de `.claude/agent-memory/mos-copy/` (path canônico padronizado no P1-3 — antes era `marketing-os-mos-copy/`)
+- ✅ `mos-copy` carrega memory de `.claude/agent-memory/marketing-os-mos-copy/` (diretório nativo de agent de plugin; o `mos-copy/` usado entre v6.5 e v6.16 não é lido pela plataforma, ADR-0006)
 - ✅ Não pergunta nicho/avatar/ticket de novo (já tem no memory)
 - ✅ Headlines coerentes com posicionamento da sessão anterior
 

@@ -2,7 +2,7 @@
 
 ## Visão Geral
 
-A voz de Flávio Augusto é a do empresário brasileiro que se fez — sem herança, sem padrinho, sem atalho. Ele fala com a autoridade de quem construiu um bilhão com as próprias mãos e com a informalidade de quem nunca esqueceu de onde veio. Seu tom combina urgência empreendedora com afeto pelo empreendedor brasileiro, criando uma conexão que vai além de inspiração: gera ação.
+A voz de Flávio Augusto é a do empresário brasileiro que se fez, sem herança, sem padrinho, sem atalho. Ele fala com a autoridade de quem construiu um bilhão com as próprias mãos e com a informalidade de quem nunca esqueceu de onde veio. Seu tom combina urgência empreendedora com afeto pelo empreendedor brasileiro, criando uma conexão que vai além de inspiração: gera ação.
 
 ---
 
@@ -20,13 +20,13 @@ Flávio nunca filosofa sem ancorar em experiência real. Cada ensinamento vem de
 
 ### 2. Linguagem Brasileira Informal
 
-Flávio usa o português brasileiro do dia a dia — sem ser chulo, mas sem ser acadêmico. Usa "cara", "olha", "isso mesmo", "entende?" naturalmente.
+Flávio usa o português brasileiro do dia a dia, sem ser chulo, mas sem ser acadêmico. Usa "cara", "olha", "isso mesmo", "entende?" naturalmente.
 
 **Não faça:**
 > "O empreendedor deve desenvolver habilidades de negociação para maximizar seus resultados."
 
 **Faça:**
-> "Cara, negociação é uma habilidade. E habilidade se treina. Você negocia todo dia — aprende todo dia. Ou você tá melhorando, ou você tá perdendo dinheiro."
+> "Cara, negociação é uma habilidade. E habilidade se treina. Você negocia todo dia: aprende todo dia. Ou você tá melhorando, ou você tá perdendo dinheiro."
 
 ### 3. Contraste Direto: Maioria vs. Empreendedor
 
@@ -39,7 +39,7 @@ Flávio frequentemente opõe o que a maioria faz com o que o empreendedor venced
 
 ### 4. Fechamento com Desafio ou Convite à Ação
 
-Flávio não encerra com reflexão aberta como Godin — ele encerra com um desafio concreto ou um convite direto à mudança de comportamento.
+Flávio encerra com um desafio concreto ou um convite direto à mudança de comportamento, diferente da reflexão aberta de Godin.
 
 **Padrões de fechamento:**
 - "Qual decisão você está adiando que pode mudar seu negócio?"
@@ -48,7 +48,7 @@ Flávio não encerra com reflexão aberta como Godin — ele encerra com um desa
 
 ### 5. Urgência sem Histeria
 
-Flávio transmite urgência — o empreendedor que não age hoje perde amanhã — mas sem histeria. É urgência de alguém que sabe o valor do tempo, não de alguém querendo vender a qualquer custo.
+Flávio transmite urgência (o empreendedor que não age hoje perde amanhã), mas sem histeria. É a urgência de quem sabe o valor do tempo, sem a pressa de quem quer vender a qualquer custo.
 
 **Padrões de abertura:**
 - "Você tem dois caminhos nessa situação:"
@@ -108,7 +108,7 @@ Flávio transmite urgência — o empreendedor que não age hoje perde amanhã �
 
 | Evitar | Por quê |
 |--------|---------|
-| "Sonho" sem contexto de ação | Flávio é pragmático — sonho sem plano é devaneio |
+| "Sonho" sem contexto de ação | Flávio é pragmático: sonho sem plano é devaneio |
 | "Sorte" como fator de sucesso | Para ele, resultado é consequência de decisão e trabalho |
 | "Networking" como estratégia central | Ele valoriza entrega real acima de relacionamentos superficiais |
 | "Mindset" sem conteúdo prático | Detesta o uso vazio da palavra sem ação correspondente |
@@ -149,7 +149,7 @@ Flávio transmite urgência — o empreendedor que não age hoje perde amanhã �
 ## Regras de Formatação
 
 1. **Parágrafos curtos** - Máximo 3 linhas; muitas vezes 1 frase por parágrafo
-2. **Números em destaque** - R$ valores, anos, unidades — sempre em destaque
+2. **Números em destaque** - R$ valores, anos, unidades: sempre em destaque
 3. **Sem vocabulário acadêmico** - Linguagem de rua, não de MBA
 4. **Emojis com moderação** - Um ou dois, funcionais, não decorativos
 5. **Contraste visual** - Usa parágrafos curtos alternados com frases de impacto

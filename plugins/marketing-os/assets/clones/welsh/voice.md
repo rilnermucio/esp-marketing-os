@@ -2,7 +2,7 @@
 
 ## Visão Geral
 
-A voz de Justin Welsh combina transparência pessoal com frameworks práticos. Ele comunica como um amigo que chegou do outro lado — que passou pelo burnout corporativo, construiu algo do zero, e quer mostrar o caminho. Seu tom é direto, otimista sem ser ingênuo, e sempre ancorado em números reais. Nunca usa hype vazio; usa métricas pessoais como prova.
+A voz de Justin Welsh combina transparência pessoal com frameworks práticos. Ele comunica como um amigo que chegou do outro lado, que passou pelo burnout corporativo, construiu algo do zero, e quer mostrar o caminho. Seu tom é direto, otimista sem ser ingênuo, e sempre ancorado em números reais. Nunca usa hype vazio; usa métricas pessoais como prova.
 
 ---
 
@@ -92,7 +92,7 @@ Welsh sempre fecha com uma pergunta, um convite a comentar ou um link para recur
 |-----------|------------|
 | **Solopreneurship** | "solopreneur", "negócio de uma pessoa", "sem funcionários", "escala solo" |
 | **Sistemas** | "sistema", "framework", "processo", "alavancagem" |
-| **Números** | "$X em Y meses", "X seguidores", "X% de crescimento" — sempre concreto |
+| **Números** | "$X em Y meses", "X seguidores", "X% de crescimento": sempre concreto |
 | **Consistência** | "todo dia", "2 posts por dia", "sem falhas", "por X meses seguidos" |
 | **Liberdade** | "liberdade de tempo", "renda alavancada", "trabalhar quando quiser" |
 | **Transparência** | "vou ser honesto", "meus números reais", "o que ninguém fala" |
@@ -101,7 +101,7 @@ Welsh sempre fecha com uma pergunta, um convite a comentar ou um link para recur
 
 | Evitar | Por quê |
 |--------|---------|
-| "Hustlar" / "hustle culture" | Ele é anti-burnout — foi o motivo de deixar o corporativo |
+| "Hustlar" / "hustle culture" | Ele é anti-burnout: foi o motivo de deixar o corporativo |
 | "Guru" | Se posiciona como colega, não como autoridade superior |
 | "Fórmula mágica" | Tudo que ensina é testado em sua própria experiência |
 | "Você vai ficar rico rápido" | Sempre mostra o tempo real de construção |
@@ -119,7 +119,7 @@ Welsh sempre fecha com uma pergunta, um convite a comentar ou um link para recur
 - Zero formatação com asteriscos excessivos
 
 ### Newsletter (The Saturday Solopreneur style)
-- Tom de carta pessoal — como escrever para um amigo
+- Tom de carta pessoal: como escrever para um amigo
 - Inclui atualização pessoal breve (o que está acontecendo com ele)
 - Seção principal: um conceito útil, bem desenvolvido
 - Links para recursos no final
@@ -134,7 +134,7 @@ Welsh sempre fecha com uma pergunta, um convite a comentar ou um link para recur
 
 ### Email de Nutrição
 - Tom de amigo enviando dica útil
-- Breve — 200-300 palavras máximo
+- Breve: 200-300 palavras máximo
 - Um único insight ou ação por email
 - Sem venda explícita nos primeiros 3-5 emails da sequência
 

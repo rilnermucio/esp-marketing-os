@@ -1,6 +1,6 @@
 # SEO Agent v3.0 - O Agente de SEO Mais Avançado do Planeta
 
-> "SEO não é sobre enganar algoritmos. É sobre entender profundamente a intenção humana e criar a melhor resposta possível."
+> Tier 2 do `agents/mos-seo.md`. SEO: algoritmos, intenção de busca, keyword research, on-page, técnico, E-E-A-T, busca por IA e SEO local.
 
 ## Identidade do Agente
 
@@ -8,6 +8,28 @@
 **Versão:** 3.0
 **Especialização:** Search Engine Optimization Científico e Estratégico
 **Filosofia:** User-First, Algorithm-Aware, Data-Driven
+
+---
+
+## ÍNDICE
+
+1. [PARTE I: A ciência dos algoritmos de busca](#parte-i-a-ciência-dos-algoritmos-de-busca)
+2. [PARTE II: Psicologia da intenção de busca](#parte-ii-psicologia-da-intenção-de-busca)
+3. [PARTE III: Keyword research avançado](#parte-iii-keyword-research-avançado)
+4. [PARTE IV: On-page seo científico](#parte-iv-on-page-seo-científico)
+5. [PARTE V: Technical seo deep dive](#parte-v-technical-seo-deep-dive)
+6. [PARTE VI: E-e-a-t framework avançado](#parte-vi-e-e-a-t-framework-avançado)
+7. [PARTE VII: Link building estratégico](#parte-vii-link-building-estratégico)
+8. [PARTE VIII: Content seo](#parte-viii-content-seo)
+9. [PARTE IX: Schema markup completo](#parte-ix-schema-markup-completo)
+10. [PARTE X: Local seo](#parte-x-local-seo)
+11. [PARTE XI: Seo para youtube](#parte-xi-seo-para-youtube)
+12. [PARTE XII: Busca por IA (GEO e AEO)](#parte-xii-busca-por-ia-geo-e-aeo)
+13. [PARTE XIII: Analytics e métricas](#parte-xiii-analytics-e-métricas)
+14. [PARTE XIV: Ferramentas de seo](#parte-xiv-ferramentas-de-seo)
+15. [PARTE XV: Templates e checklists](#parte-xv-templates-e-checklists)
+16. [PARTE XVI: Casos de estudo e playbooks](#parte-xvi-casos-de-estudo-e-playbooks)
+17. [PARTE XVII: Glossário de seo](#parte-xvii-glossário-de-seo)
 
 ---
 
@@ -1826,6 +1848,8 @@ BENEFÍCIOS:
 
 #### FAQ Schema
 
+> Desde 07/05/2026 o Google não mostra mais resultado rico de FAQ, e o de HowTo saiu em 13/09/2023 (ver PARTE XII, 12.7). O markup pode ficar no site sem causar problema, e o Bing diz que dados estruturados podem ajudar o grounding das respostas de IA, sem garantia. Não prometa resultado rico por ele.
+
 ```json
 {
   "@context": "https://schema.org",
@@ -2393,9 +2417,10 @@ ELEMENTOS DE THUMBNAIL EFETIVO:
    - Cores do canal
    - Template com variações
 
-TAMANHO: 1280x720 px (16:9)
+TAMANHO: recomendado 3840x2160 px (16:9), mínimo 640 px de largura;
+          1280x720 continua aceito (Central de Ajuda do YouTube, 2026-09-28)
 FORMATO: JPG, PNG
-TAMANHO MÁXIMO: 2MB
+TAMANHO MÁXIMO: 2 MB no celular, 50 MB no computador
 ```
 
 ### 11.3 Retenção e Engajamento
@@ -2457,56 +2482,179 @@ você precisa entender..."
 
 ---
 
-## PARTE XII: AI E SEO
+## PARTE XII: BUSCA POR IA (GEO E AEO)
 
-> **SNAPSHOT DATADO (2024-2026)**: esta seção fotografa um momento. Antes de recomendar dado, preço, ferramenta ou regra daqui, confirme o estado atual via WebSearch. Princípios envelhecem bem; números, nomes e políticas envelhecem mal.
+> **Verificado em 2026-09-28** na documentação oficial de Google, Microsoft, OpenAI, Anthropic, Perplexity e Apple (fontes em 12.10). Produto de IA muda rápido: antes de afirmar nome de recurso, relatório ou robô numa entrega, confira `references/platform-facts.md`. Se a linha tiver mais de 180 dias, confirme via WebSearch e atualize o registro.
 
-### 12.1 AI Overviews e SGE
+GEO (Generative Engine Optimization) e AEO (Answer Engine Optimization) são os nomes de mercado para o trabalho de aparecer como fonte nas respostas geradas por IA. No Google, a documentação oficial trata esse trabalho como SEO: as respostas de IA partem dos mesmos sistemas de rastreamento, indexação e qualidade da Busca. Fora do Google, cada plataforma tem robô, controle e medição próprios, e é aí que a parte técnica muda.
 
-#### O Novo Paradigma de Busca
+### 12.1 Como as respostas de IA escolhem as fontes
+
+**Google (AI Overviews e AI Mode)**
+
+- AI Overviews chegaram ao Brasil em 15/08/2024, com português. O AI Mode funciona em português do Brasil desde 08/09/2025.
+- As respostas usam RAG (grounding): o modelo busca páginas pelos sistemas centrais de ranking da Busca. Também usam "query fan-out", várias consultas relacionadas feitas em paralelo, uma por subtópico da pergunta.
+- Para virar link de apoio, a página precisa estar indexada e elegível a snippet. O Google afirma que não há requisito técnico adicional.
+- AI Overviews e AI Mode podem usar modelos diferentes, então respostas e links variam entre os dois.
+- As políticas contra spam valem também para as respostas de IA (esclarecimento de 15/06/2026).
+
+**ChatGPT**
+
+- Para entrar nas respostas de busca, o site precisa liberar o OAI-SearchBot no robots.txt e no firewall ou CDN. Mudança no robots.txt leva cerca de 24 horas para valer.
+- O ChatGPT reescreve a pergunta em consultas para provedores de busca terceiros e ordena os resultados por vários fatores, sem posição garantida. Estar bem indexado no Bing tende a ajudar (inferência, a OpenAI não publica pesos).
+- Links de saída do ChatGPT levam `utm_source=chatgpt.com`.
+
+**Perplexity**
+
+- O PerplexityBot mostra e linka sites nas respostas e não treina modelo. Bloquear tira o site das citações.
+- A Perplexity descreve só o processo geral (busca em tempo real, citações numeradas) e não publica fatores de ranking.
+
+**Microsoft (Copilot e resumos de IA do Bing)**
+
+- O Bingbot rastreia para o Bing, o Copilot e a API de grounding. Não existe robô separado para o Copilot, então bloquear o Bingbot tira o site dos dois.
+- O time do Bing orienta conteúdo fácil de extrair: títulos descritivos, listas, tabelas, perguntas e respostas, frases que se sustentam sozinhas e nada essencial escondido em aba, PDF ou imagem.
+
+**Anthropic (Claude)**
+
+- Claude-SearchBot indexa para a busca do Claude, e Claude-User busca páginas a pedido do usuário. Bloquear qualquer um dos dois reduz a visibilidade nas respostas.
+
+### 12.2 O que o Google diz que você pode ignorar
+
+O guia oficial de otimização para IA generativa na Busca (publicado em 15/05/2026, atualizado em 10/07/2026) lista como desnecessários:
 
 ```
-AI OVERVIEWS (Antigo SGE):
-- Google gera resposta com AI
-- Cita fontes no "AI Overview"
-- Aparece acima dos resultados orgânicos
-- Muda completamente o CTR
-
-IMPACTO:
-- Menos cliques para queries informacionais
-- Importância de ser fonte citada
-- Conteúdo precisa ser "AI-friendly"
+- llms.txt e outros arquivos ou marcações "especiais" para IA
+- "Chunking": fragmentar o texto em pedaços para a IA
+- Reescrever conteúdo só para sistemas de IA
+- Foco excessivo em dados estruturados
+- Buscar menções inautênticas pela web
 ```
 
-#### Como Ser Citado em AI Overviews
+O mesmo guia afirma que nenhuma ferramenta de terceiros tem acesso aos sistemas internos de ranking ou de IA do Google. Promessa de ferramenta que "enxerga" o AI Overviews deve ser tratada como estimativa própria dela.
+
+### 12.3 O que funciona
 
 ```
-ESTRATÉGIAS:
+CONTEÚDO
+- Visão própria e experiência real: dado do negócio, caso brasileiro,
+  teste feito pela equipe, opinião fundamentada
+- Página que responde de verdade a intenção principal, com a resposta
+  perto do topo e o aprofundamento em seguida
+- Uma intenção principal por URL
 
-1. RESPOSTA DIRETA
-   - Responda queries nos primeiros parágrafos
-   - Formato "pergunta → resposta direta"
-   - Dados específicos e atuais
+ESTRUTURA (atende Google e Bing ao mesmo tempo)
+- Title alinhado ao H1; H2 e H3 descritivos
+- Seções com títulos claros e respostas que fazem sentido sozinhas
+- Conteúdo essencial em HTML, fora de abas, PDF e imagem
+- Imagens e vídeos com alt text, legenda e transcrição coerentes com o texto
 
-2. ESTRUTURA CLARA
-   - Headings como perguntas
-   - Listas e tabelas
-   - Definições claras
+ELEGIBILIDADE TÉCNICA
+- Página rastreável, indexável e com snippet permitido
+- Boa experiência de página (Core Web Vitals, mobile)
+- lastmod correto no sitemap; IndexNow para o Bing; 301 em mudança de URL
 
-3. AUTORIDADE
-   - E-E-A-T forte
-   - Citado por outras fontes
-   - Conteúdo factual verificável
-
-4. ATUALIZAÇÃO
-   - Dados mais recentes
-   - Atualizações frequentes
-   - Data de publicação visível
+ENTIDADE E AUTORIA
+- Byline com página de autor; marca e produtos sempre com o mesmo nome
+- Article com author do tipo Person ou Organization, com url ou sameAs
+- Perfil da Empresa no Google e Bing Places (negócio local);
+  Merchant Center (e-commerce)
 ```
 
-### 12.2 AI e Criação de Conteúdo
+Dado estruturado ajuda quando é fiel ao conteúdo visível (Product, LocalBusiness, Article, Organization). Para o Google ele não é requisito das respostas de IA. O Bing diz que pode ajudar o grounding, sem garantia, e ignora markup enganoso.
 
-#### Uso Ético de AI para SEO
+### 12.4 Robôs de IA: exibição e treino são decisões separadas
+
+| Robô | Empresa | Para que serve | Efeito de bloquear no robots.txt |
+|---|---|---|---|
+| Googlebot | Google | Busca, inclusive AI Overviews e AI Mode | Tira o site de toda a Busca |
+| Google-Extended | Google | Token sem robô próprio: treino de futuros modelos Gemini e grounding no app Gemini e na Vertex AI | Sai do treino; Busca, AI Overviews e AI Mode não mudam |
+| Bingbot | Microsoft | Bing, Copilot e API de grounding | Sai do Bing e do Copilot |
+| OAI-SearchBot | OpenAI | Busca do ChatGPT; não treina | Sai das respostas de busca do ChatGPT |
+| GPTBot | OpenAI | Coleta para treino | Sai só do treino |
+| ChatGPT-User | OpenAI | Visita pedida pelo usuário | A OpenAI diz que robots.txt não se aplica a essa ação |
+| OAI-AdsBot | OpenAI | Checa páginas enviadas como anúncio no ChatGPT; não treina | Só visita páginas enviadas como anúncio |
+| PerplexityBot | Perplexity | Mostrar e linkar sites nas respostas; não treina | Sai das citações |
+| Perplexity-User | Perplexity | Visita pedida pelo usuário; não treina | A Perplexity diz que ele em geral ignora robots.txt |
+| ClaudeBot | Anthropic | Coleta para treino | Sai só do treino |
+| Claude-SearchBot | Anthropic | Indexação para a busca do Claude | Reduz visibilidade e precisão na busca |
+| Claude-User | Anthropic | Visita pedida pelo usuário | Reduz visibilidade nas buscas feitas a pedido do usuário |
+| Applebot | Apple | Busca de Spotlight, Siri e Safari; dados podem treinar modelos da Apple | Sai da busca da Apple |
+| Applebot-Extended | Apple | Só sinaliza exclusão do treino, não rastreia | Sai do treino e continua na busca |
+
+Regra prática: quem quer ser citado libera Googlebot, Bingbot, OAI-SearchBot, PerplexityBot, Claude-SearchBot, Claude-User e Applebot no robots.txt e no WAF ou CDN (as empresas publicam os IPs). Treino se decide à parte, por GPTBot, ClaudeBot, Google-Extended e Applebot-Extended. Registre a decisão tomada para o cliente.
+
+### 12.5 Controles de exibição
+
+**Google**
+
+- `nosnippet`, `data-nosnippet`, `max-snippet` e `noindex` limitam o que aparece nas respostas de IA, do mesmo jeito que limitam o snippet comum.
+- Controle "Search generative AI" do Search Console (Configurações), no mundo todo desde 31/08/2026. O padrão inclui o site. Excluir tira links e conteúdo das respostas de IA da Busca e zera impressões e tráfego vindos delas. Não é sinal de ranking no resto da Busca e não afeta treino (isso é o Google-Extended). A maior parte do conteúdo sai em 1 a 2 dias.
+- Google-Extended não controla AI Overviews nem AI Mode.
+
+**Bing e Copilot**
+
+| Meta tag | Copilot | Treino da Microsoft | Busca do Bing |
+|---|---|---|---|
+| NOARCHIVE | Não linka a página | Conteúdo não é usado | Continua aparecendo |
+| NOCACHE | Usa só URL, título e snippet | Usa só URL, título e snippet | Continua aparecendo |
+| noindex | Fica de fora | Conteúdo não é usado | Fica de fora |
+
+As diretrizes do Bing avisam que `nosnippet` e `data-nosnippet` podem piorar a qualidade da citação no Copilot.
+
+### 12.6 Medição
+
+| Fonte | O que mostra | Limite |
+|---|---|---|
+| Search Console: "Generative AI performance report (Search)" | Impressões de links do site em AI Overviews e AI Mode, por página, país, data, dispositivo e tipo de busca | Só impressões: sem cliques, CTR, posição ou consultas. No mundo todo desde 31/08/2026 |
+| Search Console: relatório de Desempenho | Cliques vindos dos recursos de IA | Somados ao tipo de busca "Web", sem separação |
+| Bing Webmaster Tools: AI Performance | Citações, páginas citadas e grounding queries em Copilot, resumos de IA do Bing e parceiros | Prévia pública desde fev/2026, dados amostrados, citação não é clique. Intents, Topics, Citation Share e Compare em prévia desde jun/2026 |
+| GA4: canal padrão "AI Assistant" | Sessões vindas de assistentes como ChatGPT, Gemini, Deepseek, Copilot e Grok | Não inclui AI Overviews e AI Mode, que contam como Orgânico |
+| `utm_source=chatgpt.com` | Cliques em links do ChatGPT | Só ChatGPT |
+| Ferramentas de mercado (Semrush AI Visibility Toolkit, Ahrefs Brand Radar, Peec AI, Otterly.AI, Profound) | Menções, citações e share of voice | Cada uma mede uma amostra de prompts própria; confirme a cobertura em PT-BR com o fornecedor |
+
+O Bing lembra que queda de cliques nem sempre é perda de visibilidade: acompanhe impressões e citações junto com o tráfego.
+
+```
+ROTINA MENSAL DE VISIBILIDADE EM IA
+1. Monte um painel fixo de 20 a 50 prompts em PT-BR do nicho
+   (perguntas reais do público, comparações, "melhor X para Y")
+2. Rode sempre nas mesmas plataformas: AI Overviews/AI Mode,
+   ChatGPT, Perplexity e Copilot
+3. Registre por prompt: a marca aparece? é citada com link?
+   quais concorrentes aparecem?
+4. Cruze com Search Console (impressões de IA), Bing AI Performance
+   (citações) e GA4 (canal AI Assistant)
+5. Leia como tendência de amostra; um mês isolado não prova nada
+```
+
+### 12.7 Schema, FAQ e E-E-A-T
+
+- O resultado rico de FAQ saiu da Busca do Google em 07/05/2026, e o de HowTo em 13/09/2023. O markup pode ficar no site sem causar problema, mas não prometa resultado rico por ele. Uma seção de perguntas e respostas na página continua útil para o leitor e para a extração.
+- E-E-A-T não é um fator de ranking isolado. Confiança é o critério que mais pesa, sobretudo em YMYL (saúde, finanças, segurança). Deixe claro quem escreveu, como a página foi feita (inclusive o uso de IA) e por que ela existe.
+- A influência do E-E-A-T nas respostas de IA do Google é indireta: elas se apoiam nos sistemas de qualidade da Busca.
+
+### 12.8 O que não afirmar numa entrega
+
+```
+NÃO AFIRME                                   | O QUE AS FONTES DIZEM
+---------------------------------------------|------------------------------------------
+"llms.txt melhora ranking ou citação"        | A Busca do Google não usa o arquivo
+                                             | (nota de 15/06/2026). Até 2026-09-28,
+                                             | nenhuma empresa de IA declarou ler o
+                                             | llms.txt de outros sites. Manter o
+                                             | arquivo para agentes é opcional
+"Fatores de ranking da Perplexity"           | A Perplexity não publica fatores; listas
+ (ex.: bônus para conteúdo com menos         | de blogs de GEO são especulação
+ de 30 dias)                                 |
+"Schema ou markup de autor aumenta citação   | Nenhuma dessas empresas documenta isso
+ no ChatGPT, Perplexity ou Claude"           |
+"A ferramenta X vê o algoritmo de IA"        | Nenhuma ferramenta de terceiros tem acesso
+                                             | aos sistemas internos do Google
+Truques: texto escrito "para LLM", prompt    | As políticas de spam do Google valem para
+ injection na página, menções compradas      | as respostas de IA
+```
+
+### 12.9 IA na criação de conteúdo
 
 ```
 PODE E DEVE:
@@ -2515,7 +2663,7 @@ PODE E DEVE:
 ✓ Primeiro rascunho para edição humana
 ✓ Análise de dados
 ✓ Otimização de meta tags
-✓ Schema generation
+✓ Geração de schema
 
 NÃO DEVE:
 ✗ Publicar sem revisão humana
@@ -2525,61 +2673,48 @@ NÃO DEVE:
 ✗ Informações não verificadas
 ```
 
-#### Detecção de Conteúdo AI
+Para o Google, o critério é a qualidade e a utilidade da página, qualquer que seja a ferramenta usada para escrever. Conteúdo gerado em escala sem revisão, sem experiência própria e com padrão repetitivo perde nesse critério. O caminho é usar a IA como assistente e acrescentar o que só o negócio tem: experiência, dados, casos e revisão humana com checagem de fatos.
+
+### 12.10 Checklist GEO para site brasileiro e fontes
 
 ```
-GOOGLE SOBRE CONTEÚDO AI:
-"Não é sobre quem ou o que escreveu,
-é sobre a qualidade e utilidade."
-
-MAS:
-- Conteúdo AI genérico é facilmente detectável
-- Falta de experiência pessoal
-- Padrões de escrita repetitivos
-- Ausência de insights originais
-
-SOLUÇÃO:
-- AI como assistente, não autor
-- Adicionar experiência pessoal
-- Dados e insights próprios
-- Revisão e edição humana
-- Fato checado e atualizado
+[ ] Robôs que geram citação liberados no robots.txt e no WAF/CDN
+[ ] Decisão de treino registrada (GPTBot, ClaudeBot, Google-Extended,
+    Applebot-Extended), separada da decisão de exibição
+[ ] Conteúdo original em PT-BR com experiência, dados e exemplos próprios
+[ ] Resposta principal perto do topo; seções com títulos claros
+[ ] Conteúdo essencial em HTML, fora de abas, PDF e imagem
+[ ] Autoria visível; Article/Organization com url ou sameAs
+[ ] Schema fiel ao conteúdo visível (sem contar com FAQ rich result)
+[ ] Perfil da Empresa, Bing Places e Merchant Center quando couber
+[ ] lastmod correto, IndexNow no Bing, 301 e 404 corretos
+[ ] Imagens e vídeos com alt, legenda e transcrição
+[ ] Medição: Search Console (IA), Bing AI Performance, GA4 AI Assistant,
+    utm_source=chatgpt.com
+[ ] Painel mensal de prompts em PT-BR, lido como tendência
 ```
 
-### 12.3 ChatGPT, Perplexity e Busca Conversacional
+Fontes (verificadas em 2026-09-28):
 
-#### SEO para Busca Conversacional
-
-```
-NOVO PARADIGMA:
-Usuários perguntam em linguagem natural
-AI compila respostas de múltiplas fontes
-
-COMO APARECER:
-
-1. AUTORIDADE TOPICAL
-   - Cobertura completa de tópicos
-   - Ser referência no nicho
-   - Citado por outros
-
-2. DADOS ORIGINAIS
-   - Pesquisas próprias
-   - Estatísticas exclusivas
-   - Estudos de caso
-
-3. ESTRUTURA PARA EXTRAÇÃO
-   - FAQs bem formatadas
-   - Definições claras
-   - Listas acionáveis
-
-4. PRESENÇA MULTI-CANAL
-   - YouTube
-   - Podcasts
-   - Social media
-   - Publicações
-```
+- Google, guia de otimização para IA generativa: https://developers.google.com/search/docs/fundamentals/ai-optimization-guide
+- Google, recursos de IA e o seu site: https://developers.google.com/search/docs/appearance/ai-features
+- Google, relatório de desempenho de IA generativa: https://support.google.com/webmasters/answer/16984139
+- Google, controle "Search generative AI": https://support.google.com/webmasters/answer/16908024
+- Google, atualizações da documentação (FAQ, llms.txt, spam): https://developers.google.com/search/updates
+- Google, mudanças de HowTo e FAQ (2023): https://developers.google.com/search/blog/2023/08/howto-faq-changes
+- Google, robôs comuns e Google-Extended: https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers
+- Google, AI Mode em mais idiomas: https://blog.google/products-and-platforms/products/search/ai-mode-expands-more-languages/
+- GA4, grupos de canais padrão: https://support.google.com/analytics/answer/9756891
+- OpenAI, robôs: https://developers.openai.com/api/docs/bots
+- OpenAI, busca do ChatGPT: https://help.openai.com/en/articles/9237897-chatgpt-search
+- Perplexity, robôs: https://docs.perplexity.ai/guides/bots
+- Anthropic, robôs: https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler
+- Apple, Applebot: https://support.apple.com/en-us/119829
+- Bing, diretrizes para webmasters: https://www.bing.com/webmasters/help/webmaster-guidelines-30fba23a
+- Bing, AI Performance: https://blogs.bing.com/webmaster/February-2026/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview
 
 ---
+
 
 ## PARTE XIII: ANALYTICS E MÉTRICAS
 
@@ -3026,7 +3161,7 @@ SITE AUDIT:
 - [ ] Lista de X items
 - [ ] Imagem original
 - [ ] Internal links para:
-- [ ] Schema: FAQ / HowTo / Article
+- [ ] Schema fiel ao conteúdo visível: Article, Organization, Product ou LocalBusiness (FAQ e HowTo não geram mais resultado rico no Google)
 
 ### Tom e Estilo
 - Tom: Profissional / Conversacional / Técnico

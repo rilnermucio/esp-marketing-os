@@ -1,5 +1,5 @@
 ---
-description: Cria um dossiê completo do cliente ideal com pesquisa, evidências, JTBD, anti-avatar e handoff para execução de marketing.
+description: "Cria o dossiê completo do cliente ideal: pesquisa, evidências, dores, desejos, objeções, JTBD e anti-avatar. Use quando pedirem avatar, persona, ICP ou cliente ideal."
 argument-hint: "<produto ou oferta> <nicho> [B2B|B2C] [mercado ou região]"
 ---
 
@@ -38,10 +38,12 @@ Todos os caminhos usam dispatch simples para `mos-research`. Os ramos alteram o 
 ## Dispatch Simples
 
 ```text
-Agent(subagent_type: "mos-research", prompt: "Crie um Dossiê de Avatar completo para [produto ou oferta], no mercado [nicho e geografia], contexto [B2B ou B2C], para orientar a decisão [decisão]. Ticket ou faixa de preço: [ticket]. Transformação prometida: [transformação]. Evidências próprias fornecidas: [dados, links ou nenhuma]. Segmentos suspeitos: [lista ou nenhum]. Profundidade: [rápida, padrão ou profunda]. Considere a memory existente do cliente neste projeto, se estiver ativa. Leia a seção Audience Research Profundo de subagents/research-agent.md, consulte assets/personas/personas-por-nicho.md apenas como banco de hipóteses e siga integralmente o contrato canônico de assets/personas/persona-template.md. Use WebSearch para evidências externas atuais e priorize fontes primárias, dados próprios, reviews, fóruns e linguagem espontânea do público. Para toda afirmação material, registre fonte, data, escopo geográfico, classificação EVIDÊNCIA CONFIRMADA, INFERÊNCIA ou HIPÓTESE e confiança alta, média ou baixa. Entregue: ledger de evidências; segmentação e priorização; um avatar principal; segmentos secundários somente quando houver diferença comprovada de job, jornada ou decisão; anti-avatar; Jobs To Be Done funcional, emocional e social; nível de consciência; dores, desejos, alternativas atuais, objeções, critérios, gatilhos e jornada de compra; canais, formatos e linguagem real; diferenças B2B ou B2C; plano de validação; recomendações acionáveis; Handoff Context em JSON para mos-copy, mos-ads, mos-offer, mos-funnel e mos-social. Declare limitações. Não invente demografia, citações, comportamento, renda ou disposição a pagar. Aplique os Quality Gates globais do Marketing OS.")
+Agent(subagent_type: "marketing-os:mos-research", prompt: "Crie um Dossiê de Avatar completo para [produto ou oferta], no mercado [nicho e geografia], contexto [B2B ou B2C], para orientar a decisão [decisão]. Ticket ou faixa de preço: [ticket]. Transformação prometida: [transformação]. Evidências próprias fornecidas: [dados, links ou nenhuma]. Segmentos suspeitos: [lista ou nenhum]. Profundidade: [rápida, padrão ou profunda]. Considere a memory existente do cliente neste projeto, se estiver ativa. Leia a seção Audience Research Profundo de ${CLAUDE_PLUGIN_ROOT}/subagents/research-agent.md, consulte ${CLAUDE_PLUGIN_ROOT}/assets/personas/personas-por-nicho.md apenas como banco de hipóteses e siga integralmente o contrato canônico de ${CLAUDE_PLUGIN_ROOT}/assets/personas/persona-template.md. Use WebSearch para evidências externas atuais e priorize fontes primárias, dados próprios, reviews, fóruns e linguagem espontânea do público. Para toda afirmação material, registre fonte, data, escopo geográfico, classificação EVIDÊNCIA CONFIRMADA, INFERÊNCIA ou HIPÓTESE e confiança alta, média ou baixa. Entregue: ledger de evidências; segmentação e priorização; um avatar principal; segmentos secundários somente quando houver diferença comprovada de job, jornada ou decisão; anti-avatar; Jobs To Be Done funcional, emocional e social; nível de consciência; dores, desejos, alternativas atuais, objeções, critérios, gatilhos e jornada de compra; canais, formatos e linguagem real; diferenças B2B ou B2C; plano de validação; recomendações acionáveis; Handoff Context em JSON para mos-copy, mos-ads, mos-offer, mos-funnel e mos-social. Declare limitações. Não invente demografia, citações, comportamento, renda ou disposição a pagar. Aplique os Quality Gates globais do Marketing OS.")
 ```
 
 ## Consolidação
+
+> **Precedência**: o conteúdo mínimo do dossiê é o do contrato canônico `${CLAUDE_PLUGIN_ROOT}/assets/personas/persona-template.md`, que o `mos-research` segue. O schema abaixo define só a ordem de apresentação da entrega consolidada; ao consolidar, reordene e resuma sem descartar campo obrigatório do contrato.
 
 Entregue o resultado final neste schema, removendo blocos realmente inaplicáveis e explicando a remoção:
 
@@ -159,6 +161,10 @@ Entregue o resultado final neste schema, removendo blocos realmente inaplicávei
 1. [Título, organização ou autor, URL, publicação, acesso e contexto geográfico]
 ````
 
+## Salvar no projeto
+
+Depois de entregar, salve o dossiê em `workspace/brand/avatar.md`, no projeto do usuário, para os outros especialistas usarem como contexto. Se o arquivo já existir, preserve a versão anterior com a data no nome. Se `workspace/brand/perfil.md` existir (criado por `/configurar-marca`), atualize a seção Público com um resumo de 2 ou 3 linhas.
+
 ## Quality Gates (antes de entregar)
 
 - Toda afirmação material aponta para um ID do ledger ou está rotulada como hipótese.
@@ -170,7 +176,7 @@ Entregue o resultado final neste schema, removendo blocos realmente inaplicávei
 - Demografia só entra quando influencia aquisição, uso ou compra.
 - Segmentos secundários exigem diferença acionável; nomes decorativos são removidos.
 - O anti-avatar usa critérios de fit e elegibilidade, sem caricaturas ou discriminação.
-- Aplicar os Quality Gates globais de `skills/marketing-os/SKILL.md`.
+- Aplicar os Quality Gates globais de `${CLAUDE_PLUGIN_ROOT}/skills/marketing-os/SKILL.md`.
 
 ## Por que esse dispatch
 

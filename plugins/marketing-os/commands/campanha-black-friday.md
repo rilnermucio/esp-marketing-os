@@ -1,5 +1,5 @@
 ---
-description: Preset de Black Friday e datas comemorativas. Dispatcha mos-launch sequencial, depois mos-copy + mos-email + mos-ads + mos-social em paralelo, fechando com mos-analytics em tempo real. Clone primário hormozi.
+description: "Campanha de Black Friday ou outra data comercial: oferta, emails, anúncios e social com cronograma de urgência. Use quando o objetivo for vender numa data sazonal. Para saber as datas, use /datas-sazonais."
 argument-hint: "<produto> [--desconto=...] [--clone=hormozi|suby] [--canal=...] [--data=black-friday|cyber-monday|...]"
 ---
 
@@ -109,4 +109,4 @@ Aplicar gates globais do `skills/marketing-os/SKILL.md`:
 
 ## Memory note
 
-Os agents `mos-copy`, `mos-email`, `mos-ads`, `mos-social`, `mos-launch` têm memory project em `.claude/agent-memory/mos-<agent>/`. Sempre mencione no prompt que considere memory de campanhas BF anteriores para evitar reciclar ângulos saturados e para escalar o que já performou bem.
+Os agents `mos-copy`, `mos-email`, `mos-ads`, `mos-social`, `mos-launch` têm memory project em `.claude/agent-memory/marketing-os-mos-<agent>/`. Sempre mencione no prompt que considere memory de campanhas BF anteriores para evitar reciclar ângulos saturados e para escalar o que já performou bem.

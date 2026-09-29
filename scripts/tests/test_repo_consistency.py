@@ -6,6 +6,7 @@ versão defasado, travessão em conteúdo distribuído, regressão de manifesto)
 falha de CI. Se você adicionar um agent/command/clone, atualize os docs ou estes
 testes apontam exatamente o que ficou inconsistente.
 """
+
 from __future__ import annotations
 
 import ast
@@ -23,7 +24,10 @@ CONFORMING_CLONES = [d for d in CLONES if (d / "profile.md").exists()]
 SUBAGENTS = sorted((ROOT / "subagents").glob("*-agent.md"))
 
 # Linhas que DEFINEM a regra do travessão (mostram o caractere de propósito).
-_RULE = re.compile(r"travess|em[- ]dash|`—`|quality gate|gates? univers", re.I)
+# Linha que enuncia a própria regra ("sem travessão (—)"). Até 2026-09 a isenção
+# também cobria qualquer linha com "quality gate", o que deixava passar travessão real.
+_RULE = re.compile(r"travess|em[- ]dash", re.I)
+_INLINE_CODE = re.compile(r"`[^`]*`")
 
 
 def _load(name: str) -> dict:
@@ -57,9 +61,9 @@ def test_readme_counts_match_filesystem():
     }
     for noun, real in expected.items():
         for m in re.finditer(rf"(\d+)\s+{re.escape(noun)}", readme):
-            assert int(m.group(1)) == real, (
-                f"README diz '{m.group(0)}' mas o real é {real} {noun}"
-            )
+            assert (
+                int(m.group(1)) == real
+            ), f"README diz '{m.group(0)}' mas o real é {real} {noun}"
 
 
 # Guard consciente: mudar este número exige atualizar contagens em README,
@@ -94,9 +98,9 @@ def test_every_agent_references_an_existing_tier2_file():
 def test_all_clone_dirs_conform_or_are_documented_exception():
     # 34 clones conformes + 'design' (design-dna-system.md) como exceção conhecida.
     non_conforming = [d.name for d in CLONES if d not in CONFORMING_CLONES]
-    assert non_conforming == ["design"], (
-        f"clones fora do padrão inesperados: {non_conforming}"
-    )
+    assert non_conforming == [
+        "design"
+    ], f"clones fora do padrão inesperados: {non_conforming}"
 
 
 _CLONE_INVENTORY_PATTERNS = (
@@ -114,6 +118,26 @@ _CLONE_INVENTORY_PATTERNS = (
         r"(?:disponíveis|profundos|wired)",
         re.I,
     ),
+    # Inventário em docs de usuário (auditoria 2026-09-28: "35 perfis" escapou).
+    re.compile(
+        r"(?P<count>\d+)\s+perfis\s+(?:de\s+copywriters|disponíveis|em\s+\W?assets/clones)",
+        re.I,
+    ),
+    re.compile(r"(?P<count>\d+)\s+(?:voice\s+clones|clones\s+de\s+voz)\b", re.I),
+)
+
+# Documentos vivos que citam o inventário. Histórico (worklogs, CHANGELOG,
+# planos arquivados) registra o que era verdade na época e fica de fora.
+_HISTORICAL = ("docs/ai-engineering/worklogs/", "docs/superpowers/", "docs/archive/")
+LIVE_DOCS = sorted(
+    p
+    for p in ROOT.rglob("*.md")
+    if not any(
+        part in {"plugins", "workspace", ".git", "node_modules"}
+        for part in p.relative_to(ROOT).parts
+    )
+    and not str(p.relative_to(ROOT)).startswith(_HISTORICAL)
+    and p.name != "CHANGELOG.md"
 )
 
 
@@ -121,7 +145,7 @@ def test_clone_inventory_claims_match_filesystem():
     """Inventory totals in distributed prompts must follow the real clone count."""
     real = len(CONFORMING_CLONES)
     mismatches = []
-    for path in AGENTS + SUBAGENTS:
+    for path in LIVE_DOCS:
         for line_number, line in enumerate(
             path.read_text(encoding="utf-8").splitlines(), 1
         ):
@@ -168,7 +192,9 @@ def test_plugin_manifest_distribution_rules():
 
 def test_marketplace_manifest_rules():
     m = _load("marketplace.json")
-    assert m.get("version") and m.get("description"), "use version/description top-level"
+    assert m.get("version") and m.get(
+        "description"
+    ), "use version/description top-level"
     src = m["plugins"][0]["source"]
     assert src.startswith("./"), f"source deve começar com ./ (achei {src!r})"
 
@@ -206,7 +232,9 @@ def test_memory_agents_match_init_script():
 
 
 def test_every_agent_declares_the_emdash_gate():
-    missing = [a.name for a in AGENTS if not _RULE.search(a.read_text(encoding="utf-8"))]
+    missing = [
+        a.name for a in AGENTS if not _RULE.search(a.read_text(encoding="utf-8"))
+    ]
     assert not missing, f"agents sem o quality gate do travessão: {missing}"
 
 
@@ -217,7 +245,7 @@ def _emdash_violations(path: Path) -> list[int]:
         if ln.lstrip().startswith("```"):
             infence = not infence
             continue
-        if infence or "—" not in ln:
+        if infence or "—" not in _INLINE_CODE.sub("", ln):
             continue
         if ln.lstrip().startswith(">") or _RULE.search(ln):
             continue
@@ -225,7 +253,44 @@ def _emdash_violations(path: Path) -> list[int]:
     return out
 
 
-@pytest.mark.parametrize("path", AGENTS + COMMANDS, ids=lambda p: p.name)
+@pytest.mark.parametrize(
+    "path",
+    AGENTS + COMMANDS + [ROOT / "skills" / "marketing-os" / "SKILL.md"],
+    ids=lambda p: p.name,
+)
 def test_no_emdash_in_distributed_prose(path: Path):
     bad = _emdash_violations(path)
     assert not bad, f"travessão fora de regra/código em {path.name}: linhas {bad}"
+
+
+_SPACED_EN_DASH = re.compile(r"(?<=\s)–(?=\s)")
+
+
+_CONTENT_DIRS = ("agents", "commands", "workflows", "references", "subagents", "assets")
+DISTRIBUTED_MARKDOWN = sorted(
+    p for d in _CONTENT_DIRS for p in (ROOT / d).rglob("*.md")
+) + [ROOT / "skills" / "marketing-os" / "SKILL.md"]
+
+
+def _dash_violations(path: Path) -> list[int]:
+    """Travessão fora de código inline, inclusive em bloco de código e citação.
+
+    É nos exemplos (KBs, clones, templates, prompts) que o agent se inspira; em
+    2026-09-29 eram 1.290 travessões no conteúdo distribuído, quase todos em
+    bloco de código e citação, que o guard da prosa isentava. Para citar o
+    caractere numa regra, use código inline: `—`.
+    """
+    out = []
+    for i, ln in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
+        visible = _INLINE_CODE.sub("", ln)
+        if "—" in visible or _SPACED_EN_DASH.search(visible):
+            out.append(i)
+    return out
+
+
+@pytest.mark.parametrize(
+    "path", DISTRIBUTED_MARKDOWN, ids=lambda p: str(p.relative_to(ROOT))
+)
+def test_no_dash_in_distributed_markdown(path: Path):
+    bad = _dash_violations(path)
+    assert not bad, f"travessão em {path.relative_to(ROOT)}: linhas {bad[:20]}"

@@ -8,7 +8,7 @@
 |---|---|---|
 | Sem travessão `—` | Bloqueante | AI-tell nº 1; denuncia texto gerado |
 | Sem a palavra "brutal" | Bloqueante | AI-tell; substitutos: intenso, forte, pesado, impactante |
-| Sem antítese negação→afirmação ("Não é X / É Y", "Não faça X / Faça Y" e variações) | Bloqueante | AI-tell estrutural; reescrever afirmando direto |
+| Sem antítese negação→afirmação ("Não é X / É Y", "Não é X / São Y", "Não faça X / Faça Y" e variações; "não é X, e sim Y" gera aviso) | Bloqueante | AI-tell estrutural; reescrever afirmando direto |
 | Sem PALAVRAS EM CAPS gratuitas | Gate de prompt | Grita, não persuade |
 | Sem aspas em roteiros/falas; sem aspas de ênfase | Gate de prompt | Fala escrita direto soa humano |
 | Máximo 0-1 emoji (2 em contextos justificados) | Gate de prompt | Poluição visual |
@@ -24,8 +24,8 @@
 | Camada | Arquivo | Natureza | Cobre |
 |---|---|---|---|
 | 1. Gates de prompt | `agents/mos-*.md` (seção Quality Gates), `skills/marketing-os/SKILL.md`, `AGENTS.md` | Instrução ao modelo (depende de obediência) | Todas as regras, incluindo as não-regexáveis (tom, aspas, enquete) |
-| 2a. Hook PreToolUse | Frontmatter dos agents + `scripts/hooks/quality_gate_hook.py` | **Determinística e bloqueante** antes de Write/Edit/MultiEdit | Travessão, "brutal", antíteses, clichês, compliance em arquivos de output |
-| 2b. Hook SubagentStop | `hooks/hooks.json` + `scripts/hooks/quality_gate_hook.py` | **Determinística e bloqueante** na resposta final dos subagents `mos-*` | As mesmas regras, inclusive quando a entrega ocorre apenas no chat |
+| 2a. Hook PreToolUse | `hooks/hooks.json` + `scripts/hooks/quality_gate_hook.py`, só para escritas feitas por agents `mos-*` | **Determinística**: bloqueia travessão (e travessão curto usado como pontuação), "brutal" e variações, antíteses; avisa (additionalContext) clichês, CAPS, excesso de emojis e compliance | Arquivos de output dos agents |
+| 2b. Hook SubagentStop | `hooks/hooks.json` + `scripts/hooks/quality_gate_hook.py` | **Determinística** na resposta final dos subagents `marketing-os:mos-*`: mesmos bloqueios e avisos | As mesmas regras, inclusive quando a entrega ocorre apenas no chat |
 | 3. Lint CLI | `scripts/quality_gate.py` | Determinística, score 0-100 com veredicto (vício de IA capa o score em 60) | Acentos, hook, CTA, legibilidade, formato, hashtags, vícios de IA |
 | Guards da camada | `scripts/tests/test_quality_gate_hook.py`, `scripts/tests/test_quality_gate.py` | Testes | Regexes com casos positivos E negativos |
 
@@ -69,13 +69,14 @@ Ordem obrigatória (worked example real: gate de antítese, jun/2026):
 
 1. **Regex no hook** (`HARD_BLOCK_PATTERNS` ou `WARN_PATTERNS`). Regras de engenharia do regex: span interno exclui pontuação pra não atravessar cláusulas; `find_hard_violations` aplica IGNORECASE em tudo (necessário pro backreference `\1` casar "faça/Faça"); mensagem diz o que fazer, não só o que está errado.
 2. **Testes junto**: casos que disparam E casos parecidos que NÃO podem disparar (falso positivo é regressão de usabilidade).
-3. **Espelhar no CLI** (`AI_TELL_PATTERNS` em `quality_gate.py`) se a regra é de copy.
+3. **CLI herda sozinho**: `quality_gate.py` carrega `HARD_BLOCK_PATTERNS` do hook (fonte única desde 2026-09-28; guard `test_quality_gate.py::test_patterns_are_the_hook_hard_blocks`). Avisos (`WARN_PATTERNS`) ficam só no hook.
 4. **Atualizar as tabelas derivadas**: Gate do(s) agent(s) afetado(s), SKILL.md, AGENTS.md, e a tabela deste documento.
 5. **Rodar a suite completa** (`-m "not smoke"`).
 
 Pegadinhas conhecidas:
 
-- **`SKIP_PATH_PATTERNS` do hook**: commands/, subagents/, docs/, scripts/ e afins são pulados (são tooling/KB, não copy). `agents/` e `skills/` NÃO são pulados. Consequência: exemplo de padrão proibido dentro de um agent deve ser escrito em forma que não casa com o próprio regex (por isso as tabelas usam "Não é X / É Y" com barra em vez de pontuação).
+- **Escopo do hook**: ele só avalia escritas e respostas finais de agents `marketing-os:mos-*`, e pula arquivos dentro da raiz do plugin (exceto `workspace/`), estado em `.claude/` e extensões de código (`SKIP_SUFFIXES`, `SKIP_BASENAMES`). Exemplo de padrão proibido dentro de agent, command ou SKILL continua escrito com barra ("Não é X / É Y"), porque o agent repete o que lê e a resposta final dele passa pelo `SubagentStop`.
 - **`stop_hook_active` no SubagentStop**: nunca bloquear a segunda falha. Esse campo é o freio contra recursão e tem teste dedicado.
+- **Resposta final não recebe aviso solto** (ADR-0008): no `Stop`/`SubagentStop`, `additionalContext` reabre o subagent e ele troca a entrega por uma nota de correção, em laço. Ali só o bloqueio fala com o agent (pedindo a entrega completa) e a violação que sobra vai ao usuário por `systemMessage`.
 - **Nunca enfraquecer um HARD BLOCK pra acomodar um caso**: se apareceu falso positivo legítimo, ajuste o regex com um teste que fixa o caso, não remova a regra.
 - **Regra que só o modelo consegue julgar** (tom, adaptação BR) fica na camada 1 e, futuramente, na camada LLM-graded ([EVALS-STRATEGY.md](EVALS-STRATEGY.md) §4). Não force regex onde não cabe.

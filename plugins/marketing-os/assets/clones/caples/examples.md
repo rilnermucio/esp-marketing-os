@@ -22,9 +22,9 @@ Depois da reunião, o diretor me perguntou onde tinha morado. "Nunca morei fora"
 
 O que mudou?
 
-Três meses antes, comecei o programa English Immersion Pro. Não é um curso. É um sistema de 20 minutos por dia que simula imersão total — sem sair do Brasil.
+Três meses antes, comecei o programa English Immersion Pro. Não é um curso. É um sistema de 20 minutos por dia que simula imersão total, sem sair do Brasil.
 
-Ao contrário dos cursos convencionais que ensinam gramática, esse método treina o seu cérebro a *pensar* em inglês. A diferença é como aprender a nadar: você não estuda como nadar — você nada.
+Ao contrário dos cursos convencionais que ensinam gramática, esse método treina o seu cérebro a *pensar* em inglês. A diferença é como aprender a nadar: você aprende nadando.
 
 Resultado médio dos participantes: fluência conversacional em 90 dias.
 
@@ -40,33 +40,33 @@ Se em 30 dias você não perceber diferença clara na sua fluência, cancele. Se
 
 | Elemento | Técnica Aplicada |
 |----------|-----------------|
-| **Headline** | Estrutura "They Laughed" — vulnerabilidade + reviravolta implícita |
-| **Vulnerabilidade inicial** | "Inglês suficiente para se virar" — o leitor se identifica |
-| **Julgamento dos outros** | "Sorriso condescendente" — cena visual específica |
-| **Resultado concreto** | "Fechamos o contrato" — resultado mensurável |
+| **Headline** | Estrutura "They Laughed": vulnerabilidade + reviravolta implícita |
+| **Vulnerabilidade inicial** | "Inglês suficiente para se virar": o leitor se identifica |
+| **Julgamento dos outros** | "Sorriso condescendente": cena visual específica |
+| **Resultado concreto** | "Fechamos o contrato": resultado mensurável |
 | **Mecanismo** | Explica por que funciona (pensar vs estudar gramática) |
 | **Especificidade** | "20 minutos por dia", "90 dias", "30 dias" |
 | **Teste sem risco** | Versão grátis remove barreira de entrada |
 
 ---
 
-## Exemplo 2: Headline Testing — 5 Versões para o Mesmo Produto
+## Exemplo 2: Headline Testing (5 Versões para o Mesmo Produto)
 
 **Produto:** Curso de investimentos para iniciantes
 
-### Versão A — Interesse Próprio Direto
+### Versão A: Interesse Próprio Direto
 > "Como investir R$500 por mês e acumular R$1 milhão em 20 anos"
 
-### Versão B — Pergunta com Apelo
+### Versão B: Pergunta com Apelo
 > "Você cometeu esses 3 erros ao investir? (A maioria dos brasileiros sim)"
 
-### Versão C — Notícia com Benefício
-> "Novo método permite iniciantes investirem como profissionais — sem perder dinheiro aprendendo"
+### Versão C: Notícia com Benefício
+> "Novo método permite iniciantes investirem como profissionais, sem perder dinheiro aprendendo"
 
-### Versão D — Curiosidade com Resultado
+### Versão D: Curiosidade com Resultado
 > "O que um contador aposentado descobriu sobre investimentos que os bancos não ensinam"
 
-### Versão E — Storytelling
+### Versão E: Storytelling
 > "Em 2019, eu tinha R$0 investido. Hoje tenho R$180.000. Aqui está o que mudou."
 
 ### Análise Comparativa
@@ -81,7 +81,7 @@ Se em 30 dias você não perceber diferença clara na sua fluência, cancele. Se
 
 ### Qual Testar Primeiro?
 
-Segundo a lógica de Caples: **Versão A e B** — ambas com apelo de interesse próprio forte e específico. Teste as duas e deixe os dados decidirem.
+Segundo a lógica de Caples: **Versão A e B**: ambas com apelo de interesse próprio forte e específico. Teste as duas e deixe os dados decidirem.
 
 ---
 
@@ -114,9 +114,9 @@ Gratuita. Sem compromisso. Em 47 minutos.
 
 | Elemento | Técnica Aplicada |
 |----------|-----------------|
-| **Headline** | Interesse próprio direto — "quanto dinheiro você está perdendo?" |
+| **Headline** | Interesse próprio direto: "quanto dinheiro você está perdendo?" |
 | **"Uma em cada três"** | Estatística específica que qualifica o leitor |
-| **Reframe** | "Não é falta de esforço" — remove culpa, aumenta abertura |
+| **Reframe** | "Não é falta de esforço": remove culpa, aumenta abertura |
 | **Lista de 3 benefícios** | Específicos, mensuráveis, concretos |
 | **"Não é uma consultoria"** | Antecipa e derruba objeção |
-| **"47 minutos" (3x)** | Número específico, não "uma hora" — credibilidade |
+| **"47 minutos" (3x)** | Número específico, não "uma hora": credibilidade |

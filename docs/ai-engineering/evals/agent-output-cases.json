@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "descricao": "Golden briefs do eval de output dos especialistas mos-social, mos-email e mos-ads. Cada briefing preenche todos os campos do PRE-FLIGHT do agent, para a geração não parar em perguntas. O perfil de critérios vem de scripts/evals/output-profiles.json. Protocolo de julgamento: quality-anchors.md (par a par, 2 rodadas com ordem invertida). Baseline em agent-output-baseline.md; outputs versionados em baselines/<perfil>/.",
+  "cases": [
+    {
+      "id": "AO-001",
+      "profile": "social",
+      "peca": "Carrossel Instagram (texto dos slides, legenda e enquete)",
+      "briefing": "Crie um carrossel de Instagram para uma torrefação de café especial que vende online. Plataforma: Instagram. Formato: carrossel de 7 a 10 slides, com o texto de cada slide, a legenda e uma sugestão de enquete para os stories. Objetivo: salvamento. Tema: cinco erros comuns ao passar café coado em casa e como corrigir cada um. Pilar: educativo (o perfil ensina a preparar café e vende grãos pelo site). Público: pessoas de 25 a 40 anos que compram café especial no supermercado e querem acertar o preparo em casa. Tom: descontraído e técnico na medida, sem esnobismo de barista. CTA: salvar o post para usar no próximo café."
+    },
+    {
+      "id": "AO-002",
+      "profile": "social",
+      "peca": "Post de texto no LinkedIn com enquete",
+      "briefing": "Escreva um post de LinkedIn para a sócia de uma consultoria de RH que atende pequenas e médias empresas. Plataforma: LinkedIn. Formato: post de texto de até 1.300 caracteres, mais uma sugestão de enquete do LinkedIn com 3 ou 4 opções. Objetivo: conversa nos comentários. Tema: por que funcionário bom pede demissão nos primeiros 90 dias e o que o onboarding tem a ver com isso. Pilar: autoridade (o perfil mostra diagnóstico de gestão de pessoas, a venda da consultoria acontece por conversa). Público: donos e diretores de empresas com 20 a 100 funcionários, sem área de RH estruturada. Tom: direto, com exemplos do dia a dia e sem jargão de RH. CTA: comentar como é o primeiro dia de trabalho na empresa deles."
+    },
+    {
+      "id": "AO-003",
+      "profile": "social",
+      "peca": "Sequência de stories com caixa de perguntas (categoria regulada: psicologia)",
+      "briefing": "Crie uma sequência de stories para o perfil de uma psicóloga clínica que atende adultos on-line com terapia cognitivo-comportamental. Plataforma: Instagram. Formato: sequência de 5 stories, com o texto de cada tela, indicação visual simples e uma caixa de perguntas no último story. Objetivo: conversa (respostas na caixa de perguntas). Tema: a ansiedade de domingo à noite antes da semana de trabalho. Pilar: educativo (psicoeducação, sem atendimento pelo Instagram). Público: adultos de 25 a 40 anos, trabalhadores CLT, que sentem angústia no domingo à noite. Tom: acolhedor e claro, sem promessa de cura e sem diagnóstico. CTA: responder na caixa de perguntas o que mais pesa no domingo à noite."
+    },
+    {
+      "id": "AO-004",
+      "profile": "email",
+      "peca": "Sequência de boas-vindas de 3 emails após isca digital",
+      "briefing": "Escreva a sequência de boas-vindas de uma escola on-line de confeitaria. Produto: curso Confeitaria Lucrativa, 40 aulas sobre produção, precificação e venda de doces por encomenda, R$ 497 ou 12x de R$ 49,70, garantia de 7 dias. Lista: leads que baixaram a isca digital Planilha de Precificação para Confeiteiras pela landing page (opt-in explícito), temperatura fria a morna. Público: mulheres de 28 a 50 anos que vendem doces por encomenda como renda principal ou complementar e têm dúvida se cobram o preço certo. Nível de consciência: consciente do problema (sabem que cobram pouco, não conhecem o método). Objetivo: entregar a planilha, gerar confiança e apresentar o curso no terceiro email. Tom: caloroso e prático, de quem já viveu a cozinha. Entregue: 3 emails (D0, D2, D4), cada um com 2 subject lines, preheader, corpo de 120 a 200 palavras e um CTA."
+    },
+    {
+      "id": "AO-005",
+      "profile": "email",
+      "peca": "Sequência de reengajamento e limpeza de lista inativa",
+      "briefing": "Escreva uma sequência de reengajamento para um e-commerce de moda praia. Produto: loja on-line de biquínis e saídas de praia, ticket médio de R$ 180. Oferta: frete grátis em qualquer compra durante 7 dias, sem cupom de desconto. Lista: 8 mil contatos que não abrem email há mais de 120 dias; entraram por compra anterior ou cadastro no checkout (opt-in registrado). Público: mulheres de 22 a 45 anos que já compraram na loja pelo menos uma vez. Nível de consciência: consciente do produto (conhecem a marca). Objetivo: reativar quem ainda tem interesse e remover da lista quem não reagir, para proteger a entregabilidade. Tom: leve e bem-humorado, sem culpa nem drama. Entregue: 3 emails (reativação, oferta de frete, despedida com botão para continuar recebendo), cada um com 2 subject lines, preheader, corpo curto e CTA, mais a regra de limpeza da lista ao final da sequência."
+    },
+    {
+      "id": "AO-006",
+      "profile": "email",
+      "peca": "Sequência de fim de teste grátis (SaaS B2B)",
+      "briefing": "Escreva a sequência de fim de teste grátis de um software de gestão para clínicas veterinárias. Produto: sistema com agenda, prontuário, estoque e lembrete de vacina por WhatsApp; plano Essencial a R$ 189 por mês, sem fidelidade, com migração de dados gratuita feita pela equipe. Lista: usuários que ativaram o teste grátis de 14 dias (opt-in no cadastro), temperatura quente. Público: donos e gestores de clínicas veterinárias pequenas, com 1 a 4 veterinários. Nível de consciência: consciente do produto (estão testando). Objetivo: converter o teste em assinatura paga. Objeção principal: medo de perder o histórico dos pacientes ao migrar do sistema atual. Tom: consultivo e objetivo, sem pressão artificial. Entregue: 3 emails (3 dias antes do fim, 1 dia antes, 1 dia depois do fim), cada um com 2 subject lines, preheader, corpo de 100 a 180 palavras e um CTA."
+    },
+    {
+      "id": "AO-007",
+      "profile": "ads",
+      "peca": "Estrutura de campanha e 3 criativos no Meta Ads (infoproduto)",
+      "briefing": "Monte a campanha de Meta Ads de um curso de Excel para analistas administrativos. Oferta: curso Excel para o Trabalho, 32 aulas práticas com planilhas do dia a dia de escritório, R$ 297 ou 12x de R$ 30,72, garantia de 7 dias. Orçamento: R$ 3.000 por mês. Plataforma: Meta Ads (Instagram e Facebook). Objetivo: vendas (compra na página do curso). Público: profissionais de 22 a 40 anos em cargos administrativos que usam Excel no trabalho e querem crescer na empresa. Nível de consciência: consciente do problema (sabem que o Excel fraco atrasa o trabalho, não conhecem o curso). Criativo: vídeos curtos do professor gravados no celular e prints de planilhas antes e depois de organizadas. Conta: pixel com 6 meses de histórico e cerca de 400 compras registradas. Tom: prático e encorajador, sem promessa de salário. Entregue: estrutura da campanha (campanhas, conjuntos e divisão do orçamento) e 3 criativos com primary text, headline, descrição e CTA."
+    },
+    {
+      "id": "AO-008",
+      "profile": "ads",
+      "peca": "Google Ads de pesquisa para serviço local",
+      "briefing": "Monte uma campanha de Google Ads para uma desentupidora de Belo Horizonte. Oferta: desentupimento de pia, vaso, ralo e esgoto com atendimento em até 1 hora, 24 horas por dia, ticket médio de R$ 250, orçamento sem compromisso pelo WhatsApp. Orçamento: R$ 1.500 por mês. Plataforma: Google Ads (rede de pesquisa). Objetivo: leads (ligação e clique para WhatsApp). Público: moradores e síndicos de Belo Horizonte e região metropolitana com problema urgente. Nível de consciência: consciente do serviço (buscam ativamente por desentupidora). Criativo: anúncios responsivos de pesquisa e recursos (extensões) de chamada, local e sitelinks. Conta: nova, sem histórico de conversão. Tom: direto e confiável, com foco em rapidez e preço claro. Entregue: estrutura (campanhas, grupos de anúncios, palavras-chave com tipo de correspondência e lista de negativas), 2 anúncios responsivos com 15 títulos e 4 descrições cada e os recursos sugeridos."
+    },
+    {
+      "id": "AO-009",
+      "profile": "ads",
+      "peca": "Meta Ads de clínica odontológica (categoria regulada: odontologia)",
+      "briefing": "Monte uma campanha de Meta Ads para uma clínica odontológica de Curitiba divulgar clareamento dental. Oferta: avaliação gratuita para clareamento dental de consultório, com o preço informado apenas na avaliação. Orçamento: R$ 2.000 por mês. Plataforma: Meta Ads (Instagram e Facebook). Objetivo: leads (agendamento da avaliação pelo WhatsApp). Público: homens e mulheres de 25 a 45 anos num raio de 8 km da clínica. Nível de consciência: consciente da solução (sabem que clareamento existe, comparam clínicas). Criativo: fotos do consultório e da equipe e um vídeo curto do dentista responsável explicando o procedimento; a clínica não quer usar fotos de antes e depois. Conta: pixel instalado há 2 meses, com poucas conversões registradas. Tom: confiável e acolhedor, sem sensacionalismo. Entregue: estrutura da campanha, 3 criativos com primary text, headline e CTA, e um checklist de cuidados com as regras de publicidade da categoria."
+    }
+  ]
+}

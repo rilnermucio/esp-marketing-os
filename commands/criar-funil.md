@@ -1,11 +1,11 @@
 ---
-description: Create a complete sales funnel strategy (TOFU/MOFU/BOFU) with content plan, email sequences, conversion optimization. Dispatches mos-funnel (with mos-research and mos-copy when needed).
+description: "Desenha a estratégia de funil de vendas (topo, meio e fundo) com conteúdo, emails e pontos de conversão. Use quando pedirem funil ou jornada do cliente. Funil de lançamento de curso: /criar-infoproduto."
 argument-hint: "<funnel type and goal, e.g., 'lead generation funnel for SaaS' or 'course launch funnel'>"
 ---
 
 # /criar-funil: Funil de Vendas
 
-Cria estratégia completa de funil orquestrando subagents conforme `skills/marketing-os/SKILL.md`.
+Cria estratégia completa de funil orquestrando subagents conforme `${CLAUDE_PLUGIN_ROOT}/skills/marketing-os/SKILL.md`.
 
 ## Required inputs (ask if missing)
 
@@ -21,16 +21,16 @@ Cria estratégia completa de funil orquestrando subagents conforme `skills/marke
 
 **Dispatch simples:**
 ```
-- Agent(subagent_type: "mos-funnel", prompt: "Mapear funil [tipo] para [produto/avatar/ticket]: stages TOFU/MOFU/BOFU, conteúdo por estágio, taxas benchmark, pontos de queda, otimizações. Tráfego: [origem]. Considere memory existente do cliente neste projeto.")
+- Agent(subagent_type: "marketing-os:mos-funnel", prompt: "Mapear funil [tipo] para [produto/avatar/ticket]: stages TOFU/MOFU/BOFU, conteúdo por estágio, taxas benchmark, pontos de queda, otimizações. Tráfego: [origem]. Considere memory existente do cliente neste projeto.")
 ```
 
 ### Caso B: Cliente novo OU nicho não validado
 
 **Dispatch paralelo (single message):**
 ```
-- Agent(subagent_type: "mos-research", prompt: "Validar [nicho/avatar]: tamanho do mercado, concorrentes ativos, ticket médio praticado, dores não atendidas, fontes de tráfego comuns. Considere memory existente do cliente neste projeto. Retorne research brief.")
+- Agent(subagent_type: "marketing-os:mos-research", prompt: "Validar [nicho/avatar]: tamanho do mercado, concorrentes ativos, ticket médio praticado, dores não atendidas, fontes de tráfego comuns. Considere memory existente do cliente neste projeto. Retorne research brief.")
 
-- Agent(subagent_type: "mos-funnel", prompt: "Mapear funil [tipo]: stages, conteúdo por estágio, taxas benchmark, usar research brief da pesquisa paralela. Considere memory existente do cliente neste projeto.")
+- Agent(subagent_type: "marketing-os:mos-funnel", prompt: "Mapear funil [tipo]: stages, conteúdo por estágio, taxas benchmark, usar research brief da pesquisa paralela. Considere memory existente do cliente neste projeto.")
 ```
 
 ### Caso C: Funil de webinar
@@ -69,7 +69,7 @@ Cria estratégia completa de funil orquestrando subagents conforme `skills/marke
 
 ## Quality Gates (antes de entregar)
 
-Aplicar gates globais do `skills/marketing-os/SKILL.md`:
+Aplicar gates globais do `${CLAUDE_PLUGIN_ROOT}/skills/marketing-os/SKILL.md`:
 - Sem `—`, sem "brutal", sem CAPS gratuito
 - Acentuação PT-BR correta
 - Compliance regulatório por nicho (saúde/finanças/suplementos)

@@ -12,6 +12,10 @@
 | Falha sem mensagem útil | Passo 1 (extrair o erro real) |
 | Install Codex falha | Passo 4 |
 
+## Passo 0: qual cópia está ativa
+
+`python3 scripts/mos.py install doctor` lista todas as cópias do plugin na máquina (cache, sincronizadas da conta claude.ai, registros de instalação) e avisa versão atrasada. Cópia sincronizada antiga é causa conhecida de "funciona no terminal, não no desktop" (F-DIST-07).
+
 ## Passo 1: extrair o erro real (macOS)
 
 ```bash

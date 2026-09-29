@@ -1,6 +1,6 @@
-# Design DNA System — 25 Designers Mestres
+# Design DNA System: 25 Designers Mestres
 
-> Sistema paralelo aos 35 voice clones (copy/voice). Aqui catalogamos o DNA visual de 25 designers mestres com profile + visualDNA + frameworks + examples. Use quando briefing pedir "estilo X" ou "tom visual Y".
+> Sistema paralelo aos voice clones de copy (`assets/clones/`). Aqui catalogamos o DNA visual de 25 designers mestres com profile + visualDNA + frameworks + examples. Use quando briefing pedir "estilo X" ou "tom visual Y".
 
 ## Como usar
 
@@ -86,7 +86,7 @@
 - Vermelho signature (Pantone 485)
 - Preto absoluto
 - Branco
-- Pequenos accents (azul, amarelo) — usados criteriosamente
+- Pequenos accents (azul, amarelo): usados criteriosamente
 
 ### Tipografia
 - **Helvetica** (preferida acima de tudo)
@@ -338,7 +338,7 @@
 **Famoso por**: Sagmeister & Walsh studio, Lou Reed albums, AIGA Detroit poster, "The Happy Show" (2012), TED talks. Designer mais provocativo da era moderna.
 
 ### Visual DNA
-- **Filosofia**: "Style = Fart" — estilo passa, substance fica
+- **Filosofia**: "Style = Fart", estilo passa, substance fica
 - **Estética**: Conceitual, hand-made, experimental
 - **Sensação**: Provocativo, intelectual, vulneravel
 
@@ -830,7 +830,7 @@
 - Premium feel via paleta restrita
 
 ### Tipografia
-- **Söhne** (Klim) — signature
+- **Söhne** (Klim): signature
 - **Inter** (UI)
 - **Tiempos** (editorial)
 - Hierarquia subtle
@@ -1077,7 +1077,7 @@ EXEMPLOS:
 
 ---
 
-*Design DNA System v1.0 — Maio 2026*
+*Design DNA System v1.0: Maio 2026*
 
 *25 Designers profiled | 12 Arquétipo→Designer mappings | DNA híbrido protocol*
 

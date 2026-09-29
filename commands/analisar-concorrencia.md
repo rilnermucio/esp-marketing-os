@@ -1,5 +1,5 @@
 ---
-description: Analyze competitors extracting positioning, content strategy, audience insights, gaps and SWOT. Dispatches mos-research + mos-brand in parallel, with optional mos-copy handoff for replicable hooks/CTAs.
+description: "Mapeia concorrentes: posicionamento, estratégia de conteúdo, público, lacunas e SWOT. Use quando pedirem análise de concorrência ou benchmark de mercado. Para copiar e adaptar a estratégia de alguém, use /clonar-estrategia."
 argument-hint: "<competitors or niche, e.g., '@competitor1 @competitor2' or 'fitness coaching niche'>"
 ---
 
@@ -21,9 +21,9 @@ Análise multi-dimensional de concorrentes despachando subagents em paralelo. N�
 Em **um único message**, dispare os 2 agents-base em paralelo:
 
 ```
-- Agent(subagent_type: "mos-research", prompt: "Análise competitiva de [lista de concorrentes ou nicho] em [plataformas]. Profundidade: [profundidade]. Para cada concorrente: overview (followers, post freq, engajamento médio), métricas (engagement rate, comment ratio, save rate, share rate, growth rate), top performing content (3-5 posts/vídeos com hipótese de por que funcionou), audience analysis (perfis nos comentários, dores, perguntas, sentimento), content pillars e formatos dominantes. Considere memory existente do cliente neste projeto.")
+- Agent(subagent_type: "marketing-os:mos-research", prompt: "Análise competitiva de [lista de concorrentes ou nicho] em [plataformas]. Profundidade: [profundidade]. Para cada concorrente: overview (followers, post freq, engajamento médio), métricas (engagement rate, comment ratio, save rate, share rate, growth rate), top performing content (3-5 posts/vídeos com hipótese de por que funcionou), audience analysis (perfis nos comentários, dores, perguntas, sentimento), content pillars e formatos dominantes. Considere memory existente do cliente neste projeto.")
 
-- Agent(subagent_type: "mos-brand", prompt: "Análise de positioning de [lista de concorrentes]: UVP, arquétipo, voz/tom, identidade visual, sinais de credibilidade, faixa de preço/posicionamento, diferenciação aparente. Compare com a marca do user [contexto da marca, se fornecido]. Entregue framework SWOT por concorrente + matriz comparativa lado a lado. Considere memory existente do cliente neste projeto.")
+- Agent(subagent_type: "marketing-os:mos-brand", prompt: "Análise de positioning de [lista de concorrentes]: UVP, arquétipo, voz/tom, identidade visual, sinais de credibilidade, faixa de preço/posicionamento, diferenciação aparente. Compare com a marca do user [contexto da marca, se fornecido]. Entregue framework SWOT por concorrente + matriz comparativa lado a lado. Considere memory existente do cliente neste projeto.")
 ```
 
 ### Handoff opcional (sequencial, depois das duas calls acima)
@@ -32,7 +32,7 @@ Se o user pediu hooks/CTAs replicáveis:
 
 ```
 Passo 3 (depois de receber mos-research + mos-brand):
-Agent(subagent_type: "mos-copy", prompt: "A partir do output [colar trechos relevantes de mos-research sobre top posts + mos-brand sobre voz dos concorrentes], extraia padrões de copy replicáveis: 5-10 hooks com variações adaptadas pra marca do user, 5-10 CTAs catalogados por intenção, 3-5 estruturas de copy comuns. Inclua nota de o-que-replicar / o-que-evitar / oportunidade de diferenciação. Aplique quality gates globais. Considere memory existente do cliente neste projeto.")
+Agent(subagent_type: "marketing-os:mos-copy", prompt: "A partir do output [colar trechos relevantes de mos-research sobre top posts + mos-brand sobre voz dos concorrentes], extraia padrões de copy replicáveis: 5-10 hooks com variações adaptadas pra marca do user, 5-10 CTAs catalogados por intenção, 3-5 estruturas de copy comuns. Inclua nota de o-que-replicar / o-que-evitar / oportunidade de diferenciação. Aplique quality gates globais. Considere memory existente do cliente neste projeto.")
 ```
 
 ## Consolidação
@@ -91,7 +91,7 @@ Concorrentes analisados: [N] | Plataformas: [lista] | Data: [data]
 
 ## Quality Gates (antes de entregar)
 
-Aplicar gates globais do `skills/marketing-os/SKILL.md`:
+Aplicar gates globais do `${CLAUDE_PLUGIN_ROOT}/skills/marketing-os/SKILL.md`:
 - Sem `—`, sem "brutal", sem CAPS gratuito, sem aspas em falas
 - Acentuação PT-BR correta
 - Métricas citadas devem ser verificáveis (CONFIRMADO via fonte primária ou PROVÁVEL com indicação)

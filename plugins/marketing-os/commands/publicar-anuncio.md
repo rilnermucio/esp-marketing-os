@@ -1,11 +1,11 @@
 ---
-description: Publish ad campaigns to Meta Ads. Dispatches mos-ads first to validate copy, targeting, and budget against quality gates, then executes Meta Ads MCP tools to launch.
+description: "Publica campanha no Meta Ads depois de validar copy, segmentação e orçamento, sempre com confirmação humana. Use quando pedirem para subir anúncios no Meta. Só criar o anúncio: /criar-anuncio."
 argument-hint: "<campaign type and goal, e.g., 'lead generation campaign for course launch' or 'conversion campaign for product'>"
 ---
 
 # /publicar-anuncio: Publicar Campanha Meta Ads
 
-Utility de publicação. **Sempre** dispatcha `mos-ads` antes de tocar no Meta Ads MCP — copy não validada vai pro ar com travessão, "brutal", CAPS, ou targeting frouxo. O dispatch protege a conta.
+Utility de publicação. **Sempre** dispatcha `mos-ads` antes de tocar no Meta Ads MCP: copy não validada vai pro ar com travessão, "brutal", CAPS, ou targeting frouxo. O dispatch protege a conta.
 
 > Requires: Meta Ads MCP integration ativa (Especializei). Ver `CONNECTORS.md`.
 
@@ -37,7 +37,7 @@ INPUTS:
 - Landing page: [URL]
 
 TAREFAS:
-1. Aplicar quality gates globais na copy (sem '—', sem 'brutal', sem CAPS, sem aspas em falas, máx 1-2 emojis, PT-BR correto)
+1. Aplicar quality gates globais na copy (sem `—`, sem 'brutal', sem CAPS, sem aspas em falas, máx 1-2 emojis, PT-BR correto)
 2. Refinar targeting (sugerir interests/behaviors adicionais ou cortes; flag se audiência muito ampla/estreita)
 3. Sancionar budget vs objetivo (CPL/CPA estimado para o nicho; flag se subdimensionado)
 4. Gerar 2-3 variações de headline + 2 variações de primary text pra A/B
@@ -49,7 +49,7 @@ OUTPUT esperado:
 - Targeting refinado
 - Budget ajustado (com justificativa se mudou)
 - Warnings (compliance, audiência, criativos faltando)
-- Memory check: considere memory existente do cliente em `.claude/agent-memory/mos-ads/` se houver.")
+- Memory check: considere memory existente do cliente em `.claude/agent-memory/marketing-os-mos-ads/` se houver.")
 ```
 
 **Se mos-ads retornar warnings críticos** (compliance, copy reprovada nos gates, audiência inviável), **pare** e retorne ao usuário antes de publicar. Não force publicação de copy ruim.

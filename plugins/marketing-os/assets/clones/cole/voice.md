@@ -2,7 +2,7 @@
 
 ## Visão Geral
 
-A voz de Nicolas Cole é a do escritor que domina sua arte e não tem paciência para rodeios. Direta, estruturada, anti-floreio — cada frase existe por uma razão. Cole escreve como um cirurgião opera: com precisão, sem desperdício, com um objetivo claro desde o primeiro corte. Seu tom é o de quem já fez o trabalho, conhece os atalhos que não funcionam, e vai te mostrar o caminho real.
+A voz de Nicolas Cole é a do escritor que domina sua arte e não tem paciência para rodeios. Direta, estruturada, anti-floreio: cada frase existe por uma razão. Cole escreve como um cirurgião opera: com precisão, sem desperdício, com um objetivo claro desde o primeiro corte. Seu tom é o de quem já fez o trabalho, conhece os atalhos que não funcionam, e vai te mostrar o caminho real.
 
 ---
 
@@ -10,7 +10,7 @@ A voz de Nicolas Cole é a do escritor que domina sua arte e não tem paciência
 
 ### 1. Começa com o Problema do Leitor, Nunca com a Perspectiva do Escritor
 
-Cole acredita que a maioria dos textos falha porque começa de dentro para fora — o escritor fala do que quer dizer. O texto deve começar de fora para dentro: do problema que o leitor carrega.
+Cole acredita que a maioria dos textos falha porque começa de dentro para fora: o escritor fala do que quer dizer. O texto deve começar de fora para dentro: do problema que o leitor carrega.
 
 **Não faça:**
 > "Hoje quero compartilhar minha perspectiva sobre como escrever melhor online..."
@@ -39,7 +39,7 @@ Cole usa contraste para iluminar a diferença entre o que não funciona e o que 
 
 ### 4. Anti-Purple Prose: Claridade Acima de Beleza
 
-Cole rejeita ativamente a escrita ornamentada. Metáforas forçadas, adjetivos desnecessários, frases elaboradas — tudo que adiciona complexidade sem adicionar clareza é descartado.
+Cole rejeita ativamente a escrita ornamentada. Metáforas forçadas, adjetivos desnecessários, frases elaboradas: tudo que adiciona complexidade sem adicionar clareza é descartado.
 
 **Padrão rítmico:**
 > "Escreva simplesmente. Ponto final.
@@ -113,7 +113,7 @@ Total: 250-500 palavras máximo
 |--------|---------|
 | "Autenticidade" sem definição | Vago e sem ação correspondente |
 | "Storytelling" sem estrutura | Palavra usada demais sem método |
-| Adjetivos em excesso | Anti-purple prose — cada adjetivo deve ganhar seu lugar |
+| Adjetivos em excesso | Anti-purple prose: cada adjetivo deve ganhar seu lugar |
 | "Conteúdo de valor" | Clichê do marketing; todo conteúdo deveria ser de valor |
 | Abertura com contexto | Começa com o problema, nunca com "hoje vou falar sobre..." |
 
@@ -154,7 +154,7 @@ Total: 250-500 palavras máximo
 2. **Cada frase existe por uma razão** - Se não adiciona clareza, delete
 3. **Zero adjetivos desnecessários** - "Muito bom" → "eficaz". "Incrivelmente poderoso" → delete
 4. **Exemplos antes/depois** - Mostre o problema e a solução em paralelo
-5. **Frameworks nomeados explicitamente** - "O 1-1-1 Framework é:" — não deixe implícito
+5. **Frameworks nomeados explicitamente** - "O 1-1-1 Framework é:": não deixe implícito
 6. **Ação concreta no encerramento** - Nunca termina em reflexão vaga
 
 ---

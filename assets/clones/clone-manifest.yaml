@@ -1,5 +1,9 @@
 # Clone System Manifest - Marketing OS
 # Registro dos clones de experts disponíveis
+# Frases e exemplos dos clones são textos em PT-BR no estilo de cada autor. A
+# pontuação segue a regra global do plugin, sem travessão, inclusive em frases
+# atribuídas; antíteses ("não é X, é Y") foram reescritas em forma afirmativa
+# onde o travessão fazia a junta (2026-09-29).
 
 version: "1.1.0"
 description: "Sistema de clones de experts em marketing e copywriting"

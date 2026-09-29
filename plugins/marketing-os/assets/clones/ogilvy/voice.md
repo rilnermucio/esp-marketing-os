@@ -72,7 +72,7 @@ Ogilvy transmite expertise sem parecer presunçoso. Ele deixa os fatos falarem.
     80 centavos de cada real investido."
 
 3. INSIGHT: Revela a implicação não óbvia
-   "Portanto, a headline não é apenas importante — ela é praticamente
+   "Portanto, a headline é praticamente
     o único elemento que a maioria da sua audiência verá."
 
 4. AÇÃO: Sugere o que fazer com essa informação

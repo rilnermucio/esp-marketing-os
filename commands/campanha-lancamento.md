@@ -1,5 +1,5 @@
 ---
-description: Preset de lançamento. Dispatcha mos-research + mos-launch + mos-funnel em paralelo, depois mos-copy + mos-storytelling + mos-social + mos-email, fechando com mos-ads + mos-design + mos-analytics. Clone primário brunson.
+description: "Campanha completa de lançamento: pesquisa, modelo (PLF, semente, relâmpago), funil, copy, emails, anúncios, design e métricas. Use para lançar um produto com campanha inteira. Só estruturar o produto: /criar-infoproduto."
 argument-hint: "<produto> [--preco=...] [--clone=brunson|suby|hormozi] [--canal=...] [--budget=...] [--nicho=...]"
 ---
 
@@ -20,33 +20,33 @@ argument-hint: "<produto> [--preco=...] [--clone=brunson|suby|hormozi] [--canal=
 **Fase 1 (paralelo, single message):**
 
 ```
-- Agent(subagent_type: "mos-research", prompt: "Validação pré-lançamento de [produto] pra [avatar/nicho]: tamanho do nicho, concorrência ativa, ticket médio praticado, dores não atendidas, ângulos de oferta com tração. Considere memory existente.")
+- Agent(subagent_type: "marketing-os:mos-research", prompt: "Validação pré-lançamento de [produto] pra [avatar/nicho]: tamanho do nicho, concorrência ativa, ticket médio praticado, dores não atendidas, ângulos de oferta com tração. Considere memory existente.")
 
-- Agent(subagent_type: "mos-launch", prompt: "Estratégia de lançamento pra [produto], ticket [preço]: escolher modelo (PLF / semente / relâmpago / perpétuo) baseado em nicho [nicho] e tamanho da lista. Definir cronograma -2sem → +5dias, pitch timing, gatilhos de escassez.")
+- Agent(subagent_type: "marketing-os:mos-launch", prompt: "Estratégia de lançamento pra [produto], ticket [preço]: escolher modelo (PLF / semente / relâmpago / perpétuo) baseado em nicho [nicho] e tamanho da lista. Definir cronograma -2sem → +5dias, pitch timing, gatilhos de escassez.")
 
-- Agent(subagent_type: "mos-funnel", prompt: "Funil de lançamento pra [produto]: TOFU (aquecimento orgânico + ads) → MOFU (lead magnet/CPL/webinar) → BOFU (carta de vendas + carrinho). Pontos de queda esperados e contramedidas.")
+- Agent(subagent_type: "marketing-os:mos-funnel", prompt: "Funil de lançamento pra [produto]: TOFU (aquecimento orgânico + ads) → MOFU (lead magnet/CPL/webinar) → BOFU (carta de vendas + carrinho). Pontos de queda esperados e contramedidas.")
 ```
 
 **Fase 2 (paralelo, depende da estratégia da Fase 1):**
 
 ```
-- Agent(subagent_type: "mos-copy", prompt: "Copy de lançamento clone=brunson: headline da página, big idea, mecanismo único, anti-avatar, stack value, garantia, FAQ. Usando posicionamento da Fase 1: [colar].")
+- Agent(subagent_type: "marketing-os:mos-copy", prompt: "Copy de lançamento clone=brunson: headline da página, big idea, mecanismo único, anti-avatar, stack value, garantia, FAQ. Usando posicionamento da Fase 1: [colar].")
 
-- Agent(subagent_type: "mos-storytelling", prompt: "Narrativa da jornada do produto: arco do criador → problema dor → descoberta → solução. Hero's journey aplicado ao pitch de lançamento.")
+- Agent(subagent_type: "marketing-os:mos-storytelling", prompt: "Narrativa da jornada do produto: arco do criador → problema dor → descoberta → solução. Hero's journey aplicado ao pitch de lançamento.")
 
-- Agent(subagent_type: "mos-social", prompt: "Sequência de posts de aquecimento (5-7 posts): semana -2 problema, semana -1 solução parcial, dia 0 abertura. Plataforma [Instagram/LinkedIn/etc]. Aplicar quality gates + enquete.")
+- Agent(subagent_type: "marketing-os:mos-social", prompt: "Sequência de posts de aquecimento (5-7 posts): semana -2 problema, semana -1 solução parcial, dia 0 abertura. Plataforma [Instagram/LinkedIn/etc]. Aplicar quality gates + enquete.")
 
-- Agent(subagent_type: "mos-email", prompt: "Sequência completa de lançamento: 5 emails de pré-aquecimento + email abertura carrinho + 3 emails de urgência/prova/fechamento + email pós-fechamento. Considere memory do cliente.")
+- Agent(subagent_type: "marketing-os:mos-email", prompt: "Sequência completa de lançamento: 5 emails de pré-aquecimento + email abertura carrinho + 3 emails de urgência/prova/fechamento + email pós-fechamento. Considere memory do cliente.")
 ```
 
 **Fase 3 (sequencial, depende da copy/criativo da Fase 2):**
 
 ```
-- Agent(subagent_type: "mos-ads", prompt: "Campanhas de tráfego pra cada fase do lançamento: pré (lista quente), durante (conversão), retargeting pós. Budget [valor]. Audiências quentes/frias/lookalikes.")
+- Agent(subagent_type: "marketing-os:mos-ads", prompt: "Campanhas de tráfego pra cada fase do lançamento: pré (lista quente), durante (conversão), retargeting pós. Budget [valor]. Audiências quentes/frias/lookalikes.")
 
-- Agent(subagent_type: "mos-design", prompt: "Assets visuais da campanha: identidade do lançamento, paleta, capa do produto, mockups, criativos de ads, banners de página. Coerência com brand existente.")
+- Agent(subagent_type: "marketing-os:mos-design", prompt: "Assets visuais da campanha: identidade do lançamento, paleta, capa do produto, mockups, criativos de ads, banners de página. Coerência com brand existente.")
 
-- Agent(subagent_type: "mos-analytics", prompt: "Setup de tracking: pixels, UTMs, eventos de conversão (lead, view-content, add-to-cart, purchase), KPIs do lançamento, dashboard de monitoramento.")
+- Agent(subagent_type: "marketing-os:mos-analytics", prompt: "Setup de tracking: pixels, UTMs, eventos de conversão (lead, view-content, add-to-cart, purchase), KPIs do lançamento, dashboard de monitoramento.")
 ```
 
 ## Cronograma default
@@ -104,11 +104,11 @@ PÓS-LANÇAMENTO:
 
 ## Quality Gates (antes de entregar)
 
-Aplicar gates globais do `skills/marketing-os/SKILL.md`:
+Aplicar gates globais do `${CLAUDE_PLUGIN_ROOT}/skills/marketing-os/SKILL.md`:
 - Sem `—`, sem "brutal", sem CAPS gratuito
 - Acentuação PT-BR correta
 - Compliance regulatório se nicho saúde/finanças/suplementos
 
 ## Memory note
 
-Os agents `mos-copy`, `mos-email`, `mos-ads`, `mos-social`, `mos-funnel`, `mos-launch` têm memory project em `.claude/agent-memory/mos-<agent>/`. Sempre mencione no prompt que considere memory existente do cliente para evitar repetir hooks usados, manter consistência com campanhas passadas e respeitar restrições de compliance previamente registradas.
+Os agents `mos-copy`, `mos-email`, `mos-ads`, `mos-social`, `mos-funnel`, `mos-launch` têm memory project em `.claude/agent-memory/marketing-os-mos-<agent>/`. Sempre mencione no prompt que considere memory existente do cliente para evitar repetir hooks usados, manter consistência com campanhas passadas e respeitar restrições de compliance previamente registradas.

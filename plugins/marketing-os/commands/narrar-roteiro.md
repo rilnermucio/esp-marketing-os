@@ -1,5 +1,5 @@
 ---
-description: Transforma um roteiro (podcast, VSL, Reels, spot) em áudio narrado PT-BR. Prepara o texto via mos-audio (limpeza + gate de timing + voz) e gera o áudio com TTS local. Dispara em "narrar", "gerar áudio", "voz", "TTS", "locução", "narração", "podcast em áudio", "VSL narrada".
+description: "Transforma um roteiro (podcast, VSL, Reels, spot) em áudio narrado em PT-BR, com o texto preparado para fala. Use quando pedirem narração, locução, voz ou áudio de um roteiro."
 argument-hint: "<roteiro ou arquivo> [tom: energetico|calmo|autoridade|amigavel]"
 ---
 

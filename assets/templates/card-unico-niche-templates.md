@@ -103,7 +103,7 @@ ESPECIFICAÇÕES:
 
 **Caption:**
 ```
-[HOOK] [Número]% — esse número deveria preocupar todo [profissional/empreendedor].
+[HOOK] [Número]%: esse número deveria preocupar todo [profissional/empreendedor].
 
 [CONTEXTO] Segundo [fonte], [explicação do dado].
 
@@ -215,7 +215,7 @@ A saída? [Ação específica que resolve]
 
 **Caption:**
 ```
-[HOOK] R$1.000 investidos: [Opção A] vs [Opção B] — qual rende mais?
+[HOOK] R$1.000 investidos: [Opção A] vs [Opção B], qual rende mais?
 
 [EXPLICAÇÃO OPÇÃO A]
 [Nome]: [taxa/característica]
@@ -404,7 +404,7 @@ O que fazer então?
 │     "[Citação impactante          │
 │      em 1-2 linhas]"               │
 │                                     │
-│     — [Autor ou "Desconhecido"]    │
+│: [Autor ou "Desconhecido"]    │
 │                                     │
 │     @seuperfil                      │
 │                                     │
@@ -528,7 +528,7 @@ Se você quer começar:
 
 **Caption:**
 ```
-[HOOK] [Resultado impactante] — e a lição custou caro.
+[HOOK] [Resultado impactante], e a lição custou caro.
 
 [CONTEXTO] Era [ano/situação]. Eu estava [contexto do negócio].
 

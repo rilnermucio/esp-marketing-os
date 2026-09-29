@@ -1,5 +1,5 @@
 ---
-description: Shortlist de creators com fit score e rascunhos de outreach. Dispatch sequencial mos-research → mos-partnerships; Gmail create_draft quando MCP disponível (nunca send).
+description: "Encontra creators com fit para parceria e prepara rascunhos de outreach, sem enviar nada. Use quando pedirem influenciadores, creators ou parcerias."
 argument-hint: "<nicho + o que a marca oferece/espera, ex: 'skincare, permuta + fee micro, reels 60s'>"
 ---
 
@@ -32,15 +32,15 @@ Briefing recebido
 ## Dispatch Sequencial (padrão)
 
 ```
-Passo 1: Agent(subagent_type: "mos-research", prompt: "Research para prospectar creators de [nicho]. Objetivo: shortlist de parceria (não pesquisa genérica). Entregue: creators/concorrentes que já fazem publi no nicho, hashtags e perfis referência, faixas de audiência verificáveis, sinais de engajamento real vs inflado. Use WebSearch e, se APIFY_TOKEN disponível, apify_instagram/apify_tiktok. Não invente números; marque estimativas. Retorne research brief compacto pra partnerships.")
+Passo 1: Agent(subagent_type: "marketing-os:mos-research", prompt: "Research para prospectar creators de [nicho]. Objetivo: shortlist de parceria (não pesquisa genérica). Entregue: creators/concorrentes que já fazem publi no nicho, hashtags e perfis referência, faixas de audiência verificáveis, sinais de engajamento real vs inflado. Use WebSearch e, se APIFY_TOKEN disponível, apify_instagram/apify_tiktok. Não invente números; marque estimativas. Retorne research brief compacto pra partnerships.")
 
-Passo 2: Agent(subagent_type: "mos-partnerships", prompt: "Monte shortlist e outreach. Nicho: [nicho]. Oferta da marca: [oferece + espera]. Critérios de fit: [critérios]. Research do passo anterior: [brief]. Quantidade: [N] creators. Para cada um: fit score 1-10 com justificativa verificável, modelo de parceria sugerido, 2-3 ângulos de primeira mensagem + follow-up. Red team win-win, audiência real, risco de marca. Se MCP Gmail disponível: create_draft por creator (NUNCA send). Senão: textos prontos. Modo: RASCUNHO ONLY. Aplicar quality gates.")
+Passo 2: Agent(subagent_type: "marketing-os:mos-partnerships", prompt: "Monte shortlist e outreach. Nicho: [nicho]. Oferta da marca: [oferece + espera]. Critérios de fit: [critérios]. Research do passo anterior: [brief]. Quantidade: [N] creators. Para cada um: fit score 1-10 com justificativa verificável, modelo de parceria sugerido, 2-3 ângulos de primeira mensagem + follow-up. Red team win-win, audiência real, risco de marca. Se MCP Gmail disponível: create_draft por creator (NUNCA send). Senão: textos prontos. Modo: RASCUNHO ONLY. Aplicar quality gates.")
 ```
 
 ## Dispatch Simples (lista já fornecida)
 
 ```
-Agent(subagent_type: "mos-partnerships", prompt: "Avalie fit e redija outreach para: [lista de @handles]. Oferta: [oferece + espera]. Entregue shortlist com fit score, modelos sugeridos e rascunhos (Gmail create_draft se MCP, senão texto). Nunca enviar. Aplicar quality gates.")
+Agent(subagent_type: "marketing-os:mos-partnerships", prompt: "Avalie fit e redija outreach para: [lista de @handles]. Oferta: [oferece + espera]. Entregue shortlist com fit score, modelos sugeridos e rascunhos (Gmail create_draft se MCP, senão texto). Nunca enviar. Aplicar quality gates.")
 ```
 
 ## Consolidação
@@ -71,7 +71,7 @@ Entregue ao usuário:
 
 ## Quality Gates (antes de entregar)
 
-Aplicar gates globais do `skills/marketing-os/SKILL.md` + gates do mos-partnerships:
+Aplicar gates globais do `${CLAUDE_PLUGIN_ROOT}/skills/marketing-os/SKILL.md` + gates do mos-partnerships:
 - **Nunca send**: apenas rascunho ou `create_draft`
 - Fit score com justificativa verificável por creator
 - Sem números de audiência inventados (WebSearch/Apify ou marcar estimativa)

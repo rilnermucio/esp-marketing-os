@@ -1,11 +1,11 @@
 ---
-description: Cria roteiro de vídeo (YouTube long-form, Reels, TikTok, Shorts ou VSL). Para VSL completa, dispatcha workflow #9 (mos-storytelling + mos-copy + mos-video). Para outros formatos, dispatch simples ou paralelo conforme o caso.
+description: "Cria roteiro de vídeo para YouTube, Reels, TikTok, Shorts ou VSL, com hook, estrutura de retenção e CTA. Use quando pedirem roteiro de vídeo. Vídeo renderizado: /produzir-reels."
 argument-hint: "<formato e tema, ex: 'Reels 90s sobre produtividade' ou 'VSL pra curso de marketing'>"
 ---
 
 # /criar-video: Roteiro de Vídeo
 
-Cria roteiro orquestrando subagents conforme tipo de vídeo. Roteamento abaixo segue padrões do `skills/marketing-os/SKILL.md`.
+Cria roteiro orquestrando subagents conforme tipo de vídeo. Roteamento abaixo segue padrões do `${CLAUDE_PLUGIN_ROOT}/skills/marketing-os/SKILL.md`.
 
 ## Required inputs (ask if missing)
 
@@ -23,11 +23,11 @@ Cria roteiro orquestrando subagents conforme tipo de vídeo. Roteamento abaixo s
 VSLs precisam de copy de venda + storytelling + ciência de retenção em vídeo simultaneamente. Dispatch paralelo:
 
 ```
-- Agent(subagent_type: "mos-storytelling", prompt: "Arco narrativo da VSL para [produto]: hook → problema → vilão → solução → prova → oferta → urgência. Aplicar hero's journey adaptado pra venda.")
+- Agent(subagent_type: "marketing-os:mos-storytelling", prompt: "Arco narrativo da VSL para [produto]: hook → problema → vilão → solução → prova → oferta → urgência. Aplicar hero's journey adaptado pra venda.")
 
-- Agent(subagent_type: "mos-copy", prompt: "Estrutura de copy de venda no formato VSL: headline, big idea, mecanismo único, anti-avatar, stack value, garantia, FAQ falado. Audiência: [audiência], ticket: [ticket]. Considere memory existente do cliente neste projeto.")
+- Agent(subagent_type: "marketing-os:mos-copy", prompt: "Estrutura de copy de venda no formato VSL: headline, big idea, mecanismo único, anti-avatar, stack value, garantia, FAQ falado. Audiência: [audiência], ticket: [ticket]. Considere memory existente do cliente neste projeto.")
 
-- Agent(subagent_type: "mos-video", prompt: "Ciência de retenção em VSL de [duração]: timestamps de queda esperados, transições, B-roll, ritmo, padrões de re-engajamento. Adaptar pro nicho [nicho].")
+- Agent(subagent_type: "marketing-os:mos-video", prompt: "Ciência de retenção em VSL de [duração]: timestamps de queda esperados, transições, B-roll, ritmo, padrões de re-engajamento. Adaptar pro nicho [nicho].")
 ```
 
 Fase 2: consolidar em roteiro único (texto narrado + cues visuais + timing de seções) + quality gates de substância (promessas com backup, garantia clara) + sugestão de testes A/B em hook e mecanismo único.
@@ -37,15 +37,15 @@ Fase 2: consolidar em roteiro único (texto narrado + cues visuais + timing de s
 Dispatch simples na maioria dos casos:
 
 ```
-- Agent(subagent_type: "mos-video", prompt: "Roteiro YouTube [duração] sobre [tema]: hook (0-15s), agenda, conteúdo de valor estruturado em capítulos, retenção patterns, CTA, thumbnail concept. Audiência: [audiência], goal: [goal].")
+- Agent(subagent_type: "marketing-os:mos-video", prompt: "Roteiro YouTube [duração] sobre [tema]: hook (0-15s), agenda, conteúdo de valor estruturado em capítulos, retenção patterns, CTA, thumbnail concept. Audiência: [audiência], goal: [goal].")
 ```
 
 Se precisar de validação de tópico/concorrência antes:
 
 ```
 Paralelo:
-- Agent(subagent_type: "mos-research", prompt: "Mapear vídeos top-performing sobre [tema] no YouTube BR, hooks usados, durações comuns, ângulos diferenciados. Considere memory existente do cliente neste projeto.")
-- Agent(subagent_type: "mos-video", prompt: "[após receber research] Roteiro YouTube...")
+- Agent(subagent_type: "marketing-os:mos-research", prompt: "Mapear vídeos top-performing sobre [tema] no YouTube BR, hooks usados, durações comuns, ângulos diferenciados. Considere memory existente do cliente neste projeto.")
+- Agent(subagent_type: "marketing-os:mos-video", prompt: "[após receber research] Roteiro YouTube...")
 ```
 
 ### Caso C: Reels / Shorts / TikTok
@@ -53,18 +53,18 @@ Paralelo:
 Dispatch simples:
 
 ```
-- Agent(subagent_type: "mos-video", prompt: "Roteiro [formato] de [duração]s sobre [tema]: hook nos primeiros 1-3s, conteúdo de alto ritmo, CTA, padrões de retenção da plataforma. Aplicar swipe files de hooks-reels.")
+- Agent(subagent_type: "marketing-os:mos-video", prompt: "Roteiro [formato] de [duração]s sobre [tema]: hook nos primeiros 1-3s, conteúdo de alto ritmo, CTA, padrões de retenção da plataforma. Aplicar swipe files de hooks-reels.")
 ```
 
 Para Reels com clone de voz:
 
 ```
-- Agent(subagent_type: "mos-video", prompt: "Roteiro Reels no estilo de [creator/copywriter de assets/clones/], aplicar voice profile correspondente.")
+- Agent(subagent_type: "marketing-os:mos-video", prompt: "Roteiro Reels no estilo de [creator/copywriter de ${CLAUDE_PLUGIN_ROOT}/assets/clones/], aplicar voice profile correspondente.")
 ```
 
 ## Quality Gates (antes de entregar)
 
-Aplicar gates globais do `skills/marketing-os/SKILL.md`:
+Aplicar gates globais do `${CLAUDE_PLUGIN_ROOT}/skills/marketing-os/SKILL.md`:
 - Sem `—`, sem "brutal", sem CAPS gratuito
 - Sem aspas em falas/roteiros (escrever direto)
 - Acentuação PT-BR correta

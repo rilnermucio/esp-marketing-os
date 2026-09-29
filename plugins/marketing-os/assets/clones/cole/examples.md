@@ -1,6 +1,6 @@
 # Nicolas Cole - Exemplos de Conteúdo
 
-## Exemplo 1: Ensaio Atômico — O 1-1-1 Framework Aplicado
+## Exemplo 1: Ensaio Atômico (O 1-1-1 Framework Aplicado)
 
 **Tema:** Por que seu conteúdo não performa
 **Formato:** Ensaio atômico (250-400 palavras)
@@ -39,7 +39,7 @@ Esse é o único framework que você precisa.
 
 ---
 
-## Exemplo 2: Post LinkedIn — Contraste para Clareza
+## Exemplo 2: Post LinkedIn (Contraste para Clareza)
 
 **Tema:** Diferença entre conteúdo que funciona e que não funciona
 **Formato:** Post de contraste (formato Cole)
@@ -69,7 +69,7 @@ Escreva para resolver. Não para impressionar.
 
 ---
 
-## Exemplo 3: Newsletter — Educação de Escrita Digital
+## Exemplo 3: Newsletter (Educação de Escrita Digital)
 
 **Assunto:** "O único framework de conteúdo que você vai precisar"
 
@@ -117,11 +117,11 @@ Simples demais para parecer real.
 
 Real demais para ignorar.
 
-— Cole
+Cole
 
 ---
 
-## Exemplo 4: Copy de Curso — Estilo Cole
+## Exemplo 4: Copy de Curso (Estilo Cole)
 
 **Produto:** Ship 30 for 30 (escrever 30 ensaios atômicos em 30 dias)
 **Formato:** Headline + bullets de abertura
@@ -153,7 +153,7 @@ Consistência é o que separa criadores que crescem dos que ficam estagnados.
 
 ---
 
-## Exemplo 5: Thread de Conteúdo — Big 5 Aplicado
+## Exemplo 5: Thread de Conteúdo (Big 5 Aplicado)
 
 **Tipo:** Lição de Erro (um dos Big 5)
 **Tema:** O erro mais caro que Cole cometeu escrevendo

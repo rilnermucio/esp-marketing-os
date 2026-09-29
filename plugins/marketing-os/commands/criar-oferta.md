@@ -1,5 +1,5 @@
 ---
-description: Architect a complete offer (value stack, pricing, guarantee, bonuses, urgency). Dispatches mos-offer, com escalação pra mos-research (validação) e handoff pra mos-copy (página).
+description: "Arquitetura de oferta: value stack, preço, garantia, bônus, urgência e claims aprovados. Use quando pedirem oferta, quanto cobrar, bônus ou garantia."
 argument-hint: "<produto/serviço + público + ticket pretendido, ex: 'mentoria de tráfego pago, gestores, ~R$5k'>"
 ---
 
@@ -87,6 +87,8 @@ Agent(subagent_type: "mos-offer", prompt: "Arquitete a oferta. Produto: [produto
 
 ## Consolidação
 
+> **Precedência**: o conteúdo mínimo é o do Output Schema Obrigatório do `mos-offer` (`agents/mos-offer.md`). A consolidação abaixo organiza a entrega final sem descartar campo obrigatório do agent.
+
 Entregue ao usuário:
 
 ```markdown
@@ -145,6 +147,10 @@ Valor total: R$ X | Preço: R$ Y | Ratio X:Y
 - Posicionamento no funil (mos-funnel) e mecânica de lançamento (mos-launch)
 - Registrar resultado real (take rate/refund) pra memory do mos-offer aprender
 ```
+
+## Salvar no projeto
+
+Depois de entregar, salve o dossiê em `workspace/brand/oferta.md`, no projeto do usuário, para os outros especialistas usarem como contexto. Se o arquivo já existir, preserve a versão anterior com a data no nome. Se `workspace/brand/perfil.md` existir (criado por `/configurar-marca`), atualize a seção Negócio (oferta principal e ticket) com um resumo de 2 ou 3 linhas.
 
 ## Quality Gates (antes de entregar)
 

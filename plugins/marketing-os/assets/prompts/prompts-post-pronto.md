@@ -105,7 +105,7 @@ TYPOGRAPHY:
 - Main quote "FEITO É MELHOR" in condensed bold uppercase sans-serif (Bebas Neue style), charcoal (#2D2D2D), positioned upper left with generous margin.
 - The word "melhor" has thin underline accent.
 - Below: "que perfeito" in elegant serif italic (Playfair Display style), slightly smaller.
-- Author credit "— provérbio" in thin sans-serif, muted gray, bottom right corner.
+- Author credit "provérbio" in thin sans-serif, muted gray, bottom right corner.
 
 LAYOUT: Asymmetric composition. Text occupies left 60% of frame. Right side is intentional negative space.
 Text must be perfectly rendered, correctly spelled. Clean editorial aesthetic.
@@ -172,9 +172,9 @@ TYPOGRAPHY:
 - Header "CHECKLIST" in condensed bold uppercase, charcoal, top left.
 - Below: "do post perfeito" in serif italic, muted brown.
 - List items (vertically stacked, left-aligned):
-  "01 — Gancho na primeira linha"
-  "02 — Valor genuíno"
-  "03 — CTA clara"
+  "01: Gancho na primeira linha"
+  "02: Valor genuíno"
+  "03: CTA clara"
   Each number in bold condensed, text in thin sans-serif.
 - The word "perfeito" in header has yellow highlighter (#F7DC6F).
 
@@ -266,7 +266,7 @@ VISUAL: Split composition - left side cream (#F5F0E6), right side charcoal (#2D2
 TYPOGRAPHY:
 - Left side: "EVITE" in condensed bold terracotta (#C45C26) uppercase, followed by items in thin sans-serif charcoal.
 - Right side: "FAÇA" in condensed bold sage (#8B9D83) uppercase, followed by items in thin sans-serif cream.
-- Items listed vertically with em-dashes: "— postar sem estratégia" vs "— planejar semanal"
+- Items listed vertically, each with a small bullet: "postar sem estratégia" vs "planejar semanal"
 
 LAYOUT: Perfect vertical split. Text mirrored on each side. Clean editorial comparison.
 Text must be perfectly rendered, correctly spelled.
@@ -381,7 +381,7 @@ TYPOGRAPHY:
 - Main quote "[PRIMEIRA PARTE]" in condensed bold uppercase [color], positioned [upper left / asymmetric].
 - "[SEGUNDA PARTE]" in elegant serif italic, [same or contrasting color].
 - [Palavra-chave] has [underline / yellow highlighter / emphasis].
-- Attribution "— [autor]" in thin sans-serif, muted, [corner position].
+- Attribution "[autor]" in thin sans-serif, muted, [corner position].
 
 LAYOUT: Asymmetric composition with [intentional negative space description].
 Text must be perfectly rendered, correctly spelled.
@@ -397,7 +397,7 @@ TYPOGRAPHY:
 - [Number or headline] "[TÍTULO]" in condensed bold uppercase [charcoal/cream], [position].
 - [Subtítulo] in elegant serif italic, [color].
 - [Palavra-chave] has [thin underline in terracotta / yellow highlighter].
-- [Se houver lista: items with "—" prefix, thin sans-serif]
+- [Se houver lista: items with a small bullet prefix, thin sans-serif]
 
 LAYOUT: [Left-aligned with right negative space / Typography as hero element]. Editorial magazine aesthetic.
 Text must be perfectly rendered, correctly spelled.

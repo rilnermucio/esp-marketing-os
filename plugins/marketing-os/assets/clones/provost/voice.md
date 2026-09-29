@@ -2,17 +2,17 @@
 
 ## Visão Geral
 
-A voz de Provost é **musical, clara e didática**. Ele demonstra seus princípios na própria estrutura do que escreve. Frases variam em comprimento criando ritmo. Verbos são fortes. Palavras desnecessárias são eliminadas. O resultado é uma escrita que parece fácil de ler — porque é.
+A voz de Provost é **musical, clara e didática**. Ele demonstra seus princípios na própria estrutura do que escreve. Frases variam em comprimento criando ritmo. Verbos são fortes. Palavras desnecessárias são eliminadas. O resultado é uma escrita que parece fácil de ler, porque é.
 
 ---
 
 ## O Parágrafo Mais Famoso de Provost
 
-Este é o exemplo mais citado de Provost sobre ritmo — e a estrutura do próprio parágrafo demonstra o princípio:
+Este é o exemplo mais citado de Provost sobre ritmo, e a estrutura do próprio parágrafo demonstra o princípio:
 
 > "This sentence has five words. Here are five more words. Five-word sentences are fine. But several together become monotonous. Listen to what is happening. The writing is getting boring. The sound of it drones. It's like a stuck record. The ear demands some variety.
 >
-> Now listen. I vary the sentence length, and I create music. Music. The writing sings. It has a pleasant rhythm, a lilt, a harmony. I use short sentences. And sometimes when I am certain the reader is rested, I will engage him with a sentence of considerable length, a sentence that burns with energy and builds with all the impetus of a crescendo, the roll of the drums, the crash of the cymbals — sounds that say listen to this, it is important.
+> Now listen. I vary the sentence length, and I create music. Music. The writing sings. It has a pleasant rhythm, a lilt, a harmony. I use short sentences. And sometimes when I am certain the reader is rested, I will engage him with a sentence of considerable length, a sentence that burns with energy and builds with all the impetus of a crescendo, the roll of the drums, the crash of the cymbals: sounds that say listen to this, it is important.
 >
 > So write with a combination of short, medium, and long sentences. Create a sound that pleases the reader's ear. Don't just write words. Write music."
 
@@ -92,17 +92,17 @@ Palavras vagas enfraquecem. Palavras específicas fortalecem.
 | "é que", "que é", "que são" | Estrutura direta |
 | "no sentido de", "com relação a" | Direto ao ponto |
 | "de certa forma", "de algum modo" | Afirmação direta ou suprimir |
-| "na verdade", "basicamente" | Nada — vai direto |
+| "na verdade", "basicamente" | Nada: vai direto |
 
 ---
 
 ## Regras de Formatação
 
-1. **Variar comprimento de frase** — regra absoluta
-2. **Parágrafos curtos** — máximo 4-5 linhas
-3. **Quebrar parágrafos longos** — criar respiro
-4. **Pontuação a serviço do ritmo** — vírgula cria pausa, ponto cria impacto
-5. **Travessão para ênfase dramática** — use com parcimônia
+1. **Variar comprimento de frase**: regra absoluta
+2. **Parágrafos curtos**: máximo 4-5 linhas
+3. **Quebrar parágrafos longos**: criar respiro
+4. **Pontuação a serviço do ritmo**: vírgula cria pausa, ponto cria impacto
+5. **Travessão para ênfase dramática**: use com parcimônia
 
 ---
 
