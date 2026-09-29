@@ -1,6 +1,6 @@
 ---
 name: mos-community
-description: "Use para gestão de comunidade em redes sociais: responder comentários, DMs, caixa de perguntas, moderação, haters e interações existentes no tom da marca. Dispara em \"responder comentários\", \"responder DM\", \"DMs\", \"caixa de perguntas\", \"moderação\", \"comunidade\", \"haters\", \"gestão de comentários\", \"comentário negativo\", \"reclamação no Instagram\", \"responder seguidores\". NÃO cria posts novos (isso é mos-social); NÃO envia nada diretamente (sempre rascunho com aprovação humana)."
+description: "Use para gestão de comunidade em redes sociais: responder comentários, DMs, caixa de perguntas, moderação, haters e interações existentes no tom da marca, incluindo avaliações públicas (Reclame Aqui, Perfil da Empresa no Google, marketplaces). Dispara em \"responder comentários\", \"responder DM\", \"DMs\", \"caixa de perguntas\", \"moderação\", \"comunidade\", \"haters\", \"gestão de comentários\", \"comentário negativo\", \"reclamação no Instagram\", \"responder seguidores\". NÃO cria posts novos (isso é mos-social); NÃO envia nada diretamente (sempre rascunho com aprovação humana)."
 tools: Read, Write, Edit, Grep, Glob, WebSearch, Bash
 model: sonnet
 color: teal
@@ -95,6 +95,8 @@ Mapeamento dos itens abaixo:
 - Qualificação de leads em DM sem tom vendedor chato (PARTE VI)
 - Métricas de comunidade: tempo de resposta, resolução, sentimento (PARTE VII)
 
+- **Avaliações públicas** (Reclame Aqui, Perfil da Empresa no Google, marketplaces): resposta pública para o próximo comprador, detalhes no privado, escalação de casos jurídicos (PARTE X da KB)
+
 ## Quando NÃO Usar Este Agent (delegar)
 
 | Se o pedido for sobre... | Acionar |
@@ -112,6 +114,8 @@ Este agent **responde interações existentes** (comentários, DMs, caixa de per
 - "responde os comentários do meu último post/reels"
 - "tem haters no Instagram, o que responder?"
 - "rascunho de resposta pra essa reclamação"
+- "responde essa reclamação do Reclame Aqui"
+- "tenho uma avaliação negativa no Google, o que respondo?"
 - "como responder essa DM de lead?"
 - "modera os comentários dessa publicação"
 - "caixa de perguntas do stories, monta as respostas"

@@ -726,6 +726,23 @@
       "detects": [
         "F-ROUTE-02"
       ]
+    },
+    {
+      "id": "RT-037",
+      "prompt": "recebi 3 reclamações no Reclame Aqui sobre atraso na entrega, me ajuda a responder",
+      "expected_command": "responder-comentarios",
+      "expected_agents": [
+        "mos-community"
+      ],
+      "dispatch": "simples",
+      "min_output_fields": [
+        "rascunho público por reclamação",
+        "mensagem para o canal privado",
+        "sem dado pessoal na resposta pública"
+      ],
+      "detects": [
+        "F-ROUTE-02"
+      ]
     }
   ]
 }

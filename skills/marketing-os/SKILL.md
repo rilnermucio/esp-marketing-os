@@ -415,7 +415,7 @@ Tabela canônica de roteamento por command; o `/mo` usa esta tabela. Quando o us
 | Avatar ou persona | `/criar-avatar` | |
 | USP ou proposta de valor | `/criar-usp` | |
 | Oferta (value stack, preço, garantia) | `/criar-oferta` | |
-| Melhorar uma copy que já existe | `/otimizar-copy` | Diagnóstico, score e reescritas |
+| Melhorar ou revisar uma peça pronta (copy, roteiro, carrossel, sequência, artigo, página) | `/otimizar-copy` | Diagnóstico, score e reescritas; o especialista do formato revisa a estrutura |
 | Teste A/B | `/criar-teste-ab` | |
 | Responder comentários e DMs | `/responder-comentarios` | Rascunhos; nunca publica |
 | Prospectar creators | `/prospectar-creators` | Rascunhos de outreach; nunca envia |
