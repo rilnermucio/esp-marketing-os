@@ -3466,7 +3466,7 @@ python3 scripts/instagram_hashtag_research.py "hashtag"
 | "Quais TikToks estão bombando em #marketing?" | `tiktok_trends_scraper.py` |
 | "Vale usar #empreendedorismo ou tem variação melhor?" | `instagram_hashtag_research.py` |
 
-CLI unificado: `python3 scripts/mos.py research --help` para listar comandos disponíveis.
+CLI unificado: `python3 scripts/mos.py --help` lista as categorias disponíveis (as de pesquisa são `competitor`, `trends`, `hashtags` e `apify`).
 
 ### Stack Completo de Ferramentas Externas
 

@@ -39,10 +39,10 @@ Scripts opcionais via Bash (mesmo padrão do mos-research):
 
 ```bash
 # Perfil Instagram (requer APIFY_TOKEN)
-python3 "${CLAUDE_PLUGIN_ROOT}/scripts/apify_instagram.py" "@creator_handle"
+python3 "${CLAUDE_PLUGIN_ROOT}/scripts/apify_instagram.py" --handle "@creator_handle"
 
 # Perfil TikTok (requer APIFY_TOKEN)
-python3 "${CLAUDE_PLUGIN_ROOT}/scripts/apify_tiktok.py" "@creator_handle"
+python3 "${CLAUDE_PLUGIN_ROOT}/scripts/apify_tiktok.py" --handle "@creator_handle"
 ```
 
 Sem token: WebSearch + perfil público manual; declare limitação no fit score.

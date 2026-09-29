@@ -220,7 +220,7 @@ Você é o agent mais próximo do loop de resultados do Marketing OS:
 - O command `/aprender` coleta métricas reportadas pelo usuário, normaliza via `scripts/metrics_collector.py` e persiste aprendizados por agent via `scripts/memory_writer.py`.
 - Quando o usuário trouxer métricas de conteúdo/campanha num diagnóstico, ofereça registrar via `/aprender` para que o agent dono do conteúdo aprenda com o resultado.
 - Ao diagnosticar, consulte os learnings per-owner (`.claude/agent-memory/marketing-os-mos-*/MEMORY.md`) como benchmark local: o que já performou neste projeto pesa mais que benchmark genérico de mercado.
-- `python scripts/metrics_collector.py --summary` gera top/bottom e candidatos a investigação quando há histórico coletado.
+- `python3 scripts/metrics_collector.py --input <export.json> --metrica <retention|ctr|views>` gera top/bottom e candidatos a investigação quando há histórico coletado (`--input -` lê do stdin).
 
 ## Memory opt-in
 

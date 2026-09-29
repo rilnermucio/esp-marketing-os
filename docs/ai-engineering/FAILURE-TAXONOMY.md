@@ -49,7 +49,7 @@
 | ID | Falha | Exemplo real / risco | Detecção | Prevenção |
 |---|---|---|---|---|
 | F-BLOAT-01 | Knowledge profunda subindo pro Tier 1 | Contido: Tier 1 médio ~245 linhas (2026-07) | `validate_agents.py` reporta `lines`; revisão | H2.1; convenção nº1 do AGENTS.md |
-| F-BLOAT-02 | Instrução morta (capacidade citada sem tool correspondente) | mos-copy mandava rodar quality_gate.py sem Bash (jun/2026) | `validate_agents.py --strict` (guard de script-ref sem Bash) | H1.2 |
+| F-BLOAT-02 | Instrução morta (capacidade citada sem tool correspondente, ou comando que o script rejeita) | mos-copy mandava rodar quality_gate.py sem Bash (jun/2026). Auditoria 2026-09-28: 4 invocações com sintaxe que o argparse rejeita (`--summary`, handle posicional, `mos.py research`) | `validate_agents.py --strict` (script-ref sem Bash) + `test_cli_contracts.py` (flags contra o argparse, por AST) | H1.2 |
 | F-BLOAT-03 | Mesma regra duplicada em N arquivos sem fonte canônica | Quality gates repetidos em ~20 arquivos (agents, commands, SKILL, AGENTS) | Auditoria; ainda sem guard | H7.4; plano no [ADR-0002](adr/0002-defesa-em-tres-camadas.md) |
 
 ## F-CMD: Drift de commands
@@ -114,6 +114,7 @@ Falhas que só aparecem quando o plugin roda instalado, com a sessão no projeto
 | F-EVAL-02 | Eval não parametrizado: arquivo novo escapa da cobertura | Evitado por design em `test_commands_dispatch.py` (glob + parametrize) | Revisão | Padrão glob+parametrize pra qualquer coleção de arquivos |
 | F-EVAL-03 | Flaky tratado como quebrado (ou ignorado como flaky sem registro) | `test_pdf_generator::test_cli_basic` flaca sob carga, passa isolado | Re-rodar isolado antes de debugar | Registro do flake conhecido (memória + este doc) |
 | F-EVAL-04 | Julgamento par a par muda com a posição A/B | Risco observado no protocolo manual de quality anchors | `copy_output_eval.py consolidate` + testes de ordem invertida | Duas rodadas obrigatórias; divergência vira `inconclusivo` |
+| F-EVAL-05 | Teste contorna bug de produção com retry ou skip | Auditoria 2026-09-28: `test_reels_script_generator_funcs.py` tentava 30 vezes para esconder `KeyError` em 12% das chamadas de `gerar_roteiro` (mesmo padrão no gerador de legendas) | Grep por `except KeyError: continue` e `pytest.skip` em helpers de teste; `test_todos_os_templates_formatam` | Corrigir a causa; teste que precisa de retry é bug aberto, não teste |
 
 ## F-COST: Custo e contexto
 

@@ -2,6 +2,7 @@
 """
 Testes funcionais para reels_script_generator.py.
 """
+
 from __future__ import annotations
 
 import os
@@ -16,20 +17,11 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 import reels_script_generator as rsg
 
 
-def _gerar_roteiro_estavel(tema, duracao, formato, max_tentativas=30):
-    """Wrapper pra evitar bug pré-existente em hooks com placeholders inválidos.
-
-    Dois hooks no script têm placeholders com espaço ({crença comum},
-    {resultado impressionante}) que não casam com kwargs do .format().
-    Quando random.choice escolhe um deles, KeyError é levantado.
-    Esse wrapper tenta novamente até pegar um hook válido.
-    """
-    for _ in range(max_tentativas):
-        try:
-            return rsg.gerar_roteiro(tema, duracao, formato)
-        except KeyError:
-            continue
-    pytest.skip("Não foi possível gerar roteiro estável (bug pré-existente em hooks)")
+def _gerar_roteiro_estavel(tema, duracao, formato):
+    """Chamada direta. Até 2026-09 este helper tentava 30 vezes para esconder um
+    KeyError de templates com campo sem valor (F-EVAL-05); o bug foi corrigido e
+    test_todos_os_templates_formatam trava a classe."""
+    return rsg.gerar_roteiro(tema, duracao, formato)
 
 
 # ----------------------------------------------------------- gerar_roteiro
@@ -130,21 +122,16 @@ def test_main_flag_formatos(capsys):
     assert "FORMATOS" in out
 
 
-def _main_estavel(argv, capsys, max_tentativas=30):
-    """Mesma lógica de retry do helper anterior, agora pra main()."""
-    for _ in range(max_tentativas):
-        try:
-            with patch.object(sys, "argv", argv):
-                rsg.main()
-            return capsys.readouterr().out
-        except KeyError:
-            capsys.readouterr()  # limpa buffers parciais
-            continue
-    pytest.skip("Não foi possível executar main() estável (bug pré-existente em hooks)")
+def _main_estavel(argv, capsys):
+    with patch.object(sys, "argv", argv):
+        rsg.main()
+    return capsys.readouterr().out
 
 
 def test_main_tema_e_duracao(capsys):
-    out = _main_estavel(["reels_script_generator.py", "vendas", "30", "tutorial"], capsys)
+    out = _main_estavel(
+        ["reels_script_generator.py", "vendas", "30", "tutorial"], capsys
+    )
     assert "vendas" in out
     assert "ROTEIRO PARA REELS" in out
 
@@ -164,3 +151,21 @@ def test_main_formato_default_quando_nao_passado(capsys):
     out = _main_estavel(["reels_script_generator.py", "X"], capsys)
     # Sem formato → default tutorial
     assert "Tutorial" in out or "tutorial" in out.lower()
+
+
+def test_todos_os_templates_formatam():
+    """Todo template de HOOKS e CTAS formata com os campos do gerador (sem sorteio)."""
+    campos_hook = rsg._hook_fields("produtividade")
+    campos_cta = rsg._cta_fields("produtividade")
+    for categoria, templates in rsg.HOOKS.items():
+        for template in templates:
+            assert "{" not in template.format(**campos_hook), (categoria, template)
+    for categoria, templates in rsg.CTAS.items():
+        for template in templates:
+            template.format(**campos_cta)
+
+
+def test_gerar_roteiro_nunca_levanta_keyerror():
+    for semente in range(200):
+        random.seed(semente)
+        rsg.gerar_roteiro("produtividade", 30, "tutorial")

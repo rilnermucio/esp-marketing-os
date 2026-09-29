@@ -270,7 +270,7 @@ Se a tarefa pede análise profunda de SERP (PAA, related, top 10 com snippets) e
 
 ```bash
 python scripts/apify_serp.py --query "<keyword>" --max-results 10
-# ou: python scripts/mos.py apify serp "<keyword>" --max-results 10
+# ou: python3 scripts/mos.py apify serp --query "<keyword>" --max-results 10
 ```
 
 Output: Markdown summary direto no stdout (Top resultados + People Also Ask + Related searches), JSON completo salvo no diretório local configurado pelo script (ver `docs/APIFY-INTEGRATION.md`). Use `--dry-run` antes pra ver custo estimado (~$0.005 por resultado).
