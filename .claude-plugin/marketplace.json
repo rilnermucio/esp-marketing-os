@@ -1,6 +1,6 @@
 {
   "name": "mos-marketplace",
-  "description": "Marketing OS — sistema operacional completo de marketing digital",
+  "description": "Marketing OS: sistema operacional completo de marketing digital",
   "version": "6.16.0",
   "owner": {
     "name": "rilnermucio"
@@ -9,7 +9,7 @@
     {
       "name": "marketing-os",
       "source": "./",
-      "description": "Marketing OS — sistema operacional de marketing digital com 21 subagentes especializados: Copy, SEO, Social, Video, Audio, Design, AI Tools, Analytics, Email, Ads, Research, Brand, Storytelling, Funnel, Growth, Launch, Infoproduct Builder, AB Testing, Offer, Community e Partnerships.",
+      "description": "Marketing OS: sistema operacional de marketing digital com 21 subagentes especializados: Copy, SEO, Social, Video, Audio, Design, AI Tools, Analytics, Email, Ads, Research, Brand, Storytelling, Funnel, Growth, Launch, Infoproduct Builder, AB Testing, Offer, Community e Partnerships.",
       "version": "6.16.0",
       "author": {
         "name": "rilnermucio"

@@ -39,7 +39,17 @@ O plugin **gera e valida**; quem executa/agenda é o MCP ou a ferramenta dedicad
 - ~~**`scripts/memory_writer.py`**~~ **ENTREGUE (jul/2026)**: API append-only idempotente com schema anti-poluição (categorias, 400 chars, 20/dia) em `.claude/agent-memory/marketing-os-mos-*/MEMORY.md`.
 - ~~**`/aprender` + `metrics_collector.py`**~~ **ENTREGUE (jul/2026)**: coleta no runtime (MCP ou export manual) → normalização stdlib → interpretação mos-analytics → persistência aprovada via memory_writer.
 
-Nota: atribuição peça↔métrica fica aproximada (manual) sem pipeline de publicação. Aceitável: o loop pull-de-métrica + writeback já fecha o ciclo sem precisar de infra de publishing.
+Nota: atribuição peça↔métrica fica aproximada (manual) sem pipeline de publicação. Aceitável: o loop pull-de-métrica + writeback já fecha o ciclo sem precisar de infra de publishing. Desde set/2026 o `scripts/utm_builder.py` gera o link com `piece_id` estável junto com a peça, o que fecha a atribuição quando o export de métricas traz o `utm_content`.
+
+### Fase 5: plugin instalado e mercado brasileiro (auditoria de set/2026)
+- ~~**Runtime instalado**~~ **ENTREGUE (set/2026)**: caminhos pela raiz do plugin, dispatch qualificado `marketing-os:mos-*`, gate em `hooks/hooks.json`, memória no diretório nativo e smoke de instalação real (ADR-0005 e ADR-0006).
+- ~~**Dispatch pela plataforma**~~ **PILOTO (set/2026)**: `/gerar-imagem` roda dentro do `mos-ai-tools` via `context: fork` (ADR-0007). Candidatos seguintes: `/minerar-voc` e `/narrar-roteiro` com material em arquivo, depois de uso real sem regressão.
+- ~~**Contexto de marca**~~ **ENTREGUE (set/2026)**: `/configurar-marca` e perfil lido pelos 21 especialistas.
+- ~~**Voz do cliente e prova social**~~ **ENTREGUE (set/2026)**: `/minerar-voc` com `voc_extractor.py` e `/coletar-prova` com termo de autorização.
+- ~~**Compliance BR**~~ **ENTREGUE (set/2026)**: `references/compliance-br.md` com normas conferidas no texto integral, `/checar-compliance`, `compliance_check.py` e frases de risco no hook. Revisão trimestral avisada pelo `mos.py facts check`.
+- ~~**Busca por IA e plataformas BR**~~ **ENTREGUE (set/2026)**: GEO e AEO na KB de SEO; Kwai, WhatsApp (Status e Canais), Threads, LinkedIn e marketplaces nas KBs de social, copy e ads; registro de fatos com fonte e data.
+- ~~**Reaproveitamento e revisão**~~ **ENTREGUE (set/2026)**: `/reaproveitar`, `/otimizar-copy` para qualquer formato e modo avaliações no `/responder-comentarios`.
+- **Evals de output**: golden set e baselines de mos-social, mos-email e mos-ads entregues em set/2026; falta a primeira rodada julgada par a par contra essas baselines.
 
 ## Disciplina ao construir
 

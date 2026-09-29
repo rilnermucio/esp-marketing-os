@@ -25,7 +25,9 @@ Regras para o corpo desse command:
 - Pedido incompleto devolve apenas as perguntas que faltam e para. O agent não supõe o que foi combinado antes, porque não vê a conversa.
 - Ofertas de continuação ficam numa seção separada, que o orquestrador usa depois do retorno.
 
-O piloto é `/gerar-imagem` (`mos-ai-tools`). Os próximos candidatos que atendem os critérios são `/renderizar-imagem` e `/narrar-roteiro`. A expansão depende de o piloto rodar em uso real sem regressão de qualidade nem reclamação de contexto perdido.
+O piloto é `/gerar-imagem` (`mos-ai-tools`). Os próximos candidatos são `/minerar-voc` e `/narrar-roteiro`, nos dois casos quando o material chega como arquivo: os dois agents têm Bash para rodar o script do command dentro do fork. A expansão depende de o piloto rodar em uso real sem regressão de qualidade nem reclamação de contexto perdido.
+
+> **Correção (2026-09-28, antes de qualquer expansão):** a primeira versão desta ADR citava `/renderizar-imagem` como candidato. Ele não atende os critérios: a renderização invoca uma skill do ambiente pelo orquestrador, e o `mos-ai-tools` não tem a ferramenta Skill. A decisão não mudou.
 
 Contratos:
 
