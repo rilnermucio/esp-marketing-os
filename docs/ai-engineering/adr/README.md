@@ -12,5 +12,6 @@ Numeração sequencial, status `proposto | aceito | substituído por ADR-NNNN`. 
 | [0004](0004-chatgpt-work-skills-only.md) | ChatGPT Work e Codex por pacote universal skills-only | Aceito |
 | [0005](0005-plugin-instalado-runtime.md) | Plugin instalado: recursos pela raiz do plugin, dispatch qualificado e gates no nível do plugin | Aceito |
 | [0006](0006-memoria-no-diretorio-nativo.md) | Memória dos agents no diretório nativo de agent de plugin | Aceito |
+| [0007](0007-command-com-context-fork.md) | Dispatch garantido pela plataforma em command de agent único (`context: fork`) | Aceito (piloto em `/gerar-imagem`) |
 
 Template: [TEMPLATE.md](TEMPLATE.md)

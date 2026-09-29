@@ -76,7 +76,8 @@ _UNIVERSAL_REWRITES = [
     (re.compile(r'"\$\{CLAUDE_PLUGIN_ROOT\}/([^"\s]+)"'), r"\1"),
     (re.compile(r"\$\{CLAUDE_PLUGIN_ROOT\}/"), ""),
     (re.compile(r"`\$\{CLAUDE_PLUGIN_ROOT\}`"), "a pasta do plugin"),
-    (re.compile(r"(subagent_type:\s*[\"'])marketing-os:mos-"), r"\1mos-"),
+    # Nome qualificado de agent (dispatch, frontmatter de fork e prosa) vira o curto.
+    (re.compile(r"marketing-os:mos-"), "mos-"),
 ]
 
 

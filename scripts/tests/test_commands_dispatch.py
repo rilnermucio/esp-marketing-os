@@ -40,6 +40,19 @@ DISPATCH_RE = re.compile(
 # YAML frontmatter delimiter regex.
 FRONTMATTER_RE = re.compile(r"^---\n(.*?)\n---", re.DOTALL)
 
+# Dispatch garantido pela plataforma (ADR-0007): o command roda dentro do agent.
+FORK_AGENT_RE = re.compile(r"^agent:\s*(?:marketing-os:)?(mos-[a-z-]+)\s*$", re.M)
+
+
+def dispatched_agents(content: str) -> list[str]:
+    """Agents despachados por Agent() no corpo ou por context: fork no frontmatter."""
+    agents = DISPATCH_RE.findall(content)
+    match = FRONTMATTER_RE.match(content)
+    if match and re.search(r"^context:\s*fork\s*$", match.group(1), re.M):
+        agents += FORK_AGENT_RE.findall(match.group(1))
+    return agents
+
+
 # Section markers that satisfy the "consolidation/output" requirement.
 # Commands must surface a clear consolidation step, a final output schema,
 # a phased dispatch breakdown, or an explicit checklist/KPI block so the
@@ -117,7 +130,7 @@ class TestCommandDispatch:
     @pytest.mark.parametrize("cmd", get_dispatch_commands(), ids=lambda p: p.name)
     def test_command_dispatches_at_least_one_agent(self, cmd: Path) -> None:
         content = cmd.read_text(encoding="utf-8")
-        agents_dispatched = DISPATCH_RE.findall(content)
+        agents_dispatched = dispatched_agents(content)
         assert agents_dispatched, (
             f"{cmd.name} does not dispatch any agent "
             f"(expected at least one Agent(subagent_type: 'mos-*'))"
@@ -126,7 +139,7 @@ class TestCommandDispatch:
     @pytest.mark.parametrize("cmd", get_dispatch_commands(), ids=lambda p: p.name)
     def test_dispatched_agents_exist(self, cmd: Path) -> None:
         content = cmd.read_text(encoding="utf-8")
-        agents_dispatched = set(DISPATCH_RE.findall(content))
+        agents_dispatched = set(dispatched_agents(content))
         existing = get_existing_agents()
         missing = agents_dispatched - existing
         assert not missing, (
@@ -185,7 +198,7 @@ class TestUtilityCommands:
         offenders = []
         for cmd in get_dispatch_commands():
             content = cmd.read_text(encoding="utf-8")
-            if not DISPATCH_RE.search(content):
+            if not dispatched_agents(content):
                 offenders.append(cmd.name)
         assert not offenders, (
             f"Commands without dispatch (add to UTILITY_COMMANDS if intentional): "

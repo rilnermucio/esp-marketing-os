@@ -75,6 +75,8 @@ Para qualquer pedido de produção de marketing (copy, SEO, post, anúncio, víd
 
 Mapeamento completo briefing → agent em `skills/marketing-os/SKILL.md` (seção "Mapa de Dispatch").
 
+Command que despacha um único agent, com todo o input vindo do pedido e dos arquivos do projeto e sem aprovação no meio, pode usar `context: fork` com `agent: marketing-os:mos-<agent>` e `background: false` no frontmatter. Aí a própria plataforma roda o corpo do command dentro do agent, sem depender do orquestrador. O agent em fork não vê a conversa, então pedido incompleto devolve perguntas. Piloto: `/gerar-imagem`. Critérios e contratos na ADR-0007.
+
 Hoje 47 dos 51 slash commands em `commands/` dispatcham subagents. Os 2 commands premium na v6.8.0+ são `/auditoria` (multi-modal básico, ver `docs/AUDIT-CONFIG.md`) e `/auditoria-pro` (landing agency-grade com radar/screenshots/roadmap, ver `docs/AUDITORIA-PRO.md`). Os 4 sem dispatch são intencionais: `/publicar-notion` (utility do Notion MCP), `/campanha` (índice dos 6 sub-commands `/campanha-{preset}`), `/projeto` (workflow orchestrator com dispatch dinâmico por etapa) e `/datas-sazonais` (utilitário de dados do calendário sazonal BR, ver `scripts/seasonal_calendar_br.py`). Existe ainda `/mo` (meta-orquestrador) que recebe briefing aberto e roteia automaticamente. O teste `scripts/tests/test_commands_dispatch.py` trava regressão de cobertura: se você adicionar um command novo de produção, ele precisa dispatchar ou o teste falha.
 
 ## Quality Gates Globais (aplicar SEMPRE antes de entregar)

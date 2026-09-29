@@ -12,6 +12,7 @@ estática não enxerga porque roda com o cwd dentro do repo:
 - o quality gate avalia a resposta final e as escritas de um agent
   `marketing-os:mos-*` (nome qualificado que o runtime envia);
 - escrita feita pela sessão principal do usuário não é bloqueada.
+- um command com `context: fork` roda dentro do agent declarado (ADR-0007).
 
 O hook registra cada evento em MOS_HOOK_LOG (JSON por linha), que é o que
 estes testes observam.
@@ -262,3 +263,23 @@ def test_bootstrap_memory_is_the_native_memory(sandbox: tuple[Path, Path]) -> No
     assert "memoria-nativa-4417" in result.stdout.lower(), (
         "A memória criada pelo bootstrap não chegou ao agent.\n" + result.stdout[-800:]
     )
+
+
+def test_fork_command_runs_inside_declared_agent(sandbox: tuple[Path, Path]) -> None:
+    """ADR-0007: /gerar-imagem roda dentro do mos-ai-tools sem o orquestrador chamar Agent."""
+    project, log_path = sandbox
+    result = _run_claude(
+        "/marketing-os:gerar-imagem foto de produto de um tênis branco em fundo claro, "
+        "para anúncio no feed, proporção 1:1, no Flux",
+        project,
+        log_path,
+    )
+    assert result.returncode == 0, result.stderr[-800:]
+    stops = [e for e in _read_log(log_path) if e["event"] == "SubagentStop"]
+    forked = [e for e in stops if e["agent_type"] == "marketing-os:mos-ai-tools"]
+    assert forked, (
+        "O command não rodou dentro do agent declarado no frontmatter.\n"
+        f"SubagentStop: {stops}\nSaída: {result.stdout[-800:]}"
+    )
+    assert all(e["decision"] != "skip" for e in forked), forked
+    assert "flux" in result.stdout.lower(), result.stdout[-1500:]

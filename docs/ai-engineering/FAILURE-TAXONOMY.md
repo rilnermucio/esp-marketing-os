@@ -8,7 +8,7 @@
 
 | ID | Falha | Exemplo real / risco | Detecção | Prevenção |
 |---|---|---|---|---|
-| F-ROUTE-01 | Produção de marketing executada inline em vez de dispatch | Pré-v6.5: 8 de 25 commands produziam inline | `test_commands_dispatch.py`; matriz de routing evals | Protocolo de dispatch no AGENTS.md; H3.1 |
+| F-ROUTE-01 | Produção de marketing executada inline em vez de dispatch | Pré-v6.5: 8 de 25 commands produziam inline | `test_commands_dispatch.py`; matriz de routing evals; `test_install_smoke.py::test_fork_command_runs_inside_declared_agent` | Protocolo de dispatch no AGENTS.md; H3.1; `context: fork` em command de agent único (ADR-0007) |
 | F-ROUTE-02 | Briefing roteado pro command/agent errado | Hipotético (medido pelo golden set) | [evals/routing-cases.json](evals/routing-cases.json) + revisão manual | Triggers concretos nas descriptions; mapa da SKILL |
 | F-ROUTE-03 | Agent sem porta de entrada (órfão de exposição) | Auditoria jun/2026: mos-growth, mos-ab-testing, mos-infoproduct com 1 command cada | Mapa de cobertura command→agent (auditoria) | R3 "Exposição"; decisão de produto por agent |
 | F-ROUTE-04 | Ambiguidade de domínio sem regra de desempate | Oferta high-ticket cai em infoproduct, funnel ou copy sem regra escrita | Casos RT-017 do golden set | H4.2: ambiguidade recorrente vira regra na SKILL |

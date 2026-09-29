@@ -37,10 +37,11 @@ Heurística permanente: prefira reescrever a frase sem o número (H8.5).
 
 1. Justifique contra **H7.3** (workflow recorrente com inputs estruturáveis).
 2. Crie `commands/<nome>.md` com a anatomia mínima de **H3.2** (frontmatter, required inputs, decision tree se houver ramos, dispatch com prompt auto-contido, `## Consolidação`, referência a quality gates, "Por que esse dispatch").
-3. Contratos automáticos que ele precisa passar (`test_commands_dispatch.py`): frontmatter com description; ≥1 `Agent(subagent_type: "marketing-os:mos-*")` com agent existente; marcador de consolidação; referência a quality gates. Utility genuíno: adicionar a `UTILITY_COMMANDS` com comentário.
-4. Golden set: caso novo ou atualização de caso existente (ex: RT-013 espera `/criar-teste-ab` um dia).
-5. Contagens nos 3 docs (tabela de sincronia) + tabela de categorias.
-6. Suite completa.
+3. Contratos automáticos que ele precisa passar (`test_commands_dispatch.py`): frontmatter com description; ≥1 `Agent(subagent_type: "marketing-os:mos-*")` (ou `agent:` no frontmatter de fork) com agent existente; marcador de consolidação; referência a quality gates. Utility genuíno: adicionar a `UTILITY_COMMANDS` com comentário.
+4. Command de agent único, sem aprovação no meio e com todo o input no pedido: avalie `context: fork` (ADR-0007). O frontmatter leva `context: fork`, `agent: marketing-os:mos-<agent>` e `background: false`; o corpo é a tarefa do agent (`Pedido do usuário: $ARGUMENTS`, `## Tarefa`, `## Saída (...)`, gates) e pedido incompleto devolve só as perguntas. Rode o smoke `test_fork_command_runs_inside_declared_agent` adaptado ao command novo.
+5. Golden set: caso novo ou atualização de caso existente (ex: RT-013 espera `/criar-teste-ab` um dia).
+6. Contagens nos 3 docs (tabela de sincronia) + tabela de categorias.
+7. Suite completa.
 
 ## Como adicionar um workflow
 

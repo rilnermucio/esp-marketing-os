@@ -1,80 +1,66 @@
 ---
 description: "Cria o prompt otimizado de imagem para Midjourney, DALL-E, Flux, Ideogram, Leonardo ou Stable Diffusion, sem gerar a imagem. Use quando pedirem prompt de imagem. Imagem pronta (PNG): /renderizar-imagem."
-argument-hint: "<description and tool, e.g., 'product photo for Flux' or 'illustration for Midjourney 9:16'>"
+argument-hint: "<o que a imagem mostra e a ferramenta, ex: 'foto de produto para Flux' ou 'ilustração 9:16 para Midjourney'>"
+context: fork
+agent: mos-ai-tools
+background: false
 ---
 
-# /gerar-imagem: Prompt para IA gerar imagem (Dispatch simples)
+# /gerar-imagem: Prompt para IA gerar imagem
 
-Cria prompt otimizado para geração de imagem por IA, despachando o subagent especialista. Não produz prompt inline.
+> **Piloto da ADR-0007.** Este command roda direto dentro do agent `mos-ai-tools` (`context: fork`): a plataforma garante o dispatch, sem depender de o orquestrador chamar o Agent. O texto abaixo é a tarefa do agent. No ChatGPT Work e no Codex, que não têm subagent, execute a mesma tarefa.
 
-## Required inputs (ask if missing)
+Pedido do usuário: $ARGUMENTS
 
-1. **Subject** (obrigatório): o que a imagem deve mostrar
-2. **Purpose** (opcional): social media, website, produto, marketing, arte
-3. **Tool** (opcional): Midjourney, DALL-E 3, Flux, Ideogram, Leonardo, Stable Diffusion (default: Midjourney pra arte/conceito, Flux pra fotorrealismo)
-4. **Style** (opcional): photorealistic, illustration, 3D, minimalist, cinematic, etc.
-5. **Aspect ratio** (opcional): 1:1, 16:9, 9:16, 4:3 ou custom
-6. **Mood** (opcional): profissional, lúdico, dramático, warm, minimal
+## Tarefa
 
-## Dispatch (simples, single agent)
+Crie o prompt otimizado de imagem para o pedido acima.
 
-```
-Agent(subagent_type: "mos-ai-tools", prompt: "Gere prompt otimizado para [tool] do subject: [subject]. Purpose: [purpose]. Style: [style]. Aspect ratio: [ar]. Mood: [mood]. Entregue: 1 prompt principal completo (com parâmetros tool-specific tipo --ar/--v/--s pra Midjourney quando aplicável), 3 variações (ângulo/estilo/mood diferentes), negative prompt quando aplicável, e 3-5 dicas tool-specific pra extrair melhor resultado. Estruture em markdown.")
-```
+1. **Pedido incompleto**: se não estiver claro o que a imagem deve mostrar, responda apenas com as perguntas que faltam (assunto, uso, ferramenta, proporção) e pare. Você não vê a conversa anterior, então não suponha o que foi combinado antes.
+2. **Marca**: se existir `workspace/brand/perfil.md`, respeite paleta, tom visual e proibições.
+3. **Ferramenta padrão** quando não informada: Midjourney para arte e conceito, Flux para fotorrealismo.
+4. **Parâmetros**: use a sintaxe atual da ferramenta escolhida (ex: `--ar`, `--v`, `--s` no Midjourney) e não misture sintaxe entre ferramentas.
 
-`mos-ai-tools` não tem memory project, passe todo o contexto no prompt.
-
-## Consolidação
-
-Após o agent retornar:
+## Saída (exatamente neste formato)
 
 ```markdown
-## Prompt para [Tool]
+## Prompt para [Ferramenta]
 
-Subject: [subject] | Purpose: [purpose] | Aspect ratio: [ar] | Style: [style]
+Assunto: [assunto] | Uso: [uso] | Proporção: [proporção] | Estilo: [estilo]
 
-### Prompt Principal
-[Prompt completo, com parâmetros se aplicável]
+### Prompt principal
+[prompt completo, com parâmetros quando a ferramenta usa]
 
-### Variações (3)
-**Variação A**: [ângulo/perspectiva diferente]
-[Prompt]
+### Variações
+**A** (outro ângulo ou perspectiva): [prompt]
+**B** (outro estilo): [prompt]
+**C** (outro clima): [prompt]
 
-**Variação B**: [estilo diferente]
-[Prompt]
+### Negative prompt (se a ferramenta usa)
+[exclusões: blurry, watermark, text etc.]
 
-**Variação C**: [mood diferente]
-[Prompt]
+### Dicas para esta ferramenta
+- [dica 1]
+- [dica 2]
+- [dica 3]
 
-### Negative Prompt (se aplicável)
-[Lista de exclusões: blurry, watermark, text, etc.]
-
-### Dicas tool-specific
-- [Dica 1]
-- [Dica 2]
-- [Dica 3]
-
-### Iteração sugerida
-- Pra mais [X]: adicionar "[keyword]"
-- Pra menos [Y]: remover "[keyword]" ou jogar pro negative
-- Pra trocar estilo: substituir "[atual]" por "[alternativo]"
+### Como iterar
+- Para mais [X]: acrescente "[termo]"
+- Para menos [Y]: tire "[termo]" ou mande para o negative
 ```
 
-## Quality Gates (antes de entregar)
+## Quality Gates
 
-Aplicar gates globais do `skills/marketing-os/SKILL.md`:
-- Texto descritivo do prompt em PT-BR ou EN consistente (escolha um e mantenha)
-- Sem `—`, sem "brutal", sem CAPS gratuito no texto que envolve o prompt
-- Acentuação PT-BR correta nos títulos e descrições
+Aplique os gates globais do SKILL.md do Marketing OS ao texto que envolve o prompt: sem travessão, sem "brutal", sem CAPS gratuito, PT-BR acentuado. Escolha um idioma para o texto do prompt (PT-BR ou inglês) e mantenha.
 
-## Follow-up
+## Depois da entrega (o orquestrador oferece)
 
-Pergunte ao usuário se quer:
-1. Variações para outro mood/estilo
-2. Adaptar o mesmo subject para outra tool
-3. Série visual coerente (3-5 prompts com mesma identidade)
-4. Prompt para vídeo (Veo, Sora, Kling, Runway) com mesma cena
+1. Gerar a imagem de fato com `/renderizar-imagem`
+2. Variações para outro clima ou estilo
+3. O mesmo assunto adaptado para outra ferramenta
+4. Série visual coerente (3 a 5 prompts com a mesma identidade)
+5. Prompt de vídeo (Veo, Sora, Kling, Runway) com a mesma cena
 
-## Por que dispatch (mesmo sendo simples)
+## Por que fork
 
-Centraliza a lógica de prompt engineering no `mos-ai-tools` (que conhece parâmetros, swipe files de estilos, e padrões por tool). Evita que o orquestrador chute parâmetros desatualizados ou misture sintaxe entre tools.
+O command é puramente "entregue o prompt do especialista": todo o input vem do pedido e dos arquivos do projeto, sem aprovação humana no meio. É o caso em que rodar direto dentro do `mos-ai-tools` elimina o risco de o orquestrador responder inline ou errar o nome do agent.

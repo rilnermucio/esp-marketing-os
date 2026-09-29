@@ -130,7 +130,13 @@ DISPATCH_IN_BODY = re.compile(
 
 def _dispatched_by(command: str) -> set[str]:
     body = (COMMANDS_DIR / f"{command}.md").read_text(encoding="utf-8")
-    return set(DISPATCH_IN_BODY.findall(body))
+    agents = set(DISPATCH_IN_BODY.findall(body))
+    frontmatter = body.split("---", 2)[1] if body.startswith("---") else ""
+    if re.search(r"^context:\s*fork\s*$", frontmatter, re.M):
+        agents |= set(
+            re.findall(r"^agent:\s*(?:marketing-os:)?(mos-[a-z-]+)", frontmatter, re.M)
+        )
+    return agents
 
 
 class TestGoldenSetMatchesCommands:

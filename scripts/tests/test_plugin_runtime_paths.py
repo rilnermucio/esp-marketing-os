@@ -108,3 +108,17 @@ def test_universal_rewrite_rules() -> None:
         "`subagents/copy-agent.md`. "
         'Agent(subagent_type: "mos-copy", prompt: "x")'
     )
+
+
+@pytest.mark.parametrize("path", sorted((ROOT / "commands").glob("*.md")), ids=_ids)
+def test_fork_commands_use_qualified_agent(path: Path) -> None:
+    """Command com context: fork precisa de agent qualificado (ADR-0007)."""
+    frontmatter = path.read_text(encoding="utf-8").split("---", 2)[1]
+    if not re.search(r"^context:\s*fork\s*$", frontmatter, re.M):
+        return
+    agent = re.search(r"^agent:\s*(\S+)\s*$", frontmatter, re.M)
+    assert agent, f"{path.name}: context: fork sem agent"
+    assert agent.group(1).startswith("marketing-os:mos-"), agent.group(1)
+    assert re.search(
+        r"^background:\s*false\s*$", frontmatter, re.M
+    ), f"{path.name}: use background: false para o resultado voltar no mesmo turno"
