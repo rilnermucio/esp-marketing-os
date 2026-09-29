@@ -32,6 +32,14 @@ Tudo que é seu fica nessa pasta, nunca dentro da pasta do plugin:
 
 **Regra prática:** uma pasta, um cliente ou projeto. Não misture trabalhos diferentes na mesma pasta.
 
+## Primeiro passo: perfil da marca
+
+```
+/configurar-marca Clínica Sorriso Pleno, odontologia estética em Curitiba
+```
+
+O perfil (nicho, público, oferta, voz, proibições, categoria regulada e canais) fica em `workspace/brand/perfil.md`, e todos os especialistas o leem antes de produzir. O orquestrador deixa de repetir as mesmas perguntas a cada sessão, e o avatar, a USP e a oferta criados depois são salvos na mesma pasta.
+
 ## Não sabe qual command usar?
 
 Descreva o que precisa com `/mo`. O meta-orquestrador escolhe o command ou o especialista certo e diz qual escolheu:
@@ -124,6 +132,7 @@ O nicho é detectado pela memória do cliente, pela pasta atual ou pela primeira
 
 | Quero... | Command |
 |---|---|
+| Perfil de marca do projeto | `/configurar-marca` |
 | Um post, carrossel ou calendário | `/criar-post`, `/criar-carrossel`, `/criar-calendario` |
 | Várias peças de uma vez | `/batch` |
 | Email ou sequência | `/criar-email`, `/criar-sequencia` |

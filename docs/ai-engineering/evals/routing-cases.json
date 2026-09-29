@@ -709,6 +709,23 @@
         "F-ROUTE-02",
         "F-DISP-01"
       ]
+    },
+    {
+      "id": "RT-036",
+      "prompt": "configura a marca do meu projeto: sou nutricionista esportiva, atendo atletas amadores e vendo consultoria online",
+      "expected_command": "configurar-marca",
+      "expected_agents": [
+        "mos-brand"
+      ],
+      "dispatch": "simples",
+      "min_output_fields": [
+        "perfil com nicho, público, voz e proibições",
+        "categoria regulada com CFN/CRN",
+        "arquivo salvo em workspace/brand/perfil.md"
+      ],
+      "detects": [
+        "F-ROUTE-02"
+      ]
     }
   ]
 }

@@ -161,6 +161,10 @@ Entregue o resultado final neste schema, removendo blocos realmente inaplicávei
 1. [Título, organização ou autor, URL, publicação, acesso e contexto geográfico]
 ````
 
+## Salvar no projeto
+
+Depois de entregar, salve o dossiê em `workspace/brand/avatar.md`, no projeto do usuário, para os outros especialistas usarem como contexto. Se o arquivo já existir, preserve a versão anterior com a data no nome. Se `workspace/brand/perfil.md` existir (criado por `/configurar-marca`), atualize a seção Público com um resumo de 2 ou 3 linhas.
+
 ## Quality Gates (antes de entregar)
 
 - Toda afirmação material aponta para um ID do ledger ou está rotulada como hipótese.

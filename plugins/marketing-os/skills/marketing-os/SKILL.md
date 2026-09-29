@@ -50,6 +50,7 @@ Quando o usuário não fornece contexto suficiente, **NÃO chute**: pergunte ant
 5. **Urgência**: publicar hoje, semana, planejamento futuro?
 
 **Pule perguntas que já têm resposta:**
+- Se existir `workspace/brand/perfil.md` no projeto (criado por `/configurar-marca`), ele responde nicho, avatar, ticket e plataforma; pergunte só o que faltar. Num projeto recorrente sem perfil, ofereça `/configurar-marca` uma vez
 - Se há memory em `.claude/agent-memory/marketing-os-mos-*/` com briefing do cliente, use esse contexto
 - Se o user já mencionou alguma dessas 5 dimensões na mensagem inicial, não pergunte de novo
 - Se for óbvio do contexto (ex: pasta chamada "wellness-science" → nicho saúde)
@@ -389,6 +390,7 @@ Tabela canônica de roteamento por command; o `/mo` usa esta tabela. Quando o us
 | Necessidade | Command | Observação |
 |---|---|---|
 | Não sei qual usar | `/mo` | Meta-orquestrador: classifica o briefing e diz qual rota escolheu |
+| Configurar o perfil de marca do projeto | `/configurar-marca` | Uma vez por projeto; todos os especialistas leem `workspace/brand/perfil.md` |
 | Um post | `/criar-post` | Peça única; para várias peças use `/batch` |
 | Carrossel | `/criar-carrossel` | Estrutura, texto por slide e design |
 | Calendário editorial | `/criar-calendario` | |

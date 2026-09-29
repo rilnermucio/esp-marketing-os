@@ -17,6 +17,7 @@ PLUGIN_DIRS = [
     "agents",
 ]
 LEAK_PATTERNS = ["workspace/", "../workspace", "/workspace/"]
+USER_CONTEXT_PATHS = ("workspace/brand/", "workspace/clones/")
 # Files that legitimately reference workspace/ by design (e.g. commands that read user-local samples)
 WORKSPACE_REF_ALLOWLIST = {
     "commands/criar-meu-clone.md",
@@ -62,6 +63,10 @@ def test_no_plugin_file_references_workspace(project_root: Path) -> None:
                 content = path.read_text(encoding="utf-8")
             except (UnicodeDecodeError, IsADirectoryError):
                 continue
+            # Convenções de contexto do usuário, citadas de propósito por agents e
+            # commands: perfil e dossiês da marca, e clones de voz pessoais.
+            for allowed in USER_CONTEXT_PATHS:
+                content = content.replace(allowed, "")
             for pattern in LEAK_PATTERNS:
                 if pattern in content:
                     leaks.append(f"{rel}: contains '{pattern}'")
