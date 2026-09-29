@@ -3798,19 +3798,23 @@ NÃO faça: Antes/depois com promessa milagrosa
 NÃO faça: Substituir consulta médica
 
 FAÇA:
-"Telemedicina aprovada pela CFM resolução 2.314/2022.
+"Telemedicina conforme a Resolução CFM 2.314/2022.
 
 Médicos especialistas em endocrinologia disponíveis
 em até 48h, com prescrição digital integrada à
 sua farmácia.
 
-Estudo clínico com 1.247 pacientes mostrou aderência
-terapêutica 41% maior em consultas digitais
-(publicado no JAMA Internal Medicine, agosto 2025).
+[Dado de estudo publicado, com fonte verificável:
+amostra, resultado e periódico. Sem estudo, corte
+este bloco; nunca invente número.]
 
 Sua primeira consulta: R$89.
 
 [Agendar consulta]
+
+[Clínica], registro no CRM-[UF] nº [número].
+Diretor técnico médico: [Nome], CRM-[UF] [número],
+[especialidade], RQE [número].
 
 Este conteúdo é informativo. Não substitui avaliação
 médica presencial em casos de emergência."
@@ -3821,10 +3825,14 @@ clínica, randomizado, peer-reviewed, registro ANVISA.
 PROVA: Estudos publicados em journals reconhecidos,
 registros regulatórios, credenciais médicas verificáveis.
 
-CUIDADO: Disclaimer obrigatório. Toda copy de saúde no BR
-exige menção de "este conteúdo não substitui consulta
-médica" ou variantes. Promessas específicas exigem
-respaldo clínico publicado.
+CUIDADO: Identificação obrigatória na peça (CFM
+2.336/2023, arts. 4º e 5º): médico com nome, CRM, a
+palavra MÉDICO, especialidade e RQE; clínica com
+registro no CRM e o diretor técnico médico. Preço de
+consulta é permitido desde 2024; promessa de resultado
+continua vedada (art. 11, XII). Estudo citado precisa
+de fonte verificável. Regras completas:
+references/compliance-br.md.
 ```
 
 ### Fintech / Treasury Corporate
@@ -3844,8 +3852,8 @@ controladas por três pessoas.
 E quando uma fórmula quebra?
 
 A reconciliação manual entre 40+ contas bancárias
-custou em média 84 horas/mês ao seu setor financeiro
-em 2025 (benchmark Deloitte).
+consome [X] horas por mês do seu setor financeiro
+([fonte verificável ou medição do próprio cliente]).
 
 Treasury management automatizado, integrado via Open
 Finance regulamentado pelo Bacen, com auditoria
@@ -3854,11 +3862,7 @@ SOC 2 Type II.
 Implementação em 60 dias com seu time atual.
 SLA contratual de uptime 99.95%.
 
-[Avaliar implementação]
-
-Investimentos envolvem riscos. Rentabilidade passada
-não garante resultados futuros. Operação registrada
-junto à CVM sob nº [registro]."
+[Avaliar implementação]"
 
 PALAVRAS-CHAVE: compliance, auditoria, reconciliation,
 treasury, risk management, Open Finance, Bacen, SOC 2,
@@ -3867,10 +3871,14 @@ PCI-DSS, regulação CVM.
 PROVA: Certificações regulatórias, compliance reports,
 clientes nominais (com autorização), volume processado.
 
-CUIDADO: Disclaimer CVM obrigatório. Toda comunicação
-de produto financeiro exige menção a riscos. Não usar
-"renda garantida", "ganho certo" ou superlativos sem
-respaldo. Compliance > criatividade.
+CUIDADO: Aviso de risco e de rentabilidade passada vale
+para produto de investimento (em fundo, Res. CVM
+175/2022, art. 59). Software de tesouraria não é
+investimento e não leva esse aviso. Recomendar ativo
+exige analista ou consultor registrado (Res. CVM
+20/2021 e 19/2021). Nunca "renda garantida", "ganho
+certo" ou superlativo sem respaldo; número de
+benchmark só com fonte.
 ```
 
 ### Educação / Academic
@@ -4030,12 +4038,12 @@ NÃO faça: Comparação direta com procedimento médico
 
 FAÇA:
 "Sérum com ácido hialurônico 2% e niacinamida 5%,
-notificado ANVISA sob nº 2.5847.0123.001-5.
+notificado na ANVISA sob nº [número da notificação].
 
-Estudo in-vitro (não in-vivo) mostrou aumento de
-hidratação cutânea em 23% após 28 dias. Resultados
-em pele real podem variar conforme fototipo,
-hábitos e rotina de cuidados.
+Estudo de eficácia do fabricante ([método: in vitro
+ou in vivo], [amostra]) mostrou aumento de hidratação
+de [X]% após [N] dias. Resultados em pele real podem
+variar conforme fototipo, hábitos e rotina de cuidados.
 
 Indicado para peles 25+ com sinais iniciais de
 desidratação. NÃO indicado para grávidas, lactantes,
@@ -4058,7 +4066,9 @@ porta-voz com CRM, estudo de eficácia (mesmo in-vitro)
 referenciado. Reviews em fonte externa (Beleza na Web,
 Sephora, etc.) com volume.
 
-CUIDADO: ANVISA RDC 7/2015 regula claims cosméticos.
+CUIDADO: A RDC 907/2024 (que revogou a RDC 752/2022)
+proíbe alegação terapêutica (art. 12) e exige dado de
+eficácia para cada benefício alegado (art. 9º, II).
 Nunca prometer "cura", "trata doença", ou comparar
 com procedimento médico. Antes/depois precisa
 declarar se houve retoque. Imagens hiper-realísticas
@@ -4128,7 +4138,8 @@ Educação > pitch.
 
 NÃO faça: "Garantimos sua aposentadoria!"
 NÃO faça: "O melhor escritório de São Paulo"
-NÃO faça: Captação ativa de cliente (proibido CEC)
+NÃO faça: Captação ativa de cliente (Provimento OAB 205/2021, art. 3º)
+NÃO faça: Gratuidade, honorários, forma de pagamento ou desconto como chamariz (art. 3º, I)
 NÃO faça: Prometer resultado processual
 
 FAÇA:
@@ -4149,32 +4160,31 @@ em R$X-Y/mês; em outros, não há vantagem ou pode
 até ser desfavorável (revisão da vida toda como
 exemplo). Análise prévia antes de ajuizar.
 
-Avaliação técnica preliminar: R$0, presencial ou
-videoconferência, ~50min. Honorários quota litis
-seguindo tabela OAB se houver tese viável.
+Atendimento presencial ou por videoconferência.
+Contato do escritório: [canal oficial].
 
-[Agendar análise]
-
-Advogada [Nome], OAB/SP 123.456, 12 anos atuando
-em Direito Previdenciário. Conforme CEC, este
-conteúdo é informativo, não constitui captação
-de cliente nem promessa de resultado."
+Advogada [Nome], OAB/SP [número], 12 anos atuando
+em Direito Previdenciário. Conteúdo informativo,
+conforme o Provimento OAB 205/2021."
 
 PALAVRAS-CHAVE: tese, jurisprudência, STF, STJ, CNIS,
 revisão, recálculo, fator previdenciário, RMI,
-quota litis, honorários, OAB, CEC, CPP, CPC.
+OAB, CED, CPC.
 
 PROVA: OAB inscrita, especialização (pós-graduação,
 mestrado), tempo de atuação na matéria,
 jurisprudência citada (com referência verificável).
 
-CUIDADO: CEC OAB veda mercantilização. NÃO usar
-"garantia de resultado", "100% de sucesso",
-"clientes satisfeitos", testemunhos de clientes.
-Marketing jurídico permitido: educacional,
-informativo, técnico. NÃO permitido: comparativo,
-sensacionalista, ou que sugira captação ativa.
-Disclaimer obrigatório em todo conteúdo.
+CUIDADO: O Provimento OAB 205/2021 e o Código de
+Ética e Disciplina (CED) vedam mercantilização:
+honorários, gratuidade, forma de pagamento ou
+desconto como chamariz (art. 3º, I); promessa de
+resultado ou caso concreto (art. 6º); "melhor
+escritório" ou comparação (art. 3º, IV); testemunho
+de cliente. Permitido: conteúdo educacional e
+informativo, inclusive impulsionado, sem oferta de
+serviço. Identificação obrigatória: nome e número da
+OAB (CED, art. 44).
 ```
 
 ### Agribusiness BR (Commodities, Coop, AgTech)

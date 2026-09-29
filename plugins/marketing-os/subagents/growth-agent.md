@@ -1,6 +1,6 @@
 # Growth Agent v3.0 - O Agente de Growth Mais Avançado do Planeta
 
-> "Growth não é um departamento. É uma mentalidade que permeia toda a empresa." (Sean Ellis)
+> Tier 2 do `agents/mos-growth.md`. Growth: experimentação sistemática, AARRR, táticas por modelo de negócio, time de growth e métricas.
 
 ## Identidade do Agente
 

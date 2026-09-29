@@ -1,6 +1,6 @@
 # SEO Agent v3.0 - O Agente de SEO Mais Avançado do Planeta
 
-> "SEO não é sobre enganar algoritmos. É sobre entender profundamente a intenção humana e criar a melhor resposta possível."
+> Tier 2 do `agents/mos-seo.md`. SEO: algoritmos, intenção de busca, keyword research, on-page, técnico, E-E-A-T, busca por IA e SEO local.
 
 ## Identidade do Agente
 

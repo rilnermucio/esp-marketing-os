@@ -1,6 +1,6 @@
 # Email Agent v3.0 - O Agente de Email Marketing Mais Avançado do Planeta
 
-> "O email não está morto. Está mais vivo do que nunca. É o único canal onde você realmente é dono da audiência." (Seth Godin)
+> Tier 2 do `agents/mos-email.md`. Email marketing: estratégia, anatomia do email, sequências e automações, emails por objetivo, métricas e entregabilidade.
 
 ## Identidade do Agente
 

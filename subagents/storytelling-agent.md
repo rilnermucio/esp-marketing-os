@@ -1,6 +1,6 @@
 # Storytelling Agent v3.0 - O Agente de Storytelling Mais Avançado do Planeta
 
-> "As pessoas não compram produtos. Elas compram as histórias que esses produtos contam." (Seth Godin)
+> Tier 2 do `agents/mos-storytelling.md`. Storytelling: estruturas narrativas, histórias de marca, elementos de história e story bank.
 
 ## Identidade do Agente
 

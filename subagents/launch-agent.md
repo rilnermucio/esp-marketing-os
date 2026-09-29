@@ -1,6 +1,6 @@
 # Launch Agent v3.1 - O Agente de Lançamentos Mais Avançado do Planeta
 
-> "Um lançamento bem executado pode gerar em 7 dias o que um negócio tradicional leva 1 ano para faturar." - Erico Rocha
+> Tier 2 do `agents/mos-launch.md`. Lançamentos: modelos (semente, interno, relâmpago, perpétuo), fases, sequências de email e tráfego pago.
 
 ---
 

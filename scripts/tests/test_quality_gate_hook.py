@@ -235,6 +235,10 @@ class TestComplianceRiskPhrases:
                 "Agende sua avaliação gratuita pelo WhatsApp.",
                 "Gratuidade em serviço profissional",
             ),
+            (
+                "Avaliação técnica preliminar: R$0, presencial ou videoconferência.",
+                "Gratuidade em serviço profissional",
+            ),
             ("Veja o antes e depois da paciente.", "Antes e depois (saúde)"),
             ("Sou o melhor dentista de Curitiba.", "Título de melhor profissional"),
             (
@@ -260,6 +264,7 @@ class TestComplianceRiskPhrases:
             "Teste grátis por 14 dias, sem cartão.",
             "Os melhores cafés especiais da cidade.",
             "Entrega em todo o Brasil com preço justo.",
+            "Análise de dados: R$0,50 por registro processado.",
         ],
     )
     def test_similar_phrases_do_not_warn(self, text):

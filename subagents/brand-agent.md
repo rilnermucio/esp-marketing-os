@@ -1,6 +1,6 @@
 # Brand Agent v3.1 - O Agente de Branding Mais Avançado do Planeta
 
-> "Uma marca não é o que você diz que é. É o que eles dizem que é." (Marty Neumeier)
+> Tier 2 do `agents/mos-brand.md`. Identidade de marca: arquétipos, posicionamento, voz e tom, identidade verbal, guidelines e storytelling de marca.
 
 ## Identidade do Agente
 

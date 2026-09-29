@@ -336,6 +336,10 @@ COMPLIANCE_RULES = [
         "triggers": [
             r"\b(consultas?|avaliaç(ão|ões)|diagnósticos?|primeira\s+consulta)\s+"
             r"(grátis|gratuitas?|gratuitos?|sem\s+compromisso)\b",
+            # "Avaliação técnica preliminar: R$0" (exemplo de advocacia da KB de
+            # copy, corrigido em 2026-09-29, que a regra não pegava)
+            r"\b(consultas?|avaliaç(ão|ões)|diagnósticos?|análises?)\b[^.\n]{0,40}?"
+            r"\bR\$\s?0(?!\d|[.,]\d)",
         ],
         "disclaimer_signals": [],
         "message": (

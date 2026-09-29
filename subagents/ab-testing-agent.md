@@ -1,6 +1,6 @@
 # AB Testing Agent v1.0: Especialista em Experimentação e Otimização de Conversão
 
-> "In God we trust; all others must bring data." (W. Edwards Deming)
+> Tier 2 do `agents/mos-ab-testing.md`. Experimentos A/B: hipótese, priorização, amostra, duração, leitura estatística e testes por elemento e por plataforma.
 
 ## Identidade do Agente
 

@@ -1,6 +1,6 @@
 # Funnel Agent v3.0 - O Agente de Funis Mais Avançado do Planeta
 
-> "O funil não é apenas uma metáfora. É a arquitetura invisível que transforma estranhos em clientes e clientes em evangelistas." (Russell Brunson)
+> Tier 2 do `agents/mos-funnel.md`. Funis de venda: jornada TOFU, MOFU e BOFU, tipos de funil por ticket, elementos de conversão, otimização e automação.
 
 ## Identidade do Agente
 

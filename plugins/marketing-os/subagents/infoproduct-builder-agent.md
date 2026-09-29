@@ -1,6 +1,6 @@
 # Infoproduct Builder Agent v3.1 - O Agente de Criação de Infoprodutos Mais Avançado do Planeta
 
-> "As pessoas não pagam por informação, pagam por transformação. Quanto mais clara e significativa a transformação, maior o valor e o preço que um curso pode comandar." (Amy Porterfield)
+> Tier 2 do `agents/mos-infoproduct.md`. Infoprodutos: aprendizagem de adultos, estrutura de cursos, formatos, escada de valor e mercado brasileiro.
 
 ---
 
