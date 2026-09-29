@@ -21,6 +21,12 @@ from datetime import date, datetime
 from pathlib import Path
 
 FACTS_FILE = Path(__file__).resolve().parent.parent / "references" / "platform-facts.md"
+COMPLIANCE_FILE = (
+    Path(__file__).resolve().parent.parent / "references" / "compliance-br.md"
+)
+# Norma de publicidade muda por resolução de conselho; a referência de
+# compliance é revista a cada trimestre.
+COMPLIANCE_MAX_DAYS = 90
 COLUMNS = ["Plataforma", "Fato", "Valor", "Desde", "Fonte", "Verificado em"]
 
 
@@ -63,6 +69,15 @@ def problems(
     return invalid, stale
 
 
+def compliance_age(text: str, today: date) -> int | None:
+    """Idade, em dias, da verificação declarada no topo de compliance-br.md."""
+    match = re.search(r"Verificado em (\d{4}-\d{2}-\d{2})", text)
+    if not match:
+        return None
+    checked = datetime.strptime(match.group(1), "%Y-%m-%d").date()
+    return (today - checked).days
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--arquivo", default=str(FACTS_FILE), help="Registro de fatos")
@@ -90,6 +105,20 @@ def main(argv: list[str] | None = None) -> int:
         print(f"VENCIDO: {item}")
     if not (invalid or stale):
         print(f"Todos verificados nos últimos {args.max_dias} dias.")
+
+    if COMPLIANCE_FILE.exists() and args.arquivo == str(FACTS_FILE):
+        age = compliance_age(COMPLIANCE_FILE.read_text(encoding="utf-8"), today)
+        if age is None:
+            invalid.append("compliance-br.md sem data de verificação")
+            print("INVÁLIDO: compliance-br.md sem data de verificação")
+        elif age > COMPLIANCE_MAX_DAYS:
+            stale.append("compliance-br.md")
+            print(
+                f"VENCIDO: references/compliance-br.md verificado há {age} dias "
+                f"(revisão trimestral; limite {COMPLIANCE_MAX_DAYS})"
+            )
+        else:
+            print(f"Compliance verificado há {age} dias.")
     return 1 if (args.strict and (invalid or stale)) else 0
 
 

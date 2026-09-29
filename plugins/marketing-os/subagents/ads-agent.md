@@ -3475,6 +3475,8 @@ IMPORTANTE:
 
 # PARTE XVIII: COMPLIANCE BR (CONAR + LGPD + Setoriais)
 
+> **Fonte canônica**: `references/compliance-br.md`, verificada em 2026-09-28 no texto integral das normas (conselhos profissionais, ANVISA, CVM, CONAR, CDC, LGPD, ECA Digital). Em conflito com esta PARTE, vale a referência. Checagem rápida de uma peça: `python3 scripts/compliance_check.py --input <arquivo>`.
+
 Anúncio que rode no Brasil precisa passar **3 níveis de compliance** simultaneamente: plataforma (Meta/Google/TikTok), CONAR (auto-regulação BR), e regulação setorial (CVM, ANVISA, OAB, etc.). Violação pode causar reprovação, takedown, multa, ou processo.
 
 ## 18.1 CONAR (Conselho Nacional de Autorregulamentação Publicitária)
@@ -3590,8 +3592,9 @@ Resumo dos órgãos que regulam categorias específicas:
 
 | Setor | Órgão | Regra-chave para ads |
 |-------|-------|---------------------|
-| Investimentos | CVM (Resolução 35/2021) | Disclaimer obrigatório, sem promessa de retorno, registro CVM |
-| Saúde / Wellness | ANVISA (RDC 96/2008, RDC 7/2015) | Sem cura, registro/notificação, profissional habilitado em depoimentos |
+| Investimentos | CVM (Res. 20/2021 e 19/2021; Lei 6.385, art. 27-E; Res. 175/2022, art. 59) | Recomendar ativo exige analista ou consultor registrado; "não é recomendação" não protege; fundo com aviso de rentabilidade passada; sem promessa de retorno |
+| Saúde / Wellness | ANVISA (RDC 243/2018 suplementos; RDC 907/2024 cosméticos; Lei 9.294/1996 medicamentos) | Suplemento só com alegação da IN 28 (texto exato); cosmético sem alegação terapêutica; remédio com receita não anuncia ao público |
+| Profissões de saúde | CFM 2.336/2023, Código CFO + CFO-196/2019, CFN 599/2018, CFP art. 20 | Identificação com registro; sem promessa de resultado; gratuidade vedada (médico em consultório, dentista, psicólogo); antes e depois com regra própria por conselho |
 | Advocacia | CFOAB (Provimento 205/2021) | Sem captação ativa, sem comparação, sem garantia de resultado |
 | Crédito | Bacen (Resolução 4.949/2021) | CET completo, IOF, sem aprovação garantida |
 | Imóveis | CRECI (Lei 6.530/78) | Corretor com CRECI ativo, valorização baseada em dado oficial |

@@ -42,7 +42,7 @@
 | ID | Falha | Exemplo real / risco | Detecção | Prevenção |
 |---|---|---|---|---|
 | F-CLAIM-01 | Estatística/citação/case publicado sem verificação | Números "direcionais" na PARTE XVI do copy-agent exigiram aviso de fact-check | Gate 2 (fact-check via WebSearch, classificação CONFIRMADO/PROVÁVEL/NÃO USAR) | WebSearch na tools list de quem tem o gate |
-| F-CLAIM-02 | Disclaimer regulatório ausente (CVM/ANVISA/CONAR/afiliado) | Coberto desde a criação do hook | `quality_gate_hook.py` (COMPLIANCE WARN) + compliance auto-detection do mos-copy | Tabela de triggers→disclaimers |
+| F-CLAIM-02 | Disclaimer regulatório ausente (CVM/ANVISA/CONAR/afiliado) ou frase vedada por conselho (promessa de resultado, gratuidade, antes e depois, preço como chamariz) | Coberto desde a criação do hook. Auditoria 2026-09-28: a tabela do SKILL.md era genérica e não refletia a CFM 2.336/2023 (preço e selfie liberados) nem a CFO-196 | `quality_gate_hook.py` (COMPLIANCE WARN, com frases de risco e norma citada) + `scripts/compliance_check.py` + `/checar-compliance` + `mos.py facts check` (validade trimestral da referência) | `references/compliance-br.md` como fonte canônica, com artigos conferidos no texto integral |
 
 ## F-BLOAT: Inchaço de agent
 

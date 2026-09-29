@@ -53,3 +53,23 @@ def test_strict_exit_code(tmp_path):
         facts.main(["--arquivo", str(registry), "--hoje", "2020-02-01", "--strict"])
         == 0
     )
+
+
+def test_compliance_reference_age():
+    text = "> **Verificado em 2026-09-28** no texto integral das normas."
+    assert facts.compliance_age(text, date(2026, 10, 28)) == 30
+    assert facts.compliance_age("sem data", date(2026, 10, 28)) is None
+
+
+def test_compliance_reference_goes_stale_after_a_quarter(capsys):
+    """Relativo à data declarada no arquivo, para não quebrar a cada revisão."""
+    import re
+    from datetime import datetime, timedelta
+
+    text = facts.COMPLIANCE_FILE.read_text(encoding="utf-8")
+    checked = datetime.strptime(
+        re.search(r"Verificado em (\d{4}-\d{2}-\d{2})", text).group(1), "%Y-%m-%d"
+    ).date()
+    late = checked + timedelta(days=facts.COMPLIANCE_MAX_DAYS + 1)
+    facts.main(["--hoje", late.isoformat()])
+    assert "compliance-br.md verificado há" in capsys.readouterr().out

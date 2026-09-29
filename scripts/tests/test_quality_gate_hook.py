@@ -1,6 +1,8 @@
 """Testes para quality_gate_hook.py — regexes de HARD BLOCK, WARN e skip de paths."""
 
 import json
+
+import pytest
 import os
 from pathlib import Path
 import subprocess
@@ -13,6 +15,7 @@ sys.path.insert(
 
 from quality_gate_hook import (
     evaluate_event,
+    compliance_findings,
     find_compliance_warnings,
     find_hard_violations,
     find_warnings,
@@ -183,6 +186,18 @@ class TestWarnings:
         )
         assert all("CAPS" not in w for w in warnings)
 
+    def test_cfm_required_caps_do_not_warn(self):
+        """A CFM 2.336/2023 exige MÉDICO e NÃO ESPECIALISTA em caixa alta."""
+        warnings = find_warnings(
+            "Dra. Ana Souza, CRM/SP 12345, MÉDICA com pós-graduação em nutrologia, "
+            "NÃO ESPECIALISTA."
+        )
+        assert all("CAPS" not in w for w in warnings)
+
+    def test_other_caps_still_warn_next_to_cfm_identification(self):
+        warnings = find_warnings("Dr. Leo, CRM/RJ 999, MÉDICO. COMPRE AGORA.")
+        assert any("CAPS" in w and "COMPRE" in w for w in warnings)
+
     def test_more_than_two_emojis_warn(self):
         warnings = find_warnings("Bora 🚀🔥💰 vender mais")
         assert any("emojis" in w for w in warnings)
@@ -204,6 +219,59 @@ class TestCompliance:
             "Investimento com retorno garantido todo mês."
         )
         assert any("CVM" in w for w in warnings)
+
+
+class TestComplianceRiskPhrases:
+    """Frases de risco regulatório: avisam com a norma, sem aviso que resolva."""
+
+    @pytest.mark.parametrize(
+        "text, rule",
+        [
+            ("Resultado garantido em 30 dias.", "Promessa de resultado"),
+            ("Garantimos o resultado do seu tratamento.", "Promessa de resultado"),
+            ("Fature R$ 10 mil por mês com o método.", "Promessa de ganho"),
+            ("Ganhe dinheiro dormindo com afiliados.", "Promessa de ganho"),
+            (
+                "Agende sua avaliação gratuita pelo WhatsApp.",
+                "Gratuidade em serviço profissional",
+            ),
+            ("Veja o antes e depois da paciente.", "Antes e depois (saúde)"),
+            ("Sou o melhor dentista de Curitiba.", "Título de melhor profissional"),
+            (
+                "Atendimento com preço social às quintas.",
+                "Preço como chamariz (psicologia e advocacia)",
+            ),
+            (
+                "Compre PETR4 agora, isso não é recomendação.",
+                "Recomendação de investimento",
+            ),
+            ("O sérum que elimina melasma.", "Alegação terapêutica em produto"),
+        ],
+    )
+    def test_risk_phrase_warns_with_rule(self, text, rule):
+        findings = compliance_findings(text)
+        assert any(f["regra"] == rule for f in findings), findings
+
+    @pytest.mark.parametrize(
+        "text",
+        [
+            "Garantia de 7 dias: se não gostar, devolvemos o valor.",
+            "Faturamento da empresa cresceu no trimestre.",
+            "Teste grátis por 14 dias, sem cartão.",
+            "Os melhores cafés especiais da cidade.",
+            "Entrega em todo o Brasil com preço justo.",
+        ],
+    )
+    def test_similar_phrases_do_not_warn(self, text):
+        assert compliance_findings(text) == []
+
+    def test_finding_keeps_original_excerpt(self):
+        findings = compliance_findings("Fature R$ 10 mil por mês.")
+        assert findings[0]["trecho"] == "Fature R$ 1"
+
+    def test_warning_strings_cite_rule_name(self):
+        warnings = find_compliance_warnings("Resultado garantido.")
+        assert any(w.startswith("[Promessa de resultado]") for w in warnings)
 
 
 class TestShouldSkip:

@@ -76,6 +76,7 @@ Quando dispatchar qualquer agent com memory ativo no projeto, **explicite no pro
 | "inicialize a memória do Marketing OS neste projeto" | `python3 scripts/init_agent_memory.py` |
 | "rode o diagnóstico de instalação do Marketing OS", "qual versão está ativa" | `python3 scripts/install_doctor.py` |
 | "os fatos de plataforma estão em dia?" | `python3 scripts/check_platform_facts.py` |
+| "essa peça tem risco de compliance?" (checagem rápida) | `python3 scripts/compliance_check.py --input <arquivo>` |
 
 ## Mapa de Dispatch (21 Agents)
 
@@ -283,18 +284,20 @@ Para qualquer copy de venda, anúncio, sales letter, página de aplicação, VSL
 
 Aplicar SEMPRE quando o nicho envolve. Detectar via memory do cliente, pasta atual, ou pergunta-chave #1.
 
-| Nicho | Órgão | Regras-chave |
-|-------|-------|--------------|
-| Medicina | **CFM/CRM, CONAR** | Disclaimer "resultados variam" em depoimentos; proibido "cura"/"tratamento" sem registro; CRM visível |
-| Odontologia | **CFO/CRO, CONAR** | CRO visível; sem promessa de resultado garantido |
-| Nutrição | **CFN/CRN, CONAR** | CRN visível; sem prescrição individual em conteúdo genérico |
-| Psicologia | **CFP/CRP** | CRP visível; sem promessa de cura ou resultado |
-| Advocacia | **OAB** | Publicidade só informativa: sem captação de clientela nem promessa de resultado |
-| Suplementos / produtos naturais | **ANVISA** | Não pode prometer cura, tratar doença, dosagem específica sem registro; só "auxilia/contribui" |
-| Finanças / investimentos | **CVM** | "Rentabilidade passada não garante futura" obrigatório; sem promessa de retorno; risco explícito |
-| Cosméticos / dermato | **ANVISA** | Sem prometer tratar doença de pele; "pode auxiliar" é o limite |
+| Nicho | Norma vigente | Regras-chave |
+|-------|---------------|--------------|
+| Medicina | **CFM 2.336/2023** | Nome, CRM, MÉDICO, especialidade e RQE na peça e na bio; sem prometer resultado; antes e depois só educativo; preço e selfie permitidos |
+| Odontologia | **Código CFO + CFO-196/2019** | Nome e CRO em toda imagem; sem preço, gratuidade, "sem compromisso", sorteio ou "popular"; antes e depois só diagnóstico e conclusão, com TCLE |
+| Nutrição | **CFN 599/2018** (a 856/2026 vale de 23/01/2027) | Nome e CRN; sem garantia de resultado, preço, promoção ou sorteio; sem imagem corporal atribuindo resultado, mesmo autorizada |
+| Psicologia | **CFP, art. 20 + NT 1/2022** | Nome, CRP; sem preço como propaganda ("preço social", pacote), sem previsão de resultado |
+| Advocacia | **Prov. OAB 205/2021** | Informativa e sóbria; sem honorários, gratuidade, promessa de resultado, caso concreto ou ostentação |
+| Suplementos | **RDC 243/2018 + IN 28** | Só alegação da lista oficial, com texto exato; sem finalidade terapêutica |
+| Cosméticos | **RDC 907/2024** | Sem alegação terapêutica; benefício com dado de eficácia |
+| Finanças | **CVM 20 e 19 + Lei 6.385** | Recomendar ativo exige registro; "não é recomendação" não protege; fundo com aviso de rentabilidade passada |
+| Infoproduto | **CONAR + CDC + Hotmart + Meta** | "Fature R$ X" obriga e precisa de base; sem ganho fácil ou garantido; depoimento autorizado por escrito |
+| Influenciador | **Guia CONAR 2026 + Portaria Conjunta 3/2026** | #publi ou ferramenta de parceria visível de cara; collab sozinho não basta |
 
-Quando o briefing entrar nesses nichos, o orquestrador adiciona disclaimer apropriado em qualquer peça final, sem perguntar.
+Fonte canônica com artigos e links: `references/compliance-br.md` (verificada em 2026-09-28). Revisão completa de uma peça: `/checar-compliance`. Quando o briefing entrar nesses nichos, o orquestrador adiciona disclaimer apropriado em qualquer peça final, sem perguntar.
 
 ### Enquetes para Engajamento
 
@@ -418,6 +421,7 @@ Tabela canônica de roteamento por command; o `/mo` usa esta tabela. Quando o us
 | USP ou proposta de valor | `/criar-usp` | |
 | Oferta (value stack, preço, garantia) | `/criar-oferta` | |
 | Melhorar ou revisar uma peça pronta (copy, roteiro, carrossel, sequência, artigo, página) | `/otimizar-copy` | Diagnóstico, score e reescritas; o especialista do formato revisa a estrutura |
+| Saber se uma peça pode ser publicada: conselho profissional, ANVISA, CVM, CONAR, CDC, LGPD | `/checar-compliance` | Veredito, trechos com a norma e a peça corrigida |
 | Teste A/B | `/criar-teste-ab` | |
 | Responder comentários e DMs | `/responder-comentarios` | Rascunhos; nunca publica |
 | Prospectar creators | `/prospectar-creators` | Rascunhos de outreach; nunca envia |

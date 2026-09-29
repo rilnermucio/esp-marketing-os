@@ -844,6 +844,27 @@
         "F-COPY-03"
       ],
       "notes": "Marketplace (P-f). Regras oficiais na PARTE XII (12.3) da KB de copy."
+    },
+    {
+      "id": "RT-043",
+      "prompt": "sou dentista, posso publicar esse anúncio? 'Avaliação gratuita e clareamento com resultado garantido, parcelado em 10x'",
+      "expected_command": "checar-compliance",
+      "expected_agents": [
+        "mos-copy"
+      ],
+      "dispatch": "simples",
+      "min_output_fields": [
+        "veredito",
+        "norma e artigo por trecho (Código de Ética Odontológica, CFO-196)",
+        "identificação com CRO",
+        "peça corrigida",
+        "não substitui parecer jurídico"
+      ],
+      "detects": [
+        "F-ROUTE-02",
+        "F-CLAIM-02"
+      ],
+      "notes": "P-b. Gratuidade, promessa de resultado e forma de pagamento são vedadas ao dentista."
     }
   ]
 }

@@ -4414,7 +4414,7 @@ CHECKLIST DE CONSISTÊNCIA:
 
 # PARTE XIV: COMPLIANCE E LEGAL
 
-> Cobertura multi-canal completa (CONAR, LGPD, CDC, setoriais, plataformas): `subagents/ads-agent.md` PARTE XVIII. Tabelas locais abaixo são gates de segurança de copy; redundância intencional.
+> **Fonte canônica**: `references/compliance-br.md`, verificada em 2026-09-28 no texto integral das normas (conselhos profissionais, ANVISA, CVM, CONAR, CDC, LGPD). Em conflito com esta PARTE, vale a referência. Cobertura de anúncios: `subagents/ads-agent.md` PARTE XVIII. Tabelas locais abaixo são gates de segurança de copy; redundância intencional.
 
 ## 14.1 LGPD para Copywriters (Brasil)
 

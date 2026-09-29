@@ -192,6 +192,9 @@ WARN_PATTERNS = [
 # Palavras em CAPS (regra global): sequência de 5+ letras maiúsculas que não
 # seja sigla conhecida. Só aviso: títulos e siglas novas têm uso legítimo.
 CAPS_PATTERN = re.compile(r"(?<![\w])[A-ZÁÉÍÓÚÂÊÔÃÕÇ]{5,}(?![\w])")
+# Caixa alta exigida por norma: a Res. CFM 2.336/2023 manda escrever "MÉDICO" na
+# identificação e "NÃO ESPECIALISTA" quando não há RQE (arts. 4º e 13, §1º).
+REGULATORY_CAPS = re.compile(r"(?<![\w])(MÉDIC[OA]|NÃO ESPECIALISTA)(?![\w])")
 CAPS_ALLOWLIST = {
     "ANVISA",
     "CONAR",
@@ -269,7 +272,9 @@ COMPLIANCE_RULES = [
         ],
         "message": (
             "Depoimento detectado SEM disclaimer CONAR. Adicione algo como: "
-            "'Depoimento real. Resultados individuais podem variar.'"
+            "'Depoimento real. Resultados individuais podem variar.' O depoimento "
+            "precisa ser genuíno, comprovável e autorizado por escrito (CONAR, "
+            "art. 27, §9º)."
         ),
     },
     {
@@ -286,6 +291,128 @@ COMPLIANCE_RULES = [
             "Conteúdo com link afiliado detectado SEM disclosure. Adicione algo como: "
             "'Este conteúdo contém links afiliados. Posso receber comissão sem custo "
             "adicional para você.'"
+        ),
+    },
+    # Frases de risco: nenhum aviso resolve, então disclaimer_signals fica vazio.
+    # Artigos conferidos no texto integral das normas em 2026-09-28; detalhes e
+    # fontes em references/compliance-br.md.
+    {
+        "name": "Promessa de resultado",
+        "triggers": [
+            r"\bresultados?\s+garantidos?\b",
+            r"\bgarantia\s+de\s+resultados?\b",
+            r"\bgarant(e|o|imos)\s+(o\s+|os\s+|seu\s+|seus\s+)?resultados?\b",
+            r"\b100%\s+(garantido|eficaz|efetivo)\b",
+        ],
+        "disclaimer_signals": [],
+        "message": (
+            "Promessa de resultado. Vedada para médico (CFM 2.336/2023, art. 11, XII), "
+            "dentista (CFO-196/2019, art. 2º), nutricionista (CFN 599/2018, art. 56), "
+            "psicólogo (CFP, art. 20, e) e advogado (Prov. OAB 205/2021, art. 6º), e "
+            "enganosa pelo CDC (art. 37) se não for comprovável."
+        ),
+    },
+    {
+        "name": "Promessa de ganho",
+        "triggers": [
+            r"\bfatur(e|ar|ando)\s+(até\s+|mais\s+de\s+)?r\$\s?\d",
+            r"\bganh(e|ar)\s+(até\s+|mais\s+de\s+)?r\$\s?\d",
+            r"\brenda\s+extra\s+garantida\b",
+            r"\blucro\s+garantido\b",
+            r"\bdinheiro\s+(fácil|sem\s+esforço)\b",
+            r"\bganh(e|ar)\s+dinheiro\s+(fácil|rápido|dormindo)\b",
+        ],
+        "disclaimer_signals": [],
+        "message": (
+            "Promessa de ganho financeiro. 'Fature R$ X' é oferta que obriga e, sem "
+            "comprovação, é enganosa (CDC, arts. 30, 37 e 38); o CONAR veta exagero de "
+            "remuneração e ganho irreal em curso (Anexo C, item 1; Anexo B, item 11); "
+            "Hotmart (item 3.7) e Meta proíbem ganho fácil ou garantido. Mostre a base "
+            "do número e deixe claro que o resultado varia."
+        ),
+    },
+    {
+        "name": "Gratuidade em serviço profissional",
+        "triggers": [
+            r"\b(consultas?|avaliaç(ão|ões)|diagnósticos?|primeira\s+consulta)\s+"
+            r"(grátis|gratuitas?|gratuitos?|sem\s+compromisso)\b",
+        ],
+        "disclaimer_signals": [],
+        "message": (
+            "Consulta, avaliação ou diagnóstico grátis. Se a peça é de médico, "
+            "dentista, psicólogo ou advogado, é vedado (CFM 2.336, art. 11, §4º, c; "
+            "Código de Ética Odontológica, art. 20, IX; CFP, art. 20, d; OAB 205, "
+            "art. 3º, I)."
+        ),
+    },
+    {
+        "name": "Antes e depois (saúde)",
+        "triggers": [r"\bantes\s+e\s+depois\b"],
+        "disclaimer_signals": [],
+        "message": (
+            "Antes e depois. Em saúde há regra própria: médico só com finalidade "
+            "educativa e os requisitos do art. 14 da CFM 2.336/2023; dentista só "
+            "diagnóstico e conclusão, com TCLE (CFO-196/2019, art. 2º); nutricionista "
+            "não pode, mesmo com autorização (CFN 599/2018, art. 58)."
+        ),
+    },
+    {
+        "name": "Título de melhor profissional",
+        "triggers": [
+            r"\b(o|a)\s+melhor\s+(médic[oa]|dentista|advogad[oa]|psicólog[oa]|"
+            r"nutricionista|cirurgi[ãa]o)\b",
+            r"\breferência\s+n(º|°|o|úmero)\s*1\b",
+        ],
+        "disclaimer_signals": [],
+        "message": (
+            "'Melhor profissional' ou 'referência nº 1'. Vedado para médico (CFM "
+            "2.336, art. 11, XIII e XVI), advogado (OAB 205, art. 3º, IV) e psicólogo "
+            "(CFP, art. 20, f); em qualquer anúncio, dado objetivo precisa de "
+            "comprovação (CONAR, art. 27, §1º)."
+        ),
+    },
+    {
+        "name": "Preço como chamariz (psicologia e advocacia)",
+        "triggers": [
+            r"\bpreço\s+social\b",
+            r"\bvalor\s+acessível\b",
+            r"\bpacote\s+promocional\b",
+        ],
+        "disclaimer_signals": [],
+        "message": (
+            "'Preço social', 'valor acessível' ou 'pacote promocional'. Vedado para "
+            "psicólogo (CFP, art. 20, d, e Nota Técnica 1/2022) e advogado (OAB 205, "
+            "art. 3º, I). Dentista também não anuncia preço (Código de Ética "
+            "Odontológica, art. 44, I)."
+        ),
+    },
+    {
+        "name": "Recomendação de investimento",
+        "triggers": [
+            r"\bisso\s+não\s+é\s+(uma\s+)?recomendação\b",
+            r"\bnão\s+é\s+recomendação\s+de\s+investimento\b",
+        ],
+        "disclaimer_signals": [],
+        "message": (
+            "'Isso não é recomendação' não afasta o caráter profissional quando há "
+            "habitualidade e remuneração, mesmo indireta (Ofício-Circular CVM/SIN "
+            "13/2020). Recomendar ativo exige analista ou consultor registrado (Res. "
+            "CVM 20/2021 e 19/2021); sem registro é crime (Lei 6.385, art. 27-E)."
+        ),
+    },
+    {
+        "name": "Alegação terapêutica em produto",
+        "triggers": [
+            r"\b(cura|elimina|acaba\s+com|trata)\s+(a\s+|o\s+|as\s+|os\s+)?"
+            r"(acne|melasma|celulite|estrias|queda\s+de\s+cabelo|calvície|diabetes|"
+            r"pressão\s+alta|hipertensão|ansiedade|insônia|gastrite|enxaqueca)\b",
+            r"\bsubstitui\s+(o\s+)?(remédio|medicamento)\b",
+        ],
+        "disclaimer_signals": [],
+        "message": (
+            "Alegação terapêutica. Se for cosmético ou suplemento, é proibida e nenhum "
+            "aviso a legitima (RDC 907/2024, art. 12; Lei 6.360, art. 59; RDC "
+            "243/2018, art. 17). Se for serviço de saúde, confira a regra do conselho."
         ),
     },
 ]
@@ -383,7 +510,10 @@ def find_warnings(content: str) -> list:
     for pat, msg in WARN_PATTERNS:
         if re.search(pat, content, flags=re.IGNORECASE):
             warnings.append(msg)
-    caps = sorted({w for w in CAPS_PATTERN.findall(content) if w not in CAPS_ALLOWLIST})
+    caps_source = REGULATORY_CAPS.sub(" ", content)
+    caps = sorted(
+        {w for w in CAPS_PATTERN.findall(caps_source) if w not in CAPS_ALLOWLIST}
+    )
     if caps:
         warnings.append(
             "Palavras em CAPS detectadas ("
@@ -398,20 +528,37 @@ def find_warnings(content: str) -> list:
     return warnings
 
 
-def find_compliance_warnings(content: str) -> list:
-    warnings = []
-    content_lower = content.lower()
+def compliance_findings(content: str) -> list:
+    """Regras de compliance disparadas, com o trecho que disparou cada uma.
+
+    Fonte única para o aviso do hook e para scripts/compliance_check.py.
+    """
+    findings = []
     for rule in COMPLIANCE_RULES:
-        triggered = any(re.search(t, content_lower) for t in rule["triggers"])
-        if not triggered:
+        match = None
+        for trigger in rule["triggers"]:
+            match = re.search(trigger, content, flags=re.IGNORECASE)
+            if match:
+                break
+        if not match:
             continue
-        has_disclaimer = any(
-            re.search(d, content_lower) for d in rule["disclaimer_signals"]
+        if any(
+            re.search(d, content, flags=re.IGNORECASE)
+            for d in rule["disclaimer_signals"]
+        ):
+            continue
+        findings.append(
+            {
+                "regra": rule["name"],
+                "trecho": match.group(0),
+                "mensagem": rule["message"],
+            }
         )
-        if has_disclaimer:
-            continue
-        warnings.append(f"[{rule['name']}] {rule['message']}")
-    return warnings
+    return findings
+
+
+def find_compliance_warnings(content: str) -> list:
+    return [f"[{f['regra']}] {f['mensagem']}" for f in compliance_findings(content)]
 
 
 def evaluate_event(data: dict) -> GateResult:

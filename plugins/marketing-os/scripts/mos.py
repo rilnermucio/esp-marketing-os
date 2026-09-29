@@ -177,6 +177,12 @@ COMMAND_MAP: Dict[str, Dict[str, Tuple[str, str]]] = {
             "Lista cópias instaladas do plugin e versões divergentes",
         ),
     },
+    "compliance": {
+        "check": (
+            "compliance_check.py",
+            "Lista trechos de risco regulatório com a norma (CFM, CFO, CONAR, CVM...)",
+        ),
+    },
     "facts": {
         "check": (
             "check_platform_facts.py",

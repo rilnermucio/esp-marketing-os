@@ -1,6 +1,6 @@
 # Marketing OS
 
-> Plugin para ChatGPT Work, Claude Code e Codex com **21 especialistas** em marketing digital, 51 slash commands no Claude Code e 34 voice clones de copywriters.
+> Plugin para ChatGPT Work, Claude Code e Codex com **21 especialistas** em marketing digital, 52 slash commands no Claude Code e 34 voice clones de copywriters.
 
 [![Version](https://img.shields.io/badge/version-6.16.0-blue.svg)](./CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
@@ -9,7 +9,7 @@
 
 Marketing OS é um plugin para ChatGPT Work, [Claude Code](https://www.anthropic.com/claude-code) e Codex que orquestra 21 especialistas em domínios distintos do marketing digital. O plugin reivindica território explícito sobre briefings de marketing. Quando você pede "cria página de aplicação" ou "monta um webinar", ele roteia os especialistas corretos, preserva dependências entre etapas e executa a camada estratégica antes do build técnico.
 
-**47 dos 51 slash commands** dispatcham subagents `mos-*`. Os 4 que não dispatcham são intencionais: `/publicar-notion` (utility do Notion MCP), `/campanha` (índice dos 6 sub-commands de preset), `/projeto` (orquestrador de workflow com dispatch dinâmico) e `/datas-sazonais` (utilitário de dados do calendário sazonal BR). Use `/mo` pra briefing aberto se não souber qual command escolher. **Conteúdo PT-BR otimizado para o mercado brasileiro.**
+**48 dos 52 slash commands** dispatcham subagents `mos-*`. Os 4 que não dispatcham são intencionais: `/publicar-notion` (utility do Notion MCP), `/campanha` (índice dos 6 sub-commands de preset), `/projeto` (orquestrador de workflow com dispatch dinâmico) e `/datas-sazonais` (utilitário de dados do calendário sazonal BR). Use `/mo` pra briefing aberto se não souber qual command escolher. **Conteúdo PT-BR otimizado para o mercado brasileiro.**
 
 ## Instalação
 
@@ -152,21 +152,22 @@ Ver SKILL.md pra detalhes de cada workflow e "por que essa ordem importa". Tier 
 
 ## Slash commands rápidos
 
-51 commands em `commands/` cobrindo workflows comuns. **47 deles dispatcham subagents `mos-*`** seguindo os workflows da tabela acima (os 4 sem dispatch são utilities intencionais: `/publicar-notion`, `/campanha` índice, `/projeto` e `/datas-sazonais`). Quando você invoca direto (`/criar-carrossel`), segue lógica do command file. Quando pede em linguagem natural ("cria carrossel sobre X"), o orquestrador da skill dispatcha conforme tabela.
+52 commands em `commands/` cobrindo workflows comuns. **48 deles dispatcham subagents `mos-*`** seguindo os workflows da tabela acima (os 4 sem dispatch são utilities intencionais: `/publicar-notion`, `/campanha` índice, `/projeto` e `/datas-sazonais`). Quando você invoca direto (`/criar-carrossel`), segue lógica do command file. Quando pede em linguagem natural ("cria carrossel sobre X"), o orquestrador da skill dispatcha conforme tabela.
 
 | Categoria | Commands |
 |---|---|
 | Meta-orquestrador | `/mo` (briefing aberto, roteia pro command apropriado) |
-| Conteúdo social | `/criar-post`, `/criar-carrossel`, `/criar-calendario` |
+| Conteúdo social | `/criar-post`, `/criar-carrossel`, `/criar-calendario`, `/reaproveitar` (uma fonte pilar vira várias peças) |
 | Copy | `/otimizar-copy` (diagnóstico + score + reescrita de copy existente) |
+| Compliance | `/checar-compliance` (conselhos, ANVISA, CVM, CONAR, CDC e LGPD, com a norma de cada ponto e a peça corrigida) |
 | Vídeo/áudio | `/criar-video`, `/criar-podcast`, `/narrar-roteiro`, `/produzir-reels` (vídeo legendado renderizado) |
 | Páginas/funis | `/criar-landing-page`, `/criar-funil`, `/criar-webinar` |
 | Email | `/criar-email`, `/criar-sequencia` |
 | Ads | `/criar-anuncio`, `/publicar-anuncio` |
 | Infoproduto | `/criar-infoproduto` |
 | Oferta | `/criar-oferta` (USP preservada, evidências, value stack, preço, garantia, score e validação) |
-| Pesquisa de público | `/criar-avatar` (evidências, avatar principal, segmentos, anti-avatar, JTBD e handoff) |
-| Marca e posicionamento | `/criar-usp` (USP principal, evidências, diferenciação, score, validação e handoff) |
+| Pesquisa de público | `/criar-avatar` (evidências, avatar principal, segmentos, anti-avatar, JTBD e handoff), `/minerar-voc` (dores, desejos e objeções literais de reviews) |
+| Marca e posicionamento | `/configurar-marca` (perfil da marca lido por todos os especialistas), `/criar-usp` (USP principal, evidências, diferenciação, score, validação e handoff) |
 | Comunidade | `/responder-comentarios` (triagem + rascunhos de comentários/DMs) |
 | Parcerias | `/prospectar-creators` (shortlist + outreach de creators) |
 | Voice clones | `/criar-clone` (expert externo), `/criar-meu-clone` (suas amostras) |
@@ -187,7 +188,7 @@ Marketing OS/
 ├── agents/                 # 21 native subagents (mos-*.md)
 ├── skills/marketing-os/    # Skill entrypoint (SKILL.md = orquestrador)
 ├── subagents/              # Tier 2 knowledge bases (~3500 linhas cada)
-├── commands/               # 51 slash commands (47 com dispatch + /publicar-notion + /campanha índice + /projeto + /datas-sazonais)
+├── commands/               # 52 slash commands (48 com dispatch + /publicar-notion + /campanha índice + /projeto + /datas-sazonais)
 ├── workflows/              # 9 workflows end-to-end documentados
 ├── assets/                 # Frameworks, personas, prompts, swipe files,
 │   ├── clones/             #   templates, 34 voice clones (+ design-dna)
