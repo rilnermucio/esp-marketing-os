@@ -19,24 +19,24 @@ argument-hint: "<base/contexto> [--segmento=inativos-90dias|vip|risco|todos] [--
 **Fase 1 (paralelo, entender LTV/churn antes de agir):**
 
 ```
-- Agent(subagent_type: "mos-research", prompt: "Análise da base atual: segmentação por recência/valor, identificação de clientes inativos (>90d), perfil de churn (motivos), ticket médio histórico. Considere memory do cliente.")
+- Agent(subagent_type: "marketing-os:mos-research", prompt: "Análise da base atual: segmentação por recência/valor, identificação de clientes inativos (>90d), perfil de churn (motivos), ticket médio histórico. Considere memory do cliente.")
 
-- Agent(subagent_type: "mos-analytics", prompt: "Métricas de retenção: LTV médio, taxa de churn mensal, segmento VIP (top 20%), padrões de queda de engajamento. Setup de alertas de risco.")
+- Agent(subagent_type: "marketing-os:mos-analytics", prompt: "Métricas de retenção: LTV médio, taxa de churn mensal, segmento VIP (top 20%), padrões de queda de engajamento. Setup de alertas de risco.")
 ```
 
 **Fase 2 (paralelo, depende dos segmentos da Fase 1):**
 
 ```
-- Agent(subagent_type: "mos-email", prompt: "Sequências por segmento clone=abraham:
+- Agent(subagent_type: "marketing-os:mos-email", prompt: "Sequências por segmento clone=abraham:
   - Inativos 90+d: 5 emails em 14d (reconexão genuína + oferta de retorno)
   - Ativos < 90d: upsell/cross-sell (estilo Hormozi confiante)
   - VIP top 20%: programa de fidelidade + indicação personalizada
   - Em risco de churn: 3 emails rápidos perguntando o problema + suporte personalizado
   Considere memory.")
 
-- Agent(subagent_type: "mos-copy", prompt: "Copy de reativação e upsell clone=abraham: headlines que evocam reconexão (não desconto barato), CTAs de retorno, emails de programa de indicação.")
+- Agent(subagent_type: "marketing-os:mos-copy", prompt: "Copy de reativação e upsell clone=abraham: headlines que evocam reconexão (não desconto barato), CTAs de retorno, emails de programa de indicação.")
 
-- Agent(subagent_type: "mos-social", prompt: "Conteúdo pra clientes existentes: bastidores, novidades, casos de uso avançados. Reforça valor pra quem já comprou. Quality gates + enquete.")
+- Agent(subagent_type: "marketing-os:mos-social", prompt: "Conteúdo pra clientes existentes: bastidores, novidades, casos de uso avançados. Reforça valor pra quem já comprou. Quality gates + enquete.")
 ```
 
 ## Segmentação
@@ -82,7 +82,7 @@ OPERAÇÃO MENSAL:
 
 ## Quality Gates (antes de entregar)
 
-Aplicar gates globais do `skills/marketing-os/SKILL.md`:
+Aplicar gates globais do `${CLAUDE_PLUGIN_ROOT}/skills/marketing-os/SKILL.md`:
 - Sem `—`, sem "brutal", sem CAPS gratuito
 - Acentuação PT-BR correta
 - Compliance regulatório se nicho saúde/finanças/suplementos

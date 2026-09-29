@@ -25,7 +25,7 @@ Exemplos:
 Caso contrário, rode:
 
 ```bash
-python ${CLAUDE_PLUGIN_ROOT}/scripts/audit_detector.py "$ARGUMENTS"
+python scripts/audit_detector.py "$ARGUMENTS"
 ```
 
 Se sair erro, repasse a mensagem e aborte. Se sair JSON, parse e use `type`, `normalized`, `slug`.
@@ -105,7 +105,7 @@ Use a tool Write para salvar `scores.json` em `${RUN_DIR}/scores.json` com o con
 ## Passo 5: Calcular score final
 
 ```bash
-python ${CLAUDE_PLUGIN_ROOT}/scripts/audit_scoring.py < ${RUN_DIR}/scores.json
+python scripts/audit_scoring.py < ${RUN_DIR}/scores.json
 ```
 
 Output: JSON com `overall`, `partial`, `dimensions`, `top_wins`, `top_fixes`, `scorecard_md`, `priorities_md`.
@@ -171,7 +171,7 @@ CONFIG_PATH=""
 if [ -f .auditoria-config.json ]; then
   CONFIG_PATH=".auditoria-config.json"
 fi
-python ${CLAUDE_PLUGIN_ROOT}/scripts/pdf_generator.py "${RUN_DIR}/RELATORIO.md" "${RUN_DIR}/RELATORIO.pdf" $CONFIG_PATH
+python scripts/pdf_generator.py "${RUN_DIR}/RELATORIO.md" "${RUN_DIR}/RELATORIO.pdf" $CONFIG_PATH
 ```
 
 Se PDF falhar: imprima `PDF generation failed: <error>. Markdown disponível em <path>`. Não aborte.

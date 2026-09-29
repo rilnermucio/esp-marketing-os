@@ -5,7 +5,6 @@ from __future__ import annotations
 import re
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parents[2]
 COMMAND = ROOT / "commands" / "criar-avatar.md"
 RESEARCH_AGENT = ROOT / "agents" / "mos-research.md"
@@ -24,7 +23,7 @@ def test_criar_avatar_command_exists() -> None:
 def test_criar_avatar_dispatches_only_mos_research() -> None:
     content = _read(COMMAND)
     dispatched = re.findall(
-        r'subagent_type:\s*["\']?(mos-[a-z-]+)["\']?', content
+        r'subagent_type:\s*["\']?(?:marketing-os:)?(mos-[a-z-]+)["\']?', content
     )
 
     assert dispatched == ["mos-research"]

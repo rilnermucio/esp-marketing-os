@@ -5,7 +5,7 @@ argument-hint: "<type and purpose, e.g., 'welcome sequence for SaaS' or 'launch 
 
 # /criar-email: Email Marketing (Dispatch-Based)
 
-Cria copy de email orquestrando subagent(s) especializados via `Agent(subagent_type: "mos-*")`. Não produz inline.
+Cria copy de email orquestrando subagent(s) especializados via `Agent(subagent_type: "marketing-os:mos-*")`. Não produz inline.
 
 ## Required inputs (ask if missing)
 
@@ -38,15 +38,15 @@ Briefing recebido
 ## Dispatch Simples (single email ou newsletter)
 
 ```
-Agent(subagent_type: "mos-email", prompt: "Crie [single email | newsletter] sobre [tópico/oferta]. Goal: [goal]. Audiência: [audiência]. Tom: [tom]. CTA: [cta]. Produto/oferta (se aplica): [produto]. Entregue: 3 opções de subject line (curiosidade, benefício, urgência), preview text, opening hook, body com framework adequado (PAS, AIDA, ou newsletter schema), CTA único e forte, PS estratégico, send timing recomendado, sugestões de A/B test (subject + CTA). Aplicar quality gates globais (sem travessão, sem 'brutal', máx 1 emoji em subject, PT-BR correto).")
+Agent(subagent_type: "marketing-os:mos-email", prompt: "Crie [single email | newsletter] sobre [tópico/oferta]. Goal: [goal]. Audiência: [audiência]. Tom: [tom]. CTA: [cta]. Produto/oferta (se aplica): [produto]. Entregue: 3 opções de subject line (curiosidade, benefício, urgência), preview text, opening hook, body com framework adequado (PAS, AIDA, ou newsletter schema), CTA único e forte, PS estratégico, send timing recomendado, sugestões de A/B test (subject + CTA). Aplicar quality gates globais (sem travessão, sem 'brutal', máx 1 emoji em subject, PT-BR correto).")
 ```
 
 ## Dispatch Paralelo (sequências, single message)
 
 ```
-- Agent(subagent_type: "mos-email", prompt: "Crie sequência [welcome/launch/abandoned cart/re-engagement/nurture] com [N] emails sobre [tópico/oferta]. Goal: [goal]. Audiência: [audiência]. Tom: [tom]. Produto/oferta: [produto]. Entregue: arquitetura completa da sequência (timing email-a-email, função de cada um, progressão narrativa), corpo completo de cada email (opening + body + CTA + PS), send timing por email, transição entre emails. Aplicar quality gates globais.")
+- Agent(subagent_type: "marketing-os:mos-email", prompt: "Crie sequência [welcome/launch/abandoned cart/re-engagement/nurture] com [N] emails sobre [tópico/oferta]. Goal: [goal]. Audiência: [audiência]. Tom: [tom]. Produto/oferta: [produto]. Entregue: arquitetura completa da sequência (timing email-a-email, função de cada um, progressão narrativa), corpo completo de cada email (opening + body + CTA + PS), send timing por email, transição entre emails. Aplicar quality gates globais.")
 
-- Agent(subagent_type: "mos-copy", prompt: "Refine subject lines e CTAs para sequência de [N] emails sobre [tópico/oferta]. Audiência: [audiência]. Para CADA email da sequência entregue: 3 variações de subject line (curiosidade, benefício, urgência), 1 preview text complementar, 2 variações de CTA (botão + link de texto). Foco em open rate (subject) e click-through (CTA). Aplicar quality gates globais (sem travessão, sem 'brutal', máx 1 emoji em subject).")
+- Agent(subagent_type: "marketing-os:mos-copy", prompt: "Refine subject lines e CTAs para sequência de [N] emails sobre [tópico/oferta]. Audiência: [audiência]. Para CADA email da sequência entregue: 3 variações de subject line (curiosidade, benefício, urgência), 1 preview text complementar, 2 variações de CTA (botão + link de texto). Foco em open rate (subject) e click-through (CTA). Aplicar quality gates globais (sem travessão, sem 'brutal', máx 1 emoji em subject).")
 ```
 
 ## Consolidação
@@ -106,7 +106,7 @@ Tipo: [single | welcome | nurture | launch | cart | re-engagement | newsletter] 
 
 ## Quality Gates (antes de entregar)
 
-Aplicar gates globais do `skills/marketing-os/SKILL.md`:
+Aplicar gates globais do `${CLAUDE_PLUGIN_ROOT}/skills/marketing-os/SKILL.md`:
 - Sem `—`, sem "brutal", sem CAPS gratuito
 - Subject lines com máx 1 emoji (só se brand-appropriate); body com máx 1-2 emojis
 - Subject 30-50 chars (mobile-friendly), preview <90 chars

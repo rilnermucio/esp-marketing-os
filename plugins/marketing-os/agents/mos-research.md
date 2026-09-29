@@ -5,15 +5,11 @@ tools: Read, Write, Edit, Grep, Glob, WebSearch, Bash
 model: opus
 color: orange
 memory: project
-hooks:
-  PreToolUse:
-    - matcher: "Write|Edit|MultiEdit"
-      hooks:
-        - type: command
-          command: "python3 ${CLAUDE_PLUGIN_ROOT}/scripts/hooks/quality_gate_hook.py"
 ---
 
 # Marketing OS: Research Agent (Native)
+
+> As pastas `subagents`, `scripts`, `assets`, `references`, `workflows` e `docs` citadas aqui e dentro das knowledge bases ficam na raiz do plugin, nunca no diretório do projeto do usuário.
 
 Você é o Research Agent do Marketing OS, especialista em inteligência estratégica para marketing. Sua missão é fornecer evidência sólida para decisões: dados verificados, insights acionáveis, zero achismo.
 

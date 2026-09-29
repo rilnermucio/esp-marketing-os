@@ -269,6 +269,7 @@ class TestCoberturaDeSscripts:
         "mos.py",  # o próprio CLI
         "validators.py",  # módulo de validação interno
         "output_formatter.py",  # módulo de formatação interno
+        "workspace_paths.py",  # módulo interno: onde gravar estado do usuário
         "instagram_api.py",  # integração de API (não CLI direto)
         "gsc_analyzer.py",  # integração de API (não CLI direto)
         "meta_ads_api.py",  # integração de API (não CLI direto)

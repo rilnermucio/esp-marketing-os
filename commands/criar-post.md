@@ -46,9 +46,9 @@ Quando o briefing é novo/amplo:
 ```
 Em um único message, invoque em paralelo:
 
-- Agent(subagent_type: "mos-research", prompt: "Pesquisa rápida: tendências atuais de [tema], concorrentes ativos em [plataforma] BR, dores do público [audiência], dados/estatísticas relevantes dos últimos 90 dias. Considere memory existente do cliente neste projeto. Retorne research brief compacto.")
+- Agent(subagent_type: "marketing-os:mos-research", prompt: "Pesquisa rápida: tendências atuais de [tema], concorrentes ativos em [plataforma] BR, dores do público [audiência], dados/estatísticas relevantes dos últimos 90 dias. Considere memory existente do cliente neste projeto. Retorne research brief compacto.")
 
-- Agent(subagent_type: "mos-social", prompt: "Crie post [plataforma] sobre [tema]. Audiência: [descrição]. Tom: [tom]. Goal: [goal]. Format: [format]. CTA: [cta]. Considere memory existente do cliente neste projeto. Aplique schema padrão + 3 hooks + variações A/B + hashtags + horário + enquete de engajamento.")
+- Agent(subagent_type: "marketing-os:mos-social", prompt: "Crie post [plataforma] sobre [tema]. Audiência: [descrição]. Tom: [tom]. Goal: [goal]. Format: [format]. CTA: [cta]. Considere memory existente do cliente neste projeto. Aplique schema padrão + 3 hooks + variações A/B + hashtags + horário + enquete de engajamento.")
 ```
 
 ### Exemplo de dispatch sequencial
@@ -56,10 +56,10 @@ Em um único message, invoque em paralelo:
 Quando precisa de research ANTES de copy (research informa os hooks):
 
 ```
-Passo 1: Agent(subagent_type: "mos-research", prompt: "...")
+Passo 1: Agent(subagent_type: "marketing-os:mos-research", prompt: "...")
   → Aguarde research brief
 
-Passo 2: Agent(subagent_type: "mos-social", prompt: "..., usando este research: [colar brief]")
+Passo 2: Agent(subagent_type: "marketing-os:mos-social", prompt: "..., usando este research: [colar brief]")
   → Post final
 ```
 
@@ -124,7 +124,7 @@ Tendências ativas: [Lista com datas]
 
 ## Quality Gates (antes de entregar)
 
-Aplicar gates globais do `skills/marketing-os/SKILL.md`:
+Aplicar gates globais do `${CLAUDE_PLUGIN_ROOT}/skills/marketing-os/SKILL.md`:
 - Sem `—`, sem "brutal", sem CAPS gratuito
 - Sem aspas em roteiros/falas (escrever direto)
 - Máximo 1-2 emojis (preferir zero)

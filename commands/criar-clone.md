@@ -5,7 +5,7 @@ argument-hint: "<expert-name> [specialty]"
 
 # /criar-clone: Clone de Expert Externo (Workflow estruturado, dispatch real)
 
-Cria clone de copywriter / autoridade externa pesquisando via web e gerando os 4 arquivos canônicos em `assets/clones/{slug}/`. Estrutura em fases, mas execução **toda via dispatch** (não inline).
+Cria clone de copywriter / autoridade externa pesquisando via web e gerando os 4 arquivos canônicos em `${CLAUDE_PLUGIN_ROOT}/assets/clones/{slug}/`. Estrutura em fases, mas execução **toda via dispatch** (não inline).
 
 > **Diferença de `/criar-meu-clone`**: este pesquisa expert externo via web (Halbert, Hopkins, Hormozi, etc.). O outro analisa amostras LOCAIS do usuário.
 
@@ -21,14 +21,14 @@ Cria clone de copywriter / autoridade externa pesquisando via web e gerando os 4
 
 Antes de dispatchar:
 
-1. Verificar que `assets/clones/{slug}/` NÃO existe. Se existir, perguntar ao user: overwrite ou abortar.
-2. Verificar que `assets/clones/clone-manifest.yaml` existe.
-3. Listar 2-3 clones existentes (`assets/clones/hormozi/`, etc.) como referência de padrão.
+1. Verificar que `${CLAUDE_PLUGIN_ROOT}/assets/clones/{slug}/` NÃO existe. Se existir, perguntar ao user: overwrite ou abortar.
+2. Verificar que `${CLAUDE_PLUGIN_ROOT}/assets/clones/clone-manifest.yaml` existe.
+3. Listar 2-3 clones existentes (`${CLAUDE_PLUGIN_ROOT}/assets/clones/hormozi/`, etc.) como referência de padrão.
 
 ## Phase 1: Research (Dispatch, mos-research)
 
 ```
-Agent(subagent_type: "mos-research", prompt: "Pesquisa profunda sobre o expert [Nome completo]. Use WebSearch em múltiplas queries: '\"[nome]\" filosofia frameworks methodology', '\"[nome]\" writing style voice', '\"[nome]\" books career biography', '\"[nome]\" content examples copy', '\"[nome]\" frameworks proprietários', '\"[nome]\" famous quotes phrases'.
+Agent(subagent_type: "marketing-os:mos-research", prompt: "Pesquisa profunda sobre o expert [Nome completo]. Use WebSearch em múltiplas queries: '\"[nome]\" filosofia frameworks methodology', '\"[nome]\" writing style voice', '\"[nome]\" books career biography', '\"[nome]\" content examples copy', '\"[nome]\" frameworks proprietários', '\"[nome]\" famous quotes phrases'.
 
 Retorne brief estruturado nas 7 categorias canônicas dos clones:
 1. Identidade, nome, empresa(s), papel atual, livros, reconhecimento público (com números quando possível)
@@ -51,9 +51,9 @@ REGRA CRÍTICA: apenas informação verificada. Não inventar frameworks, quotes
 Com o brief em mãos, dispatcha `mos-copy` para gerar os 4 arquivos seguindo o padrão dos clones existentes.
 
 ```
-Agent(subagent_type: "mos-copy", prompt: "Gere os 4 arquivos canônicos do clone de [Nome] em assets/clones/{slug}/ usando este research como única fonte factual: [colar brief inteiro do mos-research].
+Agent(subagent_type: "marketing-os:mos-copy", prompt: "Gere os 4 arquivos canônicos do clone de [Nome] em ${CLAUDE_PLUGIN_ROOT}/assets/clones/{slug}/ usando este research como única fonte factual: [colar brief inteiro do mos-research].
 
-Padrão de referência: clones já existentes em assets/clones/ (ex: hormozi/, halbert/, hopkins/). Você já conhece o schema dos 4 arquivos via knowledge base do agent. Resumo dos targets:
+Padrão de referência: clones já existentes em ${CLAUDE_PLUGIN_ROOT}/assets/clones/ (ex: hormozi/, halbert/, hopkins/). Você já conhece o schema dos 4 arquivos via knowledge base do agent. Resumo dos targets:
 
 1. profile.md (~100 linhas), Identidade, Filosofia Central + Princípios Fundamentais (5), Trajetória + Marcos, Audiência Típica, Estilo de Comunicação (tabela), Diferenciação (5), Quando Usar Este Clone (tabela com Excelente/Muito bom/Não recomendado), Tópicos de Domínio (8)
 
@@ -67,7 +67,7 @@ REGRAS:
 - Tudo em PT-BR com acentuação correta
 - Aplicar quality gates globais (sem '—', sem 'brutal', sem CAPS, sem aspas em falas, máx 1-2 emojis)
 - Apenas info do research, se algo está [VERIFICAR], suavizar ou omitir
-- Salvar via Write em: assets/clones/{slug}/profile.md, voice.md, frameworks.md, examples.md
+- Salvar via Write em: ${CLAUDE_PLUGIN_ROOT}/assets/clones/{slug}/profile.md, voice.md, frameworks.md, examples.md
 - Total alvo: ~700 linhas nos 4 arquivos somados
 
 Considere memory existente do cliente neste projeto."
@@ -79,7 +79,7 @@ Considere memory existente do cliente neste projeto."
 
 ## Phase 3: Update do manifest (orquestrador inline)
 
-Append entry em `assets/clones/clone-manifest.yaml`, na seção `clones:` (ANTES de `matching_rules:`), seguindo o formato dos existentes:
+Append entry em `${CLAUDE_PLUGIN_ROOT}/assets/clones/clone-manifest.yaml`, na seção `clones:` (ANTES de `matching_rules:`), seguindo o formato dos existentes:
 
 ```yaml
   {slug}:
@@ -108,7 +108,7 @@ Reporte falhas específicas se algo faltar e dispatcha `mos-copy` de novo pra co
 
 ## Quality Gates (antes de entregar)
 
-Aplicar gates globais do `skills/marketing-os/SKILL.md`:
+Aplicar gates globais do `${CLAUDE_PLUGIN_ROOT}/skills/marketing-os/SKILL.md`:
 - Sem `—`, sem "brutal", sem CAPS gratuito, sem aspas em falas (escrever direto)
 - Acentuação PT-BR correta em tudo
 - Compliance: se o expert atua em saúde/finanças/suplementos, exemplos de copy precisam respeitar disclaimers do nicho
@@ -122,7 +122,7 @@ Após completar, mostre:
 Clone criado: [Nome do expert]
 
 Arquivos gerados:
-  assets/clones/{slug}/
+  ${CLAUDE_PLUGIN_ROOT}/assets/clones/{slug}/
   ├── profile.md    ([N] linhas)
   ├── voice.md      ([N] linhas)
   ├── frameworks.md ([N] linhas)

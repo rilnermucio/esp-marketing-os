@@ -5,7 +5,7 @@ argument-hint: "<copy colada, path de arquivo, ou o que otimizar (ex: 'headline 
 
 # /otimizar-copy: Diagnóstico e Reescrita de Copy (Dispatch-Based)
 
-Recebe copy existente (colada na conversa ou em arquivo), diagnostica por que ela não performa e entrega reescritas escoradas com hipóteses de teste. Orquestra via `Agent(subagent_type: "mos-copy")`. Não produz inline.
+Recebe copy existente (colada na conversa ou em arquivo), diagnostica por que ela não performa e entrega reescritas escoradas com hipóteses de teste. Orquestra via `Agent(subagent_type: "marketing-os:mos-copy")`. Não produz inline.
 
 É o command pro trabalho de copy mais frequente do dia a dia: melhorar o que já existe, em vez de criar do zero.
 
@@ -23,7 +23,7 @@ Recebe copy existente (colada na conversa ou em arquivo), diagnostica por que el
 Single message:
 
 ```
-Agent(subagent_type: "mos-copy", prompt: "Otimize a copy existente abaixo. Formato: [formato]. Objetivo: [objetivo]. Sintoma reportado: [sintoma ou 'nenhum']. Público: [público se informado]. Oferta: [oferta se informada]. Métricas atuais: [baseline ou 'não informadas'].
+Agent(subagent_type: "marketing-os:mos-copy", prompt: "Otimize a copy existente abaixo. Formato: [formato]. Objetivo: [objetivo]. Sintoma reportado: [sintoma ou 'nenhum']. Público: [público se informado]. Oferta: [oferta se informada]. Métricas atuais: [baseline ou 'não informadas'].
 
 COPY ORIGINAL:
 [copy completa]
@@ -33,15 +33,15 @@ Processo obrigatório:
 2. Score a peça original com o Copy Score System (PARTE XV): Clareza, Persuasão, Ação, Relevância, Legibilidade
 3. Identifique o nível de consciência real do público (PARTE I, 1.3) e diga se a copy original fala com o nível errado
 4. Reescreva: 3-5 variações com hipóteses A/B distintas, cada uma atacando um problema diagnosticado diferente
-5. Score cada variação com o mesmo sistema e rode o lint determinístico (scripts/quality_gate.py; headline_scorer.py se for headline)
+5. Score cada variação com o mesmo sistema e rode o lint determinístico (${CLAUDE_PLUGIN_ROOT}/scripts/quality_gate.py; headline_scorer.py se for headline)
 6. Entregue top 2-3 com: score antes vs depois, o que mudou e por quê, hipótese de teste no formato 'se X então Y porque Z', métrica primária
 
 Aplicar quality gates globais (sem travessão, sem 'brutal', sem antítese negação/afirmação, acentuação PT-BR, máx 1 emoji).")
 ```
 
 **Escalações** (apenas se necessário):
-- Peça de venda high-stakes (sales page, VSL, lançamento) sem research de público: dispatchar `Agent(subagent_type: "mos-research")` ANTES, porque o pre-flight do mos-copy exige research pra esse tipo de peça
-- Sintoma é de funil, não de peça ("a página inteira converte mal"): redirecionar pra `/criar-landing-page` ou `Agent(subagent_type: "mos-funnel")`
+- Peça de venda high-stakes (sales page, VSL, lançamento) sem research de público: dispatchar `Agent(subagent_type: "marketing-os:mos-research")` ANTES, porque o pre-flight do mos-copy exige research pra esse tipo de peça
+- Sintoma é de funil, não de peça ("a página inteira converte mal"): redirecionar pra `/criar-landing-page` ou `Agent(subagent_type: "marketing-os:mos-funnel")`
 
 ## Consolidação
 
@@ -79,7 +79,7 @@ Score: [N]/100 | O que mudou: [...]
 
 ## Quality Gates (antes de entregar)
 
-Aplicar gates globais do `skills/marketing-os/SKILL.md`:
+Aplicar gates globais do `${CLAUDE_PLUGIN_ROOT}/skills/marketing-os/SKILL.md`:
 - Sem `—`, sem "brutal", sem antítese negação→afirmação ("Não é X / É Y"), sem CAPS gratuito
 - Acentuação PT-BR correta
 - Fact-check via WebSearch para stat/case/citação adicionada na reescrita

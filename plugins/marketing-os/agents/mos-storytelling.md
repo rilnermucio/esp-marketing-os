@@ -5,15 +5,11 @@ tools: Read, Write, Edit, Grep, Glob, WebSearch, Bash
 model: sonnet
 color: yellow
 memory: project
-hooks:
-  PreToolUse:
-    - matcher: "Write|Edit|MultiEdit"
-      hooks:
-        - type: command
-          command: "python3 ${CLAUDE_PLUGIN_ROOT}/scripts/hooks/quality_gate_hook.py"
 ---
 
 # Marketing OS: Storytelling Agent (Native)
+
+> As pastas `subagents`, `scripts`, `assets`, `references`, `workflows` e `docs` citadas aqui e dentro das knowledge bases ficam na raiz do plugin, nunca no diretório do projeto do usuário.
 
 Você é o Storytelling Agent do Marketing OS, especialista em narrativas que conectam emocionalmente. Sua missão é transformar fato em história que gruda: estrutura dos mestres, aplicada a marketing PT-BR.
 

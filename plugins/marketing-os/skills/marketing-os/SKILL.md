@@ -5,6 +5,8 @@ description: "Use para produção de marketing digital: posts Instagram/LinkedIn
 
 # Marketing OS: Sistema Operacional de Marketing Digital
 
+> As pastas `subagents`, `scripts`, `assets`, `references`, `workflows` e `docs` citadas aqui e dentro das knowledge bases ficam na raiz do plugin, nunca no diretório do projeto do usuário.
+
 Este skill é um **orquestrador** para 21 especialistas de marketing. No Claude Code, ele usa subagents nativos. No ChatGPT Work e no Codex, ele usa a mesma arquitetura em modo compatível: roteia o briefing para o especialista correto, lê os arquivos Tier 1/Tier 2 necessários e, quando houver ferramenta de multi-agent disponível, pode paralelizar as etapas independentes.
 
 ## Modo de Operação: Orquestração por Ambiente

@@ -21,7 +21,7 @@ Exemplo:
   /auditoria-pro https://stripe.com
 ```
 
-Rode `python ${CLAUDE_PLUGIN_ROOT}/scripts/audit_detector.py "$ARGUMENTS"`. Se type != "landing", aborte com mensagem clara. Senão, capture `type`, `normalized`, `slug`.
+Rode `python "${CLAUDE_PLUGIN_ROOT}/scripts/audit_detector.py" "$ARGUMENTS"`. Se type != "landing", aborte com mensagem clara. Senão, capture `type`, `normalized`, `slug`.
 
 ## Passo 2: Criar diretório do run
 
@@ -38,7 +38,7 @@ Use Bash + 7 Agent calls em UMA SÓ mensagem.
 ### Bash: Capturar screenshots
 
 ```bash
-python ${CLAUDE_PLUGIN_ROOT}/scripts/audit_screenshot.py \
+python "${CLAUDE_PLUGIN_ROOT}/scripts/audit_screenshot.py" \
   --url "${NORMALIZED}" \
   --output-dir "${RUN_DIR}/screenshots" \
   --timeout-ms 30000
@@ -52,13 +52,13 @@ Cada agent recebe a instrução ADICIONAL premium (vs `/auditoria` v1):
 
 Dispatchs (todos com a instrução adicional acima concatenada ao prompt):
 
-- `Agent(subagent_type: "mos-research", prompt: "Posicionamento competitivo de {normalized}. Identifique top 3 concorrentes diretos, como {normalized} se diferencia (ou não), tabela comparativa de proposta de valor.")`
-- `Agent(subagent_type: "mos-seo", prompt: "Audit técnico + on-page completo de {normalized}. Title, meta, headings, schema, performance (CWV), mobile, internal linking, alt text. Dê diagnóstico denso com tabela de issues priorizadas.")`
-- `Agent(subagent_type: "mos-copy", prompt: "Audit headline + value proposition + CTAs + copy de prova social em {normalized}. Para cada elemento fraco, mostre antes/depois com versão reescrita.")`
-- `Agent(subagent_type: "mos-funnel", prompt: "Mapeie o funil de {normalized}. Identifique friction points, gaps, diagrama ASCII do fluxo, oportunidades de conversão por etapa.")`
-- `Agent(subagent_type: "mos-ads", prompt: "Avalie CTA strategy + conversion path em {normalized}. Placement, urgency, prova social, trust signals. Inclua diagnóstico do path completo do visitante até a conversão.")`
-- `Agent(subagent_type: "mos-design", prompt: "Hierarquia visual + clareza + acessibilidade WCAG + paleta de cores em {normalized}. Aponte issues de contraste, espaçamento, tipografia.")`
-- `Agent(subagent_type: "mos-brand", prompt: "Voice + arquétipo + identidade verbal e visual de {normalized}. Avalie consistência entre headline, copy e visual.")`
+- `Agent(subagent_type: "marketing-os:mos-research", prompt: "Posicionamento competitivo de {normalized}. Identifique top 3 concorrentes diretos, como {normalized} se diferencia (ou não), tabela comparativa de proposta de valor.")`
+- `Agent(subagent_type: "marketing-os:mos-seo", prompt: "Audit técnico + on-page completo de {normalized}. Title, meta, headings, schema, performance (CWV), mobile, internal linking, alt text. Dê diagnóstico denso com tabela de issues priorizadas.")`
+- `Agent(subagent_type: "marketing-os:mos-copy", prompt: "Audit headline + value proposition + CTAs + copy de prova social em {normalized}. Para cada elemento fraco, mostre antes/depois com versão reescrita.")`
+- `Agent(subagent_type: "marketing-os:mos-funnel", prompt: "Mapeie o funil de {normalized}. Identifique friction points, gaps, diagrama ASCII do fluxo, oportunidades de conversão por etapa.")`
+- `Agent(subagent_type: "marketing-os:mos-ads", prompt: "Avalie CTA strategy + conversion path em {normalized}. Placement, urgency, prova social, trust signals. Inclua diagnóstico do path completo do visitante até a conversão.")`
+- `Agent(subagent_type: "marketing-os:mos-design", prompt: "Hierarquia visual + clareza + acessibilidade WCAG + paleta de cores em {normalized}. Aponte issues de contraste, espaçamento, tipografia.")`
+- `Agent(subagent_type: "marketing-os:mos-brand", prompt: "Voice + arquétipo + identidade verbal e visual de {normalized}. Avalie consistência entre headline, copy e visual.")`
 
 ## Passo 4: Salvar outputs raw
 
@@ -103,13 +103,13 @@ Monte o JSON `scores.json` em `${RUN_DIR}/`:
 ## Passo 6: Calcular score final
 
 ```bash
-python ${CLAUDE_PLUGIN_ROOT}/scripts/audit_scoring.py < "${RUN_DIR}/scores.json" > "${RUN_DIR}/scoring_output.json"
+python "${CLAUDE_PLUGIN_ROOT}/scripts/audit_scoring.py" < "${RUN_DIR}/scores.json" > "${RUN_DIR}/scoring_output.json"
 ```
 
 ## Passo 7: Gerar radar chart
 
 ```bash
-python ${CLAUDE_PLUGIN_ROOT}/scripts/audit_radar_chart.py \
+python "${CLAUDE_PLUGIN_ROOT}/scripts/audit_radar_chart.py" \
   --scores-json "${RUN_DIR}/scoring_output.json" \
   --output "${RUN_DIR}/charts/radar_scorecard.png"
 ```
@@ -117,7 +117,7 @@ python ${CLAUDE_PLUGIN_ROOT}/scripts/audit_radar_chart.py \
 ## Passo 8: Gerar roadmap
 
 ```bash
-python ${CLAUDE_PLUGIN_ROOT}/scripts/audit_roadmap_generator.py < "${RUN_DIR}/scoring_output.json" > "${RUN_DIR}/roadmap.json"
+python "${CLAUDE_PLUGIN_ROOT}/scripts/audit_roadmap_generator.py" < "${RUN_DIR}/scoring_output.json" > "${RUN_DIR}/roadmap.json"
 ```
 
 ## Passo 9: Build report data dict + render HTML
@@ -184,7 +184,7 @@ print('${RUN_DIR}/RELATORIO.html')
 ## Passo 10: Gerar PDF
 
 ```bash
-python ${CLAUDE_PLUGIN_ROOT}/scripts/pdf_generator.py --from-html \
+python "${CLAUDE_PLUGIN_ROOT}/scripts/pdf_generator.py" --from-html \
   "${RUN_DIR}/RELATORIO.html" \
   "${RUN_DIR}/RELATORIO.pdf" \
   ".auditoria-config.json"

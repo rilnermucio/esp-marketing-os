@@ -23,7 +23,7 @@ No ambiente com MCP, puxe métricas com as tools disponíveis. Exemplos por plat
 |---|---|
 | Instagram | `instagram_get_insights`, insights de mídia do perfil |
 | TikTok / Threads | tools de insights da plataforma quando conectadas |
-| YouTube | `python scripts/youtube_analytics.py` ou `mos youtube top-videos` |
+| YouTube | `python "${CLAUDE_PLUGIN_ROOT}/scripts/youtube_analytics.py"` ou `mos youtube top-videos` |
 | Meta Ads | `mcp_meta-ads_get_insights`, `get_insights` por campanha/ad |
 | GSC | `mos gsc top-pages`, `mos gsc ctr-opportunities` |
 | Email | export do provedor (open rate, CTR por subject) |
@@ -37,11 +37,11 @@ Monte uma lista JSON uniforme, um objeto por peça analisada.
 Rode o normalizador com amostra mínima (default 5). Se a lista for menor, o script barra com exit 1 (aprendizado com 3 posts é ruído).
 
 ```bash
-python3 scripts/metrics_collector.py --input workspace/metricas-instagram-jul.json \
+python3 "${CLAUDE_PLUGIN_ROOT}/scripts/metrics_collector.py" --input workspace/metricas-instagram-jul.json \
   --metrica retention --min-amostra 5
 
 # ou via CLI unificado
-python3 scripts/mos.py metrics summarize --input workspace/metricas-instagram-jul.json \
+python3 "${CLAUDE_PLUGIN_ROOT}/scripts/mos.py" metrics summarize --input workspace/metricas-instagram-jul.json \
   --metrica retention --min-amostra 5
 ```
 
@@ -52,7 +52,7 @@ Capture o markdown de stdout. Se exit ≠ 0, pare e informe o usuário (amostra 
 Despache o mos-analytics pra transformar o resumo em aprendizados acionáveis **por agent-dono** (máximo 3-5 por rodada, formato curto, pattern transferível):
 
 ```
-Agent(subagent_type: "mos-analytics", prompt: "Interprete este resumo de métricas e proponha aprendizados por agent-dono.
+Agent(subagent_type: "marketing-os:mos-analytics", prompt: "Interprete este resumo de métricas e proponha aprendizados por agent-dono.
 
 PLATAFORMA: [plataforma]
 PERÍODO: [período]
@@ -87,20 +87,20 @@ Entregue tabela: agent-dono | categoria | aprendizado proposto | evidência (1 l
 Verifique memory opt-in:
 
 ```bash
-python3 scripts/init_agent_memory.py --check
+python3 "${CLAUDE_PLUGIN_ROOT}/scripts/init_agent_memory.py" --check
 ```
 
-Se `.claude/agent-memory/` não existir, ofereça rodar `python3 scripts/init_agent_memory.py` e só persista depois do bootstrap.
+Se `.claude/agent-memory/` não existir, ofereça rodar `python3 "${CLAUDE_PLUGIN_ROOT}/scripts/init_agent_memory.py"` e só persista depois do bootstrap.
 
 Para cada aprendizado aprovado:
 
 ```bash
-python3 scripts/memory_writer.py --agent mos-video --categoria pattern \
+python3 "${CLAUDE_PLUGIN_ROOT}/scripts/memory_writer.py" --agent mos-video --categoria pattern \
   --texto "Hooks com pergunta nos 3s primeiros correlacionam com retenção acima da média" \
   --fonte "/aprender [plataforma] [período]"
 
 # ou
-python3 scripts/mos.py memory write --agent mos-email --categoria resultado \
+python3 "${CLAUDE_PLUGIN_ROOT}/scripts/mos.py" memory write --agent mos-email --categoria resultado \
   --texto "Subject com número específico abriu 18% acima da média do lote" \
   --fonte "/aprender [plataforma] [período]"
 ```
@@ -140,7 +140,7 @@ Entregue ao usuário:
 
 ## Quality Gates (antes de entregar)
 
-Aplicar gates globais do `skills/marketing-os/SKILL.md`:
+Aplicar gates globais do `${CLAUDE_PLUGIN_ROOT}/skills/marketing-os/SKILL.md`:
 - Amostra mínima respeitada (metrics_collector barra abaixo do `--min-amostra`)
 - Aprendizado é pattern transferível, nunca dump de métricas brutas
 - Usuário aprovou antes de persistir

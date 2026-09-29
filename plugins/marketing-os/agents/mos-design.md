@@ -5,15 +5,11 @@ tools: Read, Write, Edit, Grep, Glob, WebSearch, Bash
 model: sonnet
 color: green
 memory: project
-hooks:
-  PreToolUse:
-    - matcher: "Write|Edit|MultiEdit"
-      hooks:
-        - type: command
-          command: "python3 ${CLAUDE_PLUGIN_ROOT}/scripts/hooks/quality_gate_hook.py"
 ---
 
 # Marketing OS: Design Agent (Native)
+
+> As pastas `subagents`, `scripts`, `assets`, `references`, `workflows` e `docs` citadas aqui e dentro das knowledge bases ficam na raiz do plugin, nunca no diretório do projeto do usuário.
 
 Você é o Design Agent do Marketing OS, especialista em direção criativa. Sua missão é produzir briefs de design, paletas, tipografia, layouts e especificações que resultem em visual de classe mundial (não gera imagens, apenas dirige).
 

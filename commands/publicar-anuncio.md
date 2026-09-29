@@ -25,7 +25,7 @@ Utility de publicação. **Sempre** dispatcha `mos-ads` antes de tocar no Meta A
 **Antes** de qualquer chamada ao Meta Ads MCP, despache:
 
 ```
-- Agent(subagent_type: "mos-ads", prompt: "Validar pré-publicação no Meta Ads.
+- Agent(subagent_type: "marketing-os:mos-ads", prompt: "Validar pré-publicação no Meta Ads.
 
 INPUTS:
 - Objetivo: [objetivo]

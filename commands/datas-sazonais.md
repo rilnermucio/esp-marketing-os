@@ -9,22 +9,22 @@ Utilitário de dados. Mostra as efemérides comerciais e culturais brasileiras d
 
 ## Como usar
 
-Roda o script determinístico `scripts/seasonal_calendar_br.py` (sem necessidade de token):
+Roda o script determinístico `${CLAUDE_PLUGIN_ROOT}/scripts/seasonal_calendar_br.py` (sem necessidade de token):
 
 ```bash
 # Próximos 90 dias (padrão)
-python scripts/seasonal_calendar_br.py
+python "${CLAUDE_PLUGIN_ROOT}/scripts/seasonal_calendar_br.py"
 # ou via CLI unificado
-python scripts/mos.py seasonal list
+python "${CLAUDE_PLUGIN_ROOT}/scripts/mos.py" seasonal list
 
 # Ano inteiro
-python scripts/seasonal_calendar_br.py --ano 2026
+python "${CLAUDE_PLUGIN_ROOT}/scripts/seasonal_calendar_br.py" --ano 2026
 
 # Janela específica
-python scripts/seasonal_calendar_br.py --from 2026-10-01 --to 2026-12-31
+python "${CLAUDE_PLUGIN_ROOT}/scripts/seasonal_calendar_br.py" --from 2026-10-01 --to 2026-12-31
 
 # JSON estruturado (pra alimentar outro passo)
-python scripts/seasonal_calendar_br.py --ano 2026 --json
+python "${CLAUDE_PLUGIN_ROOT}/scripts/seasonal_calendar_br.py" --ano 2026 --json
 ```
 
 ## O que apresentar ao usuário

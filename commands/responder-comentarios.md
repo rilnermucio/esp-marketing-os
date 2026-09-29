@@ -5,7 +5,7 @@ argument-hint: "<comentários colados ou peça (reels/post) + contexto de marca/
 
 # /responder-comentarios: Fila de Rascunhos de Comunidade (Dispatch-Based)
 
-Classifica comentários e DMs, redige rascunhos no tom da marca e entrega fila pra aprovação orquestrando `Agent(subagent_type: "mos-community")`. **Nada é publicado automaticamente.**
+Classifica comentários e DMs, redige rascunhos no tom da marca e entrega fila pra aprovação orquestrando `Agent(subagent_type: "marketing-os:mos-community")`. **Nada é publicado automaticamente.**
 
 ## Required inputs (ask if missing)
 
@@ -28,7 +28,7 @@ Se nenhuma fonte: pedir ao usuário colar os comentários ou informar o link/ID 
 ## Dispatch Simples
 
 ```
-Agent(subagent_type: "mos-community", prompt: "Monte a fila de rascunhos de resposta. Plataforma: [plataforma]. Peça: [post/reels/DM]. Comentários: [lista ou resumo da coleta MCP]. Tom de voz: [guidelines/memory]. Políticas: [o que pode/não pode prometer]. Classifique cada interação (elogio, dúvida, objeção, reclamação, troll/hate, lead quente, spam). Para itens sensíveis, entregue 2-3 variações de tom e red team. Entregue no Output Schema: fila com comentário original → classificação → rascunho → ação recomendada. Modo: RASCUNHO ONLY. Nada publicado sem aprovação humana. Aplicar quality gates globais.")
+Agent(subagent_type: "marketing-os:mos-community", prompt: "Monte a fila de rascunhos de resposta. Plataforma: [plataforma]. Peça: [post/reels/DM]. Comentários: [lista ou resumo da coleta MCP]. Tom de voz: [guidelines/memory]. Políticas: [o que pode/não pode prometer]. Classifique cada interação (elogio, dúvida, objeção, reclamação, troll/hate, lead quente, spam). Para itens sensíveis, entregue 2-3 variações de tom e red team. Entregue no Output Schema: fila com comentário original → classificação → rascunho → ação recomendada. Modo: RASCUNHO ONLY. Nada publicado sem aprovação humana. Aplicar quality gates globais.")
 ```
 
 ## Publicação opcional (após aprovação humana)
@@ -68,7 +68,7 @@ Entregue ao usuário:
 
 ## Quality Gates (antes de entregar)
 
-Aplicar gates globais do `skills/marketing-os/SKILL.md` + gates do mos-community:
+Aplicar gates globais do `${CLAUDE_PLUGIN_ROOT}/skills/marketing-os/SKILL.md` + gates do mos-community:
 - **Aprovação humana obrigatória** antes de qualquer publicação
 - Declarar modo (rascunho vs publicado) explicitamente
 - Sem promessas de resultado/reembolso não autorizadas

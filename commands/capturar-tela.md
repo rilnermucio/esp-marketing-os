@@ -49,9 +49,9 @@ Se o usuário pediu **análise** junto com a captura, despache **após** a captu
 ```
 Intenção do usuário                          → Dispatch
 ─────────────────────────────────────────────────────────────────────
-"analise este hero / above-the-fold"         → Agent(subagent_type: "mos-research", prompt: "Análise UX/conversão do above-the-fold capturado: positioning, headline clarity, hierarquia, CTA visibility, prova social, fricções óbvias. Screenshot/snapshot anexo: [referência].")
+"analise este hero / above-the-fold"         → Agent(subagent_type: "marketing-os:mos-research", prompt: "Análise UX/conversão do above-the-fold capturado: positioning, headline clarity, hierarquia, CTA visibility, prova social, fricções óbvias. Screenshot/snapshot anexo: [referência].")
 
-"avalia o design / paleta / tipografia"      → Agent(subagent_type: "mos-design", prompt: "Análise visual da página capturada: paleta, tipografia, hierarquia, mood, cohesion, comparação com benchmarks de [nicho]. Screenshot anexo: [referência].")
+"avalia o design / paleta / tipografia"      → Agent(subagent_type: "marketing-os:mos-design", prompt: "Análise visual da página capturada: paleta, tipografia, hierarquia, mood, cohesion, comparação com benchmarks de [nicho]. Screenshot anexo: [referência].")
 
 "extrai estratégia / clona padrões"          → roteia pra /clonar-estrategia (mencionar)
 
@@ -96,7 +96,7 @@ Capturado em: [data/hora]
 
 ## Quality Gates (na análise, se dispatch rodou)
 
-Aplicar gates globais do `skills/marketing-os/SKILL.md` em qualquer texto de análise:
+Aplicar gates globais do `${CLAUDE_PLUGIN_ROOT}/skills/marketing-os/SKILL.md` em qualquer texto de análise:
 - Sem `—`, sem "brutal", sem CAPS gratuito
 - Acentuação PT-BR correta
 - Máximo 1-2 emojis

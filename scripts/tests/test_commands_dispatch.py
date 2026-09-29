@@ -9,13 +9,13 @@ static structural properties that can be verified by parsing the command file.
 
 Catches regressions where a new command ships without proper dispatch wiring.
 """
+
 from __future__ import annotations
 
 import re
 from pathlib import Path
 
 import pytest
-
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 COMMANDS_DIR = PROJECT_ROOT / "commands"
@@ -33,7 +33,9 @@ UTILITY_COMMANDS = {
 
 # Regex to extract the agent name from any Agent(subagent_type: "mos-*") call.
 # Tolerates single quotes, double quotes, or no quotes around the value.
-DISPATCH_RE = re.compile(r'subagent_type:\s*["\']?(mos-[a-z-]+)["\']?')
+DISPATCH_RE = re.compile(
+    r'subagent_type:\s*["\']?(?:marketing-os:)?(mos-[a-z-]+)["\']?'
+)
 
 # YAML frontmatter delimiter regex.
 FRONTMATTER_RE = re.compile(r"^---\n(.*?)\n---", re.DOTALL)
@@ -91,9 +93,9 @@ class TestCommandStructure:
         match = FRONTMATTER_RE.match(content)
         assert match, f"{cmd.name} has no YAML frontmatter"
         fm = match.group(1)
-        assert "description:" in fm, (
-            f"{cmd.name} frontmatter is missing the 'description' field"
-        )
+        assert (
+            "description:" in fm
+        ), f"{cmd.name} frontmatter is missing the 'description' field"
 
     @pytest.mark.parametrize("cmd", get_all_commands(), ids=lambda p: p.name)
     def test_does_not_reference_legacy_memory_paths(self, cmd: Path) -> None:
@@ -107,9 +109,7 @@ class TestCommandStructure:
 class TestCommandDispatch:
     """Production commands must dispatch real, existing agents."""
 
-    @pytest.mark.parametrize(
-        "cmd", get_dispatch_commands(), ids=lambda p: p.name
-    )
+    @pytest.mark.parametrize("cmd", get_dispatch_commands(), ids=lambda p: p.name)
     def test_command_dispatches_at_least_one_agent(self, cmd: Path) -> None:
         content = cmd.read_text(encoding="utf-8")
         agents_dispatched = DISPATCH_RE.findall(content)
@@ -118,9 +118,7 @@ class TestCommandDispatch:
             f"(expected at least one Agent(subagent_type: 'mos-*'))"
         )
 
-    @pytest.mark.parametrize(
-        "cmd", get_dispatch_commands(), ids=lambda p: p.name
-    )
+    @pytest.mark.parametrize("cmd", get_dispatch_commands(), ids=lambda p: p.name)
     def test_dispatched_agents_exist(self, cmd: Path) -> None:
         content = cmd.read_text(encoding="utf-8")
         agents_dispatched = set(DISPATCH_RE.findall(content))
@@ -135,9 +133,7 @@ class TestCommandDispatch:
 class TestCommandConsolidation:
     """Dispatch commands must show how subagent outputs are consolidated."""
 
-    @pytest.mark.parametrize(
-        "cmd", get_dispatch_commands(), ids=lambda p: p.name
-    )
+    @pytest.mark.parametrize("cmd", get_dispatch_commands(), ids=lambda p: p.name)
     def test_has_consolidacao_or_output_section(self, cmd: Path) -> None:
         content = cmd.read_text(encoding="utf-8")
         has_section = any(marker in content for marker in CONSOLIDATION_MARKERS)
@@ -150,9 +146,7 @@ class TestCommandConsolidation:
 class TestCommandQualityGates:
     """Dispatch commands must reference Quality Gates explicitly or via SKILL.md."""
 
-    @pytest.mark.parametrize(
-        "cmd", get_dispatch_commands(), ids=lambda p: p.name
-    )
+    @pytest.mark.parametrize("cmd", get_dispatch_commands(), ids=lambda p: p.name)
     def test_has_quality_gates_reference(self, cmd: Path) -> None:
         content = cmd.read_text(encoding="utf-8").lower()
         has_qg = (

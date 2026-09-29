@@ -19,7 +19,7 @@ Cria prompt otimizado para geração de imagem por IA, despachando o subagent es
 ## Dispatch (simples, single agent)
 
 ```
-Agent(subagent_type: "mos-ai-tools", prompt: "Gere prompt otimizado para [tool] do subject: [subject]. Purpose: [purpose]. Style: [style]. Aspect ratio: [ar]. Mood: [mood]. Entregue: 1 prompt principal completo (com parâmetros tool-specific tipo --ar/--v/--s pra Midjourney quando aplicável), 3 variações (ângulo/estilo/mood diferentes), negative prompt quando aplicável, e 3-5 dicas tool-specific pra extrair melhor resultado. Estruture em markdown.")
+Agent(subagent_type: "marketing-os:mos-ai-tools", prompt: "Gere prompt otimizado para [tool] do subject: [subject]. Purpose: [purpose]. Style: [style]. Aspect ratio: [ar]. Mood: [mood]. Entregue: 1 prompt principal completo (com parâmetros tool-specific tipo --ar/--v/--s pra Midjourney quando aplicável), 3 variações (ângulo/estilo/mood diferentes), negative prompt quando aplicável, e 3-5 dicas tool-specific pra extrair melhor resultado. Estruture em markdown.")
 ```
 
 `mos-ai-tools` não tem memory project, passe todo o contexto no prompt.
@@ -62,7 +62,7 @@ Subject: [subject] | Purpose: [purpose] | Aspect ratio: [ar] | Style: [style]
 
 ## Quality Gates (antes de entregar)
 
-Aplicar gates globais do `skills/marketing-os/SKILL.md`:
+Aplicar gates globais do `${CLAUDE_PLUGIN_ROOT}/skills/marketing-os/SKILL.md`:
 - Texto descritivo do prompt em PT-BR ou EN consistente (escolha um e mantenha)
 - Sem `—`, sem "brutal", sem CAPS gratuito no texto que envolve o prompt
 - Acentuação PT-BR correta nos títulos e descrições

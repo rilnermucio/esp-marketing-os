@@ -21,27 +21,27 @@ argument-hint: "<nicho/avatar> [--canal=...] [--budget=...] [--clone=suby|kenned
 **Fase 1 (sequencial, research informa o resto):**
 
 ```
-- Agent(subagent_type: "mos-research", prompt: "Mapeamento de avatar e canais para prospecção em [nicho]: dores reais, linguagem usada, plataformas onde está, concorrentes ativos, lead magnets que funcionam. Considere memory.")
+- Agent(subagent_type: "marketing-os:mos-research", prompt: "Mapeamento de avatar e canais para prospecção em [nicho]: dores reais, linguagem usada, plataformas onde está, concorrentes ativos, lead magnets que funcionam. Considere memory.")
 ```
 
 **Fase 2 (paralelo, depende do research):**
 
 ```
-- Agent(subagent_type: "mos-funnel", prompt: "Funil HDIC (Horde-Direct-Convert) de Sabri Suby: TOFU (audiência fria + interesse + lookalike) → MOFU (lead magnet + nutrição) → BOFU (oferta direta + retargeting). Pontos de qualificação.")
+- Agent(subagent_type: "marketing-os:mos-funnel", prompt: "Funil HDIC (Horde-Direct-Convert) de Sabri Suby: TOFU (audiência fria + interesse + lookalike) → MOFU (lead magnet + nutrição) → BOFU (oferta direta + retargeting). Pontos de qualificação.")
 
-- Agent(subagent_type: "mos-copy", prompt: "Copy clone=suby: lead magnet de alto valor (PDF/mini-curso/webinar), landing page de captura, headline + CTA. Usando avatar da Fase 1.")
+- Agent(subagent_type: "marketing-os:mos-copy", prompt: "Copy clone=suby: lead magnet de alto valor (PDF/mini-curso/webinar), landing page de captura, headline + CTA. Usando avatar da Fase 1.")
 
-- Agent(subagent_type: "mos-ads", prompt: "Campanhas de tráfego pago pra prospecção: audiência fria + interest + lookalike. Budget [valor]. CPL alvo [< R$15-50 dependendo de nicho]. Variantes A/B de criativo.")
+- Agent(subagent_type: "marketing-os:mos-ads", prompt: "Campanhas de tráfego pago pra prospecção: audiência fria + interest + lookalike. Budget [valor]. CPL alvo [< R$15-50 dependendo de nicho]. Variantes A/B de criativo.")
 ```
 
 **Fase 3 (paralelo):**
 
 ```
-- Agent(subagent_type: "mos-email", prompt: "Sequência de nutrição 7-10 emails pós opt-in: educação → história → caso de prova → soft pitch → hard pitch → urgência → última chance. Considere memory.")
+- Agent(subagent_type: "marketing-os:mos-email", prompt: "Sequência de nutrição 7-10 emails pós opt-in: educação → história → caso de prova → soft pitch → hard pitch → urgência → última chance. Considere memory.")
 
-- Agent(subagent_type: "mos-social", prompt: "Conteúdo de topo de funil: 3-5 posts/semana sobre dores do avatar, sem pitch direto. Quality gates + enquete.")
+- Agent(subagent_type: "marketing-os:mos-social", prompt: "Conteúdo de topo de funil: 3-5 posts/semana sobre dores do avatar, sem pitch direto. Quality gates + enquete.")
 
-- Agent(subagent_type: "mos-analytics", prompt: "Tracking de CAC, CPL por canal, conversão da landing, performance da nutrição. Dashboard mensal de revisão.")
+- Agent(subagent_type: "marketing-os:mos-analytics", prompt: "Tracking de CAC, CPL por canal, conversão da landing, performance da nutrição. Dashboard mensal de revisão.")
 ```
 
 ## Frameworks
@@ -92,7 +92,7 @@ ANÁLISE MENSAL:
 
 ## Quality Gates (antes de entregar)
 
-Aplicar gates globais do `skills/marketing-os/SKILL.md`:
+Aplicar gates globais do `${CLAUDE_PLUGIN_ROOT}/skills/marketing-os/SKILL.md`:
 - Sem `—`, sem "brutal", sem CAPS gratuito
 - Acentuação PT-BR correta
 - Compliance regulatório se nicho saúde/finanças/suplementos

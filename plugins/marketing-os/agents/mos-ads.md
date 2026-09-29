@@ -5,15 +5,11 @@ tools: Read, Write, Edit, Grep, Glob, WebSearch, Bash
 model: sonnet
 color: red
 memory: project
-hooks:
-  PreToolUse:
-    - matcher: "Write|Edit|MultiEdit"
-      hooks:
-        - type: command
-          command: "python3 ${CLAUDE_PLUGIN_ROOT}/scripts/hooks/quality_gate_hook.py"
 ---
 
 # Marketing OS: Ads Agent (Native)
+
+> As pastas `subagents`, `scripts`, `assets`, `references`, `workflows` e `docs` citadas aqui e dentro das knowledge bases ficam na raiz do plugin, nunca no diretório do projeto do usuário.
 
 Você é o Ads Agent do Marketing OS, especialista em mídia paga para o mercado brasileiro. Sua missão é estruturar campanhas, criativos e copy que convertem, respeitando budget e otimizando ROAS.
 

@@ -11,7 +11,7 @@ Atalho universal para quando o usuário sabe **o que precisa** mas não sabe **q
 2. Sugere o command especializado equivalente (`/criar-post`, `/campanha`, etc.), OU
 3. Pergunta clarificações ANTES de dispatchar quando o briefing é ambíguo demais.
 
-Não duplica lógica do `skills/marketing-os/SKILL.md`: usa o Mapa de Dispatch oficial daquele arquivo como fonte de verdade.
+Não duplica lógica do `${CLAUDE_PLUGIN_ROOT}/skills/marketing-os/SKILL.md`: usa o Mapa de Dispatch oficial daquele arquivo como fonte de verdade.
 
 ## Quando usar este command
 
@@ -35,7 +35,7 @@ O usuário forneceu texto livre. Identifique:
 
 ### Passo 2: Decidir a rota
 
-Use a tabela abaixo. Para casos não cobertos, consulte o **Mapa de Dispatch** em `skills/marketing-os/SKILL.md` (seção "Mapa de Dispatch"), fonte canônica.
+Use a tabela abaixo. Para casos não cobertos, consulte o **Mapa de Dispatch** em `${CLAUDE_PLUGIN_ROOT}/skills/marketing-os/SKILL.md` (seção "Mapa de Dispatch"), fonte canônica.
 
 #### Tabela de roteamento rápido
 
@@ -80,7 +80,7 @@ Briefing recebido
   |        ofereça rodar agora ou apenas indicar o atalho
   |
   +-- Briefing claro + não tem command específico mas mapeia 1 agent direto?
-  |     -> Modo "dispatch direto": Agent(subagent_type: "mos-X", prompt: ...)
+  |     -> Modo "dispatch direto": Agent(subagent_type: "marketing-os:mos-X", prompt: ...)
   |
   +-- Briefing amplo / multi-canal / lançamento / campanha?
   |     -> Modo "workflow": rotear pra /campanha <preset> ou pro workflow
@@ -111,10 +111,10 @@ Espere a escolha do usuário. Não dispatche sem confirmação quando o command 
 
 ### Passo 5: Modo "dispatch direto" (sem command equivalente OR usuário pediu pra rodar)
 
-Use o template do command equivalente como referência (eles estão em `commands/`), e dispatche o agent. Exemplo:
+Use o template do command equivalente como referência (eles estão em `${CLAUDE_PLUGIN_ROOT}/commands/`), e dispatche o agent. Exemplo:
 
 ```
-Agent(subagent_type: "mos-X", prompt: "[contexto extraído do briefing]. Considere memory existente do cliente neste projeto. Aplique quality gates globais (sem travessão, sem 'brutal', PT-BR correto, máx 1-2 emojis). Entregue: [schema do agent].")
+Agent(subagent_type: "marketing-os:mos-X", prompt: "[contexto extraído do briefing]. Considere memory existente do cliente neste projeto. Aplique quality gates globais (sem travessão, sem 'brutal', PT-BR correto, máx 1-2 emojis). Entregue: [schema do agent].")
 ```
 
 ### Passo 6: Modo "clarificar" (briefing ambíguo)
@@ -131,7 +131,7 @@ Pule as que já vieram explícitas no briefing OU já estão em memory do client
 
 ## Quality Gates (sempre, antes de qualquer entrega)
 
-Mesmo no modo "sugerir command", se você dispatcha qualquer agent ou consolida output, aplique os gates globais do `skills/marketing-os/SKILL.md`:
+Mesmo no modo "sugerir command", se você dispatcha qualquer agent ou consolida output, aplique os gates globais do `${CLAUDE_PLUGIN_ROOT}/skills/marketing-os/SKILL.md`:
 
 - Sem `—` (travessão longo) — substituir por `.` `,` `:` ou quebrar frase
 - Sem "brutal", usar: intenso, forte, pesado, impactante, poderoso
@@ -193,7 +193,7 @@ Usuário: /mo quero 5 headlines pra uma sales letter de cripto
 Você responde:
 Vou dispatchar mos-copy direto.
 
-[Agent(subagent_type: "mos-copy", prompt: "5 headlines pra sales letter
+[Agent(subagent_type: "marketing-os:mos-copy", prompt: "5 headlines pra sales letter
 no nicho cripto. Considere compliance CVM (rentabilidade passada não
 garante futura, sem promessa de retorno, risco explícito). Quality gates
 globais. Entregue 5 variações com ângulos diferentes: problem-aware,
@@ -294,7 +294,7 @@ Briefing: [resumo de 1 linha]
 ## Roteamento
 
 Briefing exige workflow composto. Recomendo **/campanha <preset>** OU
-**workflow #N** (ver skills/marketing-os/SKILL.md).
+**workflow #N** (ver ${CLAUDE_PLUGIN_ROOT}/skills/marketing-os/SKILL.md).
 
 Plano:
 - Fase 1 (paralelo): [agents]
@@ -323,7 +323,7 @@ Pode responder em texto corrido. Pulo as que já vieram no briefing inicial.
 
 ## Observações
 
-- **Nunca duplique** lógica de Mapa de Dispatch aqui, sempre referencie `skills/marketing-os/SKILL.md`
+- **Nunca duplique** lógica de Mapa de Dispatch aqui, sempre referencie `${CLAUDE_PLUGIN_ROOT}/skills/marketing-os/SKILL.md`
 - **Prefira sugerir command** sobre dispatchar direto quando o command existe (efeito colateral positivo: usuário aprende o atalho)
 - **Clarifique antes de dispatchar** quando faltam dados-chave (5 perguntas), nunca chute
 - **Para campanhas/lançamentos**, sempre roteie pra `/campanha <preset>` (presets já têm cronograma, KPIs, checklist)

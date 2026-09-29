@@ -5,7 +5,7 @@ argument-hint: "<topic and type, e.g., '10 productivity tips' or 'storytelling c
 
 # /criar-carrossel: Carrossel Completo (Workflow #8)
 
-Cria carrossel orquestrando 3 subagents em paralelo conforme **workflow #8** documentado em `skills/marketing-os/SKILL.md`.
+Cria carrossel orquestrando 3 subagents em paralelo conforme **workflow #8** documentado em `${CLAUDE_PLUGIN_ROOT}/skills/marketing-os/SKILL.md`.
 
 ## Required inputs (ask if missing)
 
@@ -22,17 +22,17 @@ Cria carrossel orquestrando 3 subagents em paralelo conforme **workflow #8** doc
 Em **um único message**, invoque os 3 agents simultaneamente:
 
 ```
-- Agent(subagent_type: "mos-social", prompt: "Estrutura de carrossel pra [plataforma], tipo [tipo], [N] slides: hook na capa, padrão de retenção entre slides, ritmo de revelação de informação, CTA final. Tópico: [tópico]. Audiência: [audiência]. Considere memory existente do cliente neste projeto.")
+- Agent(subagent_type: "marketing-os:mos-social", prompt: "Estrutura de carrossel pra [plataforma], tipo [tipo], [N] slides: hook na capa, padrão de retenção entre slides, ritmo de revelação de informação, CTA final. Tópico: [tópico]. Audiência: [audiência]. Considere memory existente do cliente neste projeto.")
 
-- Agent(subagent_type: "mos-copy", prompt: "Texto de cada um dos [N] slides para carrossel sobre [tópico]: hook na capa, body com peso/leveza alternada, CTA específico no slide final. Audiência: [audiência]. Considere memory existente do cliente neste projeto. Aplicar quality gates globais (sem travessão, sem 'brutal', PT-BR correto).")
+- Agent(subagent_type: "marketing-os:mos-copy", prompt: "Texto de cada um dos [N] slides para carrossel sobre [tópico]: hook na capa, body com peso/leveza alternada, CTA específico no slide final. Audiência: [audiência]. Considere memory existente do cliente neste projeto. Aplicar quality gates globais (sem travessão, sem 'brutal', PT-BR correto).")
 
-- Agent(subagent_type: "mos-design", prompt: "Direção visual para carrossel [plataforma] de [N] slides: paleta, tipografia, hierarquia, formato de capa vs body, consistência visual entre slides. Nicho: [nicho/tema]. Considere memory existente do cliente neste projeto.")
+- Agent(subagent_type: "marketing-os:mos-design", prompt: "Direção visual para carrossel [plataforma] de [N] slides: paleta, tipografia, hierarquia, formato de capa vs body, consistência visual entre slides. Nicho: [nicho/tema]. Considere memory existente do cliente neste projeto.")
 ```
 
 **Opcional (paralelo, mesma message):**
 
 ```
-- Agent(subagent_type: "mos-ai-tools", prompt: "Prompts pra IA gerar imagem da capa do carrossel (Midjourney/Flux/Ideogram) com referência do briefing visual: [resumir mos-design output ou tópico]")
+- Agent(subagent_type: "marketing-os:mos-ai-tools", prompt: "Prompts pra IA gerar imagem da capa do carrossel (Midjourney/Flux/Ideogram) com referência do briefing visual: [resumir mos-design output ou tópico]")
 ```
 
 ## Consolidação
@@ -79,7 +79,7 @@ Texto: [Pergunta pronta]
 
 ## Quality Gates (antes de entregar)
 
-Aplicar gates globais do `skills/marketing-os/SKILL.md`:
+Aplicar gates globais do `${CLAUDE_PLUGIN_ROOT}/skills/marketing-os/SKILL.md`:
 - Sem `—`, sem "brutal", sem CAPS gratuito
 - Acentuação PT-BR correta
 - Enquete obrigatória presente

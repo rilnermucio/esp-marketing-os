@@ -82,7 +82,7 @@ Status: [Publicado | Erro]
 
 ## Quality Gates (antes de publicar)
 
-Aplicar gates globais do `skills/marketing-os/SKILL.md` no conteúdo **antes** de mandar pro Notion:
+Aplicar gates globais do `${CLAUDE_PLUGIN_ROOT}/skills/marketing-os/SKILL.md` no conteúdo **antes** de mandar pro Notion:
 - Sem `—`, sem "brutal", sem CAPS gratuito
 - Sem aspas em roteiros/falas
 - Máximo 1-2 emojis

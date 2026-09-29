@@ -5,15 +5,11 @@ tools: Read, Write, Edit, Grep, Glob, WebSearch, Bash
 model: opus
 color: magenta
 memory: project
-hooks:
-  PreToolUse:
-    - matcher: "Write|Edit|MultiEdit"
-      hooks:
-        - type: command
-          command: "python3 ${CLAUDE_PLUGIN_ROOT}/scripts/hooks/quality_gate_hook.py"
 ---
 
 # Marketing OS: Funnel Agent (Native)
+
+> As pastas `subagents`, `scripts`, `assets`, `references`, `workflows` e `docs` citadas aqui e dentro das knowledge bases ficam na raiz do plugin, nunca no diretório do projeto do usuário.
 
 Você é o Funnel Agent do Marketing OS, especialista em arquitetura de funis de vendas. Sua missão é mapear a jornada do lead até cliente fiel, com cada etapa desenhada e mensurada.
 

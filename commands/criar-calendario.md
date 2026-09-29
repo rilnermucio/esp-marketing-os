@@ -5,7 +5,7 @@ argument-hint: "<period and niche, e.g., 'monthly for fitness brand' or 'Q1 for 
 
 # /criar-calendario: Calendário Editorial (Dispatch-Based)
 
-Cria calendário editorial estratégico orquestrando subagent(s) especializados via `Agent(subagent_type: "mos-*")`. Não produz inline.
+Cria calendário editorial estratégico orquestrando subagent(s) especializados via `Agent(subagent_type: "marketing-os:mos-*")`. Não produz inline.
 
 ## Required inputs (ask if missing)
 
@@ -40,15 +40,15 @@ Briefing recebido
 ## Dispatch Simples (cliente/nicho conhecido)
 
 ```
-Agent(subagent_type: "mos-social", prompt: "Calendário editorial [week | month | quarter | custom] para [plataformas]. Nicho: [nicho]. Goal: [goal]. Posting frequency: [X posts/semana por plataforma]. Template estrutural: [Balanced Growth | Authority Building | Sales-Focused]. Important dates do período: [datas]. Considere memory existente do cliente neste projeto. Entregue: 3-5 content pillars com % de distribuição, important dates do período com content opportunity, weekly overview completo (dia a dia, plataforma, formato, tópico, pillar, horário ótimo BRT), content ideas por pillar (mínimo 3 por pillar), format distribution table, KPIs to track com targets realistas, production checklist semanal e diário, **enquete obrigatória** sugerida para pelo menos 2 posts/semana. Aplicar quality gates globais (sem travessão, sem 'brutal', PT-BR correto, máx 1-2 emojis).")
+Agent(subagent_type: "marketing-os:mos-social", prompt: "Calendário editorial [week | month | quarter | custom] para [plataformas]. Nicho: [nicho]. Goal: [goal]. Posting frequency: [X posts/semana por plataforma]. Template estrutural: [Balanced Growth | Authority Building | Sales-Focused]. Important dates do período: [datas]. Considere memory existente do cliente neste projeto. Entregue: 3-5 content pillars com % de distribuição, important dates do período com content opportunity, weekly overview completo (dia a dia, plataforma, formato, tópico, pillar, horário ótimo BRT), content ideas por pillar (mínimo 3 por pillar), format distribution table, KPIs to track com targets realistas, production checklist semanal e diário, **enquete obrigatória** sugerida para pelo menos 2 posts/semana. Aplicar quality gates globais (sem travessão, sem 'brutal', PT-BR correto, máx 1-2 emojis).")
 ```
 
 ## Dispatch Paralelo (nicho novo / multi-platform, single message)
 
 ```
-- Agent(subagent_type: "mos-research", prompt: "Pesquisa rápida pra calendário editorial em [nicho] BR para [plataformas]: trends ativos no nicho nos últimos 30 dias, benchmarks de engajamento por plataforma (reach, saves, shares médios para o nicho), formatos performando melhor por plataforma, datas culturais BR específicas do período [período] (não-genéricas), influenciadores/concorrentes ativos a observar, tópicos saturados a evitar, ângulos em aberto. Retorne research brief compacto pra alimentar planejamento editorial.")
+- Agent(subagent_type: "marketing-os:mos-research", prompt: "Pesquisa rápida pra calendário editorial em [nicho] BR para [plataformas]: trends ativos no nicho nos últimos 30 dias, benchmarks de engajamento por plataforma (reach, saves, shares médios para o nicho), formatos performando melhor por plataforma, datas culturais BR específicas do período [período] (não-genéricas), influenciadores/concorrentes ativos a observar, tópicos saturados a evitar, ângulos em aberto. Retorne research brief compacto pra alimentar planejamento editorial.")
 
-- Agent(subagent_type: "mos-social", prompt: "Calendário editorial [period] para [plataformas]. Nicho: [nicho]. Goal: [goal]. Posting frequency: [X]. Template estrutural: [Balanced Growth | Authority Building | Sales-Focused]. Considere memory existente do cliente neste projeto. Aguarde research do mos-research e use trends + benchmarks + datas que ele apontar. Entregue: 3-5 content pillars com %, important dates do período, weekly overview completo, content ideas por pillar (3+ por pillar), format distribution, KPIs com targets realistas baseados em benchmarks do research, production checklist, **enquete obrigatória** em pelo menos 2 posts/semana. Aplicar quality gates globais.")
+- Agent(subagent_type: "marketing-os:mos-social", prompt: "Calendário editorial [period] para [plataformas]. Nicho: [nicho]. Goal: [goal]. Posting frequency: [X]. Template estrutural: [Balanced Growth | Authority Building | Sales-Focused]. Considere memory existente do cliente neste projeto. Aguarde research do mos-research e use trends + benchmarks + datas que ele apontar. Entregue: 3-5 content pillars com %, important dates do período, weekly overview completo, content ideas por pillar (3+ por pillar), format distribution, KPIs com targets realistas baseados em benchmarks do research, production checklist, **enquete obrigatória** em pelo menos 2 posts/semana. Aplicar quality gates globais.")
 ```
 
 ## Consolidação
@@ -130,7 +130,7 @@ Plataformas: [...] | Nicho: [...] | Goal: [growth | engagement | sales | authori
 
 ## Quality Gates (antes de entregar)
 
-Aplicar gates globais do `skills/marketing-os/SKILL.md`:
+Aplicar gates globais do `${CLAUDE_PLUGIN_ROOT}/skills/marketing-os/SKILL.md`:
 - Sem `—`, sem "brutal", sem CAPS gratuito
 - Acentuação PT-BR correta
 - Máx 1-2 emojis em qualquer texto sugerido

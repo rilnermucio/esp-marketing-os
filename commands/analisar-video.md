@@ -32,18 +32,18 @@ Briefing recebido
 ### Dispatch simples (caso comum)
 
 ```
-Agent(subagent_type: "mos-video", prompt: "Análise reverse-engineered do vídeo: [URL ou transcript]. Plataforma: [content type]. Focus: [focus]. Purpose: [purpose]. Nicho do user: [niche]. Entregue: hook breakdown (tipo, primeiras palavras, score), structure map com timestamps, retention techniques (open loops, pattern interrupts, curiosity gaps), CTA catalog, storytelling analysis (arco, emoção, transformação), technical analysis (cuts, B-roll, thumbnail, título), top 5 técnicas replicáveis e adaptation blueprint pro nicho do user. Score geral 1-10.")
+Agent(subagent_type: "marketing-os:mos-video", prompt: "Análise reverse-engineered do vídeo: [URL ou transcript]. Plataforma: [content type]. Focus: [focus]. Purpose: [purpose]. Nicho do user: [niche]. Entregue: hook breakdown (tipo, primeiras palavras, score), structure map com timestamps, retention techniques (open loops, pattern interrupts, curiosity gaps), CTA catalog, storytelling analysis (arco, emoção, transformação), technical analysis (cuts, B-roll, thumbnail, título), top 5 técnicas replicáveis e adaptation blueprint pro nicho do user. Score geral 1-10.")
 ```
 
 ### Dispatch sequencial (creator desconhecido + análise profunda)
 
 ```
 Passo 1:
-Agent(subagent_type: "mos-research", prompt: "Contexto rápido sobre o creator/canal [nome/URL]: posicionamento, audiência, ticket médio se vendedor, conteúdo recorrente, conquistas verificáveis. WebSearch + análise pública. Considere memory existente do cliente neste projeto. Retorne brief compacto pra contextualizar análise tática do vídeo.")
+Agent(subagent_type: "marketing-os:mos-research", prompt: "Contexto rápido sobre o creator/canal [nome/URL]: posicionamento, audiência, ticket médio se vendedor, conteúdo recorrente, conquistas verificáveis. WebSearch + análise pública. Considere memory existente do cliente neste projeto. Retorne brief compacto pra contextualizar análise tática do vídeo.")
   → Aguarde research brief
 
 Passo 2:
-Agent(subagent_type: "mos-video", prompt: "Análise reverse-engineered do vídeo: [URL]. Use este contexto do creator: [colar research brief]. [resto igual ao dispatch simples]")
+Agent(subagent_type: "marketing-os:mos-video", prompt: "Análise reverse-engineered do vídeo: [URL]. Use este contexto do creator: [colar research brief]. [resto igual ao dispatch simples]")
 ```
 
 `mos-research` tem memory project; `mos-video` não, passe todo o contexto no prompt do segundo.
@@ -101,7 +101,7 @@ Curva de retenção estimada: [onde caem e por quê]
 
 ## Quality Gates (antes de entregar)
 
-Aplicar gates globais do `skills/marketing-os/SKILL.md`:
+Aplicar gates globais do `${CLAUDE_PLUGIN_ROOT}/skills/marketing-os/SKILL.md`:
 - Sem `—`, sem "brutal", sem CAPS gratuito, sem aspas em falas (escrever direto)
 - Acentuação PT-BR correta
 - Fact-check (CONFIRMADO / PROVÁVEL) em qualquer claim sobre métricas, conquistas ou estatísticas do creator

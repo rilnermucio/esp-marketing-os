@@ -5,7 +5,7 @@ argument-hint: "<platform and product, e.g., 'Meta Ads for SaaS product' or 'Goo
 
 # /criar-anuncio: Anúncio Pago (Dispatch-Based)
 
-Cria copy completa de anúncio orquestrando subagent(s) especializados via `Agent(subagent_type: "mos-*")`. Não produz inline.
+Cria copy completa de anúncio orquestrando subagent(s) especializados via `Agent(subagent_type: "marketing-os:mos-*")`. Não produz inline.
 
 ## Required inputs (ask if missing)
 
@@ -35,15 +35,15 @@ Briefing recebido
 ## Dispatch Simples (caso comum)
 
 ```
-Agent(subagent_type: "mos-ads", prompt: "Crie copy completa de anúncio para [plataforma]. Produto/oferta: [produto]. Objetivo: [objetivo]. Audiência: [audiência]. Benefício-chave: [benefício]. Tom: [tom]. Considere memory existente do cliente neste projeto. Entregue: 5 variações com ângulos diferentes (problem-aware, social proof, result-focused, curiosity, urgency), respeitando char limits da plataforma, com CTA específico, direção criativa para visual, e sugestões de A/B test. Aplicar quality gates globais (sem travessão, sem 'brutal', PT-BR correto, máx 1-2 emojis).")
+Agent(subagent_type: "marketing-os:mos-ads", prompt: "Crie copy completa de anúncio para [plataforma]. Produto/oferta: [produto]. Objetivo: [objetivo]. Audiência: [audiência]. Benefício-chave: [benefício]. Tom: [tom]. Considere memory existente do cliente neste projeto. Entregue: 5 variações com ângulos diferentes (problem-aware, social proof, result-focused, curiosity, urgency), respeitando char limits da plataforma, com CTA específico, direção criativa para visual, e sugestões de A/B test. Aplicar quality gates globais (sem travessão, sem 'brutal', PT-BR correto, máx 1-2 emojis).")
 ```
 
 ## Dispatch Paralelo (cliente/nicho novo, single message)
 
 ```
-- Agent(subagent_type: "mos-research", prompt: "Pesquisa rápida pra ad creative em [nicho] na [plataforma] BR: concorrentes ativos rodando ads agora, ângulos predominantes, dores reais do público [audiência], stats relevantes dos últimos 90 dias, regulamentação se nicho saúde/finanças. Retorne research brief compacto pra alimentar copy de anúncio.")
+- Agent(subagent_type: "marketing-os:mos-research", prompt: "Pesquisa rápida pra ad creative em [nicho] na [plataforma] BR: concorrentes ativos rodando ads agora, ângulos predominantes, dores reais do público [audiência], stats relevantes dos últimos 90 dias, regulamentação se nicho saúde/finanças. Retorne research brief compacto pra alimentar copy de anúncio.")
 
-- Agent(subagent_type: "mos-ads", prompt: "Crie copy completa de anúncio para [plataforma]. Produto/oferta: [produto]. Objetivo: [objetivo]. Audiência: [audiência]. Benefício-chave: [benefício]. Tom: [tom]. Considere memory existente do cliente neste projeto. Aguarde research do mos-research e diferencie-se dos ângulos saturados que ele apontar. Entregue 5 variações, char limits respeitados, CTA, direção criativa, A/B test. Aplicar quality gates globais.")
+- Agent(subagent_type: "marketing-os:mos-ads", prompt: "Crie copy completa de anúncio para [plataforma]. Produto/oferta: [produto]. Objetivo: [objetivo]. Audiência: [audiência]. Benefício-chave: [benefício]. Tom: [tom]. Considere memory existente do cliente neste projeto. Aguarde research do mos-research e diferencie-se dos ângulos saturados que ele apontar. Entregue 5 variações, char limits respeitados, CTA, direção criativa, A/B test. Aplicar quality gates globais.")
 ```
 
 ## Consolidação
@@ -98,7 +98,7 @@ Plataforma: [Meta | Google | TikTok | LinkedIn | Pinterest] | Objetivo: [objetiv
 
 ## Quality Gates (antes de entregar)
 
-Aplicar gates globais do `skills/marketing-os/SKILL.md`:
+Aplicar gates globais do `${CLAUDE_PLUGIN_ROOT}/skills/marketing-os/SKILL.md`:
 - Sem `—`, sem "brutal", sem CAPS gratuito
 - Máx 1-2 emojis (preferir zero)
 - Acentuação PT-BR correta

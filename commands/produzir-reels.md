@@ -19,7 +19,7 @@ Fecha o pipeline completo de Reels: roteiro → narração → vídeo vertical l
 Se o roteiro não veio pronto:
 
 ```
-Agent(subagent_type: "mos-video", prompt: "Crie roteiro de Reels de [duração]s sobre [tema]. Considere memory existente do cliente neste projeto. Entregue OBRIGATORIAMENTE: (a) texto de narração falável (140-160 palavras/min); (b) timeline de text-on-screen sincronizada em blocos com timestamps [início-fim: texto na tela], legendas curtas de 3-6 palavras por bloco; (c) hook nos 3 primeiros segundos; (d) re-hook visual/textual a cada 5-10s; (e) CTA final. Aplicar quality gates (timing realista, sem aspas em falas).")
+Agent(subagent_type: "marketing-os:mos-video", prompt: "Crie roteiro de Reels de [duração]s sobre [tema]. Considere memory existente do cliente neste projeto. Entregue OBRIGATORIAMENTE: (a) texto de narração falável (140-160 palavras/min); (b) timeline de text-on-screen sincronizada em blocos com timestamps [início-fim: texto na tela], legendas curtas de 3-6 palavras por bloco; (c) hook nos 3 primeiros segundos; (d) re-hook visual/textual a cada 5-10s; (e) CTA final. Aplicar quality gates (timing realista, sem aspas em falas).")
 ```
 
 Roteiro pronto fornecido: valide timing (palavras ÷ 150/min ≤ duração) e extraia a timeline de legendas; sem timeline, dispatche o mos-video só pra gerá-la a partir do texto.
@@ -29,7 +29,7 @@ Roteiro pronto fornecido: valide timing (palavras ÷ 150/min ≤ duração) e ex
 Siga o fluxo do `/narrar-roteiro` (preparação via `mos-audio` + síntese local):
 
 ```bash
-python scripts/tts_runner.py --file roteiro_falavel.txt --tom [tom] --output workspace/media/reels/narracao-<slug>.aiff
+python "${CLAUDE_PLUGIN_ROOT}/scripts/tts_runner.py" --file roteiro_falavel.txt --tom [tom] --output workspace/media/reels/narracao-<slug>.aiff
 ```
 
 Sem TTS funcional no ambiente: entregue roteiro + timeline + instruções de gravação (o usuário narra no celular) e siga pro Degrau 3 apenas se ele fornecer o áudio.
@@ -73,7 +73,7 @@ Arquivo final: workspace/media/reels/[slug].mp4 ([duração]s, 1080x1920, legend
 
 ## Quality Gates (antes de entregar)
 
-Aplicar gates globais do `skills/marketing-os/SKILL.md`:
+Aplicar gates globais do `${CLAUDE_PLUGIN_ROOT}/skills/marketing-os/SKILL.md`:
 - Timing realista validado (Gate 4 do mos-video) ANTES de sintetizar áudio
 - Legendas sincronizadas com a narração (vídeo mudo precisa funcionar sozinho)
 - Sem aspas nas falas; acentuação PT-BR correta nas legendas

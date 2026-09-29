@@ -1,0 +1,15 @@
+{
+  "session_id": "00000000-0000-4000-8000-000000000000",
+  "transcript_path": "/home/usuario/.claude/projects/-home-usuario-projeto/sessao.jsonl",
+  "cwd": "/home/usuario/projeto",
+  "scratchpad_dir": "/tmp/claude/scratchpad",
+  "prompt_id": "00000000-0000-4000-8000-000000000001",
+  "permission_mode": "acceptEdits",
+  "hook_event_name": "PreToolUse",
+  "tool_name": "Write",
+  "tool_input": {
+    "file_path": "/home/usuario/projeto/nota.md",
+    "content": "Anotação do usuário — travessão proposital."
+  },
+  "tool_use_id": "toolu_00000000000000000000000002"
+}

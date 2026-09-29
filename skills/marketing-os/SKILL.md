@@ -5,15 +5,17 @@ description: "Use para produção de marketing digital: posts Instagram/LinkedIn
 
 # Marketing OS: Sistema Operacional de Marketing Digital
 
+> As pastas `subagents`, `scripts`, `assets`, `references`, `workflows` e `docs` citadas aqui e dentro das knowledge bases ficam na raiz do plugin (`${CLAUDE_PLUGIN_ROOT}`), nunca no diretório do projeto do usuário.
+
 Este skill é um **orquestrador** para 21 especialistas de marketing. No Claude Code, ele usa subagents nativos. No ChatGPT Work e no Codex, ele usa a mesma arquitetura em modo compatível: roteia o briefing para o especialista correto, lê os arquivos Tier 1/Tier 2 necessários e, quando houver ferramenta de multi-agent disponível, pode paralelizar as etapas independentes.
 
 ## Modo de Operação: Orquestração por Ambiente
 
 **REGRA FUNDAMENTAL**: Para qualquer pedido de produção de marketing (copy, SEO, research, social, ads, etc.), use o especialista certo antes de entregar.
 
-- **Claude Code**: dispare o subagent especializado via `Agent(subagent_type: "mos-*")`.
-- **ChatGPT Work**: preserve a intenção escolhida por `@Marketing OS`, remova esse prefixo antes de classificar o briefing e aplique o mesmo mapa de dispatch. Leia `agents/mos-*.md` e `subagents/*-agent.md` sob demanda. Use multi-agent e scripts somente quando o host oferecer essas ferramentas; caso contrário, execute no agente principal e declare qualquer validação que não pôde ser rodada.
-- **Codex**: se houver ferramenta de multi-agent disponível, use-a para as etapas independentes. Se não houver, execute no agente principal lendo primeiro `agents/mos-*.md` e depois a knowledge base correspondente em `subagents/*-agent.md`.
+- **Claude Code**: dispare o subagent especializado via `Agent(subagent_type: "marketing-os:mos-*")`.
+- **ChatGPT Work**: preserve a intenção escolhida por `@Marketing OS`, remova esse prefixo antes de classificar o briefing e aplique o mesmo mapa de dispatch. Leia `${CLAUDE_PLUGIN_ROOT}/agents/mos-*.md` e `${CLAUDE_PLUGIN_ROOT}/subagents/*-agent.md` sob demanda. Use multi-agent e scripts somente quando o host oferecer essas ferramentas; caso contrário, execute no agente principal e declare qualquer validação que não pôde ser rodada.
+- **Codex**: se houver ferramenta de multi-agent disponível, use-a para as etapas independentes. Se não houver, execute no agente principal lendo primeiro `${CLAUDE_PLUGIN_ROOT}/agents/mos-*.md` e depois a knowledge base correspondente em `${CLAUDE_PLUGIN_ROOT}/subagents/*-agent.md`.
 
 Motivo: cada especialista tem contexto próprio, knowledge base profunda e output schema padronizado. ChatGPT Work e Codex devem preservar essa camada mesmo quando precisarem executar sem subagent nativo.
 
@@ -59,7 +61,7 @@ Todos os 21 agents têm `memory: project` no frontmatter e instruem persistir ap
 Memory é **opt-in**: o diretório `.claude/agent-memory/` está gitignored (memory é per-projeto, não distribuída pelo plugin). Pra ativar nesse projeto, rode uma vez:
 
 ```bash
-python3 scripts/init_agent_memory.py
+python3 "${CLAUDE_PLUGIN_ROOT}/scripts/init_agent_memory.py"
 ```
 
 Isso cria os 21 arquivos `MEMORY.md` placeholder. Depois disso os agents passam a gravar/ler patterns transferíveis (não conteúdo bruto). Sem o bootstrap, os agents seguem funcionando normalmente — só não persistem memory entre sessões.
@@ -70,29 +72,29 @@ Quando dispatchar qualquer agent com memory ativo no projeto, **explicite no pro
 
 | Briefing típico do usuário | Agent | Arquivo |
 |----|----|----|
-| "escreve headline / CTA / sales letter / microcopy" | `mos-copy` | `agents/mos-copy.md` |
-| "cria artigo SEO / keyword research / on-page" | `mos-seo` | `agents/mos-seo.md` |
-| "pesquisa tendências / concorrentes / audience / validar produto" | `mos-research` | `agents/mos-research.md` |
-| "cria avatar completo / cliente ideal / buyer persona / ICP / anti-avatar" ou `/criar-avatar` | `mos-research` | `agents/mos-research.md` |
-| "post Instagram / LinkedIn / TikTok / Twitter / cross-platform / bio Instagram / about / calendário editorial / planejamento de conteúdo / weekly plan" | `mos-social` | `agents/mos-social.md` |
-| "roteiro YouTube / Reels / VSL / Shorts" | `mos-video` | `agents/mos-video.md` |
-| "podcast / roteiro de áudio / spot / audiobook" | `mos-audio` | `agents/mos-audio.md` |
-| "prompt para IA gerar imagem / vídeo" | `mos-ai-tools` | `agents/mos-ai-tools.md` |
-| "direção criativa / paleta / tipografia / design spec" | `mos-design` | `agents/mos-design.md` |
-| "métricas / relatório / análise de performance / dashboard" | `mos-analytics` | `agents/mos-analytics.md` |
-| "sequência de email / newsletter / automação / subject line / drip" | `mos-email` | `agents/mos-email.md` |
-| "campanha Meta Ads / Google Ads / TikTok Ads (completa)" | `mos-ads` | `agents/mos-ads.md` |
-| "identidade de marca / posicionamento / tom de voz / manifesto da marca / arquétipo / brand guidelines" | `mos-brand` | `agents/mos-brand.md` |
-| "cria USP / UVP / proposta única de venda / proposta de valor / diferencial da oferta" ou `/criar-usp` | `mos-brand` | `agents/mos-brand.md` |
-| "storytelling / narrativa / arco de história / hero's journey aplicado em peça" | `mos-storytelling` | `agents/mos-storytelling.md` |
-| "funil de vendas / sales funnel / jornada do cliente / TOFU MOFU BOFU" | `mos-funnel` | `agents/mos-funnel.md` |
-| "growth hacking / aquisição / crescimento" | `mos-growth` | `agents/mos-growth.md` |
-| "lançamento de produto / campanha de lançamento / PLF" | `mos-launch` | `agents/mos-launch.md` |
-| "infoproduto / curso / ebook / membership / mentoria" | `mos-infoproduct` | `agents/mos-infoproduct.md` |
-| "oferta / value stack / precificação / quanto cobrar / garantia / bônus / order bump" | `mos-offer` | `agents/mos-offer.md` |
-| "responder comentários / DMs / moderação / haters / caixa de perguntas / gestão de comentários" | `mos-community` | `agents/mos-community.md` |
-| "parceria / influenciador / creator / collab / permuta / embaixador / prospectar creators / outreach" | `mos-partnerships` | `agents/mos-partnerships.md` |
-| "teste A/B / variação / otimização de conversão" | `mos-ab-testing` | `agents/mos-ab-testing.md` |
+| "escreve headline / CTA / sales letter / microcopy" | `mos-copy` | `${CLAUDE_PLUGIN_ROOT}/agents/mos-copy.md` |
+| "cria artigo SEO / keyword research / on-page" | `mos-seo` | `${CLAUDE_PLUGIN_ROOT}/agents/mos-seo.md` |
+| "pesquisa tendências / concorrentes / audience / validar produto" | `mos-research` | `${CLAUDE_PLUGIN_ROOT}/agents/mos-research.md` |
+| "cria avatar completo / cliente ideal / buyer persona / ICP / anti-avatar" ou `/criar-avatar` | `mos-research` | `${CLAUDE_PLUGIN_ROOT}/agents/mos-research.md` |
+| "post Instagram / LinkedIn / TikTok / Twitter / cross-platform / bio Instagram / about / calendário editorial / planejamento de conteúdo / weekly plan" | `mos-social` | `${CLAUDE_PLUGIN_ROOT}/agents/mos-social.md` |
+| "roteiro YouTube / Reels / VSL / Shorts" | `mos-video` | `${CLAUDE_PLUGIN_ROOT}/agents/mos-video.md` |
+| "podcast / roteiro de áudio / spot / audiobook" | `mos-audio` | `${CLAUDE_PLUGIN_ROOT}/agents/mos-audio.md` |
+| "prompt para IA gerar imagem / vídeo" | `mos-ai-tools` | `${CLAUDE_PLUGIN_ROOT}/agents/mos-ai-tools.md` |
+| "direção criativa / paleta / tipografia / design spec" | `mos-design` | `${CLAUDE_PLUGIN_ROOT}/agents/mos-design.md` |
+| "métricas / relatório / análise de performance / dashboard" | `mos-analytics` | `${CLAUDE_PLUGIN_ROOT}/agents/mos-analytics.md` |
+| "sequência de email / newsletter / automação / subject line / drip" | `mos-email` | `${CLAUDE_PLUGIN_ROOT}/agents/mos-email.md` |
+| "campanha Meta Ads / Google Ads / TikTok Ads (completa)" | `mos-ads` | `${CLAUDE_PLUGIN_ROOT}/agents/mos-ads.md` |
+| "identidade de marca / posicionamento / tom de voz / manifesto da marca / arquétipo / brand guidelines" | `mos-brand` | `${CLAUDE_PLUGIN_ROOT}/agents/mos-brand.md` |
+| "cria USP / UVP / proposta única de venda / proposta de valor / diferencial da oferta" ou `/criar-usp` | `mos-brand` | `${CLAUDE_PLUGIN_ROOT}/agents/mos-brand.md` |
+| "storytelling / narrativa / arco de história / hero's journey aplicado em peça" | `mos-storytelling` | `${CLAUDE_PLUGIN_ROOT}/agents/mos-storytelling.md` |
+| "funil de vendas / sales funnel / jornada do cliente / TOFU MOFU BOFU" | `mos-funnel` | `${CLAUDE_PLUGIN_ROOT}/agents/mos-funnel.md` |
+| "growth hacking / aquisição / crescimento" | `mos-growth` | `${CLAUDE_PLUGIN_ROOT}/agents/mos-growth.md` |
+| "lançamento de produto / campanha de lançamento / PLF" | `mos-launch` | `${CLAUDE_PLUGIN_ROOT}/agents/mos-launch.md` |
+| "infoproduto / curso / ebook / membership / mentoria" | `mos-infoproduct` | `${CLAUDE_PLUGIN_ROOT}/agents/mos-infoproduct.md` |
+| "oferta / value stack / precificação / quanto cobrar / garantia / bônus / order bump" | `mos-offer` | `${CLAUDE_PLUGIN_ROOT}/agents/mos-offer.md` |
+| "responder comentários / DMs / moderação / haters / caixa de perguntas / gestão de comentários" | `mos-community` | `${CLAUDE_PLUGIN_ROOT}/agents/mos-community.md` |
+| "parceria / influenciador / creator / collab / permuta / embaixador / prospectar creators / outreach" | `mos-partnerships` | `${CLAUDE_PLUGIN_ROOT}/agents/mos-partnerships.md` |
+| "teste A/B / variação / otimização de conversão" | `mos-ab-testing` | `${CLAUDE_PLUGIN_ROOT}/agents/mos-ab-testing.md` |
 
 ### Rota condicional: USP e UVP
 
@@ -168,13 +170,13 @@ Briefings tipo **"cria página de aplicação"**, **"landing page"**, **"página
 
 ## Padrões de Orquestração
 
-Nos exemplos abaixo, `Agent(subagent_type: "mos-*")` é a sintaxe nativa do Claude Code. No ChatGPT Work e no Codex, trate cada chamada como uma etapa de roteamento: consulte o Tier 1 em `agents/mos-*.md`, aprofunde com o Tier 2 em `subagents/*-agent.md`, rode scripts determinísticos quando fizer sentido e consolide o resultado no protocolo de entrega. Profundidade adicional de alguns workflows mora em `workflows/` (arquivos standalone).
+Nos exemplos abaixo, `Agent(subagent_type: "marketing-os:mos-*")` é a sintaxe nativa do Claude Code. No ChatGPT Work e no Codex, trate cada chamada como uma etapa de roteamento: consulte o Tier 1 em `${CLAUDE_PLUGIN_ROOT}/agents/mos-*.md`, aprofunde com o Tier 2 em `${CLAUDE_PLUGIN_ROOT}/subagents/*-agent.md`, rode scripts determinísticos quando fizer sentido e consolide o resultado no protocolo de entrega. Profundidade adicional de alguns workflows mora em `${CLAUDE_PLUGIN_ROOT}/workflows/` (arquivos standalone).
 
 ### 1. Dispatch Simples (1 agent, caso mais comum)
 
 ```
 Pedido: "escreve 5 headlines para curso de Python iniciante"
-Ação: Agent(subagent_type: "mos-copy", prompt: "5 headlines... contexto: curso Python iniciante, público: devs juniores")
+Ação: Agent(subagent_type: "marketing-os:mos-copy", prompt: "5 headlines... contexto: curso Python iniciante, público: devs juniores")
 ```
 
 ### 2. Dispatch Paralelo (múltiplos agents independentes)
@@ -185,9 +187,9 @@ Quando o briefing envolve áreas que **não dependem uma da outra**, dispare em 
 Pedido: "tenho um curso novo de IA para empreendedores, preciso de pesquisa + tom de marca + headlines iniciais"
 
 Ação (single message, 3 tool calls simultâneas):
-- Agent(subagent_type: "mos-research", prompt: "pesquisar nicho IA para empreendedores BR, concorrência, dores, trends")
-- Agent(subagent_type: "mos-brand", prompt: "definir tom de voz para curso IA para empreendedores BR")
-- Agent(subagent_type: "mos-copy", prompt: "5 headlines para curso IA para empreendedores BR")
+- Agent(subagent_type: "marketing-os:mos-research", prompt: "pesquisar nicho IA para empreendedores BR, concorrência, dores, trends")
+- Agent(subagent_type: "marketing-os:mos-brand", prompt: "definir tom de voz para curso IA para empreendedores BR")
+- Agent(subagent_type: "marketing-os:mos-copy", prompt: "5 headlines para curso IA para empreendedores BR")
 ```
 
 ### 3. Dispatch Sequencial (quando há dependência real)
@@ -196,9 +198,9 @@ Só sequencie quando output de um é **input necessário** do próximo:
 
 ```
 Workflow "artigo SEO completo":
-1. Agent(subagent_type: "mos-research", prompt: "research sobre [tema]")
-2. → (usa research) Agent(subagent_type: "mos-seo", prompt: "artigo sobre [tema], usando research: [colar research brief]")
-3. → (opcional) Agent(subagent_type: "mos-copy", prompt: "otimizar headline + CTA do artigo")
+1. Agent(subagent_type: "marketing-os:mos-research", prompt: "research sobre [tema]")
+2. → (usa research) Agent(subagent_type: "marketing-os:mos-seo", prompt: "artigo sobre [tema], usando research: [colar research brief]")
+3. → (opcional) Agent(subagent_type: "marketing-os:mos-copy", prompt: "otimizar headline + CTA do artigo")
 ```
 
 ### 4. Workflow Completo (content-pipeline)
@@ -219,9 +221,9 @@ Para briefings tipo "cria página de aplicação", "landing page", "página de v
 
 ```
 Fase 1 (paralelo, single message com 3 Agent calls):
-  - Agent(subagent_type: "mos-funnel", prompt: "estruturar página BOFU para [produto/avatar]: CTA placement, escassez, anti-avatar, FAQ, prova social, stack value")
-  - Agent(subagent_type: "mos-copy", prompt: "revisar/melhorar copy fornecida [se houver: colar copy do PDF/DOCX], aplicar quality gates globais, sugerir variações de headline/CTA")
-  - Agent(subagent_type: "mos-design", prompt: "direção visual para página BOFU em [nicho]: paleta, tipografia, hierarquia, mood, exemplos de referência")
+  - Agent(subagent_type: "marketing-os:mos-funnel", prompt: "estruturar página BOFU para [produto/avatar]: CTA placement, escassez, anti-avatar, FAQ, prova social, stack value")
+  - Agent(subagent_type: "marketing-os:mos-copy", prompt: "revisar/melhorar copy fornecida [se houver: colar copy do PDF/DOCX], aplicar quality gates globais, sugerir variações de headline/CTA")
+  - Agent(subagent_type: "marketing-os:mos-design", prompt: "direção visual para página BOFU em [nicho]: paleta, tipografia, hierarquia, mood, exemplos de referência")
 
 Fase 2 (sequencial — depende dos outputs da Fase 1):
   - Consolidar os 3 outputs num brief único (estrutura + copy revisada + design spec)
@@ -237,7 +239,7 @@ Fase 3: Quality gates globais sobre o output final + sugestões de teste A/B (mo
 - Sem `mos-design`: visual sai com cara genérica de template, não de nicho premium
 - `frontend-design` é excelente em build técnico, mas não conhece padrões de conversão — é executor da Fase 2, não decisor da Fase 1
 
-**Quando usar memory de contexto:** se a pasta atual já tem `.claude/agent-memory/mos-copy/` ou `.claude/agent-memory/mos-funnel/` com briefings/feedback de cliente anteriores (criados via `python3 scripts/init_agent_memory.py`), explicite isso no prompt do Fase 1 ("considere memory existente do cliente").
+**Quando usar memory de contexto:** se a pasta atual já tem `.claude/agent-memory/mos-copy/` ou `.claude/agent-memory/mos-funnel/` com briefings/feedback de cliente anteriores (criados via `python3 "${CLAUDE_PLUGIN_ROOT}/scripts/init_agent_memory.py"`), explicite isso no prompt do Fase 1 ("considere memory existente do cliente").
 
 ### 6. Workflow: Webinar (live ou perpetual)
 
@@ -245,13 +247,13 @@ Triggers: "monta um webinar", "webinar de vendas pra X", "webinar funnel".
 
 ```
 Fase 1 (paralelo, single message):
-  - Agent(subagent_type: "mos-launch", prompt: "estratégia de webinar [live/perpetual] para [produto]: posicionamento da oferta, pitch timing, escassez")
-  - Agent(subagent_type: "mos-funnel", prompt: "funil de webinar: registro → confirmação → reminder → live → reposicionamento → encerramento; pontos de queda esperados")
-  - Agent(subagent_type: "mos-video", prompt: "estrutura do webinar de [duração] minutos: hook, pitch, agenda, conteúdo de valor, transição pra oferta, garantia, FAQ ao vivo")
+  - Agent(subagent_type: "marketing-os:mos-launch", prompt: "estratégia de webinar [live/perpetual] para [produto]: posicionamento da oferta, pitch timing, escassez")
+  - Agent(subagent_type: "marketing-os:mos-funnel", prompt: "funil de webinar: registro → confirmação → reminder → live → reposicionamento → encerramento; pontos de queda esperados")
+  - Agent(subagent_type: "marketing-os:mos-video", prompt: "estrutura do webinar de [duração] minutos: hook, pitch, agenda, conteúdo de valor, transição pra oferta, garantia, FAQ ao vivo")
 
 Fase 2 (sequencial, depende dos 3 outputs):
-  - Agent(subagent_type: "mos-copy", prompt: "página de registro + headline + 3 emails (registro/reminder/no-show) com base no posicionamento da Fase 1")
-  - Agent(subagent_type: "mos-email", prompt: "sequência completa de webinar: 4 emails pré, 1 lembrete dia, 3 emails pós-webinar (replay → últimas vagas → encerramento)")
+  - Agent(subagent_type: "marketing-os:mos-copy", prompt: "página de registro + headline + 3 emails (registro/reminder/no-show) com base no posicionamento da Fase 1")
+  - Agent(subagent_type: "marketing-os:mos-email", prompt: "sequência completa de webinar: 4 emails pré, 1 lembrete dia, 3 emails pós-webinar (replay → últimas vagas → encerramento)")
 
 Fase 3: Quality gates + recomendação de tracking (mos-analytics opcional pra setup de eventos)
 ```
@@ -264,18 +266,18 @@ Triggers: "vou lançar um curso", "lançamento de infoproduto", "criar e lançar
 
 ```
 Fase 1 (paralelo):
-  - Agent(subagent_type: "mos-research", prompt: "validação de mercado: tamanho do nicho, concorrentes, ticket médio praticado, dores não atendidas")
-  - Agent(subagent_type: "mos-brand", prompt: "posicionamento e voz da marca/expert para o produto") — só se marca nova ou pivô
-  - Agent(subagent_type: "mos-infoproduct", prompt: "estrutura do infoproduto: módulos, formato (curso/membership/mentoria), pricing strategy, bônus")
+  - Agent(subagent_type: "marketing-os:mos-research", prompt: "validação de mercado: tamanho do nicho, concorrentes, ticket médio praticado, dores não atendidas")
+  - Agent(subagent_type: "marketing-os:mos-brand", prompt: "posicionamento e voz da marca/expert para o produto") — só se marca nova ou pivô
+  - Agent(subagent_type: "marketing-os:mos-infoproduct", prompt: "estrutura do infoproduto: módulos, formato (curso/membership/mentoria), pricing strategy, bônus")
 
 Fase 2 (sequencial — depende da estrutura definida na Fase 1):
-  - Agent(subagent_type: "mos-launch", prompt: "estratégia de lançamento (PLF / semente / relâmpago / perpétuo) baseada no produto e nicho")
-  - Agent(subagent_type: "mos-funnel", prompt: "funil completo: TOFU (CPL/anúncios) → MOFU (lead magnet/webinar) → BOFU (página de vendas/aplicação)")
+  - Agent(subagent_type: "marketing-os:mos-launch", prompt: "estratégia de lançamento (PLF / semente / relâmpago / perpétuo) baseada no produto e nicho")
+  - Agent(subagent_type: "marketing-os:mos-funnel", prompt: "funil completo: TOFU (CPL/anúncios) → MOFU (lead magnet/webinar) → BOFU (página de vendas/aplicação)")
 
 Fase 3 (paralelo, depende da estratégia de lançamento):
-  - Agent(subagent_type: "mos-copy", prompt: "página de vendas + headlines + CTAs alinhados com promessa do produto e estratégia de lançamento")
-  - Agent(subagent_type: "mos-email", prompt: "sequência completa de pré-lançamento + abertura de carrinho + última chamada")
-  - Agent(subagent_type: "mos-ads", prompt: "campanhas de tráfego pra cada fase do lançamento: pré (lista) + durante (conversão) + retargeting")
+  - Agent(subagent_type: "marketing-os:mos-copy", prompt: "página de vendas + headlines + CTAs alinhados com promessa do produto e estratégia de lançamento")
+  - Agent(subagent_type: "marketing-os:mos-email", prompt: "sequência completa de pré-lançamento + abertura de carrinho + última chamada")
+  - Agent(subagent_type: "marketing-os:mos-ads", prompt: "campanhas de tráfego pra cada fase do lançamento: pré (lista) + durante (conversão) + retargeting")
 
 Fase 4: Quality gates + setup de tracking + plano de teste A/B (mos-ab-testing)
 ```
@@ -288,12 +290,12 @@ Triggers: "cria carrossel sobre X", "carrossel Instagram pra [tema]".
 
 ```
 Fase 1 (paralelo, single message):
-  - Agent(subagent_type: "mos-social", prompt: "estrutura de carrossel pra [plataforma]: número ideal de slides, hook na capa, padrão de retenção entre slides, CTA final")
-  - Agent(subagent_type: "mos-copy", prompt: "texto de cada slide: hook na capa, body com peso/leveza alternada, CTA específico — quality gates aplicados")
-  - Agent(subagent_type: "mos-design", prompt: "direção visual: paleta, tipografia, hierarquia, formato de capa vs body, consistência visual entre slides")
+  - Agent(subagent_type: "marketing-os:mos-social", prompt: "estrutura de carrossel pra [plataforma]: número ideal de slides, hook na capa, padrão de retenção entre slides, CTA final")
+  - Agent(subagent_type: "marketing-os:mos-copy", prompt: "texto de cada slide: hook na capa, body com peso/leveza alternada, CTA específico — quality gates aplicados")
+  - Agent(subagent_type: "marketing-os:mos-design", prompt: "direção visual: paleta, tipografia, hierarquia, formato de capa vs body, consistência visual entre slides")
 
 Fase 2 (opcional, paralelo com Fase 1):
-  - Agent(subagent_type: "mos-ai-tools", prompt: "prompts pra IA gerar imagem da capa (Midjourney/Flux/Ideogram) com referência da Fase 1 design")
+  - Agent(subagent_type: "marketing-os:mos-ai-tools", prompt: "prompts pra IA gerar imagem da capa (Midjourney/Flux/Ideogram) com referência da Fase 1 design")
 
 Fase 3: Consolidação (texto + design spec + prompts) + caption + hashtags + sugestão de enquete obrigatória
 ```
@@ -306,9 +308,9 @@ Triggers: "cria VSL pra [produto]", "roteiro de VSL", "video sales letter".
 
 ```
 Fase 1 (paralelo):
-  - Agent(subagent_type: "mos-storytelling", prompt: "arco narrativo da VSL: hook → problema → vilão → solução → prova → oferta → urgência. Frameworks: hero's journey adaptado pra venda")
-  - Agent(subagent_type: "mos-copy", prompt: "estrutura de copy de venda no formato VSL: headline, big idea, mecanismo único, anti-avatar, stack value, garantia, FAQ falado")
-  - Agent(subagent_type: "mos-video", prompt: "ciência de retenção em VSL: timestamps de queda esperados, transições, B-roll, ritmo, duração ideal por nicho/ticket")
+  - Agent(subagent_type: "marketing-os:mos-storytelling", prompt: "arco narrativo da VSL: hook → problema → vilão → solução → prova → oferta → urgência. Frameworks: hero's journey adaptado pra venda")
+  - Agent(subagent_type: "marketing-os:mos-copy", prompt: "estrutura de copy de venda no formato VSL: headline, big idea, mecanismo único, anti-avatar, stack value, garantia, FAQ falado")
+  - Agent(subagent_type: "marketing-os:mos-video", prompt: "ciência de retenção em VSL: timestamps de queda esperados, transições, B-roll, ritmo, duração ideal por nicho/ticket")
 
 Fase 2: Consolidação em roteiro único (texto narrado + cues visuais + timing de seções)
 
@@ -323,11 +325,11 @@ Triggers: "analisa @fulano e clona", "engenharia reversa do [concorrente]", "com
 
 ```
 Fase 1 (paralelo):
-  - Agent(subagent_type: "mos-research", prompt: "mapeamento completo: produtos, ticket, posicionamento, fontes de tráfego, conteúdo orgânico, ads ativos, depoimentos. WebSearch + análise de perfis públicos")
-  - Agent(subagent_type: "mos-brand", prompt: "extrair positioning, arquétipo, voz/tom do concorrente analisado a partir de samples reais — gerar brand spec replicável")
+  - Agent(subagent_type: "marketing-os:mos-research", prompt: "mapeamento completo: produtos, ticket, posicionamento, fontes de tráfego, conteúdo orgânico, ads ativos, depoimentos. WebSearch + análise de perfis públicos")
+  - Agent(subagent_type: "marketing-os:mos-brand", prompt: "extrair positioning, arquétipo, voz/tom do concorrente analisado a partir de samples reais — gerar brand spec replicável")
 
 Fase 2 (sequencial, depende da Fase 1):
-  - Agent(subagent_type: "mos-copy", prompt: "voice clone: extrair padrões de copy do concorrente (estruturas de headline, padrões de CTA, vocabulário, ritmo). Aplicar nos assets/clones/ se for um copywriter conhecido (Halbert, Hopkins, etc.). Gerar samples adaptados pra cliente atual")
+  - Agent(subagent_type: "marketing-os:mos-copy", prompt: "voice clone: extrair padrões de copy do concorrente (estruturas de headline, padrões de CTA, vocabulário, ritmo). Aplicar nos ${CLAUDE_PLUGIN_ROOT}/assets/clones/ se for um copywriter conhecido (Halbert, Hopkins, etc.). Gerar samples adaptados pra cliente atual")
 
 Fase 3: Brief consolidado de "estratégia clonada e adaptada" + checklist de o-que-replicar / o-que-evitar / oportunidades de diferenciação
 ```
@@ -411,24 +413,24 @@ OBRIGATÓRIO para conteúdos de redes sociais (Reels, posts, carrosséis, storie
 | Educação | Didático, encorajador |
 | Produtividade | Prático, direto |
 
-Detalhes em `references/niches.md`.
+Detalhes em `${CLAUDE_PLUGIN_ROOT}/references/niches.md`.
 
 ## Recursos Auxiliares (invocados sob demanda pelos agents)
 
-### Templates (`assets/templates/`)
+### Templates (`${CLAUDE_PLUGIN_ROOT}/assets/templates/`)
 - `youtube-script.md`, `reels-tiktok-script.md`, `vsl-script.md`, `podcast-episode.md`, `instagram-feed-post.md`, `post-instagram-carrossel.md`, `instagram-stories.md`, `sales-page.md`, `webinar-script.md`, `lead-magnet.md` e mais 16 especializados.
 
-### Swipe Files (`assets/swipe-files/`)
+### Swipe Files (`${CLAUDE_PLUGIN_ROOT}/assets/swipe-files/`)
 - `headlines-virais.md`, `hooks-reels.md`, `ctas-conversao.md`, `copy-carrossel.md`, `bios-instagram.md`, `transicoes-reels.md`, `paletas-cores.md`, `emails-conversao.md`, `trends-adaptaveis.md`.
 
-### Scripts Python (`scripts/`)
+### Scripts Python (`${CLAUDE_PLUGIN_ROOT}/scripts/`)
 29 ferramentas + CLI unificado `mos.py`. Os agents com acesso a `Bash` podem invocar:
 - `seo_analyzer.py`, `hashtag_generator.py`, `hook_generator.py`, `reels_script_generator.py`, `carousel_structure_generator.py`, `caption_generator.py`, `trend_tracker.py`, `project_manager.py`, `quality_gate.py`, etc.
 
-### Workflows (`workflows/`)
+### Workflows (`${CLAUDE_PLUGIN_ROOT}/workflows/`)
 9 workflows end-to-end documentados: `lancamento-produto.md`, `calendario-mensal.md`, `funil-vendas.md`, `batch-production-workflow.md`, `parceria-influencer.md`, `content-pipeline.md`, `campanha-conversao.md`, `tiktok-trends-chrome.md`, `end-to-end-campaign-workflow.md`.
 
-### Referências (`references/`)
+### Referências (`${CLAUDE_PLUGIN_ROOT}/references/`)
 - `social-media.md`, `blog-seo.md`, `email-marketing.md`, `landing-pages.md`, `ads-copy.md`, `design-specs.md`, `strategy.md`, `ux-writing-microcopy.md`, `niches.md`.
 
 ## Protocolo de Entrega ao Usuário
@@ -473,7 +475,7 @@ Quando os subagents do marketing-os terminam sua parte, alguns outputs podem pre
 
 ## Slash commands rápidos
 
-48 commands em `commands/` são atalhos pra workflows comuns. Quando user invoca o command direto (ex: `/criar-carrossel`), segue a lógica do command file. Quando user pede em linguagem natural ("cria um carrossel sobre X"), este SKILL dispatcha conforme tabela e workflows acima.
+48 commands em `${CLAUDE_PLUGIN_ROOT}/commands/` são atalhos pra workflows comuns. Quando user invoca o command direto (ex: `/criar-carrossel`), segue a lógica do command file. Quando user pede em linguagem natural ("cria um carrossel sobre X"), este SKILL dispatcha conforme tabela e workflows acima.
 
 | Categoria | Commands |
 |---|---|
@@ -499,11 +501,11 @@ Quando os subagents do marketing-os terminam sua parte, alguns outputs podem pre
 
 ## Arquitetura (two-tier)
 
-- **Tier 1** (`agents/mos-*.md`): system prompts enxutos (~250 linhas) com dispatch protocol, output schema e quality gates. Carregados automaticamente pelo Claude Code e consultados sob demanda no ChatGPT Work e no Codex.
-- **Tier 2** (`subagents/*-agent.md`): knowledge base profunda (~3500 linhas cada) com frameworks, cases, tabelas, exemplos. Lida sob demanda via Read pelos agents tier-1.
+- **Tier 1** (`${CLAUDE_PLUGIN_ROOT}/agents/mos-*.md`): system prompts enxutos (~250 linhas) com dispatch protocol, output schema e quality gates. Carregados automaticamente pelo Claude Code e consultados sob demanda no ChatGPT Work e no Codex.
+- **Tier 2** (`${CLAUDE_PLUGIN_ROOT}/subagents/*-agent.md`): knowledge base profunda (~3500 linhas cada) com frameworks, cases, tabelas, exemplos. Lida sob demanda via Read pelos agents tier-1.
 
 Isso mantém contextos dos agents leves, carrega profundidade só quando precisa, e permite evoluir knowledge sem mexer no dispatch.
 
 ## Versão
 
-Versão atual em `.claude-plugin/plugin.json`. Histórico em `CHANGELOG.md`. Migração da v5 (squad) → v6 (native subagents) documentada em `docs/architecture/subagents-migration.md`.
+Versão atual em `.claude-plugin/plugin.json`. Histórico em `CHANGELOG.md`. Migração da v5 (squad) → v6 (native subagents) documentada em `${CLAUDE_PLUGIN_ROOT}/docs/architecture/subagents-migration.md`.

@@ -18,7 +18,7 @@ Fecha o gap "só gera prompt": o `mos-ai-tools` faz a engenharia do prompt e a s
 ## Fase 1: engenharia do prompt (dispatch)
 
 ```
-Agent(subagent_type: "mos-ai-tools", prompt: "Gere prompt otimizado para geração de imagem. Subject: [subject]. Uso: [uso]. Aspect ratio: [ar]. Estilo: [estilo]. Mood: [mood]. IMPORTANTE: a imagem NÃO deve conter texto nem letreiros (texto entra em pós-produção quando necessário). Entregue: 1 prompt principal em inglês (modelos renderizam melhor) com descrição de composição, luz e lente; negative prompt quando aplicável; 2 variações de ângulo/estilo. Estruture em markdown.")
+Agent(subagent_type: "marketing-os:mos-ai-tools", prompt: "Gere prompt otimizado para geração de imagem. Subject: [subject]. Uso: [uso]. Aspect ratio: [ar]. Estilo: [estilo]. Mood: [mood]. IMPORTANTE: a imagem NÃO deve conter texto nem letreiros (texto entra em pós-produção quando necessário). Entregue: 1 prompt principal em inglês (modelos renderizam melhor) com descrição de composição, luz e lente; negative prompt quando aplicável; 2 variações de ângulo/estilo. Estruture em markdown.")
 ```
 
 Se o usuário já vem com prompt pronto (ex: output do `/gerar-imagem`), pule a Fase 1 e valide apenas: sem texto embutido, aspect ratio definido.
@@ -60,7 +60,7 @@ Arquivo: workspace/media/imagens/[nome].png | Aspect: [ar] | Skill usada: [gpt-i
 
 ## Quality Gates (antes de entregar)
 
-Aplicar gates globais do `skills/marketing-os/SKILL.md`:
+Aplicar gates globais do `${CLAUDE_PLUGIN_ROOT}/skills/marketing-os/SKILL.md`:
 - Prompt sem pedido de texto embutido (texto renderizado por IA sai ilegível; é FAIL de processo)
 - Imagem com pessoa reconhecível ou marca de terceiro: alertar direito de imagem/uso antes de entregar
 - Arquivo salvo em `workspace/media/` (nunca em path versionado do plugin)

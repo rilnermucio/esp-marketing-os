@@ -21,7 +21,7 @@ Exemplo:
   /auditoria-pro https://stripe.com
 ```
 
-Rode `python ${CLAUDE_PLUGIN_ROOT}/scripts/audit_detector.py "$ARGUMENTS"`. Se type != "landing", aborte com mensagem clara. Senão, capture `type`, `normalized`, `slug`.
+Rode `python scripts/audit_detector.py "$ARGUMENTS"`. Se type != "landing", aborte com mensagem clara. Senão, capture `type`, `normalized`, `slug`.
 
 ## Passo 2: Criar diretório do run
 
@@ -38,7 +38,7 @@ Use Bash + 7 Agent calls em UMA SÓ mensagem.
 ### Bash: Capturar screenshots
 
 ```bash
-python ${CLAUDE_PLUGIN_ROOT}/scripts/audit_screenshot.py \
+python scripts/audit_screenshot.py \
   --url "${NORMALIZED}" \
   --output-dir "${RUN_DIR}/screenshots" \
   --timeout-ms 30000
@@ -103,13 +103,13 @@ Monte o JSON `scores.json` em `${RUN_DIR}/`:
 ## Passo 6: Calcular score final
 
 ```bash
-python ${CLAUDE_PLUGIN_ROOT}/scripts/audit_scoring.py < "${RUN_DIR}/scores.json" > "${RUN_DIR}/scoring_output.json"
+python scripts/audit_scoring.py < "${RUN_DIR}/scores.json" > "${RUN_DIR}/scoring_output.json"
 ```
 
 ## Passo 7: Gerar radar chart
 
 ```bash
-python ${CLAUDE_PLUGIN_ROOT}/scripts/audit_radar_chart.py \
+python scripts/audit_radar_chart.py \
   --scores-json "${RUN_DIR}/scoring_output.json" \
   --output "${RUN_DIR}/charts/radar_scorecard.png"
 ```
@@ -117,7 +117,7 @@ python ${CLAUDE_PLUGIN_ROOT}/scripts/audit_radar_chart.py \
 ## Passo 8: Gerar roadmap
 
 ```bash
-python ${CLAUDE_PLUGIN_ROOT}/scripts/audit_roadmap_generator.py < "${RUN_DIR}/scoring_output.json" > "${RUN_DIR}/roadmap.json"
+python scripts/audit_roadmap_generator.py < "${RUN_DIR}/scoring_output.json" > "${RUN_DIR}/roadmap.json"
 ```
 
 ## Passo 9: Build report data dict + render HTML
@@ -163,7 +163,7 @@ Depois renderize HTML:
 python -c "
 import json
 import sys
-sys.path.insert(0, '${CLAUDE_PLUGIN_ROOT}/scripts')
+sys.path.insert(0, 'scripts')
 from audit_premium_template import render
 
 data = json.load(open('${RUN_DIR}/render_input.json'))
@@ -184,7 +184,7 @@ print('${RUN_DIR}/RELATORIO.html')
 ## Passo 10: Gerar PDF
 
 ```bash
-python ${CLAUDE_PLUGIN_ROOT}/scripts/pdf_generator.py --from-html \
+python scripts/pdf_generator.py --from-html \
   "${RUN_DIR}/RELATORIO.html" \
   "${RUN_DIR}/RELATORIO.pdf" \
   ".auditoria-config.json"

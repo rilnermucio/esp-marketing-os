@@ -22,6 +22,8 @@ import sys
 import site
 from typing import Any, Dict, List, Tuple
 
+from workspace_paths import user_workspace
+
 # Adiciona user site-packages ao path (necessário em alguns sistemas)
 user_site = site.getusersitepackages()
 if user_site not in sys.path:
@@ -36,7 +38,7 @@ except ImportError:
     TIKTOK_API_AVAILABLE = False
 
 # Configurações (diretório criado apenas quando necessário)
-OUTPUT_DIR = Path(__file__).parent.parent / "outputs" / "tiktok-trends"
+OUTPUT_DIR = user_workspace() / "research" / "tiktok-trends"
 
 
 # ============================================================

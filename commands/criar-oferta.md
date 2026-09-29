@@ -5,7 +5,7 @@ argument-hint: "<produto/serviço + público + ticket pretendido, ex: 'mentoria 
 
 # /criar-oferta: Arquitetura de Oferta (Dispatch-Based)
 
-Desenha a oferta em si (promessa, stack, preço, garantia, condições, motivo pra agir) orquestrando `Agent(subagent_type: "mos-offer")`. Não produz inline. A copy da página que vende a oferta é etapa seguinte (`mos-copy`).
+Desenha a oferta em si (promessa, stack, preço, garantia, condições, motivo pra agir) orquestrando `Agent(subagent_type: "marketing-os:mos-offer")`. Não produz inline. A copy da página que vende a oferta é etapa seguinte (`mos-copy`).
 
 ## Required inputs (ask if missing)
 
@@ -76,12 +76,12 @@ Briefing recebido
 ## Dispatch Simples
 
 ```
-Agent(subagent_type: "mos-offer", prompt: "Arquitete a oferta. Produto: [produto]. Público: [público + consciência]. Modelo: [modelo]. Ticket alvo: [faixa ou 'recomendar']. Posição no funil: [posição]. Dados atuais: [dados ou 'nenhum']. Research disponível: [resumo integral ou 'nenhum']. Dossiê de USP e Handoff Context: [JSON integral ou 'nenhum']. Se houver Dossiê de USP, preserve usp_version, maturity, primary_usp, reason_to_believe, mechanism_or_differentiator, evidence_ids, claim_limits e open_hypotheses; qualquer mudança material vira proposta de nova versão. Considere memory existente do cliente neste projeto. Entregue no Output Schema do agent: promessa central, value stack com justificativa de valor por item, preço + ancoragem + parcelamento BR, garantia com termos e sustentabilidade, motivo real para agir, mapa objeção→elemento, top 2 arquiteturas com Offer Score e red team critique. Inclua Protocolo de Evidências com EVIDÊNCIA CONFIRMADA, INFERÊNCIA e HIPÓTESE, fonte e data, confiança e escopo; Claims Aprovados; Claims Bloqueados; Plano de Validação; e Handoff Context com os IDs preservados. Aplicar quality gates (urgência real, garantia sustentável, valor justificado, fact-check de comparáveis).")
+Agent(subagent_type: "marketing-os:mos-offer", prompt: "Arquitete a oferta. Produto: [produto]. Público: [público + consciência]. Modelo: [modelo]. Ticket alvo: [faixa ou 'recomendar']. Posição no funil: [posição]. Dados atuais: [dados ou 'nenhum']. Research disponível: [resumo integral ou 'nenhum']. Dossiê de USP e Handoff Context: [JSON integral ou 'nenhum']. Se houver Dossiê de USP, preserve usp_version, maturity, primary_usp, reason_to_believe, mechanism_or_differentiator, evidence_ids, claim_limits e open_hypotheses; qualquer mudança material vira proposta de nova versão. Considere memory existente do cliente neste projeto. Entregue no Output Schema do agent: promessa central, value stack com justificativa de valor por item, preço + ancoragem + parcelamento BR, garantia com termos e sustentabilidade, motivo real para agir, mapa objeção→elemento, top 2 arquiteturas com Offer Score e red team critique. Inclua Protocolo de Evidências com EVIDÊNCIA CONFIRMADA, INFERÊNCIA e HIPÓTESE, fonte e data, confiança e escopo; Claims Aprovados; Claims Bloqueados; Plano de Validação; e Handoff Context com os IDs preservados. Aplicar quality gates (urgência real, garantia sustentável, valor justificado, fact-check de comparáveis).")
 ```
 
 ## Escalações
 
-- **Sem research em oferta core**: `Agent(subagent_type: "mos-research", prompt: "Research pra arquitetura de oferta: dores prioritárias de [público], faixa de investimento que esse público já pratica, alternativas/concorrentes com preços, objeções típicas. Retorne research brief compacto.")` ANTES do mos-offer (o pre-flight dele exige)
+- **Sem research em oferta core**: `Agent(subagent_type: "marketing-os:mos-research", prompt: "Research pra arquitetura de oferta: dores prioritárias de [público], faixa de investimento que esse público já pratica, alternativas/concorrentes com preços, objeções típicas. Retorne research brief compacto.")` ANTES do mos-offer (o pre-flight dele exige)
 - **Produto indefinido**: redirecionar pra `/criar-infoproduto` (curriculum primeiro, oferta depois)
 - **Página de venda da oferta**: após o offer, dispatch `mos-copy` com o Handoff Context JSON como insumo
 
@@ -148,7 +148,7 @@ Valor total: R$ X | Preço: R$ Y | Ratio X:Y
 
 ## Quality Gates (antes de entregar)
 
-Aplicar gates globais do `skills/marketing-os/SKILL.md` + os específicos do mos-offer:
+Aplicar gates globais do `${CLAUDE_PLUGIN_ROOT}/skills/marketing-os/SKILL.md` + os específicos do mos-offer:
 - Urgência/escassez com justificativa verificável (fabricada = refazer)
 - Garantia sustentável (refund × conversão calculado)
 - Valor percebido com comparável real por item do stack

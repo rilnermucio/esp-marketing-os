@@ -1,4 +1,5 @@
 """Validates plugin code does not reference workspace/ paths and that personal files never ship."""
+
 from __future__ import annotations
 
 import subprocess
@@ -6,8 +7,15 @@ from pathlib import Path
 
 import pytest
 
-
-PLUGIN_DIRS = ["skills", "subagents", "commands", "workflows", "assets", "references", "agents"]
+PLUGIN_DIRS = [
+    "skills",
+    "subagents",
+    "commands",
+    "workflows",
+    "assets",
+    "references",
+    "agents",
+]
 LEAK_PATTERNS = ["workspace/", "../workspace", "/workspace/"]
 # Files that legitimately reference workspace/ by design (e.g. commands that read user-local samples)
 WORKSPACE_REF_ALLOWLIST = {
@@ -62,7 +70,19 @@ def test_no_plugin_file_references_workspace(project_root: Path) -> None:
 
 # Formatos típicos de material de cliente. A fonte do marketplace é a raiz do
 # repo, então qualquer arquivo rastreado é distribuído em toda instalação.
-OFFICE_EXTENSIONS = {".doc", ".docx", ".xls", ".xlsx", ".ppt", ".pptx", ".key", ".numbers", ".pages", ".odt", ".ods"}
+OFFICE_EXTENSIONS = {
+    ".doc",
+    ".docx",
+    ".xls",
+    ".xlsx",
+    ".ppt",
+    ".pptx",
+    ".key",
+    ".numbers",
+    ".pages",
+    ".odt",
+    ".ods",
+}
 # Exceções deliberadas, com justificativa. Vazio por padrão.
 OFFICE_FILE_ALLOWLIST: set[str] = set()
 
@@ -97,7 +117,8 @@ def test_no_office_documents_tracked(project_root: Path) -> None:
     offenders = [
         p
         for p in _tracked_files(project_root)
-        if Path(p).suffix.lower() in OFFICE_EXTENSIONS and p not in OFFICE_FILE_ALLOWLIST
+        if Path(p).suffix.lower() in OFFICE_EXTENSIONS
+        and p not in OFFICE_FILE_ALLOWLIST
     ]
     assert not offenders, (
         "Documentos de escritório versionados (provável material de cliente):\n"
