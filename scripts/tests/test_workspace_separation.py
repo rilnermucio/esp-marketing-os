@@ -1,6 +1,7 @@
-"""Validates plugin code does not reference workspace/ paths."""
+"""Validates plugin code does not reference workspace/ paths and that personal files never ship."""
 from __future__ import annotations
 
+import subprocess
 from pathlib import Path
 
 import pytest
@@ -57,3 +58,48 @@ def test_no_plugin_file_references_workspace(project_root: Path) -> None:
                 if pattern in content:
                     leaks.append(f"{rel}: contains '{pattern}'")
     assert not leaks, "Plugin files reference workspace paths:\n" + "\n".join(leaks)
+
+
+# Formatos típicos de material de cliente. A fonte do marketplace é a raiz do
+# repo, então qualquer arquivo rastreado é distribuído em toda instalação.
+OFFICE_EXTENSIONS = {".doc", ".docx", ".xls", ".xlsx", ".ppt", ".pptx", ".key", ".numbers", ".pages", ".odt", ".ods"}
+# Exceções deliberadas, com justificativa. Vazio por padrão.
+OFFICE_FILE_ALLOWLIST: set[str] = set()
+
+
+def _tracked_files(project_root: Path) -> list[str]:
+    result = subprocess.run(
+        ["git", "-C", str(project_root), "ls-files", "-z"],
+        capture_output=True,
+        check=False,
+    )
+    if result.returncode != 0:
+        pytest.skip("fora de um checkout git (ex: cache de instalação do plugin)")
+    return [p for p in result.stdout.decode("utf-8").split("\0") if p]
+
+
+def test_workspace_tracks_only_gitkeep(project_root: Path) -> None:
+    """Invariante real do workspace: só .gitkeep é versionado.
+
+    Adicionar uma regra ao .gitignore não remove do índice um arquivo que já
+    estava rastreado. Foi assim que 3 .docx de cliente ficaram no repo público
+    de 2026-05-06 a 2026-09-28 (auditoria 2026-09-28, achado #1).
+    """
+    tracked = [p for p in _tracked_files(project_root) if p.startswith("workspace/")]
+    personal = [p for p in tracked if not p.endswith(".gitkeep")]
+    assert not personal, (
+        "Arquivos pessoais rastreados em workspace/ (rode `git rm --cached <arquivo>`):\n"
+        + "\n".join(personal)
+    )
+
+
+def test_no_office_documents_tracked(project_root: Path) -> None:
+    offenders = [
+        p
+        for p in _tracked_files(project_root)
+        if Path(p).suffix.lower() in OFFICE_EXTENSIONS and p not in OFFICE_FILE_ALLOWLIST
+    ]
+    assert not offenders, (
+        "Documentos de escritório versionados (provável material de cliente):\n"
+        + "\n".join(offenders)
+    )

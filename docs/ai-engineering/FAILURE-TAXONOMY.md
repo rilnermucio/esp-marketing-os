@@ -1,6 +1,6 @@
 # Taxonomia de falhas do Marketing OS
 
-> Canônico. Atualizado em 2026-08-05. Todo bug, eval e post-mortem referencia estas falhas por ID. Formato do ID: `F-<CATEGORIA>-<NN>`. Os IDs são estáveis: nunca renumere; deprecie com nota e crie novo.
+> Canônico. Atualizado em 2026-09-28. Todo bug, eval e post-mortem referencia estas falhas por ID. Formato do ID: `F-<CATEGORIA>-<NN>`. Os IDs são estáveis: nunca renumere; deprecie com nota e crie novo.
 >
 > "Exemplo real" cita incidente deste repositório quando existe; "hipotético" marca risco com precedente externo. Detecção aponta o mecanismo executável quando há.
 
@@ -75,6 +75,14 @@
 | F-CODEX-02 | Versão base dessincronizada ou sufixo `+codex.YYYYMMDD` esquecido | Risco em release | validate_codex (semver) + checklist | R5 "Versões" |
 | F-CODEX-03 | Conteúdo pessoal vazando pro pacote (workspace/, memory, áudio de teste) | Incidente de `narracao.aiff.txt` resolvido em 2026-07-06 (`467b7ff`) | Inspeção do output de `build_codex_plugin.py` | Lista COPY_DIRS/COPY_FILES explícita; nunca copiar raiz inteira |
 | F-CODEX-04 | Atualização local segue link simbólico e atinge o repositório-fonte | Incidente 2026-08-05: `~/plugins/marketing-os` apontava para a raiz e um sync com `--delete` removeu arquivos exclusivos do repositório | `test ! -L <destino>` + comparação de `realpath` antes da cópia | Destino físico fora do repo; preservar link como backup; não usar `--delete` sem preflight comprovado |
+
+## F-DIST: Plugin instalado (runtime e distribuição)
+
+Falhas que só aparecem quando o plugin roda instalado, com a sessão no projeto do usuário. A suíte que roda dentro do repo não as enxerga (auditoria 2026-09-28).
+
+| ID | Falha | Exemplo real / risco | Detecção | Prevenção |
+|---|---|---|---|---|
+| F-DIST-02 | Conteúdo pessoal versionado e distribuído pela raiz do marketplace | Incidente 2026-09-28: 3 `.docx` de cliente em `workspace/research/` rastreados de 2026-05-06 a 2026-09-28 num repo público; a regra `workspace/**` do `.gitignore` não remove arquivo já versionado | `test_workspace_separation.py::test_workspace_tracks_only_gitkeep` e `::test_no_office_documents_tracked` | `git rm --cached` ao adicionar regra de ignore; fonte do marketplace nunca inclui material de cliente |
 
 ## F-REL: Release
 
