@@ -144,6 +144,7 @@ O nicho é detectado pela memória do cliente, pela pasta atual ou pela primeira
 | Artigo SEO ou landing page | `/criar-artigo`, `/criar-landing-page` |
 | Funil, webinar ou infoproduto | `/criar-funil`, `/criar-webinar`, `/criar-infoproduto` |
 | Avatar, USP ou oferta | `/criar-avatar`, `/criar-usp`, `/criar-oferta` |
+| Entender o que os clientes dizem (reviews, comentários) | `/minerar-voc` |
 | Melhorar ou revisar uma peça pronta | `/otimizar-copy` |
 | Teste A/B | `/criar-teste-ab` |
 | Responder comentários e DMs (rascunho) | `/responder-comentarios` |

@@ -763,6 +763,25 @@
         "F-ROUTE-02",
         "F-DISP-01"
       ]
+    },
+    {
+      "id": "RT-039",
+      "prompt": "tenho 300 reviews do meu curso num CSV, quero saber as dores e objeções com as palavras dos alunos",
+      "expected_command": "minerar-voc",
+      "expected_agents": [
+        "mos-research"
+      ],
+      "dispatch": "simples",
+      "min_output_fields": [
+        "frases literais por dor, desejo e objeção",
+        "frequência",
+        "glossário do cliente",
+        "sem nome identificável"
+      ],
+      "detects": [
+        "F-ROUTE-02",
+        "F-CLAIM-01"
+      ]
     }
   ]
 }

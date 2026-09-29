@@ -189,6 +189,12 @@ COMMAND_MAP: Dict[str, Dict[str, Tuple[str, str]]] = {
             "Monta link com UTM e piece_id da peça",
         ),
     },
+    "voc": {
+        "extract": (
+            "voc_extractor.py",
+            "Extrai dores, desejos e objeções literais de reviews",
+        ),
+    },
 }
 
 # Comandos especiais que precisam de argumentos transformados

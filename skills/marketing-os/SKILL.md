@@ -414,6 +414,7 @@ Tabela canônica de roteamento por command; o `/mo` usa esta tabela. Quando o us
 | Webinar | `/criar-webinar` | |
 | Curso, ebook, mentoria ou membership | `/criar-infoproduto` | |
 | Avatar ou persona | `/criar-avatar` | |
+| Voz do cliente: dores, desejos e objeções literais de reviews ou comentários | `/minerar-voc` | Salva em `workspace/brand/voc.md` |
 | USP ou proposta de valor | `/criar-usp` | |
 | Oferta (value stack, preço, garantia) | `/criar-oferta` | |
 | Melhorar ou revisar uma peça pronta (copy, roteiro, carrossel, sequência, artigo, página) | `/otimizar-copy` | Diagnóstico, score e reescritas; o especialista do formato revisa a estrutura |
