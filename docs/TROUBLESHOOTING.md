@@ -86,6 +86,7 @@ Bugs reais que encontramos durante distribuição/uso, com solução verificada.
 **Causa:** marketplaces adicionados na sua conta claude.ai são sincronizados para `~/.claude/plugins/synced/`. Se um desses marketplaces parou de sincronizar, a cópia fica congelada e o app desktop pode carregar essa cópia em vez da instalada pelo marketplace local. Caso real (2026-09-28): marketplace de conta "Marketing-OS" congelado na v6.1.5 desde 2026-05-07, enquanto a 6.16.0 estava instalada.
 
 **Diagnóstico:**
+Peça ao Claude "rode o diagnóstico de instalação do Marketing OS" ou, num clone do repositório:
 ```bash
 python3 scripts/mos.py install doctor
 ```

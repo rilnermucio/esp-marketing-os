@@ -42,7 +42,7 @@ Ver `${CLAUDE_PLUGIN_ROOT}/skills/marketing-os/SKILL.md`. Cada sub-command já r
 
 - `${CLAUDE_PLUGIN_ROOT}/workflows/end-to-end-campaign-workflow.md`: workflow completo de referência
 - `${CLAUDE_PLUGIN_ROOT}/workflows/content-pipeline.md`: pipeline de produção
-- `${CLAUDE_PLUGIN_ROOT}/assets/clones/clone-manifest.yaml`: sistema de clones (35 perfis)
+- `${CLAUDE_PLUGIN_ROOT}/assets/clones/clone-manifest.yaml`: sistema de clones de experts
 - `${CLAUDE_PLUGIN_ROOT}/subagents/ab-testing-agent.md`: testes A/B aprofundados
 - `${CLAUDE_PLUGIN_ROOT}/scripts/ab_generator.py`: geração automática de variantes
 

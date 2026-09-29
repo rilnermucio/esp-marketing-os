@@ -95,7 +95,9 @@ em paralelo."
 
 O orquestrador (skill `marketing-os`) dispara os 3 agents simultaneamente, cada um em contexto isolado.
 
-## Os 18 subagents (referência)
+## Os especialistas (referência)
+
+No Claude Code cada um roda como agent `marketing-os:mos-*`.
 
 | Agent | Especialidade |
 |-------|--------------|
@@ -117,6 +119,9 @@ O orquestrador (skill `marketing-os`) dispara os 3 agents simultaneamente, cada 
 | `mos-launch` | Lançamentos (PLF, semente, relâmpago) |
 | `mos-infoproduct` | Cursos, ebooks, memberships, mentorias |
 | `mos-ab-testing` | Testes A/B e otimização estatística |
+| `mos-offer` | Arquitetura de oferta (value stack, garantia, preço, bônus) |
+| `mos-community` | Respostas a comentários e DMs no tom da marca (rascunho) |
+| `mos-partnerships` | Descoberta e outreach de creators (rascunho) |
 
 ## Próximos passos
 
@@ -147,7 +152,7 @@ Violações HARD bloqueiam a escrita. WARNs aparecem no terminal mas não bloque
 
 ## Voice clones (35 + custom)
 
-35 voice clones pré-construídos em `assets/clones/` (Halbert, Ogilvy, Hormozi, Schwartz, ...). Cada clone tem 4 arquivos profundos: `profile.md`, `voice.md`, `frameworks.md`, `examples.md`.
+Voice clones de experts pré-construídos em `assets/clones/` (Halbert, Ogilvy, Hormozi, Schwartz, ...). Cada clone tem 4 arquivos profundos: `profile.md`, `voice.md`, `frameworks.md`, `examples.md`.
 
 **Para gerar copy "estilo X"**: o `mos-copy` agent é instruído a Read `assets/clones/{nome}/voice.md` ANTES de gerar (não usa só resumo inline).
 

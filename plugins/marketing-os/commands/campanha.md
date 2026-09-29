@@ -42,7 +42,7 @@ Ver `skills/marketing-os/SKILL.md`. Cada sub-command já reforça localmente, ma
 
 - `workflows/end-to-end-campaign-workflow.md`: workflow completo de referência
 - `workflows/content-pipeline.md`: pipeline de produção
-- `assets/clones/clone-manifest.yaml`: sistema de clones (35 perfis)
+- `assets/clones/clone-manifest.yaml`: sistema de clones de experts
 - `subagents/ab-testing-agent.md`: testes A/B aprofundados
 - `scripts/ab_generator.py`: geração automática de variantes
 

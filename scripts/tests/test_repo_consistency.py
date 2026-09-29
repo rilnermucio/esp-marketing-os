@@ -6,6 +6,7 @@ versão defasado, travessão em conteúdo distribuído, regressão de manifesto)
 falha de CI. Se você adicionar um agent/command/clone, atualize os docs ou estes
 testes apontam exatamente o que ficou inconsistente.
 """
+
 from __future__ import annotations
 
 import ast
@@ -57,9 +58,9 @@ def test_readme_counts_match_filesystem():
     }
     for noun, real in expected.items():
         for m in re.finditer(rf"(\d+)\s+{re.escape(noun)}", readme):
-            assert int(m.group(1)) == real, (
-                f"README diz '{m.group(0)}' mas o real é {real} {noun}"
-            )
+            assert (
+                int(m.group(1)) == real
+            ), f"README diz '{m.group(0)}' mas o real é {real} {noun}"
 
 
 # Guard consciente: mudar este número exige atualizar contagens em README,
@@ -94,9 +95,9 @@ def test_every_agent_references_an_existing_tier2_file():
 def test_all_clone_dirs_conform_or_are_documented_exception():
     # 34 clones conformes + 'design' (design-dna-system.md) como exceção conhecida.
     non_conforming = [d.name for d in CLONES if d not in CONFORMING_CLONES]
-    assert non_conforming == ["design"], (
-        f"clones fora do padrão inesperados: {non_conforming}"
-    )
+    assert non_conforming == [
+        "design"
+    ], f"clones fora do padrão inesperados: {non_conforming}"
 
 
 _CLONE_INVENTORY_PATTERNS = (
@@ -114,6 +115,26 @@ _CLONE_INVENTORY_PATTERNS = (
         r"(?:disponíveis|profundos|wired)",
         re.I,
     ),
+    # Inventário em docs de usuário (auditoria 2026-09-28: "35 perfis" escapou).
+    re.compile(
+        r"(?P<count>\d+)\s+perfis\s+(?:de\s+copywriters|disponíveis|em\s+\W?assets/clones)",
+        re.I,
+    ),
+    re.compile(r"(?P<count>\d+)\s+(?:voice\s+clones|clones\s+de\s+voz)\b", re.I),
+)
+
+# Documentos vivos que citam o inventário. Histórico (worklogs, CHANGELOG,
+# planos arquivados) registra o que era verdade na época e fica de fora.
+_HISTORICAL = ("docs/ai-engineering/worklogs/", "docs/superpowers/", "docs/archive/")
+LIVE_DOCS = sorted(
+    p
+    for p in ROOT.rglob("*.md")
+    if not any(
+        part in {"plugins", "workspace", ".git", "node_modules"}
+        for part in p.relative_to(ROOT).parts
+    )
+    and not str(p.relative_to(ROOT)).startswith(_HISTORICAL)
+    and p.name != "CHANGELOG.md"
 )
 
 
@@ -121,7 +142,7 @@ def test_clone_inventory_claims_match_filesystem():
     """Inventory totals in distributed prompts must follow the real clone count."""
     real = len(CONFORMING_CLONES)
     mismatches = []
-    for path in AGENTS + SUBAGENTS:
+    for path in LIVE_DOCS:
         for line_number, line in enumerate(
             path.read_text(encoding="utf-8").splitlines(), 1
         ):
@@ -168,7 +189,9 @@ def test_plugin_manifest_distribution_rules():
 
 def test_marketplace_manifest_rules():
     m = _load("marketplace.json")
-    assert m.get("version") and m.get("description"), "use version/description top-level"
+    assert m.get("version") and m.get(
+        "description"
+    ), "use version/description top-level"
     src = m["plugins"][0]["source"]
     assert src.startswith("./"), f"source deve começar com ./ (achei {src!r})"
 
@@ -206,7 +229,9 @@ def test_memory_agents_match_init_script():
 
 
 def test_every_agent_declares_the_emdash_gate():
-    missing = [a.name for a in AGENTS if not _RULE.search(a.read_text(encoding="utf-8"))]
+    missing = [
+        a.name for a in AGENTS if not _RULE.search(a.read_text(encoding="utf-8"))
+    ]
     assert not missing, f"agents sem o quality gate do travessão: {missing}"
 
 

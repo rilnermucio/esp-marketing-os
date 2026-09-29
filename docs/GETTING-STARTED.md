@@ -1,165 +1,167 @@
 # Getting Started com Marketing OS
 
-Guia prático: como instalar, primeiro briefing, e os 5 cenários mais comuns.
+Guia prático: como instalar, como trabalhar por projeto e os cenários mais comuns.
 
 ## Instalação rápida
 
-No Claude Code (CLI ou Desktop):
+No Claude Code (terminal ou app desktop):
 
 ```
-/plugin marketplace add rilnermucio/Marketing-OS
+/plugin marketplace add rilnermucio/esp-marketing-os
 /plugin install marketing-os@mos-marketplace
 ```
 
-Pronto. O orquestrador é a skill `/marketing-os`, e os 18 subagents `mos-*` ficam disponíveis automaticamente.
+Pronto. O orquestrador é a skill `/marketing-os` e os especialistas ficam disponíveis como agents `marketing-os:mos-*` (copy, SEO, social, vídeo, oferta, funil e os demais).
 
-## Conceito-chave: project-scoped memory
+**Use uma origem só.** Se você também adicionou um marketplace do Marketing OS nas configurações de plugins da sua conta claude.ai, o app desktop pode carregar essa cópia sincronizada em vez da instalada acima, e ela pode estar desatualizada. Para ver todas as cópias da máquina, peça ao Claude: "rode o diagnóstico de instalação do Marketing OS". O caso está detalhado no [TROUBLESHOOTING](./TROUBLESHOOTING.md).
 
-O Marketing OS aprende **por projeto**. Crie uma pasta dedicada pra cada cliente:
+## Conceito-chave: um projeto por pasta
+
+O Marketing OS aprende **por projeto**. Crie uma pasta dedicada para cada cliente:
 
 ```bash
 mkdir ~/Code/clientes/wellness-science
 cd ~/Code/clientes/wellness-science
-claude  # ou abre Claude Desktop nessa pasta
+claude  # ou abra o app desktop nessa pasta
 ```
 
-A primeira vez que você usar `mos-copy` (ou qualquer agent com memory) nessa pasta, ele salva briefing/feedback em `.claude/agent-memory/marketing-os-mos-copy/`. Próximas sessões na mesma pasta carregam esse contexto automaticamente.
+Tudo que é seu fica nessa pasta, nunca dentro da pasta do plugin:
 
-**Regra prática:** uma pasta = um cliente / um projeto. Não misture trabalhos diferentes na mesma pasta.
+- **Memória dos agents** em `.claude/agent-memory/marketing-os-mos-*/`. A plataforma injeta essa memória no agent a cada sessão. Para preparar os diretórios de uma vez, peça: "inicialize a memória do Marketing OS neste projeto".
+- **Entregas e materiais** em `workspace/` (rascunhos, swipe files aprovados, auditorias, mídia, clones de voz pessoais).
 
-## 5 cenários comuns
+**Regra prática:** uma pasta, um cliente ou projeto. Não misture trabalhos diferentes na mesma pasta.
 
-### Cenário 1 — Headlines pra produto novo (dispatch simples)
+## Não sabe qual command usar?
 
-```
-Você: /marketing-os escreve 5 headlines pra meu curso de Python pra devs juniores
-```
-
-**O que o orquestrador faz:**
-- Reconhece "headlines" → trigger pro `mos-copy` (workflow #1, dispatch simples)
-- Roda quality gates globais (sem travessão, sem "brutal", PT-BR correto)
-- Entrega 5 headlines + 2-3 variações A/B + sugestões de teste
-
-### Cenário 2 — Carrossel completo (dispatch composto)
+Descreva o que precisa com `/mo`. O meta-orquestrador escolhe o command ou o especialista certo e diz qual escolheu:
 
 ```
-Você: /marketing-os cria um carrossel sobre 7 erros de copy pra LinkedIn
+/mo preciso vender uma mentoria de R$ 5.000 para dentistas
 ```
 
-**O que o orquestrador faz:**
-- Reconhece "carrossel" → trigger pro **workflow #8** (composto)
-- Dispara em paralelo: `mos-social` (estrutura) + `mos-copy` (texto dos slides) + `mos-design` (paleta + tipografia)
-- Consolida outputs num pacote: estrutura + 7 slides com texto + design spec + caption + hashtags + sugestão de enquete obrigatória
+## Cenários comuns
 
-### Cenário 3 — Página de aplicação BOFU (workflow estratégico)
+### Headlines para produto novo (dispatch simples)
 
 ```
-Você: /marketing-os cria página de aplicação pra mentoria do Dr. Victor
-       [anexa copy.pdf]
+/marketing-os escreve 5 headlines pro meu curso de Python para devs juniores
 ```
 
-**O que o orquestrador faz:**
-- Reconhece "página de aplicação" → trigger pro **workflow #5** (BOFU page)
-- Carrega memory do cliente se existir (briefing, brand voice, regras)
-- Dispara em paralelo:
-  - `mos-funnel` analisa estrutura BOFU (CTA placement, escassez, anti-avatar, FAQ)
-  - `mos-copy` revisa copy do PDF + aplica quality gates + gera variações
-  - `mos-design` define direção visual (paleta médica premium, hierarquia)
-- Consolida em brief único
-- Se você pediu HTML/CSS de fato, **delega à skill `frontend-design`** com o brief completo
-- Se pediu só specs, entrega o brief
+O orquestrador reconhece "headlines", despacha o `mos-copy`, aplica os quality gates (sem travessão, sem "brutal", PT-BR correto) e entrega as headlines com variações A/B e sugestão de teste.
 
-### Cenário 4 — Lançamento de infoproduto (workflow longo)
+### Carrossel completo (dispatch composto)
 
 ```
-Você: /marketing-os vou lançar um curso de IA pra empreendedores BR, ticket R$ 1.997
+/criar-carrossel 7 erros de copy para LinkedIn
 ```
 
-**O que o orquestrador faz:**
-- Reconhece "lançar curso" → trigger pro **workflow #7** (lançamento de infoproduto)
-- 4 fases:
-  1. **Research:** `mos-research` valida mercado, concorrentes, ticket praticado
-  2. **Estrutura + estratégia:** `mos-infoproduct` define módulos/pricing + `mos-launch` escolhe modelo (PLF/perpétuo/etc.) + `mos-funnel` desenha jornada
-  3. **Execução:** `mos-copy` (sales page) + `mos-email` (sequência completa) + `mos-ads` (campanhas TOFU/MOFU/BOFU)
-  4. **Quality gates** + sugestões de teste A/B
+Dispara em paralelo `mos-social` (estrutura), `mos-copy` (texto dos slides) e `mos-design` (paleta e tipografia) e consolida: estrutura, texto de cada slide, design spec, legenda, hashtags e sugestão de enquete.
 
-### Cenário 5 — Briefing vago (protocolo de pergunta)
+### Base estratégica antes de produzir
 
 ```
-Você: /marketing-os cria copy
+/criar-avatar coach de carreira para mulheres em transição
+/criar-usp mentoria de posicionamento no LinkedIn
+/criar-oferta mentoria de 3 meses, R$ 3.000
 ```
 
-**O que o orquestrador faz:**
-- Detecta briefing vago → **NÃO chuta**
-- Pergunta as 5 chaves de uma vez:
-  1. Nicho? (saúde, finanças, tech, etc.)
-  2. Avatar? (cargo, faixa de renda, dor)
-  3. Ticket? (low/mid/high)
-  4. Plataforma? (Instagram, LinkedIn, email, web)
-  5. Urgência? (hoje, semana, futuro)
-- Pula perguntas que já têm resposta no memory do projeto
+Avatar, USP e oferta viram o contexto que as peças seguintes usam. Os três commands aceitam dados reais que você colar (depoimentos, reviews, números de vendas).
 
-## Compliance regulatório (importante)
+### Página de aplicação BOFU
 
-Se você trabalha com nichos de **saúde / finanças / suplementos**, o plugin adiciona disclaimers obrigatórios automaticamente em qualquer peça final:
+```
+/criar-landing-page página de aplicação para a mentoria do Dr. Victor
+```
 
-| Nicho | Órgão | Disclaimer aplicado |
+`mos-funnel` analisa a estrutura BOFU (CTA, escassez, anti-avatar, FAQ), `mos-copy` escreve e revisa, `mos-design` define a direção visual. Se você pedir HTML de fato, o brief consolidado vai para a skill de frontend.
+
+### Lançamento de infoproduto
+
+```
+/criar-infoproduto curso de IA para empreendedores, ticket R$ 1.997
+/campanha-lancamento
+```
+
+`/criar-infoproduto` valida mercado e estrutura o produto (módulos, preço, materiais). `/campanha-lancamento` monta a campanha inteira (pesquisa, modelo de lançamento, funil, copy, emails, anúncios, design e métricas).
+
+### Briefing vago
+
+```
+/marketing-os cria copy
+```
+
+O orquestrador não chuta. Pergunta de uma vez nicho, avatar, ticket, plataforma e urgência, e pula o que já estiver na memória do projeto.
+
+## Aprender com os resultados
+
+Depois de publicar, traga as métricas:
+
+```
+/aprender cole aqui o export de métricas dos reels do mês
+```
+
+O `mos-analytics` interpreta o que funcionou e, com a sua aprovação, grava os aprendizados na memória do agent dono de cada peça. Nas próximas peças, esse agent já parte do que performou no seu projeto.
+
+## Compliance regulatório
+
+Em nichos regulados, o plugin adiciona os disclaimers necessários em qualquer peça final:
+
+| Nicho | Órgão | O que muda na peça |
 |---|---|---|
-| Médico / dental / nutrição | CFM/CRM, CONAR | "Resultados variam"; CRM visível; sem "cura" |
-| Suplementos | ANVISA | "Auxilia/contribui" (não cura/trata) |
-| Finanças / investimentos | CVM | "Rentabilidade passada não garante futura" |
+| Medicina | CFM/CRM, CONAR | "Resultados variam" em depoimentos; CRM visível; sem "cura" |
+| Odontologia | CFO/CRO, CONAR | CRO visível; sem promessa de resultado garantido |
+| Nutrição | CFN/CRN, CONAR | CRN visível; sem prescrição individual em conteúdo genérico |
+| Psicologia | CFP/CRP | CRP visível; sem promessa de cura |
+| Advocacia | OAB | Publicidade só informativa, sem captação de clientela |
+| Suplementos | ANVISA | "Auxilia/contribui", nunca cura ou trata |
+| Finanças e investimentos | CVM | "Rentabilidade passada não garante resultado futuro" |
 | Cosméticos | ANVISA | Sem prometer tratar doença de pele |
 
-Detecta automaticamente via memory do cliente, pasta atual, ou pergunta-chave #1 (nicho).
+O nicho é detectado pela memória do cliente, pela pasta atual ou pela primeira pergunta do briefing.
 
-## Slash commands rápidos
+## Commands por necessidade
 
-Quando você sabe exatamente o que quer, use o command direto:
+| Quero... | Command |
+|---|---|
+| Um post, carrossel ou calendário | `/criar-post`, `/criar-carrossel`, `/criar-calendario` |
+| Várias peças de uma vez | `/batch` |
+| Email ou sequência | `/criar-email`, `/criar-sequencia` |
+| Anúncio | `/criar-anuncio` |
+| Vídeo, roteiro, thumbnail ou Reels produzido | `/criar-video`, `/gerar-thumbnail`, `/produzir-reels` |
+| Áudio a partir de roteiro | `/narrar-roteiro` |
+| Imagem (só o prompt, ou o PNG) | `/gerar-imagem`, `/renderizar-imagem` |
+| Artigo SEO ou landing page | `/criar-artigo`, `/criar-landing-page` |
+| Funil, webinar ou infoproduto | `/criar-funil`, `/criar-webinar`, `/criar-infoproduto` |
+| Avatar, USP ou oferta | `/criar-avatar`, `/criar-usp`, `/criar-oferta` |
+| Melhorar uma copy que já existe | `/otimizar-copy` |
+| Teste A/B | `/criar-teste-ab` |
+| Responder comentários e DMs (rascunho) | `/responder-comentarios` |
+| Prospectar creators | `/prospectar-creators` |
+| Auditar página, perfil ou anúncios | `/auditoria`, `/auditoria-pro` |
+| Datas comerciais do ano | `/datas-sazonais` |
+| Campanha completa por objetivo | `/campanha` (lista os presets) |
+| Projeto em etapas com aprovação | `/projeto` |
+| Aprender com métricas | `/aprender` |
 
-```
-/criar-post Instagram sobre produtividade
-/criar-carrossel 10 erros de copy
-/criar-email sequência de boas-vindas
-/criar-anuncio Meta Ads pra curso de Python
-/criar-webinar lançamento do meu curso
-```
-
-Quando você prefere descrever em linguagem natural, use `/marketing-os` que ele orquestra:
-
-```
-/marketing-os tenho um curso novo de IA, preciso de pesquisa + tom de marca + headlines iniciais
-```
-
-Resultado é o mesmo — depende do quanto você quer ditar a invocação.
-
-## Voice clones de copywriters lendários
+## Voice clones
 
 Quando o briefing pede estilo específico:
 
 ```
-/marketing-os escreve sales letter no estilo do Gary Halbert pra produto de finanças
+/marketing-os escreve uma sales letter no estilo do Gary Halbert para produto de finanças
 ```
 
-O `mos-copy` carrega `assets/clones/halbert/` (profile, frameworks, voice, examples) e gera no estilo. 35 perfis disponíveis (Halbert, Hopkins, Kennedy, Ogilvy, Schwartz, Sugarman, Hormozi, GaryVee, MrBeast, Brunson, Cialdini, Codie Sanchez, Abdaal, Conrado, Joel Jota, etc.).
+O `mos-copy` carrega o clone do copywriter (profile, frameworks, voz e exemplos) e escreve no estilo. Há clones de copywriters e criadores como Halbert, Hopkins, Kennedy, Ogilvy, Schwartz, Sugarman, Hormozi, GaryVee, MrBeast, Brunson, Cialdini, Codie Sanchez, Abdaal, Conrado e Joel Jota.
 
-Pra clonar a SUA voz a partir de amostras locais (posts, emails, artigos seus):
+Para clonar a **sua** voz a partir das suas amostras (posts, emails, artigos):
 
-```bash
-# Coloca samples em workspace/voice-samples/
-mkdir -p workspace/voice-samples
-# Cola seus textos (cada arquivo = 1 amostra)
-
-# Gera seu clone
-/criar-meu-clone
+```
+/criar-meu-clone me-seunome
 ```
 
-## Próximos passos
-
-- **Customizar pra seu nicho:** edite `references/niches.md` se trabalha com nicho fora dos 10 padrão
-- **Criar workflows próprios:** `workflows/` tem 9 workflows end-to-end documentados como base
-- **Avaliar performance:** `mos-analytics` ajuda a fechar o loop com métricas
-- **Iterar:** memory automática melhora cada agent ao longo do tempo dentro de cada projeto
+O clone pessoal é salvo no projeto, em `workspace/clones/`, e o `mos-copy` o usa quando você pedir "no meu estilo".
 
 ## Quando algo dá errado
 
-Ver [TROUBLESHOOTING.md](./TROUBLESHOOTING.md) — cobre os bugs mais comuns de install/sync/dispatch que aprendemos no debug das v6.1.x.
+Ver [TROUBLESHOOTING.md](./TROUBLESHOOTING.md): instalação e sincronização, versão antiga no app desktop, memória e dispatch.

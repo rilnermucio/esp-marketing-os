@@ -2741,12 +2741,13 @@ DOWNSELL (Versão light)
     ↓
 ONBOARDING + NURTURE
 
-MÉTRICAS BENCHMARK:
+MÉTRICAS BENCHMARK (direcionais; dados do projeto valem mais):
 - Lead magnet conv: 25-40%
-- Webinar show rate: 20-35%
-- Webinar to sale: 5-15%
+- Webinar show rate: 30-50% ao vivo (ver "Conversão Webinar → Cliente")
+- Webinar to sale: varia com o ticket, de 1-3% (high-ticket) a 12-20%
+  (até R$ 500); use a tabela por ticket em "Conversão Webinar → Cliente"
 - Upsell take rate: 15-30%
-- Refund rate: 5-10%
+- Refund rate: saudável abaixo de 8% (mesma régua do pós-venda)
 ```
 
 ### 7.2 SaaS / Software

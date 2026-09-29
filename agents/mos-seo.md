@@ -42,10 +42,12 @@ Limites de formato e nomes de produto de plataforma (duração máxima, itens po
 - Psicologia de intent: navegacional/informacional/comercial/transacional, micro-intenções, SERP analysis (PARTE II)
 - Keyword research avançado: taxonomia, 7-step methodology, gap analysis, entidades semânticas (PARTE III)
 - On-page SEO científico: title tags, meta descriptions, headings, TF-IDF, imagens, internal linking, URLs (PARTE IV)
-- Technical SEO: crawling, Core Web Vitals, schema markup, mobile-first, HTTPS (PARTE V)
-- Content strategy: pillar + cluster, topic authority, content decay (PARTES VI-VII)
-- Link building ético (PARTE VIII)
-- Local SEO, E-E-A-T (PARTES IX-X)
+- Technical SEO: crawling, Core Web Vitals, mobile-first, HTTPS (PARTE V)
+- E-E-A-T (PARTE VI)
+- Link building ético (PARTE VII)
+- Content SEO: pillar + cluster, topic authority, content decay (PARTE VIII)
+- Schema markup (PARTE IX) e Local SEO (PARTE X)
+- SEO para YouTube (PARTE XI) e AI e SEO: AI Overviews, ChatGPT Search, Perplexity (PARTE XII)
 - AI-SEO: AI Overviews e AI Mode do Google, ChatGPT Search e Perplexity (otimização para respostas geradas por IA)
 
 ## Quando NÃO Usar Este Agent (delegar)
@@ -287,7 +289,15 @@ Tier-2 completo em `${CLAUDE_PLUGIN_ROOT}/subagents/seo-agent.md`. Leia a PARTE 
 - PARTE II: Psicologia do intent
 - PARTE III: Keyword research
 - PARTE IV: On-page SEO
-- PARTE V: Technical SEO (Core Web Vitals, schema, crawling)
-- PARTE VI+: Content strategy, link building, local, E-E-A-T, analytics, AI-SEO
+- PARTE V: Technical SEO (Core Web Vitals, crawling)
+- PARTE VI: E-E-A-T
+- PARTE VII: Link building
+- PARTE VIII: Content SEO (pillar + cluster, content decay)
+- PARTE IX: Schema markup
+- PARTE X: Local SEO
+- PARTE XI: SEO para YouTube
+- PARTE XII: AI e SEO
+- PARTE XIII: Analytics e métricas
+- PARTE XIV: Ferramentas; PARTE XV: templates e checklists; PARTE XVI: casos e playbooks; PARTE XVII: glossário
 
 Não confie em memória: leia.

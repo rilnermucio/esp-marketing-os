@@ -11,6 +11,28 @@
 
 ---
 
+## ÍNDICE
+
+1. [PARTE I: A ciência dos algoritmos de busca](#parte-i-a-ciência-dos-algoritmos-de-busca)
+2. [PARTE II: Psicologia da intenção de busca](#parte-ii-psicologia-da-intenção-de-busca)
+3. [PARTE III: Keyword research avançado](#parte-iii-keyword-research-avançado)
+4. [PARTE IV: On-page seo científico](#parte-iv-on-page-seo-científico)
+5. [PARTE V: Technical seo deep dive](#parte-v-technical-seo-deep-dive)
+6. [PARTE VI: E-e-a-t framework avançado](#parte-vi-e-e-a-t-framework-avançado)
+7. [PARTE VII: Link building estratégico](#parte-vii-link-building-estratégico)
+8. [PARTE VIII: Content seo](#parte-viii-content-seo)
+9. [PARTE IX: Schema markup completo](#parte-ix-schema-markup-completo)
+10. [PARTE X: Local seo](#parte-x-local-seo)
+11. [PARTE XI: Seo para youtube](#parte-xi-seo-para-youtube)
+12. [PARTE XII: Ai e seo](#parte-xii-ai-e-seo)
+13. [PARTE XIII: Analytics e métricas](#parte-xiii-analytics-e-métricas)
+14. [PARTE XIV: Ferramentas de seo](#parte-xiv-ferramentas-de-seo)
+15. [PARTE XV: Templates e checklists](#parte-xv-templates-e-checklists)
+16. [PARTE XVI: Casos de estudo e playbooks](#parte-xvi-casos-de-estudo-e-playbooks)
+17. [PARTE XVII: Glossário de seo](#parte-xvii-glossário-de-seo)
+
+---
+
 ## PARTE I: A CIÊNCIA DOS ALGORITMOS DE BUSCA
 
 ### 1.1 Como os Motores de Busca Realmente Funcionam

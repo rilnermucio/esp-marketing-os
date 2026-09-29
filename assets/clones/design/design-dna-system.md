@@ -1,6 +1,6 @@
 # Design DNA System — 25 Designers Mestres
 
-> Sistema paralelo aos 35 voice clones (copy/voice). Aqui catalogamos o DNA visual de 25 designers mestres com profile + visualDNA + frameworks + examples. Use quando briefing pedir "estilo X" ou "tom visual Y".
+> Sistema paralelo aos voice clones de copy (`assets/clones/`). Aqui catalogamos o DNA visual de 25 designers mestres com profile + visualDNA + frameworks + examples. Use quando briefing pedir "estilo X" ou "tom visual Y".
 
 ## Como usar
 

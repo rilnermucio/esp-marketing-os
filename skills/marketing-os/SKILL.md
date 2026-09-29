@@ -64,9 +64,17 @@ Memory é **opt-in**: o diretório `.claude/agent-memory/` está gitignored (mem
 python3 "${CLAUDE_PLUGIN_ROOT}/scripts/init_agent_memory.py"
 ```
 
-Isso cria os 21 arquivos `MEMORY.md` placeholder. Depois disso os agents passam a gravar/ler patterns transferíveis (não conteúdo bruto). Sem o bootstrap, os agents seguem funcionando normalmente — só não persistem memory entre sessões.
+Isso cria os arquivos `MEMORY.md` no diretório nativo de cada agent e migra o legado `mos-*/` sem perda (ADR-0006). A plataforma injeta o início desse arquivo no agent a cada sessão; os agents gravam patterns transferíveis (não conteúdo bruto) via `memory_writer.py`.
 
 Quando dispatchar qualquer agent com memory ativo no projeto, **explicite no prompt**: "considere memory existente do cliente neste projeto".
+
+### Pedidos de manutenção do plugin (execute direto, sem dispatch)
+
+| O usuário pede | Rode |
+|---|---|
+| "inicialize a memória do Marketing OS neste projeto" | `python3 "${CLAUDE_PLUGIN_ROOT}/scripts/init_agent_memory.py"` |
+| "rode o diagnóstico de instalação do Marketing OS", "qual versão está ativa" | `python3 "${CLAUDE_PLUGIN_ROOT}/scripts/install_doctor.py"` |
+| "os fatos de plataforma estão em dia?" | `python3 "${CLAUDE_PLUGIN_ROOT}/scripts/check_platform_facts.py"` |
 
 ## Mapa de Dispatch (21 Agents)
 
@@ -428,7 +436,7 @@ Detalhes em `${CLAUDE_PLUGIN_ROOT}/references/niches.md`.
 - `headlines-virais.md`, `hooks-reels.md`, `ctas-conversao.md`, `copy-carrossel.md`, `bios-instagram.md`, `transicoes-reels.md`, `paletas-cores.md`, `emails-conversao.md`, `trends-adaptaveis.md`.
 
 ### Scripts Python (`${CLAUDE_PLUGIN_ROOT}/scripts/`)
-29 ferramentas + CLI unificado `mos.py`. Os agents com acesso a `Bash` podem invocar:
+Scripts Python determinísticos e o CLI unificado `mos.py`. Os agents com acesso a `Bash` podem invocar:
 - `seo_analyzer.py`, `hashtag_generator.py`, `hook_generator.py`, `reels_script_generator.py`, `carousel_structure_generator.py`, `caption_generator.py`, `trend_tracker.py`, `project_manager.py`, `quality_gate.py`, etc.
 
 ### Workflows (`${CLAUDE_PLUGIN_ROOT}/workflows/`)
