@@ -183,6 +183,12 @@ COMMAND_MAP: Dict[str, Dict[str, Tuple[str, str]]] = {
             "Lista fatos de plataforma com verificação vencida",
         ),
     },
+    "utm": {
+        "build": (
+            "utm_builder.py",
+            "Monta link com UTM e piece_id da peça",
+        ),
+    },
 }
 
 # Comandos especiais que precisam de argumentos transformados

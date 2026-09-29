@@ -13,7 +13,7 @@ Fecha o ciclo Fase 4 do ROADMAP: métricas reais viram patterns transferíveis n
 2. **Período** (obrigatório): últimos 7/30/90 dias, mês calendário, ou intervalo explícito
 3. **Fonte dos dados** (obrigatório): MCP disponível no ambiente OU export manual (JSON/CSV colado ou arquivo)
 4. **Métrica primária** (obrigatório pra ranqueamento): retention, ctr, open_rate, views, CPA, take rate, etc.
-5. **Mapeamento peça → agent-dono** (opcional): se o usuário souber qual post/email/anúncio foi de qual agent, acelera a atribuição. Sem mapeamento, o mos-analytics infere pelo tipo de peça.
+5. **Mapeamento peça → agent-dono** (opcional): se o usuário souber qual post/email/anúncio foi de qual agent, acelera a atribuição. Sem mapeamento, o mos-analytics infere pelo tipo de peça. Se as peças foram publicadas com link gerado pelo `utm_builder.py`, o `piece_id` vem no `utm_content` do export e é a chave exata de correspondência: use-o como `id` de cada item.
 
 ## Fase 1: coleta (runtime)
 

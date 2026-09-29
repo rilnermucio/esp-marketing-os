@@ -209,7 +209,7 @@ Limites de formato e nomes de produto de plataforma (duração máxima, itens po
 - Headline: [40 chars]
 - Description: [30 chars se aplicável]
 - CTA button: [Learn More | Shop Now | Sign Up | etc.]
-- URL: [com UTMs]
+- URL: gere com `python3 "${CLAUDE_PLUGIN_ROOT}/scripts/utm_builder.py" --url <destino> --source <plataforma> --medium paid --campaign <campanha> --content <variação> --piece-id auto` e registre o `piece_id` junto do criativo (o `/aprender` casa métrica por ele)
 - Criativo sugerido: [descrição visual + prompt para mos-ai-tools se IA]
 
 **Ad 2: [variação]**
