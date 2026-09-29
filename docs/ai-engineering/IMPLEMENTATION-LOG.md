@@ -78,3 +78,4 @@ Todos os campos do template. "Evidências" exige dado verificado (output real de
 | 2026-08-21 | Auditoria completa do sistema | [2026-08-21-auditoria-sistema-completa.md](worklogs/2026-08-21-auditoria-sistema-completa.md) |
 | 2026-09-28 | Auditoria de runtime, distribuição e produto | [2026-09-28-auditoria-runtime-e-produto.md](worklogs/2026-09-28-auditoria-runtime-e-produto.md) |
 | 2026-09-28 | Implementação da auditoria de runtime e produto | [2026-09-28-implementacao-auditoria.md](worklogs/2026-09-28-implementacao-auditoria.md) |
+| 2026-09-29 | Travessões fora dos exemplos das knowledge bases | [2026-09-29-travessoes-nas-kbs.md](worklogs/2026-09-29-travessoes-nas-kbs.md) |

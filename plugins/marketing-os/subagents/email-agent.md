@@ -1,6 +1,6 @@
 # Email Agent v3.0 - O Agente de Email Marketing Mais Avançado do Planeta
 
-> "O email não está morto. Está mais vivo do que nunca. É o único canal onde você realmente é dono da audiência." — Seth Godin
+> "O email não está morto. Está mais vivo do que nunca. É o único canal onde você realmente é dono da audiência." (Seth Godin)
 
 ## Identidade do Agente
 
@@ -1279,7 +1279,7 @@ Isso melhora sua deliverability
 ```
 ESTRUTURA STORY EMAIL:
 
-SUBJECT: "[Resultado surpreendente] — e o que isso significa pra você"
+SUBJECT: "[Resultado surpreendente], e o que isso significa pra você"
 
 CORPO:
 [HOOK - In media res]
@@ -1377,23 +1377,23 @@ Separei 5 pra você ver:
 
 [DEPOIMENTO 1 - Resultado impressionante]
 "[Quote]"
-— [Nome], [contexto], [resultado em números]
+[Nome], [contexto], [resultado em números]
 
 [DEPOIMENTO 2 - Começou do zero]
 "[Quote]"
-— [Nome], [contexto]
+[Nome], [contexto]
 
 [DEPOIMENTO 3 - Resultado rápido]
 "[Quote]"
-— [Nome], [tempo para resultado]
+[Nome], [tempo para resultado]
 
 [DEPOIMENTO 4 - Cético convertido]
 "[Quote]"
-— [Nome]
+[Nome]
 
 [DEPOIMENTO 5 - Transformação de vida]
 "[Quote]"
-— [Nome]
+[Nome]
 
 [PADRÃO]
 O que todos têm em comum?
@@ -1428,7 +1428,7 @@ Só pra lembrar o que você garante:
 ✅ [Benefício 1]
 ✅ [Benefício 2]
 ✅ [Benefício 3]
-✅ [Bônus] — Sai hoje
+✅ [Bônus]: Sai hoje
 
 De R$[preço cheio] por R$[preço atual]
 
@@ -1797,9 +1797,9 @@ Se você quer [TRANSFORMAÇÃO PRINCIPAL], é agora.
 
 ## BÔNUS EXCLUSIVOS (Por tempo limitado):
 
-🎁 [Bônus 1] — Valor: R$[X]
-🎁 [Bônus 2] — Valor: R$[X]
-🎁 [Bônus 3] — Valor: R$[X]
+🎁 [Bônus 1] (valor: R$[X])
+🎁 [Bônus 2] (valor: R$[X])
+🎁 [Bônus 3] (valor: R$[X])
 
 ---
 
@@ -2226,7 +2226,7 @@ SUBJECT: {Nome}, pergunta rápida sobre [tópico]
 Oi {Nome},
 
 [HOOK - Observação específica sobre eles]
-Vi que a {empresa} está [fazendo X] —
+Vi que a {empresa} está [fazendo X],
 impressionante o que vocês fizeram com [Y específico].
 
 [PROBLEMA]
@@ -2241,7 +2241,7 @@ e o resultado foi [número específico] em [tempo].
 Faz sentido uma conversa rápida de 15 min
 pra eu explicar como funcionaria pra {empresa}?
 
-Se não for o momento, sem problema —
+Se não for o momento, sem problema: 
 só me avisa que não insisto.
 
 Abraço,
@@ -2281,7 +2281,7 @@ funcionaria pra {empresa}?
 [Seu Nome]
 
 P.S. Se [problema] não é prioridade agora,
-me conta — não vou insistir.
+me conta: não vou insistir.
 ```
 
 #### Template 3: Referência/Conexão
@@ -2356,7 +2356,7 @@ Normalmente isso significa uma de três coisas:
 3. Você está sendo perseguido por um urso
    e não consegue responder emails
 
-Se for 1 ou 3, sem problema —
+Se for 1 ou 3, sem problema: 
 vou parar de escrever.
 
 Se for 2, uma indicação ajudaria muito.
@@ -2654,7 +2654,7 @@ Entendo que às vezes precisamos pensar.
 Enquanto isso, olha o que a {nome_cliente} disse:
 
 "[Depoimento sobre o produto]"
-— {nome_cliente}, verificado
+{nome_cliente}, verificado
 
 Seu carrinho ainda está salvo:
 [BOTÃO: VOLTAR AO CARRINHO]

@@ -1,6 +1,6 @@
 # Brand Agent v3.1 - O Agente de Branding Mais Avançado do Planeta
 
-> "Uma marca não é o que você diz que é. É o que eles dizem que é." — Marty Neumeier
+> "Uma marca não é o que você diz que é. É o que eles dizem que é." (Marty Neumeier)
 
 ## Identidade do Agente
 
@@ -88,7 +88,7 @@ PESSOAS SE IDENTIFICAM COM MARCAS QUE:
 3. SINALIZAM pertencimento a um grupo (identidade social)
 
 IMPLICAÇÃO:
-Marcas fortes são espelhos e escadas —
+Marcas fortes são espelhos e escadas: 
 refletem o consumidor E elevam sua imagem.
 ```
 
@@ -3802,11 +3802,11 @@ PROCESSO:
    └── Audio (voz do mascot via ElevenLabs)
 
 EXEMPLOS BR DE MASCOT BRAND:
-├── Lu (Magazine Luiza) — humanizada, aspiracional
-├── Casas Bahia (família) — household-warm
+├── Lu (Magazine Luiza): humanizada, aspiracional
+├── Casas Bahia (família): household-warm
 ├── Baianinho (Banco Bradesco antes de digital)
-├── Mascote MRV — explorador
-└── Tati (Tati Vovó OneStop) — irreverente
+├── Mascote MRV: explorador
+└── Tati (Tati Vovó OneStop): irreverente
 ```
 
 ### 17.5 Workflow AI-Native de Branding 2026
@@ -4242,7 +4242,7 @@ CONSISTENCY AUDIT:
 □ Tom em suporte/atendimento mantém brand?
 
 PERCEPTION:
-□ NPS (se medido) — tendência?
+□ NPS (se medido): tendência?
 □ Brand mentions (qualidade, não quantidade)
 □ Comparações com concorrentes (mais favoráveis?)
 

@@ -422,7 +422,7 @@ CTA: Finalizar Compra
 TEXTO PRIMÁRIO:
 "[Depoimento real de cliente - 2-3 frases impactantes]"
 
-— [Nome], [cargo/cidade]
+[Nome], [cargo/cidade]
 
 Assim como [Nome], mais de [número] pessoas já [resultado alcançado].
 

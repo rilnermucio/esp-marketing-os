@@ -261,3 +261,30 @@ def _emdash_violations(path: Path) -> list[int]:
 def test_no_emdash_in_distributed_prose(path: Path):
     bad = _emdash_violations(path)
     assert not bad, f"travessão fora de regra/código em {path.name}: linhas {bad}"
+
+
+_SPACED_EN_DASH = re.compile(r"(?<=\s)–(?=\s)")
+
+
+def _kb_dash_violations(path: Path) -> list[int]:
+    """Travessão em KB conta até dentro de bloco de código e de citação.
+
+    É nos exemplos das KBs que o agent se inspira; em 2026-09-29 eram 248
+    travessões, quase todos em bloco de código, isentos pelo guard da prosa.
+    Ficam de fora só o código inline e a linha que enuncia a regra.
+    """
+    out = []
+    for i, ln in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
+        visible = _INLINE_CODE.sub("", ln)
+        if "—" not in visible and not _SPACED_EN_DASH.search(visible):
+            continue
+        if _RULE.search(ln):
+            continue
+        out.append(i)
+    return out
+
+
+@pytest.mark.parametrize("path", SUBAGENTS, ids=lambda p: p.name)
+def test_no_dash_in_kb_examples(path: Path):
+    bad = _kb_dash_violations(path)
+    assert not bad, f"travessão na KB {path.name}: linhas {bad[:20]}"

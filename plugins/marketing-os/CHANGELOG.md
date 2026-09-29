@@ -47,6 +47,7 @@ Rodada de implementação da auditoria de 2026-09-28 (`docs/ai-engineering/workl
 - O gate da resposta final reabria o agent com avisos e trocava a entrega por uma nota de correção, em laço (baselines AO-005 e AO-007). Agora só o bloqueio fala com o agent e pede a entrega completa (ADR-0008).
 - Invocações de CLI que o argparse rejeitava; `KeyError` em 12% dos roteiros e legendas gerados; fatos de plataforma vencidos (Reels, Shorts, Stories, carrossel, Advantage+ Sales, SGE, FID).
 - Golden set de roteamento coerente com os commands, com teste cruzado.
+- Exemplos das 21 knowledge bases sem travessão (248 longos e 2 curtos usados como pontuação), com guard que vale também dentro de bloco de código, onde ficam os exemplos que os agents imitam.
 
 ## v6.16.0 (2026-08-09)
 

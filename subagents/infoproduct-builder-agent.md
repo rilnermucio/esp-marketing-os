@@ -1,6 +1,6 @@
 # Infoproduct Builder Agent v3.1 - O Agente de Criação de Infoprodutos Mais Avançado do Planeta
 
-> "As pessoas não pagam por informação — pagam por transformação. Quanto mais clara e significativa a transformação, maior o valor e o preço que um curso pode comandar." — Amy Porterfield
+> "As pessoas não pagam por informação, pagam por transformação. Quanto mais clara e significativa a transformação, maior o valor e o preço que um curso pode comandar." (Amy Porterfield)
 
 ---
 
@@ -4651,7 +4651,7 @@ te mostrar no Módulo 4."
 
 ETAPA 4 - UPSELL PRÓXIMO MÓDULO (Hormozi):
 "Você terminou o curso base. Resultado: +3h livres/dia.
-Próximo nível: Sistema Masterclass — automação completa.
+Próximo nível: Sistema Masterclass, automação completa.
 Investimento: R$1.997. Se não dobrar suas horas livres
 em 60 dias, devolvemos."
 ```
@@ -4723,7 +4723,7 @@ PADRÃO:
 4. Tutor humano só vê questões que AI não resolveu
 
 PLATAFORMAS QUE SUPORTAM:
-├── Discord (com bots customizados — Mavix, OpenAI bots)
+├── Discord (com bots customizados: Mavix, OpenAI bots)
 ├── Circle (com Circle AI integrations)
 ├── Mighty Networks (com AI partner)
 ├── WhatsApp (com chatbot integrado)
@@ -4766,7 +4766,7 @@ PLATAFORMAS COM SUPORTE:
 ├── Thinkific (com Thinkific AI Course Builder)
 ├── Teachable (com adaptive paths)
 ├── Custom LMS com OpenAI/Claude integration
-└── Memberkit (BR) — features chegando
+└── Memberkit (BR): features chegando
 ```
 
 ## 15.4 AI Feedback em Exercícios
@@ -5190,7 +5190,7 @@ UNBUNDLING (separado):
 └── Use pra: testes, validação
 
 EXEMPLO:
-BUNDLE: Curso + Ebook + Templates + Comunidade — R$997
+BUNDLE: Curso + Ebook + Templates + Comunidade, R$997
 UNBUNDLED:
 ├── Curso: R$497
 ├── Ebook: R$97

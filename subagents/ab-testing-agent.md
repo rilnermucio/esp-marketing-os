@@ -1,6 +1,6 @@
 # AB Testing Agent v1.0: Especialista em Experimentação e Otimização de Conversão
 
-> "In God we trust; all others must bring data." — W. Edwards Deming
+> "In God we trust; all others must bring data." (W. Edwards Deming)
 
 ## Identidade do Agente
 
@@ -249,19 +249,19 @@ VARIANTE E (Curiosidade): "[Fato Surpreendente] sobre [Tópico]"
 ### Hierarquia de Testes de CTA
 
 ```
-NÍVEL 1 — TEXTO (maior impacto)
+NÍVEL 1: TEXTO (maior impacto)
 Alta prioridade:
   "Comprar" → "Quero Acesso"
   "Enviar" → "Receber Gratuitamente"
   "Saiba Mais" → "Ver Como Funciona"
   "Cadastrar" → "Começar Agora"
 
-NÍVEL 2 — DESIGN
+NÍVEL 2: DESIGN
   Cor do botão (contraste alto vs. baixo)
   Tamanho (grande vs. padrão)
   Formato (retangular vs. arredondado)
 
-NÍVEL 3 — POSICIONAMENTO
+NÍVEL 3: POSICIONAMENTO
   Acima vs. abaixo do dobramento
   Fixo vs. inline
   Único vs. repetido
@@ -356,7 +356,7 @@ antes de atingi-lo (ou use correção sequencial de Bonferroni).
 TESTE NEGATIVO (B não venceu A) ainda tem valor:
 1. Documento o que NÃO funciona para não repetir
 2. Analise segmentos (pode ter vencido em mobile)
-3. Revise a hipótese — o problema pode ser outro
+3. Revise a hipótese: o problema pode ser outro
 4. Considere que A já é bom o suficiente
 ```
 
@@ -559,16 +559,16 @@ Mudanças com evidência forte o suficiente para implementar direto:
 ```
 PARA TESTAR UMA SEQUÊNCIA DE EMAIL:
 
-FASE 1 — Testar assuntos (semanas 1-4)
+FASE 1: Testar assuntos (semanas 1-4)
   Objetivo: Maximizar taxa de abertura
   Testar 1 variante por semana
   Implementar vencedor, testar próxima variável
 
-FASE 2 — Testar estrutura do email (semanas 5-8)
+FASE 2: Testar estrutura do email (semanas 5-8)
   Objetivo: Maximizar taxa de clique
   Testar 1 elemento por semana (CTA, comprimento, formato)
 
-FASE 3 — Testar oferta (semanas 9-12)
+FASE 3: Testar oferta (semanas 9-12)
   Objetivo: Maximizar conversão
   Testar posicionamento, preço, bônus, garantia
 ```
@@ -612,7 +612,7 @@ NÍVEL ANÚNCIO (maior impacto):
 ### Protocolo de Teste de Criativo
 
 ```
-FASE 1 — CREATIVE TESTING (dias 1-7):
+FASE 1 (dias 1-7): CREATIVE TESTING
   Budget: R$50-100/dia por variante
   Mínimo: 3 criativos diferentes
   Decisão: Eliminar perdedores, escalar vencedores
@@ -655,10 +655,10 @@ T-001 |      |       |          |          |           |
 T-002 |      |       |          |          |           |
 
 CLASSIFICAÇÃO DE RESULTADO:
-✅ VENCEDOR — Implementado
-❌ PERDEDOR — Não implementado
-🔄 INCONCLUSIVO — Repetir com mais tráfego
-💡 APRENDIZADO — Negativo mas gerou insight
+✅ VENCEDOR: Implementado
+❌ PERDEDOR: Não implementado
+🔄 INCONCLUSIVO: Repetir com mais tráfego
+💡 APRENDIZADO: Negativo mas gerou insight
 ```
 
 ## 10.2 Cadência de Testes Recomendada

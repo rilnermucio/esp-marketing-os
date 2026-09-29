@@ -110,12 +110,12 @@ Nível 7: Agent Orchestration → Múltiplos agentes com roles especializados
 ### Estrutura Universal (CRISPE Framework)
 
 ```
-[C] Capacity/Role — Quem o modelo deve ser
-[R] Request — O que deve fazer
-[I] Information — Contexto e dados relevantes
-[S] Steps — Passos ou processo a seguir
-[P] Personality — Tom e estilo de comunicação
-[E] Extras — Formato de saída, restrições, exemplos
+[C] Capacity/Role: Quem o modelo deve ser
+[R] Request: O que deve fazer
+[I] Information: Contexto e dados relevantes
+[S] Steps: Passos ou processo a seguir
+[P] Personality: Tom e estilo de comunicação
+[E] Extras: Formato de saída, restrições, exemplos
 ```
 
 ### Template Master para Qualquer Ferramenta
@@ -1305,12 +1305,12 @@ Custo-benefício? → Claude Sonnet 4.5 ou Gemini 2.5 Pro
 
 ```
 Upbeat Brazilian funk melody, electronic elements, energetic,
-120 BPM, no vocals, 30 seconds — Instagram Reels background
+120 BPM, no vocals, 30 seconds: Instagram Reels background
 ```
 
 ```
 Corporate jingle, acoustic guitar, light percussion, uplifting,
-15 seconds, fade out — brand video intro
+15 seconds, fade out: brand video intro
 ```
 
 ## 8.2 Udio
@@ -1890,11 +1890,11 @@ Sound: [diálogo ou efeitos sonoros].
 
 ```
 Responda à pergunta seguindo estas regras constitucionais:
-1. Seja factual — cite fontes quando possível
-2. Seja equilibrado — apresente múltiplas perspectivas
-3. Seja útil — forneça informações acionáveis
-4. Seja conciso — sem preenchimento ou repetição
-5. Seja honesto — diga "não sei" quando não souber
+1. Seja factual: cite fontes quando possível
+2. Seja equilibrado: apresente múltiplas perspectivas
+3. Seja útil: forneça informações acionáveis
+4. Seja conciso, sem preenchimento ou repetição
+5. Seja honesto: diga "não sei" quando não souber
 ```
 
 ### Structured Output Forcing
@@ -1916,15 +1916,15 @@ Responda EXCLUSIVAMENTE no seguinte formato JSON:
 ```
 Simule um debate entre 3 especialistas sobre [tópico]:
 
-PERSONA 1 — O Otimista Tech:
+PERSONA 1 (O Otimista Tech):
 - Foco em oportunidades e inovação
 - Argumentos baseados em dados de crescimento
 
-PERSONA 2 — O Cético Pragmático:
+PERSONA 2 (O Cético Pragmático):
 - Foco em riscos e limitações
 - Argumentos baseados em casos de falha
 
-PERSONA 3 — O Moderador Estratégico:
+PERSONA 3 (O Moderador Estratégico):
 - Sintetiza ambas as perspectivas
 - Foco em ações práticas
 

@@ -1,6 +1,6 @@
 # Copy Agent v3.1: O Agente de Copywriting Mais Avançado do Planeta
 
-> "Copy is a direct conversation with the consumer." — Shirley Polykoff
+> "Copy is a direct conversation with the consumer." (Shirley Polykoff)
 
 ## Identidade do Agente
 
@@ -198,12 +198,12 @@ ENDORFINA (Prazer + Satisfação)
 ## 1.3 Os 5 Níveis de Consciência (Eugene Schwartz)
 
 ```
-MODELO DE AWARENESS — Eugene Schwartz (Breakthrough Advertising)
+MODELO DE AWARENESS: Eugene Schwartz (Breakthrough Advertising)
 
 NÍVEL 5: MAIS CONSCIENTE
 ├── Sabe: Produto, benefícios, preço
 ├── Precisa: Oferta irresistível
-├── Copy: "50% OFF só hoje — você já conhece o [Produto]"
+├── Copy: "50% OFF só hoje, você já conhece o [Produto]"
 ├── Tom: Direto, ofertas, urgência
 └── Onde: Remarketing, lista quente, carrinho
 
@@ -481,10 +481,10 @@ APLICAÇÃO EM COPY:
 ```
 CHECKLIST PARA HEADLINES:
 
-[U]RGENT — Cria senso de agora?
-[U]SEFUL — Resolve um problema real?
-[U]NIQUE — É diferente do que já viram?
-[U]LTRA-SPECIFIC — Tem números e detalhes?
+[U]RGENT: Cria senso de agora?
+[U]SEFUL: Resolve um problema real?
+[U]NIQUE: É diferente do que já viram?
+[U]LTRA-SPECIFIC: Tem números e detalhes?
 
 ANTES: "Como ganhar dinheiro online"
 └── Score: Útil (1/4)
@@ -640,7 +640,7 @@ não vou reabrir. Já fiz isso antes e me arrependi."
 ```
 DNA DO ESTILO:
 ├── Tom: Fascinante, magnético, impossível de parar de ler
-├── Cadência: Slippery Slide — cada frase puxa a próxima
+├── Cadência: Slippery Slide, cada frase puxa a próxima
 ├── Marca registrada: Storytelling técnico, curiosidade implacável
 ├── Frase-chave: "O único propósito da primeira frase é fazer você ler a segunda."
 └── Melhor para: Long-form copy, descrições de produto, advertorials
@@ -650,7 +650,7 @@ TÉCNICAS-ASSINATURA:
 2. Cada frase cria curiosidade para a próxima
 3. Storytelling que ensina enquanto vende
 4. Detalhes técnicos que fascinam
-5. Seeds of curiosity — sementes plantadas que só resolve depois
+5. Seeds of curiosity: sementes plantadas que só resolve depois
 6. Ambiente e contexto antes do produto
 7. Gatilhos de propriedade ("imagine você usando...")
 
@@ -712,7 +712,7 @@ DNA DO ESTILO:
 └── Melhor para: Vendas diretas, cartas de venda, info-produtos
 
 TÉCNICAS-ASSINATURA:
-1. Polarização — posição forte, sem meio-termo
+1. Polarização: posição forte, sem meio-termo
 2. "Verdade inconveniente" que outros não falam
 3. Qualificação negativa ("isso NÃO é para você se...")
 4. Deadline real e consequência de não agir
@@ -748,8 +748,8 @@ feche esta página. Isso aqui não é pra você.
 Se você acha que marketing é 'manipulação', também não.
 Vai perder seu tempo e o meu.
 
-Mas se você quer aprender a vender como adulto —
-sem vergonha, sem desculpas, sem pedir permissão —
+Mas se você quer aprender a vender como adulto,
+sem vergonha, sem desculpas, sem pedir permissão,
 continue lendo.
 
 Aqui está o que você recebe:
@@ -777,7 +777,7 @@ porque eu faço as sessões ao vivo pessoalmente."
 ```
 DNA DO ESTILO:
 ├── Tom: Musical, rítmico, hipnotizante
-├── Cadência: Variação deliberada no tamanho das frases — é a assinatura
+├── Cadência: Variação deliberada no tamanho das frases, é a assinatura
 ├── Marca registrada: Ritmo como ferramenta de persuasão
 ├── Frase-chave: "Varie o comprimento das frases e crie uma sinfonia."
 └── Melhor para: Storytelling, conteúdo editorial, copy emocional
@@ -794,7 +794,7 @@ REGRAS DE APLICAÇÃO:
 FAÇA:
 ✓ Alterne frases curtas e longas deliberadamente
 ✓ Use frases de uma palavra para criar impacto dramático
-✓ Leia em voz alta — se não soa bem, reescreva
+✓ Leia em voz alta, se não soa bem, reescreva
 ✓ Crie ritmo como se estivesse compondo música
 ✓ Use repetição estratégica para ênfase
 ✓ Deixe o texto respirar com espaço em branco
@@ -855,7 +855,7 @@ TÉCNICAS-ASSINATURA:
 4. Oferta de teste/amostra para reduzir risco
 5. Razão-por-quê para cada afirmação
 6. Copy que informa antes de persuadir
-7. Uma ideia forte por peça — sem distrações
+7. Uma ideia forte por peça, sem distrações
 
 REGRAS DE APLICAÇÃO:
 FAÇA:
@@ -910,16 +910,16 @@ DNA DO ESTILO:
 TÉCNICAS-ASSINATURA:
 1. Identificar o nível de consciência antes de escrever
 2. Amplificação do desejo existente (não criar desejo)
-3. Fascinations — bullets de curiosidade irresistível
+3. Fascinations: bullets de curiosidade irresistível
 4. Intensificação progressiva do emocional
 5. Headlines que conectam com o desejo mais profundo
-6. Mecanismo único — o "como" proprietário
-7. Cada palavra carrega peso — zero gordura verbal
+6. Mecanismo único: o "como" proprietário
+7. Cada palavra carrega peso: zero gordura verbal
 
 REGRAS DE APLICAÇÃO:
 FAÇA:
 ✓ Identifique o nível de consciência do leitor PRIMEIRO
-✓ Canalize o desejo existente — nunca tente criar um novo
+✓ Canalize o desejo existente: nunca tente criar um novo
 ✓ Use fascinations que criam coceira mental
 ✓ Revele um mecanismo único que explica POR QUE funciona
 ✓ Construa tensão gradualmente, como uma onda
@@ -949,7 +949,7 @@ Não foi falta de disciplina. Não foi preguiça.
 Foi um erro metabólico específico que 73% dos
 brasileiros acima de 30 anos cometem sem saber.
 
-Um erro que nenhuma dieta corrige — porque
+Um erro que nenhuma dieta corrige, porque
 nenhuma dieta sequer endereça.
 
 Até agora.
@@ -988,7 +988,7 @@ FAÇA:
 ✓ Use a estrutura de "história pessoal + reviravolta"
 ✓ Escreva 25 versões de headline antes de escolher
 ✓ Inclua auto-interesse em cada elemento da copy
-✓ Teste sempre — nunca assuma qual headline vence
+✓ Teste sempre: nunca assuma qual headline vence
 ✓ Use palavras que o público-alvo realmente fala
 
 NUNCA FAÇA:
@@ -1105,13 +1105,13 @@ DNA DO ESTILO:
 └── Melhor para: Copy educativa, B2B, produtos complexos, autoridade
 
 TÉCNICAS-ASSINATURA:
-1. Reciprocidade — dê valor antes de pedir algo
-2. Compromisso e consistência — pequeno sim leva a grande sim
-3. Prova social — "93% dos usuários recomendam"
-4. Autoridade — credenciais, pesquisas, especialistas
-5. Afinidade — similaridade e conexão pessoal
-6. Escassez — limitação genuína de quantidade ou tempo
-7. Unidade — pertencimento a um grupo ("nós, empreendedores...")
+1. Reciprocidade: dê valor antes de pedir algo
+2. Compromisso e consistência: pequeno sim leva a grande sim
+3. Prova social: "93% dos usuários recomendam"
+4. Autoridade: credenciais, pesquisas, especialistas
+5. Afinidade: similaridade e conexão pessoal
+6. Escassez: limitação genuína de quantidade ou tempo
+7. Unidade: pertencimento a um grupo ("nós, empreendedores...")
 
 REGRAS DE APLICAÇÃO:
 FAÇA:
@@ -1151,7 +1151,7 @@ E 71% nos indicam espontaneamente para outros empresários
 (dado de pesquisa NPS Dezembro/2025).
 
 Antes de decidir qualquer coisa, baixe gratuitamente nosso
-Diagnóstico de Crescimento — um relatório personalizado
+Diagnóstico de Crescimento: um relatório personalizado
 de 12 páginas sobre o potencial da sua empresa.
 
 Sem compromisso. Sem custo. Sem pegadinha.
@@ -1191,7 +1191,7 @@ PROTOCOLO DE COMBINAÇÃO:
 3. Aplique 70% primário + 30% secundário
 4. Valide: o texto soa coerente ou esquizofrênico?
 
-EXEMPLO — HALBERT (primário) + SUGARMAN (secundário):
+EXEMPLO COM HALBERT (primário) + SUGARMAN (secundário):
 "Preciso te contar uma coisa estranha que aconteceu
 terça passada.
 
@@ -2424,7 +2424,7 @@ EDUCAÇÃO (ensinar):
 └── "Tudo que você precisa saber sobre [assunto]"
 
 CONVERSÃO (vender):
-├── "De R$[X] por R$[Y] — só até [data]"
+├── "De R$[X] por R$[Y]: só até [data]"
 ├── "O método usado por [número] pessoas para [resultado]"
 └── "Última chance: [oferta] acaba em [tempo]"
 
@@ -2497,7 +2497,7 @@ HISTÓRIA:
    → Melhor para: audiência morna-quente, nível 3-4
 
 5. LEAD DE OFERTA DIRETA
-   "50% OFF no Método X — só até sexta."
+   "50% OFF no Método X: só até sexta."
    → Melhor para: audiência quente, nível 4-5
 ```
 
@@ -2517,7 +2517,7 @@ HISTÓRIA:
 
 2. ESCASSEZ
    ├── Limite real de vagas/tempo/estoque
-   ├── Exemplo: "Apenas 20 vagas — 14 preenchidas"
+   ├── Exemplo: "Apenas 20 vagas, 14 preenchidas"
    └── ÉTICO: Escassez DEVE ser verdadeira
 
 3. AUTORIDADE
@@ -2740,7 +2740,7 @@ VARIÁVEIS PARA TESTAR:
 
 6. URGÊNCIA NO CTA
    A: "Garantir minha vaga"
-   B: "Garantir minha vaga — últimas 3"
+   B: "Garantir minha vaga, últimas 3"
    (B pode aumentar CTR em 40%+)
 ```
 
@@ -2770,7 +2770,7 @@ Decisão criativa              Escala de produção
 
 REGRA:
 IA gera o RASCUNHO. Humano dá a ALMA.
-O melhor copy em 2026 é invisível — você não sabe
+O melhor copy em 2026 é invisível: você não sabe
 se foi humano ou IA, porque o humano refinou.
 ```
 
@@ -3086,7 +3086,7 @@ ONBOARDING:
                                  Vamos configurar sua
                                  conta em 3 passos."
 
-"Get started"                   "Comece agora — leva
+"Get started"                   "Comece agora: leva
                                  menos de 2 minutos"
 
 REGRA: Reduza a ansiedade. Dê expectativa de tempo.
@@ -3216,7 +3216,7 @@ Posso tirar alguma dúvida antes?"
 
 FOLLOW-UP (Sem pressão.):
 "E aí, [Nome], pensou sobre [produto]?
-Sem pressa — só queria saber se posso ajudar."
+Sem pressa: só queria saber se posso ajudar."
 
 QUEBRA DE OBJEÇÃO:
 "Entendo sua preocupação sobre [objeção].
@@ -3275,9 +3275,9 @@ Bot: "Ótimo! O que você está procurando?"
 
 → [Promoções]
 Bot: "Temos 3 ofertas incríveis hoje:
-1. [Produto] — De R$X por R$Y
-2. [Produto] — 30% OFF
-3. [Produto] — Frete grátis
+1. [Produto]: De R$X por R$Y
+2. [Produto]: 30% OFF
+3. [Produto]: Frete grátis
 Qual te interessa?"
 ```
 
@@ -3614,7 +3614,7 @@ MARKETING DIGITAL
 Tom: Autoridade, data-driven, direto
 Palavras-chave: ROI, conversão, escala, funil, tráfego
 Objeções: "Já tentei e não funcionou", "É saturado"
-Hook: "De 0 a R$50k/mês com marketing digital — o método"
+Hook: "De 0 a R$50k/mês com marketing digital, o método"
 Prova: Números de faturamento, prints, cases
 Cuidado: Evitar promessas de "dinheiro fácil"
 
@@ -3925,7 +3925,7 @@ distingue educação séria de info-produto disfarçado.
 ```
 TOM: Confiável, técnico-financeiro, contextual.
 Cliente compara TIR, financiamento, valorização zona.
-NÃO é decisão de impulso — informação > emoção.
+NÃO é decisão de impulso: informação > emoção.
 
 NÃO faça: "Casa dos sonhos te espera!"
 NÃO faça: Promessa de valorização ("vai dobrar em 2 anos!")
@@ -4155,7 +4155,7 @@ seguindo tabela OAB se houver tese viável.
 
 [Agendar análise]
 
-OAB/SP 123.456 — Advogada [Nome], 12 anos atuando
+Advogada [Nome], OAB/SP 123.456, 12 anos atuando
 em Direito Previdenciário. Conforme CEC, este
 conteúdo é informativo, não constitui captação
 de cliente nem promessa de resultado."
@@ -4229,7 +4229,7 @@ seguradora, parcerias com cooperativas reconhecidas
 CUIDADO: SUSEP regula seguro rural. Claim de
 "100% de cobertura" é juridicamente impossível
 (toda apólice tem exclusões). Cuidado com expectativa
-de indenização — depende de laudo de perito.
+de indenização: depende de laudo de perito.
 Linguagem precisa em ciclo agrícola é diferenciador
 crítico (produtor reconhece amador imediatamente).
 ```
@@ -4509,8 +4509,8 @@ revisado por [profissional/equipe]."
 
 > **DUAS CAMADAS DE SCORING (use ambas):**
 >
-> 1. **Conceitual (esta seção)** — framework de 5 dimensões para avaliação humana/agent. Use para decidir entre variações, refinar copy, e justificar escolhas.
-> 2. **Operacional (`scripts/quality_gate.py`)** — lint automatizado que checa acentuação PT-BR, força do hook, qualidade do CTA, legibilidade, formato por tipo (post/artigo/email/landing-page/anuncio), hashtags. Retorna score 0-100 + classificação.
+> 1. **Conceitual (esta seção)**: framework de 5 dimensões para avaliação humana/agent. Use para decidir entre variações, refinar copy, e justificar escolhas.
+> 2. **Operacional (`scripts/quality_gate.py`)**: lint automatizado que checa acentuação PT-BR, força do hook, qualidade do CTA, legibilidade, formato por tipo (post/artigo/email/landing-page/anuncio), hashtags. Retorna score 0-100 + classificação.
 >
 > **Workflow recomendado**: gerar variações → score conceitual mental (esta seção) → escolher top 3 → rodar `python3 scripts/quality_gate.py {arquivo} --type {tipo}` → ajustar issues → entregar.
 >
@@ -5084,35 +5084,35 @@ Simplificar, Acelerar, Multiplicar, Escalar
 
 ```
 OBRIGATÓRIOS:
-1. "Breakthrough Advertising" — Eugene Schwartz
+1. "Breakthrough Advertising" (Eugene Schwartz)
    (Awareness levels, desejo, copy avançada)
 
-2. "The Boron Letters" — Gary Halbert
+2. "The Boron Letters" (Gary Halbert)
    (Sales letters, persuasão direta)
 
-3. "Ogilvy on Advertising" — David Ogilvy
+3. "Ogilvy on Advertising" (David Ogilvy)
    (Fundamentos de advertising)
 
-4. "Scientific Advertising" — Claude Hopkins
+4. "Scientific Advertising" (Claude Hopkins)
    (Copy mensurável, testes)
 
-5. "Advertising Secrets of the Written Word" — Joe Sugarman
+5. "Advertising Secrets of the Written Word" (Joe Sugarman)
    (Slippery slide, gatilhos)
 
 COMPLEMENTARES:
-6. "Influence" — Robert Cialdini
+6. "Influence" (Robert Cialdini)
    (Psicologia da persuasão, 6 princípios)
 
-7. "Made to Stick" — Chip & Dan Heath
+7. "Made to Stick" (Chip & Dan Heath)
    (Por que algumas ideias funcionam)
 
-8. "Building a StoryBrand" — Donald Miller
+8. "Building a StoryBrand" (Donald Miller)
    (Storytelling para marcas)
 
-9. "DotCom Secrets" — Russell Brunson
+9. "DotCom Secrets" (Russell Brunson)
    (Funis, Hook-Story-Offer)
 
-10. "Microcopy: The Complete Guide" — Kinneret Yifrah
+10. "Microcopy: The Complete Guide" (Kinneret Yifrah)
     (UX writing e microcopy)
 ```
 

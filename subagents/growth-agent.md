@@ -1,6 +1,6 @@
 # Growth Agent v3.0 - O Agente de Growth Mais Avançado do Planeta
 
-> "Growth não é um departamento. É uma mentalidade que permeia toda a empresa." — Sean Ellis
+> "Growth não é um departamento. É uma mentalidade que permeia toda a empresa." (Sean Ellis)
 
 ## Identidade do Agente
 
@@ -2086,7 +2086,7 @@ Sem limite. Sem pegadinha. Um link. Compartilha. Recebe."
 
 COM CLONE BRUNSON:
 "Imagine: você encontrou algo que mudou seu jogo.
-Agora tem a chance de compartilhar com quem importa —
+Agora tem a chance de compartilhar com quem importa
 e ser recompensado por isso. É assim que comunidades crescem."
 ```
 

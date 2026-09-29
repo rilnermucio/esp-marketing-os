@@ -1971,17 +1971,17 @@ ABORDAGEM ERRADA:
 #### Templates de DM por Plataforma
 
 ```
-INSTAGRAM DM — Início de conversa:
+INSTAGRAM DM (início de conversa):
 "[Nome], adorei seu post sobre [tema específico].
 Especialmente a parte sobre [detalhe].
 Você já experimentou [insight relacionado]?"
 
-LINKEDIN DM — Networking:
+LINKEDIN DM (networking):
 "[Nome], acompanho seu conteúdo sobre [tema] há um tempo.
 Seu post sobre [post específico] foi muito alinhado com
 o que estou trabalhando em [área]. Adoraria trocar ideias."
 
-TWITTER DM — Colaboração:
+TWITTER DM (colaboração):
 "Oi [Nome]! Vi sua thread sobre [tema] e achei brilhante.
 Estou trabalhando em algo complementar.
 Faria sentido uma conversa rápida?"
@@ -2964,27 +2964,27 @@ THUMBNAIL VARIANTS
 ```
 NOVO WORKFLOW:
 
-1. IDEAÇÃO (10min) — humano
+1. IDEAÇÃO (10min): humano
    ├── Define ângulo, gancho, audiência
    └── Critério: "vale a pena postar?"
 
-2. RASCUNHO (5min) — AI
+2. RASCUNHO (5min): AI
    ├── Caption assist, hook variants, structure
    ├── Output: 3-5 versões bruta
    └── Não publicar, só draft
 
-3. CURADORIA (10min) — humano
+3. CURADORIA (10min): humano
    ├── Escolhe melhor draft
    ├── Adiciona voz autêntica
    ├── Verifica fact-checking
    └── Aprova após Quality Gates
 
-4. PRODUÇÃO (15min) — AI + humano
+4. PRODUÇÃO (15min): AI + humano
    ├── AI: edição base, b-roll, música
    ├── Humano: refinamento, brand consistency
    └── Output: post pronto
 
-5. POSTAGEM (5min) — humano
+5. POSTAGEM (5min): humano
    ├── Timing certo
    ├── Hashtags revisados
    ├── Disclosure se publi
