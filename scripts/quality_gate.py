@@ -10,10 +10,12 @@ Uso:
     python quality_gate.py arquivo.md --type anuncio
 """
 
+import argparse
+import importlib.util
 import os
 import re
 import sys
-import argparse
+from pathlib import Path
 from typing import List, Tuple
 
 # Caracteres acentuados esperados em português
@@ -98,28 +100,20 @@ WEAK_CTA_WORDS = [
     "link na bio",
 ]
 
-# Vícios de IA proibidos pelas regras do Marketing OS. Espelham o HARD BLOCK
-# de scripts/hooks/quality_gate_hook.py para quem valida via CLI.
-# O span interno das antíteses exclui pontuação pra não atravessar cláusulas
-# e casar verbo de frase nova não relacionada (falso positivo).
-AI_TELL_PATTERNS = [
-    (
-        r"—",
-        "Travessão '—' encontrado: substitua por '.', ',' ou ':' ou quebre a frase",
-    ),
-    (
-        r"(?<!\w)brutal(?!\w)",
-        "Palavra 'brutal' encontrada: use intenso, forte, pesado, impactante",
-    ),
-    (
-        r"\bnão é [^.!?,;:\n]{2,60}[.!?,;:]\s+é\b",
-        "Antítese negação/afirmação ('Não é X / É Y'): reescreva afirmando direto",
-    ),
-    (
-        r"\bnão (\w{3,})\b[^.!?,;:\n]{0,60}[.!?,;:]\s+\1\b",
-        "Antítese com verbo repetido ('Não faça X / Faça Y'): reescreva sem o paralelo",
-    ),
-]
+
+# Vícios de IA proibidos: a fonte única é o HARD BLOCK do hook
+# (scripts/hooks/quality_gate_hook.py). Uma cópia mantida aqui divergiu em
+# 2026-09 ('brutalmente', travessão curto e antítese com "São" só existiam no
+# hook), então o CLI passou a carregar os padrões direto de lá.
+def _load_hard_block_patterns() -> list:
+    hook_path = Path(__file__).resolve().parent / "hooks" / "quality_gate_hook.py"
+    spec = importlib.util.spec_from_file_location("_mos_quality_gate_hook", hook_path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return list(module.HARD_BLOCK_PATTERNS)
+
+
+AI_TELL_PATTERNS = _load_hard_block_patterns()
 
 
 def read_content(filepath: str) -> str:

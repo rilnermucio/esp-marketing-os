@@ -782,6 +782,68 @@
         "F-ROUTE-02",
         "F-CLAIM-01"
       ]
+    },
+    {
+      "id": "RT-040",
+      "prompt": "quero que minha clínica apareça quando alguém pergunta pro ChatGPT e pro Google com IA qual o melhor dentista da região",
+      "expected_command": null,
+      "expected_agents": [
+        "mos-seo"
+      ],
+      "dispatch": "simples",
+      "min_output_fields": [
+        "robôs de IA liberados (OAI-SearchBot, Bingbot, PerplexityBot)",
+        "Perfil da Empresa no Google",
+        "conteúdo com experiência própria",
+        "medição (Search Console e GA4 AI Assistant)",
+        "sem prometer posição ou llms.txt como fator"
+      ],
+      "detects": [
+        "F-ROUTE-02",
+        "F-CLAIM-01"
+      ],
+      "notes": "GEO/AEO local. Sem command dedicado: dispatch direto ao mos-seo pela PARTE XII."
+    },
+    {
+      "id": "RT-041",
+      "prompt": "quero começar a postar no Kwai com a minha loja de roupas do Brás, monta um calendário das duas primeiras semanas",
+      "expected_command": "criar-calendario",
+      "expected_agents": [
+        "mos-research",
+        "mos-social"
+      ],
+      "dispatch": "paralelo",
+      "min_output_fields": [
+        "formatos do Kwai (vídeo 9:16, dueto, live, série curta)",
+        "tom popular com criador real",
+        "sem duração máxima inventada",
+        "sugestão de enquete"
+      ],
+      "detects": [
+        "F-ROUTE-02",
+        "F-DOC-03"
+      ],
+      "notes": "Plataforma BR (P-f). A KB de social traz os fatos do Kwai verificados em 2026-09-28."
+    },
+    {
+      "id": "RT-042",
+      "prompt": "escreve o título do meu anúncio no Mercado Livre e na Amazon: panela de pressão elétrica de 5 litros da marca Oster, inox",
+      "expected_command": null,
+      "expected_agents": [
+        "mos-copy"
+      ],
+      "dispatch": "simples",
+      "min_output_fields": [
+        "título dentro do limite de cada marketplace",
+        "sem frete, promoção ou cor no título",
+        "Amazon até 75 caracteres com Destaques do produto",
+        "contagem de caracteres"
+      ],
+      "detects": [
+        "F-ROUTE-02",
+        "F-COPY-03"
+      ],
+      "notes": "Marketplace (P-f). Regras oficiais na PARTE XII (12.3) da KB de copy."
     }
   ]
 }

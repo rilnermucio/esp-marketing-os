@@ -360,6 +360,23 @@ class TestCheckAITells:
         )
         assert score == 10
 
+    def test_mixed_copula_antithesis_flagged(self):
+        score, issues = check_ai_tells(
+            "Não é falta de equipamento caro. São cinco ajustes simples."
+        )
+        assert score == 0 and issues
+
+    def test_patterns_are_the_hook_hard_blocks(self):
+        """Fonte única: o CLI usa os mesmos padrões que o hook bloqueia."""
+        import importlib.util
+        from pathlib import Path
+
+        hook = Path(__file__).resolve().parents[1] / "hooks" / "quality_gate_hook.py"
+        spec = importlib.util.spec_from_file_location("_hook_for_test", hook)
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        assert AI_TELL_PATTERNS == list(module.HARD_BLOCK_PATTERNS)
+
     def test_patterns_have_messages(self):
         for pattern, message in AI_TELL_PATTERNS:
             assert len(pattern) > 0

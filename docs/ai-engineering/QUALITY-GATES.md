@@ -8,7 +8,7 @@
 |---|---|---|
 | Sem travessão `—` | Bloqueante | AI-tell nº 1; denuncia texto gerado |
 | Sem a palavra "brutal" | Bloqueante | AI-tell; substitutos: intenso, forte, pesado, impactante |
-| Sem antítese negação→afirmação ("Não é X / É Y", "Não faça X / Faça Y" e variações) | Bloqueante | AI-tell estrutural; reescrever afirmando direto |
+| Sem antítese negação→afirmação ("Não é X / É Y", "Não é X / São Y", "Não faça X / Faça Y" e variações; "não é X, e sim Y" gera aviso) | Bloqueante | AI-tell estrutural; reescrever afirmando direto |
 | Sem PALAVRAS EM CAPS gratuitas | Gate de prompt | Grita, não persuade |
 | Sem aspas em roteiros/falas; sem aspas de ênfase | Gate de prompt | Fala escrita direto soa humano |
 | Máximo 0-1 emoji (2 em contextos justificados) | Gate de prompt | Poluição visual |
@@ -69,13 +69,13 @@ Ordem obrigatória (worked example real: gate de antítese, jun/2026):
 
 1. **Regex no hook** (`HARD_BLOCK_PATTERNS` ou `WARN_PATTERNS`). Regras de engenharia do regex: span interno exclui pontuação pra não atravessar cláusulas; `find_hard_violations` aplica IGNORECASE em tudo (necessário pro backreference `\1` casar "faça/Faça"); mensagem diz o que fazer, não só o que está errado.
 2. **Testes junto**: casos que disparam E casos parecidos que NÃO podem disparar (falso positivo é regressão de usabilidade).
-3. **Espelhar no CLI** (`AI_TELL_PATTERNS` em `quality_gate.py`) se a regra é de copy.
+3. **CLI herda sozinho**: `quality_gate.py` carrega `HARD_BLOCK_PATTERNS` do hook (fonte única desde 2026-09-28; guard `test_quality_gate.py::test_patterns_are_the_hook_hard_blocks`). Avisos (`WARN_PATTERNS`) ficam só no hook.
 4. **Atualizar as tabelas derivadas**: Gate do(s) agent(s) afetado(s), SKILL.md, AGENTS.md, e a tabela deste documento.
 5. **Rodar a suite completa** (`-m "not smoke"`).
 
 Pegadinhas conhecidas:
 
-- **`SKIP_PATH_PATTERNS` do hook**: commands/, subagents/, docs/, scripts/ e afins são pulados (são tooling/KB, não copy). `agents/` e `skills/` NÃO são pulados. Consequência: exemplo de padrão proibido dentro de um agent deve ser escrito em forma que não casa com o próprio regex (por isso as tabelas usam "Não é X / É Y" com barra em vez de pontuação).
+- **Escopo do hook**: ele só avalia escritas e respostas finais de agents `marketing-os:mos-*`, e pula arquivos dentro da raiz do plugin (exceto `workspace/`), estado em `.claude/` e extensões de código (`SKIP_SUFFIXES`, `SKIP_BASENAMES`). Exemplo de padrão proibido dentro de agent, command ou SKILL continua escrito com barra ("Não é X / É Y"), porque o agent repete o que lê e a resposta final dele passa pelo `SubagentStop`.
 - **`stop_hook_active` no SubagentStop**: nunca bloquear a segunda falha. Esse campo é o freio contra recursão e tem teste dedicado.
 - **Nunca enfraquecer um HARD BLOCK pra acomodar um caso**: se apareceu falso positivo legítimo, ajuste o regex com um teste que fixa o caso, não remova a regra.
 - **Regra que só o modelo consegue julgar** (tom, adaptação BR) fica na camada 1 e, futuramente, na camada LLM-graded ([EVALS-STRATEGY.md](EVALS-STRATEGY.md) §4). Não force regex onde não cabe.

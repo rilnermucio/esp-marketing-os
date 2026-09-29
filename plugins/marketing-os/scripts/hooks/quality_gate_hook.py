@@ -103,8 +103,13 @@ HARD_BLOCK_PATTERNS = [
         "Palavra 'brutal' (ou variação) proibida. Use: intenso, forte, pesado, impactante, poderoso.",
     ),
     (
-        r"\bnão é [^.!?,;:\n]{2,60}[.!?,;:]\s+é\b",
-        "Antítese negação/afirmação detectada ('Não é X / É Y'). "
+        # Cópula na negação e na afirmação, em qualquer combinação: "Não é X. É
+        # Y.", "Não é X. São Y.", "Não era X. Foi Y." (a baseline AO-001 de
+        # 2026-09-28 mostrou "São" escapando). "São" seguido de maiúscula é nome
+        # próprio (São Paulo) e fica de fora.
+        r"\bnão (?:é|são|era|eram|foi|foram) [^.!?,;:\n]{2,60}[.!?,;:]\s+"
+        r"(?:é|são(?!\s+(?-i:[A-ZÁÉÍÓÚÂÊÔÃÕ]))|era|eram|foi|foram)\b",
+        "Antítese negação/afirmação detectada ('Não é X / É Y', 'Não é X / São Y'). "
         "Reescreva afirmando direto, sem o paralelo.",
     ),
     (
@@ -177,7 +182,8 @@ WARN_PATTERNS = [
         "Superlativo não verificável detectado. Use claim específico com fonte.",
     ),
     (
-        r"\bnão (se trata de|é (uma )?questão de)\b[^.!?\n]{2,80}\b(mas|e sim)\b",
+        r"\bnão (se trata de|é (uma )?questão de)\b[^.!?\n]{2,80}\b(mas|e sim)\b"
+        r"|\bnão (é|são|foi|era)\b[^.!?\n]{2,60}\be sim\b",
         "Antítese suave detectada ('não se trata de X, mas de Y'). "
         "Variante do AI-tell de negação/afirmação. Considere afirmar direto.",
     ),

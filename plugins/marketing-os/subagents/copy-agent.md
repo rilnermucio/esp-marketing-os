@@ -4244,21 +4244,21 @@ crítico (produtor reconhece amador imediatamente).
 ESTRUTURA:
 
 1. HEADLINE com benefício principal
-   "Fone Bluetooth que dura 48h — sem interromper sua playlist"
+   "Fone Bluetooth que dura 48h sem interromper sua playlist"
 
 2. SUBHEADLINE com diferencial
    "Cancelamento de ruído ativo + resistência à água IPX5"
 
 3. BULLETS DE BENEFÍCIO (não features)
-   ✓ 48h de bateria — viaje sem carregador
-   ✓ Cancelamento de ruído — foco total
-   ✓ IPX5 — pode treinar na chuva
-   ✓ 20g — tão leve que esquece que está usando
-   ✓ Bluetooth 5.3 — conexão sem falhas
+   ✓ 48h de bateria: viaje sem carregador
+   ✓ Cancelamento de ruído: foco total
+   ✓ IPX5: pode treinar na chuva
+   ✓ 20g: tão leve que esquece que está usando
+   ✓ Bluetooth 5.3: conexão sem falhas
 
 4. PROVA SOCIAL
    ★★★★★ 4.8/5 (2.347 avaliações)
-   "Melhor fone que já tive" — João, SP
+   "Melhor fone que já tive" (João, SP)
 
 5. CTA
    [BOTÃO: Adicionar ao Carrinho]
@@ -4289,8 +4289,8 @@ Só nas próximas 24h.
 
 CROSS-SELL:
 "Combina perfeitamente com seu [produto]:
-[Produto 2] — R$X (economize 20% no combo)
-[Produto 3] — R$X (item mais vendido da semana)"
+[Produto 2]: R$X (economize 20% no combo)
+[Produto 3]: R$X (item mais vendido da semana)"
 
 THANK YOU PAGE:
 "Pedido confirmado! 🎉
@@ -4312,6 +4312,33 @@ REVIEW REQUEST:
 ★ ★ ★ ★ ★
 [Link direto para avaliação]
 Leva menos de 1 minuto."
+```
+
+
+## 12.3 Título de anúncio em marketplace (Mercado Livre, Shopee, Amazon)
+
+> Verificado em 2026-09-28 nas páginas oficiais de vendedor. Marketplace rebaixa, bloqueia ou reescreve título fora da regra, então a regra da plataforma vem antes da técnica de copy. Limites que mudam ficam em `references/platform-facts.md`.
+
+| Plataforma | Limite | Estrutura | Não pode |
+|---|---|---|---|
+| Mercado Livre | Varia por categoria (campo `max_title_length` da API); 60 é o valor usual | Oficial: produto + marca + modelo + especificações; "para" ou "compatível com" em peças compatíveis | Cor ou tamanho (use variações), novo ou usado, frete, parcelamento, devolução, promoção ou desconto, pontuação e símbolos, a palavra "estoque" |
+| Shopee Brasil | Sem número oficial publicado; valide no formulário da Central do Vendedor | Oficial: marca + nome do produto + modelo + especificações principais; inicial maiúscula em cada palavra | Caixa alta (exceto a marca), "Promoção", "Frete Grátis", preço, repetição de palavra-chave, símbolos repetidos, cor ou tamanho |
+| Amazon (inclusive Brasil) | 75 caracteres com espaços em todas as categorias, exceto mídia, desde 27/07/2026; mais 125 caracteres pesquisáveis no campo "Destaques do produto" | O essencial nos 75 (marca, tipo de produto, atributo decisivo); benefícios e usos nos Destaques | Os caracteres ! $ ? _ { } ^ ¬ ¦; a mesma palavra mais de 2 vezes |
+
+Outras regras oficiais que mexem no anúncio:
+
+- Mercado Livre: anúncio em catálogo não permite editar o título; a plataforma oferece a opção "Sugerir um título" com IA.
+- Shopee: até 2 tipos de variação e 1 vídeo por produto; "Envio Rápido" escrito na foto principal gera penalidade.
+- Amazon: título acima de 75 caracteres recebe uma sugestão gerada por IA, e a Amazon passou a aplicar essa sugestão aos títulos que continuaram acima do limite depois de 27/07/2026.
+
+```
+COMO ESCREVER DENTRO DA REGRA
+1. Comece pelo termo que o comprador digita (produto e marca), sem adjetivo na frente
+2. Em seguida, o atributo que decide a compra: modelo, capacidade, medida, material
+3. Promessa, preço e frete ficam fora do título (vão em campo próprio ou na descrição)
+4. Na Amazon, os 75 caracteres levam o essencial e os Destaques do produto levam
+   benefícios e usos
+5. Entregue 3 versões com a contagem de caracteres de cada uma
 ```
 
 ---

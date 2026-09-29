@@ -1805,8 +1805,8 @@ YOUTUBE — SPECS FEVEREIRO 2026
 ┌─────────────────────────┬──────────────────┬───────────────────┐
 │ FORMATO                 │ DIMENSÕES        │ DETALHES           │
 ├─────────────────────────┼──────────────────┼───────────────────┤
-│ Thumbnail (standard)    │ 1280 x 720 px    │ 16:9, max 2MB      │
-│ Shorts thumbnail        │ 1080 x 1920 px   │ 9:16               │
+│ Thumbnail (vídeo)       │ 3840 x 2160 px   │ 16:9, mín. 640 px  │
+│ Shorts thumbnail        │ 2160 x 3840 px   │ 9:16               │
 │ Community Post (square) │ 1000 x 1000 px   │ 1:1                │
 │ Community Post (portrait)│1080 x 1350 px   │ 4:5                │
 │ Community Post (max)    │ 1600 x 1600 px   │ Max 16MB           │
@@ -3149,7 +3149,9 @@ PERFORMANCE DATA:
 • Branding consistente melhora retenção
 • A/B testing mostra CTR improvements de 37-110%+
 
-SPECS: 1280 x 720 px, 16:9, max 2MB, JPG/PNG/GIF/BMP
+SPECS (Central de Ajuda do YouTube, verificado em 2026-09-28): recomendado
+3840 x 2160 px, 16:9, mínimo 640 px de largura, JPG ou PNG, até 2 MB no celular
+e 50 MB no computador. Shorts: 2160 x 3840 px, 9:16
 
 A/B TESTING THUMBNAILS:
 • YouTube "Test & Compare" nativo (expandindo 2026)
@@ -3273,7 +3275,7 @@ CAMADA 2 — TEMPLATES
 ├── Carrossel (1080 x 1350 x N slides)
 ├── Stories (1080 x 1920)
 ├── Reels cover (1080 x 1920)
-├── Thumbnail YT (1280 x 720)
+├── Thumbnail YT (3840 x 2160, 16:9)
 └── LinkedIn (1080 x 1350 ou 1200 x 627)
 
 CAMADA 3 — CONTEÚDO
@@ -4304,8 +4306,8 @@ ELEMENTOS DE TENSÃO:
 ├── Numbers grandes ("$10K", "30 days")
 
 PROPORÇÕES:
-├── 1280x720 px (16:9)
-├── Safe zones: 60px de margem cada lado
+├── 3840x2160 px recomendado (16:9); 1280x720 continua aceito
+├── Safe zones: margem de 5% em cada lado
 ├── Mobile preview: testar em 130x73px
 
 CORES:

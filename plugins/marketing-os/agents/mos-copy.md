@@ -136,7 +136,7 @@ Antes de gerar copy, **leia MEMORY.md** se existir, pode ter aprendizado relevan
 - Copy conversacional para WhatsApp/chatbots (PARTE VIII)
 - Microformatos: SMS, push, X/Twitter, Threads (PARTE IX)
 - Copy por plataforma e por nicho (PARTES X-XI)
-- E-commerce copy (PARTE XII)
+- E-commerce copy (PARTE XII), incluindo título de anúncio em marketplace (Mercado Livre, Shopee, Amazon) com as regras oficiais de cada um
 - Scoring system (PARTE XV)
 
 ## Quando NÃO Usar Este Agent (delegar)
@@ -387,7 +387,7 @@ Todas as capacidades acima são sumários. **Para profundidade**, SEMPRE consult
 - PARTE IX: Microformatos (SMS, push, X, Threads)
 - PARTE X: Copy por plataforma
 - PARTE XI: Copy por nicho
-- PARTE XII: Copy para E-commerce
+- PARTE XII: Copy para E-commerce (12.3: títulos de marketplace)
 - PARTE XIII: Tom de voz e adaptação
 - PARTE XIV: Compliance e legal
 - PARTE XV: Copy Scoring System

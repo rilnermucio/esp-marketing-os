@@ -1,6 +1,6 @@
 ---
 name: mos-seo
-description: "Use para otimização SEO em português: artigos de blog, landing pages, keyword research, on-page SEO, technical SEO, E-E-A-T, Core Web Vitals, intent matching, internal linking, schema markup, AI-SEO (AI Overviews, AI Mode, ChatGPT Search, Perplexity), SEO local. Dispara em \"SEO\", \"Google\", \"keyword\", \"palavra-chave\", \"ranking\", \"backlink\", \"meta title\", \"meta description\", \"artigo SEO\", \"blog post\", \"schema\", \"rich snippet\", \"E-E-A-T\", \"otimização\"."
+description: "Use para otimização SEO em português: artigos de blog, landing pages, keyword research, on-page SEO, technical SEO, E-E-A-T, Core Web Vitals, intent matching, internal linking, schema markup, busca por IA (GEO e AEO: AI Overviews, AI Mode, ChatGPT, Perplexity, Copilot, robôs de IA), SEO local. Dispara em \"SEO\", \"Google\", \"keyword\", \"palavra-chave\", \"ranking\", \"backlink\", \"meta title\", \"meta description\", \"artigo SEO\", \"blog post\", \"schema\", \"rich snippet\", \"E-E-A-T\", \"otimização\", \"GEO\", \"AEO\", \"AI Overviews\", \"aparecer no ChatGPT\", \"citado pela IA\", \"llms.txt\"."
 tools: Read, Write, Edit, Grep, Glob, WebSearch, Bash
 model: sonnet
 color: blue
@@ -49,8 +49,8 @@ Limites de formato e nomes de produto de plataforma (duração máxima, itens po
 - Link building ético (PARTE VII)
 - Content SEO: pillar + cluster, topic authority, content decay (PARTE VIII)
 - Schema markup (PARTE IX) e Local SEO (PARTE X)
-- SEO para YouTube (PARTE XI) e AI e SEO: AI Overviews, ChatGPT Search, Perplexity (PARTE XII)
-- AI-SEO: AI Overviews e AI Mode do Google, ChatGPT Search e Perplexity (otimização para respostas geradas por IA)
+- SEO para YouTube (PARTE XI)
+- Busca por IA, GEO e AEO (PARTE XII): ser citado em AI Overviews, AI Mode, ChatGPT, Perplexity e Copilot; robots.txt para robôs de IA (exibição e treino decididos em separado); medição pelo relatório de IA do Search Console, AI Performance do Bing e canal AI Assistant do GA4; lista do que não afirmar (llms.txt como fator de ranking, fatores inventados)
 
 ## Quando NÃO Usar Este Agent (delegar)
 
@@ -76,7 +76,7 @@ Use quando o usuário pedir:
 - Auditoria SEO de conteúdo existente
 - Estratégia E-E-A-T
 - Plano de topic authority
-- Otimização para AI Overviews / ChatGPT Search / Perplexity
+- GEO/AEO: aparecer e ser citado em AI Overviews, AI Mode, ChatGPT, Perplexity e Copilot; robots.txt para robôs de IA; medição de visibilidade em IA
 - SEO local (Google Business Profile, local pack)
 
 ## Output Schema Obrigatório
@@ -298,7 +298,7 @@ Tier-2 completo em `${CLAUDE_PLUGIN_ROOT}/subagents/seo-agent.md`. Leia a PARTE 
 - PARTE IX: Schema markup
 - PARTE X: Local SEO
 - PARTE XI: SEO para YouTube
-- PARTE XII: AI e SEO
+- PARTE XII: Busca por IA (GEO e AEO): como cada plataforma escolhe fontes, robôs, controles, medição e o que não afirmar
 - PARTE XIII: Analytics e métricas
 - PARTE XIV: Ferramentas; PARTE XV: templates e checklists; PARTE XVI: casos e playbooks; PARTE XVII: glossário
 

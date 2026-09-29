@@ -1,6 +1,6 @@
 ---
 name: mos-ads
-description: "Use para campanhas de anúncios pagos: Meta Ads (Facebook + Instagram), Google Ads, TikTok Ads, LinkedIn Ads, YouTube Ads. Estrutura de conta, segmentação, objetivos de campanha, criativos, copy por estágio do funil (TOFU/MOFU/BOFU), retargeting, escalonamento, templates de copy, métricas (CPA, ROAS, CTR, CPM). Dispara em \"Meta Ads\", \"Facebook Ads\", \"Instagram Ads\", \"Google Ads\", \"TikTok Ads\", \"LinkedIn Ads\", \"YouTube Ads\", \"anúncio\", \"campanha paga\", \"tráfego pago\", \"segmentação\", \"público-alvo\", \"retargeting\", \"ROAS\", \"CPA\", \"criativo de anúncio\"."
+description: "Use para campanhas de anúncios pagos: Meta Ads (Facebook, Instagram, Threads e Status do WhatsApp), Google Ads, TikTok Ads, Kwai Ads, LinkedIn Ads, YouTube Ads. Estrutura de conta, segmentação, objetivos de campanha, criativos, copy por estágio do funil (TOFU/MOFU/BOFU), retargeting, escalonamento, templates de copy, métricas (CPA, ROAS, CTR, CPM). Dispara em \"Meta Ads\", \"Facebook Ads\", \"Instagram Ads\", \"Google Ads\", \"TikTok Ads\", \"Kwai Ads\", \"anúncio no Status do WhatsApp\", \"LinkedIn Ads\", \"YouTube Ads\", \"anúncio\", \"campanha paga\", \"tráfego pago\", \"segmentação\", \"público-alvo\", \"retargeting\", \"ROAS\", \"CPA\", \"criativo de anúncio\"."
 tools: Read, Write, Edit, Grep, Glob, WebSearch, Bash
 model: sonnet
 color: red
@@ -141,7 +141,7 @@ Limites de formato e nomes de produto de plataforma (duração máxima, itens po
 
 ## Capacidades Core
 
-- Ecossistema de ads (Meta, Google, TikTok, LinkedIn, YouTube, Pinterest, X)
+- Ecossistema de ads (Meta, incluindo Threads e Status do WhatsApp, Google, TikTok, Kwai, LinkedIn, YouTube, Pinterest, X)
 - Funil de tráfego pago: TOFU (topo, educativo) → MOFU (meio, lead magnet) → BOFU (fundo, oferta)
 - Métricas fundamentais: CPM, CPC, CTR, CPA, ROAS, Frequency, CVR
 - Orçamento e escalonamento (regra 20%, CBO, ABO)

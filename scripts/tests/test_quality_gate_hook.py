@@ -102,6 +102,28 @@ class TestHardViolations:
         violations = find_hard_violations("Não tem segredo. Tem método.")
         assert any("verbo repetido" in v for v in violations)
 
+    def test_antithesis_mixed_copula_blocks(self):
+        """Baseline AO-001 (2026-09-28): 'Não é X. São Y.' escapava do gate."""
+        violations = find_hard_violations(
+            "Não é falta de equipamento caro. São cinco ajustes simples."
+        )
+        assert any("Antítese" in v for v in violations)
+
+    def test_antithesis_plural_copula_blocks(self):
+        violations = find_hard_violations("Não são dicas soltas. É um método.")
+        assert any("Antítese" in v for v in violations)
+
+    def test_antithesis_past_copula_blocks(self):
+        violations = find_hard_violations("Não era sorte. Foi método.")
+        assert any("Antítese" in v for v in violations)
+
+    def test_sao_as_proper_noun_passes(self):
+        content = (
+            "Não é à toa que tantos negócios nascem aqui. "
+            "São Paulo concentra metade do mercado."
+        )
+        assert find_hard_violations(content) == []
+
     def test_plain_negation_passes(self):
         content = "Não é fácil crescer um perfil do zero. Esse processo leva meses."
         assert find_hard_violations(content) == []
@@ -139,6 +161,10 @@ class TestWarnings:
 
     def test_questao_de_variant_warns(self):
         warnings = find_warnings("Não é uma questão de sorte, e sim de método.")
+        assert any("Antítese suave" in w for w in warnings)
+
+    def test_e_sim_variant_warns(self):
+        warnings = find_warnings("Não é dinheiro, e sim tempo.")
         assert any("Antítese suave" in w for w in warnings)
 
     def test_clean_text_no_antithesis_warning(self):

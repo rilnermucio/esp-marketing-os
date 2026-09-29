@@ -17,7 +17,7 @@ Subagente especializado em criação de campanhas, copy de anúncios, estratégi
 1. [PARTE I: Fundamentos de Tráfego Pago](#parte-i-fundamentos-de-tráfego-pago)
 2. [PARTE II: Meta Ads (Facebook/Instagram)](#parte-ii-meta-ads)
 3. [PARTE III: Google Ads](#parte-iii-google-ads)
-4. [PARTE IV: TikTok Ads](#parte-iv-tiktok-ads)
+4. [PARTE IV: TikTok Ads e Kwai Ads](#parte-iv-tiktok-ads-e-kwai-ads)
 5. [PARTE V: LinkedIn Ads](#parte-v-linkedin-ads)
 6. [PARTE VI: Estrutura de Campanhas](#parte-vi-estrutura-de-campanhas)
 7. [PARTE VII: Segmentação e Públicos](#parte-vii-segmentação-e-públicos)
@@ -506,6 +506,46 @@ SETUP BÁSICO:
 4. Testar com Events Manager
 ```
 
+## 2.7 Anúncios no WhatsApp (Status e canal promovido) e no Threads
+
+> Verificado em 2026-09-28 na Central de Ajuda para Empresas da Meta, no FAQ do WhatsApp e na newsroom da Meta. Liberação gradual: confira no Gerenciador se o posicionamento aparece para a conta antes de prometer ao cliente.
+
+```
+ANÚNCIO NO STATUS DO WHATSAPP
+├── O Brasil está na lista oficial de países com anúncios no Status
+├── Compra: Gerenciador de Anúncios, objetivo Tráfego com destino de mensagem
+│   no WhatsApp; meta de alcance diário único ou impressões
+├── Posicionamento: vai junto com Instagram Stories
+├── Criativo: imagem ou vídeo 9:16 de até 90 s
+├── Segmentação: local, idioma e idade. Público restrito reduz a entrega
+│   durante a liberação gradual; a Meta indica o público Advantage+
+├── Pré-requisito: WhatsApp Business (app ou API) vinculado
+├── Destinos: conversa ou site; o anúncio aparece entre os Status orgânicos
+└── Não veicula: categoria especial de anúncio, experimentos da Meta, catálogo
+    Advantage+, anúncio em parceria e conteúdo com restrição de idade. Conta que
+    usou controles de segurança de marca nos últimos 12 meses sai desse
+    posicionamento automaticamente
+
+CANAL PROMOVIDO
+└── Impulsiona o canal no diretório de canais; quando disponível, aparece nas
+    preferências de posicionamento do Gerenciador
+
+CUSTO DA CONVERSA
+└── Clique em anúncio para WhatsApp abre 72 h sem cobrança de mensagem. A tabela
+    por mensagem no Brasil está na knowledge base de social ("Kwai e WhatsApp:
+    Status e Canais")
+
+THREADS
+└── Anúncios liberados para todos os mercados, inclusive Brasil, a partir da
+    semana de 26/01/2026: imagem, vídeo, carrossel, 4:5, catálogo Advantage+
+    e app
+
+PRÁTICA
+├── Reaproveite o corte vertical dos Stories, com a primeira fala convidando
+│   para a conversa
+└── Deixe o atendimento pronto para responder dentro das 72 h
+```
+
 ---
 
 # PARTE III: GOOGLE ADS
@@ -743,7 +783,7 @@ SEGUNDOS 30+:
 
 ---
 
-# PARTE IV: TIKTOK ADS
+# PARTE IV: TIKTOK ADS E KWAI ADS
 
 ## 4.1 Visão Geral TikTok Ads
 
@@ -878,6 +918,31 @@ COMO USAR:
 | Oferta direta | | ✓ |
 | Teste de criativo rápido | | ✓ |
 | Retargeting | | ✓ |
+
+## 4.5 Kwai for Business
+
+> Verificado em 2026-09-28 no site oficial do Kwai for Business. As especificações detalhadas de anúncio ficam no Business Center, que exige login: confira antes de produzir.
+
+```
+FORMATOS
+├── Eyemax: primeira visualização do dia, tráfego garantido comprado por CPT
+│   (lançamento)
+├── In-feed Ads: performance
+├── Hashtag Challenge e Magic Face: engajamento e participação
+├── Criadores: campanhas com criadores do Kwai
+└── Impulsionar: promove post de criador como anúncio
+
+REGRAS
+├── Anúncio de apostas no Brasil exige licença federal válida (desde 01/01/2025)
+└── Fluxo oficial de criação: objetivo, público, orçamento e anúncio
+
+PÚBLICO E CRIATIVO (dados de mercado)
+├── Público de massa, com classe C predominante nas fontes; humor lidera os
+│   interesses (Opinion Box 2024)
+├── Produza em 9:16, com criador real e tom popular
+└── Parte do uso do app é recompensada com moedas: avalie por conversão,
+    não por views
+```
 
 ---
 
