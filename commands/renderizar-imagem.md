@@ -1,5 +1,5 @@
 ---
-description: Turn an optimized AI image prompt into an actual PNG. Dispatches mos-ai-tools (prompt engineering) e executa a geração via skill de imagem disponível no ambiente (gpt-image-2 / ai-image-generation), com fallback pra entrega do prompt.
+description: "Gera a imagem pronta (PNG) a partir de um pedido ou prompt, com prompt otimizado e, se não houver gerador disponível, entrega o prompt. Use quando pedirem a imagem de fato."
 argument-hint: "<o que gerar + uso, ex: 'foto de produto do e-book, fundo clean, pra anúncio 1:1'>"
 ---
 

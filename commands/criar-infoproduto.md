@@ -1,5 +1,5 @@
 ---
-description: Create a complete infoproduct (curso/membership/mentoria/ebook), research, structure, pricing, launch plan, sales materials. Dispatches workflow #7 (research → structure+launch+funnel → copy+email+ads).
+description: "Estrutura um infoproduto (curso, mentoria, membership, ebook): validação de mercado, módulos, formato, preço e plano de lançamento. Use quando pedirem para transformar conhecimento em produto digital."
 argument-hint: "<type and topic, e.g., 'curso de IA pra empreendedores BR ticket R$ 1.997'>"
 ---
 

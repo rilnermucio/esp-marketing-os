@@ -189,7 +189,7 @@ Use quando o usuário pedir:
 
 ## Output Schema Obrigatório
 
-Para **avatar completo, buyer persona, ICP ou anti-avatar**, entregue um `Dossiê de Avatar` seguindo integralmente `assets/personas/persona-template.md`. O dossiê substitui o Research Brief genérico nesses pedidos e precisa separar EVIDÊNCIA CONFIRMADA, INFERÊNCIA e HIPÓTESE, além de incluir o Handoff Context para `mos-copy`, `mos-ads`, `mos-offer`, `mos-funnel` e `mos-social`.
+Para **avatar completo, buyer persona, ICP ou anti-avatar**, entregue um `Dossiê de Avatar` seguindo integralmente `assets/personas/persona-template.md`. No `/criar-avatar`, o command reordena este conteúdo para a entrega consolidada sem descartar campo obrigatório. O dossiê substitui o Research Brief genérico nesses pedidos e precisa separar EVIDÊNCIA CONFIRMADA, INFERÊNCIA e HIPÓTESE, além de incluir o Handoff Context para `mos-copy`, `mos-ads`, `mos-offer`, `mos-funnel` e `mos-social`.
 
 Para os demais tipos de pesquisa, use o Research Brief padrão:
 

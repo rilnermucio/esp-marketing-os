@@ -1,5 +1,5 @@
 ---
-description: Calendário sazonal comercial BR (datas comerciais e culturais com antecedência ideal de campanha). Utilitário de dados, sem dispatch direto. Dispara em "datas sazonais", "calendário comercial", "Black Friday", "Dia das Mães", "efemérides", "quando começar a campanha".
+description: "Calendário comercial brasileiro: datas comerciais e culturais do ano com a antecedência ideal de campanha. Use quando perguntarem quais datas aproveitar ou quando começar a campanha de uma data."
 argument-hint: "(sem args: próximos 90 dias) | --ano AAAA | --from YYYY-MM-DD --to YYYY-MM-DD"
 ---
 

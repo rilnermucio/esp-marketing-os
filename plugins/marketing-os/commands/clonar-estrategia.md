@@ -1,5 +1,5 @@
 ---
-description: Analyze a competitor/expert and reverse-engineer their content strategy adapted for your brand. Dispatches workflow #10 (mos-research + mos-brand → mos-copy with voice clone extraction).
+description: "Engenharia reversa da estratégia de um concorrente ou expert (posicionamento, voz, conteúdo) adaptada à sua marca, com o que replicar e o que evitar. Use quando pedirem para clonar ou modelar a estratégia de alguém."
 argument-hint: "<profile or brand, e.g., '@hormozi Instagram strategy' or 'concorrente.com content analysis'>"
 ---
 

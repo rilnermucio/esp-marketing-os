@@ -1,5 +1,5 @@
 ---
-description: Auditoria PREMIUM agency-grade de landing page com radar chart, screenshots, prosa por dimensão, comparativo competitivo, roadmap 30/90/180 dias e PDF de 25-30 páginas pronto pra entregar pra cliente.
+description: "Auditoria premium de landing page para entregar ao cliente: radar por dimensão, screenshots, comparativo competitivo, roadmap 30/90/180 dias e PDF. Use quando o relatório for um entregável. Diagnóstico rápido: /auditoria."
 argument-hint: <url>
 allowed-tools: Bash, WebFetch, Read, Write, Agent
 ---

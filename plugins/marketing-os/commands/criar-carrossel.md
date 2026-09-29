@@ -1,5 +1,5 @@
 ---
-description: Create a complete Instagram or LinkedIn carousel with hook slide, content slides, CTA, caption, and visual direction. Dispatches mos-social + mos-copy + mos-design in parallel (workflow #8).
+description: "Cria carrossel completo para Instagram ou LinkedIn: capa com hook, slides, CTA, legenda e direção visual. Use quando pedirem carrossel."
 argument-hint: "<topic and type, e.g., '10 productivity tips' or 'storytelling carousel about my journey'>"
 ---
 

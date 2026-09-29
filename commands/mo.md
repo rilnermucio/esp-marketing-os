@@ -1,5 +1,5 @@
 ---
-description: Meta-orquestrador do Marketing OS. Aceita briefing aberto em linguagem natural (sem precisar saber qual /criar-X usar) e roteia pro agent mos-* ou comando especializado correto. Desambigua antes de dispatchar.
+description: "Porta de entrada para qualquer briefing em linguagem natural: escolhe o command ou especialista certo e diz qual rota tomou. Use quando não souber qual command usar ou o pedido misturar várias entregas."
 argument-hint: "<briefing aberto, ex: 'preciso de conteúdo pro lançamento de um curso de Python'>"
 ---
 

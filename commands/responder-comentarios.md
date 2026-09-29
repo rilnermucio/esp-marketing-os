@@ -1,5 +1,5 @@
 ---
-description: Triagem e rascunhos de resposta para comentários/DMs no tom da marca. Dispatches mos-community; publicação só com aprovação humana item a item.
+description: "Tria comentários e DMs e escreve rascunhos de resposta no tom da marca, escalando os sensíveis; nada é publicado sem aprovação. Use quando pedirem para responder comentários, directs ou haters."
 argument-hint: "<comentários colados ou peça (reels/post) + contexto de marca/tom, ex: 'último reels de skincare, tom acolhedor'>"
 ---
 

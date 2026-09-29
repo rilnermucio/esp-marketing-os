@@ -1,5 +1,5 @@
 ---
-description: Voice clone personalizado a partir de amostras LOCAIS do usuário (posts, emails, artigos). Diferente de /criar-clone, não pesquisa expert externo. Salva o clone no projeto do usuário, em workspace/clones/.
+description: "Cria o clone da sua voz a partir das suas amostras (posts, emails, artigos) e o salva no projeto, em workspace/clones/. Use para ter copy no seu estilo. Clone de expert externo: /criar-clone."
 argument-hint: "<slug-do-clone>"
 ---
 

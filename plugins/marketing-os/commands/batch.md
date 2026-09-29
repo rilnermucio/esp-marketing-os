@@ -1,5 +1,5 @@
 ---
-description: Generate multiple pieces of content at once with hook/angle/framework variation. Routes the batch to N parallel (or sequential when needed) Agent dispatches based on content type.
+description: "Gera várias peças de uma vez (ex: 10 posts, 5 anúncios) variando hook, ângulo e framework. Use quando pedirem lote, volume ou várias versões. Para uma peça só, use o command do formato."
 argument-hint: "<quantity> <type> <theme>, e.g., '10 posts about AI tools' or '5 emails for product launch'"
 ---
 

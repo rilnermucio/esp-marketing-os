@@ -1,5 +1,5 @@
 ---
-description: Índice dos 6 presets de campanha disponíveis (lancamento, prospeccao, retencao, autoridade, growth, black-friday). Liste tipos e roteie pro sub-command correspondente. Roteador puro, sem dispatch direto.
+description: "Lista as campanhas prontas por objetivo (lançamento, prospecção, retenção, autoridade, growth, Black Friday) e indica a certa. Use quando pedirem campanha completa sem dizer o tipo."
 argument-hint: "(sem argumentos: lista presets) | <preset> redireciona para /campanha-<preset>"
 ---
 

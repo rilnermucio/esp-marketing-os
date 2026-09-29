@@ -1,5 +1,5 @@
 ---
-description: Create email marketing content (single, welcome, nurture, launch, abandoned cart, re-engagement, newsletter). Dispatches mos-email simples ou mos-email + mos-copy em paralelo para sequências.
+description: "Cria email ou sequência só de email (boas-vindas, nutrição, lançamento, carrinho abandonado, reengajamento, newsletter). Use quando pedirem email. Email + social + anúncios em sincronia: /criar-sequencia."
 argument-hint: "<type and purpose, e.g., 'welcome sequence for SaaS' or 'launch email for course'>"
 ---
 

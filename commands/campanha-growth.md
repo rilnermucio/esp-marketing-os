@@ -1,5 +1,5 @@
 ---
-description: Preset de growth. Dispatcha mos-research + mos-analytics em paralelo, depois mos-ab-testing + mos-growth + mos-copy. Foco em experimentação acelerada e crescimento não-linear via ICE Score e AARRR. Clone primário ellis.
+description: "Campanha de growth por experimentos: hipóteses priorizadas por ICE ao longo do funil AARRR, testes e métricas. Use quando o objetivo for crescer por experimentação contínua."
 argument-hint: "<funil/produto> [--clone=ellis|chen] [--north-star=...]"
 ---
 

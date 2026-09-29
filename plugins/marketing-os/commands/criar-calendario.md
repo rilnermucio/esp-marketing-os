@@ -1,5 +1,5 @@
 ---
-description: Create comprehensive editorial calendars for social media with content pillars, posting schedules, format distribution. Dispatches mos-social simples ou mos-social + mos-research em paralelo para nichos novos / multi-platform.
+description: "Cria calendário editorial de redes sociais com pilares, frequência, formatos e datas. Use quando pedirem planejamento de conteúdo, calendário ou pauta do mês."
 argument-hint: "<period and niche, e.g., 'monthly for fitness brand' or 'Q1 for SaaS startup'>"
 ---
 

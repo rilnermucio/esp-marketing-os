@@ -1,5 +1,5 @@
 ---
-description: Diagnose, score and rewrite existing copy. Dispatches mos-copy com diagnóstico (PARTE XVIII), Copy Score System (PARTE XV) e reescritas com hipóteses A/B.
+description: "Diagnostica, pontua e reescreve uma copy que já existe (headline, post, anúncio, email, página, CTA), com hipóteses A/B. Use quando pedirem para melhorar, revisar ou avaliar uma copy."
 argument-hint: "<copy colada, path de arquivo, ou o que otimizar (ex: 'headline da minha landing')>"
 ---
 

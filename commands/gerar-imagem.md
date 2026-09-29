@@ -1,5 +1,5 @@
 ---
-description: Generate optimized AI image prompts for Midjourney, DALL-E, Flux, Ideogram, Leonardo or Stable Diffusion. Dispatches mos-ai-tools (single agent).
+description: "Cria o prompt otimizado de imagem para Midjourney, DALL-E, Flux, Ideogram, Leonardo ou Stable Diffusion, sem gerar a imagem. Use quando pedirem prompt de imagem. Imagem pronta (PNG): /renderizar-imagem."
 argument-hint: "<description and tool, e.g., 'product photo for Flux' or 'illustration for Midjourney 9:16'>"
 ---
 

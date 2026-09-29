@@ -1,5 +1,5 @@
 ---
-description: Create high-converting ad copy for Meta Ads, Google Ads, TikTok Ads, LinkedIn Ads, and Pinterest Ads. Dispatches mos-ads (with mos-research when nicho/cliente é novo).
+description: "Cria anúncios para Meta, Google, TikTok, LinkedIn e Pinterest: copy, estrutura, segmentação e variações. Use quando pedirem anúncio, criativo ou copy de tráfego pago. Para publicar no Meta: /publicar-anuncio."
 argument-hint: "<platform and product, e.g., 'Meta Ads for SaaS product' or 'Google Search for e-commerce'>"
 ---
 

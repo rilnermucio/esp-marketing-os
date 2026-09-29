@@ -1,5 +1,5 @@
 ---
-description: Create a complete sales funnel strategy (TOFU/MOFU/BOFU) with content plan, email sequences, conversion optimization. Dispatches mos-funnel (with mos-research and mos-copy when needed).
+description: "Desenha a estratégia de funil de vendas (topo, meio e fundo) com conteúdo, emails e pontos de conversão. Use quando pedirem funil ou jornada do cliente. Funil de lançamento de curso: /criar-infoproduto."
 argument-hint: "<funnel type and goal, e.g., 'lead generation funnel for SaaS' or 'course launch funnel'>"
 ---
 

@@ -1,5 +1,5 @@
 ---
-description: Preset de prospecção. Dispatcha mos-research sequencial, depois mos-funnel + mos-copy + mos-ads em paralelo, fechando com mos-email + mos-social + mos-analytics. Funil HDIC de Sabri Suby. Clone primário suby.
+description: "Campanha de geração de leads: isca, página de captura, anúncios, emails e social para topo e meio de funil. Use quando o objetivo for captar leads."
 argument-hint: "<nicho/avatar> [--canal=...] [--budget=...] [--clone=suby|kennedy] [--produto=...]"
 ---
 

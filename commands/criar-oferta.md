@@ -1,5 +1,5 @@
 ---
-description: Architect a complete offer (value stack, pricing, guarantee, bonuses, urgency). Dispatches mos-offer, com escalação pra mos-research (validação) e handoff pra mos-copy (página).
+description: "Arquitetura de oferta: value stack, preço, garantia, bônus, urgência e claims aprovados. Use quando pedirem oferta, quanto cobrar, bônus ou garantia."
 argument-hint: "<produto/serviço + público + ticket pretendido, ex: 'mentoria de tráfego pago, gestores, ~R$5k'>"
 ---
 
@@ -86,6 +86,8 @@ Agent(subagent_type: "marketing-os:mos-offer", prompt: "Arquitete a oferta. Prod
 - **Página de venda da oferta**: após o offer, dispatch `mos-copy` com o Handoff Context JSON como insumo
 
 ## Consolidação
+
+> **Precedência**: o conteúdo mínimo é o do Output Schema Obrigatório do `mos-offer` (`${CLAUDE_PLUGIN_ROOT}/agents/mos-offer.md`). A consolidação abaixo organiza a entrega final sem descartar campo obrigatório do agent.
 
 Entregue ao usuário:
 

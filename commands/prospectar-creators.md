@@ -1,5 +1,5 @@
 ---
-description: Shortlist de creators com fit score e rascunhos de outreach. Dispatch sequencial mos-research → mos-partnerships; Gmail create_draft quando MCP disponível (nunca send).
+description: "Encontra creators com fit para parceria e prepara rascunhos de outreach, sem enviar nada. Use quando pedirem influenciadores, creators ou parcerias."
 argument-hint: "<nicho + o que a marca oferece/espera, ex: 'skincare, permuta + fee micro, reels 60s'>"
 ---
 

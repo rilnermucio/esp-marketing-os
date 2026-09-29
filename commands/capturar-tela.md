@@ -1,5 +1,5 @@
 ---
-description: Capture screenshots of landing pages, social profiles, or competitor sites via Playwright MCP. Optionally dispatches mos-research or mos-design for analysis after capture.
+description: "Captura screenshots de landing pages, perfis ou sites de concorrentes e, se pedido, analisa o resultado. Use quando precisar do visual real de uma página para análise ou referência."
 argument-hint: "<URL to capture, e.g., 'https://competitor.com' or 'Instagram profile @username'>"
 ---
 

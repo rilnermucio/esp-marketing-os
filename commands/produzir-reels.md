@@ -1,5 +1,5 @@
 ---
-description: Turn a Reels/TikTok script into a rendered, captioned vertical video. Dispatches mos-video (roteiro com timeline de legendas), encadeia /narrar-roteiro (áudio TTS) e renderiza com HyperFrames, com fallback honesto por degrau.
+description: "Transforma um roteiro de Reels ou TikTok em vídeo vertical renderizado, com narração e legendas. Use quando pedirem o vídeo pronto, não só o roteiro."
 argument-hint: "<tema ou roteiro pronto + duração, ex: 'reels 30s sobre mitos da nutrição'>"
 ---
 

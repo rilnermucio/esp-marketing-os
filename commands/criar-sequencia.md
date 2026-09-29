@@ -1,5 +1,5 @@
 ---
-description: Create a coordinated multi-channel content sequence (email + social + ads) with unified messaging. Dispatches mos-email + mos-social + mos-ads in parallel, com mos-launch ou mos-funnel adicionais por tipo de sequência.
+description: "Cria sequência coordenada entre email, social e anúncios, com mensagem única e cronograma por canal. Use quando a campanha precisar de vários canais em sincronia. Só email: /criar-email."
 argument-hint: "<campaign goal and channels, e.g., 'launch sequence 14 days email + Instagram + Meta Ads' or 'nurture 30 dias'>"
 ---
 

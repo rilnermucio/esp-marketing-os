@@ -1,5 +1,5 @@
 ---
-description: Create a design brief with specs, palettes, typography, and component requirements. Dispatches mos-design simples ou mos-design + mos-brand (+ opcional mos-ai-tools) em paralelo para identidade completa.
+description: "Cria brief de design com paleta, tipografia, hierarquia e especificação de componentes. Use quando pedirem direção visual, identidade visual ou um brief para designer."
 argument-hint: "<project type, e.g., 'Instagram carousel template' or 'landing page design for SaaS'>"
 ---
 

@@ -1,5 +1,5 @@
 ---
-description: Reverse-engineer videos (YouTube long, Shorts, Reels, TikTok, VSL) extracting hooks, CTAs, retention, structure. Dispatches mos-video, with optional mos-research handoff for unknown creators.
+description: "Engenharia reversa de um vídeo (YouTube, Shorts, Reels, TikTok, VSL): hook, estrutura, retenção e CTA. Use quando o usuário mandar um vídeo ou link e perguntar por que funciona ou como replicar."
 argument-hint: "<video URL or transcript, e.g., 'https://youtube.com/watch?v=...' or 'analyze MrBeast latest video'>"
 ---
 

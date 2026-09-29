@@ -1,5 +1,5 @@
 ---
-description: Analyze competitors extracting positioning, content strategy, audience insights, gaps and SWOT. Dispatches mos-research + mos-brand in parallel, with optional mos-copy handoff for replicable hooks/CTAs.
+description: "Mapeia concorrentes: posicionamento, estratégia de conteúdo, público, lacunas e SWOT. Use quando pedirem análise de concorrência ou benchmark de mercado. Para copiar e adaptar a estratégia de alguém, use /clonar-estrategia."
 argument-hint: "<competitors or niche, e.g., '@competitor1 @competitor2' or 'fitness coaching niche'>"
 ---
 

@@ -1,5 +1,5 @@
 ---
-description: Cria um dossiê completo do cliente ideal com pesquisa, evidências, JTBD, anti-avatar e handoff para execução de marketing.
+description: "Cria o dossiê completo do cliente ideal: pesquisa, evidências, dores, desejos, objeções, JTBD e anti-avatar. Use quando pedirem avatar, persona, ICP ou cliente ideal."
 argument-hint: "<produto ou oferta> <nicho> [B2B|B2C] [mercado ou região]"
 ---
 
@@ -42,6 +42,8 @@ Agent(subagent_type: "marketing-os:mos-research", prompt: "Crie um Dossiê de Av
 ```
 
 ## Consolidação
+
+> **Precedência**: o conteúdo mínimo do dossiê é o do contrato canônico `${CLAUDE_PLUGIN_ROOT}/assets/personas/persona-template.md`, que o `mos-research` segue. O schema abaixo define só a ordem de apresentação da entrega consolidada; ao consolidar, reordene e resuma sem descartar campo obrigatório do contrato.
 
 Entregue o resultado final neste schema, removendo blocos realmente inaplicáveis e explicando a remoção:
 

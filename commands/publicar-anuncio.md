@@ -1,5 +1,5 @@
 ---
-description: Publish ad campaigns to Meta Ads. Dispatches mos-ads first to validate copy, targeting, and budget against quality gates, then executes Meta Ads MCP tools to launch.
+description: "Publica campanha no Meta Ads depois de validar copy, segmentação e orçamento, sempre com confirmação humana. Use quando pedirem para subir anúncios no Meta. Só criar o anúncio: /criar-anuncio."
 argument-hint: "<campaign type and goal, e.g., 'lead generation campaign for course launch' or 'conversion campaign for product'>"
 ---
 

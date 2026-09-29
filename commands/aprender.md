@@ -1,5 +1,5 @@
 ---
-description: Loop de aprendizado com métricas reais. Coleta via MCP ou export manual, normaliza com metrics_collector, interpreta via mos-analytics e persiste aprendizados aprovados na memory dos agents-dono. Dispara em "aprender", "o que funcionou", "métricas do mês", "guarda na memory".
+description: "Fecha o loop com métricas reais: interpreta o desempenho das peças e, com aprovação, grava aprendizados na memória dos agents. Use quando pedirem para aprender com resultados, saber o que funcionou ou colarem um export de métricas."
 argument-hint: "<plataforma/canal> <período> [métrica primária, ex: retention|ctr|open_rate]"
 ---
 

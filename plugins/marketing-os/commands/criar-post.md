@@ -1,5 +1,5 @@
 ---
-description: Create a complete social media post optimized for the specified platform. Dispatches native Claude Code subagents (mos-social, mos-copy, optionally mos-research) in parallel or sequence for maximum quality.
+description: "Cria um post completo para Instagram, LinkedIn, TikTok, X ou Threads, com hook, legenda, CTA, hashtags e enquete. Use quando pedirem um post. Carrossel: /criar-carrossel; várias peças: /batch."
 argument-hint: "<platform and topic, e.g., 'Instagram post about productivity tips'>"
 ---
 

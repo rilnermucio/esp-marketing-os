@@ -1,5 +1,5 @@
 ---
-description: Create a complete webinar (live or perpetual), strategy, structure, registration page, email sequence. Dispatches mos-launch + mos-funnel + mos-video → mos-copy + mos-email (workflow #6).
+description: "Cria webinar ao vivo ou perpétuo: estratégia de oferta, roteiro, página de inscrição e sequência de emails. Use quando pedirem webinar, aula de vendas ao vivo ou masterclass."
 argument-hint: "<topic and goal, e.g., 'webinar de vendas pra meu curso de Python'>"
 ---
 

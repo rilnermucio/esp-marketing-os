@@ -1,5 +1,5 @@
 ---
-description: Create a complete SEO-optimized article. Dispatches mos-research → mos-seo sequentially (research informs keyword strategy and outline), with optional mos-copy pass for headline/CTA refinement.
+description: "Cria artigo de blog otimizado para SEO, com pesquisa de palavra-chave, estrutura, meta title e meta description. Use quando pedirem artigo, post de blog ou conteúdo para ranquear no Google."
 argument-hint: "<topic and keyword, e.g., 'article about content marketing targeting 'content marketing strategy''>"
 ---
 

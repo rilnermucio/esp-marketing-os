@@ -1,5 +1,5 @@
 ---
-description: Auditoria multi-modal de landing page, Instagram, Meta Ad Library ou YouTube. Despacha agents em paralelo, calcula scoring ponderado e gera PDF white-label.
+description: "Auditoria rápida com score de landing page, perfil do Instagram, anúncios na Meta Ad Library ou canal do YouTube, com PDF. Use para diagnosticar um ativo. Relatório premium para cliente: /auditoria-pro."
 argument-hint: <url-ou-perfil>
 allowed-tools: Bash, WebFetch, Read, Write, Agent
 ---

@@ -1,5 +1,5 @@
 ---
-description: Cria roteiro de vídeo (YouTube long-form, Reels, TikTok, Shorts ou VSL). Para VSL completa, dispatcha workflow #9 (mos-storytelling + mos-copy + mos-video). Para outros formatos, dispatch simples ou paralelo conforme o caso.
+description: "Cria roteiro de vídeo para YouTube, Reels, TikTok, Shorts ou VSL, com hook, estrutura de retenção e CTA. Use quando pedirem roteiro de vídeo. Vídeo renderizado: /produzir-reels."
 argument-hint: "<formato e tema, ex: 'Reels 90s sobre produtividade' ou 'VSL pra curso de marketing'>"
 ---
 

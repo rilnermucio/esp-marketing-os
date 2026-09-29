@@ -1,5 +1,5 @@
 ---
-description: Publish editorial calendars, content plans, or generated content directly to your Notion workspace via Notion MCP. Routes to creation commands first when content does not yet exist.
+description: "Publica calendários, planos de conteúdo ou peças no Notion. Use quando pedirem para enviar ou organizar conteúdo no Notion."
 argument-hint: "<what to publish, e.g., 'editorial calendar for March' or 'content plan for product launch'>"
 ---
 

@@ -1,5 +1,5 @@
 ---
-description: Preset de retenção. Dispatcha mos-research + mos-analytics em paralelo, depois mos-email + mos-copy + mos-social. Foco em LTV, reativação de inativos e redução de churn. Clone primário abraham.
+description: "Campanha de retenção: reativação de inativos, redução de churn e aumento de LTV com emails, copy e social. Use quando o objetivo for manter ou reativar clientes."
 argument-hint: "<base/contexto> [--segmento=inativos-90dias|vip|risco|todos] [--desconto=...] [--clone=abraham|leila-hormozi]"
 ---
 

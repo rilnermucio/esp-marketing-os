@@ -1,5 +1,5 @@
 ---
-description: Preset de autoridade. Dispatcha mos-research + mos-brand em paralelo, depois mos-copy + mos-seo + mos-social + mos-storytelling, com mos-audio opcional. Foco em thought leadership e credibilidade. Clone primário ogilvy.
+description: "Campanha de autoridade e thought leadership: posicionamento, conteúdo de referência, SEO e storytelling. Use quando o objetivo for virar referência no nicho."
 argument-hint: "<nicho/tema> [--clone=ogilvy|abdaal] [--canal=linkedin|blog|podcast]"
 ---
 

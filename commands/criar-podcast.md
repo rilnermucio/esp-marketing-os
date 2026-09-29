@@ -1,5 +1,5 @@
 ---
-description: Create complete podcast episode scripts (solo, interview, co-hosted, storytelling, panel) with intros, segments, show notes and promo content. Dispatches mos-audio simples ou mos-research → mos-audio sequencial para entrevistas.
+description: "Cria roteiro de episódio de podcast (solo, entrevista, co-apresentado, narrativo, painel) com abertura, blocos, show notes e divulgação. Use quando pedirem podcast. Para gerar o áudio: /narrar-roteiro."
 argument-hint: "<format and topic, e.g., 'interview about productivity' or 'solo episode on marketing trends'>"
 ---
 
