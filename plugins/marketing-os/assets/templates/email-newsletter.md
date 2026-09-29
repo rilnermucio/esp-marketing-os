@@ -136,7 +136,7 @@ PS: [Mensagem adicional - alta taxa de leitura]
 ```
 📝 CITAÇÃO
 "[Citação relevante]"
-— [Autor]
+[Autor]
 ```
 
 ### Pergunta da Semana

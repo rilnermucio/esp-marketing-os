@@ -1,6 +1,6 @@
 # Mel Robbins - Exemplos de Conteúdo
 
-## Exemplo 1: Post Instagram — Abertura com Vulnerabilidade
+## Exemplo 1: Post Instagram (Abertura com Vulnerabilidade)
 
 **Tema:** Procrastinação e a Regra dos 5 Segundos
 **Formato:** Post motivacional com ferramenta
@@ -35,14 +35,14 @@ Simples demais para parecer real. Real demais para ignorar.
 
 ---
 
-## Exemplo 2: Post LinkedIn — Aplicação Profissional
+## Exemplo 2: Post LinkedIn (Aplicação Profissional)
 
 **Tema:** Coragem no ambiente de trabalho
 **Formato:** Post focado em carreira com ferramenta prática
 
 ---
 
-Você já ficou em uma reunião com a resposta certa, sabendo o que deveria falar — e não falou?
+Você já ficou em uma reunião com a resposta certa, sabendo o que deveria falar, e não falou?
 
 Eu conheço esse silêncio.
 
@@ -70,7 +70,7 @@ Você consegue fazer isso amanhã?
 
 ---
 
-## Exemplo 3: Newsletter — Sequência Sobre Mudança de Hábito
+## Exemplo 3: Newsletter (Sequência Sobre Mudança de Hábito)
 
 **Assunto:** "Você já se sentiu assim às 6 da manhã?"
 
@@ -80,7 +80,7 @@ Olá,
 
 Preciso te contar algo que nunca planejei compartilhar.
 
-Em 2009, eu estava no pior momento da minha vida. Acordava toda manhã sabendo que precisava agir — e ficava deitada, paralisada.
+Em 2009, eu estava no pior momento da minha vida. Acordava toda manhã sabendo que precisava agir, e ficava deitada, paralisada.
 
 Não era preguiça. Eu sei disso agora.
 
@@ -113,7 +113,7 @@ P.S. Responda esse email me contando o que você vai fazer amanhã de manhã. Eu
 
 ---
 
-## Exemplo 4: Roteiro de Podcast — Abertura
+## Exemplo 4: Roteiro de Podcast (Abertura)
 
 **Tema:** Por que motivação é mentira
 **Formato:** Abertura de episódio (2-3 minutos)
@@ -130,21 +130,21 @@ Não a sua. Não a minha. A ideia de que você precisa se sentir motivada para a
 
 Em 2008, eu estava deprimida, endividada e completamente paralisada. As pessoas me diziam: 'Você precisa se motivar!' E eu pensava: 'Como? Eu não consigo nem sair da cama.'
 
-A pesquisa de neurociência que aprendi depois confirmou o que eu intuía: motivação é produzida pela ação — não o contrário.
+A pesquisa de neurociência que aprendi depois confirmou o que eu intuía: motivação é produzida pela ação, não o contrário.
 
 Você age primeiro. A motivação vem depois.
 
-E hoje eu vou te mostrar exatamente como usar essa descoberta — com uma ferramenta que você pode implementar ainda hoje, que muda a relação entre você e qualquer coisa que você está evitando.
+E hoje eu vou te mostrar exatamente como usar essa descoberta, com uma ferramenta que você pode implementar ainda hoje, que muda a relação entre você e qualquer coisa que você está evitando.
 
 Antes de começar, preciso te dizer algo importante:
 
-Se você está ouvindo isso e se sentindo travado/a em alguma área da vida — eu já estive exatamente onde você está. E o outro lado existe. E começa com algo ridiculamente simples.
+Se você está ouvindo isso e se sentindo travado/a em alguma área da vida: eu já estive exatamente onde você está. E o outro lado existe. E começa com algo ridiculamente simples.
 
 Vamos começar."
 
 ---
 
-## Exemplo 5: Post Instagram — High 5 Habit
+## Exemplo 5: Post Instagram (High 5 Habit)
 
 **Tema:** Autocompaixão como ferramenta de performance
 **Formato:** Post vulnerável com ferramenta concreta
@@ -167,7 +167,7 @@ Esse diálogo interno é o que sabota antes do dia começar.
 
 O High 5 Habit não é positividade vazia.
 
-É reprogramar o diálogo matinal de crítica para encorajamento — da mesma forma que você daria encorajamento para um amigo que está tentando.
+É reprogramar o diálogo matinal de crítica para encorajamento: da mesma forma que você daria encorajamento para um amigo que está tentando.
 
 Você merece o mesmo encorajamento que dá para os outros.
 

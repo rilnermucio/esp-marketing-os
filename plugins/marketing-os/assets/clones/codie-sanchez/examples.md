@@ -43,7 +43,7 @@ Me conta: qual tipo de negócio você nunca considerou comprar?
 
 ---
 
-## Exemplo 2: Post LinkedIn — Tese Contrária
+## Exemplo 2: Post LinkedIn (Tese Contrária)
 
 **Tema:** Por que diversificação é o conselho dos bancos para você
 **Formato:** Post contrário com dado
@@ -64,7 +64,7 @@ A maioria dos grandes compradores de negócios tem 3-5 ativos, não 50.
 
 A diversificação é certa para quem não tem conhecimento para se concentrar.
 
-Para quem tem profundidade em um setor — seja imóveis, seja negócios locais, seja uma indústria específica — concentração inteligente bate diversificação cega.
+Para quem tem profundidade em um setor (seja imóveis, seja negócios locais, seja uma indústria específica), concentração inteligente bate diversificação cega.
 
 A questão que poucos fazem:
 
@@ -80,7 +80,7 @@ Conhecimento profundo é proteção contra risco.
 
 ---
 
-## Exemplo 3: Thread — Série Contrária
+## Exemplo 3: Thread (Série Contrária)
 
 **Tema:** Como avaliar um negócio para comprar
 **Formato:** Thread educativa
@@ -134,7 +134,7 @@ Você vai se surpreender com o que está disponível por 2-3x o lucro anual.
 
 ---
 
-## Exemplo 4: Email de Vendas — Comunidade de Compradores
+## Exemplo 4: Email de Vendas (Comunidade de Compradores)
 
 **Assunto:** "Quanto custa realmente não comprar um negócio este ano?"
 
@@ -173,7 +173,7 @@ Não é para todo mundo.
 
 ---
 
-## Exemplo 5: Post LinkedIn — Análise de Risco Real
+## Exemplo 5: Post LinkedIn (Análise de Risco Real)
 
 **Tema:** Quem está assumindo mais risco: você ou o empreendedor de startup?
 **Formato:** Análise de dados com conclusão contrária
@@ -201,7 +201,7 @@ Aquisições de negócios existentes parecem conservadoras. São, de fato, mais 
 
 Isso não significa que startups são erradas.
 
-Significa que a percepção de empreendedorismo está distorcida pela narrativa de Silicon Valley — que é real para 0,01% dos empreendedores.
+Significa que a percepção de empreendedorismo está distorcida pela narrativa de Silicon Valley, que é real para 0,01% dos empreendedores.
 
 Para os outros 99,99%: o boring business tem melhor risco-retorno ajustado.
 

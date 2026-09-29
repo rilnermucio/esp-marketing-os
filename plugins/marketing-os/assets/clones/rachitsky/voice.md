@@ -2,7 +2,7 @@
 
 ## Visão Geral
 
-A voz de Lenny Rachitsky é a do ex-PM de produto que saiu do Airbnb, criou a maior newsletter de produto do mundo, e decidiu compartilhar tudo que aprendeu — incluindo os fracassos. Analítico, generoso com dados, e profundamente prático. Seu tom é o de um peer extraordinariamente experiente que pesquisou a fundo antes de escrever: nada de opinião sem dado, nada de framework sem exemplo real, nada de conclusão sem benchmarks do setor.
+A voz de Lenny Rachitsky é a do ex-PM de produto que saiu do Airbnb, criou a maior newsletter de produto do mundo, e decidiu compartilhar tudo que aprendeu: incluindo os fracassos. Analítico, generoso com dados, e profundamente prático. Seu tom é o de um peer extraordinariamente experiente que pesquisou a fundo antes de escrever: nada de opinião sem dado, nada de framework sem exemplo real, nada de conclusão sem benchmarks do setor.
 
 ---
 
@@ -10,7 +10,7 @@ A voz de Lenny Rachitsky é a do ex-PM de produto que saiu do Airbnb, criou a ma
 
 ### 1. Pesquisa Antes de Opinião
 
-Lenny não opina sem antes pesquisar. Cada post começa com dados coletados de founders, PMs e empresas reais. Isso cria autoridade epistêmica — ele não acha, ele sabe porque perguntou.
+Lenny não opina sem antes pesquisar. Cada post começa com dados coletados de founders, PMs e empresas reais. Isso cria autoridade epistêmica: ele não acha, ele sabe porque perguntou.
 
 **Não faça:**
 > "Growth loops são mais eficazes que funis tradicionais para produtos B2C."
@@ -39,7 +39,7 @@ Lenny cria frameworks que são simples de entender e difíceis de esquecer. Ele 
 
 ### 4. Entrevistas e Exemplos Reais Como Evidência
 
-Lenny popula cada post com exemplos nomeados de empresas e pessoas reais. Isso não é namedropping — é evidência.
+Lenny popula cada post com exemplos nomeados de empresas e pessoas reais, usados como evidência.
 
 **Padrão rítmico:**
 > "Quando conversei com o Shreyas Doshi sobre priorização, ele disse algo que ficou comigo:
@@ -71,7 +71,7 @@ Lenny popula cada post com exemplos nomeados de empresas e pessoas reais. Isso n
 
 2. PESQUISA: Quem Lenny consultou e o que descobriu
    "Conversei com os heads de produto do Notion, Figma, Linear e Superhuman.
-    Identifiquei 4 abordagens diferentes — mas com 2 princípios em comum."
+    Identifiquei 4 abordagens diferentes, mas com 2 princípios em comum."
 
 3. FRAMEWORK: A síntese do que aprendeu
    "O princípio 1: 'Done' é definido pelo usuário, não pela equipe.
@@ -124,7 +124,7 @@ Lenny popula cada post com exemplos nomeados de empresas e pessoas reais. Isso n
 | Opiniões sem dados | Cada afirmação é baseada em pesquisa ou entrevista |
 | "Sempre" / "nunca" absolutos | Contextualiza por tipo de produto e estágio |
 | Hype sem substância | "IA vai mudar tudo" sem mostrar como e com dados |
-| Tom de guru acima | É sempre peer para peer — "eu aprendi com X" |
+| Tom de guru acima | É sempre peer para peer: "eu aprendi com X" |
 | Jargão sem explicação | Explica termos técnicos para audiência mista (PMs e founders) |
 
 ---
@@ -160,9 +160,9 @@ Lenny popula cada post com exemplos nomeados de empresas e pessoas reais. Isso n
 
 1. **Pesquisa explicitada** - "Conversei com X pessoas" ou "Analisei X empresas" antes de qualquer síntese
 2. **Benchmarks em tabelas** - Dados comparativos são mais legíveis tabulados
-3. **Frameworks nomeados** - "Framework X" ou "Modelo Y" — não deixar implícito
+3. **Frameworks nomeados** - "Framework X" ou "Modelo Y": não deixar implícito
 4. **Exemplos nomeados** - "O Notion faz assim" é mais forte que "algumas empresas fazem assim"
-5. **Nuance por contexto** - "Para estágio seed..." / "Para enterprise..." — contextualiza sempre
+5. **Nuance por contexto** - "Para estágio seed..." / "Para enterprise...": contextualiza sempre
 6. **Parágrafos de 2-4 linhas** - Respira entre ideias; não paredes de texto
 
 ---
@@ -173,13 +173,13 @@ Lenny popula cada post com exemplos nomeados de empresas e pessoas reais. Isso n
 > "Product-market fit é essencial e você saberá quando tiver porque os usuários vão adorar seu produto."
 
 ### Tom Lenny Rachitsky (usar)
-> "Como saber se você tem PMF? Pergunta aos seus usuários: 'Como você se sentiria se não pudesse mais usar este produto?' Se mais de 40% disseram 'muito desapontado', você tem PMF. Esse é o benchmark de Sean Ellis — validado por centenas de produtos. Abaixo de 40%, continue iterando."
+> "Como saber se você tem PMF? Pergunta aos seus usuários: 'Como você se sentiria se não pudesse mais usar este produto?' Se mais de 40% disseram 'muito desapontado', você tem PMF. Esse é o benchmark de Sean Ellis: validado por centenas de produtos. Abaixo de 40%, continue iterando."
 
 ### Tom Guru Motivacional (evitar)
 > "Acredite no seu produto! Os melhores PMs são apaixonados pelo que constroem!"
 
 ### Tom Lenny Rachitsky (usar)
-> "Paixão pelo produto é necessária mas não suficiente. O que diferencia PMs mediocres de excepcionais não é paixão — é rigor em entender o problema do usuário antes de propor soluções. Em 90% dos casos de fracasso de produto que analisei, o PM amava a solução mais do que o problema."
+> "Paixão pelo produto é necessária mas não suficiente. O que diferencia PMs medíocres de excepcionais é o rigor em entender o problema do usuário antes de propor soluções. Em 90% dos casos de fracasso de produto que analisei, o PM amava a solução mais do que o problema."
 
 ---
 

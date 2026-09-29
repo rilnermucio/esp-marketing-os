@@ -6,7 +6,7 @@ O princípio mais fundamental de toda a obra de Collier.
 
 ### O Conceito
 
-> "A primeira tarefa de qualquer carta de vendas é encontrar o cliente onde ele está — não onde você quer que ele esteja."
+> "A primeira tarefa de qualquer carta de vendas é encontrar o cliente onde ele está: não onde você quer que ele esteja."
 
 ### Como Identificar a Conversa
 
@@ -23,16 +23,16 @@ O princípio mais fundamental de toda a obra de Collier.
 ### Framework de Abertura
 
 ```
-OPÇÃO 1 — Frustração:
+OPÇÃO 1: Frustração:
 "Você sabe como é quando você [situação de frustração]..."
 
-OPÇÃO 2 — Desejo:
-"Existe algo que todo [persona] quer — mas que poucos conseguem..."
+OPÇÃO 2: Desejo:
+"Existe algo que todo [persona] quer, mas que poucos conseguem..."
 
-OPÇÃO 3 — Observação:
+OPÇÃO 3: Observação:
 "Tenho observado um padrão entre [persona] que [situação]..."
 
-OPÇÃO 4 — Pergunta reflexiva:
+OPÇÃO 4: Pergunta reflexiva:
 "Quantas vezes você [ação comum] e se perguntou [pensamento íntimo]?"
 ```
 
@@ -52,7 +52,7 @@ A arquitetura que Collier usava em suas cartas mais bem-sucedidas.
    → Aprofunda a dor, mostra consequências de não agir
 
 3. SONHO / VISÃO
-   → Pinta o cenário ideal — como a vida seria com o problema resolvido
+   → Pinta o cenário ideal: como a vida seria com o problema resolvido
 
 4. SOLUÇÃO (apresentação do produto)
    → Introduz o produto como a ponte entre o problema e o sonho
@@ -88,15 +88,15 @@ Collier era mestre em construir desejo progressivamente antes de apresentar o pr
 ### As 3 Camadas do Desejo
 
 ```
-CAMADA 1 — DESEJO LATENTE
+CAMADA 1: DESEJO LATENTE
 O desejo que já existe mas não está ativado.
 → Técnica: Perguntas que trazem o desejo à consciência
 
-CAMADA 2 — DESEJO AMPLIADO
+CAMADA 2: DESEJO AMPLIADO
 O desejo conectado às suas implicações maiores.
 → Técnica: Mostrar o custo de não agir; pintar o futuro sem a solução
 
-CAMADA 3 — DESEJO DIRECIONADO
+CAMADA 3: DESEJO DIRECIONADO
 O desejo apontado especificamente para o produto.
 → Técnica: Mostrar que o produto é a ponte exata entre onde o leitor está e onde quer estar
 ```
@@ -128,7 +128,7 @@ Collier tratava objeções como oportunidades de profundar a conexão com o leit
 
 ## 5. O Fechamento Emocional
 
-Collier acreditava que o fechamento deveria trazer o leitor de volta ao sonho — não ao produto.
+Collier acreditava que o fechamento deveria trazer o leitor de volta ao sonho: não ao produto.
 
 ### Estrutura do Fechamento
 

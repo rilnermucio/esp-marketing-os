@@ -65,7 +65,7 @@ Padrão de referência: clones já existentes em ${CLAUDE_PLUGIN_ROOT}/assets/cl
 
 REGRAS:
 - Tudo em PT-BR com acentuação correta
-- Aplicar quality gates globais (sem '—', sem 'brutal', sem CAPS, sem aspas em falas, máx 1-2 emojis)
+- Aplicar quality gates globais (sem `—`, sem 'brutal', sem CAPS, sem aspas em falas, máx 1-2 emojis)
 - Apenas info do research, se algo está [VERIFICAR], suavizar ou omitir
 - Salvar via Write em: ${CLAUDE_PLUGIN_ROOT}/assets/clones/{slug}/profile.md, voice.md, frameworks.md, examples.md
 - Total alvo: ~700 linhas nos 4 arquivos somados

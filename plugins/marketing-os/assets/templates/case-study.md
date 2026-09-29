@@ -54,7 +54,7 @@ OS RESULTADOS
 • [Resultado 3]: [número] → [número] ([X]% melhoria)
 
 "[Citação impactante do cliente sobre a experiência]"
-— [Nome], [Cargo], [Empresa]
+[Nome], [Cargo], [Empresa]
 ```
 
 ---
@@ -103,7 +103,7 @@ A equipe já havia tentado [soluções anteriores], mas [por que não funcionou]
 [Por que era urgente resolver / consequências de não agir]
 
 "[Citação do cliente descrevendo o problema em suas palavras]"
-— [Nome], [Cargo]
+[Nome], [Cargo]
 ```
 
 ---
@@ -144,7 +144,7 @@ O projeto foi executado em [período], seguindo as etapas:
 • Semana 9+: [Fase de otimização/manutenção]
 
 "[Citação do cliente sobre a experiência de implementação]"
-— [Nome], [Cargo]
+[Nome], [Cargo]
 ```
 
 ---

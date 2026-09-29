@@ -7,11 +7,11 @@ A regra mais importante de Cole para qualquer peça de conteúdo: 1 problema do 
 
 ### Como funciona
 ```
-ANTES DE ESCREVER — A verificação:
+ANTES DE ESCREVER: A verificação:
 ├── Qual é o 1 problema que este texto resolve?
 │   (Se você não sabe, o texto não está pronto)
 ├── Qual é a 1 solução que você está oferecendo?
-│   (Não 5 soluções — 1, executável)
+│   (Não 5 soluções: 1, executável)
 └── Qual é a 1 ação que o leitor deve tomar após ler?
     (Específica e imediata, não "reflita sobre isso")
 
@@ -40,31 +40,31 @@ Cole identificou 5 categorias de conteúdo que performam consistentemente, indep
 
 ### Como funciona
 ```
-TIPO 1 — O Ensaio de Opinião:
+TIPO 1: O Ensaio de Opinião:
 ├── Formato: "Por que [crença contrária ao senso comum]"
 ├── Estrutura: Tese → 3 argumentos → Contra-argumento → Síntese
 ├── Exemplo: "Por que storytelling não é a habilidade mais importante de um escritor"
 └── Quando usar: Para estabelecer perspectiva e autoridade
 
-TIPO 2 — A Lista Tática:
+TIPO 2: A Lista Tática:
 ├── Formato: "X coisas que [persona] deveria fazer para [resultado]"
 ├── Estrutura: Intro do problema → Lista numerada com 1 frase por item → CTA
 ├── Exemplo: "7 erros que destroem headlines antes do segundo parágrafo"
 └── Quando usar: Para SEO, compartilhamento e valor imediato
 
-TIPO 3 — A Lição de Erro:
+TIPO 3: A Lição de Erro:
 ├── Formato: "O erro que cometi tentando [objetivo] e o que aprendi"
 ├── Estrutura: O erro → A consequência real → O que funciona em vez disso
 ├── Exemplo: "Escrevi 500 posts antes de descobrir que estava escolhendo os temas errados"
 └── Quando usar: Para criar identificação e construir confiança
 
-TIPO 4 — O Antes/Depois:
+TIPO 4: O Antes/Depois:
 ├── Formato: Mostra a transformação com contraste claro
 ├── Estrutura: Antes (problema visível) → Depois (solução visível) → Como chegar lá
 ├── Exemplo: Reescreva o mesmo parágrafo antes e depois de aplicar o framework
 └── Quando usar: Para demonstrar valor de forma instantânea
 
-TIPO 5 — A Pergunta Provocadora:
+TIPO 5: A Pergunta Provocadora:
 ├── Formato: Uma questão que força reconsideração de algo assumido
 ├── Estrutura: Pergunta → Contexto que a torna urgente → Implicação
 ├── Exemplo: "Se cada post que você escreveu sumisse hoje, o que você perderia?"
@@ -120,15 +120,15 @@ Cole argumenta que criar conteúdo sem distribuição é tosse numa floresta. O 
 
 ### Como funciona
 ```
-CAMADA 1 — Criação Original:
+CAMADA 1: Criação Original:
 └── 1 ensaio longo por semana (newsletter/blog) = Conteúdo mãe
 
-CAMADA 2 — Fragmentação:
+CAMADA 2: Fragmentação:
 ├── Do ensaio longo → 5 posts curtos (1 insight por post)
 ├── Do ensaio longo → 1 thread (sequência linear dos pontos principais)
 └── Dos melhores posts → Variações testadas
 
-CAMADA 3 — Reutilização:
+CAMADA 3: Reutilização:
 ├── Posts que performaram bem → Repostar 90 dias depois (nova audiência não viu)
 ├── Posts antigos + novo contexto → "Escrevi isso X meses atrás. Ainda acredito porque..."
 └── Série de posts relacionados → Compila em um ensaio longo
@@ -151,23 +151,23 @@ Inspirado por Category Pirates (que co-fundou), Cole ensina como criar uma nova 
 
 ### Como funciona
 ```
-PASSO 1 — Diagnóstico do Problema de Categoria:
+PASSO 1: Diagnóstico do Problema de Categoria:
 ├── Em qual categoria existente você está tentando competir?
 ├── Quem são os incumbents dessa categoria?
 └── Você pode ser top 3 nessa categoria? Se não, continue.
 
-PASSO 2 — Identificação do Problema de Diferente Ordem:
+PASSO 2: Identificação do Problema de Diferente Ordem:
 ├── O que o incumbente maximiza que você não maximiza?
 ├── O que você maximiza que o incumbente ignora?
 └── Existe um grupo de pessoas que prefere o que você maximiza?
 
-PASSO 3 — Nomeação da Nova Categoria:
+PASSO 3: Nomeação da Nova Categoria:
 ├── A categoria deve ser: [Adjetivo diferenciador] + [Categoria existente]
 ├── Exemplo: "Ensaio Atômico" (vs. "post de blog")
 ├── O nome da categoria educa sobre a diferença
 └── Testar: Uma pessoa que não te conhece entende a diferença?
 
-PASSO 4 — Educação do Mercado:
+PASSO 4: Educação do Mercado:
 ├── Crie conteúdo que explica POR QUE a nova categoria existe
 ├── Mostre o problema que a categoria antiga tem
 ├── Demonstre como a nova categoria resolve diferente

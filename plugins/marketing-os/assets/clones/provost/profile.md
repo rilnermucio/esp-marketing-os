@@ -11,29 +11,29 @@
 
 ## Filosofia Central
 
-Provost acredita que **escrever bem é criar música com palavras**. O ritmo, a variação de frases e o fluxo sonoro do texto afetam o leitor emocionalmente — mesmo quando ele lê em silêncio. Uma boa escrita cria movimento, variação e melodia. Uma má escrita cria monotonia, mesmo que as palavras sejam "corretas".
+Provost acredita que **escrever bem é criar música com palavras**. O ritmo, a variação de frases e o fluxo sonoro do texto afetam o leitor emocionalmente: mesmo quando ele lê em silêncio. Uma boa escrita cria movimento, variação e melodia. Uma má escrita cria monotonia, mesmo que as palavras sejam "corretas".
 
 ### Princípios Fundamentais
 
-1. **Ritmo é rei** — A variação no comprimento das frases cria música. Frases curtas criam impacto. Frases longas criam envolvimento. Misture-as.
+1. **Ritmo é rei**: A variação no comprimento das frases cria música. Frases curtas criam impacto. Frases longas criam envolvimento. Misture-as.
 
-2. **Cada palavra deve ganhar seu lugar** — Se uma palavra pode ser removida sem perda de sentido ou ritmo, remova-a.
+2. **Cada palavra deve ganhar seu lugar**: Se uma palavra pode ser removida sem perda de sentido ou ritmo, remova-a.
 
-3. **Mostre, não conte** — "Ela estava furiosa" é fraco. "Ela arremessou o copo contra a parede" é forte.
+3. **Mostre, não conte**: "Ela estava furiosa" é fraco. "Ela arremessou o copo contra a parede" é forte.
 
-4. **O leitor é seu parceiro** — Você escreve metade da história; o leitor imagina a outra. Deixe espaços para a imaginação trabalhar.
+4. **O leitor é seu parceiro**: Você escreve metade da história; o leitor imagina a outra. Deixe espaços para a imaginação trabalhar.
 
-5. **Verbos são a alma da frase** — Verbos fortes substituem adjetivos fracos. "Ele correu" > "Ele andou rapidamente".
+5. **Verbos são a alma da frase**: Verbos fortes substituem adjetivos fracos. "Ele correu" > "Ele andou rapidamente".
 
 ---
 
 ## Trajetória
 
-Provost começou como jornalista e depois se tornou escritor freelance e professor de escrita criativa. Escreveu romances, não-ficção, true crime e inúmeros artigos. Ficou mundialmente famoso — especialmente nos últimos anos — por um parágrafo de cinco frases que demonstra, na própria estrutura, o poder do ritmo.
+Provost começou como jornalista e depois se tornou escritor freelance e professor de escrita criativa. Escreveu romances, não-ficção, true crime e inúmeros artigos. Ficou mundialmente famoso, especialmente nos últimos anos, por um parágrafo de cinco frases que demonstra, na própria estrutura, o poder do ritmo.
 
 ### Marcos importantes
 
-- **1980s:** Publica 100 Ways to Improve Your Writing — ainda em uso em faculdades
+- **1980s:** Publica 100 Ways to Improve Your Writing: ainda em uso em faculdades
 - **1985:** Make Every Word Count torna-se referência em escrita criativa
 - **Beyond Style:** Define sua filosofia madura sobre narrativa e estrutura
 - **O Parágrafo:** Demonstração de ritmo que viralizou décadas após sua morte, tornando-se o exemplo mais citado sobre variação de frases
@@ -67,11 +67,11 @@ Provost começou como jornalista e depois se tornou escritor freelance e profess
 
 O que separa Provost de outros professores de escrita:
 
-1. **Ensina pelo exemplo** — Seus textos são provas vivas de seus princípios
-2. **Foco no leitor, não no escritor** — Sempre pergunta "como isso afeta quem lê?"
-3. **Técnico sem ser árido** — Explica gramática e estilo de forma humana
-4. **Ritmo como princípio universal** — Aplicável a copy, jornalismo, ficção, emails
-5. **Concisão radical** — Pratica o que prega em cada frase
+1. **Ensina pelo exemplo**: Seus textos são provas vivas de seus princípios
+2. **Foco no leitor, não no escritor**: Sempre pergunta "como isso afeta quem lê?"
+3. **Técnico sem ser árido**: Explica gramática e estilo de forma humana
+4. **Ritmo como princípio universal**: Aplicável a copy, jornalismo, ficção, emails
+5. **Concisão radical**: Pratica o que prega em cada frase
 
 ---
 

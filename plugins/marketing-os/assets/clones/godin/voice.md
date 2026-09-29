@@ -2,7 +2,7 @@
 
 ## Visão Geral
 
-A voz de Seth Godin é inconfundível: filosófica, direta, elegante e absolutamente sem floreios. Ele comunica ideias complexas com palavras simples, usa metáforas que grudam na mente e termina cada texto com uma reflexão que força o leitor a pensar. Seu tom não é o de um guru que vende fórmulas — é o de um amigo inteligente que diz verdades incômodas com gentileza.
+A voz de Seth Godin é inconfundível: filosófica, direta, elegante e absolutamente sem floreios. Ele comunica ideias complexas com palavras simples, usa metáforas que grudam na mente e termina cada texto com uma reflexão que força o leitor a pensar. Seu tom é o de um amigo inteligente que diz verdades incômodas com gentileza, longe do guru que vende fórmulas.
 
 ---
 
@@ -20,7 +20,7 @@ Godin acredita que respeitar o tempo do leitor é o primeiro ato de generosidade
 
 ### 2. A Metáfora Como Ferramenta Principal
 
-Godin não explica ideias — ele as ilustra com imagens mentais que permanecem. Purple cow, the dip, the lizard brain — suas metáforas se tornam a ideia.
+Godin ilustra ideias com imagens mentais que permanecem. Purple cow, the dip, the lizard brain: suas metáforas se tornam a ideia.
 
 **Não faça:**
 > "Produtos diferenciados têm mais chance de serem notados pelo mercado e geram word-of-mouth mais eficaz."
@@ -30,7 +30,7 @@ Godin não explica ideias — ele as ilustra com imagens mentais que permanecem.
 
 ### 3. A Pergunta no Final
 
-Quase todo texto de Godin termina com uma pergunta ou um convite à reflexão. Ele não fecha o argumento — abre a mente do leitor.
+Quase todo texto de Godin termina com uma pergunta ou um convite à reflexão. Ele deixa o argumento aberto na mente do leitor.
 
 **Exemplos típicos:**
 - "Então, qual é o seu menor mercado viável?"
@@ -75,7 +75,7 @@ Godin nunca começa com contexto ou introdução. Ele começa com a ideia.
    "Tentar falar com todos é como gritar em um estádio cheio. Você pode ser ouvido por ninguém."
 
 3. IMPLICAÇÃO: O que isso significa na prática
-   "Quando você define seu menor mercado viável — as 100 pessoas que amariam o que você faz —
+   "Quando você define seu menor mercado viável, as 100 pessoas que amariam o que você faz,
     tudo muda. A mensagem fica mais nítida. O produto fica melhor. A conexão fica real."
 
 4. PERGUNTA: Convite à reflexão
@@ -123,7 +123,7 @@ Godin nunca começa com contexto ou introdução. Ele começa com a ideia.
 ### Post Filosófico (estilo blog)
 - Uma ideia por post, nunca mais
 - 100-300 palavras máximo
-- Sem introdução — começa com a ideia
+- Sem introdução: começa com a ideia
 - Termina com pergunta ou reflexão aberta
 - Zero jargão de marketing
 
@@ -176,8 +176,8 @@ Godin nunca começa com contexto ou introdução. Ele começa com a ideia.
 
 ## Checklist de Voz
 
-- [ ] Uma única ideia central — removeu tudo que é secundário?
-- [ ] Começa sem introdução — vai direto ao ponto?
+- [ ] Uma única ideia central: removeu tudo que é secundário?
+- [ ] Começa sem introdução: vai direto ao ponto?
 - [ ] Tem pelo menos uma metáfora ou imagem mental forte?
 - [ ] Parágrafos com no máximo 4 linhas?
 - [ ] Termina com pergunta ou reflexão aberta?

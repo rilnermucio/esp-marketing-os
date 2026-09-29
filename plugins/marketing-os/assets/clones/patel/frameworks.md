@@ -37,7 +37,7 @@ Método para criar conteúdo que supera o da concorrência e atrai backlinks de 
 
 ## 2. SEO Everywhere (Otimização para Toda Parte)
 
-Framework moderno de Patel que expande o conceito de SEO além do Google. A premissa: SEO não é mais só "Search Engine Optimization" — é "Search Everywhere Optimization". As pessoas buscam informações no Google, YouTube, LinkedIn, Instagram, TikTok e ferramentas de IA.
+Framework moderno de Patel que expande o conceito de SEO além do Google. A premissa: SEO passou de "Search Engine Optimization" para "Search Everywhere Optimization". As pessoas buscam informações no Google, YouTube, LinkedIn, Instagram, TikTok e ferramentas de IA.
 
 ### Componentes
 
@@ -154,11 +154,11 @@ Método sistemático que Patel utiliza (e ensina no Ubersuggest) para analisar c
 
 **Passo 5: Monitore e ajuste trimestralmente**
 - Repita a análise a cada 3 meses
-- O cenário competitivo muda — sua estratégia também deve mudar
+- O cenário competitivo muda: sua estratégia também deve mudar
 
 ### Exemplo de Copy Usando Este Framework
 
-> Sabe por que seu concorrente aparece antes de você no Google? Provavelmente não é porque o conteúdo dele é melhor. É porque ele está ranqueando para palavras-chave que você nem sabe que existem. Abra o Ubersuggest, digite o domínio do concorrente e veja: quais palavras-chave geram tráfego para ele? Quantos backlinks ele tem? Você pode ter as mesmas respostas em 5 minutos — e começar a roubar esse tráfego com conteúdo melhor.
+> Sabe por que seu concorrente aparece antes de você no Google? Provavelmente não é porque o conteúdo dele é melhor. É porque ele está ranqueando para palavras-chave que você nem sabe que existem. Abra o Ubersuggest, digite o domínio do concorrente e veja: quais palavras-chave geram tráfego para ele? Quantos backlinks ele tem? Você pode ter as mesmas respostas em 5 minutos, e começar a roubar esse tráfego com conteúdo melhor.
 
 ---
 
@@ -197,7 +197,7 @@ Metodologia de Patel para transformar visitantes do blog em leads e depois em cl
 
 ### Exemplo de Copy Usando Este Framework
 
-> Cada visitante do seu blog é uma oportunidade que você provavelmente está desperdiçando. Pense nisso: se você recebe 10.000 visitas por mês e não captura nenhum email, esses 10.000 visitantes vão embora e provavelmente nunca mais voltam. Agora, se você adiciona um checklist gratuito relevante ao artigo que eles estão lendo — como um "Template de Calendário Editorial" num artigo sobre content marketing — você pode converter 3-5% dessas visitas em leads. São 300 a 500 novos leads por mês. De graça.
+> Cada visitante do seu blog é uma oportunidade que você provavelmente está desperdiçando. Pense nisso: se você recebe 10.000 visitas por mês e não captura nenhum email, esses 10.000 visitantes vão embora e provavelmente nunca mais voltam. Agora, se você adiciona um checklist gratuito relevante ao artigo que eles estão lendo, como um "Template de Calendário Editorial" num artigo sobre content marketing, você pode converter 3-5% dessas visitas em leads. São 300 a 500 novos leads por mês. De graça.
 
 ---
 

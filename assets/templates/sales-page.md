@@ -167,17 +167,17 @@ Veja o que nossos alunos/clientes estão dizendo:
 
 [DEPOIMENTO 1 - RESULTADO]
 "[Citação do cliente com resultado específico]"
-— [Nome], [Profissão/Cidade]
+[Nome], [Profissão/Cidade]
 [Foto do cliente]
 
 [DEPOIMENTO 2 - TRANSFORMAÇÃO]
 "[Citação mostrando antes x depois]"
-— [Nome], [Profissão/Cidade]
+[Nome], [Profissão/Cidade]
 [Foto do cliente]
 
 [DEPOIMENTO 3 - OBJEÇÃO QUEBRADA]
 "[Citação que endereça uma objeção comum]"
-— [Nome], [Profissão/Cidade]
+[Nome], [Profissão/Cidade]
 [Foto do cliente]
 
 [NÚMEROS DE PROVA SOCIAL]

@@ -12,25 +12,25 @@
 
 ## Filosofia Central
 
-Jay Abraham acredita que todo negócio tem **ativos ocultos inexplorados** — em seus clientes, produtos, relacionamentos e processos — que podem ser alavancados imediatamente sem novos investimentos. Sua abordagem é baseada em **maximizar o valor de cada ativo existente** antes de buscar novos recursos.
+Jay Abraham acredita que todo negócio tem **ativos ocultos inexplorados** (em seus clientes, produtos, relacionamentos e processos) que podem ser alavancados imediatamente sem novos investimentos. Sua abordagem é baseada em **maximizar o valor de cada ativo existente** antes de buscar novos recursos.
 
 ### Princípios Fundamentais
 
-1. **Os Três Pilares de Crescimento** — Todo negócio só pode crescer de três formas: (1) aumentar o número de clientes, (2) aumentar a frequência de compra, (3) aumentar o ticket médio. Toda estratégia deve focar em um ou mais desses pilares simultaneamente.
+1. **Os Três Pilares de Crescimento** (Todo negócio só pode crescer de três formas: (1) aumentar o número de clientes, (2) aumentar a frequência de compra, (3) aumentar o ticket médio). Toda estratégia deve focar em um ou mais desses pilares simultaneamente.
 
-2. **Estratégia de Preeminência** — Posicionar-se não como vendedor, mas como o conselheiro de confiança do cliente. Cuidar genuinamente do sucesso do cliente mais do que da própria venda.
+2. **Estratégia de Preeminência**: Posicionar-se não como vendedor, mas como o conselheiro de confiança do cliente. Cuidar genuinamente do sucesso do cliente mais do que da própria venda.
 
-3. **Barreira de Entrada** — Fazer com que a oferta seja tão superior que concorrentes não consigam igualar. Criar vantagens que se compõem ao longo do tempo.
+3. **Barreira de Entrada**: Fazer com que a oferta seja tão superior que concorrentes não consigam igualar. Criar vantagens que se compõem ao longo do tempo.
 
-4. **Maximização do LTV** — Nunca olhar apenas para o valor da primeira venda. Sempre calcular e maximizar o Lifetime Value do cliente.
+4. **Maximização do LTV**: Nunca olhar apenas para o valor da primeira venda. Sempre calcular e maximizar o Lifetime Value do cliente.
 
-5. **Alavancagem** — Identificar e aproveitar ativos subutilizados: listas de clientes inativos, produtos dormentes, relacionamentos não monetizados, capacidade ociosa.
+5. **Alavancagem** (Identificar e aproveitar ativos subutilizados: listas de clientes inativos, produtos dormentes, relacionamentos não monetizados, capacidade ociosa).
 
 ---
 
 ## Trajetória
 
-Jay Abraham construiu sua reputação trabalhando com mais de 10.000 empresas em mais de 1.000 nichos diferentes, de farmacêuticas a imobiliárias, de lojas físicas a tecnologia. Sua experiência transversal é o que diferencia sua abordagem — ele vê padrões que especialistas de nicho não conseguem ver.
+Jay Abraham construiu sua reputação trabalhando com mais de 10.000 empresas em mais de 1.000 nichos diferentes, de farmacêuticas a imobiliárias, de lojas físicas a tecnologia. Sua experiência transversal é o que diferencia sua abordagem: ele vê padrões que especialistas de nicho não conseguem ver.
 
 ### Marcos importantes
 
@@ -70,11 +70,11 @@ Jay Abraham construiu sua reputação trabalhando com mais de 10.000 empresas em
 
 O que separa Abraham de outros consultores:
 
-1. **Visão cross-industry** — Vê padrões em setores completamente diferentes e os transfere
-2. **Foco em ativos existentes** — Não precisa de novos investimentos, apenas de melhor uso do que já existe
-3. **Matemática de negócios** — Sempre quantifica o impacto em termos de LTV, CAC, margens
-4. **Relacionamento genuíno** — Acredita que o cliente deve prosperar para você prosperar
-5. **Frameworks atemporais** — Seus princípios funcionam independente da tecnologia ou tendência
+1. **Visão cross-industry**: Vê padrões em setores completamente diferentes e os transfere
+2. **Foco em ativos existentes**: Não precisa de novos investimentos, apenas de melhor uso do que já existe
+3. **Matemática de negócios**: Sempre quantifica o impacto em termos de LTV, CAC, margens
+4. **Relacionamento genuíno**: Acredita que o cliente deve prosperar para você prosperar
+5. **Frameworks atemporais**: Seus princípios funcionam independente da tecnologia ou tendência
 
 ---
 

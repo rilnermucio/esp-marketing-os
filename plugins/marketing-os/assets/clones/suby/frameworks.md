@@ -1,12 +1,12 @@
 # Sabri Suby - Frameworks Principais
 
-## Framework 1: Sell Like Crazy — O Sistema de 8 Etapas
+## Framework 1: Sell Like Crazy (O Sistema de 8 Etapas)
 
 O framework central de Suby para geração previsível de clientes:
 
 ```
 ┌─────────────────────────────────────────────────┐
-│           SELL LIKE CRAZY — 8 ETAPAS            │
+│           SELL LIKE CRAZY: 8 ETAPAS            │
 ├─────────────────────────────────────────────────┤
 │                                                 │
 │  1. DEFINIR O CLIENTE IDEAL (Avatar)            │
@@ -73,7 +73,7 @@ pedaço do mercado contra todos os seus concorrentes.
 Como criar conteúdo para cada estágio de consciência e nutrir prospects ao longo do tempo:
 
 ```
-HALO STRATEGY — CRIAÇÃO DE CONTEÚDO:
+HALO STRATEGY: CRIAÇÃO DE CONTEÚDO:
 
 CAMADA EXTERIOR (60% inconsciente):
   Conteúdo: Posts de problema (sem mencionar produto)
@@ -109,43 +109,43 @@ Suby tem o framework de VSL mais testado do mercado australiano:
 ```
 ESTRUTURA DO VALUE VIDEO:
 
-00:00-00:30 — GANCHO IRRESISTÍVEL
+00:00-00:30: GANCHO IRRESISTÍVEL
   "Se você [avatar] quer [resultado], mas está
   lutando com [problema], então este vídeo vai
   mudar tudo para você."
 
-00:30-02:00 — IDENTIFICAÇÃO DO PROBLEMA
+00:30-02:00: IDENTIFICAÇÃO DO PROBLEMA
   Descreve o problema com mais detalhe do que
   o próprio cliente saberia. Isso cria rapport.
 
-02:00-04:00 — AGRAVAÇÃO
+02:00-04:00: AGRAVAÇÃO
   O que acontece se o problema não for resolvido.
   Custos financeiros, emocionais, oportunidades perdidas.
 
-04:00-06:00 — EPIFANIA / NOVA OPORTUNIDADE
+04:00-06:00: EPIFANIA / NOVA OPORTUNIDADE
   "E então eu descobri que..."
   A virada que muda tudo.
 
-06:00-10:00 — APRESENTAÇÃO DA SOLUÇÃO
+06:00-10:00: APRESENTAÇÃO DA SOLUÇÃO
   Como funciona. Por que é diferente.
   Framework nomeado.
 
-10:00-15:00 — PROVA SOCIAL EM CASCATA
+10:00-15:00: PROVA SOCIAL EM CASCATA
   3-5 casos de sucesso específicos com números.
 
-15:00-17:00 — STACK DE VALOR
+15:00-17:00: STACK DE VALOR
   Tudo que está incluído + valor individual de cada item.
 
-17:00-18:00 — REVELAÇÃO DE PREÇO
+17:00-18:00: REVELAÇÃO DE PREÇO
   O preço total comparado ao stack de valor.
 
-18:00-20:00 — GARANTIA
+18:00-20:00: GARANTIA
   Remove o risco completamente.
 
-20:00-21:00 — URGÊNCIA/ESCASSEZ REAL
+20:00-21:00: URGÊNCIA/ESCASSEZ REAL
   Razão concreta para agir agora.
 
-21:00-22:00 — CTA MÚLTIPLOS
+21:00-22:00: CTA MÚLTIPLOS
   "Clique no botão abaixo, preencha o formulário..."
 ```
 
@@ -156,7 +156,7 @@ ESTRUTURA DO VALUE VIDEO:
 O método de 3 etapas de Suby para geração previsível de clientes:
 
 ```
-H — HORDE (Atrair)
+H: HORDE (Atrair)
   Atrair uma quantidade massiva de prospects qualificados
   usando paid traffic + conteúdo de consciência
 
@@ -164,7 +164,7 @@ H — HORDE (Atrair)
   MÉTRICA: CPL (Custo por Lead)
   META: Volume + qualidade (não apenas volume)
 
-D — DIRECT (Direcionar)
+D: DIRECT (Direcionar)
   Guiar prospects por um processo específico de nutrição
   que aumenta a temperatura (interesse + confiança)
 
@@ -172,7 +172,7 @@ D — DIRECT (Direcionar)
   MÉTRICA: Taxa de engajamento, abertura, clique
   META: Mover de "frio" para "quente"
 
-C — CONVERT (Converter)
+C: CONVERT (Converter)
   Converter prospects quentes em clientes pagantes
   com oferta irresistível e processo de vendas otimizado
 

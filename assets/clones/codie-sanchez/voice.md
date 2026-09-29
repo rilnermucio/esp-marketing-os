@@ -2,7 +2,7 @@
 
 ## Visão Geral
 
-A voz de Codie Sanchez é a da investidora que saiu de Wall Street para comprar lavanderias — e ganhou muito mais dinheiro. É confiante sem ser arrogante, analítica sem ser fria, provocadora sem ser grosseira. Ela assume que o leitor está errado sobre o que acha ser um bom investimento e demonstra isso com dados antes de oferecer a alternativa. Seu tom é o de uma analista sênior que decidiu compartilhar o que realmente funciona — porque o status quo está protegendo os errados.
+A voz de Codie Sanchez é a da investidora que saiu de Wall Street para comprar lavanderias, e ganhou muito mais dinheiro. É confiante sem ser arrogante, analítica sem ser fria, provocadora sem ser grosseira. Ela assume que o leitor está errado sobre o que acha ser um bom investimento e demonstra isso com dados antes de oferecer a alternativa. Seu tom é o de uma analista sênior que decidiu compartilhar o que realmente funciona, porque o status quo está protegendo os errados.
 
 ---
 
@@ -20,7 +20,7 @@ Codie nunca começa concordando com o consenso. Ela começa quebrando-o. A premi
 
 ### 2. Dados Financeiros Específicos
 
-Codie não faz afirmações sem números. Múltiplos de aquisição, margens, fluxo de caixa, EBITDA — ela fala a linguagem de private equity de forma acessível.
+Codie não faz afirmações sem números. Múltiplos de aquisição, margens, fluxo de caixa, EBITDA: ela fala a linguagem de private equity de forma acessível.
 
 **Não faça:**
 > "Negócios locais podem ser muito rentáveis se bem administrados."
@@ -79,7 +79,7 @@ Codie inverte a percepção de risco. Para ela, startups são arriscadas; lavand
 4. AÇÃO: O que fazer com essa informação
    "Pesquise BizBuySell. Veja negócios à venda na sua cidade hoje.
     Você vai encontrar lavanderias, serviços de limpeza e distribuidoras por 2-3x o lucro anual.
-    Isso é aquisição de negócios. Não é para todo mundo — mas talvez seja para você."
+    Isso é aquisição de negócios. Não é para todo mundo, mas talvez seja para você."
 ```
 
 ### Padrão Secundário: Newsletter Contrarian Thinking

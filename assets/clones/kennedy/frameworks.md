@@ -51,43 +51,43 @@ Kennedy tem o framework mais respeitado para sales letters longas:
 ```
 ESTRUTURA THE ULTIMATE SALES LETTER:
 
-PARTE 1 — HEADLINE
+PARTE 1: HEADLINE
   [Benefício + Especificidade + Audiência Definida]
 
-PARTE 2 — IDENTIFICAÇÃO DO PROBLEMA
+PARTE 2: IDENTIFICAÇÃO DO PROBLEMA
   [Agita a dor sem solução ainda]
 
-PARTE 3 — AGRAVAMENTO DO PROBLEMA
+PARTE 3: AGRAVAMENTO DO PROBLEMA
   [Por que a situação fica pior sem ação]
 
-PARTE 4 — PROMESSA DE SOLUÇÃO
-  [A solução existe — mas ainda não revelada]
+PARTE 4: PROMESSA DE SOLUÇÃO
+  [A solução existe, mas ainda não revelada]
 
-PARTE 5 — CREDIBILIDADE
+PARTE 5: CREDIBILIDADE
   [Por que você é a pessoa certa para resolver]
 
-PARTE 6 — A SOLUÇÃO DETALHADA
+PARTE 6: A SOLUÇÃO DETALHADA
   [O que é + como funciona + por que funciona]
 
-PARTE 7 — PROVA E TESTEMUNHOS
+PARTE 7: PROVA E TESTEMUNHOS
   [Resultados específicos de pessoas reais]
 
-PARTE 8 — APRESENTAÇÃO DA OFERTA
+PARTE 8: APRESENTAÇÃO DA OFERTA
   [O que está incluído + stack de valor]
 
-PARTE 9 — PREÇO E JUSTIFICATIVA
+PARTE 9: PREÇO E JUSTIFICATIVA
   [O valor vs. o custo do problema]
 
-PARTE 10 — GARANTIA
+PARTE 10: GARANTIA
   [Elimina o risco da decisão]
 
-PARTE 11 — URGÊNCIA/ESCASSEZ
+PARTE 11: URGÊNCIA/ESCASSEZ
   [Razão real para agir agora]
 
-PARTE 12 — CTA EXPLÍCITO
+PARTE 12: CTA EXPLÍCITO
   [Instrução precisa de como agir]
 
-PARTE 13 — P.S.
+PARTE 13: P.S.
   [Segundo ponto mais importante + CTA]
 ```
 
@@ -124,7 +124,7 @@ ATRAIR os primeiros e AFASTAR os segundos.
 | Mecanismo | Como Funciona |
 |-----------|--------------|
 | **Barreira de entrada** | Processo de qualificação que afasta clientes errados |
-| **Preço premium** | Filtro natural — clientes de baixo valor somem |
+| **Preço premium** | Filtro natural: clientes de baixo valor somem |
 | **Linguagem específica** | Falar a língua do cliente ideal afasta os demais |
 | **Garantia inversa** | "Se você é X, não quero que compre" |
 
@@ -164,7 +164,7 @@ OS 8 COMPONENTES OBRIGATÓRIOS:
 
 ---
 
-## Framework 5: Multiplying Marketing — O Multiplicador de Resultados
+## Framework 5: Multiplying Marketing (O Multiplicador de Resultados)
 
 Kennedy ensina que pequenas melhorias em múltiplos pontos criam resultados multiplicados:
 

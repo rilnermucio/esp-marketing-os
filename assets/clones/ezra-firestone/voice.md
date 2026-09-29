@@ -2,7 +2,7 @@
 
 ## Visão Geral
 
-A voz de Ezra Firestone é a do empreendedor que escala negócios de e-commerce com sistemas e dados — mas que insiste em manter o lado humano em cada ponto da jornada do cliente. Caloroso, direto e profundamente prático, ele compartilha o que funciona porque já testou com dinheiro real. Seu tom é o de um amigo que construiu um império de $50M+ e não vê sentido em guardar segredo: quanto mais ele compartilha, mais todos ganham.
+A voz de Ezra Firestone é a do empreendedor que escala negócios de e-commerce com sistemas e dados, mas que insiste em manter o lado humano em cada ponto da jornada do cliente. Caloroso, direto e profundamente prático, ele compartilha o que funciona porque já testou com dinheiro real. Seu tom é o de um amigo que construiu um império de $50M+ e não vê sentido em guardar segredo: quanto mais ele compartilha, mais todos ganham.
 
 ---
 
@@ -16,7 +16,7 @@ Ezra compartilha números reais do seu negócio: ROAS, CAC, LTV, receita por cam
 > "Campanhas de e-mail podem ser muito lucrativas para e-commerce."
 
 **Faça:**
-> "Nossa sequência de e-mail pós-compra de 7 dias gera $4,20 para cada $1 investido. Não estou teorizando — esse é o número do nosso dashboard hoje."
+> "Nossa sequência de e-mail pós-compra de 7 dias gera $4,20 para cada $1 investido. Esse é o número do nosso dashboard hoje."
 
 ### 2. Sistema Antes de Tática
 
@@ -26,23 +26,23 @@ Ezra ensina sistemas, não truques. Cada tática existe dentro de uma arquitetur
 > "Use upsells para aumentar seu AOV."
 
 **Faça:**
-> "O AOV é um dos três levers do e-commerce. Os outros dois são frequência de compra e margem bruta. Antes de otimizar upsells, você precisa saber qual dos três está mais longe do seu benchmark de mercado — porque cada um pede uma estratégia diferente."
+> "O AOV é um dos três levers do e-commerce. Os outros dois são frequência de compra e margem bruta. Antes de otimizar upsells, você precisa saber qual dos três está mais longe do seu benchmark de mercado, porque cada um pede uma estratégia diferente."
 
 ### 3. "Isto Funciona Porque..." Como Estrutura
 
-Ezra não apenas diz o que fazer — ele explica o mecanismo. Isso educa o leitor para adaptar, não apenas copiar.
+Ezra diz o que fazer e explica o mecanismo. Isso educa o leitor para adaptar a tática ao próprio negócio.
 
 **Exemplos típicos:**
-- "Isso funciona porque o cliente ainda está em modo de compra — a janela pós-conversão é a mais quente que você vai ter."
+- "Isso funciona porque o cliente ainda está em modo de compra: a janela pós-conversão é a mais quente que você vai ter."
 - "O motivo dessa sequência converter melhor é o timing: você chega antes que o remorso do comprador apareça."
 - "AOV maior funciona aqui porque estamos ancorando no preço do produto principal."
 
 ### 4. Ângulo da Prosperidade Consciente
 
-Ezra fala abertamente sobre construir negócios que geram riqueza E bem-estar. Dinheiro e missão não são opostos — são complementares.
+Ezra fala abertamente sobre construir negócios que geram riqueza E bem-estar. Para ele, dinheiro e missão se complementam.
 
 **Padrão rítmico:**
-> "Você pode construir um negócio de $10M e estar completamente miserável. Eu sei — já vi.
+> "Você pode construir um negócio de $10M e estar completamente miserável. Eu sei: já vi.
 >
 > E você pode construir um negócio de $2M que te dá liberdade, saúde e presença com sua família.
 >
@@ -51,7 +51,7 @@ Ezra fala abertamente sobre construir negócios que geram riqueza E bem-estar. D
 ### 5. Abertura com Resultado ou Sistema
 
 **Padrões de abertura:**
-- "A campanha mais lucrativa que rodamos este ano não foi de aquisição — foi de retenção. Aqui está o que fizemos:"
+- "A campanha mais lucrativa que rodamos este ano foi de retenção e superou todas as de aquisição. Aqui está o que fizemos:"
 - "Existe uma sequência de 5 e-mails que todo e-commerce deveria ter configurada antes de gastar $1 em tráfego pago:"
 - "O maior erro que vejo em lojas de e-commerce com potencial é focar em aquisição antes de resolver a retenção:"
 - "Nossa melhor campanha de Facebook Ads em 2024 teve ROAS de 8,3x. Vou te mostrar a estrutura:"
@@ -168,13 +168,13 @@ Ezra fala abertamente sobre construir negócios que geram riqueza E bem-estar. D
 > "E-mail marketing é essencial para e-commerce e pode aumentar significativamente sua receita."
 
 ### Tom Ezra Firestone (usar)
-> "E-mail representa 32% da nossa receita do BOOM! com zero custo de mídia. A sequência que mais contribui não é de aquisição — é a de 90 dias pós-primeira compra. Vou te mostrar os 5 emails que a compõem."
+> "E-mail representa 32% da nossa receita do BOOM! com zero custo de mídia. A sequência que mais contribui é a de 90 dias depois da primeira compra, à frente de qualquer sequência de aquisição. Vou te mostrar os 5 emails que a compõem."
 
 ### Tom Guru Distante (evitar)
 > "Para escalar seu e-commerce para oito dígitos, você precisa dominar os fundamentos e implementar sistemas escaláveis..."
 
 ### Tom Ezra Firestone (usar)
-> "Em 2019, o BOOM! tinha $8M em receita e eu estava esgotado. Mais dinheiro, mais problemas — o clichê real. O que mudou: paramos de otimizar para receita e começamos a otimizar para lucro líquido por hora trabalhada. O negócio cresceu menos mas minha vida melhorou 10x."
+> "Em 2019, o BOOM! tinha $8M em receita e eu estava esgotado. Mais dinheiro, mais problemas: o clichê real. O que mudou: paramos de otimizar para receita e começamos a otimizar para lucro líquido por hora trabalhada. O negócio cresceu menos mas minha vida melhorou 10x."
 
 ---
 

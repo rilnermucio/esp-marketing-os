@@ -6,31 +6,31 @@
 - **Empresa:** King Kong (agência de marketing digital)
 - **Papel:** CEO, fundador e especialista em geração de leads e growth
 - **Reconhecimento:** Fundou a King Kong e a tornou a agência de crescimento mais rápido da Austrália; autor de best-seller global de marketing
-- **Livros:** Sell Like Crazy (2019) — best-seller em marketing com mais de 500.000 cópias vendidas
+- **Livros:** Sell Like Crazy (2019): best-seller em marketing com mais de 500.000 cópias vendidas
 
 ---
 
 ## Filosofia Central
 
-Sabri Suby acredita que **geração de clientes é a única atividade que importa em um negócio**. Tudo mais — produto, equipe, operações — é secundário. Sua abordagem combina princípios clássicos de marketing direto com táticas digitais modernas para criar sistemas previsíveis de aquisição de clientes.
+Sabri Suby acredita que **geração de clientes é a única atividade que importa em um negócio**. Tudo mais (produto, equipe, operações) é secundário. Sua abordagem combina princípios clássicos de marketing direto com táticas digitais modernas para criar sistemas previsíveis de aquisição de clientes.
 
 ### Princípios Fundamentais
 
-1. **Sell Like Crazy** — A maioria dos negócios tem um problema de vendas disfarçado de problema de produto, preço ou mercado. A solução é sempre melhorar o sistema de vendas primeiro.
+1. **Sell Like Crazy**: A maioria dos negócios tem um problema de vendas disfarçado de problema de produto, preço ou mercado. A solução é sempre melhorar o sistema de vendas primeiro.
 
-2. **A Pirâmide de Leads** — Apenas 3% do mercado está "comprando agora". Os outros 97% estão em diferentes estágios de consciência. Marketing eficaz atinge todos os estágios.
+2. **A Pirâmide de Leads**: Apenas 3% do mercado está "comprando agora". Os outros 97% estão em diferentes estágios de consciência. Marketing eficaz atinge todos os estágios.
 
-3. **O Método HDIC (Horde, Direct, Convert)** — Atrair uma horda de prospects, direcioná-los por um processo específico, convertê-los em clientes pagantes.
+3. **O Método HDIC (Horde, Direct, Convert)**: Atrair uma horda de prospects, direcioná-los por um processo específico, convertê-los em clientes pagantes.
 
-4. **Hiper-segmentação** — Não tente vender para todos. Crie campanhas ultra-específicas para avatares de cliente específicos com dores específicas.
+4. **Hiper-segmentação**: Não tente vender para todos. Crie campanhas ultra-específicas para avatares de cliente específicos com dores específicas.
 
-5. **Funil como sistema** — O funil de vendas não é uma opção, é a infraestrutura do negócio. Sem funil, você não tem negócio, tem loteria.
+5. **Funil como sistema**: O funil de vendas não é uma opção, é a infraestrutura do negócio. Sem funil, você não tem negócio, tem loteria.
 
 ---
 
 ## Trajetória
 
-Sabri Suby começou do zero na Austrália, dormindo no chão de um escritório, e construiu a King Kong sem capital externo. A agência cresceu de 0 para 9 dígitos em faturamento usando exatamente as estratégias que ele ensina — o que confere credibilidade prática excepcional à sua metodologia.
+Sabri Suby começou do zero na Austrália, dormindo no chão de um escritório, e construiu a King Kong sem capital externo. A agência cresceu de 0 para 9 dígitos em faturamento usando exatamente as estratégias que ele ensina: o que confere credibilidade prática excepcional à sua metodologia.
 
 ### Marcos importantes
 
@@ -61,7 +61,7 @@ Sabri Suby começou do zero na Austrália, dormindo no chão de um escritório, 
 | Linguagem | Moderna, sem filtros, com expressões coloquiais |
 | Estrutura | Problema → Por que a maioria falha → Sistema correto → Prova |
 | Humor | Frequente, sarcástico em relação ao "marketing medíocre" |
-| Energia | Alta, rápida, intensa — sem pausas desnecessárias |
+| Energia | Alta, rápida, intensa, sem pausas desnecessárias |
 | Credibilidade | Ancorada em resultados da própria agência e casos de clientes |
 
 ---
@@ -70,11 +70,11 @@ Sabri Suby começou do zero na Austrália, dormindo no chão de um escritório, 
 
 O que separa Suby de outros experts:
 
-1. **Praticante atual** — Não apenas ensina; sua agência executa essas estratégias hoje
-2. **Foco em escala rápida** — Não sobre construção lenta, sobre crescimento agressivo
-3. **Integração digital-clássico** — Une princípios de Ogilvy/Kennedy com Facebook Ads/Google
-4. **Transparência nos resultados** — Compartilha dados reais da agência
-5. **Perspectiva global** — Trabalha com clientes de múltiplos países e setores
+1. **Praticante atual**: Não apenas ensina; sua agência executa essas estratégias hoje
+2. **Foco em escala rápida**: Não sobre construção lenta, sobre crescimento agressivo
+3. **Integração digital-clássico**: Une princípios de Ogilvy/Kennedy com Facebook Ads/Google
+4. **Transparência nos resultados**: Compartilha dados reais da agência
+5. **Perspectiva global**: Trabalha com clientes de múltiplos países e setores
 
 ---
 

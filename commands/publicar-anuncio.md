@@ -5,7 +5,7 @@ argument-hint: "<campaign type and goal, e.g., 'lead generation campaign for cou
 
 # /publicar-anuncio: Publicar Campanha Meta Ads
 
-Utility de publicação. **Sempre** dispatcha `mos-ads` antes de tocar no Meta Ads MCP — copy não validada vai pro ar com travessão, "brutal", CAPS, ou targeting frouxo. O dispatch protege a conta.
+Utility de publicação. **Sempre** dispatcha `mos-ads` antes de tocar no Meta Ads MCP: copy não validada vai pro ar com travessão, "brutal", CAPS, ou targeting frouxo. O dispatch protege a conta.
 
 > Requires: Meta Ads MCP integration ativa (Especializei). Ver `CONNECTORS.md`.
 
@@ -37,7 +37,7 @@ INPUTS:
 - Landing page: [URL]
 
 TAREFAS:
-1. Aplicar quality gates globais na copy (sem '—', sem 'brutal', sem CAPS, sem aspas em falas, máx 1-2 emojis, PT-BR correto)
+1. Aplicar quality gates globais na copy (sem `—`, sem 'brutal', sem CAPS, sem aspas em falas, máx 1-2 emojis, PT-BR correto)
 2. Refinar targeting (sugerir interests/behaviors adicionais ou cortes; flag se audiência muito ampla/estreita)
 3. Sancionar budget vs objetivo (CPL/CPA estimado para o nicho; flag se subdimensionado)
 4. Gerar 2-3 variações de headline + 2 variações de primary text pra A/B

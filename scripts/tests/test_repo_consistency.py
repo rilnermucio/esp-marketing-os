@@ -266,25 +266,31 @@ def test_no_emdash_in_distributed_prose(path: Path):
 _SPACED_EN_DASH = re.compile(r"(?<=\s)–(?=\s)")
 
 
-def _kb_dash_violations(path: Path) -> list[int]:
-    """Travessão em KB conta até dentro de bloco de código e de citação.
+_CONTENT_DIRS = ("agents", "commands", "workflows", "references", "subagents", "assets")
+DISTRIBUTED_MARKDOWN = sorted(
+    p for d in _CONTENT_DIRS for p in (ROOT / d).rglob("*.md")
+) + [ROOT / "skills" / "marketing-os" / "SKILL.md"]
 
-    É nos exemplos das KBs que o agent se inspira; em 2026-09-29 eram 248
-    travessões, quase todos em bloco de código, isentos pelo guard da prosa.
-    Ficam de fora só o código inline e a linha que enuncia a regra.
+
+def _dash_violations(path: Path) -> list[int]:
+    """Travessão fora de código inline, inclusive em bloco de código e citação.
+
+    É nos exemplos (KBs, clones, templates, prompts) que o agent se inspira; em
+    2026-09-29 eram 1.290 travessões no conteúdo distribuído, quase todos em
+    bloco de código e citação, que o guard da prosa isentava. Para citar o
+    caractere numa regra, use código inline: `—`.
     """
     out = []
     for i, ln in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
         visible = _INLINE_CODE.sub("", ln)
-        if "—" not in visible and not _SPACED_EN_DASH.search(visible):
-            continue
-        if _RULE.search(ln):
-            continue
-        out.append(i)
+        if "—" in visible or _SPACED_EN_DASH.search(visible):
+            out.append(i)
     return out
 
 
-@pytest.mark.parametrize("path", SUBAGENTS, ids=lambda p: p.name)
-def test_no_dash_in_kb_examples(path: Path):
-    bad = _kb_dash_violations(path)
-    assert not bad, f"travessão na KB {path.name}: linhas {bad[:20]}"
+@pytest.mark.parametrize(
+    "path", DISTRIBUTED_MARKDOWN, ids=lambda p: str(p.relative_to(ROOT))
+)
+def test_no_dash_in_distributed_markdown(path: Path):
+    bad = _dash_violations(path)
+    assert not bad, f"travessão em {path.relative_to(ROOT)}: linhas {bad[:20]}"

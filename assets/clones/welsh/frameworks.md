@@ -7,13 +7,13 @@ Justin Welsh construiu um negócio de $500K+ anuais com apenas 2 produtos: um cu
 
 ### Como funciona
 ```
-PILAR 1 — CONTEÚDO (LinkedIn/Twitter):
+PILAR 1: CONTEÚDO (LinkedIn/Twitter):
 ├── Publica 1 post por dia, 365 dias por ano
 ├── Conteúdo = 50% pessoal, 50% educacional
 ├── Cada post é um ensaio de 150-300 palavras
 └── Tema consistente: solopreneurship e negócio de 1 pessoa
 
-PILAR 2 — PRODUTOS (2 máximo):
+PILAR 2: PRODUTOS (2 máximo):
 ├── Produto 1: Curso self-paced (LinkedIn OS)
 │   ├── Preço: $150-200
 │   ├── Distribuição: newsletter + perfil
@@ -77,28 +77,28 @@ Justin mapeou as fases pelas quais todo criador passa, com os bloqueios típicos
 
 ### Como funciona
 ```
-FASE 0 — Fantasma (0-100 seguidores):
+FASE 0: Fantasma (0-100 seguidores):
 ├── Bloqueio: "Não tenho nada para dizer"
-├── Realidade: Você tem experiência — só não tem perspectiva sobre ela
+├── Realidade: Você tem experiência, só não tem perspectiva sobre ela
 └── Desbloqueio: Publique o que você desejaria ter lido 5 anos atrás
 
-FASE 1 — Emergente (100-1K seguidores):
-├── Bloqueio: Inconsistência — publica por 2 semanas, para por 3
+FASE 1: Emergente (100-1K seguidores):
+├── Bloqueio: Inconsistência, publica por 2 semanas, para por 3
 ├── Realidade: Sem sistema, depende de motivação
 └── Desbloqueio: Sistema de criação dominical (ver Framework 2)
 
-FASE 2 — Crescimento (1K-10K seguidores):
+FASE 2: Crescimento (1K-10K seguidores):
 ├── Bloqueio: Tenta agradar a todos, perde o nicho
 ├── Realidade: Nichar dói, mas é o que acelera
 └── Desbloqueio: Escolha 1 problema de 1 persona, fale APENAS sobre isso
 
-FASE 3 — Monetização (10K-50K seguidores):
+FASE 3: Monetização (10K-50K seguidores):
 ├── Bloqueio: "Não sei o que vender" ou "tenho medo de parecer vendedor"
 ├── Realidade: Se você tem 10K+ seguidores, alguém quer comprar algo de você
 └── Desbloqueio: Ofereça 1 produto simples, valide com pequeno grupo primeiro
 
-FASE 4 — Escala (50K+ seguidores):
-├── Bloqueio: Complexidade — muitos produtos, muitas plataformas
+FASE 4: Escala (50K+ seguidores):
+├── Bloqueio: Complexidade, muitos produtos, muitas plataformas
 ├── Realidade: O melhor negócio é o mais simples
 └── Desbloqueio: Elimine tudo exceto o que gera 80% da receita
 ```
@@ -117,19 +117,19 @@ Justin argumenta que toda receita de criador de conteúdo vem de 3 fontes, e o p
 
 ### Como funciona
 ```
-VÉRTICE 1 — Produtos Próprios (Self-Created):
+VÉRTICE 1: Produtos Próprios (Self-Created):
 ├── Cursos, templates, frameworks, livros
 ├── Margem: 80-95%
 ├── Escalabilidade: Alta (sem limite de vendas)
 └── Esforço: Alto no início, baixo depois
 
-VÉRTICE 2 — Serviços (Time-Based):
+VÉRTICE 2: Serviços (Time-Based):
 ├── Consultoria, coaching, workshops
 ├── Margem: 60-80%
 ├── Escalabilidade: Baixa (limitada por horas)
 └── Esforço: Alto e constante
 
-VÉRTICE 3 — Afiliados/Parcerias (Referred):
+VÉRTICE 3: Afiliados/Parcerias (Referred):
 ├── Indicação de produtos que você usa e recomenda
 ├── Margem: 30-50% (de comissão)
 ├── Escalabilidade: Média
@@ -155,21 +155,21 @@ Em vez de tentar ser relevante para todos, Justin ensina a ir tão fundo em um n
 
 ### Como funciona
 ```
-PASSO 1 — Identificação:
+PASSO 1: Identificação:
 ├── Qual é o trabalho mais específico que você já fez?
 ├── Para qual persona exatamente?
 └── Qual problema você resolveu que poucos sabem como resolver?
 
-PASSO 2 — Declaração de Nicho (Fórmula):
+PASSO 2: Declaração de Nicho (Fórmula):
 └── "Eu ajudo [PERSONA ESPECÍFICA] a [RESULTADO ESPECÍFICO] sem [FRUSTRAÇÃO COMUM]."
     Exemplo: "Eu ajudo médicos a construir negócios digitais sem sair da medicina."
 
-PASSO 3 — Validação:
+PASSO 3: Validação:
 ├── Existem 10.000+ pessoas que se encaixam nessa persona?
 ├── Elas têm dinheiro ou tempo para resolver o problema?
 └── O problema é recorrente ou acontece uma vez?
 
-PASSO 4 — Saturação:
+PASSO 4: Saturação:
 ├── Crie todo conteúdo especificamente para essa persona
 ├── Fale a linguagem dela (termos do setor)
 └── Cite exemplos do universo dela

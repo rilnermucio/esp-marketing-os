@@ -1,4 +1,4 @@
-# End-to-End Campaign Workflow — Da Estratégia à Publicação
+# End-to-End Campaign Workflow: Da Estratégia à Publicação
 
 > Workflow do Marketing OS. A numeração e os padrões de orquestração canônicos estão em `skills/marketing-os/SKILL.md` (seção "Padrões de Orquestração").
 
@@ -381,7 +381,7 @@ ENTREGÁVEL: performance-report.md
 | Taxa de abertura | [%] | 25-35% |
 | Taxa de clique | [%] | 3-8% |
 | Taxa de conversão | [%] | 1-5% |
-| Receita atribuída | R$[valor] | — |
+| Receita atribuída | R$[valor] | - |
 
 ### Redes Sociais
 | Canal | Alcance | Engajamento | Conversões |
@@ -519,7 +519,7 @@ Use quando:
 
 ## Recursos Relacionados
 
-- [content-pipeline.md](content-pipeline.md) — Workflow simplificado para conteúdo orgânico
-- [assets/checklists/quality-gate.md](../assets/checklists/quality-gate.md) — Quality gate pré-publicação
-- [squads/marketing-os/data/clones/clone-manifest.yaml](../squads/marketing-os/data/clones/clone-manifest.yaml) — Sistema de clones para tom de voz
-- `scripts/` — Scripts Python para análise e geração de conteúdo
+- [content-pipeline.md](content-pipeline.md): Workflow simplificado para conteúdo orgânico
+- [assets/checklists/quality-gate.md](../assets/checklists/quality-gate.md): Quality gate pré-publicação
+- [squads/marketing-os/data/clones/clone-manifest.yaml](../squads/marketing-os/data/clones/clone-manifest.yaml): Sistema de clones para tom de voz
+- `scripts/` Scripts Python para análise e geração de conteúdo

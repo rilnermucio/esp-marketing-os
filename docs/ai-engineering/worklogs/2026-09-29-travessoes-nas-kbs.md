@@ -40,8 +40,15 @@
 ## Riscos e follow-ups
 - Uma troca de pontuação pode ter mudado a ênfase de algum exemplo; a revisão linha a linha e o diff de 249 linhas reduzem esse risco.
 
+## Adendo: pendências resolvidas na mesma data
+
+A pedido do usuário, os três pontos que tinham ficado fora do escopo foram resolvidos em seguida.
+
+- **Epígrafes**: 9 das 21 KBs trocaram a citação do topo pela linha de escopo ("Tier 2 do `agents/mos-x.md`. ..."). Sete usavam a antítese proibida; a de Deming não tem registro de autoria (Quote Investigator: anônima, 1978) e a de Erico Rocha não aparece em fonte nenhuma. A de Polykoff, recorrente em coletâneas e sem antítese, ficou.
+- **Exemplos regulados do copy-agent (PARTE XI)**: advocacia sem "Avaliação técnica preliminar: R$0", honorários e botão de agendamento (Provimento OAB 205/2021, art. 3º, I), com CED no lugar de "CEC"; saúde com a identificação da CFM 2.336/2023 (arts. 4º e 5º); fintech sem aviso da CVM aplicado a software de tesouraria; beleza com a RDC 907/2024 no lugar da RDC 7/2015. Estudo, benchmark, notificação ANVISA e número de OAB com cara de reais viraram campos a preencher. A regra de gratuidade do hook passou a pegar "R$0" perto de consulta, avaliação, diagnóstico ou análise.
+- **Travessões restantes**: commands, workflows e references (29 linhas; a regra citada entre crases ficou intacta, e as duas menções entre aspas simples viraram código inline), assets (916 linhas, com assinaturas, listas, apostos, tabelas e setas desenhadas) e 2 travessões curtos na dateline do press release (viraram ponto).
+- **Antíteses na junta do travessão**: trocar `não é talento — é sistema` por dois-pontos manteria a antítese que o gate bloqueia. As 87 linhas em que o travessão fazia essa junta (ou em que um prompt de imagem pedia o travessão como elemento visual) foram reescritas à mão, em forma afirmativa, preservando o sentido e o tom de cada autor. O manifesto dos clones registra que a pontuação das frases atribuídas foi adaptada.
+- **Guard**: `test_no_dash_in_distributed_markdown` cobre agents, commands, workflows, references, KBs, assets e SKILL.md; isenta só código inline. Reprova o estado anterior (100 arquivos) e aprova o atual.
+
 ## Próximos passos
-- Commands (45) e workflows (19) ainda têm travessão em bloco de código e citação; o guard da prosa os isenta.
-- Voice clones em `assets/` (975): parte é citação de autor real, então a troca pede critério próprio.
-- Epígrafes no topo de 6 KBs usam a antítese proibida ("Growth não é um departamento. É uma mentalidade") e têm atribuição a conferir.
-- O exemplo de anúncio de advocacia no copy-agent (PARTE XI) oferece avaliação "R$0" e cita honorários, o que o Provimento OAB 205 (art. 3º, I) veda.
+- Antíteses que não passam pelo travessão continuam no conteúdo: 184 linhas em assets, 35 nas KBs, 6 em references e 1 em command (contagem com o regex do gate em 2026-09-29). Parte é anti-exemplo de propósito. Pede uma rodada própria, com critério para separar anti-exemplo de modelo.

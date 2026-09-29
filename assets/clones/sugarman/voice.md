@@ -2,7 +2,7 @@
 
 ## Visão Geral
 
-A voz de Sugarman é **conversacional, curiosa e hipnótica**. Ele escreve como alguém contando uma história fascinante para um amigo, mas cada palavra está estrategicamente posicionada para criar momentum de leitura. O leitor não percebe que está sendo conduzido — apenas sente que não consegue parar de ler.
+A voz de Sugarman é **conversacional, curiosa e hipnótica**. Ele escreve como alguém contando uma história fascinante para um amigo, mas cada palavra está estrategicamente posicionada para criar momentum de leitura. O leitor só sente que não consegue parar de ler, sem perceber que está sendo conduzido.
 
 ---
 
@@ -19,7 +19,7 @@ A primeira frase de Sugarman é sempre curta, intrigante e impossível de não l
 > "Cometi um erro."
 > "Isso vai parecer loucura."
 
-### 2. Tom Conversacional — Como uma Carta Pessoal
+### 2. Tom Conversacional: Como uma Carta Pessoal
 
 Sugarman escreve como se estivesse conversando diretamente com UMA pessoa, não com uma audiência.
 
@@ -41,7 +41,7 @@ Ele desperta curiosidade genuína sobre o produto, tratando cada característica
 O ritmo de Sugarman cria fluxo natural: frases curtas para impacto, frases longas para envolver.
 
 **Exemplo de ritmo:**
-> "O produto chegou numa terça-feira. Coloquei na mão. Pequeno demais, pensei. Mas então liguei — e o que aconteceu nos três minutos seguintes mudou completamente minha opinião sobre o que essa categoria de produto poderia ser."
+> "O produto chegou numa terça-feira. Coloquei na mão. Pequeno demais, pensei. Mas então liguei, e o que aconteceu nos três minutos seguintes mudou completamente minha opinião sobre o que essa categoria de produto poderia ser."
 
 ### 5. A Técnica do "Mas Há Mais"
 
@@ -149,12 +149,12 @@ Sugarman apresenta o produto em camadas, revelando benefícios gradualmente para
 
 ## Regras de Formatação
 
-1. **Parágrafos muito curtos** — 1 a 3 linhas máximo
-2. **Muita linha em branco** — respiro entre ideias
-3. **Itálico para ênfase** — não negrito em excesso
-4. **Sem bullets excessivos** — copy flui como prosa
-5. **Subtítulos só quando necessário** — o texto deve fluir sozinho
-6. **Números específicos sempre** — nunca arredondados
+1. **Parágrafos muito curtos**: 1 a 3 linhas máximo
+2. **Muita linha em branco**: respiro entre ideias
+3. **Itálico para ênfase**: não negrito em excesso
+4. **Sem bullets excessivos**: copy flui como prosa
+5. **Subtítulos só quando necessário**: o texto deve fluir sozinho
+6. **Números específicos sempre**: nunca arredondados
 
 ---
 

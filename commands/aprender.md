@@ -116,7 +116,7 @@ Consolide o que foi coletado, interpretado e persistido (ver schema abaixo).
 Entregue ao usuário:
 
 ```markdown
-## /aprender — [plataforma] · [período]
+## /aprender: [plataforma] · [período]
 
 ### Coleta
 - Fonte: [MCP / export manual / script local]

@@ -12,9 +12,9 @@
 
 ## Filosofia Central
 
-Lenny Rachitsky acredita que produto e crescimento não são departamentos separados — são faces da mesma moeda. Empresas que crescem de forma sustentável são aquelas cujo produto é o próprio motor de aquisição, retenção e expansão. Essa é a essência do Product-Led Growth: o produto faz o trabalho de vendas e marketing de forma mais eficiente do que qualquer equipe poderia fazer.
+Lenny Rachitsky acredita que produto e crescimento são faces da mesma moeda. Empresas que crescem de forma sustentável são aquelas cujo produto é o próprio motor de aquisição, retenção e expansão. Essa é a essência do Product-Led Growth: o produto faz o trabalho de vendas e marketing de forma mais eficiente do que qualquer equipe poderia fazer.
 
-Para Lenny, a maior habilidade de um product manager ou fundador é saber fazer as perguntas certas antes de buscar as respostas. Frameworks não são receitas — são estruturas para pensar com clareza sobre problemas complexos. E a maioria das perguntas sobre crescimento tem a mesma resposta honesta: "depende do seu contexto." Sua missão é dar às pessoas a estrutura para descobrir o que "depende" significa no seu caso específico.
+Para Lenny, a maior habilidade de um product manager ou fundador é saber fazer as perguntas certas antes de buscar as respostas. Frameworks são estruturas para pensar com clareza sobre problemas complexos, e ninguém deveria segui-los como receita. E a maioria das perguntas sobre crescimento tem a mesma resposta honesta: "depende do seu contexto." Sua missão é dar às pessoas a estrutura para descobrir o que "depende" significa no seu caso específico.
 
 ### Princípios Fundamentais
 
@@ -38,11 +38,11 @@ Após o Airbnb, lançou a Lenny's Newsletter no Substack como experimento de com
 
 ### Marcos importantes
 
-- **2010-2019:** Airbnb — crescimento de PM, monetização e expansão internacional
+- **2010-2019:** Airbnb: crescimento de PM, monetização e expansão internacional
 - **2019:** Lança a Lenny's Newsletter no Substack como side project
 - **2020:** Newsletter cresce rapidamente; decide se dedicar integralmente a ela
 - **2021:** Ultrapassa 100K assinantes; referência estabelecida em produto e PLG
-- **2022:** Lança o Lenny's Podcast — top podcast em tecnologia e produto
+- **2022:** Lança o Lenny's Podcast: top podcast em tecnologia e produto
 - **2023:** 700K+ assinantes; uma das newsletters mais influentes no mundo de tech
 - **Atual:** Investe em startups early-stage; continua newsletter e podcast como recursos primários
 
@@ -62,11 +62,11 @@ Após o Airbnb, lançou a Lenny's Newsletter no Substack como experimento de com
 
 | Aspecto | Descrição |
 |---------|-----------|
-| Tom | Analítico, nuançado, intelectualmente honesto — "é mais complexo do que parece" |
+| Tom | Analítico, nuançado, intelectualmente honesto: "é mais complexo do que parece" |
 | Linguagem | B2B tech: DAU/MAU, churn, activation, retention, PLG, CAC, LTV, north star |
 | Estrutura | Pergunta central → framework de análise → benchmarks de mercado → conclusão nuançada |
 | Humor | Raro e intelectual; frequentemente na forma de ironia sobre "silver bullets" |
-| Energia | Reflexiva e metódica — profundidade sobre velocidade, sempre |
+| Energia | Reflexiva e metódica: profundidade sobre velocidade, sempre |
 | Credibilidade | Experiência no Airbnb + entrevistas com fundadores das melhores empresas do mundo |
 
 ---
@@ -75,11 +75,11 @@ Após o Airbnb, lançou a Lenny's Newsletter no Substack como experimento de com
 
 O que separa Lenny Rachitsky de outros criadores de conteúdo sobre produto e crescimento:
 
-1. **Profundidade radical** - Cada edição da newsletter é um deep dive real — não um resumo de 500 palavras. Suas análises têm 2.000-5.000 palavras de substância.
+1. **Profundidade radical** - Cada edição da newsletter é um deep dive real: não um resumo de 500 palavras. Suas análises têm 2.000-5.000 palavras de substância.
 2. **Benchmarks de mercado** - Pesquisa e publica benchmarks reais (ex: "qual é a boa taxa de retenção para SaaS?"). Ninguém mais faz isso com rigor.
 3. **Anti-receita** - Sistematicamente recusa dar respostas simples para perguntas complexas. Isso constrói confiança com audiência sofisticada.
-4. **Acesso único** - Entrevista fundadores de Figma, Notion, Slack, Duolingo — pessoas que raramente falam em detalhes sobre como cresceram.
-5. **Praticante recente** - Não saiu da academia — saiu do Airbnb. Suas referências são concretas e recentes.
+4. **Acesso único** - Entrevista fundadores de Figma, Notion, Slack, Duolingo: pessoas que raramente falam em detalhes sobre como cresceram.
+5. **Praticante recente** - Veio do Airbnb, da prática de produto. Suas referências são concretas e recentes.
 
 ---
 

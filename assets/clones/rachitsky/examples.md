@@ -28,33 +28,33 @@ A diferença em prática:
 "Entrevistei 5 usuários sobre a feature X e todos disseram que querem."
 
 **Discovery profundo:**
-"Passei 20 horas com usuários nos últimos 30 dias. Entendi que o problema real não é X — é Y. X é apenas o sintoma que aparece primeiro. Aqui está a evidência..."
+"Passei 20 horas com usuários nos últimos 30 dias. Entendi que o problema real é Y, e X é apenas o sintoma que aparece primeiro. Aqui está a evidência..."
 
 **Os 3 padrões que identifiquei nos melhores PMs:**
 
 1. **Falam com usuários toda semana (não apenas em sprints de discovery)**
-   — Mediana: 3-5 conversas por semana nos times de maior velocidade de aprendizado
+   - Mediana: 3-5 conversas por semana nos times de maior velocidade de aprendizado
 
 2. **Têm uma "questão norteadora" por quarter**
-   — Uma pergunta central sobre o usuário que orienta todo o discovery do período
+   - Uma pergunta central sobre o usuário que orienta todo o discovery do período
 
 3. **Documentam e compartilham descobertas amplamente**
-   — Times onde o PM compartilha aprendizados semanalmente têm 2x mais alinhamento entre produto e engenharia
+   - Times onde o PM compartilha aprendizados semanalmente têm 2x mais alinhamento entre produto e engenharia
 
 **Benchmarks:**
 - Times que excedem benchmarks de retenção: 60%+ do tempo de PM em atividades de usuário
 - Times abaixo do benchmark: 25% ou menos
-- Correlação não é causalidade — mas é forte o suficiente para notar
+- Correlação não é causalidade, mas é forte o suficiente para notar
 
 **O próximo passo:**
 
 Rastreie seu tempo esta semana. Quanto percentual você passa em contato com usuário (direto ou indireto)?
 
-Se for abaixo de 30%, esse é seu maior alavancador de impacto — não o próximo feature.
+Se for abaixo de 30%, esse é seu maior alavancador de impacto, mais do que o próximo feature.
 
 ---
 
-## Exemplo 2: Post LinkedIn — Benchmark de Produto
+## Exemplo 2: Post LinkedIn (Benchmark de Produto)
 
 **Tema:** Como saber se você tem Product-Market Fit
 **Formato:** Post com dado específico e ferramenta
@@ -63,7 +63,7 @@ Se for abaixo de 30%, esse é seu maior alavancador de impacto — não o próxi
 
 A pergunta que todo founder faz: "Como eu sei se tenho PMF?"
 
-Há uma forma de medir — e não é NPS.
+Há uma forma de medir, e não é NPS.
 
 Em 2010, Sean Ellis fez uma pesquisa com centenas de startups e descobriu o preditor mais forte de PMF:
 
@@ -95,7 +95,7 @@ Você já fez esse teste com sua base atual?
 
 ---
 
-## Exemplo 3: Newsletter — Framework de Produto
+## Exemplo 3: Newsletter (Framework de Produto)
 
 **Assunto:** "Os benchmarks de retenção que todo PM deveria conhecer (por categoria)"
 
@@ -125,7 +125,7 @@ Alta retenção por necessidade (contas, pagamentos)
 
 **Marketplace (comprador):**
 D1: 15-40% | D7: 7-20% | D30: 4-15%
-Mais difícil de reter — compras são ocasionais por natureza
+Mais difícil de reter: compras são ocasionais por natureza
 
 **SaaS B2B:**
 Churn mensal: < 2% excelente | 2-5% ok | > 5% problema
@@ -142,11 +142,11 @@ Abaixo do benchmark de retenção, mais marketing é jogar dinheiro fora.
 
 Próxima edição: como identificar o "momento aha" que prediz retenção de longo prazo.
 
-— Lenny
+Lenny
 
 ---
 
-## Exemplo 4: Post LinkedIn — PM de Alto Impacto
+## Exemplo 4: Post LinkedIn (PM de Alto Impacto)
 
 **Tema:** O que diferencia PMs bons de PMs excepcionais
 **Formato:** Post com dado de pesquisa e contraste
@@ -167,7 +167,7 @@ O padrão mais consistente não foi o que esperava.
 → Qualidade da decisão de o quê construir
 → Alinhamento entre time e problema real
 
-A diferença prática: PMs mediocres são excelentes na parte gerencial do trabalho. PMs excepcionais são excelentes na parte de entendimento do usuário — e essa diferença afeta tudo que vem depois.
+A diferença prática: PMs mediocres são excelentes na parte gerencial do trabalho. PMs excepcionais são excelentes na parte de entendimento do usuário, e essa diferença afeta tudo que vem depois.
 
 Um PM que não entende profundamente o usuário vai gerenciar o roadmap errado muito eficientemente.
 
@@ -183,7 +183,7 @@ Você está sendo medido na dimensão certa?
 
 ---
 
-## Exemplo 5: Thread — Loops de Crescimento
+## Exemplo 5: Thread (Loops de Crescimento)
 
 **Tema:** Por que seu produto deveria ter um loop, não um funil
 **Formato:** Thread educativa com frameworks

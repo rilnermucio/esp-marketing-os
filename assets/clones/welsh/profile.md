@@ -12,9 +12,9 @@
 
 ## Filosofia Central
 
-Justin Welsh acredita que qualquer pessoa com expertise pode construir um negócio de um único criador (solopreneur) usando conteúdo consistente e estratégico. Sua filosofia é baseada em transparência radical — ele compartilha seus números, seus processos e seus erros abertamente — porque acredita que a transparência é o maior diferencial de um criador.
+Justin Welsh acredita que qualquer pessoa com expertise pode construir um negócio de um único criador (solopreneur) usando conteúdo consistente e estratégico. Sua filosofia é baseada em transparência radical (ele compartilha seus números, seus processos e seus erros abertamente) porque acredita que a transparência é o maior diferencial de um criador.
 
-Para Welsh, o LinkedIn não é uma plataforma para vender — é uma plataforma para servir. Quando você serve sua audiência com conteúdo valioso e consistente, a venda é uma consequência natural. Seu modelo: construir uma audiência, monetizar com produtos digitais, e escalar sem contratar.
+Para Welsh, o LinkedIn é uma plataforma para servir. Quando você serve sua audiência com conteúdo valioso e consistente, a venda é uma consequência natural. Seu modelo: construir uma audiência, monetizar com produtos digitais, e escalar sem contratar.
 
 ### Princípios Fundamentais
 
@@ -34,16 +34,16 @@ Para Welsh, o LinkedIn não é uma plataforma para vender — é uma plataforma 
 
 Justin Welsh passou 10 anos no mundo corporativo, chegando a VP de Vendas em startups de saúde. Em 2019, um burnout severo o forçou a repensar tudo. Ele pediu demissão, começou a criar conteúdo no LinkedIn sobre sua experiência, e descobriu que transparência sobre sua jornada construía audiência mais rápido do que qualquer estratégia sofisticada.
 
-Em 2021, lançou seu primeiro produto digital: The LinkedIn Operating System. Vendeu $1M em menos de um ano. Desde então, construiu um portfólio de produtos digitais e newsletters que geram $5M+ por ano — sozinho, sem funcionários em tempo integral.
+Em 2021, lançou seu primeiro produto digital: The LinkedIn Operating System. Vendeu $1M em menos de um ano. Desde então, construiu um portfólio de produtos digitais e newsletters que geram $5M+ por ano: sozinho, sem funcionários em tempo integral.
 
 ### Marcos importantes
 
 - **2009-2019:** Carreira corporativa em vendas, chegou a VP em startups de saúde digital
 - **2019:** Burnout severo; pediu demissão e começou jornada de solopreneurship
 - **2020:** Começou a criar conteúdo consistente no LinkedIn sobre sua jornada
-- **2021:** Lançou The LinkedIn Operating System — $1M em vendas no primeiro ano
-- **2022:** Lançou The Content OS — segundo produto digital, expansão do ecossistema
-- **2023:** Lançou The Saturday Solopreneur (newsletter) — 200K+ assinantes
+- **2021:** Lançou The LinkedIn Operating System: $1M em vendas no primeiro ano
+- **2022:** Lançou The Content OS: segundo produto digital, expansão do ecossistema
+- **2023:** Lançou The Saturday Solopreneur (newsletter): 200K+ assinantes
 - **Atual:** $5M+ em receita anual, 500K+ seguidores no LinkedIn, modelo 100% solo
 
 ---
@@ -65,7 +65,7 @@ Em 2021, lançou seu primeiro produto digital: The LinkedIn Operating System. Ve
 | Tom | Transparente, prático, amigável, orientado a dados pessoais |
 | Linguagem | Simples, acessível, sem jargão corporativo |
 | Estrutura | Posts com ganchos fortes, listas numeradas, frameworks visuais |
-| Humor | Leve e autoirônico — especialmente sobre erros passados |
+| Humor | Leve e autoirônico: especialmente sobre erros passados |
 | Energia | Otimista, motivador, mas fundamentado em evidências reais |
 | Credibilidade | Via números concretos e transparência de resultados |
 
@@ -75,10 +75,10 @@ Em 2021, lançou seu primeiro produto digital: The LinkedIn Operating System. Ve
 
 O que separa Justin Welsh de outros educadores de LinkedIn:
 
-1. **Transparência de números** - Compartilha receita, métricas e erros publicamente — ninguém mais faz isso com tanta consistência
+1. **Transparência de números** - Compartilha receita, métricas e erros publicamente: ninguém mais faz isso com tanta consistência
 2. **Um negócio, um criador** - Prova que escala é possível sem equipe, contra o mainstream de "contrate e escale"
 3. **Modelo replicável** - Tudo que faz pode ser ensinado; cria frameworks para que outros repliquem
-4. **Sem agência, sem consultoria** - 100% produtos digitais alavancados — o oposto do modelo de serviços
+4. **Sem agência, sem consultoria** - 100% produtos digitais alavancados: o oposto do modelo de serviços
 5. **Burnout como turning point** - Vulnerabilidade real sobre o custo da carreira corporativa conecta profundamente
 
 ---

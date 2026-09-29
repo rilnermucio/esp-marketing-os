@@ -8,49 +8,49 @@ O framework mais completo de Conrado Adolpho para marketing digital. Desenvolvid
 ### Os 8Ps em Sequência
 
 ```
-P1 — PESQUISA:
+P1: PESQUISA:
 ├── Objetivo: Mapear o comportamento digital do cliente ideal
 ├── Ferramentas: Google Trends, Keyword Planner, pesquisas primárias
 ├── Output: Persona detalhada + mapa de palavras-chave + canais prioritários
 └── CRÍTICO: Sem Pesquisa, todos os outros Ps são apostas no escuro
 
-P2 — PLANEJAMENTO:
+P2: PLANEJAMENTO:
 ├── Objetivo: Definir estratégia com base nos dados do P1
 ├── Inclui: Objetivos SMART, canais, verba, KPIs, cronograma
 ├── Output: Plano estratégico de marketing digital
 └── ERRO COMUM: Planejar sem os dados do P1 (plano baseado em suposição)
 
-P3 — PRODUÇÃO:
+P3: PRODUÇÃO:
 ├── Objetivo: Criar conteúdo para os canais definidos no P2
 ├── Tipos: Blog, vídeo, email, redes sociais, material rico
 ├── Output: Biblioteca de conteúdo alinhada com persona e objetivo
 └── ERRO COMUM: Produzir conteúdo de qualidade para o público errado
 
-P4 — PUBLICAÇÃO:
+P4: PUBLICAÇÃO:
 ├── Objetivo: Distribuir o conteúdo do P3 nos canais do P2
 ├── Inclui: SEO on-page, frequência de publicação, calendário editorial
 ├── Output: Presença digital ativa e consistente
 └── MÉTRICAS: Tráfego orgânico, alcance, impressões
 
-P5 — PROMOÇÃO:
+P5: PROMOÇÃO:
 ├── Objetivo: Amplificar o alcance do conteúdo via mídia paga
 ├── Inclui: Google Ads, Meta Ads, LinkedIn Ads, influenciadores
 ├── Output: Tráfego qualificado para páginas de conversão
 └── ERRO COMUM: Promover antes de ter conteúdo de qualidade (P3) e página que converte
 
-P6 — PROPAGAÇÃO:
+P6: PROPAGAÇÃO:
 ├── Objetivo: Incentivar compartilhamento orgânico do conteúdo
 ├── Inclui: Conteúdo viral, referral, programas de indicação
 ├── Output: Crescimento orgânico via audiência existente
 └── CRÍTICO: Depende de conteúdo excepcional no P3
 
-P7 — PERSONALIZAÇÃO:
+P7: PERSONALIZAÇÃO:
 ├── Objetivo: Adaptar a comunicação para segmentos específicos da audiência
 ├── Inclui: Email segmentado, retargeting, CRM, automação
 ├── Output: Conversas mais relevantes = maior conversão
 └── MÉTRICAS: Taxa de abertura segmentada, conversão por segmento
 
-P8 — PRECISÃO:
+P8: PRECISÃO:
 ├── Objetivo: Medir, analisar e otimizar todos os Ps anteriores
 ├── Ferramentas: Analytics, dashboards, A/B testing
 ├── Output: Ciclo de melhoria contínua baseado em dados
@@ -78,22 +78,22 @@ No P1 (Pesquisa), Conrado usa um mapa de calor para visualizar onde o cliente di
 
 ### Como funciona
 ```
-DIMENSÃO 1 — Onde busca:
+DIMENSÃO 1: Onde busca:
 ├── Google (qual tipo de busca: informacional, transacional, navegacional?)
 ├── YouTube (busca por tutoriais, análises, comparações?)
 └── Redes sociais (descobre por grupos, influenciadores, anúncios?)
 
-DIMENSÃO 2 — O que consome:
+DIMENSÃO 2: O que consome:
 ├── Formatos preferidos: texto longo, vídeo curto, podcast, infográfico?
 ├── Frequência: diário, semanal, quando tem problema?
 └── Profundidade: superficial (scroll) ou profundo (lê tudo)?
 
-DIMENSÃO 3 — Quando:
+DIMENSÃO 3, Quando:
 ├── Horário de pico de consumo de conteúdo
 ├── Estágio da jornada de compra em que está
 └── Sazonalidade do comportamento
 
-OUTPUT — A Concentração Digital:
+OUTPUT: A Concentração Digital:
 └── Canal primário + canal secundário + formato preferido + momento ideal
     = A combinação que maximiza alcance e relevância
 ```
@@ -191,10 +191,10 @@ Para empresas que já têm marketing digital, Conrado usa o mesmo framework dos 
 ```
 PARA CADA P, AVALIE:
 
-NÍVEL 0 — Ausente: Este P não existe na empresa
-NÍVEL 1 — Iniciante: Existe mas sem sistematização
-NÍVEL 2 — Intermediário: Sistematizado mas sem otimização
-NÍVEL 3 — Avançado: Sistematizado, otimizado e com melhoria contínua
+NÍVEL 0 (Ausente: Este P não existe na empresa)
+NÍVEL 1 (Iniciante: Existe mas sem sistematização)
+NÍVEL 2 (Intermediário: Sistematizado mas sem otimização)
+NÍVEL 3 (Avançado: Sistematizado, otimizado e com melhoria contínua)
 
 AUDITORIA RÁPIDA:
 P1 Pesquisa: __ (0-3)
@@ -207,9 +207,9 @@ P7 Personalização: __ (0-3)
 P8 Precisão: __ (0-3)
 
 INTERPRETAÇÃO:
-├── Total 0-8: Marketing digital é uma aposta — começar do zero com método
-├── Total 9-16: Base existe mas gaps críticos — priorizar os Ps em nível 0-1
-└── Total 17-24: Operação madura — foco em otimização dos Ps mais fracos
+├── Total 0-8: Marketing digital é uma aposta, começar do zero com método
+├── Total 9-16: Base existe mas gaps críticos, priorizar os Ps em nível 0-1
+└── Total 17-24: Operação madura, foco em otimização dos Ps mais fracos
 ```
 
 ### Quando usar

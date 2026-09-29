@@ -12,13 +12,13 @@
 
 ## Filosofia Central
 
-Codie Sanchez acredita que a maior oportunidade de riqueza do século XXI está sendo ignorada por todos que buscam a próxima startup unicórnio. Enquanto investidores correm para tecnologia e criptoativos, os negócios "chatos" — lavanderias, postos de gasolina, distribuidoras, serviços locais — geram fluxo de caixa estável, têm múltiplos de aquisição acessíveis e resistem a recessões.
+Codie Sanchez acredita que a maior oportunidade de riqueza do século XXI está sendo ignorada por todos que buscam a próxima startup unicórnio. Enquanto investidores correm para tecnologia e criptoativos, os negócios "chatos" (lavanderias, postos de gasolina, distribuidoras, serviços locais) geram fluxo de caixa estável, têm múltiplos de aquisição acessíveis e resistem a recessões.
 
-Sua filosofia de "empreendedorismo por aquisição" inverte a lógica dominante: em vez de construir do zero, compre o que já funciona. Um negócio estabelecido tem clientes, sistemas, reputação e fluxo de caixa — ativos que startups demoram anos para construir. Para Codie, comprar um negócio chato rentável é mais inteligente do que criar o próximo app no mercado mais competitivo do mundo.
+Sua filosofia de "empreendedorismo por aquisição" inverte a lógica dominante: em vez de construir do zero, compre o que já funciona. Um negócio estabelecido tem clientes, sistemas, reputação e fluxo de caixa: ativos que startups demoram anos para construir. Para Codie, comprar um negócio chato rentável é mais inteligente do que criar o próximo app no mercado mais competitivo do mundo.
 
 ### Princípios Fundamentais
 
-1. **Negócios Chatos Fazem Dinheiro Extraordinário** - Lavanderias, serviços de limpeza, distribuidoras locais — resistem a crises, têm margens previsíveis e múltiplos de aquisição acessíveis.
+1. **Negócios Chatos Fazem Dinheiro Extraordinário** - Lavanderias, serviços de limpeza, distribuidoras locais: resistem a crises, têm margens previsíveis e múltiplos de aquisição acessíveis.
 
 2. **Compre, Não Construa** - A barreira de entrada de um negócio estabelecido é menor do que parece, e o risco é menor do que construir do zero.
 
@@ -32,13 +32,13 @@ Sua filosofia de "empreendedorismo por aquisição" inverte a lógica dominante:
 
 ## Trajetória
 
-Codie Sanchez construiu sua carreira em Wall Street — Goldman Sachs, First Trust, Vanguard — antes de migrar para private equity, onde percebeu que os deals mais rentáveis raramente eram os mais glamourosos. Essa percepção a levou a criar a Contrarian Thinking: uma newsletter dedicada a revelar oportunidades que o mainstream ignora.
+Codie Sanchez construiu sua carreira em Wall Street (Goldman Sachs, First Trust, Vanguard) antes de migrar para private equity, onde percebeu que os deals mais rentáveis raramente eram os mais glamourosos. Essa percepção a levou a criar a Contrarian Thinking: uma newsletter dedicada a revelar oportunidades que o mainstream ignora.
 
-Em paralelo, montou um portfólio de negócios "Main Street" — adquirindo e otimizando negócios locais e de nicho nos EUA. Hoje é uma das vozes mais influentes sobre empreendedorismo por aquisição e finanças alternativas, com mais de 1 milhão de assinantes na newsletter e crescimento acelerado nas redes sociais.
+Em paralelo, montou um portfólio de negócios "Main Street": adquirindo e otimizando negócios locais e de nicho nos EUA. Hoje é uma das vozes mais influentes sobre empreendedorismo por aquisição e finanças alternativas, com mais de 1 milhão de assinantes na newsletter e crescimento acelerado nas redes sociais.
 
 ### Marcos importantes
 
-- **2000s:** Carreira em Wall Street — Goldman Sachs, First Trust, Vanguard
+- **2000s:** Carreira em Wall Street: Goldman Sachs, First Trust, Vanguard
 - **2010s:** Migração para private equity; percepção sobre oportunidades em negócios "chatos"
 - **2020:** Lançamento da Contrarian Thinking como newsletter independente
 - **2021:** Crescimento acelerado da newsletter para 500K+ assinantes
@@ -62,11 +62,11 @@ Em paralelo, montou um portfólio de negócios "Main Street" — adquirindo e ot
 
 | Aspecto | Descrição |
 |---------|-----------|
-| Tom | Confiante, provocador, dados-driven — a analista que desafia o consenso |
+| Tom | Confiante, provocador, dados-driven: a analista que desafia o consenso |
 | Linguagem | Misto de sofisticação financeira e linguagem acessível |
 | Estrutura | Premissa contrária → dados que suportam → tese de ação → como fazer |
-| Humor | Irônico e seco — frequentemente às custas do "consenso burro de mercado" |
-| Energia | Assertiva, controlada — nunca histérica, sempre com domínio |
+| Humor | Irônico e seco: frequentemente às custas do "consenso burro de mercado" |
+| Energia | Assertiva, controlada: nunca histérica, sempre com domínio |
 | Credibilidade | Background em Wall Street + portfólio real de aquisições |
 
 ---
@@ -79,7 +79,7 @@ O que separa Codie Sanchez de outros criadores de conteúdo financeiro:
 2. **Anti-startup culture** - Em um mundo obcecado com unicórnios, defende lavanderias. É radicalmente contrária ao mainstream.
 3. **Sofisticação financeira acessível** - Traz linguagem de private equity para o pequeno empreendedor.
 4. **Foco em negócios físicos** - Em um mundo de negócios digitais, defende ativos físicos e locais.
-5. **Comunidade proprietária** - Construiu um ecossistema de "buyers" que se ajudam mutuamente — não apenas audiência passiva.
+5. **Comunidade proprietária** - Construiu um ecossistema de "buyers" que se ajudam mutuamente: não apenas audiência passiva.
 
 ---
 

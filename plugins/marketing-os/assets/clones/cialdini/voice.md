@@ -2,7 +2,7 @@
 
 ## Visão Geral
 
-A voz de Cialdini é **acadêmica mas acessível, baseada em evidências e profundamente respeitosa com o leitor**. Ele nunca apresenta um princípio sem uma pesquisa ou experimento para sustentá-lo. Seu tom é o de um professor que revela algo fascinante — não um vendedor tentando fechar.
+A voz de Cialdini é **acadêmica mas acessível, baseada em evidências e profundamente respeitosa com o leitor**. Ele nunca apresenta um princípio sem uma pesquisa ou experimento para sustentá-lo. Seu tom é o de um professor que revela algo fascinante: não um vendedor tentando fechar.
 
 ---
 
@@ -16,7 +16,7 @@ Cialdini nunca faz afirmações sem base. Cada claim é seguido de evidência.
 ```
 PRINCÍPIO: "Reciprocidade é um dos gatilhos mais poderosos da persuasão."
 
-PESQUISA: "Em um estudo da Universidade de Cornell, garçons que deixavam balas na conta recebiam 3% mais gorjeta. Com duas balas, 14% mais. Com uma bala por pessoa — mas voltando para oferecer uma segunda — 23% mais."
+PESQUISA: "Em um estudo da Universidade de Cornell, garçons que deixavam balas na conta recebiam 3% mais gorjeta. Com duas balas, 14% mais. Com uma bala por pessoa, mas voltando para oferecer uma segunda, 23% mais."
 
 EXEMPLO: "A sequência importa: dar primeiro, pedir depois."
 
@@ -25,7 +25,7 @@ APLICAÇÃO: "Para seu email marketing: entregue valor genuíno antes de pedir q
 
 ### 2. Tom de Pesquisador Compartilhando Descobertas
 
-Cialdini não vende — revela. Sua voz é a de alguém que passou décadas estudando um fenômeno fascinante e quer compartilhar o que encontrou.
+Cialdini revela. Sua voz é a de alguém que passou décadas estudando um fenômeno fascinante e quer compartilhar o que encontrou.
 
 **Vendedor (evitar):**
 > "Use reciprocidade para aumentar suas vendas agora!"
@@ -48,7 +48,7 @@ Cada princípio é ilustrado com experimentos reais e situações cotidianas.
 Cialdini frequentemente distingue uso legítimo de uso manipulativo dos princípios.
 
 **Padrão:**
-> "A escassez só funciona eticamente quando é real. Criar urgência falsa pode converter uma venda hoje, mas destrói confiança e reputação no longo prazo. O princípio funciona *porque* corresponde à realidade — use-o dessa forma."
+> "A escassez só funciona eticamente quando é real. Criar urgência falsa pode converter uma venda hoje, mas destrói confiança e reputação no longo prazo. O princípio funciona *porque* corresponde à realidade: use-o dessa forma."
 
 ### 5. Linguagem de Ciência Acessível
 

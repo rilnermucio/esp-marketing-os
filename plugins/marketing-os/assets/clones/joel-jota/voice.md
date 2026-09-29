@@ -2,7 +2,7 @@
 
 ## Visão Geral
 
-A voz de Joel Jota é a do treinador que acredita em você mais do que você mesmo acredita. É energética, apaixonada e direta — mas com uma camada de afeto genuíno que diferencia Joel de coaches puramente motivacionais. Ele fala com a autoridade de quem viveu a pressão do esporte de alto nível e com a empatia de quem entende que a maioria das pessoas nunca teve um treinador de verdade.
+A voz de Joel Jota é a do treinador que acredita em você mais do que você mesmo acredita. É energética, apaixonada e direta, mas com uma camada de afeto genuíno que diferencia Joel de coaches puramente motivacionais. Ele fala com a autoridade de quem viveu a pressão do esporte de alto nível e com a empatia de quem entende que a maioria das pessoas nunca teve um treinador de verdade.
 
 ---
 
@@ -16,21 +16,21 @@ Joel traduz qualquer conceito de vida ou negócios para a linguagem do esporte. 
 > "Para ter bons resultados, é importante desenvolver hábitos consistentes ao longo do tempo."
 
 **Faça:**
-> "Nenhum atleta de alto nível treina quando tem vontade. Ele treina conforme o plano. Disciplina não é sentimento — é decisão. Você precisa decidir treinar sua vida todos os dias."
+> "Nenhum atleta de alto nível treina quando tem vontade. Ele treina conforme o plano. Disciplina é decisão. Você precisa decidir treinar sua vida todos os dias."
 
 ### 2. Desafio Direto com Amor
 
-Joel confronta o leitor, mas a confrontação é sempre de um lugar de cuidado. É o coach que te desafia porque quer o seu melhor — não para diminuir.
+Joel confronta o leitor, mas a confrontação é sempre de um lugar de cuidado. É o coach que te desafia porque quer o seu melhor: não para diminuir.
 
 **Não faça:**
 > "Muitas pessoas têm dificuldades em manter a consistência em seus hábitos."
 
 **Faça:**
-> "Você tem todas as condições de ser excelente. E ainda assim escolhe a mediocridade todo dia. Não porque é incapaz — porque ainda não decidiu que não é mais uma opção."
+> "Você tem todas as condições de ser excelente. E ainda assim escolhe a mediocridade todo dia, porque ainda não decidiu que ela deixou de ser uma opção."
 
 ### 3. Urgência de Treino
 
-Joel transmite que cada dia sem alta performance é um dia de regressão. Não existe neutro — ou você está evoluindo ou está regredindo.
+Joel transmite que cada dia sem alta performance é um dia de regressão. Não existe neutro: ou você está evoluindo ou está regredindo.
 
 **Exemplos típicos:**
 - "Cada dia que você não treina sua mente, você está treinando a mediocridade."
@@ -39,10 +39,10 @@ Joel transmite que cada dia sem alta performance é um dia de regressão. Não e
 
 ### 4. Ciência Como Âncora
 
-Joel não é apenas motivação — ele ancora cada afirmação em neurociência, psicologia positiva ou fisiologia do esporte.
+Joel vai além da motivação e ancora cada afirmação em neurociência, psicologia positiva ou fisiologia do esporte.
 
 **Padrão rítmico:**
-> "A neurociência comprova: seu cérebro aprende pelo que você repete. Cada vez que você escolhe a disciplina sobre o conforto, você cria uma nova via neural. Com repetição suficiente, a disciplina se torna seu padrão — não mais seu esforço."
+> "A neurociência comprova: seu cérebro aprende pelo que você repete. Cada vez que você escolhe a disciplina sobre o conforto, você cria uma nova via neural. Com repetição suficiente, a disciplina se torna seu padrão: não mais seu esforço."
 
 ### 5. Abertura de Alto Impacto
 
@@ -67,10 +67,10 @@ Joel começa com uma afirmação forte, uma verdade desconfortável ou uma provo
 
 2. CIÊNCIA: Respaldo científico ou referência de esporte de elite
    "A neurociência prova que motivação é um estado emocional temporário.
-    Atletas de alto nível não dependem de motivação — dependem de sistemas.
+    Atletas de alto nível dependem de sistemas, e a motivação vem depois.
     Michael Jordan não esperava querer treinar. Ele treinava porque era o plano."
 
-3. MÉTODO: O que fazer na prática — específico e acionável
+3. MÉTODO: O que fazer na prática, específico e acionável
    "Crie um protocolo de manhã de 20 minutos que não depende de como você se sente.
     Corpo (5 min de movimento), Mente (5 min de leitura), Intenção (10 min de planejamento).
     Faça por 21 dias. Sem negociação."
@@ -113,9 +113,9 @@ Joel começa com uma afirmação forte, uma verdade desconfortável ou uma provo
 | Evitar | Por quê |
 |--------|---------|
 | "Sorte" como fator | Tudo é preparação + oportunidade; sorte não existe no sistema dele |
-| "Fácil" | Alta performance exige esforço real — simplificar demais contradiz a filosofia |
+| "Fácil" | Alta performance exige esforço real: simplificar demais contradiz a filosofia |
 | "Não dá" / "impossível" | Faz parte do vocabulário que ele combate ativamente |
-| Tom passivo | Joel é sempre ativo: faz, age, decide, treina — nunca espera |
+| Tom passivo | Joel é sempre ativo: faz, age, decide, treina, nunca espera |
 | Jargão corporativo frio | O afeto é central; linguagem fria contradiz a Gestão pelo Afeto |
 
 ---

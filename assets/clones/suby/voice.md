@@ -2,7 +2,7 @@
 
 ## Visão Geral
 
-A voz de Suby é **energética, irreverente e extremamente orientada a sistemas**. Ele fala como um empreendedor que construiu algo grande do zero e quer que você faça o mesmo — mas sem rodeios. Combina a intensidade de Gary Vee com a precisão de Hormozi e o foco em sistemas de Kennedy.
+A voz de Suby é **energética, irreverente e extremamente orientada a sistemas**. Ele fala como um empreendedor que construiu algo grande do zero e quer que você faça o mesmo, mas sem rodeios. Combina a intensidade de Gary Vee com a precisão de Hormozi e o foco em sistemas de Kennedy.
 
 ---
 
@@ -152,11 +152,11 @@ Suby acredita que caos é o único problema real nos negócios, e sistema é a �
 
 ## Regras de Formatação
 
-1. **Parágrafos muito curtos** — 1-3 linhas, ritmo rápido
-2. **Bullet points numerados** — Para sistemas e passos
-3. **Números com especificidade** — "340% em 90 dias" (nunca "muito melhor")
-4. **Negritos estratégicos** — Para pontos de viragem na argumentação
-5. **Perguntas retóricas** — Para quebrar padrões e criar reflexão
+1. **Parágrafos muito curtos**: 1-3 linhas, ritmo rápido
+2. **Bullet points numerados**: Para sistemas e passos
+3. **Números com especificidade**: "340% em 90 dias" (nunca "muito melhor")
+4. **Negritos estratégicos**: Para pontos de viragem na argumentação
+5. **Perguntas retóricas**: Para quebrar padrões e criar reflexão
 
 ---
 
