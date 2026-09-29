@@ -16,6 +16,10 @@ Arquivos manifesto: `.claude-plugin/plugin.json` e `.claude-plugin/marketplace.j
 # Test suite Tier 1 (estática, rápida — valida manifesto, SKILL.md, subagents, simlinks, separação workspace)
 python -m pytest scripts/tests/ -v -m "not smoke"
 
+# Smoke de instalação real (Claude Code instalado, sessão fora do repo, agents em Haiku; ~2 min)
+# Obrigatório ao mexer em hooks, caminhos, nomes de agent, memória ou manifests (ADR-0005)
+MOS_SMOKE=1 python -m pytest scripts/tests/test_install_smoke.py -m smoke -v
+
 # Rodar um único teste
 python -m pytest scripts/tests/test_plugin_manifest.py -v
 python -m pytest scripts/tests/test_subagents.py::test_subagent_files_exist -v
@@ -48,18 +52,18 @@ Processo canônico de manutenção do plugin, para humanos e agentes de IA. Ante
 
 A arquitetura crítica de entender antes de mexer em qualquer agent:
 
-- **Tier 1** — `agents/mos-*.md` (21 arquivos, ~250 linhas cada). System prompts enxutos com YAML frontmatter (`name`, `description`, `tools`, `model`, `color`, `hooks`, opcional `memory`). Carregados automaticamente pelo Claude Code quando a sessão abre. Contêm dispatch protocol, output schema e quality gates.
+- **Tier 1** — `agents/mos-*.md` (21 arquivos, ~250 linhas cada). System prompts enxutos com YAML frontmatter (`name`, `description`, `tools`, `model`, `color`, `memory`). Hooks não entram no frontmatter: a plataforma ignora esse campo em agent de plugin (ADR-0005). Carregados automaticamente pelo Claude Code quando a sessão abre. Contêm dispatch protocol, output schema e quality gates.
 - **Tier 2** — `subagents/*-agent.md` (21 arquivos, profundidade variável de ~400 a ~6,5 mil linhas). Knowledge base profunda: frameworks, cases, tabelas, exemplos. Lida sob demanda via `Read` pelos agents tier-1 quando precisam de profundidade. Os mais densos hoje: `copy-agent.md` (~5,3 mil linhas, inclui PARTE II-C Big Idea + Value Stack) e `funnel-agent.md` (~3,5 mil linhas, inclui Webinar Funnel 3.4, Página de Aplicação BOFU 3.5 e Anti-Avatar 4.6).
 
 Isso mantém contextos leves, carrega profundidade só quando precisa, e permite evoluir knowledge sem mexer no dispatch.
 
 Todos os 21 agents declaram `memory: project` no frontmatter (completado no nivelamento de jul/2026). Ver "Memory opt-in (per-projeto)" abaixo.
 
-A skill em `skills/marketing-os/SKILL.md` é um **orquestrador**. Ela usa `Agent(subagent_type: "mos-*")` no Claude Code e mapeia o mesmo dispatch para leitura Tier 1/Tier 2 no ChatGPT Work e no Codex. Os symlinks dentro de `skills/marketing-os/` (`assets`, `references`, `scripts`, `subagents`, `workflows`) apontam para os diretórios da raiz.
+A skill em `skills/marketing-os/SKILL.md` é um **orquestrador**. Ela usa `Agent(subagent_type: "marketing-os:mos-*")` no Claude Code e mapeia o mesmo dispatch para leitura Tier 1/Tier 2 no ChatGPT Work e no Codex. Os symlinks dentro de `skills/marketing-os/` (`assets`, `references`, `scripts`, `subagents`, `workflows`) apontam para os diretórios da raiz.
 
 ## Protocolo de dispatch (regra fundamental)
 
-Para qualquer pedido de produção de marketing (copy, SEO, post, anúncio, vídeo, etc.), **NÃO execute inline**. Despache o subagent via `Agent(subagent_type: "mos-*", prompt: ...)`.
+Para qualquer pedido de produção de marketing (copy, SEO, post, anúncio, vídeo, etc.), **NÃO execute inline**. Despache o subagent via `Agent(subagent_type: "marketing-os:mos-*", prompt: ...)`. Instalado, o agent de plugin só responde pelo nome qualificado; o nome curto falha com "Agent type not found".
 
 | Situação | Ação |
 |----------|------|
@@ -101,7 +105,9 @@ Conteúdos de redes sociais (Reels, posts, carrosséis, stories) **devem** inclu
 
 Os scripts Python em `scripts/` (CLI unificado em `scripts/mos.py`) são invocados pelos agents Tier 1 com acesso a `Bash` para tarefas determinísticas: `seo_analyzer.py`, `hashtag_generator.py`, `hook_generator.py`, `reels_script_generator.py`, `carousel_structure_generator.py`, `caption_generator.py`, `trend_tracker.py`, `quality_gate.py`, `headline_scorer.py`, `competitor_analyzer.py`, etc.
 
-Hook de quality gate: `scripts/hooks/quality_gate_hook.py` é invocado via `PreToolUse` matcher `Write|Edit|MultiEdit` em vários agents Tier 1 (ver frontmatter em `agents/mos-*.md`) e via `SubagentStop` global em `hooks/hooks.json` para validar a resposta final dos `mos-*`. O núcleo puro `evaluate_event` atende as duas superfícies e limita a correção final a uma tentativa para evitar loop.
+Hook de quality gate: `scripts/hooks/quality_gate_hook.py` é registrado no nível do plugin, em `hooks/hooks.json`: `PreToolUse` (`Write|Edit|MultiEdit`) e `SubagentStop`. Ele só age em eventos de agents do Marketing OS (`marketing-os:mos-*`, ou `mos-*` em instalação local); escrita da sessão principal do usuário passa direto. O núcleo puro `evaluate_event` atende as duas superfícies e limita a correção final a uma tentativa para evitar loop. Bloqueio sai em stderr com exit 2; avisos saem em JSON `additionalContext`, o único canal de exit 0 que o modelo vê. `MOS_HOOK_LOG=<arquivo>` registra cada evento para diagnóstico.
+
+Caminhos em runtime (ADR-0005): instalado, o plugin roda com a sessão no projeto do usuário. Agents, commands e SKILL.md referenciam recursos do plugin como `${CLAUDE_PLUGIN_ROOT}/subagents/...` (comandos de terminal com o caminho entre aspas), e scripts gravam estado do usuário em `workspace/` do diretório da sessão (`scripts/workspace_paths.py`). O guard `scripts/tests/test_plugin_runtime_paths.py` trava a regressão, e o build do pacote universal desfaz essas adaptações para ChatGPT Work e Codex.
 
 **Apify (opt-in)**: 6 scripts opcionais (`apify_client.py` + 5 scrapers: `apify_serp.py`, `apify_instagram.py`, `apify_meta_ads.py`, `apify_tiktok.py`, `apify_youtube.py`) habilitam scraping estruturado de SERP do Google, Instagram, Meta Ad Library, TikTok e YouTube. Usados pelos agents `mos-seo`, `mos-research`, `mos-ads` e `mos-video` quando a variável `APIFY_TOKEN` está disponível. Sem token, comportamento idêntico ao anterior (fallback automático para `WebSearch`). Setup, custo estimado, mapeamento Actor↔agent e FAQ em `docs/APIFY-INTEGRATION.md`.
 
@@ -133,7 +139,10 @@ Antes de mexer em `.claude-plugin/plugin.json` ou `.claude-plugin/marketplace.js
 | Field `category` em `plugin.json` | Singular `"category": "marketing"`, não plural `"categories": [...]`. Plural é input inválido | Desktop |
 | Field `skills` em `plugin.json` | **Não declarar** se usa folder default `skills/`. O explicit `["skills/marketing-os"]` é rejeitado como "Invalid input"; default discovery cobre | Desktop |
 | `marketplace.json` metadata block | Use top-level `description` e `version` (NÃO `metadata.{description,version}`). Metadata block é só backward-compat e Desktop pode rejeitar | Desktop |
-| Hook command em agent frontmatter | **MUST** usar `${CLAUDE_PLUGIN_ROOT}/scripts/hooks/...`. Caminho relativo `scripts/hooks/...` falha em qualquer CWD ≠ raiz do plugin (CWD do hook é do user, não do plugin install dir) | Code + Desktop em runtime |
+| Hook em frontmatter de agent de plugin | **Ignorado pela plataforma** (junto com `mcpServers` e `permissionMode`). Registre hooks em `hooks/hooks.json` com `"${CLAUDE_PLUGIN_ROOT}/..."` entre aspas | Code + Desktop em runtime |
+| Nome de agent de plugin | Chega qualificado: `marketing-os:mos-copy` no dispatch (`subagent_type`) e no `agent_type` dos hooks. Nome curto falha com "Agent type not found" | Code + Desktop em runtime |
+| Caminho relativo a recurso do plugin | Só resolve com a sessão dentro do repo. Instalado, use `${CLAUDE_PLUGIN_ROOT}/...` (substituído em agents, commands e skills) | Code + Desktop em runtime |
+| Memória nativa de agent de plugin | Diretório `.claude/agent-memory/<plugin>-<agent>/` (ex: `marketing-os-mos-copy`), não o nome curto | Code + Desktop em runtime |
 | Marketplace name bug | Anthropic cacheia state por nome de marketplace server-side. Se seu marketplace teve syncs broken, rename pra bypass cache (ex: `marketing-os-marketplace` → `mos-marketplace`) | Desktop |
 | Reserved names | `claude-code-marketplace`, `claude-code-plugins`, `claude-plugins-official`, `anthropic-marketplace`, `anthropic-plugins`, `agent-skills` — não usar | Validator |
 | kebab-case strict | Plugin/marketplace `name` deve ser kebab-case. Outras formas funcionam no Code mas Claude.ai sync rejeita | Sync layer |

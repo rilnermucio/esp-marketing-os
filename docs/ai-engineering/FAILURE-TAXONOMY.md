@@ -28,7 +28,7 @@
 | F-COPY-01 | AI-tells: travessão, "brutal", antítese negação→afirmação, clichês | Recorrente até jun/2026 (motivou o gate de antítese em 3 camadas) | `quality_gate_hook.py` (HARD BLOCK) + `quality_gate.py` (score capado em 60) | [QUALITY-GATES.md](QUALITY-GATES.md) |
 | F-COPY-02 | Hook fraco, CTA fraco, promessa sem prova | Medido, não bloqueado | `quality_gate.py` (checks de hook/CTA) + Copy Score System | Auto-iteração com scoring (H1.1) |
 | F-COPY-03 | Estouro de limite de plataforma (chars, formato) | Hipotético | `quality_gate.py --type` + Gate 4 do mos-copy | Tabela de limites no agent |
-| F-COPY-04 | Resposta final escapa do gate por ser entregue diretamente no chat | Baseline jul/2026: output sem Write/Edit preservou padrões bloqueantes | `SubagentStop` em `hooks/hooks.json` + `test_quality_gate_hook.py` | Núcleo compartilhado `evaluate_event`; ADR-0003 |
+| F-COPY-04 | Resposta final escapa do gate por ser entregue diretamente no chat | Baseline jul/2026: output sem Write/Edit preservou padrões bloqueantes. Auditoria 2026-09-28: o `SubagentStop` descartava `marketing-os:mos-*`, então o gate nunca rodou instalado (F-DIST-05) | `SubagentStop` em `hooks/hooks.json` + `test_quality_gate_hook.py` (payload real) + `test_install_smoke.py` | Núcleo compartilhado `evaluate_event`; ADR-0003 e ADR-0005 |
 
 ## F-PTBR: Língua
 
@@ -82,7 +82,11 @@ Falhas que só aparecem quando o plugin roda instalado, com a sessão no projeto
 
 | ID | Falha | Exemplo real / risco | Detecção | Prevenção |
 |---|---|---|---|---|
+| F-DIST-01 | Recurso do plugin referenciado por caminho relativo (só resolve com a sessão dentro do repo) | Auditoria 2026-09-28: 291 referências em 36 arquivos; o agent instalado respondeu NOT-FOUND para a própria KB | `test_plugin_runtime_paths.py::test_plugin_resources_are_anchored_to_plugin_root` + `test_install_smoke.py::test_agent_reaches_own_tier2_kb` | `${CLAUDE_PLUGIN_ROOT}/...` em agents, commands e SKILL.md; ADR-0005 |
 | F-DIST-02 | Conteúdo pessoal versionado e distribuído pela raiz do marketplace | Incidente 2026-09-28: 3 `.docx` de cliente em `workspace/research/` rastreados de 2026-05-06 a 2026-09-28 num repo público; a regra `workspace/**` do `.gitignore` não remove arquivo já versionado | `test_workspace_separation.py::test_workspace_tracks_only_gitkeep` e `::test_no_office_documents_tracked` | `git rm --cached` ao adicionar regra de ignore; fonte do marketplace nunca inclui material de cliente |
+| F-DIST-03 | Estado do usuário gravado na pasta do plugin (some no update, mistura projetos) | Auditoria 2026-09-28: `/projeto`, relatório semanal e coleta do TikTok gravavam ao lado do script | `test_workspace_paths.py` | `scripts/workspace_paths.py::user_workspace()` |
+| F-DIST-04 | Hook declarado em superfície que a plataforma ignora | Auditoria 2026-09-28: gate de escrita no frontmatter dos 21 agents nunca rodou instalado (a plataforma ignora `hooks` em agent de plugin) | `test_quality_gate_hook.py::test_agents_do_not_declare_frontmatter_hooks` e `::test_plugin_registers_write_gate` + smoke | Hooks só em `hooks/hooks.json`; ADR-0005 |
+| F-DIST-05 | Nome de agent assumido sem o namespace do plugin | Auditoria 2026-09-28: dispatch `mos-growth` falhou com "Agent type not found"; hook descartava `marketing-os:mos-copy` | `test_plugin_runtime_paths.py::test_dispatch_uses_plugin_qualified_agent_name` + `TestMarketingAgent` + fixtures de payload real | `marketing-os:mos-*` no dispatch; `marketing_agent()` no hook |
 
 ## F-REL: Release
 
@@ -90,7 +94,7 @@ Falhas que só aparecem quando o plugin roda instalado, com a sessão no projeto
 |---|---|---|---|---|
 | F-REL-01 | Tag apontando pra commit fora do main | v6.7 e v6.8: recovery via reset + force-push + retag | `git merge-base --is-ancestor <tag> main` | Passo obrigatório do checklist |
 | F-REL-02 | CHANGELOG não cobre o range da release | 15+ commits sem entrada entre v6.8.0 e jul/2026 | `git log <última-tag>..HEAD` vs CHANGELOG | Checklist |
-| F-REL-03 | Release publicada sem teste real de install | Motivou a regra "validate é necessário mas não suficiente" (v6.1.x) | Install em projeto limpo | Checklist |
+| F-REL-03 | Release publicada sem teste real de install | Motivou a regra "validate é necessário mas não suficiente" (v6.1.x). Recorreu até 2026-09: nenhuma release foi exercitada fora do repo, o que escondeu F-DIST-01, 04 e 05 | `test_install_smoke.py` (MOS_SMOKE=1) + install em projeto limpo | Checklist, Fase 0 e Fase 5 |
 
 ## F-DOC: Documentação desatualizada
 

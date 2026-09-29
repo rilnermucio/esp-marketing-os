@@ -24,8 +24,8 @@
 | Camada | Arquivo | Natureza | Cobre |
 |---|---|---|---|
 | 1. Gates de prompt | `agents/mos-*.md` (seção Quality Gates), `skills/marketing-os/SKILL.md`, `AGENTS.md` | Instrução ao modelo (depende de obediência) | Todas as regras, incluindo as não-regexáveis (tom, aspas, enquete) |
-| 2a. Hook PreToolUse | Frontmatter dos agents + `scripts/hooks/quality_gate_hook.py` | **Determinística e bloqueante** antes de Write/Edit/MultiEdit | Travessão, "brutal", antíteses, clichês, compliance em arquivos de output |
-| 2b. Hook SubagentStop | `hooks/hooks.json` + `scripts/hooks/quality_gate_hook.py` | **Determinística e bloqueante** na resposta final dos subagents `mos-*` | As mesmas regras, inclusive quando a entrega ocorre apenas no chat |
+| 2a. Hook PreToolUse | `hooks/hooks.json` + `scripts/hooks/quality_gate_hook.py`, só para escritas feitas por agents `mos-*` | **Determinística**: bloqueia travessão (e travessão curto usado como pontuação), "brutal" e variações, antíteses; avisa (additionalContext) clichês, CAPS, excesso de emojis e compliance | Arquivos de output dos agents |
+| 2b. Hook SubagentStop | `hooks/hooks.json` + `scripts/hooks/quality_gate_hook.py` | **Determinística** na resposta final dos subagents `marketing-os:mos-*`: mesmos bloqueios e avisos | As mesmas regras, inclusive quando a entrega ocorre apenas no chat |
 | 3. Lint CLI | `scripts/quality_gate.py` | Determinística, score 0-100 com veredicto (vício de IA capa o score em 60) | Acentos, hook, CTA, legibilidade, formato, hashtags, vícios de IA |
 | Guards da camada | `scripts/tests/test_quality_gate_hook.py`, `scripts/tests/test_quality_gate.py` | Testes | Regexes com casos positivos E negativos |
 

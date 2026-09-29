@@ -24,7 +24,8 @@ Heurística permanente: prefira reescrever a frase sem o número (H8.5).
    - `description` com triggers concretos em PT-BR (palavras que o usuário digita).
    - `tools` coerentes com o prompt (H1.2): fact-check exige WebSearch; rodar scripts exige Bash.
    - `model` por capacidade (ver [COST-CONTROL.md](COST-CONTROL.md) §2): opus só pra raciocínio pesado.
-   - `hooks` PreToolUse com `${CLAUDE_PLUGIN_ROOT}/scripts/hooks/quality_gate_hook.py` (path relativo quebra fora do dev local: gotcha documentado). O `SubagentStop` global já é registrado em `hooks/hooks.json`.
+   - **Sem `hooks` no frontmatter**: a plataforma ignora o campo em agent de plugin. O quality gate já cobre qualquer agent `mos-*` pelo `hooks/hooks.json` (ADR-0005).
+   - Recursos do plugin no corpo sempre como `${CLAUDE_PLUGIN_ROOT}/...` e dispatch como `marketing-os:mos-*` (guard `test_plugin_runtime_paths.py`).
    - Corpo: use `agents/mos-copy.md` como referência de estrutura (protocolo, gates, output schema, anti-padrões).
 3. `memory: project`? Só se passa no critério H1.3. Se sim: bloco de memory no prompt (o que salvar / o que NÃO salvar), entrada no `scripts/init_agent_memory.py`, contagens.
 4. Crie a KB `subagents/<nome>-agent.md` com índice no topo (H2.2) e snapshot guards em seções datadas (H2.3). O Tier 1 referencia PARTEs específicas.
@@ -36,7 +37,7 @@ Heurística permanente: prefira reescrever a frase sem o número (H8.5).
 
 1. Justifique contra **H7.3** (workflow recorrente com inputs estruturáveis).
 2. Crie `commands/<nome>.md` com a anatomia mínima de **H3.2** (frontmatter, required inputs, decision tree se houver ramos, dispatch com prompt auto-contido, `## Consolidação`, referência a quality gates, "Por que esse dispatch").
-3. Contratos automáticos que ele precisa passar (`test_commands_dispatch.py`): frontmatter com description; ≥1 `Agent(subagent_type: "mos-*")` com agent existente; marcador de consolidação; referência a quality gates. Utility genuíno: adicionar a `UTILITY_COMMANDS` com comentário.
+3. Contratos automáticos que ele precisa passar (`test_commands_dispatch.py`): frontmatter com description; ≥1 `Agent(subagent_type: "marketing-os:mos-*")` com agent existente; marcador de consolidação; referência a quality gates. Utility genuíno: adicionar a `UTILITY_COMMANDS` com comentário.
 4. Golden set: caso novo ou atualização de caso existente (ex: RT-013 espera `/criar-teste-ab` um dia).
 5. Contagens nos 3 docs (tabela de sincronia) + tabela de categorias.
 6. Suite completa.
