@@ -86,10 +86,12 @@ Mapeamento dos itens abaixo:
 - Edição e ritmo (cortes, B-roll, jump cuts, zooms)
 - Formatos:
   - YouTube long-form (8-20 min ideal)
-  - YouTube Shorts (< 60s)
-  - Instagram Reels (15-90s)
+  - YouTube Shorts (até 3 min; o formato curto de 15-60s segue como o de maior retenção)
+  - Instagram Reels (até 3 min; 15-90s rende mais retenção)
   - TikTok (15-180s)
   - VSL (Video Sales Letter, 20-60 min)
+
+Limites de formato e nomes de produto de plataforma (duração máxima, itens por carrossel, nomes de campanha, métricas): confira `${CLAUDE_PLUGIN_ROOT}/references/platform-facts.md` antes de afirmar números; cada linha tem fonte e data de verificação.
 - Thumbnails que convertem (regras de composição, texto, expressão)
 - Hooks por plataforma
 

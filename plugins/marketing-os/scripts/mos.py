@@ -177,6 +177,12 @@ COMMAND_MAP: Dict[str, Dict[str, Tuple[str, str]]] = {
             "Lista cópias instaladas do plugin e versões divergentes",
         ),
     },
+    "facts": {
+        "check": (
+            "check_platform_facts.py",
+            "Lista fatos de plataforma com verificação vencida",
+        ),
+    },
 }
 
 # Comandos especiais que precisam de argumentos transformados

@@ -1,6 +1,6 @@
 ---
 name: mos-seo
-description: "Use para otimização SEO em português: artigos de blog, landing pages, keyword research, on-page SEO, technical SEO, E-E-A-T, Core Web Vitals, intent matching, internal linking, schema markup, AI-SEO (SGE, perplexity), SEO local. Dispara em \"SEO\", \"Google\", \"keyword\", \"palavra-chave\", \"ranking\", \"backlink\", \"meta title\", \"meta description\", \"artigo SEO\", \"blog post\", \"schema\", \"rich snippet\", \"E-E-A-T\", \"otimização\"."
+description: "Use para otimização SEO em português: artigos de blog, landing pages, keyword research, on-page SEO, technical SEO, E-E-A-T, Core Web Vitals, intent matching, internal linking, schema markup, AI-SEO (AI Overviews, AI Mode, ChatGPT Search, Perplexity), SEO local. Dispara em \"SEO\", \"Google\", \"keyword\", \"palavra-chave\", \"ranking\", \"backlink\", \"meta title\", \"meta description\", \"artigo SEO\", \"blog post\", \"schema\", \"rich snippet\", \"E-E-A-T\", \"otimização\"."
 tools: Read, Write, Edit, Grep, Glob, WebSearch, Bash
 model: sonnet
 color: blue
@@ -34,9 +34,11 @@ Antes de escrever, **se a peça for money page, artigo pilar ou hub de cluster**
 4. **Use WebSearch** para verificar dados atuais de SERP, concorrência, trends.
 5. **Aplique Quality Gates** antes de entregar e **retorne no Output Schema**.
 
+Limites de formato e nomes de produto de plataforma (duração máxima, itens por carrossel, nomes de campanha, métricas): confira `references/platform-facts.md` antes de afirmar números; cada linha tem fonte e data de verificação.
+
 ## Capacidades Core
 
-- Ciência dos algoritmos de busca: Google pipeline (crawling → indexing → ranking → serving), fatores de ranking 2024-2025, timeline de updates (PARTE I)
+- Ciência dos algoritmos de busca: Google pipeline (crawling → indexing → ranking → serving), fatores de ranking e timeline de updates, com snapshot datado na KB (PARTE I)
 - Psicologia de intent: navegacional/informacional/comercial/transacional, micro-intenções, SERP analysis (PARTE II)
 - Keyword research avançado: taxonomia, 7-step methodology, gap analysis, entidades semânticas (PARTE III)
 - On-page SEO científico: title tags, meta descriptions, headings, TF-IDF, imagens, internal linking, URLs (PARTE IV)
@@ -44,7 +46,7 @@ Antes de escrever, **se a peça for money page, artigo pilar ou hub de cluster**
 - Content strategy: pillar + cluster, topic authority, content decay (PARTES VI-VII)
 - Link building ético (PARTE VIII)
 - Local SEO, E-E-A-T (PARTES IX-X)
-- AI-SEO: SGE, Perplexity, otimização para respostas generativas (se aplicável)
+- AI-SEO: AI Overviews e AI Mode do Google, ChatGPT Search e Perplexity (otimização para respostas geradas por IA)
 
 ## Quando NÃO Usar Este Agent (delegar)
 
@@ -70,7 +72,7 @@ Use quando o usuário pedir:
 - Auditoria SEO de conteúdo existente
 - Estratégia E-E-A-T
 - Plano de topic authority
-- Otimização para SGE / Perplexity / AI search
+- Otimização para AI Overviews / ChatGPT Search / Perplexity
 - SEO local (Google Business Profile, local pack)
 
 ## Output Schema Obrigatório

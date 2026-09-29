@@ -104,7 +104,7 @@ Falhas que só aparecem quando o plugin roda instalado, com a sessão no projeto
 |---|---|---|---|---|
 | F-DOC-01 | Contagem drifted em prosa | Clones citados como 34/35/36 em lugares diferentes até jul/2026 (real: 34; o "35" veio de off-by-one da própria auditoria, pego pelo guard `test_repo_consistency`); scripts 48/50/52 em 30 dias | Guard `test_readme_counts_match_filesystem`; grep numérico | H8.5: frase sem número > número com guard > número solto |
 | F-DOC-02 | Doc histórica sem banner tratada como atual | VALIDATION-RESULTS-v6.5.0.md; SUBAGENTS-EXPANSION-PLAN.md | Auditoria de docs | Banner "histórico" no topo ou mover pra archive/ |
-| F-DOC-03 | Seção datada sem snapshot guard | PARTE XVI do copy-agent (corrigido jun/2026) | Grep por anos/meses em KBs | H2.3 |
+| F-DOC-03 | Seção datada sem snapshot guard, ou fato de plataforma sem data de verificação | PARTE XVI do copy-agent (corrigido jun/2026). Auditoria 2026-09-28: Reels "até 90s", Shorts "< 60s", Stories "15s", carrossel "10 slides" e "Advantage+ Shopping" vencidos | Grep por anos/meses em KBs; `python3 scripts/mos.py facts check` | H2.3; registro `references/platform-facts.md` com fonte e data por linha |
 
 ## F-EVAL: Evals frágeis
 

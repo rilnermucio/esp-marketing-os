@@ -8,6 +8,7 @@
 - [ ] Suite verde: `python -m pytest scripts/tests/ -m "not smoke" -q`
   - Se `test_pdf_generator::test_cli_basic` falhar na suite cheia, re-rode isolado antes de investigar (flaky conhecido, F-EVAL-03).
 - [ ] `python scripts/validate_agents.py --strict` limpo (CI também roda, mas valide local).
+- [ ] Fatos de plataforma em dia: `python3 scripts/mos.py facts check` sem VENCIDO (ou linhas vencidas reverificadas via WebSearch, com fonte e data novas). Runbook: [runbooks/refresh-fatos-plataforma.md](runbooks/refresh-fatos-plataforma.md).
 - [ ] Smoke de instalação real verde: `MOS_SMOKE=1 python -m pytest scripts/tests/test_install_smoke.py -m smoke -v` (sessão fora do repo; F-DIST, ADR-0005). A suíte padrão roda dentro do repo e não enxerga caminho relativo, nome curto de agent nem hook ignorado.
 - [ ] Varredura rápida de drift: contagens em README/AGENTS/SKILL batem com `ls commands/*.md | wc -l`, nº de agents, nº de clones. Divergência: corrigir ANTES do bump (F-DOC-01).
 

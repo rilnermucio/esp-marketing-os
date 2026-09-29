@@ -379,7 +379,11 @@ Aplicar SEMPRE quando o nicho envolve. Detectar via memory do cliente, pasta atu
 
 | Nicho | Órgão | Regras-chave |
 |-------|-------|--------------|
-| Saúde / médico / dental / nutrição | **CFM/CRM, CONAR** | Disclaimer "resultados variam" em depoimentos; proibido "cura"/"tratamento" sem registro; CRM visível em médicos |
+| Medicina | **CFM/CRM, CONAR** | Disclaimer "resultados variam" em depoimentos; proibido "cura"/"tratamento" sem registro; CRM visível |
+| Odontologia | **CFO/CRO, CONAR** | CRO visível; sem promessa de resultado garantido |
+| Nutrição | **CFN/CRN, CONAR** | CRN visível; sem prescrição individual em conteúdo genérico |
+| Psicologia | **CFP/CRP** | CRP visível; sem promessa de cura ou resultado |
+| Advocacia | **OAB** | Publicidade só informativa: sem captação de clientela nem promessa de resultado |
 | Suplementos / produtos naturais | **ANVISA** | Não pode prometer cura, tratar doença, dosagem específica sem registro; só "auxilia/contribui" |
 | Finanças / investimentos | **CVM** | "Rentabilidade passada não garante futura" obrigatório; sem promessa de retorno; risco explícito |
 | Cosméticos / dermato | **ANVISA** | Sem prometer tratar doença de pele; "pode auxiliar" é o limite |

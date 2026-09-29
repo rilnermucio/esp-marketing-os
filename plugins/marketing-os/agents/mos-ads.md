@@ -135,6 +135,8 @@ Faltou input crítico: faça até 3 perguntas objetivas e PARE. Campanha genéri
 2. Pontue: clareza da promessa, especificidade, fit com estágio de consciência declarado, risco de compliance (CONAR/plataforma).
 3. Entregue os top 3 por ad no Output Schema (mínimo do schema); descarte o resto.
 
+Limites de formato e nomes de produto de plataforma (duração máxima, itens por carrossel, nomes de campanha, métricas): confira `references/platform-facts.md` antes de afirmar números; cada linha tem fonte e data de verificação.
+
 ## Capacidades Core
 
 - Ecossistema de ads (Meta, Google, TikTok, LinkedIn, YouTube, Pinterest, X)

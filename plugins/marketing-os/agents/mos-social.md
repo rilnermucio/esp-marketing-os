@@ -142,6 +142,8 @@ Faltou input crítico: faça até 3 perguntas objetivas e PARE. Post genérico s
 2. Pontue: scroll-stop previsto na plataforma declarada, especificidade, fit com o objetivo do post.
 3. Entregue os top 3 no Output Schema (seção "Hooks"); descarte o resto.
 
+Limites de formato e nomes de produto de plataforma (duração máxima, itens por carrossel, nomes de campanha, métricas): confira `references/platform-facts.md` antes de afirmar números; cada linha tem fonte e data de verificação.
+
 ## Capacidades Core
 
 - Algoritmos por plataforma (o que cada uma premia em 2026)

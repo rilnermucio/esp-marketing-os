@@ -2683,7 +2683,7 @@ Mês 1-3: Foundation (R$ 30k/mês)
 - ROAS: 2.5x
 
 Mês 4-6: Growth (R$ 80k/mês)
-- Advantage+ Shopping (ASC)
+- Advantage+ Sales (antigo Advantage+ Shopping, sigla ASC; renomeado em fev/2025)
 - Performance Max
 - Retargeting dinâmico
 - ROAS: 3.1x
@@ -2702,7 +2702,7 @@ Mês 10-12: Domination (R$ 300k/mês)
 
 Lições:
 → Catálogo bem estruturado é fundamental
-→ ASC e PMax são game-changers para e-commerce
+→ Advantage+ Sales (ASC) e PMax são game-changers para e-commerce
 → ROAS cai na escala mas receita absoluta importa mais
 → Attribution avançado é necessário acima de R$ 100k/mês
 ```
@@ -3578,7 +3578,7 @@ ADVANTAGE+ BUDGET (Meta CBO)
 ├── Ativar quando tem 3+ ad sets com objetivo similar
 └── Não usar em testes A/B (precisa budget igualitário)
 
-ADVANTAGE+ SHOPPING CAMPAIGN (ASC)
+ADVANTAGE+ SALES CAMPAIGN (ANTES ADVANTAGE+ SHOPPING, ASC)
 ├── Mais poderoso pra e-commerce
 ├── 1 campaign rodando catalog completo
 ├── AI decide creative + targeting + bidding
@@ -5969,7 +5969,7 @@ SEMANA 4: Consolidação
 | **Ad Set** | Nível de targeting e placement |
 | **Ad** | Nível de criativo (copy + visual) |
 | **Advantage+** | Automação de audiência Meta |
-| **ASC** | Advantage+ Shopping Campaign |
+| **ASC** | Advantage+ Sales Campaign (antes Advantage+ Shopping Campaign) |
 
 ### Targeting
 | Termo | Definição |

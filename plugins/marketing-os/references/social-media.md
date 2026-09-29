@@ -17,9 +17,9 @@
 |---------|-----------|---------|------------|
 | Feed Quadrado | 1080x1080px | - | 2.200 (125 visíveis) |
 | Feed Retrato | 1080x1350px | - | 2.200 |
-| Stories | 1080x1920px | 15s por story | - |
-| Reels | 1080x1920px | 15-90s | 2.200 |
-| Carrossel | 1080x1080/1350px | 10 slides | 2.200 |
+| Stories | 1080x1920px | até 60s por story | - |
+| Reels | 1080x1920px | até 3 min (15-90s retém mais) | 2.200 |
+| Carrossel | 1080x1080/1350px | até 20 itens | 2.200 |
 
 ### Estrutura de Post - Feed
 
