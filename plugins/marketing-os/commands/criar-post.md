@@ -26,8 +26,8 @@ This command does NOT produce content inline. It **dispatches specialist subagen
 ```
 Briefing recebido
   ├── Tópico genérico ou novo nicho? (sim)
-  │     └── Dispatch PARALELO: mos-research + mos-copy
-  │         (research valida claims/tendências em paralelo com geração de hooks)
+  │     └── Dispatch PARALELO: mos-research + mos-social
+  │         (research valida claims/tendências em paralelo com a produção do post)
   │
   ├── Tópico conhecido + precisa de post polido? (sim)
   │     └── Dispatch SIMPLES: mos-social (ele já coordena com mos-copy via knowledge)
