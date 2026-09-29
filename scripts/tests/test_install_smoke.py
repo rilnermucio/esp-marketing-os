@@ -150,6 +150,9 @@ def test_final_answer_gate_evaluates_namespaced_agent(
         "O gate descartou a resposta final do agent sem avaliar (nome qualificado "
         f"não reconhecido): {copy_stops}"
     )
+    # Uma parada, ou duas quando há bloqueio e correção. Mais que isso é o laço
+    # de avisos visto nas baselines AO-005 e AO-007 (ADR-0008).
+    assert len(copy_stops) <= 2, f"Laço no gate da resposta final: {copy_stops}"
 
 
 def test_agent_file_write_is_gated(sandbox: tuple[Path, Path]) -> None:

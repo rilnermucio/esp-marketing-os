@@ -464,7 +464,8 @@ class TestRender:
         assert data["hookSpecificOutput"]["hookEventName"] == "PreToolUse"
         assert "vamos mergulhar" in data["hookSpecificOutput"]["additionalContext"]
 
-    def test_retry_exhausted_informs_user_and_parent(self):
+    def test_retry_exhausted_informs_user_without_reopening_agent(self):
+        """additionalContext na resposta final faz o subagent continuar (AO-007)."""
         payload = load_payload(
             "subagent_stop_plugin_agent.json",
             stop_hook_active=True,
@@ -473,8 +474,35 @@ class TestRender:
         code, out, _ = render("SubagentStop", evaluate_event(payload))
         data = json.loads(out)
         assert code == 0
-        assert "systemMessage" in data
-        assert "brutal" in data["hookSpecificOutput"]["additionalContext"]
+        assert "brutal" in data["systemMessage"]
+        assert "hookSpecificOutput" not in data
+
+    def test_final_answer_block_asks_for_complete_delivery(self):
+        """Baselines AO-005 e AO-007: o agent devolvia só a nota de correção."""
+        payload = load_payload(
+            "subagent_stop_plugin_agent.json", last_assistant_message="Isso é brutal."
+        )
+        _, _, err = render("SubagentStop", evaluate_event(payload))
+        assert "entrega completa" in err
+        assert "pedido de desculpas" in err
+
+    def test_final_answer_warnings_alone_stay_silent(self):
+        """Aviso sem bloqueio não reabre o subagent (evita o laço de CAPS do AO-007)."""
+        payload = load_payload(
+            "subagent_stop_plugin_agent.json",
+            last_assistant_message="Troque SEUDOMINIO pelo seu domínio. Resultado garantido.",
+        )
+        result = evaluate_event(payload)
+        assert result.warnings and result.compliance and not result.hard
+        assert render("SubagentStop", result) == (0, "", "")
+
+    def test_final_answer_block_carries_warnings(self):
+        payload = load_payload(
+            "subagent_stop_plugin_agent.json",
+            last_assistant_message="Isso é brutal. COMPRE AGORA.",
+        )
+        _, _, err = render("SubagentStop", evaluate_event(payload))
+        assert "BLOCK:" in err and "WARN:" in err and "COMPRE" in err
 
     def test_clean_event_is_silent(self):
         code, out, err = render(

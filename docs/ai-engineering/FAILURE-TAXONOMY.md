@@ -29,6 +29,7 @@
 | F-COPY-02 | Hook fraco, CTA fraco, promessa sem prova | Medido, não bloqueado | `quality_gate.py` (checks de hook/CTA) + Copy Score System | Auto-iteração com scoring (H1.1) |
 | F-COPY-03 | Estouro de limite de plataforma (chars, formato) | Hipotético | `quality_gate.py --type` + Gate 4 do mos-copy | Tabela de limites no agent |
 | F-COPY-04 | Resposta final escapa do gate por ser entregue diretamente no chat | Baseline jul/2026: output sem Write/Edit preservou padrões bloqueantes. Auditoria 2026-09-28: o `SubagentStop` descartava `marketing-os:mos-*`, então o gate nunca rodou instalado (F-DIST-05) | `SubagentStop` em `hooks/hooks.json` + `test_quality_gate_hook.py` (payload real) + `test_install_smoke.py` | Núcleo compartilhado `evaluate_event`; ADR-0003 e ADR-0005 |
+| F-COPY-05 | Gate da resposta final troca a entrega por nota de correção (laço de avisos) | Baselines AO-005 e AO-007 (2026-09-28): avisos em `additionalContext` reabriam o subagent, que respondia "Peço desculpas..." em até 3 rodadas; o orquestrador recebeu a nota no lugar da peça | `TestRender` (aviso sozinho em silêncio, bloqueio pede entrega completa) + smoke com no máximo 2 paradas por dispatch | ADR-0008: na resposta final, só o bloqueio fala com o agent |
 
 ## F-PTBR: Língua
 

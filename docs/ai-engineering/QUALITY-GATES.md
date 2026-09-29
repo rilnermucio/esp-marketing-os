@@ -77,5 +77,6 @@ Pegadinhas conhecidas:
 
 - **Escopo do hook**: ele só avalia escritas e respostas finais de agents `marketing-os:mos-*`, e pula arquivos dentro da raiz do plugin (exceto `workspace/`), estado em `.claude/` e extensões de código (`SKIP_SUFFIXES`, `SKIP_BASENAMES`). Exemplo de padrão proibido dentro de agent, command ou SKILL continua escrito com barra ("Não é X / É Y"), porque o agent repete o que lê e a resposta final dele passa pelo `SubagentStop`.
 - **`stop_hook_active` no SubagentStop**: nunca bloquear a segunda falha. Esse campo é o freio contra recursão e tem teste dedicado.
+- **Resposta final não recebe aviso solto** (ADR-0008): no `Stop`/`SubagentStop`, `additionalContext` reabre o subagent e ele troca a entrega por uma nota de correção, em laço. Ali só o bloqueio fala com o agent (pedindo a entrega completa) e a violação que sobra vai ao usuário por `systemMessage`.
 - **Nunca enfraquecer um HARD BLOCK pra acomodar um caso**: se apareceu falso positivo legítimo, ajuste o regex com um teste que fixa o caso, não remova a regra.
 - **Regra que só o modelo consegue julgar** (tom, adaptação BR) fica na camada 1 e, futuramente, na camada LLM-graded ([EVALS-STRATEGY.md](EVALS-STRATEGY.md) §4). Não force regex onde não cabe.

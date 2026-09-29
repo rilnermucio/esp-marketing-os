@@ -627,9 +627,17 @@ def decision_of(result: GateResult) -> str:
 def render(event_name: str, result: GateResult) -> tuple[int, str, str]:
     """Traduz o resultado em (exit_code, stdout, stderr) do protocolo de hooks.
 
-    Bloqueio: exit 2 e motivo em stderr, que o modelo recebe. Avisos: exit 0 e
-    JSON com additionalContext, o único canal de exit 0 que o modelo vê.
+    Bloqueio: exit 2 e motivo em stderr, que o modelo recebe. Avisos em escrita:
+    exit 0 e JSON com additionalContext, o único canal de exit 0 que o modelo vê.
+
+    Resposta final (Stop/SubagentStop): qualquer additionalContext faz o subagent
+    continuar, e ele troca a entrega por uma nota curta de correção, em laço,
+    porque aviso não tem limite de tentativa (baselines AO-005 e AO-007 de
+    2026-09-28). Ali os avisos só viajam junto de um bloqueio, o bloqueio pede a
+    entrega completa e a violação que sobra depois da única tentativa vai para o
+    usuário por systemMessage.
     """
+    final_answer = event_name in ("Stop", "SubagentStop")
     advice = [f"WARN: {w}" for w in result.warnings] + [
         f"COMPLIANCE: {c}" for c in result.compliance
     ]
@@ -637,35 +645,40 @@ def render(event_name: str, result: GateResult) -> tuple[int, str, str]:
         lines = [f"Quality Gate (Marketing OS) bloqueou {result.context}:"]
         lines += [f"  BLOCK: {v}" for v in result.hard]
         lines += [f"  {a}" for a in advice]
-        lines.append("Reescreva eliminando as violações e tente novamente.")
+        if final_answer:
+            lines.append(
+                "Reenvie a entrega completa já corrigida, do início ao fim, como sua "
+                "resposta final: só a última mensagem chega a quem pediu. Não responda "
+                "só com o trecho alterado, com pedido de desculpas ou com explicação "
+                "da correção."
+            )
+        else:
+            lines.append("Reescreva eliminando as violações e tente novamente.")
         return 2, "", "\n".join(lines) + "\n"
 
-    notes = []
-    system_message = ""
-    if result.retry_exhausted:
-        notes.append(
-            f"A tentativa de correção da {result.context} ainda contém violação. "
-            "Antes de entregar ao usuário, corrija: " + " ".join(result.hard)
-        )
-        system_message = (
-            f"Quality Gate (Marketing OS): a {result.context} ainda contém violação "
-            "após 1 tentativa de correção; liberada para evitar loop."
-        )
-    if advice:
-        notes.append(
-            f"Quality Gate (Marketing OS) avisos em {result.context}:\n"
-            + "\n".join(advice)
-        )
-    if not notes:
+    if final_answer:
+        if not result.retry_exhausted:
+            return 0, "", ""
+        payload = {
+            "systemMessage": (
+                f"Quality Gate (Marketing OS): a {result.context} ainda contém "
+                "violação após 1 tentativa de correção e foi liberada para evitar "
+                "laço. Revise antes de publicar: " + " ".join(result.hard)
+            )
+        }
+        return 0, json.dumps(payload, ensure_ascii=False), ""
+
+    if not advice:
         return 0, "", ""
     payload = {
         "hookSpecificOutput": {
             "hookEventName": event_name,
-            "additionalContext": "\n\n".join(notes),
+            "additionalContext": (
+                f"Quality Gate (Marketing OS) avisos em {result.context}:\n"
+                + "\n".join(advice)
+            ),
         }
     }
-    if system_message:
-        payload["systemMessage"] = system_message
     return 0, json.dumps(payload, ensure_ascii=False), ""
 
 
