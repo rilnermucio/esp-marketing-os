@@ -7,7 +7,6 @@ import subprocess
 
 import yaml
 
-
 ROOT = Path(__file__).resolve().parents[2]
 
 
@@ -75,3 +74,18 @@ def test_release_extracts_notes_from_canonical_changelog(tmp_path):
     output = output_path.read_text(encoding="utf-8")
     assert "Esta release" in output
     assert "ver CHANGELOG.md para detalhes" not in output
+
+
+def test_ci_checks_python39_runtime_compatibility():
+    """Hooks e scripts de memória rodam com o python3 do sistema (3.9 no macOS limpo)."""
+    jobs = _workflow("tests.yml")["jobs"]
+    job = jobs.get("compat-python39")
+    assert job, "CI precisa do job compat-python39"
+    versions = [
+        step.get("with", {}).get("python-version")
+        for step in job["steps"]
+        if step.get("uses", "").startswith("actions/setup-python")
+    ]
+    assert "3.9" in versions
+    commands = "\n".join(step.get("run", "") for step in job["steps"])
+    assert "test_quality_gate_hook.py" in commands

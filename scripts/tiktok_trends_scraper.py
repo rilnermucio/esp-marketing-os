@@ -17,7 +17,6 @@ import argparse
 import json
 import asyncio
 from datetime import datetime
-from pathlib import Path
 import sys
 import site
 from typing import Any, Dict, List, Tuple
@@ -296,7 +295,10 @@ def calcular_engagement(stats: Any) -> float:
         if stats.play_count > 0:
             return round((total_engajamento / stats.play_count) * 100, 2)
         return 0
-    except Exception:
+    except Exception as erro:
+        print(
+            f"Aviso: estatísticas incompletas no engajamento ({erro})", file=sys.stderr
+        )
         return 0
 
 
@@ -309,7 +311,10 @@ def calcular_viral_score(stats: Any) -> float:
         shares_score = min(stats.share_count / 100000, 1) * 20
         comments_score = min(stats.comment_count / 50000, 1) * 15
         return round(views_score + likes_score + shares_score + comments_score, 1)
-    except Exception:
+    except Exception as erro:
+        print(
+            f"Aviso: estatísticas incompletas no viral score ({erro})", file=sys.stderr
+        )
         return 0
 
 

@@ -92,8 +92,10 @@ def analisar_instagram(username: str) -> dict:
                             if dados.get("description")
                             else ""
                         )
-                except Exception:
-                    pass
+                except Exception as erro:
+                    print(
+                        f"Aviso: metadados JSON-LD ilegíveis ({erro})", file=sys.stderr
+                    )
 
             # Extrair seguidores se disponível
             seguidores_match = re.search(

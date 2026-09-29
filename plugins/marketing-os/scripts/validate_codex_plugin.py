@@ -42,6 +42,7 @@ PUBLIC_CATEGORIES = {
     "Entertainment",
     "Other",
 }
+PLUGIN_NAME = "marketing-os"
 SKILL_FRONTMATTER_FIELDS = {
     "name",
     "description",
@@ -324,13 +325,21 @@ def validate_symlinks(plugin_root: Path, errors: list[str]) -> None:
             errors.append(f"Symlink escapes plugin package: {path}")
 
 
-def validate_marketplace(repo_root: Path, errors: list[str]) -> None:
+def validate_marketplace(
+    repo_root: Path, errors: list[str], require_name: bool = True
+) -> None:
+    """Checks the marketplace that lists the plugin.
+
+    The name is only required in the source repository; a personal marketplace
+    (e.g. ~/.agents with its own name) may list the plugin too, and then only
+    the marketing-os entry is checked.
+    """
     marketplace_path = repo_root / ".agents" / "plugins" / "marketplace.json"
     marketplace = load_json(marketplace_path, errors)
     if marketplace is None:
         return
 
-    if marketplace.get("name") != "marketing-os-marketplace":
+    if require_name and marketplace.get("name") != "marketing-os-marketplace":
         errors.append('marketplace.name must be "marketing-os-marketplace"')
 
     plugins = marketplace.get("plugins")
@@ -379,11 +388,41 @@ def validate_marketplace(repo_root: Path, errors: list[str]) -> None:
         )
 
 
+def _marketplace_owns(candidate: Path, plugin_root: Path) -> bool:
+    """True if the marketplace at `candidate` lists this plugin root.
+
+    The source repository owns both its own root and the generated package it
+    points to. A marketplace that merely sits in an ancestor directory (e.g. a
+    personal Codex marketplace in the home folder) does not own the package.
+    """
+    marketplace = candidate / ".agents" / "plugins" / "marketplace.json"
+    try:
+        data = json.loads(marketplace.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return False
+    for entry in data.get("plugins") or []:
+        if not isinstance(entry, dict) or entry.get("name") != PLUGIN_NAME:
+            continue
+        source = entry.get("source")
+        path = source.get("path") if isinstance(source, dict) else source
+        if plugin_root == candidate:
+            return True
+        if isinstance(path, str) and (candidate / path).resolve() == plugin_root:
+            return True
+    return False
+
+
 def find_repo_root(plugin_root: Path) -> Path | None:
-    """Find the repository that owns a source or generated plugin root."""
+    """Find the repository that owns a source or generated plugin root.
+
+    Ancestor marketplaces that do not list this plugin are skipped (follow-up
+    of release v6.16.0: a staged copy under ~/plugins picked up the personal
+    ~/.agents marketplace and failed validation).
+    """
+    plugin_root = plugin_root.resolve()
     for candidate in (plugin_root, *plugin_root.parents):
         marketplace = candidate / ".agents" / "plugins" / "marketplace.json"
-        if marketplace.is_file():
+        if marketplace.is_file() and _marketplace_owns(candidate, plugin_root):
             return candidate
     return None
 
@@ -395,13 +434,17 @@ def validate(plugin_root: Path) -> list[str]:
     validate_skills(plugin_root, errors)
     validate_symlinks(plugin_root, errors)
     repo_root = find_repo_root(plugin_root)
-    if repo_root is None:
+    if repo_root is not None:
+        is_source_repo = (repo_root / ".claude-plugin").is_dir()
+        validate_marketplace(repo_root, errors, require_name=is_source_repo)
+    elif (plugin_root / "plugins" / PLUGIN_NAME).is_dir():
+        # Source repository without its marketplace: that is a real error.
         errors.append(
             "Could not locate repository marketplace at "
-            '".agents/plugins/marketplace.json" from plugin root or its parents'
+            '".agents/plugins/marketplace.json" for the source repository'
         )
-    else:
-        validate_marketplace(repo_root, errors)
+    # A standalone package (staged or installed copy) has no owning marketplace
+    # to check; manifest, skills and symlinks were validated above.
     return errors
 
 

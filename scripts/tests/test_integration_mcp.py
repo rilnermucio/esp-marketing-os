@@ -271,13 +271,8 @@ class TestCoberturaDeSscripts:
         "output_formatter.py",  # módulo de formatação interno
         "workspace_paths.py",  # módulo interno: onde gravar estado do usuário
         "instagram_api.py",  # integração de API (não CLI direto)
-        "gsc_analyzer.py",  # integração de API (não CLI direto)
         "meta_ads_api.py",  # integração de API (não CLI direto)
-        "youtube_analytics.py",  # integração de API (não CLI direto)
-        "weekly_report.py",  # script standalone (não precisa de proxy MOS)
-        "project_manager.py",  # registrado via subcomandos no MOS
         "notion_api.py",  # integração de API (não CLI direto)
-        "tiktok_trends_scraper.py",  # scraper assíncrono (não CLI direto)
         "validate_agents.py",  # utilitário de validação de infra (não CLI MOS)
         "voice_extractor.py",  # invocado direto por /criar-meu-clone, não pelo CLI mos.py
         "init_agent_memory.py",  # bootstrap one-shot de memory opt-in (não CLI MOS)
