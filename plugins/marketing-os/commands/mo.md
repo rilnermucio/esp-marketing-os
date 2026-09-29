@@ -37,38 +37,17 @@ O usuário forneceu texto livre. Identifique:
 
 Use a tabela abaixo. Para casos não cobertos, consulte o **Mapa de Dispatch** em `skills/marketing-os/SKILL.md` (seção "Mapa de Dispatch"), fonte canônica.
 
-#### Tabela de roteamento rápido
+#### Fonte única de roteamento: o SKILL.md
 
-| Sinal no briefing | Rota |
-|---|---|
-| "post / carrossel / stories / reels" + 1 plataforma | Sugerir `/criar-post` ou `/criar-carrossel` OU dispatch direto `mos-social` se já claro |
-| "artigo / blog / SEO / keyword" | Sugerir `/criar-artigo` OU dispatch `mos-seo` |
-| "email / newsletter / sequência / drip" | Sugerir `/criar-email` ou `/criar-sequencia` OU dispatch `mos-email` |
-| "anúncio / ads / Meta Ads / Google Ads" | Sugerir `/criar-anuncio` OU dispatch `mos-ads` |
-| "landing page / página de vendas / página de aplicação" | Sugerir `/criar-landing-page` (workflow #5 do SKILL.md, NÃO delegar a frontend-design direto) |
-| "webinar / live de vendas" | Sugerir `/criar-webinar` (workflow #6) |
-| "vídeo / YouTube / Reels longo / VSL" | Sugerir `/criar-video` (workflow #9 se VSL completa) |
-| "podcast / áudio / spot" | Sugerir `/criar-podcast` |
-| "calendário editorial / planejamento mensal" | Sugerir `/criar-calendario` |
-| "infoproduto / curso / membership / mentoria" | Sugerir `/criar-infoproduto` (workflow #7) |
-| "avatar / cliente ideal / buyer persona / ICP / anti-avatar" | Sugerir `/criar-avatar` ou dispatch `mos-research` |
-| "USP / UVP / proposta única de venda / proposta de valor / diferencial da oferta" | Sugerir `/criar-usp`; se faltam evidências, usar `mos-research` seguido de `mos-brand` |
-| "oferta / value stack / garantia / preço / quanto cobrar" | Sugerir `/criar-oferta`; oferta core ou high-ticket sem research usa `mos-research` seguido de `mos-offer` |
-| "lançamento / PLF / abrir carrinho" | Sugerir `/campanha lancamento` (preset 1) |
-| "prospecção / leads / topo de funil" | Sugerir `/campanha prospeccao` (preset 2) |
-| "retenção / reativar inativos / churn / LTV" | Sugerir `/campanha retencao` (preset 3) |
-| "autoridade / posicionamento / thought leadership" | Sugerir `/campanha autoridade` (preset 4) |
-| "experimentação / growth / AARRR / north star" | Sugerir `/campanha growth` (preset 5) |
-| "Black Friday / data sazonal / Cyber Monday" | Sugerir `/campanha black-friday` (preset 6) |
-| "analisa @fulano / engenharia reversa de [expert]" | Sugerir `/analisar-concorrencia` ou `/clonar-estrategia` |
-| "cria meu voice clone / clone do [expert]" | Sugerir `/criar-clone` (expert externo) ou `/criar-meu-clone` (suas amostras) |
-| "imagem IA / prompt Midjourney / Flux" | Sugerir `/gerar-imagem` OU dispatch `mos-ai-tools` |
-| "captura tela de [URL]" | Sugerir `/capturar-tela` |
-| "publicar no Notion" | Sugerir `/publicar-notion` |
-| "lote / batch / X peças do mesmo tipo" | Sugerir `/batch` |
-| "campanha completa / múltiplos canais / sequência cross-channel" | Sugerir `/criar-sequencia` ou `/campanha <preset>` |
-| "brief de design / paleta / tipografia / spec visual" | Sugerir `/criar-brief-design` |
-| Briefing puramente conceitual ("o que é AIDA?", "qual a diferença entre TOFU e BOFU?") | Responder inline, sem dispatch |
+Este command não mantém tabela própria. Leia, nesta ordem, as seções de `skills/marketing-os/SKILL.md`:
+
+1. **"Slash commands: qual usar para cada necessidade"**: escolha o command. É a tabela canônica e cobre todos os commands.
+2. **"Mapa de Dispatch"**, com as rotas condicionais e os desempates: use quando nenhum command encaixar e escolha o agent.
+3. **"Workflows compostos"** (5 a 10): páginas, webinar, lançamento, carrossel, VSL e clone de estratégia.
+
+Briefing puramente conceitual ("o que é AIDA?", "qual a diferença entre TOFU e BOFU?"): responda inline, sem dispatch.
+
+Divergência entre um mapa próprio aqui e o SKILL.md foi o achado #13 da auditoria de 2026-09-28 (21 commands ausentes, gatilhos mapeados para rotas diferentes). Se o SKILL.md não cobre um caso, corrija o SKILL.md.
 
 ### Passo 3: Decision tree (qual modo de resposta)
 
@@ -131,17 +110,7 @@ Pule as que já vieram explícitas no briefing OU já estão em memory do client
 
 ## Quality Gates (sempre, antes de qualquer entrega)
 
-Mesmo no modo "sugerir command", se você dispatcha qualquer agent ou consolida output, aplique os gates globais do `skills/marketing-os/SKILL.md`:
-
-- Sem `—` (travessão longo) — substituir por `.` `,` `:` ou quebrar frase
-- Sem "brutal", usar: intenso, forte, pesado, impactante, poderoso
-- Sem CAPS gratuito
-- Sem aspas em roteiros/falas (escrever direto)
-- Máximo 1-2 emojis (preferir 0)
-- Acentuação PT-BR correta sempre
-- Fact-check via WebSearch quando cita pessoa/estatística/case (CONFIRMADO / PROVÁVEL / NÃO USAR)
-- Enquete obrigatória em conteúdo de redes sociais
-- Compliance regulatório se nicho saúde/finanças/suplementos (CFM, CONAR, ANVISA, CVM)
+Se você dispatcha qualquer agent ou consolida output, aplique a seção "Quality Gates Globais" do SKILL.md (travessão, "brutal", antítese, CAPS, emojis, acentuação, fact-check, enquete em social e compliance regulatório por conselho).
 
 ## Exemplos resolvidos
 
@@ -170,7 +139,7 @@ Usuário: /mo vou lançar um curso de Python pra iniciantes em 30 dias,
 preciso de tudo
 
 Você responde:
-Isso é caso clássico de lançamento, recomendo **/campanha lancamento**
+Isso é caso clássico de lançamento, recomendo **/campanha-lancamento**
 (preset que dispatcha mos-research + mos-launch + mos-funnel em paralelo,
 depois copy + storytelling + social + email, depois ads + design + analytics).
 
@@ -181,8 +150,8 @@ Antes de rodar, preciso confirmar:
 4. Plataforma principal de aquecimento, Instagram, YouTube, email?
 5. Budget pra ads, tem? quanto?
 
-Com isso, rodo /campanha lancamento --produto="Curso Python iniciantes"
---ticket=[X] --clone=[brunson|hormozi conforme estilo]
+Com isso, rodo /campanha-lancamento "Curso Python iniciantes"
+--preco=[X] --clone=[brunson|hormozi conforme estilo]
 ```
 
 ### Exemplo 3: briefing que mapeia 1 agent direto
@@ -234,10 +203,10 @@ estágios; /criar-landing-page foca BOFU.
 
 ## Por que existe esse command
 
-Tem 25 commands específicos (`/criar-X`). Pra usuários novos é fricção descobrir o certo. Pra casos ambíguos ("conteúdo pro lançamento", qual command?) o sistema fica engessado. `/mo` resolve com:
+Há dezenas de commands específicos. Pra usuários novos é fricção descobrir o certo. Pra casos ambíguos ("conteúdo pro lançamento", qual command?) o sistema fica engessado. `/mo` resolve com:
 
 - **Single entry point**: 1 command que aceita qualquer briefing de marketing
-- **Discoverability**: usuário não precisa decorar 25 nomes
+- **Discoverability**: usuário não precisa decorar nomes de commands
 - **Sem duplicação**: usa SKILL.md como fonte canônica do roteamento
 - **Não force dispatch**: prefere sugerir command equivalente quando existe (ensina o usuário o atalho), só dispatcha quando ele confirma OU não há command direto
 
@@ -327,4 +296,4 @@ Pode responder em texto corrido. Pulo as que já vieram no briefing inicial.
 - **Prefira sugerir command** sobre dispatchar direto quando o command existe (efeito colateral positivo: usuário aprende o atalho)
 - **Clarifique antes de dispatchar** quando faltam dados-chave (5 perguntas), nunca chute
 - **Para campanhas/lançamentos**, sempre roteie pra `/campanha <preset>` (presets já têm cronograma, KPIs, checklist)
-- **Quality gates globais** se aplicam mesmo aqui — você é o último filtro antes da entrega
+- **Quality gates globais** se aplicam mesmo aqui: você é o último filtro antes da entrega

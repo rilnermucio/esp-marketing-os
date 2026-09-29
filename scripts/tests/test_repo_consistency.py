@@ -24,7 +24,10 @@ CONFORMING_CLONES = [d for d in CLONES if (d / "profile.md").exists()]
 SUBAGENTS = sorted((ROOT / "subagents").glob("*-agent.md"))
 
 # Linhas que DEFINEM a regra do travessão (mostram o caractere de propósito).
-_RULE = re.compile(r"travess|em[- ]dash|`—`|quality gate|gates? univers", re.I)
+# Linha que enuncia a própria regra ("sem travessão (—)"). Até 2026-09 a isenção
+# também cobria qualquer linha com "quality gate", o que deixava passar travessão real.
+_RULE = re.compile(r"travess|em[- ]dash", re.I)
+_INLINE_CODE = re.compile(r"`[^`]*`")
 
 
 def _load(name: str) -> dict:
@@ -242,7 +245,7 @@ def _emdash_violations(path: Path) -> list[int]:
         if ln.lstrip().startswith("```"):
             infence = not infence
             continue
-        if infence or "—" not in ln:
+        if infence or "—" not in _INLINE_CODE.sub("", ln):
             continue
         if ln.lstrip().startswith(">") or _RULE.search(ln):
             continue
@@ -250,7 +253,11 @@ def _emdash_violations(path: Path) -> list[int]:
     return out
 
 
-@pytest.mark.parametrize("path", AGENTS + COMMANDS, ids=lambda p: p.name)
+@pytest.mark.parametrize(
+    "path",
+    AGENTS + COMMANDS + [ROOT / "skills" / "marketing-os" / "SKILL.md"],
+    ids=lambda p: p.name,
+)
 def test_no_emdash_in_distributed_prose(path: Path):
     bad = _emdash_violations(path)
     assert not bad, f"travessão fora de regra/código em {path.name}: linhas {bad}"
