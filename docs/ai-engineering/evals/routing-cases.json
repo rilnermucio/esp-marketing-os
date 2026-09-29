@@ -865,6 +865,29 @@
         "F-CLAIM-02"
       ],
       "notes": "P-b. Gratuidade, promessa de resultado e forma de pagamento são vedadas ao dentista."
+    },
+    {
+      "id": "RT-044",
+      "prompt": "preciso de depoimentos dos alunos do meu curso de inglês, como eu peço e o que preciso pra poder usar na página de vendas?",
+      "expected_command": "coletar-prova",
+      "expected_agents": [
+        "mos-storytelling",
+        "mos-copy"
+      ],
+      "dispatch": "paralelo",
+      "min_output_fields": [
+        "mensagem de pedido",
+        "roteiro de entrevista com números verificáveis",
+        "termo de autorização com cláusula destacada e revogação",
+        "checklist de publicação",
+        "sem depoimento inventado"
+      ],
+      "detects": [
+        "F-ROUTE-02",
+        "F-CLAIM-01",
+        "F-CLAIM-02"
+      ],
+      "notes": "P-h. Base legal em references/compliance-br.md (CONAR art. 27, §9º; LGPD art. 8º)."
     }
   ]
 }

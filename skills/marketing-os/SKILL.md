@@ -422,6 +422,7 @@ Tabela canônica de roteamento por command; o `/mo` usa esta tabela. Quando o us
 | Oferta (value stack, preço, garantia) | `/criar-oferta` | |
 | Melhorar ou revisar uma peça pronta (copy, roteiro, carrossel, sequência, artigo, página) | `/otimizar-copy` | Diagnóstico, score e reescritas; o especialista do formato revisa a estrutura |
 | Saber se uma peça pode ser publicada: conselho profissional, ANVISA, CVM, CONAR, CDC, LGPD | `/checar-compliance` | Veredito, trechos com a norma e a peça corrigida |
+| Coletar depoimentos e cases de clientes com autorização | `/coletar-prova` | Pedido, entrevista, modelo de case e termo de autorização (CONAR e LGPD) |
 | Teste A/B | `/criar-teste-ab` | |
 | Responder comentários e DMs | `/responder-comentarios` | Rascunhos; nunca publica |
 | Prospectar creators | `/prospectar-creators` | Rascunhos de outreach; nunca envia |
