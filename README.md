@@ -2,7 +2,7 @@
 
 > Plugin para ChatGPT Work, Claude Code e Codex com **21 especialistas** em marketing digital, 53 slash commands no Claude Code e 34 voice clones de copywriters.
 
-[![Version](https://img.shields.io/badge/version-6.16.0-blue.svg)](./CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-6.17.0-blue.svg)](./CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
 
 ## O que é
@@ -62,7 +62,7 @@ codex plugin add marketing-os@marketing-os-marketplace
 Para uma versão fixa, troque `main` pela tag da release:
 
 ```bash
-codex plugin marketplace add rilnermucio/esp-marketing-os --ref v6.16.0
+codex plugin marketplace add rilnermucio/esp-marketing-os --ref v6.17.0
 codex plugin add marketing-os@marketing-os-marketplace
 ```
 

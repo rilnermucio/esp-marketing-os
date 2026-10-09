@@ -1,15 +1,15 @@
 # Changelog
 
-Todas as mudancas notaveis deste projeto serao documentadas neste arquivo.
+Todas as mudanças notáveis deste projeto são documentadas neste arquivo.
 
-O formato e baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/),
+O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/),
 e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
 
 ---
 
-## [Não lançado]
+## v6.17.0 (2026-10-09)
 
-Rodada de implementação da auditoria de 2026-09-28 (`docs/ai-engineering/worklogs/2026-09-28-auditoria-runtime-e-produto.md`). O foco foi fazer o plugin funcionar instalado, fora do repositório, e fechar lacunas de produto para o mercado brasileiro.
+Esta release implementa a auditoria de 2026-09-28 (`docs/ai-engineering/worklogs/2026-09-28-auditoria-runtime-e-produto.md`). O foco foi fazer o plugin funcionar instalado, fora do repositório, e fechar lacunas de produto para o mercado brasileiro.
 
 ### Added
 
@@ -38,6 +38,10 @@ Rodada de implementação da auditoria de 2026-09-28 (`docs/ai-engineering/workl
 - `quality_gate.py` carrega os padrões bloqueantes do hook (fonte única).
 - Estado do usuário (`/projeto`, relatório semanal, tendências do TikTok) gravado em `workspace/` do projeto, nunca na pasta do plugin.
 - Descriptions dos manifests sem travessão.
+- CI ganha o job `compat-python39`: hooks e scripts de memória rodam com o `python3` do sistema, que é 3.9 no macOS limpo.
+- Validador universal só considera marketplace de diretório ancestral quando ele lista este plugin; a cópia pessoal em `~/plugins` volta a passar.
+- `test_native_agents` roda `validate_agents --strict` em `agents/` (procurava um diretório inexistente e pulava sempre); suíte sem skips.
+- Scripts de tendência e de concorrência informam qual fonte falhou, `notion_api` ganha timeout de 30 s e o `scripts/hooks/install.py` órfão saiu.
 
 ### Fixed
 
@@ -47,6 +51,7 @@ Rodada de implementação da auditoria de 2026-09-28 (`docs/ai-engineering/workl
 - O gate da resposta final reabria o agent com avisos e trocava a entrega por uma nota de correção, em laço (baselines AO-005 e AO-007). Agora só o bloqueio fala com o agent e pede a entrega completa (ADR-0008).
 - Invocações de CLI que o argparse rejeitava; `KeyError` em 12% dos roteiros e legendas gerados; fatos de plataforma vencidos (Reels, Shorts, Stories, carrossel, Advantage+ Sales, SGE, FID).
 - Golden set de roteamento coerente com os commands, com teste cruzado.
+- Mapa de referências do mos-seo apontava PARTES erradas da KB; índices de copy, infoproduct e seo completos, com guard (`test_kb_toc.py`) nas 15 KBs organizadas em PARTES; benchmarks contraditórios no template do funnel-agent; guia de início (`docs/GETTING-STARTED.md`) reescrito, parado desde a v6.1.
 - Conteúdo distribuído sem travessão: knowledge bases (248), voice clones e demais assets (975), commands, workflows e references (65), com guard que vale também dentro de bloco de código, onde ficam os exemplos que os agents imitam. A regra citada entre crases continua permitida.
 - 87 frases de clones, templates e prompts reescritas em forma afirmativa onde o travessão fazia a junta de uma antítese (`não é talento — é sistema`), e prompts de imagem que pediam travessão como elemento visual.
 - Epígrafes de 9 knowledge bases trocadas pela linha de escopo: 7 usavam a antítese proibida e 2 tinham autoria não confirmada (Deming, Erico Rocha).
