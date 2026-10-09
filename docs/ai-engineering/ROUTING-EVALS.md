@@ -1,6 +1,6 @@
 # Routing Evals: matriz de roteamento esperado
 
-> Canônico. Atualizado em 2026-08-05. O gabarito vivo está em [evals/routing-cases.json](evals/routing-cases.json); este documento explica a matriz e o protocolo. A tabela abaixo é um resumo de leitura; **em divergência, o JSON vence**.
+> Canônico. Atualizado em 2026-09-28. O gabarito vivo está em [evals/routing-cases.json](evals/routing-cases.json); este documento explica a matriz e o protocolo. A tabela abaixo é um resumo de leitura; **em divergência, o JSON vence**.
 
 ## O que a matriz cobre
 
@@ -10,16 +10,16 @@ Briefings de usuário em PT-BR, como chegam de verdade e sem jargão de sistema,
 
 | ID | Briefing (resumo) | Command | Agents | Dispatch |
 |---|---|---|---|---|
-| RT-001 | post pro Instagram sobre tema X | `/criar-post` | social + copy | paralelo |
+| RT-001 | post pro Instagram sobre tema X | `/criar-post` | research + social | paralelo |
 | RT-002 | "o que é AIDA?" | nenhum (inline) | nenhum | nenhum |
 | RT-003 | melhorar headline existente | `/otimizar-copy` | copy | simples |
 | RT-004 | campanha completa de lançamento | `/campanha-lancamento` | research, launch, funnel, copy, email, ads | sequencial |
 | RT-005 | artigo SEO | `/criar-artigo` | research → seo → copy | sequencial |
 | RT-006 | anúncio Meta Ads | `/criar-anuncio` | research + ads | paralelo |
-| RT-007 | roteiro de VSL | `/criar-video` | storytelling → copy → video | sequencial |
+| RT-007 | roteiro de VSL | `/criar-video` | storytelling + copy + video | paralelo |
 | RT-008 | sequência carrinho abandonado | `/criar-email` | email + copy | paralelo |
 | RT-009 | análise de concorrente | `/analisar-concorrencia` | research + brand + copy | paralelo |
-| RT-010 | landing page high-ticket | `/criar-landing-page` | funnel → copy → design | sequencial |
+| RT-010 | landing page high-ticket | `/criar-landing-page` | funnel + copy + design (fase 1) | paralelo |
 | RT-011 | datas comerciais do mês | `/datas-sazonais` (utility) | nenhum | nenhum |
 | RT-012 | publicar no Notion | `/publicar-notion` (utility) | nenhum | nenhum |
 | RT-013 | desenhar teste A/B | `/criar-teste-ab` | ab-testing | simples |
@@ -27,11 +27,11 @@ Briefings de usuário em PT-BR, como chegam de verdade e sem jargão de sistema,
 | RT-015 | "por que o engajamento caiu?" | nenhum (linguagem natural) | analytics | simples |
 | RT-016 | carrossel 10 slides | `/criar-carrossel` | social + copy + design | paralelo |
 | RT-017 | montar oferta high-ticket sem research | `/criar-oferta` | research → offer | sequencial |
-| RT-018 | bio do Instagram | nenhum (linguagem natural) | copy | simples |
+| RT-018 | bio do Instagram | nenhum (linguagem natural) | social | simples |
 | RT-019 | "quanto cobrar pela mentoria?" | nenhum (linguagem natural) | offer | simples |
 | RT-020 | renderizar prompt em PNG | `/renderizar-imagem` | ai-tools | simples |
 | RT-021 | thumbnail com texto | `/gerar-thumbnail` | video + ai-tools | sequencial (pipeline) |
-| RT-022 | reels renderizado com legenda | `/produzir-reels` | video → audio | sequencial |
+| RT-022 | reels renderizado com legenda | `/produzir-reels` | video → audio (via `/narrar-roteiro`) | sequencial |
 | RT-023 | aprender com métricas reais | `/aprender` | analytics | simples |
 | RT-024 | responder comentários com haters | `/responder-comentarios` | community | simples |
 | RT-025 | achar influencers skincare collab | `/prospectar-creators` | research → partnerships | sequencial |
@@ -41,8 +41,21 @@ Briefings de usuário em PT-BR, como chegam de verdade e sem jargão de sistema,
 | RT-029 | `@Marketing OS` criar USP sem mapa competitivo | `/criar-usp` | research → brand | sequencial |
 | RT-030 | `@Marketing OS` criar oferta com inputs validados | `/criar-oferta` | offer | simples |
 | RT-031 | `@Marketing OS` explicar AIDA | nenhum (inline) | nenhum | nenhum |
+| RT-032 | experimentos para app estagnado | nenhum (linguagem natural) | growth | simples |
+| RT-033 | transformar consultoria em curso | `/criar-infoproduto` | research + infoproduct | paralelo |
+| RT-034 | auditoria premium para entregar ao cliente | `/auditoria-pro` | funnel + copy + design (entre 7) | paralelo |
+| RT-035 | sequência coordenada email, posts e ads | `/criar-sequencia` | email + social + ads | paralelo |
+| RT-036 | configurar perfil de marca do projeto | `/configurar-marca` | brand | simples |
+| RT-037 | responder reclamações do Reclame Aqui | `/responder-comentarios` (modo avaliações) | community | simples |
+| RT-038 | live vira posts, cortes e newsletter | `/reaproveitar` | social → video + email | sequencial |
+| RT-039 | dores e objeções literais de reviews | `/minerar-voc` | research | simples |
+| RT-040 | aparecer nas respostas do ChatGPT e do Google com IA (GEO local) | (nenhum) | seo | simples |
+| RT-041 | calendário de estreia no Kwai para loja do Brás | `/criar-calendario` | research + social | paralelo |
+| RT-042 | título de anúncio no Mercado Livre e na Amazon | (nenhum) | copy | simples |
+| RT-043 | dentista pergunta se pode publicar anúncio com avaliação grátis | `/checar-compliance` | copy | simples |
+| RT-044 | depoimentos de alunos com autorização para a página de vendas | `/coletar-prova` | storytelling + copy | paralelo |
 
-RT-013 e RT-017 eram gaps documentados e viraram validações das correções. RT-017 agora também trava a dependência de dados: oferta core ou high-ticket sem research usa `mos-research` antes de `mos-offer`; pedido pontual de precificação com contexto suficiente continua simples em RT-019. RT-026 guarda a interface explícita de avatar completo e sua rota natural para `mos-research`. RT-027 guarda a interface de USP e sua dependência de pesquisa quando o contexto competitivo ainda não foi mapeado. RT-028 a RT-031 preservam esses contratos no ChatGPT Work: o prefixo `@Marketing OS` seleciona o plugin, mas o briefing restante continua governando command, dependências e decisão inline. O golden set não tem gaps abertos no momento; casos novos entram pelo protocolo da EVALS-STRATEGY §2.
+RT-013 e RT-017 eram gaps documentados e viraram validações das correções. RT-017 agora também trava a dependência de dados: oferta core ou high-ticket sem research usa `mos-research` antes de `mos-offer`; pedido pontual de precificação com contexto suficiente continua simples em RT-019. RT-026 guarda a interface explícita de avatar completo e sua rota natural para `mos-research`. RT-027 guarda a interface de USP e sua dependência de pesquisa quando o contexto competitivo ainda não foi mapeado. RT-028 a RT-031 preservam esses contratos no ChatGPT Work: o prefixo `@Marketing OS` seleciona o plugin, mas o briefing restante continua governando command, dependências e decisão inline. Correções de 2026-09-28: RT-001 esperava `mos-copy`, que o `/criar-post` nunca despacha; RT-018 mandava bio para `mos-copy`, contra o mapa do SKILL.md; RT-007 e RT-010 rotulavam como sequencial commands que disparam os agents em paralelo. RT-032 a RT-035 cobrem `mos-growth` e `mos-infoproduct` (antes sem caso) e duas desambiguações (`/auditoria-pro`, `/criar-sequencia`); ainda não rodaram na camada viva. Casos novos entram pelo protocolo da EVALS-STRATEGY §2.
 
 ## Validação em duas camadas
 
@@ -52,7 +65,7 @@ RT-013 e RT-017 eram gaps documentados e viraram validações das correções. R
 python -m pytest scripts/tests/test_routing_evals.py -q
 ```
 
-Valida: IDs únicos e bem-formados, commands/agents citados existem no repo, coerência dispatch↔agents (dispatch "nenhum" implica zero agents; "simples" implica exatamente 1; paralelo/sequencial implicam 2+), campos mínimos presentes, e todo ID em `detects` definido na taxonomia. Isso trava o gabarito contra drift estrutural: renomear um command ou agent quebra o teste na hora.
+Valida: IDs únicos e bem-formados, commands/agents citados existem no repo, coerência dispatch↔agents (dispatch "nenhum" implica zero agents; "simples" implica exatamente 1; paralelo/sequencial implicam 2+), campos mínimos presentes, e todo ID em `detects` definido na taxonomia. Isso trava o gabarito contra drift estrutural: renomear um command ou agent quebra o teste na hora. Desde 2026-09-28 também cruza o gabarito com o corpo do command: todo agent esperado precisa ser despachado pelo command esperado (`TestGoldenSetMatchesCommands`); alcance via outro command é declarado em `indirect_agents` e verificado. A execução real dos agents instalados (leitura de KB, gates) é medida pelo smoke de instalação, não por esta camada.
 
 **Camada viva (manual, por amostragem):**
 

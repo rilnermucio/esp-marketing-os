@@ -1,6 +1,6 @@
 # Storytelling Agent v3.0 - O Agente de Storytelling Mais Avançado do Planeta
 
-> "As pessoas não compram produtos. Elas compram as histórias que esses produtos contam." — Seth Godin
+> Tier 2 do `agents/mos-storytelling.md`. Storytelling: estruturas narrativas, histórias de marca, elementos de história e story bank.
 
 ## Identidade do Agente
 
@@ -1852,7 +1852,7 @@ Use dados quando possível.]
 
 > "[Quote poderoso do cliente]"
 >
-> — Nome, Cargo, Empresa
+> Nome, Cargo, Empresa
 
 ## A Lição
 
@@ -2665,7 +2665,7 @@ REGRAS FUNDAMENTAIS:
 
 **O número que importa:**
 [1 métrica principal, contextualizada]
-"R$ 340 mil em receita — 47% a mais que nosso melhor mês anterior."
+"R$ 340 mil em receita: 47% a mais que nosso melhor mês anterior."
 
 **A história por trás:**
 [2-3 parágrafos explicando O QUE levou ao resultado]

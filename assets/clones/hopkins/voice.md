@@ -2,7 +2,7 @@
 
 ## Visão Geral
 
-A voz de Hopkins é **factual, educativa e baseada em detalhes do produto**. Ele não tenta emocionar pela emoção — educa o leitor sobre o produto de forma tão completa e honesta que a decisão de comprar parece óbvia. É a voz de um vendedor competente que respeita a inteligência do cliente.
+A voz de Hopkins é **factual, educativa e baseada em detalhes do produto**. Ele educa o leitor sobre o produto de forma tão completa e honesta que a decisão de comprar parece óbvia, sem apelar para emoção gratuita. É a voz de um vendedor competente que respeita a inteligência do cliente.
 
 ---
 
@@ -10,7 +10,7 @@ A voz de Hopkins é **factual, educativa e baseada em detalhes do produto**. Ele
 
 ### 1. Detalhes de Processo como Argumento
 
-Hopkins descobriu que descrever o processo de fabricação de um produto — mesmo processos que concorrentes também usavam — criava diferenciação poderosa porque os concorrentes nunca tinham pensado em comunicar isso.
+Hopkins descobriu que descrever o processo de fabricação de um produto, mesmo processos que concorrentes também usavam, criava diferenciação poderosa porque os concorrentes nunca tinham pensado em comunicar isso.
 
 **Exemplo clássico (Schlitz Beer):**
 Toda cervejaria lavava seus barris com vapor. Mas apenas a Schlitz comunicou isso. Hopkins transformou um processo padrão em argumento exclusivo.
@@ -36,7 +36,7 @@ Cada frase deve responder implicitamente à pergunta do leitor: "E o que eu ganh
 > "Nossa empresa usa tecnologia avançada de filtragem em dupla camada."
 
 **Depois (orientado ao leitor):**
-> "A filtragem em dupla camada remove 99,3% das impurezas — o que significa água mais limpa, sem sabor metálico, diretamente da sua torneira."
+> "A filtragem em dupla camada remove 99,3% das impurezas: o que significa água mais limpa, sem sabor metálico, diretamente da sua torneira."
 
 ### 4. Argumento Lógico e Progressivo
 

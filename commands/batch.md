@@ -1,5 +1,5 @@
 ---
-description: Generate multiple pieces of content at once with hook/angle/framework variation. Routes the batch to N parallel (or sequential when needed) Agent dispatches based on content type.
+description: "Gera várias peças de uma vez (ex: 10 posts, 5 anúncios) variando hook, ângulo e framework. Use quando pedirem lote, volume ou várias versões. Para uma peça só, use o command do formato."
 argument-hint: "<quantity> <type> <theme>, e.g., '10 posts about AI tools' or '5 emails for product launch'"
 ---
 
@@ -72,13 +72,13 @@ PAS · AIDA · BAB · Education · Story (alternar a cada peça)
 
 ```
 Para cada peça i de 1..N:
-  - Agent(subagent_type: "mos-social", prompt: "Post [plataforma] sobre [tema].
+  - Agent(subagent_type: "marketing-os:mos-social", prompt: "Post [plataforma] sobre [tema].
     Hook tipo: [Hook #i da rotação]
     Angle: [Angle #i]
     Framework: [Framework #i]
     Audiência: [audiência]. Tom: [tom]. Clone: [clone se aplicável].
     Aplicar quality gates globais. Incluir: hook + body + CTA + hashtags + sugestão de enquete.
-    Considere memory existente em .claude/agent-memory/mos-social/ se houver.")
+    Considere memory existente em .claude/agent-memory/marketing-os-mos-social/ se houver.")
 ```
 
 ### Carousels (paralelo de workflows #8)
@@ -96,7 +96,7 @@ Para cada peça i de 1..N (em chunks de 2-3 paralelos):
 
 ```
 Para cada peça i de 1..N:
-  - Agent(subagent_type: "mos-video", prompt: "Roteiro Reel/TikTok 30-60s sobre [tema].
+  - Agent(subagent_type: "marketing-os:mos-video", prompt: "Roteiro Reel/TikTok 30-60s sobre [tema].
     Hook (3s primeiros): [Hook #i da rotação]
     Formato: [talking head | text-on-screen | tutorial | story] (varia por peça)
     Estrutura: hook (3s) + content (15-55s) + CTA.
@@ -107,20 +107,20 @@ Para cada peça i de 1..N:
 
 ```
 Para cada peça i de 1..N:
-  - Agent(subagent_type: "mos-email", prompt: "Email sobre [tema].
+  - Agent(subagent_type: "marketing-os:mos-email", prompt: "Email sobre [tema].
     Subject formula: [varia: pergunta | urgência | curiosidade | benefício | controvérsia]
     Estrutura: [varia: PAS | AIDA | BAB | Story | Education]
     Inclui: subject line + preview text + body + CTA.
     Audiência: [audiência]. Tom: [tom]. Clone: [clone se aplicável].
-    Considere memory em .claude/agent-memory/mos-email/ se houver.")
+    Considere memory em .claude/agent-memory/marketing-os-mos-email/ se houver.")
 ```
 
 ### Articles (sequencial por peça, research é caro)
 
 ```
 Para cada peça i de 1..N:
-  Passo 1: Agent(subagent_type: "mos-research", prompt: "Research compacto sobre [sub-ângulo #i de [tema]]")
-  Passo 2: Agent(subagent_type: "mos-seo", prompt: "Artigo SEO sobre [sub-ângulo #i] usando research: [colar].
+  Passo 1: Agent(subagent_type: "marketing-os:mos-research", prompt: "Research compacto sobre [sub-ângulo #i de [tema]]")
+  Passo 2: Agent(subagent_type: "marketing-os:mos-seo", prompt: "Artigo SEO sobre [sub-ângulo #i] usando research: [colar].
     Formato: [varia: listicle | how-to | guide | case study]
     Inclui: title + meta description + outline + key sections + headings + internal linking.")
 
@@ -131,7 +131,7 @@ Para cada peça i de 1..N:
 
 ```
 Para cada peça i de 1..N:
-  - Agent(subagent_type: "mos-ads", prompt: "Anúncio Meta Ads sobre [tema].
+  - Agent(subagent_type: "marketing-os:mos-ads", prompt: "Anúncio Meta Ads sobre [tema].
     Hook: [Hook #i]
     Benefit angle: [varia: aspiracional | dor | prova | curiosidade]
     Audience segment: [varia conforme funil]
@@ -156,7 +156,7 @@ Cada bucket vira um conjunto de Agent calls em paralelo. Buckets independentes p
 
 ## Memory note
 
-Vários dos agents têm memory project (`.claude/agent-memory/mos-<agent>/`). Em batches do mesmo cliente, **mencione no prompt** que considere memory existente, evita repetir hooks já usados, mantém consistência de tom, e respeita restrições de compliance previamente registradas.
+Vários dos agents têm memory project (`.claude/agent-memory/marketing-os-mos-<agent>/`). Em batches do mesmo cliente, **mencione no prompt** que considere memory existente, evita repetir hooks já usados, mantém consistência de tom, e respeita restrições de compliance previamente registradas.
 
 ## Consolidação do output
 
@@ -212,7 +212,7 @@ Clone: [clone se aplicável]
 
 ## Quality Gates (antes de entregar o batch inteiro)
 
-Aplicar gates globais do `skills/marketing-os/SKILL.md` em **toda peça**:
+Aplicar gates globais do `${CLAUDE_PLUGIN_ROOT}/skills/marketing-os/SKILL.md` em **toda peça**:
 - Sem `—`, sem "brutal", sem CAPS gratuito
 - Sem aspas em roteiros/falas
 - Máximo 1-2 emojis por peça (preferir 0)

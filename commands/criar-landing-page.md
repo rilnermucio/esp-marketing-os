@@ -1,11 +1,11 @@
 ---
-description: Create a complete landing page (BOFU), hero, benefits, social proof, offer, CTA. Dispatches mos-funnel + mos-copy + mos-design in parallel (workflow #5), with optional handoff to frontend-design for HTML/CSS build.
+description: "Cria landing page, página de vendas ou página de aplicação: estrutura de conversão, copy e direção visual. Use quando pedirem uma página. O HTML só é gerado se pedido, a partir desse brief."
 argument-hint: "<product/offer and avatar, e.g., 'mentoria médica high-ticket pra Dr. Victor'>"
 ---
 
 # /criar-landing-page: Landing Page BOFU (Workflow #5)
 
-Cria página de aplicação / landing page / página de vendas conforme **workflow #5** em `skills/marketing-os/SKILL.md`.
+Cria página de aplicação / landing page / página de vendas conforme **workflow #5** em `${CLAUDE_PLUGIN_ROOT}/skills/marketing-os/SKILL.md`.
 
 **REGRA CRÍTICA:** marketing-os reivindica esse território. NÃO delegue direto a `frontend-design` sem antes orquestrar a camada estratégica.
 
@@ -21,11 +21,11 @@ Cria página de aplicação / landing page / página de vendas conforme **workfl
 ## Dispatch, Fase 1 (paralelo, single message)
 
 ```
-- Agent(subagent_type: "mos-funnel", prompt: "Estruturar página BOFU para [produto/avatar/ticket]: CTA placement, escassez, anti-avatar, FAQ, prova social, stack value, hierarquia de seções. Tipo: [aplicação/vendas/captura]. Considere memory existente do cliente neste projeto.")
+- Agent(subagent_type: "marketing-os:mos-funnel", prompt: "Estruturar página BOFU para [produto/avatar/ticket]: CTA placement, escassez, anti-avatar, FAQ, prova social, stack value, hierarquia de seções. Tipo: [aplicação/vendas/captura]. Considere memory existente do cliente neste projeto.")
 
-- Agent(subagent_type: "mos-copy", prompt: "[Se copy fornecida: revisar/melhorar: colar conteúdo do PDF]. [Senão: gerar copy do zero pra produto X, avatar Y]. Considere memory existente do cliente neste projeto. Aplicar quality gates globais. Sugerir variações de headline/CTA.")
+- Agent(subagent_type: "marketing-os:mos-copy", prompt: "[Se copy fornecida: revisar/melhorar: colar conteúdo do PDF]. [Senão: gerar copy do zero pra produto X, avatar Y]. Considere memory existente do cliente neste projeto. Aplicar quality gates globais. Sugerir variações de headline/CTA.")
 
-- Agent(subagent_type: "mos-design", prompt: "Direção visual para página BOFU em [nicho]: paleta (premium/médica/tech/etc.), tipografia, hierarquia visual, mood, exemplos de referência. Ticket: [low/mid/high]. Tom: profissional/acolhedor/etc. Considere memory existente do cliente neste projeto.")
+- Agent(subagent_type: "marketing-os:mos-design", prompt: "Direção visual para página BOFU em [nicho]: paleta (premium/médica/tech/etc.), tipografia, hierarquia visual, mood, exemplos de referência. Ticket: [low/mid/high]. Tom: profissional/acolhedor/etc. Considere memory existente do cliente neste projeto.")
 ```
 
 ## Fase 2 (sequencial, depende dos outputs da Fase 1)
@@ -51,7 +51,7 @@ Consolidar os 3 outputs num **brief único**:
 
 ## Fase 3: Quality Gates + Compliance
 
-Aplicar gates globais do `skills/marketing-os/SKILL.md`:
+Aplicar gates globais do `${CLAUDE_PLUGIN_ROOT}/skills/marketing-os/SKILL.md`:
 - Sem `—`, sem "brutal", PT-BR correto, sem placeholders publicados
 - Gates de substância: promessas com backup, garantia clara, sem linguagem absoluta
 - Compliance regulatório (auto-aplicado por nicho):

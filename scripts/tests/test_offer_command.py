@@ -6,12 +6,13 @@ import json
 import re
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parents[2]
 COMMAND = ROOT / "commands" / "criar-oferta.md"
 OFFER_AGENT = ROOT / "agents" / "mos-offer.md"
 OFFER_KNOWLEDGE = ROOT / "subagents" / "offer-agent.md"
-LEGACY_SOURCE_SKILL = ROOT / ".agents" / "skills" / "source-command-marketing-os" / "SKILL.md"
+LEGACY_SOURCE_SKILL = (
+    ROOT / ".agents" / "skills" / "source-command-marketing-os" / "SKILL.md"
+)
 CANONICAL_SKILL = ROOT / "skills" / "marketing-os" / "SKILL.md"
 META_ROUTER = ROOT / "commands" / "mo.md"
 ROUTING_CASES = ROOT / "docs" / "ai-engineering" / "evals" / "routing-cases.json"
@@ -105,8 +106,10 @@ def test_natural_offer_routing_matches_the_command_dependencies() -> None:
 
 
 def test_meta_router_exposes_the_offer_command() -> None:
+    """O /mo roteia pela tabela canônica do SKILL.md (auditoria 2026-09-28, #13)."""
     router = _read(META_ROUTER).lower()
+    skill = _read(CANONICAL_SKILL).lower()
 
-    assert "oferta / value stack / garantia / preço / quanto cobrar" in router
-    assert "sugerir `/criar-oferta`" in router
-    assert "`mos-research` seguido de `mos-offer`" in router
+    assert "slash commands: qual usar para cada necessidade" in router
+    assert "| oferta (value stack, preço, garantia) | `/criar-oferta` |" in skill
+    assert re.search(r"`mos-research`\s+seguido de `mos-offer`", skill)

@@ -139,7 +139,7 @@ def _api_get(
 
     req = urllib.request.Request(url, headers=_headers(token), method="GET")
     try:
-        with urllib.request.urlopen(req) as resp:
+        with urllib.request.urlopen(req, timeout=30) as resp:
             return json.loads(resp.read().decode("utf-8"))
     except urllib.error.HTTPError as e:
         body = {}
@@ -160,7 +160,7 @@ def _api_post(path: str, token: str, payload: Dict[str, Any]) -> Dict[str, Any]:
     data = json.dumps(payload).encode("utf-8")
     req = urllib.request.Request(url, data=data, headers=_headers(token), method="POST")
     try:
-        with urllib.request.urlopen(req) as resp:
+        with urllib.request.urlopen(req, timeout=30) as resp:
             return json.loads(resp.read().decode("utf-8"))
     except urllib.error.HTTPError as e:
         body = {}
@@ -183,7 +183,7 @@ def _api_patch(path: str, token: str, payload: Dict[str, Any]) -> Dict[str, Any]
         url, data=data, headers=_headers(token), method="PATCH"
     )
     try:
-        with urllib.request.urlopen(req) as resp:
+        with urllib.request.urlopen(req, timeout=30) as resp:
             return json.loads(resp.read().decode("utf-8"))
     except urllib.error.HTTPError as e:
         body = {}

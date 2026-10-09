@@ -13,6 +13,7 @@
 - PARTE VII: Métricas de comunidade
 - PARTE VIII: Anti-padrões
 - PARTE IX: Referências cruzadas
+- PARTE X: Avaliações públicas (Reclame Aqui, Google, marketplaces)
 
 ---
 
@@ -333,3 +334,47 @@ Mais espaço que comentário público. Pode enviar case, áudio curto (usuário 
 | Disclosure #publi em resposta sobre parceria | mos-social (CONAR) + mos-partnerships |
 
 Handoff típico: após fila de rascunhos aprovada, o usuário publica manualmente ou via MCP com confirmação item a item.
+
+---
+
+# PARTE X: AVALIAÇÕES PÚBLICAS (RECLAME AQUI, GOOGLE, MARKETPLACES)
+
+Comentário é conversa; avaliação é registro permanente que o próximo comprador lê antes de decidir. A resposta da empresa é escrita para esse leitor futuro tanto quanto para quem reclamou.
+
+## Canais
+
+| Canal | O que muda na resposta |
+|---|---|
+| Reclame Aqui | Resposta pública da empresa ao relato; o consumidor pode avaliar se o problema foi resolvido. Resolver de fato pesa mais que o texto. |
+| Perfil da Empresa no Google | Resposta pública do proprietário, lida por quem procura o negócio no Google e no Maps; peso alto para negócio local. |
+| Marketplaces (Mercado Livre, Shopee, Amazon) | Avaliação e perguntas do anúncio; respostas curtas, focadas no produto, sem levar o cliente para fora da plataforma quando a política do marketplace proíbe. |
+
+## Estrutura da resposta a avaliação negativa
+
+1. Agradeça e cite o problema específico relatado (nada de texto genérico repetido).
+2. Assuma a parte que é da empresa, sem culpar o cliente em público.
+3. Diga o que foi ou será feito e em quanto tempo.
+4. Leve detalhes para o canal privado: número de pedido, CPF, endereço e dados de saúde nunca aparecem na resposta pública (LGPD).
+5. Feche com o nome de quem responde e o canal direto.
+
+Avaliação positiva também recebe resposta: curta, específica ao que o cliente elogiou, sem pedir mais nada.
+
+## Não faça
+
+- Oferecer desconto, brinde ou qualquer vantagem em troca de mudar ou remover a nota. As plataformas proíbem avaliação incentivada, e isso vira prova contra a empresa.
+- Discutir versões do caso em público ou insinuar que o cliente mente.
+- Responder igual a todos com o mesmo texto.
+- Publicar dado pessoal para "provar" o atendimento.
+
+## Avaliação falsa ou ofensiva
+
+Responda uma vez, com fatos e sem ataque, e use o canal de denúncia da própria plataforma. Nunca exponha dados de quem avaliou.
+
+## Escalação obrigatória (humano ou jurídico antes de responder)
+
+Menção a processo, PROCON, órgão regulador ou imprensa; relato de dano físico ou à saúde; vazamento de dados; acusação de fraude. O rascunho, nesses casos, só confirma recebimento e o canal de contato.
+
+## Métricas
+
+Tempo até a primeira resposta, taxa de avaliações respondidas e proporção de casos resolvidos. Mudança de nota é consequência da solução, nunca meta de negociação.
+

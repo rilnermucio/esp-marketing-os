@@ -1,13 +1,16 @@
 #!/usr/bin/env python3
 """
-init_agent_memory.py — Cria a estrutura de memory opt-in para os agents do Marketing OS.
+init_agent_memory.py: prepara a memória de projeto dos agents do Marketing OS.
 
-Cria `.claude/agent-memory/mos-<agent>/MEMORY.md` para cada agent que tem
-`memory: project` no frontmatter. A pasta `.claude/` está gitignored (memory é
-per-projeto, não distribuída pelo plugin).
+Cria `.claude/agent-memory/marketing-os-mos-<agent>/MEMORY.md` para cada agent
+com `memory: project` no frontmatter. Esse é o diretório nativo que o Claude
+Code usa para agent de plugin (`<plugin>-<agent>`): a plataforma injeta o
+início do MEMORY.md no contexto do agent. Até 2026-09 o plugin usava
+`.claude/agent-memory/mos-<agent>/`, que a plataforma não lê para agent de
+plugin; esses diretórios antigos são migrados sem perda (ADR-0006).
 
 Uso:
-    python3 scripts/init_agent_memory.py              # cria os 9 diretórios + MEMORY.md placeholder
+    python3 scripts/init_agent_memory.py              # migra o legado e cria os diretórios
     python3 scripts/init_agent_memory.py --check      # apenas reporta o estado, não cria nada
     python3 scripts/init_agent_memory.py --force      # sobrescreve MEMORY.md existentes (cuidado)
 """
@@ -16,6 +19,7 @@ from __future__ import annotations
 
 import argparse
 import sys
+from datetime import date
 from pathlib import Path
 
 # Mantenha sincronizado com o frontmatter `memory: project` em agents/mos-*.md
@@ -45,6 +49,67 @@ AGENTS_WITH_MEMORY = [
 ]
 
 MEMORY_ROOT = Path(".claude/agent-memory")
+PLUGIN_NAME = "marketing-os"
+MIGRATED_SUFFIX = ".migrado"
+
+
+def short_agent_name(agent: str) -> str:
+    """`marketing-os:mos-copy` ou `mos-copy` -> `mos-copy`."""
+    return agent.rpartition(":")[2]
+
+
+def memory_dir_name(agent: str) -> str:
+    """Nome do diretório nativo de memória de agent de plugin: `<plugin>-<agent>`."""
+    return f"{PLUGIN_NAME}-{short_agent_name(agent)}"
+
+
+def memory_dir(agent: str) -> Path:
+    return MEMORY_ROOT / memory_dir_name(agent)
+
+
+def legacy_memory_dir(agent: str) -> Path:
+    """Diretório usado pelo plugin até 2026-09, que a plataforma não lê."""
+    return MEMORY_ROOT / short_agent_name(agent)
+
+
+def migrate_legacy(agent: str, today: str | None = None) -> str:
+    """Leva a memória antiga para o diretório nativo sem perder conteúdo.
+
+    Retorna "movido" (só existia o antigo), "mesclado" (existiam os dois: o
+    conteúdo antigo é anexado ao nativo e o antigo vira `<nome>.migrado`) ou ""
+    quando não há o que migrar.
+    """
+    legacy = legacy_memory_dir(agent)
+    target = memory_dir(agent)
+    if not legacy.is_dir() or legacy == target:
+        return ""
+    if not target.exists():
+        target.parent.mkdir(parents=True, exist_ok=True)
+        legacy.rename(target)
+        return "movido"
+    legacy_memory = legacy / "MEMORY.md"
+    if legacy_memory.exists():
+        stamp = today or date.today().isoformat()
+        old = legacy_memory.read_text(encoding="utf-8").strip()
+        target_memory = target / "MEMORY.md"
+        current = (
+            target_memory.read_text(encoding="utf-8") if target_memory.exists() else ""
+        )
+        merged = (
+            current.rstrip()
+            + f"\n\n## Migrado de {legacy.as_posix()} ({stamp})\n\n"
+            + old
+            + "\n"
+        )
+        target_memory.write_text(merged.lstrip(), encoding="utf-8")
+    parked = legacy.with_name(legacy.name + MIGRATED_SUFFIX)
+    counter = 1
+    while parked.exists():
+        counter += 1
+        parked = legacy.with_name(f"{legacy.name}{MIGRATED_SUFFIX}{counter}")
+    legacy.rename(parked)
+    return "mesclado"
+
 
 PLACEHOLDER_TEMPLATE = """# {agent} — Memory
 
@@ -71,15 +136,22 @@ def init_memory(force: bool = False, check_only: bool = False) -> int:
     created = []
     skipped = []
     overwritten = []
+    migrated = []
 
     for agent in AGENTS_WITH_MEMORY:
-        agent_dir = MEMORY_ROOT / agent
+        agent_dir = memory_dir(agent)
         memory_file = agent_dir / "MEMORY.md"
 
         if check_only:
             status = "EXISTE" if memory_file.exists() else "FALTA"
-            print(f"  [{status}] {memory_file}")
+            legacy = legacy_memory_dir(agent)
+            extra = f"  (legado a migrar: {legacy})" if legacy.is_dir() else ""
+            print(f"  [{status}] {memory_file}{extra}")
             continue
+
+        outcome = migrate_legacy(agent)
+        if outcome:
+            migrated.append((legacy_memory_dir(agent), outcome))
 
         agent_dir.mkdir(parents=True, exist_ok=True)
 
@@ -102,6 +174,10 @@ def init_memory(force: bool = False, check_only: bool = False) -> int:
         return 0
 
     print(f"\nMemory bootstrap concluído em {MEMORY_ROOT}/")
+    if migrated:
+        print(f"  Legado migrado: {len(migrated)}")
+        for p, outcome in migrated:
+            print(f"    > {p} ({outcome})")
     if created:
         print(f"  Criados: {len(created)}")
         for p in created:
@@ -114,7 +190,7 @@ def init_memory(force: bool = False, check_only: bool = False) -> int:
         print(f"  Já existiam (preservados): {len(skipped)}")
         for p in skipped:
             print(f"    = {p}")
-    if not (created or overwritten or skipped):
+    if not (created or overwritten or skipped or migrated):
         print("  (nada a fazer)")
     return 0
 

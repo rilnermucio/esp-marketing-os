@@ -79,13 +79,30 @@ Bugs reais que encontramos durante distribuição/uso, com solução verificada.
 
 **Solução:** Atualizar pra v6.2.1+. O orquestrador agora pergunta as 5 chaves antes de dispatchar (nicho/avatar/ticket/plataforma/urgência), pulando perguntas que já têm resposta no memory do projeto.
 
+### App desktop mostra versão antiga do plugin (cópia sincronizada da conta)
+
+**Sintoma:** no app desktop faltam agents ou commands que existem na versão instalada (ex: sem `mos-offer`, `mos-community`, `mos-partnerships`, `/mo`, `/aprender`), mesmo com `/plugin` mostrando a versão nova no terminal.
+
+**Causa:** marketplaces adicionados na sua conta claude.ai são sincronizados para `~/.claude/plugins/synced/`. Se um desses marketplaces parou de sincronizar, a cópia fica congelada e o app desktop pode carregar essa cópia em vez da instalada pelo marketplace local. Caso real (2026-09-28): marketplace de conta "Marketing-OS" congelado na v6.1.5 desde 2026-05-07, enquanto a 6.16.0 estava instalada.
+
+**Diagnóstico:**
+Peça ao Claude "rode o diagnóstico de instalação do Marketing OS" ou, num clone do repositório:
+```bash
+python3 scripts/mos.py install doctor
+```
+Lista todas as cópias do Marketing OS (cache, sincronizadas, registros de instalação) com a versão de cada uma e avisa quando alguma está atrás da referência.
+
+**Solução:** nas configurações de plugins da sua conta claude.ai, remova o marketplace antigo (ou atualize-o para `rilnermucio/esp-marketing-os`) e mantenha uma só origem do plugin. Depois reabra o app e confirme que a lista de agents inclui `marketing-os:mos-offer`.
+
+---
+
 ### Hook do agent falha com "No such file or directory"
 
 **Sintoma:** Quando um `mos-*` agent tenta escrever arquivo, sai erro de hook script não encontrado.
 
 **Causa:** Versões anteriores a v6.1.7 usavam caminho relativo `python3 scripts/hooks/quality_gate_hook.py`. O CWD do hook é do user, não do plugin install dir, então só funcionava quando você rodava DENTRO do repo do plugin.
 
-**Solução:** Atualizar pra v6.1.7+. O caminho correto é `python3 ${CLAUDE_PLUGIN_ROOT}/scripts/hooks/quality_gate_hook.py`.
+**Solução:** Atualizar para a versão atual. Desde a ADR-0005 o gate vive só em `hooks/hooks.json`, com `"${CLAUDE_PLUGIN_ROOT}/scripts/hooks/quality_gate_hook.py"` entre aspas. Hooks no frontmatter de agent de plugin são ignorados pela plataforma e não devem ser declarados.
 
 ---
 
@@ -93,41 +110,34 @@ Bugs reais que encontramos durante distribuição/uso, com solução verificada.
 
 ### Memory de cliente caiu na pasta errada
 
-**Sintoma:** Você esperava memory em `<projeto-cliente>/.claude/agent-memory/` mas ela apareceu em outra pasta (ex: no próprio repo do marketing-os).
+**Sintoma:** você esperava memory em `<projeto-cliente>/.claude/agent-memory/` mas ela apareceu em outra pasta (ex: no próprio repo do marketing-os).
 
-**Causa:** Memory é escopada pelo CWD do Claude Code quando o agent foi invocado. Se você rodou `/marketing-os` enquanto a CWD era a pasta do plugin (não do cliente), a memory foi salva lá.
+**Causa:** memory é escopada pelo diretório em que a sessão do Claude Code roda. Se você rodou o Marketing OS com a sessão aberta na pasta do plugin, a memory foi salva lá.
 
-**Solução:** Migre manualmente:
+**Solução:** mova a pasta para o projeto certo, mantendo o nome nativo:
 ```bash
-# Cria pasta destino correta (note o "marketing-os-" prefix quando vem via plugin)
-mkdir -p "<projeto-cliente>/.claude/agent-memory/marketing-os-mos-copy/"
-
-# Move arquivos
-mv "<repo-marketing-os>/.claude/agent-memory/mos-copy/"*.md \
-   "<projeto-cliente>/.claude/agent-memory/marketing-os-mos-copy/"
-
-# Atualiza MEMORY.md (índice) na pasta destino se precisar
+mkdir -p "<projeto-cliente>/.claude/agent-memory/"
+mv "<repo-marketing-os>/.claude/agent-memory/marketing-os-mos-copy" \
+   "<projeto-cliente>/.claude/agent-memory/"
 ```
 
 ### Memory não carrega entre sessões
 
-**Causa:** O frontmatter do agent declara `memory: project` (escopo = pasta atual). Cada projeto tem memory isolada.
+**Causa:** o frontmatter do agent declara `memory: project` (escopo = pasta atual). Cada projeto tem memory isolada.
 
 **Comportamento esperado:**
 - Pasta A: agent tem memory A
 - Pasta B: agent começa do zero
 - Pasta A novamente: memory A volta
 
-**Se quiser memory compartilhada entre projetos:**
-- Editar `agents/mos-<agent>.md` frontmatter: trocar `memory: project` por `memory: user`
-- Memory user-scope vai pra `~/.claude/agent-memory/` (compartilhada)
+Se a memory existe mas o agent parece não enxergar, confira o nome do diretório (seção abaixo).
 
-### Diretório `marketing-os-mos-copy/` vs `mos-copy/` — qual é qual?
+### Diretório `marketing-os-mos-copy/` vs `mos-copy/`: qual é qual?
 
-- **`mos-copy/`** (sem prefixo): agent foi resolvido como **local** (você editou direto em `agents/mos-copy.md` no repo)
-- **`marketing-os-mos-copy/`** (com prefixo): agent foi resolvido como **vindo do plugin instalado** (namespace plugin name + agent name)
+- **`marketing-os-mos-copy/`**: diretório nativo que o Claude Code usa para o agent do plugin instalado. A plataforma injeta o início do `MEMORY.md` dele no contexto do agent. É o canônico desde a ADR-0006.
+- **`mos-copy/`**: diretório que o plugin usou entre as versões 6.5 e 6.16. A plataforma não o lê para agent de plugin, então aprendizados gravados ali não chegavam ao agent.
 
-São pastas diferentes pra contextos diferentes. Não há cross-contaminação.
+**Solução:** rode `python3 scripts/init_agent_memory.py` no projeto (ou apenas grave um aprendizado novo com `memory_writer.py`). O conteúdo de `mos-*/` é movido para `marketing-os-mos-*/`; se os dois existirem, o antigo é anexado ao novo e a pasta antiga vira `mos-*.migrado`, sem apagar nada.
 
 ---
 
@@ -183,7 +193,7 @@ Reinstalação puxa a versão nova do cache atualizado. Não perde nada — sett
 /plugin
 ```
 
-Lista plugins instalados com versão. Se mostrar `6.x.y` → versão atual carregada.
+Lista plugins instalados com versão. Para ver todas as cópias da máquina (incluindo as sincronizadas da conta claude.ai, que o app desktop pode carregar), rode `python3 scripts/mos.py install doctor`.
 
 ---
 
@@ -193,15 +203,15 @@ Lista plugins instalados com versão. Se mostrar `6.x.y` → versão atual carre
 
 **Status:** Resolvido desde v6.5.0. Todos os commands de produção passam pelo contrato de dispatch. Quatro utilities permanecem sem dispatch por desenho: `/publicar-notion`, `/campanha`, `/projeto` e `/datas-sazonais`.
 
-Se um command novo executar produção inline, rode `python -m pytest scripts/tests/test_commands_dispatch.py -v`. A suite identifica o arquivo que não declarou `Agent(subagent_type: "mos-*")`.
+Se um command novo executar produção inline, rode `python -m pytest scripts/tests/test_commands_dispatch.py -v`. A suite identifica o arquivo que não declarou `Agent(subagent_type: "marketing-os:mos-*")`.
 
 ### Tier 2 smoke tests deferred
 
-**Status:** Os Tier 2 tests (em `scripts/tests/test_agents_smoke.py`) requerem Claude Code login pra rodar e estão marcados com `@pytest.mark.smoke`. Não rodam no CI por padrão.
+**Status:** os smoke tests (`scripts/tests/test_install_smoke.py` e `test_agents_smoke.py`) chamam o Claude real, exigem login e só rodam com `MOS_SMOKE=1`. Não rodam no CI. Os dois carregam a árvore de trabalho com `--plugin-dir` e a sessão fora do repo, como numa instalação real.
 
-**Pra rodar localmente:**
+**Para rodar localmente:**
 ```bash
-python -m pytest scripts/tests/test_agents_smoke.py -v -m smoke
+MOS_SMOKE=1 python -m pytest scripts/tests/test_install_smoke.py -m smoke -v
 ```
 
 ---

@@ -197,7 +197,7 @@ Incluir dados, exemplos e análises.]
 [Insight em Destaque]
 ┌────────────────────────────────────────┐
 │  "[Citação ou insight importante]"     │
-│  — [Fonte/especialista]                │
+│: [Fonte/especialista]                │
 └────────────────────────────────────────┘
 
 [Dados de Suporte]
@@ -247,7 +247,7 @@ Resultados:
 • [Métrica 3]: [resultado]
 
 "[Citação do executivo da empresa]"
-— [Nome], [Cargo], [Empresa]
+[Nome], [Cargo], [Empresa]
 
 ---
 

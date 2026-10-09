@@ -1,5 +1,5 @@
 ---
-description: Preset de Black Friday e datas comemorativas. Dispatcha mos-launch sequencial, depois mos-copy + mos-email + mos-ads + mos-social em paralelo, fechando com mos-analytics em tempo real. Clone primário hormozi.
+description: "Campanha de Black Friday ou outra data comercial: oferta, emails, anúncios e social com cronograma de urgência. Use quando o objetivo for vender numa data sazonal. Para saber as datas, use /datas-sazonais."
 argument-hint: "<produto> [--desconto=...] [--clone=hormozi|suby] [--canal=...] [--data=black-friday|cyber-monday|...]"
 ---
 
@@ -20,15 +20,15 @@ argument-hint: "<produto> [--desconto=...] [--clone=hormozi|suby] [--canal=...] 
 **Fase 1 (sequencial, estratégia precisa vir primeiro):**
 
 ```
-- Agent(subagent_type: "mos-launch", prompt: "Estratégia Black Friday pra [produto]: composição da oferta (desconto + bônus + urgência real), value stack que justifica o preço, cronograma D-7 → D+2, lista VIP pra warm-up. Frameworks: Hormozi value stack + scarcity real (não artificial).")
+- Agent(subagent_type: "marketing-os:mos-launch", prompt: "Estratégia Black Friday pra [produto]: composição da oferta (desconto + bônus + urgência real), value stack que justifica o preço, cronograma D-7 → D+2, lista VIP pra warm-up. Frameworks: Hormozi value stack + scarcity real (não artificial).")
 ```
 
 **Fase 2 (paralelo, depende da estratégia):**
 
 ```
-- Agent(subagent_type: "mos-copy", prompt: "Copy clone=hormozi de alta urgência pra Black Friday: headlines de oferta, página de vendas atualizada com timer, CTAs agressivos mas honestos, FAQ de objeções de fim de ano. Quality gates + compliance.")
+- Agent(subagent_type: "marketing-os:mos-copy", prompt: "Copy clone=hormozi de alta urgência pra Black Friday: headlines de oferta, página de vendas atualizada com timer, CTAs agressivos mas honestos, FAQ de objeções de fim de ano. Quality gates + compliance.")
 
-- Agent(subagent_type: "mos-email", prompt: "Sequência intensiva 7 dias:
+- Agent(subagent_type: "marketing-os:mos-email", prompt: "Sequência intensiva 7 dias:
   - Dia -7: teaser + abertura da lista VIP
   - Dia -3: anúncio oficial da promoção
   - Dia -1: último aviso
@@ -37,15 +37,15 @@ argument-hint: "<produto> [--desconto=...] [--clone=hormozi|suby] [--canal=...] 
   - Dia +2: última chance (manhã + 6h antes do fim)
   Considere memory de campanhas BF anteriores.")
 
-- Agent(subagent_type: "mos-ads", prompt: "Campanhas agressivas de conversão pra BF: budget escalonado D-7 → D+2, bid strategy ROAS, criativos com timer + desconto destacado, retargeting de carrinho abandonado. ROAS alvo > 4x.")
+- Agent(subagent_type: "marketing-os:mos-ads", prompt: "Campanhas agressivas de conversão pra BF: budget escalonado D-7 → D+2, bid strategy ROAS, criativos com timer + desconto destacado, retargeting de carrinho abandonado. ROAS alvo > 4x.")
 
-- Agent(subagent_type: "mos-social", prompt: "Posts e stories de contagem regressiva + promoção: D-7 teaser, D-3 oficial, D-1 urgência, D0 abertura, D+1 social proof de quem comprou, D+2 última chance. Quality gates + enquete.")
+- Agent(subagent_type: "marketing-os:mos-social", prompt: "Posts e stories de contagem regressiva + promoção: D-7 teaser, D-3 oficial, D-1 urgência, D0 abertura, D+1 social proof de quem comprou, D+2 última chance. Quality gates + enquete.")
 ```
 
 **Fase 3 (paralelo durante a campanha):**
 
 ```
-- Agent(subagent_type: "mos-analytics", prompt: "Monitoramento em tempo real durante BF: receita/hora vs meta, ROAS por canal, conversão do checkout, alertas de queda. Dashboard de plantão.")
+- Agent(subagent_type: "marketing-os:mos-analytics", prompt: "Monitoramento em tempo real durante BF: receita/hora vs meta, ROAS por canal, conversão do checkout, alertas de queda. Dashboard de plantão.")
 ```
 
 ## Cronograma
@@ -99,7 +99,7 @@ NO DIA:
 
 ## Quality Gates (antes de entregar)
 
-Aplicar gates globais do `skills/marketing-os/SKILL.md`:
+Aplicar gates globais do `${CLAUDE_PLUGIN_ROOT}/skills/marketing-os/SKILL.md`:
 - Sem `—`, sem "brutal", sem CAPS gratuito
 - Acentuação PT-BR correta
 - Urgência REAL (estoque limitado, prazo verdadeiro), nunca falsa
@@ -109,4 +109,4 @@ Aplicar gates globais do `skills/marketing-os/SKILL.md`:
 
 ## Memory note
 
-Os agents `mos-copy`, `mos-email`, `mos-ads`, `mos-social`, `mos-launch` têm memory project em `.claude/agent-memory/mos-<agent>/`. Sempre mencione no prompt que considere memory de campanhas BF anteriores para evitar reciclar ângulos saturados e para escalar o que já performou bem.
+Os agents `mos-copy`, `mos-email`, `mos-ads`, `mos-social`, `mos-launch` têm memory project em `.claude/agent-memory/marketing-os-mos-<agent>/`. Sempre mencione no prompt que considere memory de campanhas BF anteriores para evitar reciclar ângulos saturados e para escalar o que já performou bem.

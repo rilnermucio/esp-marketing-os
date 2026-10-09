@@ -12,7 +12,7 @@ O framework central de Provost para criar ritmo.
 | **Curta** | 4-7 palavras | Clareza direta e concisa. |
 | **Média** | 8-15 palavras | Desenvolvimento de uma ideia simples com contexto. |
 | **Longa** | 16-25 palavras | Envolvimento progressivo que sustenta atenção enquanto aprofunda. |
-| **Expandida** | 26+ palavras | Narrativa completa que constrói, conecta e entrega a ideia em toda sua complexidade — usada estrategicamente para momentos de máximo impacto. |
+| **Expandida** | 26+ palavras | Narrativa completa que constrói, conecta e entrega a ideia em toda sua complexidade: usada estrategicamente para momentos de máximo impacto. |
 
 ### Regra de Composição
 
@@ -88,7 +88,7 @@ MOSTRAR: [sujeito] + [ação física/específica que revela o estado]
 
 ## 4. Limpeza de Texto (Word Economy)
 
-### Frases Parasitas — Eliminar Sempre
+### Frases Parasitas: Eliminar Sempre
 
 | Parasita | Versão limpa |
 |----------|-------------|

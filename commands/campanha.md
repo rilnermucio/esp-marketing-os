@@ -1,5 +1,5 @@
 ---
-description: Índice dos 6 presets de campanha disponíveis (lancamento, prospeccao, retencao, autoridade, growth, black-friday). Liste tipos e roteie pro sub-command correspondente. Roteador puro, sem dispatch direto.
+description: "Lista as campanhas prontas por objetivo (lançamento, prospecção, retenção, autoridade, growth, Black Friday) e indica a certa. Use quando pedirem campanha completa sem dizer o tipo."
 argument-hint: "(sem argumentos: lista presets) | <preset> redireciona para /campanha-<preset>"
 ---
 
@@ -36,15 +36,15 @@ Exemplos:
 
 ## Quality Gates Globais (aplicáveis a todos os presets)
 
-Ver `skills/marketing-os/SKILL.md`. Cada sub-command já reforça localmente, mas resumindo: sem `—` (travessão longo), sem "brutal", sem CAPS gratuito, sem aspas em roteiros/falas, máximo 1-2 emojis (preferir 0), acentuação PT-BR correta, fact-check via WebSearch em pessoas/estatísticas/cases, compliance regulatório se nicho saúde/finanças/suplementos, enquete obrigatória em conteúdo social, disclaimer "Resultados não garantidos" em promessa quantitativa.
+Ver `${CLAUDE_PLUGIN_ROOT}/skills/marketing-os/SKILL.md`. Cada sub-command já reforça localmente, mas resumindo: sem `—` (travessão longo), sem "brutal", sem CAPS gratuito, sem aspas em roteiros/falas, máximo 1-2 emojis (preferir 0), acentuação PT-BR correta, fact-check via WebSearch em pessoas/estatísticas/cases, compliance regulatório se nicho saúde/finanças/suplementos, enquete obrigatória em conteúdo social, disclaimer "Resultados não garantidos" em promessa quantitativa.
 
 ## Recursos relacionados
 
-- `workflows/end-to-end-campaign-workflow.md`: workflow completo de referência
-- `workflows/content-pipeline.md`: pipeline de produção
-- `assets/clones/clone-manifest.yaml`: sistema de clones (35 perfis)
-- `subagents/ab-testing-agent.md`: testes A/B aprofundados
-- `scripts/ab_generator.py`: geração automática de variantes
+- `${CLAUDE_PLUGIN_ROOT}/workflows/end-to-end-campaign-workflow.md`: workflow completo de referência
+- `${CLAUDE_PLUGIN_ROOT}/workflows/content-pipeline.md`: pipeline de produção
+- `${CLAUDE_PLUGIN_ROOT}/assets/clones/clone-manifest.yaml`: sistema de clones de experts
+- `${CLAUDE_PLUGIN_ROOT}/subagents/ab-testing-agent.md`: testes A/B aprofundados
+- `${CLAUDE_PLUGIN_ROOT}/scripts/ab_generator.py`: geração automática de variantes
 
 ## Por que essa estrutura de presets
 

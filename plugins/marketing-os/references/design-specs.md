@@ -31,7 +31,7 @@ Right: 100px (icones de interacao)
 - H.264 codec
 - 30fps recomendado
 - AAC audio, 128kbps+
-- Duracao: Stories 15s, Reels ate 90s
+- Duração: Stories até 60s por story; Reels até 3 min (ver `platform-facts.md`)
 
 ---
 

@@ -2,6 +2,7 @@
 """
 Testes para init_agent_memory.py — bootstrap da memory opt-in dos agents.
 """
+
 from __future__ import annotations
 
 import os
@@ -47,7 +48,9 @@ def test_init_memory_cria_estrutura_completa(tmp_cwd):
     assert rc == 0
 
     for agent in iam.AGENTS_WITH_MEMORY:
-        memory_file = tmp_cwd / ".claude" / "agent-memory" / agent / "MEMORY.md"
+        memory_file = (
+            tmp_cwd / ".claude" / "agent-memory" / f"marketing-os-{agent}" / "MEMORY.md"
+        )
         assert memory_file.exists(), f"MEMORY.md não criado para {agent}"
         content = memory_file.read_text(encoding="utf-8")
         assert agent in content, f"Nome do agent não substituído em {memory_file}"
@@ -58,18 +61,32 @@ def test_init_memory_idempotente(tmp_cwd):
     iam.init_memory(force=False, check_only=False)
 
     # Customiza um arquivo
-    target = tmp_cwd / ".claude" / "agent-memory" / iam.AGENTS_WITH_MEMORY[0] / "MEMORY.md"
+    target = (
+        tmp_cwd
+        / ".claude"
+        / "agent-memory"
+        / f"marketing-os-{iam.AGENTS_WITH_MEMORY[0]}"
+        / "MEMORY.md"
+    )
     custom = "# Conteúdo customizado importante\nNão pode ser perdido"
     target.write_text(custom, encoding="utf-8")
 
     rc = iam.init_memory(force=False, check_only=False)
     assert rc == 0
-    assert target.read_text(encoding="utf-8") == custom, "Conteúdo customizado foi sobrescrito sem --force"
+    assert (
+        target.read_text(encoding="utf-8") == custom
+    ), "Conteúdo customizado foi sobrescrito sem --force"
 
 
 def test_init_memory_force_sobrescreve(tmp_cwd):
     iam.init_memory(force=False, check_only=False)
-    target = tmp_cwd / ".claude" / "agent-memory" / iam.AGENTS_WITH_MEMORY[0] / "MEMORY.md"
+    target = (
+        tmp_cwd
+        / ".claude"
+        / "agent-memory"
+        / f"marketing-os-{iam.AGENTS_WITH_MEMORY[0]}"
+        / "MEMORY.md"
+    )
     target.write_text("conteúdo antigo", encoding="utf-8")
 
     rc = iam.init_memory(force=True, check_only=False)
@@ -131,7 +148,13 @@ def test_main_check_apenas_reporta(tmp_cwd, capsys):
 
 def test_main_force_sobrescreve(tmp_cwd):
     iam.init_memory(force=False, check_only=False)
-    target = tmp_cwd / ".claude" / "agent-memory" / iam.AGENTS_WITH_MEMORY[1] / "MEMORY.md"
+    target = (
+        tmp_cwd
+        / ".claude"
+        / "agent-memory"
+        / f"marketing-os-{iam.AGENTS_WITH_MEMORY[1]}"
+        / "MEMORY.md"
+    )
     target.write_text("custom", encoding="utf-8")
 
     with patch.object(sys, "argv", ["init_agent_memory.py", "--force"]):
@@ -152,6 +175,50 @@ def test_template_compativel_com_format(tmp_cwd):
 def test_arquivo_resultante_eh_utf8(tmp_cwd):
     iam.init_memory(force=False, check_only=False)
     for agent in iam.AGENTS_WITH_MEMORY:
-        memory_file = tmp_cwd / ".claude" / "agent-memory" / agent / "MEMORY.md"
+        memory_file = (
+            tmp_cwd / ".claude" / "agent-memory" / f"marketing-os-{agent}" / "MEMORY.md"
+        )
         # Levanta UnicodeDecodeError se não for utf-8
         memory_file.read_text(encoding="utf-8")
+
+
+def test_nome_do_diretorio_nativo():
+    """Padrão do Claude Code para agent de plugin: <plugin>-<agent> (sonda 2026-09-28)."""
+    assert iam.memory_dir_name("mos-copy") == "marketing-os-mos-copy"
+    assert iam.memory_dir_name("marketing-os:mos-copy") == "marketing-os-mos-copy"
+
+
+def test_migracao_move_legado_sem_diretorio_nativo(tmp_cwd):
+    legacy = tmp_cwd / ".claude" / "agent-memory" / "mos-copy"
+    legacy.mkdir(parents=True)
+    (legacy / "MEMORY.md").write_text("aprendizado antigo", encoding="utf-8")
+    assert iam.migrate_legacy("mos-copy") == "movido"
+    native = (
+        tmp_cwd / ".claude" / "agent-memory" / "marketing-os-mos-copy" / "MEMORY.md"
+    )
+    assert native.read_text(encoding="utf-8") == "aprendizado antigo"
+    assert not legacy.exists()
+
+
+def test_migracao_mescla_quando_existem_os_dois_sem_apagar(tmp_cwd):
+    root = tmp_cwd / ".claude" / "agent-memory"
+    (root / "mos-copy").mkdir(parents=True)
+    (root / "mos-copy" / "MEMORY.md").write_text("do plugin antigo", encoding="utf-8")
+    (root / "marketing-os-mos-copy").mkdir(parents=True)
+    (root / "marketing-os-mos-copy" / "MEMORY.md").write_text(
+        "nativo", encoding="utf-8"
+    )
+    assert iam.migrate_legacy("mos-copy", today="2026-09-28") == "mesclado"
+    merged = (root / "marketing-os-mos-copy" / "MEMORY.md").read_text(encoding="utf-8")
+    assert merged.startswith("nativo")
+    assert "## Migrado de .claude/agent-memory/mos-copy (2026-09-28)" in merged
+    assert "do plugin antigo" in merged
+    assert (root / "mos-copy.migrado" / "MEMORY.md").exists()
+
+
+def test_migracao_idempotente(tmp_cwd):
+    assert iam.migrate_legacy("mos-copy") == ""
+    iam.init_memory(force=False, check_only=False)
+    iam.init_memory(force=False, check_only=False)
+    root = tmp_cwd / ".claude" / "agent-memory"
+    assert not any(p.name.startswith("mos-") for p in root.iterdir())

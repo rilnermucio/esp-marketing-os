@@ -1,5 +1,5 @@
 ---
-description: Cria uma USP baseada em evidências com diferenciação competitiva, reason to believe, validação e handoff para execução.
+description: "Cria USP e proposta de valor com evidências, diferenciação competitiva e reason to believe. Use quando pedirem USP, diferencial, proposta de valor ou posicionamento da oferta."
 argument-hint: "<produto ou oferta> <público> [categoria ou mercado] [geografia]"
 ---
 
@@ -66,6 +66,8 @@ Agent(subagent_type: "mos-brand", prompt: "Crie o Dossiê de USP de [produto, se
 ```
 
 ## Consolidação
+
+> **Precedência**: o conteúdo mínimo é o do Dossiê de USP definido no contrato canônico do `mos-brand` (seção 3.3 de `subagents/brand-agent.md`). O schema abaixo define a ordem de apresentação da entrega consolidada, sem descartar campo obrigatório do contrato.
 
 Entregue o resultado final neste schema:
 
@@ -176,6 +178,10 @@ Entregue o resultado final neste schema:
 ## 12. Fontes
 1. [Título, organização ou autor, URL, publicação, acesso e escopo]
 ````
+
+## Salvar no projeto
+
+Depois de entregar, salve o dossiê em `workspace/brand/usp.md`, no projeto do usuário, para os outros especialistas usarem como contexto. Se o arquivo já existir, preserve a versão anterior com a data no nome. Se `workspace/brand/perfil.md` existir (criado por `/configurar-marca`), atualize a seção Negócio (diferencial) com um resumo de 2 ou 3 linhas.
 
 ## Quality Gates (antes de entregar)
 

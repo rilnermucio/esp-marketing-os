@@ -66,14 +66,14 @@ Contato para imprensa:
 > Máximo 3-4 linhas. Ser auto-suficiente.
 
 ```
-[CIDADE, DATA] – [EMPRESA], [breve descrição da empresa],
+[CIDADE, DATA]. [EMPRESA], [breve descrição da empresa],
 anunciou hoje [O QUÊ - ação/lançamento/parceria].
 [POR QUÊ - importância/impacto]. [QUANDO - timing se relevante].
 ```
 
 **Exemplo:**
 ```
-São Paulo, 15 de janeiro de 2025 – A TechCorp, líder em soluções
+São Paulo, 15 de janeiro de 2025. A TechCorp, líder em soluções
 de inteligência artificial para o setor financeiro, anunciou hoje
 o lançamento da plataforma FinanceAI 3.0. A nova versão promete
 reduzir em até 40% os custos operacionais de instituições financeiras,

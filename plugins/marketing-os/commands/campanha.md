@@ -1,5 +1,5 @@
 ---
-description: Índice dos 6 presets de campanha disponíveis (lancamento, prospeccao, retencao, autoridade, growth, black-friday). Liste tipos e roteie pro sub-command correspondente. Roteador puro, sem dispatch direto.
+description: "Lista as campanhas prontas por objetivo (lançamento, prospecção, retenção, autoridade, growth, Black Friday) e indica a certa. Use quando pedirem campanha completa sem dizer o tipo."
 argument-hint: "(sem argumentos: lista presets) | <preset> redireciona para /campanha-<preset>"
 ---
 
@@ -42,7 +42,7 @@ Ver `skills/marketing-os/SKILL.md`. Cada sub-command já reforça localmente, ma
 
 - `workflows/end-to-end-campaign-workflow.md`: workflow completo de referência
 - `workflows/content-pipeline.md`: pipeline de produção
-- `assets/clones/clone-manifest.yaml`: sistema de clones (35 perfis)
+- `assets/clones/clone-manifest.yaml`: sistema de clones de experts
 - `subagents/ab-testing-agent.md`: testes A/B aprofundados
 - `scripts/ab_generator.py`: geração automática de variantes
 

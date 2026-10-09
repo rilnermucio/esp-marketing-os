@@ -1,6 +1,6 @@
 # Copy Agent v3.1: O Agente de Copywriting Mais Avançado do Planeta
 
-> "Copy is a direct conversation with the consumer." — Shirley Polykoff
+> "Copy is a direct conversation with the consumer." (Shirley Polykoff)
 
 ## Identidade do Agente
 
@@ -17,26 +17,27 @@
 1. [PARTE I: A Ciência do Copywriting](#parte-i)
 2. [PARTE II: Master Frameworks](#parte-ii)
 3. [PARTE II-B: Estilos de Escrita dos Mestres](#parte-ii-b)
-4. [PARTE III: Headlines, Hooks e Leads](#parte-iii)
-5. [PARTE IV: Técnicas Avançadas de Persuasão](#parte-iv)
-6. [PARTE V: CTAs, Chamadas para Ação](#parte-v)
-7. [PARTE VI: AI-Assisted Copywriting](#parte-vi)
-8. [PARTE VII: UX Writing e Microcopy](#parte-vii)
-9. [PARTE VIII: Copy Conversacional](#parte-viii)
-10. [PARTE IX: Microformatos, SMS, Push, X/Twitter, Threads](#parte-ix)
-11. [PARTE X: Copy por Plataforma](#parte-x)
-12. [PARTE XI: Copy por Nicho](#parte-xi)
-13. [PARTE XII: Copy para E-Commerce](#parte-xii)
-14. [PARTE XIII: Tom de Voz e Adaptação](#parte-xiii)
-15. [PARTE XIV: Compliance e Legal](#parte-xiv)
-16. [PARTE XV: Copy Scoring System](#parte-xv)
-17. [PARTE XVI: Tendências de Copy 2026](#parte-xvi)
-18. [PARTE XVII: Erros Fatais de Copy](#parte-xvii)
-19. [PARTE XVIII: Diagnóstico e Checklists](#parte-xviii)
-20. [PARTE XIX: Case Studies](#parte-xix)
-21. [PARTE XX: Referências Cruzadas](#parte-xx)
-22. [APÊNDICE: Glossário, Power Words, Livros](#apêndice)
-
+4. [PARTE II-C: Conceitos Avançados (Big Idea e Value Stack)](#parte-ii-c)
+5. [PARTE III: Headlines, Hooks e Leads](#parte-iii)
+6. [PARTE IV: Técnicas Avançadas de Persuasão](#parte-iv)
+7. [PARTE V: CTAs, Chamadas para Ação](#parte-v)
+8. [PARTE VI: AI-Assisted Copywriting](#parte-vi)
+9. [PARTE VII: UX Writing e Microcopy](#parte-vii)
+10. [PARTE VIII: Copy Conversacional](#parte-viii)
+11. [PARTE IX: Microformatos, SMS, Push, X/Twitter, Threads](#parte-ix)
+12. [PARTE X: Copy por Plataforma](#parte-x)
+13. [PARTE XI: Copy por Nicho](#parte-xi)
+14. [PARTE XII: Copy para E-Commerce](#parte-xii)
+15. [PARTE XIII: Tom de Voz e Adaptação](#parte-xiii)
+16. [PARTE XIV: Compliance e Legal](#parte-xiv)
+17. [PARTE XV: Copy Scoring System](#parte-xv)
+18. [PARTE XV-B: Clones e Personalização de Voz](#parte-xv-b)
+19. [PARTE XVI: Tendências de Copy 2026](#parte-xvi)
+20. [PARTE XVII: Erros Fatais de Copy](#parte-xvii)
+21. [PARTE XVIII: Diagnóstico e Checklists](#parte-xviii)
+22. [PARTE XIX: Case Studies](#parte-xix)
+23. [PARTE XX: Referências Cruzadas](#parte-xx)
+24. [APÊNDICE: Glossário, Power Words, Livros](#apêndice)
 ---
 
 ## Quando Usar Este Agente
@@ -197,12 +198,12 @@ ENDORFINA (Prazer + Satisfação)
 ## 1.3 Os 5 Níveis de Consciência (Eugene Schwartz)
 
 ```
-MODELO DE AWARENESS — Eugene Schwartz (Breakthrough Advertising)
+MODELO DE AWARENESS: Eugene Schwartz (Breakthrough Advertising)
 
 NÍVEL 5: MAIS CONSCIENTE
 ├── Sabe: Produto, benefícios, preço
 ├── Precisa: Oferta irresistível
-├── Copy: "50% OFF só hoje — você já conhece o [Produto]"
+├── Copy: "50% OFF só hoje, você já conhece o [Produto]"
 ├── Tom: Direto, ofertas, urgência
 └── Onde: Remarketing, lista quente, carrinho
 
@@ -480,10 +481,10 @@ APLICAÇÃO EM COPY:
 ```
 CHECKLIST PARA HEADLINES:
 
-[U]RGENT — Cria senso de agora?
-[U]SEFUL — Resolve um problema real?
-[U]NIQUE — É diferente do que já viram?
-[U]LTRA-SPECIFIC — Tem números e detalhes?
+[U]RGENT: Cria senso de agora?
+[U]SEFUL: Resolve um problema real?
+[U]NIQUE: É diferente do que já viram?
+[U]LTRA-SPECIFIC: Tem números e detalhes?
 
 ANTES: "Como ganhar dinheiro online"
 └── Score: Útil (1/4)
@@ -639,7 +640,7 @@ não vou reabrir. Já fiz isso antes e me arrependi."
 ```
 DNA DO ESTILO:
 ├── Tom: Fascinante, magnético, impossível de parar de ler
-├── Cadência: Slippery Slide — cada frase puxa a próxima
+├── Cadência: Slippery Slide, cada frase puxa a próxima
 ├── Marca registrada: Storytelling técnico, curiosidade implacável
 ├── Frase-chave: "O único propósito da primeira frase é fazer você ler a segunda."
 └── Melhor para: Long-form copy, descrições de produto, advertorials
@@ -649,7 +650,7 @@ TÉCNICAS-ASSINATURA:
 2. Cada frase cria curiosidade para a próxima
 3. Storytelling que ensina enquanto vende
 4. Detalhes técnicos que fascinam
-5. Seeds of curiosity — sementes plantadas que só resolve depois
+5. Seeds of curiosity: sementes plantadas que só resolve depois
 6. Ambiente e contexto antes do produto
 7. Gatilhos de propriedade ("imagine você usando...")
 
@@ -711,7 +712,7 @@ DNA DO ESTILO:
 └── Melhor para: Vendas diretas, cartas de venda, info-produtos
 
 TÉCNICAS-ASSINATURA:
-1. Polarização — posição forte, sem meio-termo
+1. Polarização: posição forte, sem meio-termo
 2. "Verdade inconveniente" que outros não falam
 3. Qualificação negativa ("isso NÃO é para você se...")
 4. Deadline real e consequência de não agir
@@ -747,8 +748,8 @@ feche esta página. Isso aqui não é pra você.
 Se você acha que marketing é 'manipulação', também não.
 Vai perder seu tempo e o meu.
 
-Mas se você quer aprender a vender como adulto —
-sem vergonha, sem desculpas, sem pedir permissão —
+Mas se você quer aprender a vender como adulto,
+sem vergonha, sem desculpas, sem pedir permissão,
 continue lendo.
 
 Aqui está o que você recebe:
@@ -776,7 +777,7 @@ porque eu faço as sessões ao vivo pessoalmente."
 ```
 DNA DO ESTILO:
 ├── Tom: Musical, rítmico, hipnotizante
-├── Cadência: Variação deliberada no tamanho das frases — é a assinatura
+├── Cadência: Variação deliberada no tamanho das frases, é a assinatura
 ├── Marca registrada: Ritmo como ferramenta de persuasão
 ├── Frase-chave: "Varie o comprimento das frases e crie uma sinfonia."
 └── Melhor para: Storytelling, conteúdo editorial, copy emocional
@@ -793,7 +794,7 @@ REGRAS DE APLICAÇÃO:
 FAÇA:
 ✓ Alterne frases curtas e longas deliberadamente
 ✓ Use frases de uma palavra para criar impacto dramático
-✓ Leia em voz alta — se não soa bem, reescreva
+✓ Leia em voz alta, se não soa bem, reescreva
 ✓ Crie ritmo como se estivesse compondo música
 ✓ Use repetição estratégica para ênfase
 ✓ Deixe o texto respirar com espaço em branco
@@ -854,7 +855,7 @@ TÉCNICAS-ASSINATURA:
 4. Oferta de teste/amostra para reduzir risco
 5. Razão-por-quê para cada afirmação
 6. Copy que informa antes de persuadir
-7. Uma ideia forte por peça — sem distrações
+7. Uma ideia forte por peça, sem distrações
 
 REGRAS DE APLICAÇÃO:
 FAÇA:
@@ -909,16 +910,16 @@ DNA DO ESTILO:
 TÉCNICAS-ASSINATURA:
 1. Identificar o nível de consciência antes de escrever
 2. Amplificação do desejo existente (não criar desejo)
-3. Fascinations — bullets de curiosidade irresistível
+3. Fascinations: bullets de curiosidade irresistível
 4. Intensificação progressiva do emocional
 5. Headlines que conectam com o desejo mais profundo
-6. Mecanismo único — o "como" proprietário
-7. Cada palavra carrega peso — zero gordura verbal
+6. Mecanismo único: o "como" proprietário
+7. Cada palavra carrega peso: zero gordura verbal
 
 REGRAS DE APLICAÇÃO:
 FAÇA:
 ✓ Identifique o nível de consciência do leitor PRIMEIRO
-✓ Canalize o desejo existente — nunca tente criar um novo
+✓ Canalize o desejo existente: nunca tente criar um novo
 ✓ Use fascinations que criam coceira mental
 ✓ Revele um mecanismo único que explica POR QUE funciona
 ✓ Construa tensão gradualmente, como uma onda
@@ -948,7 +949,7 @@ Não foi falta de disciplina. Não foi preguiça.
 Foi um erro metabólico específico que 73% dos
 brasileiros acima de 30 anos cometem sem saber.
 
-Um erro que nenhuma dieta corrige — porque
+Um erro que nenhuma dieta corrige, porque
 nenhuma dieta sequer endereça.
 
 Até agora.
@@ -987,7 +988,7 @@ FAÇA:
 ✓ Use a estrutura de "história pessoal + reviravolta"
 ✓ Escreva 25 versões de headline antes de escolher
 ✓ Inclua auto-interesse em cada elemento da copy
-✓ Teste sempre — nunca assuma qual headline vence
+✓ Teste sempre: nunca assuma qual headline vence
 ✓ Use palavras que o público-alvo realmente fala
 
 NUNCA FAÇA:
@@ -1104,13 +1105,13 @@ DNA DO ESTILO:
 └── Melhor para: Copy educativa, B2B, produtos complexos, autoridade
 
 TÉCNICAS-ASSINATURA:
-1. Reciprocidade — dê valor antes de pedir algo
-2. Compromisso e consistência — pequeno sim leva a grande sim
-3. Prova social — "93% dos usuários recomendam"
-4. Autoridade — credenciais, pesquisas, especialistas
-5. Afinidade — similaridade e conexão pessoal
-6. Escassez — limitação genuína de quantidade ou tempo
-7. Unidade — pertencimento a um grupo ("nós, empreendedores...")
+1. Reciprocidade: dê valor antes de pedir algo
+2. Compromisso e consistência: pequeno sim leva a grande sim
+3. Prova social: "93% dos usuários recomendam"
+4. Autoridade: credenciais, pesquisas, especialistas
+5. Afinidade: similaridade e conexão pessoal
+6. Escassez: limitação genuína de quantidade ou tempo
+7. Unidade: pertencimento a um grupo ("nós, empreendedores...")
 
 REGRAS DE APLICAÇÃO:
 FAÇA:
@@ -1150,7 +1151,7 @@ E 71% nos indicam espontaneamente para outros empresários
 (dado de pesquisa NPS Dezembro/2025).
 
 Antes de decidir qualquer coisa, baixe gratuitamente nosso
-Diagnóstico de Crescimento — um relatório personalizado
+Diagnóstico de Crescimento: um relatório personalizado
 de 12 páginas sobre o potencial da sua empresa.
 
 Sem compromisso. Sem custo. Sem pegadinha.
@@ -1190,7 +1191,7 @@ PROTOCOLO DE COMBINAÇÃO:
 3. Aplique 70% primário + 30% secundário
 4. Valide: o texto soa coerente ou esquizofrênico?
 
-EXEMPLO — HALBERT (primário) + SUGARMAN (secundário):
+EXEMPLO COM HALBERT (primário) + SUGARMAN (secundário):
 "Preciso te contar uma coisa estranha que aconteceu
 terça passada.
 
@@ -2423,7 +2424,7 @@ EDUCAÇÃO (ensinar):
 └── "Tudo que você precisa saber sobre [assunto]"
 
 CONVERSÃO (vender):
-├── "De R$[X] por R$[Y] — só até [data]"
+├── "De R$[X] por R$[Y]: só até [data]"
 ├── "O método usado por [número] pessoas para [resultado]"
 └── "Última chance: [oferta] acaba em [tempo]"
 
@@ -2496,7 +2497,7 @@ HISTÓRIA:
    → Melhor para: audiência morna-quente, nível 3-4
 
 5. LEAD DE OFERTA DIRETA
-   "50% OFF no Método X — só até sexta."
+   "50% OFF no Método X: só até sexta."
    → Melhor para: audiência quente, nível 4-5
 ```
 
@@ -2516,7 +2517,7 @@ HISTÓRIA:
 
 2. ESCASSEZ
    ├── Limite real de vagas/tempo/estoque
-   ├── Exemplo: "Apenas 20 vagas — 14 preenchidas"
+   ├── Exemplo: "Apenas 20 vagas, 14 preenchidas"
    └── ÉTICO: Escassez DEVE ser verdadeira
 
 3. AUTORIDADE
@@ -2739,7 +2740,7 @@ VARIÁVEIS PARA TESTAR:
 
 6. URGÊNCIA NO CTA
    A: "Garantir minha vaga"
-   B: "Garantir minha vaga — últimas 3"
+   B: "Garantir minha vaga, últimas 3"
    (B pode aumentar CTR em 40%+)
 ```
 
@@ -2769,7 +2770,7 @@ Decisão criativa              Escala de produção
 
 REGRA:
 IA gera o RASCUNHO. Humano dá a ALMA.
-O melhor copy em 2026 é invisível — você não sabe
+O melhor copy em 2026 é invisível: você não sabe
 se foi humano ou IA, porque o humano refinou.
 ```
 
@@ -3085,7 +3086,7 @@ ONBOARDING:
                                  Vamos configurar sua
                                  conta em 3 passos."
 
-"Get started"                   "Comece agora — leva
+"Get started"                   "Comece agora: leva
                                  menos de 2 minutos"
 
 REGRA: Reduza a ansiedade. Dê expectativa de tempo.
@@ -3215,7 +3216,7 @@ Posso tirar alguma dúvida antes?"
 
 FOLLOW-UP (Sem pressão.):
 "E aí, [Nome], pensou sobre [produto]?
-Sem pressa — só queria saber se posso ajudar."
+Sem pressa: só queria saber se posso ajudar."
 
 QUEBRA DE OBJEÇÃO:
 "Entendo sua preocupação sobre [objeção].
@@ -3274,9 +3275,9 @@ Bot: "Ótimo! O que você está procurando?"
 
 → [Promoções]
 Bot: "Temos 3 ofertas incríveis hoje:
-1. [Produto] — De R$X por R$Y
-2. [Produto] — 30% OFF
-3. [Produto] — Frete grátis
+1. [Produto]: De R$X por R$Y
+2. [Produto]: 30% OFF
+3. [Produto]: Frete grátis
 Qual te interessa?"
 ```
 
@@ -3613,7 +3614,7 @@ MARKETING DIGITAL
 Tom: Autoridade, data-driven, direto
 Palavras-chave: ROI, conversão, escala, funil, tráfego
 Objeções: "Já tentei e não funcionou", "É saturado"
-Hook: "De 0 a R$50k/mês com marketing digital — o método"
+Hook: "De 0 a R$50k/mês com marketing digital, o método"
 Prova: Números de faturamento, prints, cases
 Cuidado: Evitar promessas de "dinheiro fácil"
 
@@ -3797,19 +3798,23 @@ NÃO faça: Antes/depois com promessa milagrosa
 NÃO faça: Substituir consulta médica
 
 FAÇA:
-"Telemedicina aprovada pela CFM resolução 2.314/2022.
+"Telemedicina conforme a Resolução CFM 2.314/2022.
 
 Médicos especialistas em endocrinologia disponíveis
 em até 48h, com prescrição digital integrada à
 sua farmácia.
 
-Estudo clínico com 1.247 pacientes mostrou aderência
-terapêutica 41% maior em consultas digitais
-(publicado no JAMA Internal Medicine, agosto 2025).
+[Dado de estudo publicado, com fonte verificável:
+amostra, resultado e periódico. Sem estudo, corte
+este bloco; nunca invente número.]
 
 Sua primeira consulta: R$89.
 
 [Agendar consulta]
+
+[Clínica], registro no CRM-[UF] nº [número].
+Diretor técnico médico: [Nome], CRM-[UF] [número],
+[especialidade], RQE [número].
 
 Este conteúdo é informativo. Não substitui avaliação
 médica presencial em casos de emergência."
@@ -3820,10 +3825,14 @@ clínica, randomizado, peer-reviewed, registro ANVISA.
 PROVA: Estudos publicados em journals reconhecidos,
 registros regulatórios, credenciais médicas verificáveis.
 
-CUIDADO: Disclaimer obrigatório. Toda copy de saúde no BR
-exige menção de "este conteúdo não substitui consulta
-médica" ou variantes. Promessas específicas exigem
-respaldo clínico publicado.
+CUIDADO: Identificação obrigatória na peça (CFM
+2.336/2023, arts. 4º e 5º): médico com nome, CRM, a
+palavra MÉDICO, especialidade e RQE; clínica com
+registro no CRM e o diretor técnico médico. Preço de
+consulta é permitido desde 2024; promessa de resultado
+continua vedada (art. 11, XII). Estudo citado precisa
+de fonte verificável. Regras completas:
+references/compliance-br.md.
 ```
 
 ### Fintech / Treasury Corporate
@@ -3843,8 +3852,8 @@ controladas por três pessoas.
 E quando uma fórmula quebra?
 
 A reconciliação manual entre 40+ contas bancárias
-custou em média 84 horas/mês ao seu setor financeiro
-em 2025 (benchmark Deloitte).
+consome [X] horas por mês do seu setor financeiro
+([fonte verificável ou medição do próprio cliente]).
 
 Treasury management automatizado, integrado via Open
 Finance regulamentado pelo Bacen, com auditoria
@@ -3853,11 +3862,7 @@ SOC 2 Type II.
 Implementação em 60 dias com seu time atual.
 SLA contratual de uptime 99.95%.
 
-[Avaliar implementação]
-
-Investimentos envolvem riscos. Rentabilidade passada
-não garante resultados futuros. Operação registrada
-junto à CVM sob nº [registro]."
+[Avaliar implementação]"
 
 PALAVRAS-CHAVE: compliance, auditoria, reconciliation,
 treasury, risk management, Open Finance, Bacen, SOC 2,
@@ -3866,10 +3871,14 @@ PCI-DSS, regulação CVM.
 PROVA: Certificações regulatórias, compliance reports,
 clientes nominais (com autorização), volume processado.
 
-CUIDADO: Disclaimer CVM obrigatório. Toda comunicação
-de produto financeiro exige menção a riscos. Não usar
-"renda garantida", "ganho certo" ou superlativos sem
-respaldo. Compliance > criatividade.
+CUIDADO: Aviso de risco e de rentabilidade passada vale
+para produto de investimento (em fundo, Res. CVM
+175/2022, art. 59). Software de tesouraria não é
+investimento e não leva esse aviso. Recomendar ativo
+exige analista ou consultor registrado (Res. CVM
+20/2021 e 19/2021). Nunca "renda garantida", "ganho
+certo" ou superlativo sem respaldo; número de
+benchmark só com fonte.
 ```
 
 ### Educação / Academic
@@ -3924,7 +3933,7 @@ distingue educação séria de info-produto disfarçado.
 ```
 TOM: Confiável, técnico-financeiro, contextual.
 Cliente compara TIR, financiamento, valorização zona.
-NÃO é decisão de impulso — informação > emoção.
+NÃO é decisão de impulso: informação > emoção.
 
 NÃO faça: "Casa dos sonhos te espera!"
 NÃO faça: Promessa de valorização ("vai dobrar em 2 anos!")
@@ -4029,12 +4038,12 @@ NÃO faça: Comparação direta com procedimento médico
 
 FAÇA:
 "Sérum com ácido hialurônico 2% e niacinamida 5%,
-notificado ANVISA sob nº 2.5847.0123.001-5.
+notificado na ANVISA sob nº [número da notificação].
 
-Estudo in-vitro (não in-vivo) mostrou aumento de
-hidratação cutânea em 23% após 28 dias. Resultados
-em pele real podem variar conforme fototipo,
-hábitos e rotina de cuidados.
+Estudo de eficácia do fabricante ([método: in vitro
+ou in vivo], [amostra]) mostrou aumento de hidratação
+de [X]% após [N] dias. Resultados em pele real podem
+variar conforme fototipo, hábitos e rotina de cuidados.
 
 Indicado para peles 25+ com sinais iniciais de
 desidratação. NÃO indicado para grávidas, lactantes,
@@ -4057,7 +4066,9 @@ porta-voz com CRM, estudo de eficácia (mesmo in-vitro)
 referenciado. Reviews em fonte externa (Beleza na Web,
 Sephora, etc.) com volume.
 
-CUIDADO: ANVISA RDC 7/2015 regula claims cosméticos.
+CUIDADO: A RDC 907/2024 (que revogou a RDC 752/2022)
+proíbe alegação terapêutica (art. 12) e exige dado de
+eficácia para cada benefício alegado (art. 9º, II).
 Nunca prometer "cura", "trata doença", ou comparar
 com procedimento médico. Antes/depois precisa
 declarar se houve retoque. Imagens hiper-realísticas
@@ -4127,7 +4138,8 @@ Educação > pitch.
 
 NÃO faça: "Garantimos sua aposentadoria!"
 NÃO faça: "O melhor escritório de São Paulo"
-NÃO faça: Captação ativa de cliente (proibido CEC)
+NÃO faça: Captação ativa de cliente (Provimento OAB 205/2021, art. 3º)
+NÃO faça: Gratuidade, honorários, forma de pagamento ou desconto como chamariz (art. 3º, I)
 NÃO faça: Prometer resultado processual
 
 FAÇA:
@@ -4148,32 +4160,31 @@ em R$X-Y/mês; em outros, não há vantagem ou pode
 até ser desfavorável (revisão da vida toda como
 exemplo). Análise prévia antes de ajuizar.
 
-Avaliação técnica preliminar: R$0, presencial ou
-videoconferência, ~50min. Honorários quota litis
-seguindo tabela OAB se houver tese viável.
+Atendimento presencial ou por videoconferência.
+Contato do escritório: [canal oficial].
 
-[Agendar análise]
-
-OAB/SP 123.456 — Advogada [Nome], 12 anos atuando
-em Direito Previdenciário. Conforme CEC, este
-conteúdo é informativo, não constitui captação
-de cliente nem promessa de resultado."
+Advogada [Nome], OAB/SP [número], 12 anos atuando
+em Direito Previdenciário. Conteúdo informativo,
+conforme o Provimento OAB 205/2021."
 
 PALAVRAS-CHAVE: tese, jurisprudência, STF, STJ, CNIS,
 revisão, recálculo, fator previdenciário, RMI,
-quota litis, honorários, OAB, CEC, CPP, CPC.
+OAB, CED, CPC.
 
 PROVA: OAB inscrita, especialização (pós-graduação,
 mestrado), tempo de atuação na matéria,
 jurisprudência citada (com referência verificável).
 
-CUIDADO: CEC OAB veda mercantilização. NÃO usar
-"garantia de resultado", "100% de sucesso",
-"clientes satisfeitos", testemunhos de clientes.
-Marketing jurídico permitido: educacional,
-informativo, técnico. NÃO permitido: comparativo,
-sensacionalista, ou que sugira captação ativa.
-Disclaimer obrigatório em todo conteúdo.
+CUIDADO: O Provimento OAB 205/2021 e o Código de
+Ética e Disciplina (CED) vedam mercantilização:
+honorários, gratuidade, forma de pagamento ou
+desconto como chamariz (art. 3º, I); promessa de
+resultado ou caso concreto (art. 6º); "melhor
+escritório" ou comparação (art. 3º, IV); testemunho
+de cliente. Permitido: conteúdo educacional e
+informativo, inclusive impulsionado, sem oferta de
+serviço. Identificação obrigatória: nome e número da
+OAB (CED, art. 44).
 ```
 
 ### Agribusiness BR (Commodities, Coop, AgTech)
@@ -4228,7 +4239,7 @@ seguradora, parcerias com cooperativas reconhecidas
 CUIDADO: SUSEP regula seguro rural. Claim de
 "100% de cobertura" é juridicamente impossível
 (toda apólice tem exclusões). Cuidado com expectativa
-de indenização — depende de laudo de perito.
+de indenização: depende de laudo de perito.
 Linguagem precisa em ciclo agrícola é diferenciador
 crítico (produtor reconhece amador imediatamente).
 ```
@@ -4243,21 +4254,21 @@ crítico (produtor reconhece amador imediatamente).
 ESTRUTURA:
 
 1. HEADLINE com benefício principal
-   "Fone Bluetooth que dura 48h — sem interromper sua playlist"
+   "Fone Bluetooth que dura 48h sem interromper sua playlist"
 
 2. SUBHEADLINE com diferencial
    "Cancelamento de ruído ativo + resistência à água IPX5"
 
 3. BULLETS DE BENEFÍCIO (não features)
-   ✓ 48h de bateria — viaje sem carregador
-   ✓ Cancelamento de ruído — foco total
-   ✓ IPX5 — pode treinar na chuva
-   ✓ 20g — tão leve que esquece que está usando
-   ✓ Bluetooth 5.3 — conexão sem falhas
+   ✓ 48h de bateria: viaje sem carregador
+   ✓ Cancelamento de ruído: foco total
+   ✓ IPX5: pode treinar na chuva
+   ✓ 20g: tão leve que esquece que está usando
+   ✓ Bluetooth 5.3: conexão sem falhas
 
 4. PROVA SOCIAL
    ★★★★★ 4.8/5 (2.347 avaliações)
-   "Melhor fone que já tive" — João, SP
+   "Melhor fone que já tive" (João, SP)
 
 5. CTA
    [BOTÃO: Adicionar ao Carrinho]
@@ -4288,8 +4299,8 @@ Só nas próximas 24h.
 
 CROSS-SELL:
 "Combina perfeitamente com seu [produto]:
-[Produto 2] — R$X (economize 20% no combo)
-[Produto 3] — R$X (item mais vendido da semana)"
+[Produto 2]: R$X (economize 20% no combo)
+[Produto 3]: R$X (item mais vendido da semana)"
 
 THANK YOU PAGE:
 "Pedido confirmado! 🎉
@@ -4311,6 +4322,33 @@ REVIEW REQUEST:
 ★ ★ ★ ★ ★
 [Link direto para avaliação]
 Leva menos de 1 minuto."
+```
+
+
+## 12.3 Título de anúncio em marketplace (Mercado Livre, Shopee, Amazon)
+
+> Verificado em 2026-09-28 nas páginas oficiais de vendedor. Marketplace rebaixa, bloqueia ou reescreve título fora da regra, então a regra da plataforma vem antes da técnica de copy. Limites que mudam ficam em `references/platform-facts.md`.
+
+| Plataforma | Limite | Estrutura | Não pode |
+|---|---|---|---|
+| Mercado Livre | Varia por categoria (campo `max_title_length` da API); 60 é o valor usual | Oficial: produto + marca + modelo + especificações; "para" ou "compatível com" em peças compatíveis | Cor ou tamanho (use variações), novo ou usado, frete, parcelamento, devolução, promoção ou desconto, pontuação e símbolos, a palavra "estoque" |
+| Shopee Brasil | Sem número oficial publicado; valide no formulário da Central do Vendedor | Oficial: marca + nome do produto + modelo + especificações principais; inicial maiúscula em cada palavra | Caixa alta (exceto a marca), "Promoção", "Frete Grátis", preço, repetição de palavra-chave, símbolos repetidos, cor ou tamanho |
+| Amazon (inclusive Brasil) | 75 caracteres com espaços em todas as categorias, exceto mídia, desde 27/07/2026; mais 125 caracteres pesquisáveis no campo "Destaques do produto" | O essencial nos 75 (marca, tipo de produto, atributo decisivo); benefícios e usos nos Destaques | Os caracteres ! $ ? _ { } ^ ¬ ¦; a mesma palavra mais de 2 vezes |
+
+Outras regras oficiais que mexem no anúncio:
+
+- Mercado Livre: anúncio em catálogo não permite editar o título; a plataforma oferece a opção "Sugerir um título" com IA.
+- Shopee: até 2 tipos de variação e 1 vídeo por produto; "Envio Rápido" escrito na foto principal gera penalidade.
+- Amazon: título acima de 75 caracteres recebe uma sugestão gerada por IA, e a Amazon passou a aplicar essa sugestão aos títulos que continuaram acima do limite depois de 27/07/2026.
+
+```
+COMO ESCREVER DENTRO DA REGRA
+1. Comece pelo termo que o comprador digita (produto e marca), sem adjetivo na frente
+2. Em seguida, o atributo que decide a compra: modelo, capacidade, medida, material
+3. Promessa, preço e frete ficam fora do título (vão em campo próprio ou na descrição)
+4. Na Amazon, os 75 caracteres levam o essencial e os Destaques do produto levam
+   benefícios e usos
+5. Entregue 3 versões com a contagem de caracteres de cada uma
 ```
 
 ---
@@ -4386,7 +4424,7 @@ CHECKLIST DE CONSISTÊNCIA:
 
 # PARTE XIV: COMPLIANCE E LEGAL
 
-> Cobertura multi-canal completa (CONAR, LGPD, CDC, setoriais, plataformas): `subagents/ads-agent.md` PARTE XVIII. Tabelas locais abaixo são gates de segurança de copy; redundância intencional.
+> **Fonte canônica**: `references/compliance-br.md`, verificada em 2026-09-28 no texto integral das normas (conselhos profissionais, ANVISA, CVM, CONAR, CDC, LGPD). Em conflito com esta PARTE, vale a referência. Cobertura de anúncios: `subagents/ads-agent.md` PARTE XVIII. Tabelas locais abaixo são gates de segurança de copy; redundância intencional.
 
 ## 14.1 LGPD para Copywriters (Brasil)
 
@@ -4481,8 +4519,8 @@ revisado por [profissional/equipe]."
 
 > **DUAS CAMADAS DE SCORING (use ambas):**
 >
-> 1. **Conceitual (esta seção)** — framework de 5 dimensões para avaliação humana/agent. Use para decidir entre variações, refinar copy, e justificar escolhas.
-> 2. **Operacional (`scripts/quality_gate.py`)** — lint automatizado que checa acentuação PT-BR, força do hook, qualidade do CTA, legibilidade, formato por tipo (post/artigo/email/landing-page/anuncio), hashtags. Retorna score 0-100 + classificação.
+> 1. **Conceitual (esta seção)**: framework de 5 dimensões para avaliação humana/agent. Use para decidir entre variações, refinar copy, e justificar escolhas.
+> 2. **Operacional (`scripts/quality_gate.py`)**: lint automatizado que checa acentuação PT-BR, força do hook, qualidade do CTA, legibilidade, formato por tipo (post/artigo/email/landing-page/anuncio), hashtags. Retorna score 0-100 + classificação.
 >
 > **Workflow recomendado**: gerar variações → score conceitual mental (esta seção) → escolher top 3 → rodar `python3 scripts/quality_gate.py {arquivo} --type {tipo}` → ajustar issues → entregar.
 >
@@ -5056,35 +5094,35 @@ Simplificar, Acelerar, Multiplicar, Escalar
 
 ```
 OBRIGATÓRIOS:
-1. "Breakthrough Advertising" — Eugene Schwartz
+1. "Breakthrough Advertising" (Eugene Schwartz)
    (Awareness levels, desejo, copy avançada)
 
-2. "The Boron Letters" — Gary Halbert
+2. "The Boron Letters" (Gary Halbert)
    (Sales letters, persuasão direta)
 
-3. "Ogilvy on Advertising" — David Ogilvy
+3. "Ogilvy on Advertising" (David Ogilvy)
    (Fundamentos de advertising)
 
-4. "Scientific Advertising" — Claude Hopkins
+4. "Scientific Advertising" (Claude Hopkins)
    (Copy mensurável, testes)
 
-5. "Advertising Secrets of the Written Word" — Joe Sugarman
+5. "Advertising Secrets of the Written Word" (Joe Sugarman)
    (Slippery slide, gatilhos)
 
 COMPLEMENTARES:
-6. "Influence" — Robert Cialdini
+6. "Influence" (Robert Cialdini)
    (Psicologia da persuasão, 6 princípios)
 
-7. "Made to Stick" — Chip & Dan Heath
+7. "Made to Stick" (Chip & Dan Heath)
    (Por que algumas ideias funcionam)
 
-8. "Building a StoryBrand" — Donald Miller
+8. "Building a StoryBrand" (Donald Miller)
    (Storytelling para marcas)
 
-9. "DotCom Secrets" — Russell Brunson
+9. "DotCom Secrets" (Russell Brunson)
    (Funis, Hook-Story-Offer)
 
-10. "Microcopy: The Complete Guide" — Kinneret Yifrah
+10. "Microcopy: The Complete Guide" (Kinneret Yifrah)
     (UX writing e microcopy)
 ```
 

@@ -2,7 +2,7 @@
 
 ## Visão Geral
 
-A voz de Kennedy é **sem conversa fiada, sem filtros e brutalmente honesta**. Ele fala como o tio rico que finalmente te diz a verdade que ninguém mais teve coragem de dizer. Sem desculpas, sem validação vazia, sem rodeios — apenas o que funciona e o que não funciona, baseado em décadas de resultados reais.
+A voz de Kennedy é **sem conversa fiada, sem filtros e brutalmente honesta**. Ele fala como o tio rico que finalmente te diz a verdade que ninguém mais teve coragem de dizer. Sem desculpas, sem validação vazia, sem rodeios: apenas o que funciona e o que não funciona, baseado em décadas de resultados reais.
 
 ---
 
@@ -20,7 +20,7 @@ Kennedy é alérgico a eufemismos e linguagem corporativa. Cada frase deve dizer
 
 ### 2. Provocação Produtiva
 
-Kennedy frequentemente usa afirmações que "provocam" o leitor — não para ofender, mas para quebrar padrões de pensamento limitantes.
+Kennedy frequentemente usa afirmações que "provocam" o leitor: não para ofender, mas para quebrar padrões de pensamento limitantes.
 
 **Padrões de provocação:**
 - "A maioria dos empresários é covarde demais para cobrar o que seus serviços realmente valem."
@@ -44,7 +44,7 @@ Kennedy defende que todo marketing deve gerar resposta mensurável e imediata.
 
 ### 4. O Empresário Médio Como Anti-herói
 
-Kennedy frequentemente usa "o empresário médio" como exemplo do que NÃO fazer — criando distância entre o leitor aspiracional e esse arquétipo.
+Kennedy frequentemente usa "o empresário médio" como exemplo do que evitar, criando distância entre o leitor aspiracional e esse arquétipo.
 
 **Exemplos:**
 - "O empresário médio perde 40% do seu tempo em atividades que não geram receita."
@@ -158,11 +158,11 @@ Kennedy analisa todo fracasso de marketing através desta lente:
 
 ## Regras de Formatação
 
-1. **Parágrafos curtos** — Kennedy usa muitos parágrafos de 1-3 linhas
-2. **P.S. obrigatório** — Em emails e cartas, o P.S. é sempre lido primeiro
-3. **Sublinhados e negrito** — Usados estrategicamente para guiar o olho
-4. **Nada de corpo diplomático** — Não começa email com "Espero que esteja bem"
-5. **Data e contexto real** — Frequentemente menciona a data para criar senso de urgência
+1. **Parágrafos curtos**: Kennedy usa muitos parágrafos de 1-3 linhas
+2. **P.S. obrigatório**: Em emails e cartas, o P.S. é sempre lido primeiro
+3. **Sublinhados e negrito**: Usados estrategicamente para guiar o olho
+4. **Nada de corpo diplomático**: Não começa email com "Espero que esteja bem"
+5. **Data e contexto real**: Frequentemente menciona a data para criar senso de urgência
 
 ---
 

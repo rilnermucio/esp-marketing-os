@@ -30,7 +30,7 @@ Regra: se a propriedade é expressável como regex, glob, contagem, schema ou ex
 
 ## 2. Golden sets
 
-Dados em [evals/](evals/), consumidos por testes. O roteamento usa [routing-cases.json](evals/routing-cases.json), matriz briefing → roteamento esperado. A qualidade de copy usa [copy-output-cases.json](evals/copy-output-cases.json). Os critérios reutilizáveis por domínio ficam em [`scripts/evals/output-profiles.json`](../../scripts/evals/output-profiles.json).
+Dados em [evals/](evals/), consumidos por testes. O roteamento usa [routing-cases.json](evals/routing-cases.json), matriz briefing → roteamento esperado. A qualidade de copy usa [copy-output-cases.json](evals/copy-output-cases.json), e a de mos-social, mos-email e mos-ads usa [agent-output-cases.json](evals/agent-output-cases.json). Os critérios reutilizáveis por domínio ficam em [`scripts/evals/output-profiles.json`](../../scripts/evals/output-profiles.json).
 
 O teste valida o que dá pra validar sem modelo: casos bem-formados, commands/agents citados existem, IDs de falha existem na taxonomia, coerência dispatch↔agents. O acerto de roteamento em sessão real usa o mesmo arquivo como gabarito de revisão manual (protocolo em ROUTING-EVALS.md §validação viva).
 
@@ -53,7 +53,7 @@ O teste valida o que dá pra validar sem modelo: casos bem-formados, commands/ag
 
 ## 4. LLM-graded assistido, com guarda-corpo
 
-O runner `scripts/copy_output_eval.py` preserva o nome histórico, mas atende copy, e-mail, anúncios, oferta, funil, SEO e vídeo. Ele executa três partes:
+O runner `scripts/copy_output_eval.py` preserva o nome histórico, mas atende copy, e-mail, anúncios, social, oferta, funil, SEO e vídeo. Ele executa três partes:
 
 1. `score`: score determinístico via `quality_gate.collect_checks`.
 2. `pair`: prompt par-a-par com critérios do perfil escolhido e opção `--inverter`.

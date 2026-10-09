@@ -3,7 +3,7 @@
 ## Framework 1: A Tribo (Tribes)
 
 ### O que é
-Uma tribo é um grupo de pessoas conectadas por uma ideia, líder ou causa comum. Godin argumenta que marketing não é sobre atingir massas — é sobre liderar uma tribo que já quer ser liderada.
+Uma tribo é um grupo de pessoas conectadas por uma ideia, líder ou causa comum. Godin argumenta que marketing consiste em liderar uma tribo que já quer ser liderada, e atingir massas deixa de ser o objetivo.
 
 ### Como funciona
 ```
@@ -39,7 +39,7 @@ PROTEJA A TRIBO:
 ## Framework 2: A Vaca Roxa (Purple Cow)
 
 ### O que é
-Em um campo cheio de vacas marrons, uma vaca roxa é imediatamente notável. Produtos e ideias precisam ser remarkably different — não apenas bons, mas dignos de comentário.
+Em um campo cheio de vacas marrons, uma vaca roxa é imediatamente notável. Produtos e ideias precisam ser remarkably different: não apenas bons, mas dignos de comentário.
 
 ### Como funciona
 ```
@@ -69,7 +69,7 @@ CRIAÇÃO:
 ### Exemplo de aplicação
 **Produto:** Consultoria de marketing
 **Vaca Marrom:** "Estratégia de marketing digital completa"
-**Vaca Roxa:** "Trabalhamos com exatamente 3 clientes por vez — nada mais. Porque dividir atenção é dividir resultado."
+**Vaca Roxa:** "Trabalhamos com exatamente 3 clientes por vez: nada mais. Porque dividir atenção é dividir resultado."
 
 ---
 
@@ -80,22 +80,22 @@ Em vez de interromper estranhos com mensagens não solicitadas (Interruption Mar
 
 ### Como funciona
 ```
-ETAPA 1 — ISCA (Anticipated, Personal, Relevant):
+ETAPA 1: ISCA (Anticipated, Personal, Relevant):
 ├── Crie algo que as pessoas QUEREM receber
 ├── Seja relevante para o momento e contexto específico
 └── Seja pessoal o suficiente para parecer feito para elas
 
-ETAPA 2 — PERMISSÃO EXPLÍCITA:
+ETAPA 2: PERMISSÃO EXPLÍCITA:
 ├── Peça permissão antes de comunicar
 ├── Seja claro sobre o que vão receber e com qual frequência
 └── Torne fácil cancelar (isso aumenta confiança)
 
-ETAPA 3 — CULTIVO:
+ETAPA 3: CULTIVO:
 ├── Entregue consistentemente o que foi prometido
 ├── Aumente a relevância com o tempo (aprenda sobre o subscriber)
-└── Só então faça ofertas — quando a confiança está estabelecida
+└── Só então faça ofertas, quando a confiança está estabelecida
 
-ETAPA 4 — APROFUNDAMENTO:
+ETAPA 4: APROFUNDAMENTO:
 └── Permissão → Interesse → Engajamento → Compra → Lealdade
 ```
 
@@ -114,7 +114,7 @@ ETAPA 4 — APROFUNDAMENTO:
 ## Framework 4: O Mínimo Produto Viável de Ideias (Linchpin)
 
 ### O que é
-Godin argumenta que o trabalho mais valioso é o trabalho de arte — o trabalho que não pode ser terceirizado, automatizado ou copiado. Um Linchpin é a pessoa indispensável que faz esse trabalho.
+Godin argumenta que o trabalho mais valioso é o trabalho de arte: o trabalho que não pode ser terceirizado, automatizado ou copiado. Um Linchpin é a pessoa indispensável que faz esse trabalho.
 
 ### Como funciona
 ```
@@ -148,23 +148,23 @@ CRIAÇÃO DE ARTE:
 ## Framework 5: O Funil de Difusão de Ideias
 
 ### O que é
-Ideias não se espalham de forma linear. Elas se espalham através de grupos específicos que Godin chama de Sneezers — pessoas que espirram ideias para seus círculos.
+Ideias não se espalham de forma linear. Elas se espalham através de grupos específicos que Godin chama de Sneezers: pessoas que espirram ideias para seus círculos.
 
 ### Como funciona
 ```
 OS SEGMENTOS:
-├── Inovadores (2.5%) — Adotam qualquer coisa nova
-├── Early Adopters (13.5%) — Líderes de opinião que testam antes da massa
-├── Early Majority (34%) — Adotam quando a prova social é suficiente
-├── Late Majority (34%) — Adotam por pressão social
-└── Laggards (16%) — Adotam apenas quando não têm escolha
+├── Inovadores (2.5%): Adotam qualquer coisa nova
+├── Early Adopters (13.5%): Líderes de opinião que testam antes da massa
+├── Early Majority (34%): Adotam quando a prova social é suficiente
+├── Late Majority (34%): Adotam por pressão social
+└── Laggards (16%): Adotam apenas quando não têm escolha
 
 ESTRATÉGIA GODIN:
 ├── IGNORE a maioria inicial
 ├── FOQUE nos Early Adopters
 │   ├── São eles que espirram para Early Majority
 │   └── São eles que validam que a ideia é real
-└── CONSTRUA para quem vai te amar — não para todo mundo
+└── CONSTRUA para quem vai te amar: não para todo mundo
 ```
 
 ### Quando usar

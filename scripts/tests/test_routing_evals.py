@@ -121,3 +121,53 @@ class TestGoldenSetConsistency:
                 f"{case['id']}: '{fid}' não está definido em FAILURE-TAXONOMY.md "
                 "(falha nova entra primeiro na taxonomia)"
             )
+
+
+DISPATCH_IN_BODY = re.compile(
+    r"subagent_type:\s*[\"']?(?:marketing-os:)?(mos-[a-z-]+)[\"']?"
+)
+
+
+def _dispatched_by(command: str) -> set[str]:
+    body = (COMMANDS_DIR / f"{command}.md").read_text(encoding="utf-8")
+    agents = set(DISPATCH_IN_BODY.findall(body))
+    frontmatter = body.split("---", 2)[1] if body.startswith("---") else ""
+    if re.search(r"^context:\s*fork\s*$", frontmatter, re.M):
+        agents |= set(
+            re.findall(r"^agent:\s*(?:marketing-os:)?(mos-[a-z-]+)", frontmatter, re.M)
+        )
+    return agents
+
+
+class TestGoldenSetMatchesCommands:
+    """O gabarito precisa descrever o que o command realmente faz (auditoria 2026-09-28, #12).
+
+    RT-001 esperava mos-copy num /criar-post que nunca despacha mos-copy; nenhuma
+    das duas camadas de eval percebia, porque a estrutural só checava existência
+    e a viva pontua só o command.
+    """
+
+    @pytest.mark.parametrize(
+        "case", [c for c in CASES if c["expected_command"]], ids=lambda c: c["id"]
+    )
+    def test_expected_agents_are_dispatched_by_expected_command(
+        self, case: dict
+    ) -> None:
+        command = case["expected_command"]
+        dispatched = _dispatched_by(command)
+        indirect = case.get("indirect_agents", {})
+        missing = []
+        for agent in case["expected_agents"]:
+            if agent in dispatched:
+                continue
+            via = indirect.get(agent)
+            if via and agent in _dispatched_by(via):
+                body = (COMMANDS_DIR / f"{command}.md").read_text(encoding="utf-8")
+                if f"/{via}" in body:
+                    continue
+            missing.append(agent)
+        assert not missing, (
+            f"{case['id']}: /{command} não despacha {missing} "
+            f"(despacha {sorted(dispatched)}). Corrija o gabarito ou o command; "
+            "alcance via outro command vai em indirect_agents."
+        )

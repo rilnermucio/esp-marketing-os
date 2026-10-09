@@ -1,5 +1,7 @@
 # Marketing OS — Arquitetura do Sistema
 
+> **Snapshot histórico (fev a mai/2026, v5 a v6.1).** Descreve estruturas que já mudaram (pasta `squads/`, "Sistema A/B", contagens de agents e commands). Estrutura e contagens atuais: [AGENTS.md](../AGENTS.md) e [README.md](../README.md). Decisões posteriores: [docs/ai-engineering/adr/](ai-engineering/adr/).
+
 > Documentação técnica completa. Renderizar com **Markdown Preview Enhanced** no VSCode.
 > Última atualização: 2026-02-18
 

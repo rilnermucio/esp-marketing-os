@@ -115,7 +115,7 @@ PR opcional para revisão.
 
 ## Phase 6: Memory hygiene
 
-Após refresh, considerar limpar `.claude/agent-memory/mos-copy/MEMORY.md` de aprendizados que ficaram obsoletos pela atualização. Ler MEMORY.md, comparar com novo conhecimento, podar entradas que conflitam.
+Após refresh, considerar limpar `.claude/agent-memory/marketing-os-mos-copy/MEMORY.md` de aprendizados que ficaram obsoletos pela atualização. Ler MEMORY.md, comparar com novo conhecimento, podar entradas que conflitam.
 
 ## Critérios de Done
 

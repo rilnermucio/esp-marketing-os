@@ -181,7 +181,7 @@ ANTES                    DEPOIS
 
 [DEPOIMENTO 1]
 "[Quote impactante com resultado específico]"
-— [Nome], [Cargo/Empresa ou Resultado]
+[Nome], [Cargo/Empresa ou Resultado]
 [Foto real]
 
 [DEPOIMENTO 2]

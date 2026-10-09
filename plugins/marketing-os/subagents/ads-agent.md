@@ -17,7 +17,7 @@ Subagente especializado em criação de campanhas, copy de anúncios, estratégi
 1. [PARTE I: Fundamentos de Tráfego Pago](#parte-i-fundamentos-de-tráfego-pago)
 2. [PARTE II: Meta Ads (Facebook/Instagram)](#parte-ii-meta-ads)
 3. [PARTE III: Google Ads](#parte-iii-google-ads)
-4. [PARTE IV: TikTok Ads](#parte-iv-tiktok-ads)
+4. [PARTE IV: TikTok Ads e Kwai Ads](#parte-iv-tiktok-ads-e-kwai-ads)
 5. [PARTE V: LinkedIn Ads](#parte-v-linkedin-ads)
 6. [PARTE VI: Estrutura de Campanhas](#parte-vi-estrutura-de-campanhas)
 7. [PARTE VII: Segmentação e Públicos](#parte-vii-segmentação-e-públicos)
@@ -422,7 +422,7 @@ CTA: Finalizar Compra
 TEXTO PRIMÁRIO:
 "[Depoimento real de cliente - 2-3 frases impactantes]"
 
-— [Nome], [cargo/cidade]
+[Nome], [cargo/cidade]
 
 Assim como [Nome], mais de [número] pessoas já [resultado alcançado].
 
@@ -504,6 +504,46 @@ SETUP BÁSICO:
 2. Implementar envio server-side
 3. Usar event_id para deduplicação
 4. Testar com Events Manager
+```
+
+## 2.7 Anúncios no WhatsApp (Status e canal promovido) e no Threads
+
+> Verificado em 2026-09-28 na Central de Ajuda para Empresas da Meta, no FAQ do WhatsApp e na newsroom da Meta. Liberação gradual: confira no Gerenciador se o posicionamento aparece para a conta antes de prometer ao cliente.
+
+```
+ANÚNCIO NO STATUS DO WHATSAPP
+├── O Brasil está na lista oficial de países com anúncios no Status
+├── Compra: Gerenciador de Anúncios, objetivo Tráfego com destino de mensagem
+│   no WhatsApp; meta de alcance diário único ou impressões
+├── Posicionamento: vai junto com Instagram Stories
+├── Criativo: imagem ou vídeo 9:16 de até 90 s
+├── Segmentação: local, idioma e idade. Público restrito reduz a entrega
+│   durante a liberação gradual; a Meta indica o público Advantage+
+├── Pré-requisito: WhatsApp Business (app ou API) vinculado
+├── Destinos: conversa ou site; o anúncio aparece entre os Status orgânicos
+└── Não veicula: categoria especial de anúncio, experimentos da Meta, catálogo
+    Advantage+, anúncio em parceria e conteúdo com restrição de idade. Conta que
+    usou controles de segurança de marca nos últimos 12 meses sai desse
+    posicionamento automaticamente
+
+CANAL PROMOVIDO
+└── Impulsiona o canal no diretório de canais; quando disponível, aparece nas
+    preferências de posicionamento do Gerenciador
+
+CUSTO DA CONVERSA
+└── Clique em anúncio para WhatsApp abre 72 h sem cobrança de mensagem. A tabela
+    por mensagem no Brasil está na knowledge base de social ("Kwai e WhatsApp:
+    Status e Canais")
+
+THREADS
+└── Anúncios liberados para todos os mercados, inclusive Brasil, a partir da
+    semana de 26/01/2026: imagem, vídeo, carrossel, 4:5, catálogo Advantage+
+    e app
+
+PRÁTICA
+├── Reaproveite o corte vertical dos Stories, com a primeira fala convidando
+│   para a conversa
+└── Deixe o atendimento pronto para responder dentro das 72 h
 ```
 
 ---
@@ -743,7 +783,7 @@ SEGUNDOS 30+:
 
 ---
 
-# PARTE IV: TIKTOK ADS
+# PARTE IV: TIKTOK ADS E KWAI ADS
 
 ## 4.1 Visão Geral TikTok Ads
 
@@ -878,6 +918,31 @@ COMO USAR:
 | Oferta direta | | ✓ |
 | Teste de criativo rápido | | ✓ |
 | Retargeting | | ✓ |
+
+## 4.5 Kwai for Business
+
+> Verificado em 2026-09-28 no site oficial do Kwai for Business. As especificações detalhadas de anúncio ficam no Business Center, que exige login: confira antes de produzir.
+
+```
+FORMATOS
+├── Eyemax: primeira visualização do dia, tráfego garantido comprado por CPT
+│   (lançamento)
+├── In-feed Ads: performance
+├── Hashtag Challenge e Magic Face: engajamento e participação
+├── Criadores: campanhas com criadores do Kwai
+└── Impulsionar: promove post de criador como anúncio
+
+REGRAS
+├── Anúncio de apostas no Brasil exige licença federal válida (desde 01/01/2025)
+└── Fluxo oficial de criação: objetivo, público, orçamento e anúncio
+
+PÚBLICO E CRIATIVO (dados de mercado)
+├── Público de massa, com classe C predominante nas fontes; humor lidera os
+│   interesses (Opinion Box 2024)
+├── Produza em 9:16, com criador real e tom popular
+└── Parte do uso do app é recompensada com moedas: avalie por conversão,
+    não por views
+```
 
 ---
 
@@ -2683,7 +2748,7 @@ Mês 1-3: Foundation (R$ 30k/mês)
 - ROAS: 2.5x
 
 Mês 4-6: Growth (R$ 80k/mês)
-- Advantage+ Shopping (ASC)
+- Advantage+ Sales (antigo Advantage+ Shopping, sigla ASC; renomeado em fev/2025)
 - Performance Max
 - Retargeting dinâmico
 - ROAS: 3.1x
@@ -2702,7 +2767,7 @@ Mês 10-12: Domination (R$ 300k/mês)
 
 Lições:
 → Catálogo bem estruturado é fundamental
-→ ASC e PMax são game-changers para e-commerce
+→ Advantage+ Sales (ASC) e PMax são game-changers para e-commerce
 → ROAS cai na escala mas receita absoluta importa mais
 → Attribution avançado é necessário acima de R$ 100k/mês
 ```
@@ -3410,6 +3475,8 @@ IMPORTANTE:
 
 # PARTE XVIII: COMPLIANCE BR (CONAR + LGPD + Setoriais)
 
+> **Fonte canônica**: `references/compliance-br.md`, verificada em 2026-09-28 no texto integral das normas (conselhos profissionais, ANVISA, CVM, CONAR, CDC, LGPD, ECA Digital). Em conflito com esta PARTE, vale a referência. Checagem rápida de uma peça: `python3 scripts/compliance_check.py --input <arquivo>`.
+
 Anúncio que rode no Brasil precisa passar **3 níveis de compliance** simultaneamente: plataforma (Meta/Google/TikTok), CONAR (auto-regulação BR), e regulação setorial (CVM, ANVISA, OAB, etc.). Violação pode causar reprovação, takedown, multa, ou processo.
 
 ## 18.1 CONAR (Conselho Nacional de Autorregulamentação Publicitária)
@@ -3525,8 +3592,9 @@ Resumo dos órgãos que regulam categorias específicas:
 
 | Setor | Órgão | Regra-chave para ads |
 |-------|-------|---------------------|
-| Investimentos | CVM (Resolução 35/2021) | Disclaimer obrigatório, sem promessa de retorno, registro CVM |
-| Saúde / Wellness | ANVISA (RDC 96/2008, RDC 7/2015) | Sem cura, registro/notificação, profissional habilitado em depoimentos |
+| Investimentos | CVM (Res. 20/2021 e 19/2021; Lei 6.385, art. 27-E; Res. 175/2022, art. 59) | Recomendar ativo exige analista ou consultor registrado; "não é recomendação" não protege; fundo com aviso de rentabilidade passada; sem promessa de retorno |
+| Saúde / Wellness | ANVISA (RDC 243/2018 suplementos; RDC 907/2024 cosméticos; Lei 9.294/1996 medicamentos) | Suplemento só com alegação da IN 28 (texto exato); cosmético sem alegação terapêutica; remédio com receita não anuncia ao público |
+| Profissões de saúde | CFM 2.336/2023, Código CFO + CFO-196/2019, CFN 599/2018, CFP art. 20 | Identificação com registro; sem promessa de resultado; gratuidade vedada (médico em consultório, dentista, psicólogo); antes e depois com regra própria por conselho |
 | Advocacia | CFOAB (Provimento 205/2021) | Sem captação ativa, sem comparação, sem garantia de resultado |
 | Crédito | Bacen (Resolução 4.949/2021) | CET completo, IOF, sem aprovação garantida |
 | Imóveis | CRECI (Lei 6.530/78) | Corretor com CRECI ativo, valorização baseada em dado oficial |
@@ -3578,7 +3646,7 @@ ADVANTAGE+ BUDGET (Meta CBO)
 ├── Ativar quando tem 3+ ad sets com objetivo similar
 └── Não usar em testes A/B (precisa budget igualitário)
 
-ADVANTAGE+ SHOPPING CAMPAIGN (ASC)
+ADVANTAGE+ SALES CAMPAIGN (ANTES ADVANTAGE+ SHOPPING, ASC)
 ├── Mais poderoso pra e-commerce
 ├── 1 campaign rodando catalog completo
 ├── AI decide creative + targeting + bidding
@@ -5969,7 +6037,7 @@ SEMANA 4: Consolidação
 | **Ad Set** | Nível de targeting e placement |
 | **Ad** | Nível de criativo (copy + visual) |
 | **Advantage+** | Automação de audiência Meta |
-| **ASC** | Advantage+ Shopping Campaign |
+| **ASC** | Advantage+ Sales Campaign (antes Advantage+ Shopping Campaign) |
 
 ### Targeting
 | Termo | Definição |

@@ -12,23 +12,23 @@
 
 ## Filosofia Central
 
-Cialdini acredita que **persuasão ética é ciência, não manipulação**. Existem princípios universais do comportamento humano que determinam quando e por que as pessoas dizem sim. Quem entende esses princípios pode usá-los para comunicar valor genuíno de forma mais eficaz — e reconhecer quando estão sendo usados de forma antiética contra si.
+Cialdini acredita que **persuasão ética é ciência, não manipulação**. Existem princípios universais do comportamento humano que determinam quando e por que as pessoas dizem sim. Quem entende esses princípios pode usá-los para comunicar valor genuíno de forma mais eficaz, e reconhecer quando estão sendo usados de forma antiética contra si.
 
 ### Princípios Fundamentais
 
-1. **Reciprocidade** — As pessoas se sentem obrigadas a retribuir o que recebem. Dar primeiro cria uma obrigação natural de devolver.
+1. **Reciprocidade**: As pessoas se sentem obrigadas a retribuir o que recebem. Dar primeiro cria uma obrigação natural de devolver.
 
-2. **Comprometimento e Consistência** — Uma vez que as pessoas se comprometem com algo (especialmente por escrito), elas agem de forma consistente com esse compromisso.
+2. **Comprometimento e Consistência**: Uma vez que as pessoas se comprometem com algo (especialmente por escrito), elas agem de forma consistente com esse compromisso.
 
-3. **Prova Social** — Em situações de incerteza, as pessoas olham para o comportamento dos outros para decidir o que fazer.
+3. **Prova Social**: Em situações de incerteza, as pessoas olham para o comportamento dos outros para decidir o que fazer.
 
-4. **Autoridade** — As pessoas seguem o julgamento de especialistas credenciados e figuras de autoridade.
+4. **Autoridade**: As pessoas seguem o julgamento de especialistas credenciados e figuras de autoridade.
 
-5. **Simpatia (Liking)** — As pessoas dizem sim mais facilmente para quem gostam, conhecem ou com quem se identificam.
+5. **Simpatia (Liking)**: As pessoas dizem sim mais facilmente para quem gostam, conhecem ou com quem se identificam.
 
-6. **Escassez** — Oportunidades parecem mais valiosas quando são raras ou estão acabando.
+6. **Escassez**: Oportunidades parecem mais valiosas quando são raras ou estão acabando.
 
-7. **Unidade** *(7º princípio, de Pre-Suasion)* — Pertencer ao mesmo grupo gera influência. "Nós" é mais poderoso que "você".
+7. **Unidade** *(7º princípio, de Pre-Suasion)*: Pertencer ao mesmo grupo gera influência. "Nós" é mais poderoso que "você".
 
 ---
 
@@ -38,9 +38,9 @@ Cialdini passou 35 anos pesquisando a psicologia da persuasão. Passou 3 anos in
 
 ### Marcos importantes
 
-- **1984:** Publica Influence — best-seller com mais de 5 milhões de cópias vendidas
+- **1984:** Publica Influence: best-seller com mais de 5 milhões de cópias vendidas
 - **1990s:** Torna-se professor consultor de Fortune 500, governos e militares
-- **2016:** Publica Pre-Suasion — revela como o contexto *antes* da mensagem é tão importante quanto a mensagem
+- **2016:** Publica Pre-Suasion: revela como o contexto *antes* da mensagem é tão importante quanto a mensagem
 - **Legado:** Transformou persuasão em disciplina científica; seus princípios estão em cada treinamento de vendas do mundo
 
 ---
@@ -69,10 +69,10 @@ Cialdini passou 35 anos pesquisando a psicologia da persuasão. Passou 3 anos in
 
 ## Diferenciação
 
-1. **Base científica rigorosa** — Todo princípio é sustentado por pesquisa real
-2. **Ética como fundamento** — Ensina a usar persuasão de forma legítima
-3. **Universal e cultural** — Pesquisou os princípios em dezenas de culturas
-4. **Defesa e ofensa** — Ensina tanto a persuadir quanto a reconhecer quando está sendo persuadido
+1. **Base científica rigorosa**: Todo princípio é sustentado por pesquisa real
+2. **Ética como fundamento**: Ensina a usar persuasão de forma legítima
+3. **Universal e cultural**: Pesquisou os princípios em dezenas de culturas
+4. **Defesa e ofensa**: Ensina tanto a persuadir quanto a reconhecer quando está sendo persuadido
 
 ---
 

@@ -1,5 +1,5 @@
 ---
-description: Create a complete social media post optimized for the specified platform. Dispatches native Claude Code subagents (mos-social, mos-copy, optionally mos-research) in parallel or sequence for maximum quality.
+description: "Cria um post completo para Instagram, LinkedIn, TikTok, X ou Threads, com hook, legenda, CTA, hashtags e enquete. Use quando pedirem um post. Carrossel: /criar-carrossel; várias peças: /batch."
 argument-hint: "<platform and topic, e.g., 'Instagram post about productivity tips'>"
 ---
 
@@ -26,8 +26,8 @@ This command does NOT produce content inline. It **dispatches specialist subagen
 ```
 Briefing recebido
   ├── Tópico genérico ou novo nicho? (sim)
-  │     └── Dispatch PARALELO: mos-research + mos-copy
-  │         (research valida claims/tendências em paralelo com geração de hooks)
+  │     └── Dispatch PARALELO: mos-research + mos-social
+  │         (research valida claims/tendências em paralelo com a produção do post)
   │
   ├── Tópico conhecido + precisa de post polido? (sim)
   │     └── Dispatch SIMPLES: mos-social (ele já coordena com mos-copy via knowledge)
@@ -46,9 +46,9 @@ Quando o briefing é novo/amplo:
 ```
 Em um único message, invoque em paralelo:
 
-- Agent(subagent_type: "mos-research", prompt: "Pesquisa rápida: tendências atuais de [tema], concorrentes ativos em [plataforma] BR, dores do público [audiência], dados/estatísticas relevantes dos últimos 90 dias. Considere memory existente do cliente neste projeto. Retorne research brief compacto.")
+- Agent(subagent_type: "marketing-os:mos-research", prompt: "Pesquisa rápida: tendências atuais de [tema], concorrentes ativos em [plataforma] BR, dores do público [audiência], dados/estatísticas relevantes dos últimos 90 dias. Considere memory existente do cliente neste projeto. Retorne research brief compacto.")
 
-- Agent(subagent_type: "mos-social", prompt: "Crie post [plataforma] sobre [tema]. Audiência: [descrição]. Tom: [tom]. Goal: [goal]. Format: [format]. CTA: [cta]. Considere memory existente do cliente neste projeto. Aplique schema padrão + 3 hooks + variações A/B + hashtags + horário + enquete de engajamento.")
+- Agent(subagent_type: "marketing-os:mos-social", prompt: "Crie post [plataforma] sobre [tema]. Audiência: [descrição]. Tom: [tom]. Goal: [goal]. Format: [format]. CTA: [cta]. Considere memory existente do cliente neste projeto. Aplique schema padrão + 3 hooks + variações A/B + hashtags + horário + enquete de engajamento.")
 ```
 
 ### Exemplo de dispatch sequencial
@@ -56,10 +56,10 @@ Em um único message, invoque em paralelo:
 Quando precisa de research ANTES de copy (research informa os hooks):
 
 ```
-Passo 1: Agent(subagent_type: "mos-research", prompt: "...")
+Passo 1: Agent(subagent_type: "marketing-os:mos-research", prompt: "...")
   → Aguarde research brief
 
-Passo 2: Agent(subagent_type: "mos-social", prompt: "..., usando este research: [colar brief]")
+Passo 2: Agent(subagent_type: "marketing-os:mos-social", prompt: "..., usando este research: [colar brief]")
   → Post final
 ```
 
@@ -124,7 +124,7 @@ Tendências ativas: [Lista com datas]
 
 ## Quality Gates (antes de entregar)
 
-Aplicar gates globais do `skills/marketing-os/SKILL.md`:
+Aplicar gates globais do `${CLAUDE_PLUGIN_ROOT}/skills/marketing-os/SKILL.md`:
 - Sem `—`, sem "brutal", sem CAPS gratuito
 - Sem aspas em roteiros/falas (escrever direto)
 - Máximo 1-2 emojis (preferir zero)

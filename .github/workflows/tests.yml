@@ -47,6 +47,30 @@ jobs:
           files: ./coverage.xml
           fail_ci_if_error: false
 
+  compat-python39:
+    name: Compatibilidade Python 3.9 (hooks e scripts de runtime)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v5
+
+      - name: Configurar Python 3.9
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.9"
+
+      - name: Compilar scripts de runtime
+        run: python -m compileall -q scripts/*.py scripts/hooks
+
+      - name: Testes dos scripts que rodam com o python3 do sistema
+        # Hooks e memória rodam com o python3 do PATH do usuário (3.9 no macOS limpo).
+        run: |
+          pip install pytest pyyaml
+          python -m pytest scripts/tests/test_quality_gate_hook.py scripts/tests/test_workspace_paths.py \
+            scripts/tests/test_init_agent_memory.py scripts/tests/test_memory_writer.py \
+            scripts/tests/test_install_doctor.py scripts/tests/test_check_platform_facts.py -q
+
   lint:
     name: Verificar qualidade do código
     runs-on: ubuntu-latest

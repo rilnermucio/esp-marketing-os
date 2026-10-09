@@ -1,5 +1,5 @@
 ---
-description: Create a complete expert clone (profile/voice/frameworks/examples) via dispatch, mos-research busca a base factual, mos-copy gera os 4 arquivos no padrão dos clones existentes em assets/clones/.
+description: "Cria o clone de voz de um expert ou copywriter (perfil, voz, frameworks e exemplos) a partir de pesquisa. Use para escrever no estilo de alguém que ainda não tem clone. Sua própria voz: /criar-meu-clone."
 argument-hint: "<expert-name> [specialty]"
 ---
 
@@ -65,7 +65,7 @@ Padrão de referência: clones já existentes em assets/clones/ (ex: hormozi/, h
 
 REGRAS:
 - Tudo em PT-BR com acentuação correta
-- Aplicar quality gates globais (sem '—', sem 'brutal', sem CAPS, sem aspas em falas, máx 1-2 emojis)
+- Aplicar quality gates globais (sem `—`, sem 'brutal', sem CAPS, sem aspas em falas, máx 1-2 emojis)
 - Apenas info do research, se algo está [VERIFICAR], suavizar ou omitir
 - Salvar via Write em: assets/clones/{slug}/profile.md, voice.md, frameworks.md, examples.md
 - Total alvo: ~700 linhas nos 4 arquivos somados

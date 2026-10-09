@@ -59,7 +59,7 @@ Há 3 anos, eu estava no pior momento da minha carreira.
 ↳
 Recebi uma ligação que mudou tudo.
 ↳
-"Você está demitido" — e foi a melhor coisa que me aconteceu.
+"Você está demitido", e foi a melhor coisa que me aconteceu.
 ```
 
 ### Para Lições

@@ -2,7 +2,7 @@
 
 ## 1. Os 7 Princípios de Influência
 
-O sistema central de Cialdini — base de tudo que ele ensina.
+O sistema central de Cialdini: base de tudo que ele ensina.
 
 ### O Mapa dos Princípios
 
@@ -20,23 +20,23 @@ O sistema central de Cialdini — base de tudo que ele ensina.
 
 ## 2. Framework de Reciprocidade Estratégica
 
-Cialdini demonstrou que dar primeiro cria uma obrigação psicológica poderosa — mas apenas quando feito corretamente.
+Cialdini demonstrou que dar primeiro cria uma obrigação psicológica poderosa, mas apenas quando feito corretamente.
 
 ### As 3 Condições para Reciprocidade Eficaz
 
 ```
-CONDIÇÃO 1 — INESPERADO
+CONDIÇÃO 1: INESPERADO
 O presente deve surpreender, não ser esperado.
 → "Aqui está algo que preparei para você" (sem aviso prévio)
 → Evite: brindes anunciados com antecedência perdem o poder
 
-CONDIÇÃO 2 — PERSONALIZADO
+CONDIÇÃO 2: PERSONALIZADO
 Deve parecer feito especificamente para o receptor.
 → "Vi que você [situação específica] e pensei nisto"
 → Evite: presentes genéricos diminuem o efeito
 
-CONDIÇÃO 3 — SIGNIFICATIVO
-Deve ter valor real — não ser marketing disfarçado de presente.
+CONDIÇÃO 3: SIGNIFICATIVO
+Deve ter valor real: não ser marketing disfarçado de presente.
 → Conteúdo que resolve um problema real, não um teaser
 → Evite: "brindes" que são apenas argumentos de venda embalados
 ```
@@ -45,7 +45,7 @@ Deve ter valor real — não ser marketing disfarçado de presente.
 
 ```
 PASSO 1: ENTREGUE VALOR PRIMEIRO
-Conteúdo real, ferramenta útil, insight genuíno — sem pedir nada
+Conteúdo real, ferramenta útil, insight genuíno, sem pedir nada
 
 PASSO 2: ESTABELEÇA O QUE FOI DADO
 "Você acabou de [ação] / aprendeu [conceito] / descobriu [insight]"
@@ -104,19 +104,19 @@ Não toda prova social tem o mesmo peso. Cialdini identificou que a prova social
 ### Os 4 Níveis de Prova Social
 
 ```
-NÍVEL 1 — NÚMEROS (mais fraco, mas amplo)
+NÍVEL 1: NÚMEROS (mais fraco, mas amplo)
 "Mais de 10.000 clientes"
 → Use para: escala, legitimidade geral
 
-NÍVEL 2 — DEPOIMENTO DE SEMELHANTE
+NÍVEL 2: DEPOIMENTO DE SEMELHANTE
 "[Nome], [profissão/situação similar ao leitor], diz que..."
-→ Use para: identificação — "se funcionou para alguém como eu..."
+→ Use para: identificação, "se funcionou para alguém como eu..."
 
-NÍVEL 3 — CASO ESPECÍFICO COM RESULTADO MENSURÁVEL
+NÍVEL 3: CASO ESPECÍFICO COM RESULTADO MENSURÁVEL
 "João, gerente de médias empresas, aumentou em 34% em 3 meses"
 → Use para: credibilidade alta + especificidade
 
-NÍVEL 4 — PROVA SOCIAL DE AUTORIDADE
+NÍVEL 4: PROVA SOCIAL DE AUTORIDADE
 Especialista reconhecido ou instituição valida o produto
 → Use para: legitimidade em mercados céticos
 ```
@@ -135,16 +135,16 @@ RECOMENDAÇÃO: Por que indica (em linguagem própria)
 
 ## 5. Framework de Escassez Ética
 
-Cialdini é rigoroso: escassez falsa não apenas é antiética — ela destrói confiança a longo prazo.
+Cialdini é rigoroso: escassez falsa é antiética e ainda destrói confiança a longo prazo.
 
 ### Escassez Real vs. Fabricada
 
 | Tipo | Exemplo | Efeito a Longo Prazo |
 |------|---------|---------------------|
-| **Escassez real de quantidade** | "Últimas 47 unidades em estoque" | Positivo — confiança mantida |
-| **Escassez real de tempo** | "Bônus disponível até sexta-feira 23h59" | Positivo — se o prazo for respeitado |
-| **Escassez de acesso** | "Turma fechada — próxima abertura em março" | Positivo — se for verdade |
-| **Escassez fabricada** | "Oferta expira em 10 minutos" (que se renova) | Destrutivo — erode credibilidade |
+| **Escassez real de quantidade** | "Últimas 47 unidades em estoque" | Positivo: confiança mantida |
+| **Escassez real de tempo** | "Bônus disponível até sexta-feira 23h59" | Positivo, se o prazo for respeitado |
+| **Escassez de acesso** | "Turma fechada: próxima abertura em março" | Positivo, se for verdade |
+| **Escassez fabricada** | "Oferta expira em 10 minutos" (que se renova) | Destrutivo: erode credibilidade |
 
 ### Como Comunicar Escassez Real
 
@@ -157,7 +157,7 @@ Cialdini é rigoroso: escassez falsa não apenas é antiética — ela destrói 
 "Até 31 de março" não "em breve"
 
 3. EXPLIQUE POR QUE IMPORTA AGIR AGORA
-Não apenas "vai acabar" — mas "o custo de esperar é [consequência específica]"
+Troque "vai acabar" por "o custo de esperar é [consequência específica]"
 
 4. CUMPRA O QUE PROMETEU
 Se disse que fecha sexta, fecha sexta. A credibilidade futura depende disso.
@@ -172,7 +172,7 @@ O mais poderoso e menos explorado dos princípios de Cialdini, introduzido em *P
 ### A Diferença entre Afinidade e Unidade
 
 - **Afinidade:** "Gosto de você porque somos parecidos"
-- **Unidade:** "Somos do mesmo grupo — o que me acontece, acontece a nós"
+- **Unidade:** "Somos do mesmo grupo: o que me acontece, acontece a nós"
 
 Unidade é identidade compartilhada. É mais profunda que semelhança.
 
@@ -181,7 +181,7 @@ Unidade é identidade compartilhada. É mais profunda que semelhança.
 ```
 IDENTIDADE DE GRUPO
 "Para quem escolheu [estilo de vida/profissão/missão]..."
-→ Não apenas "cliente" — mas membro de uma tribo
+→ De "cliente" a membro de uma tribo
 
 CO-CRIAÇÃO
 "Este produto foi desenvolvido com [número] de pessoas como você"
@@ -200,7 +200,7 @@ HERANÇA FAMILIAR OU CULTURAL
 
 ```
 PASSO 1: NOMEIE O GRUPO
-"Somos [identidade]" — não "nossos clientes"
+"Somos [identidade]": não "nossos clientes"
 
 PASSO 2: DEFINA A MISSÃO OU VALOR COMPARTILHADO
 O que une o grupo além do produto

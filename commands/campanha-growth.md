@@ -1,5 +1,5 @@
 ---
-description: Preset de growth. Dispatcha mos-research + mos-analytics em paralelo, depois mos-ab-testing + mos-growth + mos-copy. Foco em experimentação acelerada e crescimento não-linear via ICE Score e AARRR. Clone primário ellis.
+description: "Campanha de growth por experimentos: hipóteses priorizadas por ICE ao longo do funil AARRR, testes e métricas. Use quando o objetivo for crescer por experimentação contínua."
 argument-hint: "<funil/produto> [--clone=ellis|chen] [--north-star=...]"
 ---
 
@@ -20,19 +20,19 @@ argument-hint: "<funil/produto> [--clone=ellis|chen] [--north-star=...]"
 **Fase 1 (paralelo):**
 
 ```
-- Agent(subagent_type: "mos-research", prompt: "Análise de oportunidades de growth: pontos de fricção do funil atual, north star metric, alavancas com maior potencial de impacto. Considere memory de experimentos anteriores.")
+- Agent(subagent_type: "marketing-os:mos-research", prompt: "Análise de oportunidades de growth: pontos de fricção do funil atual, north star metric, alavancas com maior potencial de impacto. Considere memory de experimentos anteriores.")
 
-- Agent(subagent_type: "mos-analytics", prompt: "Setup AARRR (Acquisition / Activation / Retention / Referral / Revenue): tracking de cada estágio, identificação de leaks, baseline pra comparação de experimentos.")
+- Agent(subagent_type: "marketing-os:mos-analytics", prompt: "Setup AARRR (Acquisition / Activation / Retention / Referral / Revenue): tracking de cada estágio, identificação de leaks, baseline pra comparação de experimentos.")
 ```
 
 **Fase 2 (paralelo, depende das oportunidades identificadas):**
 
 ```
-- Agent(subagent_type: "mos-ab-testing", prompt: "Design de batch de experimentos: 4-6 hipóteses ranqueadas por ICE Score (Impacto × Confiança × Facilidade). Pra cada uma: variante A/B, tamanho mínimo de amostra, critério de parada, métrica primária.")
+- Agent(subagent_type: "marketing-os:mos-ab-testing", prompt: "Design de batch de experimentos: 4-6 hipóteses ranqueadas por ICE Score (Impacto × Confiança × Facilidade). Pra cada uma: variante A/B, tamanho mínimo de amostra, critério de parada, métrica primária.")
 
-- Agent(subagent_type: "mos-growth", prompt: "Estratégias de growth hacking aplicáveis ao funil [TOFU/MOFU/BOFU]: viral loops, referral, retention hooks, ativação. Priorizar por viral coefficient esperado.")
+- Agent(subagent_type: "marketing-os:mos-growth", prompt: "Estratégias de growth hacking aplicáveis ao funil [TOFU/MOFU/BOFU]: viral loops, referral, retention hooks, ativação. Priorizar por viral coefficient esperado.")
 
-- Agent(subagent_type: "mos-copy", prompt: "Variantes de copy pros experimentos da Fase 2: headlines, CTAs, value props alternativas. Pra cada variante, hipótese explicitada.")
+- Agent(subagent_type: "marketing-os:mos-copy", prompt: "Variantes de copy pros experimentos da Fase 2: headlines, CTAs, value props alternativas. Pra cada variante, hipótese explicitada.")
 ```
 
 ## Ciclo Semanal de Experimentos
@@ -85,7 +85,7 @@ OPERAÇÃO MENSAL:
 
 ## Quality Gates (antes de entregar)
 
-Aplicar gates globais do `skills/marketing-os/SKILL.md`:
+Aplicar gates globais do `${CLAUDE_PLUGIN_ROOT}/skills/marketing-os/SKILL.md`:
 - Sem `—`, sem "brutal", sem CAPS gratuito
 - Acentuação PT-BR correta
 - Hipóteses com formato "se X, então Y, porque Z"
@@ -93,4 +93,4 @@ Aplicar gates globais do `skills/marketing-os/SKILL.md`:
 
 ## Memory note
 
-Os agents `mos-copy`, `mos-ab-testing` têm memory project em `.claude/agent-memory/mos-<agent>/`. Sempre mencione no prompt que considere memory existente para evitar repetir experimentos já testados e para construir cumulativamente sobre aprendizados anteriores.
+Os agents `mos-copy`, `mos-ab-testing` têm memory project em `.claude/agent-memory/marketing-os-mos-<agent>/`. Sempre mencione no prompt que considere memory existente para evitar repetir experimentos já testados e para construir cumulativamente sobre aprendizados anteriores.

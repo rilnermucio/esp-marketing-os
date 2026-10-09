@@ -1,5 +1,5 @@
 ---
-description: Design a statistically sound A/B test (hypothesis, sample size, duration, stop criteria). Dispatches mos-ab-testing; sequencial com mos-copy/mos-ads quando as variantes ainda não existem.
+description: "Desenha teste A/B com hipótese, variantes, tamanho de amostra, duração e critério de parada. Use quando pedirem teste A/B, experimento ou para comparar versões."
 argument-hint: "<o que testar + canal + volume, ex: 'CTA da landing, ~800 visitas/dia, baseline 2,1%'>"
 ---
 

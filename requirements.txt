@@ -30,6 +30,9 @@
 # TikTok-Api>=7.0.0           # Scraping de tendências do TikTok
 # playwright>=1.40.0           # Automação de navegador para TikTok-Api
 #
+# gsc_analyzer.py e youtube_analytics.py (autenticação por service account):
+# cryptography>=41             # Import protegido: sem ele, o script explica como instalar
+#
 # ============================================================
 # Dependências opcionais para funcionalidades futuras
 # ============================================================
@@ -65,4 +68,4 @@ numpy>=1.26,<3   # import direto em audit_radar_chart.py (matplotlib ja o traz; 
 playwright>=1.40,<2
 
 # Dependencias para Fase 2 midia real (/gerar-thumbnail: overlay tipografico)
-Pillow>=10.0,<12
+Pillow>=10.1,<12   # ImageFont.load_default(size=) em thumbnail_composer.py exige 10.1

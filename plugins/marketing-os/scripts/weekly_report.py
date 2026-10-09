@@ -18,9 +18,11 @@ import argparse
 from datetime import datetime, timedelta
 from typing import Dict, List, Optional
 
+from workspace_paths import user_workspace
+
 # Diretório base
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-OUTPUT_DIR = os.path.join(BASE_DIR, "output", "reports")
+OUTPUT_DIR = str(user_workspace() / "reports")
 
 
 # ──────────────────────────────────────────────

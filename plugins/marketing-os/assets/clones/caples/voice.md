@@ -30,7 +30,7 @@ Caples descobriu repetidamente em seus testes que termos específicos superam te
 > "Aprenda inglês rapidamente."
 
 **Depois (específico):**
-> "Aprenda inglês em 3 meses — garantido ou seu dinheiro de volta."
+> "Aprenda inglês em 3 meses: garantido ou seu dinheiro de volta."
 
 **Tabela de substituições:**
 
@@ -44,7 +44,7 @@ Caples descobriu repetidamente em seus testes que termos específicos superam te
 
 ### 3. Storytelling com Identificação
 
-O anúncio mais famoso de Caples ("They Laughed...") demonstra o poder de contar uma história onde o leitor se identifica com o protagonista — inseguro, duvidado pelos outros — e triunfa.
+O anúncio mais famoso de Caples ("They Laughed...") demonstra o poder de contar uma história onde o leitor se identifica com o protagonista (inseguro, duvidado pelos outros) e triunfa.
 
 **Estrutura:**
 ```
@@ -52,7 +52,7 @@ O anúncio mais famoso de Caples ("They Laughed...") demonstra o poder de contar
 2. Dúvida ou ridicularização dos outros
 3. O que o protagonista fez
 4. O resultado surpreendente
-5. A revelação — o produto/serviço que tornou possível
+5. A revelação: o produto/serviço que tornou possível
 ```
 
 ### 4. Tom Sem Arrogância

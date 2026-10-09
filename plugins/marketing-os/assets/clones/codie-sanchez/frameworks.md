@@ -41,32 +41,32 @@ Codie desenvolveu um checklist de 5 áreas para avaliar um negócio antes de adq
 
 ### Como funciona
 ```
-ÁREA 1 — FINANCEIRO:
+ÁREA 1: FINANCEIRO:
 ├── Últimos 3 anos de demonstrações financeiras
 ├── EBITDA verificado (não apenas declarado pelo vendedor)
 ├── Sazonalidade de receita (há meses ruins previsíveis?)
 ├── Concentração de clientes (algum cliente > 20% da receita? Risco alto)
 └── Nível de dívida atual e obrigações futuras
 
-ÁREA 2 — OPERACIONAL:
+ÁREA 2: OPERACIONAL:
 ├── Quem são os funcionários-chave? Ficarão após a venda?
 ├── Os sistemas e processos estão documentados?
 ├── Qual é a dependência do fundador? (Ele é o negócio ou o negócio opera sem ele?)
 └── Estado dos equipamentos e instalações
 
-ÁREA 3 — MERCADO:
+ÁREA 3: MERCADO:
 ├── Qual é o crescimento do mercado local nos últimos 5 anos?
 ├── Existem ameaças de disrupção tecnológica?
 ├── Quais são os principais concorrentes e sua participação?
 └── O negócio tem vantagem competitiva defensável (localização, contratos, marca)?
 
-ÁREA 4 — CLIENTES:
+ÁREA 4: CLIENTES:
 ├── Taxa de retenção de clientes (>80% é bom para serviço recorrente)
 ├── NPS ou indicador de satisfação equivalente
 ├── Concentração geográfica (serve área muito restrita?)
 └── Sazonalidade de demanda
 
-ÁREA 5 — LEGAL E COMPLIANCE:
+ÁREA 5: LEGAL E COMPLIANCE:
 ├── Licenças e alvarás estão em dia?
 ├── Existe histórico de processos trabalhistas ou cíveis?
 ├── Contratos de fornecedores e clientes revisados?
@@ -83,36 +83,36 @@ Codie desenvolveu um checklist de 5 áreas para avaliar um negócio antes de adq
 ## Framework 3: A Matriz de Aquisição Contrária
 
 ### O que é
-Codie usa uma matriz para identificar onde estão os melhores negócios para comprar — tipicamente onde a maioria dos compradores NÃO está olhando.
+Codie usa uma matriz para identificar onde estão os melhores negócios para comprar: tipicamente onde a maioria dos compradores NÃO está olhando.
 
 ### Como funciona
 ```
-EIXO X — Atratividade Percebida (pelo mercado geral):
-└── Baixa ←————————→ Alta
+EIXO X: Atratividade Percebida (pelo mercado geral):
+└── Baixa ←────────→ Alta
 
-EIXO Y — Rentabilidade Real:
-└── Baixa ←————————→ Alta
+EIXO Y: Rentabilidade Real:
+└── Baixa ←────────→ Alta
 
 OS 4 QUADRANTES:
 
-Q1 — Alta Atratividade, Alta Rentabilidade:
+Q1: Alta Atratividade, Alta Rentabilidade:
 ├── Exemplos: Startups em hot sectors, negócios da moda
 └── EVITAR: Competição máxima = múltiplos inflados
 
-Q2 — Baixa Atratividade, Alta Rentabilidade:
+Q2: Baixa Atratividade, Alta Rentabilidade:
 ├── Exemplos: Lavanderias, serviços de limpeza, vending
 └── FOCO PRINCIPAL DE CODIE: Pouca competição + boa rentabilidade
 
-Q3 — Alta Atratividade, Baixa Rentabilidade:
+Q3: Alta Atratividade, Baixa Rentabilidade:
 ├── Exemplos: Restaurantes, varejo de moda, bares
 └── EVITAR: Muita concorrência + margens ruins
 
-Q4 — Baixa Atratividade, Baixa Rentabilidade:
+Q4: Baixa Atratividade, Baixa Rentabilidade:
 ├── Exemplos: Negócios de utilidade muito comoditizados
 └── EVITAR: Nenhuma vantagem para comprar
 
 CONCLUSÃO:
-└── Procure sistematicamente no Q2 — onde ninguém quer olhar
+└── Procure sistematicamente no Q2: onde ninguém quer olhar
 ```
 
 ### Quando usar
@@ -144,7 +144,7 @@ FLUXO DE CAIXA (como Codie pensa):
 ANÁLISE COMPARADA:
 ├── Cenário A (Apreciação): $500K de lucro em 5 anos, sem renda
 ├── Cenário B (Fluxo de Caixa): $500K em receitas + ativo que pode ser vendido
-└── Codie escolhe B — e ensina a escolher B
+└── Codie escolhe B, e ensina a escolher B
 
 APLICAÇÃO:
 ├── Antes de qualquer investimento: "Qual é o fluxo de caixa imediato?"
@@ -166,23 +166,23 @@ Codie tem um processo sistemático para encontrar negócios à venda antes que e
 
 ### Como funciona
 ```
-CANAL 1 — PLATAFORMAS PÚBLICAS (maior concorrência):
+CANAL 1: PLATAFORMAS PÚBLICAS (maior concorrência):
 ├── BizBuySell, BizQuest, LoopNet
 ├── Estratégia: filtrar por tempo no mercado (+90 dias = vendedor motivado)
 └── Vantagem: Muita oferta. Desvantagem: preços inflados por exposição
 
-CANAL 2 — CORRETORES DE NEGÓCIOS (intermediários):
+CANAL 2: CORRETORES DE NEGÓCIOS (intermediários):
 ├── Business brokers especializados no setor alvo
 ├── Estratégia: construir relacionamento antes de precisar
 └── Vantagem: Acesso a deals antes de ir a mercado
 
-CANAL 3 — OUTREACH DIRETO (menor concorrência):
+CANAL 3: OUTREACH DIRETO (menor concorrência):
 ├── Identifique negócios no nicho alvo em listas públicas (Yelp, Google Maps)
 ├── Filtros: negócio com 5-15 anos de operação, fundador 55+
 ├── Mensagem: "Você já pensou em transição de negócio no futuro?"
 └── Vantagem: Preços pré-mercado + vendedor sem agente (sem comissão)
 
-CANAL 4 — REDE DE ADVOGADOS E CONTADORES:
+CANAL 4: REDE DE ADVOGADOS E CONTADORES:
 ├── Profissionais que sabem antes de qualquer um quando cliente quer vender
 ├── Estratégia: oferecer encontros, criar valor para eles primeiro
 └── Vantagem: Deals de alta qualidade com pouquíssima concorrência

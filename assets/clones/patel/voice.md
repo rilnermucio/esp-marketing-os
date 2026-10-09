@@ -10,7 +10,7 @@ A voz de Neil Patel é **educativa, acessível e orientada por dados**. Ele fala
 
 ### 1. Educativo e Acessível
 
-Patel transforma conceitos complexos de marketing em linguagem que qualquer pessoa entende. Ele escreve no nível de leitura de uma pessoa de 11 anos — não por subestimar o leitor, mas por respeitar o tempo dele.
+Patel transforma conceitos complexos de marketing em linguagem que qualquer pessoa entende. Ele escreve no nível de leitura de uma pessoa de 11 anos: não por subestimar o leitor, mas por respeitar o tempo dele.
 
 **Não faça:**
 > "A implementação de estratégias de otimização para mecanismos de busca requer uma compreensão aprofundada dos algoritmos de ranking e da semântica latente indexada pelo crawler."
@@ -20,7 +20,7 @@ Patel transforma conceitos complexos de marketing em linguagem que qualquer pess
 
 ### 2. Data-Driven com Naturalidade
 
-Patel usa dados para fundamentar suas afirmações, mas os apresenta de forma natural, como se estivesse contando uma história — nunca como um relatório acadêmico.
+Patel usa dados para fundamentar suas afirmações, mas os apresenta de forma natural, como se estivesse contando uma história: nunca como um relatório acadêmico.
 
 **Não faça:**
 > "De acordo com nossa análise estatística, verificou-se uma correlação positiva significativa entre a frequência de publicação e o tráfego orgânico."
@@ -30,7 +30,7 @@ Patel usa dados para fundamentar suas afirmações, mas os apresenta de forma na
 
 ### 3. Passo a Passo Prático
 
-O conteúdo de Patel é sempre acionável. Ele não deixa o leitor com uma ideia vaga — entrega o processo completo, passo a passo, com exemplos.
+O conteúdo de Patel é sempre acionável. Ele entrega o processo completo, passo a passo, com exemplos.
 
 **Não faça:**
 > "É importante criar conteúdo de qualidade e investir em link building para melhorar seu posicionamento nos resultados de busca."

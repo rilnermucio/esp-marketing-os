@@ -1,5 +1,5 @@
 ---
-description: Workflow de projetos com pipeline declarativo, dispatch sequencial dos mos-* e approval gates entre stages. Subcomandos novo|list|status|avancar|aprovar|rejeitar.
+description: "Conduz um projeto de marketing em etapas, com aprovação entre elas (novo, status, avançar, aprovar, rejeitar). Use quando houver várias entregas encadeadas que precisam de revisão antes da próxima."
 argument-hint: "<subcomando> [args] (ex: novo \"Lançamento X\" --tipo lancamento)"
 ---
 

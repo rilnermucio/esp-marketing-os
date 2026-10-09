@@ -130,6 +130,36 @@
         "id": "fit",
         "description": "Qual roteiro respeita melhor duração, plataforma, público e tom?"
       }
+    ],
+    "social": [
+      {
+        "id": "hook",
+        "description": "Qual peça para a rolagem com mais força na plataforma e no formato declarados?"
+      },
+      {
+        "id": "formato",
+        "description": "Qual peça usa melhor o formato nativo (slides, stories, texto de LinkedIn), com uma ideia por unidade e progressão clara?"
+      },
+      {
+        "id": "valor",
+        "description": "Qual peça entrega mais valor concreto para o objetivo declarado (salvamento, conversa, alcance)?"
+      },
+      {
+        "id": "interacao",
+        "description": "Qual peça provoca interação mais natural (enquete, pergunta, caixa de perguntas) e alinhada ao objetivo?"
+      },
+      {
+        "id": "cta",
+        "description": "Qual peça pede uma única ação clara e adequada ao objetivo?"
+      },
+      {
+        "id": "naturalidade",
+        "description": "Qual peça soa mais humana em PT-BR e evita vícios recorrentes de texto gerado?"
+      },
+      {
+        "id": "fit",
+        "description": "Qual peça respeita melhor público, pilar do perfil, tom e plataforma do briefing?"
+      }
     ]
   },
   "profiles": {
@@ -177,6 +207,11 @@
       "agent": "mos-video",
       "quality_gate_type": "video",
       "criteria_set": "video"
+    },
+    "social": {
+      "agent": "mos-social",
+      "quality_gate_type": "social",
+      "criteria_set": "social"
     }
   }
 }

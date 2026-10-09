@@ -7,22 +7,22 @@ Joel Jota sintetizou sua experiência como técnico de basquete em um framework 
 
 ### Como funciona
 ```
-FASE 1 — DIAGNÓSTICO (Onde você está?):
-├── Avaliação honesta do nível atual (não o que você quer ser — o que você é)
+FASE 1: DIAGNÓSTICO (Onde você está?):
+├── Avaliação honesta do nível atual (o que você é hoje)
 ├── Identificação dos 3 maiores pontos de melhoria
 └── Baseline mensurável: O que exatamente você vai medir?
 
-FASE 2 — MÉTODO (O que você vai fazer?):
+FASE 2: MÉTODO (O que você vai fazer?):
 ├── Protocolo de treino: ações específicas com frequência e duração definidas
 ├── Progressão planejada: como o treino evolui semana a semana
 └── Indicadores de avanço: como você sabe que está progredindo?
 
-FASE 3 — CONSISTÊNCIA (Como você vai sustentar?):
+FASE 3: CONSISTÊNCIA (Como você vai sustentar?):
 ├── Protocolo antifraqueza: o que fazer quando não quer treinar
 ├── Sistema de accountability: quem ou o quê te mantém no trilho
 └── Recuperação: o que você faz quando escorrega
 
-FASE 4 — ALTA PERFORMANCE (Como você chega ao topo?):
+FASE 4: ALTA PERFORMANCE (Como você chega ao topo?):
 ├── Análise de jogo: revisão semanal do que funcionou e do que não funcionou
 ├── Ajuste fino: pequenas otimizações no protocolo existente
 └── Preparação mental: gestão da pressão e dos momentos decisivos
@@ -42,17 +42,17 @@ Joel identifica 3 elementos que, quando alinhados, criam o perfil de alta perfor
 
 ### Como funciona
 ```
-ELEMENTO 1 — MENTALIDADE (Como você pensa?):
+ELEMENTO 1: MENTALIDADE (Como você pensa?):
 ├── Crenças que impulsionam vs. crenças que limitam
 ├── Resposta ao erro: aprendizado ou punição?
 └── Visão de longo prazo vs. gratificação imediata
 
-ELEMENTO 2 — MÉTODO (Como você age?):
+ELEMENTO 2: MÉTODO (Como você age?):
 ├── Protocolo claro de ação (não depende de humor)
 ├── Sistema de feedback (como você sabe se está funcionando?)
 └── Adaptação baseada em dados, não em emoção
 
-ELEMENTO 3 — GESTÃO (Como você lidera?):
+ELEMENTO 3: GESTÃO (Como você lidera?):
 ├── Autogestão: energia, foco, recuperação
 ├── Gestão de relacionamentos: time, mentores, parceiros
 └── Gestão de recursos: tempo, dinheiro, atenção
@@ -80,22 +80,22 @@ O conceito central de Joel: liderança que combina alta exigência com cuidado g
 ```
 OS 4 PILARES DA GPA:
 
-PILAR 1 — CONHECIMENTO DO INDIVÍDUO:
+PILAR 1: CONHECIMENTO DO INDIVÍDUO:
 ├── Você sabe o que motiva cada membro do seu time?
 ├── Você conhece os desafios pessoais que afetam a performance?
 └── Você sabe o que cada um precisa para atingir seu potencial?
 
-PILAR 2 — EXIGÊNCIA COM CONTEXTO:
+PILAR 2: EXIGÊNCIA COM CONTEXTO:
 ├── A exigência é sobre o padrão, não sobre a pessoa
 ├── "Eu exijo de você porque acredito no seu potencial" (explicitado)
-└── A régua é alta para todos — sem favoritismo, sem punição pessoal
+└── A régua é alta para todos, sem favoritismo, sem punição pessoal
 
-PILAR 3 — FEEDBACK CONSTANTE:
+PILAR 3: FEEDBACK CONSTANTE:
 ├── Feedback imediato após o evento (não meses depois)
-├── Feedback específico (não "foi mal" — mas "aqui foi onde perdemos o controle")
+├── Feedback específico (em vez de "foi mal", "aqui foi onde perdemos o controle")
 └── Feedback bidirecional (o líder também pede feedback do liderado)
 
-PILAR 4 — CELEBRAÇÃO DE EVOLUÇÃO:
+PILAR 4: CELEBRAÇÃO DE EVOLUÇÃO:
 ├── Celebra o progresso, não apenas o resultado
 ├── Reconhece publicamente o esforço e a evolução
 └── Cria cultura onde tentar e errar é parte do crescimento
@@ -121,7 +121,7 @@ PRÉ-PROTOCOLO (antes de começar):
 └── Defina a consequência positiva: o que você ganha ao completar?
 
 SEMANA 1 (Dor):
-├── Expectativa: vai ser difícil — isso é normal e necessário
+├── Expectativa: vai ser difícil, isso é normal e necessário
 ├── Foco: apenas fazer, sem avaliar qualidade
 └── Suporte: diga a 3 pessoas o que está fazendo (accountability social)
 
@@ -133,10 +133,10 @@ SEMANA 2 (Resistência):
 SEMANA 3 (Virada):
 ├── Expectativa: vai começar a ficar mais fácil (mielinização)
 ├── Foco: manter a qualidade, não apenas a frequência
-└── Suporte: celebre o dia 21 — ritualize o acontecimento
+└── Suporte: celebre o dia 21, ritualize o acontecimento
 
 PÓS-21 DIAS:
-└── O hábito não está instalado — está em instalação
+└── O hábito ainda está em instalação
     Continue por mais 90 dias para consolidar
 ```
 
@@ -154,25 +154,25 @@ Joel representa visualmente como resultados são construídos de baixo para cima
 
 ### Como funciona
 ```
-NÍVEL 5 (topo) — RESULTADO:
+NÍVEL 5 (topo): RESULTADO:
 └── O que você quer: campeonato, receita, saúde, relação
 
-NÍVEL 4 — PERFORMANCE:
+NÍVEL 4: PERFORMANCE:
 └── A execução de alto nível que gera o resultado
 
-NÍVEL 3 — MÉTODO:
+NÍVEL 3: MÉTODO:
 └── O protocolo que sustenta a performance
 
-NÍVEL 2 — CONSISTÊNCIA:
+NÍVEL 2: CONSISTÊNCIA:
 └── A repetição sistemática do método
 
-NÍVEL 1 (base) — MENTALIDADE:
+NÍVEL 1 (base): MENTALIDADE:
 └── As crenças que tornam a consistência possível
 
 DIAGNÓSTICO:
 └── Por que você não está no nível que quer?
-    Não é falta de método (nível 3) — geralmente é inconsistência (nível 2)
-    Não é inconsistência — geralmente é mentalidade (nível 1)
+    Raramente falta método (nível 3); o mais comum é inconsistência (nível 2)
+    E a inconsistência costuma vir da mentalidade (nível 1)
     Vá à base. Conserte de baixo para cima.
 ```
 

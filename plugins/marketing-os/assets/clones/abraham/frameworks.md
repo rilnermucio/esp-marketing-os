@@ -41,7 +41,7 @@ O framework mais fundamental de Abraham. Todo negócio só pode crescer de três
 
 ## Framework 2: Estratégia de Preeminência
 
-Posicionar-se como o conselheiro de confiança — não como vendedor.
+Posicionar-se como o conselheiro de confiança: não como vendedor.
 
 ```
 ESPECTRO DE RELACIONAMENTO:
@@ -60,9 +60,9 @@ Pensa em:          Pensa em:
 
 ### Os Três Comportamentos de Preeminência
 
-1. **Fale as verdades difíceis** — Mesmo quando não é o que o cliente quer ouvir
-2. **Proteja o cliente de si mesmo** — Quando ele está prestes a cometer um erro
-3. **Indique concorrentes quando necessário** — Se outro produto serve melhor ao cliente
+1. **Fale as verdades difíceis**: Mesmo quando não é o que o cliente quer ouvir
+2. **Proteja o cliente de si mesmo**: Quando ele está prestes a cometer um erro
+3. **Indique concorrentes quando necessário**: Se outro produto serve melhor ao cliente
 
 ---
 

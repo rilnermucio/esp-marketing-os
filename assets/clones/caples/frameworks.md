@@ -4,7 +4,7 @@
 
 Baseada em décadas de testes, Caples classificou os tipos de headline por poder de conversão.
 
-### Tier 1 — Maior Poder de Conversão
+### Tier 1: Maior Poder de Conversão
 
 | Tipo | Estrutura | Exemplo |
 |------|-----------|---------|
@@ -12,7 +12,7 @@ Baseada em décadas de testes, Caples classificou os tipos de headline por poder
 | **Interesse próprio + especificidade** | Benefício + número | "Ganhe R$4.200 extras por mês com 2 horas diárias" |
 | **Notícia com benefício** | Novo + resultado | "Novo método elimina dívidas sem cortar estilo de vida" |
 
-### Tier 2 — Bom Poder de Conversão
+### Tier 2: Bom Poder de Conversão
 
 | Tipo | Estrutura | Exemplo |
 |------|-----------|---------|
@@ -20,7 +20,7 @@ Baseada em décadas de testes, Caples classificou os tipos de headline por poder
 | **Pergunta com apelo** | Pergunta que o leitor quer responder | "Você comete esses erros ao investir?" |
 | **Curiosidade com benefício** | Gancho + resultado | "O que os ricos sabem sobre impostos que você não sabe" |
 
-### Tier 3 — Uso com Cautela
+### Tier 3: Uso com Cautela
 
 | Tipo | Estrutura | Exemplo |
 |------|-----------|---------|
@@ -30,7 +30,7 @@ Baseada em décadas de testes, Caples classificou os tipos de headline por poder
 
 ---
 
-## 2. Framework "They Laughed" — Storytelling de Transformação
+## 2. Framework "They Laughed": Storytelling de Transformação
 
 O estrutura do anúncio mais famoso da história da publicidade.
 
@@ -76,11 +76,11 @@ Caples testava sistematicamente diferentes versões. Aqui está o processo.
 
 ### Variáveis para Testar
 
-1. **Tipo de apelo** — Interesse próprio vs curiosidade vs novidade
-2. **Especificidade** — Com número vs sem número
-3. **Perspectiva** — "Você" vs "Como" vs afirmação
-4. **Urgência** — Com prazo vs sem prazo
-5. **Negativo vs positivo** — "Pare de perder" vs "Comece a ganhar"
+1. **Tipo de apelo**: Interesse próprio vs curiosidade vs novidade
+2. **Especificidade**: Com número vs sem número
+3. **Perspectiva**: "Você" vs "Como" vs afirmação
+4. **Urgência**: Com prazo vs sem prazo
+5. **Negativo vs positivo**: "Pare de perder" vs "Comece a ganhar"
 
 ### Processo de Teste
 
@@ -107,10 +107,10 @@ Passo 6: Teste a vencedora contra novas variações
 1. AMPLIAR A PROMESSA
    Retome o benefício da headline e aprofunde
 
-2. PROVA 1 — DADOS
+2. PROVA 1: DADOS
    Números, pesquisa, estatísticas específicas
 
-3. PROVA 2 — DEPOIMENTO
+3. PROVA 2: DEPOIMENTO
    Pessoa real, resultado real, cidade real
 
 4. COMO FUNCIONA

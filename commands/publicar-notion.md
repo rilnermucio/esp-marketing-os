@@ -1,5 +1,5 @@
 ---
-description: Publish editorial calendars, content plans, or generated content directly to your Notion workspace via Notion MCP. Routes to creation commands first when content does not yet exist.
+description: "Publica calendários, planos de conteúdo ou peças no Notion. Use quando pedirem para enviar ou organizar conteúdo no Notion."
 argument-hint: "<what to publish, e.g., 'editorial calendar for March' or 'content plan for product launch'>"
 ---
 
@@ -82,7 +82,7 @@ Status: [Publicado | Erro]
 
 ## Quality Gates (antes de publicar)
 
-Aplicar gates globais do `skills/marketing-os/SKILL.md` no conteúdo **antes** de mandar pro Notion:
+Aplicar gates globais do `${CLAUDE_PLUGIN_ROOT}/skills/marketing-os/SKILL.md` no conteúdo **antes** de mandar pro Notion:
 - Sem `—`, sem "brutal", sem CAPS gratuito
 - Sem aspas em roteiros/falas
 - Máximo 1-2 emojis

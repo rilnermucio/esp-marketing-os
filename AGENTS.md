@@ -6,7 +6,7 @@ This file provides guidance to AI coding agents (Claude Code, Codex CLI, Cursor,
 
 ## O que é este repositório
 
-Marketing OS é um **plugin do ChatGPT Work, Claude Code e Codex**. A distribuição Claude usa `.claude-plugin/`; o pacote universal para ChatGPT Work e Codex usa `.codex-plugin/`. O sistema distribui 21 especialistas em marketing digital, mais 48 slash commands no Claude Code, knowledge bases, voice clones e scripts Python. O conteúdo é majoritariamente PT-BR e otimizado para o mercado brasileiro.
+Marketing OS é um **plugin do ChatGPT Work, Claude Code e Codex**. A distribuição Claude usa `.claude-plugin/`; o pacote universal para ChatGPT Work e Codex usa `.codex-plugin/`. O sistema distribui 21 especialistas em marketing digital, mais 53 slash commands no Claude Code, knowledge bases, voice clones e scripts Python. O conteúdo é majoritariamente PT-BR e otimizado para o mercado brasileiro.
 
 Arquivos manifesto: `.claude-plugin/plugin.json` e `.claude-plugin/marketplace.json` (listagem de marketplace). O entrypoint da skill é `skills/marketing-os/SKILL.md`.
 
@@ -16,6 +16,10 @@ Arquivos manifesto: `.claude-plugin/plugin.json` e `.claude-plugin/marketplace.j
 # Test suite Tier 1 (estática, rápida — valida manifesto, SKILL.md, subagents, simlinks, separação workspace)
 python -m pytest scripts/tests/ -v -m "not smoke"
 
+# Smoke de instalação real (Claude Code instalado, sessão fora do repo, agents em Haiku; ~2 min)
+# Obrigatório ao mexer em hooks, caminhos, nomes de agent, memória ou manifests (ADR-0005)
+MOS_SMOKE=1 python -m pytest scripts/tests/test_install_smoke.py -m smoke -v
+
 # Rodar um único teste
 python -m pytest scripts/tests/test_plugin_manifest.py -v
 python -m pytest scripts/tests/test_subagents.py::test_subagent_files_exist -v
@@ -24,7 +28,7 @@ python -m pytest scripts/tests/test_subagents.py::test_subagent_files_exist -v
 python scripts/validate_agents.py
 python scripts/validate_agents.py --strict   # falha em warnings também
 
-# Bootstrap memory opt-in (cria .claude/agent-memory/mos-*/MEMORY.md no projeto atual)
+# Bootstrap memory opt-in (cria .claude/agent-memory/marketing-os-mos-*/MEMORY.md no projeto atual)
 python3 scripts/init_agent_memory.py            # todos os agents com memory: project
 python3 scripts/init_agent_memory.py mos-copy   # apenas um agent
 
@@ -48,18 +52,18 @@ Processo canônico de manutenção do plugin, para humanos e agentes de IA. Ante
 
 A arquitetura crítica de entender antes de mexer em qualquer agent:
 
-- **Tier 1** — `agents/mos-*.md` (21 arquivos, ~250 linhas cada). System prompts enxutos com YAML frontmatter (`name`, `description`, `tools`, `model`, `color`, `hooks`, opcional `memory`). Carregados automaticamente pelo Claude Code quando a sessão abre. Contêm dispatch protocol, output schema e quality gates.
+- **Tier 1** — `agents/mos-*.md` (21 arquivos, ~250 linhas cada). System prompts enxutos com YAML frontmatter (`name`, `description`, `tools`, `model`, `color`, `memory`). Hooks não entram no frontmatter: a plataforma ignora esse campo em agent de plugin (ADR-0005). Carregados automaticamente pelo Claude Code quando a sessão abre. Contêm dispatch protocol, output schema e quality gates.
 - **Tier 2** — `subagents/*-agent.md` (21 arquivos, profundidade variável de ~400 a ~6,5 mil linhas). Knowledge base profunda: frameworks, cases, tabelas, exemplos. Lida sob demanda via `Read` pelos agents tier-1 quando precisam de profundidade. Os mais densos hoje: `copy-agent.md` (~5,3 mil linhas, inclui PARTE II-C Big Idea + Value Stack) e `funnel-agent.md` (~3,5 mil linhas, inclui Webinar Funnel 3.4, Página de Aplicação BOFU 3.5 e Anti-Avatar 4.6).
 
 Isso mantém contextos leves, carrega profundidade só quando precisa, e permite evoluir knowledge sem mexer no dispatch.
 
 Todos os 21 agents declaram `memory: project` no frontmatter (completado no nivelamento de jul/2026). Ver "Memory opt-in (per-projeto)" abaixo.
 
-A skill em `skills/marketing-os/SKILL.md` é um **orquestrador**. Ela usa `Agent(subagent_type: "mos-*")` no Claude Code e mapeia o mesmo dispatch para leitura Tier 1/Tier 2 no ChatGPT Work e no Codex. Os symlinks dentro de `skills/marketing-os/` (`assets`, `references`, `scripts`, `subagents`, `workflows`) apontam para os diretórios da raiz.
+A skill em `skills/marketing-os/SKILL.md` é um **orquestrador**. Ela usa `Agent(subagent_type: "marketing-os:mos-*")` no Claude Code e mapeia o mesmo dispatch para leitura Tier 1/Tier 2 no ChatGPT Work e no Codex. Os symlinks dentro de `skills/marketing-os/` (`assets`, `references`, `scripts`, `subagents`, `workflows`) apontam para os diretórios da raiz.
 
 ## Protocolo de dispatch (regra fundamental)
 
-Para qualquer pedido de produção de marketing (copy, SEO, post, anúncio, vídeo, etc.), **NÃO execute inline**. Despache o subagent via `Agent(subagent_type: "mos-*", prompt: ...)`.
+Para qualquer pedido de produção de marketing (copy, SEO, post, anúncio, vídeo, etc.), **NÃO execute inline**. Despache o subagent via `Agent(subagent_type: "marketing-os:mos-*", prompt: ...)`. Instalado, o agent de plugin só responde pelo nome qualificado; o nome curto falha com "Agent type not found".
 
 | Situação | Ação |
 |----------|------|
@@ -71,7 +75,9 @@ Para qualquer pedido de produção de marketing (copy, SEO, post, anúncio, víd
 
 Mapeamento completo briefing → agent em `skills/marketing-os/SKILL.md` (seção "Mapa de Dispatch").
 
-Hoje 44 dos 48 slash commands em `commands/` dispatcham subagents. Os 2 commands premium na v6.8.0+ são `/auditoria` (multi-modal básico, ver `docs/AUDIT-CONFIG.md`) e `/auditoria-pro` (landing agency-grade com radar/screenshots/roadmap, ver `docs/AUDITORIA-PRO.md`). Os 4 sem dispatch são intencionais: `/publicar-notion` (utility do Notion MCP), `/campanha` (índice dos 6 sub-commands `/campanha-{preset}`), `/projeto` (workflow orchestrator com dispatch dinâmico por etapa) e `/datas-sazonais` (utilitário de dados do calendário sazonal BR, ver `scripts/seasonal_calendar_br.py`). Existe ainda `/mo` (meta-orquestrador) que recebe briefing aberto e roteia automaticamente. O teste `scripts/tests/test_commands_dispatch.py` trava regressão de cobertura: se você adicionar um command novo de produção, ele precisa dispatchar ou o teste falha.
+Command que despacha um único agent, com todo o input vindo do pedido e dos arquivos do projeto e sem aprovação no meio, pode usar `context: fork` com `agent: marketing-os:mos-<agent>` e `background: false` no frontmatter. Aí a própria plataforma roda o corpo do command dentro do agent, sem depender do orquestrador. O agent em fork não vê a conversa, então pedido incompleto devolve perguntas. Piloto: `/gerar-imagem`. Critérios e contratos na ADR-0007.
+
+Hoje 49 dos 53 slash commands em `commands/` dispatcham subagents. Os 2 commands premium na v6.8.0+ são `/auditoria` (multi-modal básico, ver `docs/AUDIT-CONFIG.md`) e `/auditoria-pro` (landing agency-grade com radar/screenshots/roadmap, ver `docs/AUDITORIA-PRO.md`). Os 4 sem dispatch são intencionais: `/publicar-notion` (utility do Notion MCP), `/campanha` (índice dos 6 sub-commands `/campanha-{preset}`), `/projeto` (workflow orchestrator com dispatch dinâmico por etapa) e `/datas-sazonais` (utilitário de dados do calendário sazonal BR, ver `scripts/seasonal_calendar_br.py`). Existe ainda `/mo` (meta-orquestrador) que recebe briefing aberto e roteia automaticamente. O teste `scripts/tests/test_commands_dispatch.py` trava regressão de cobertura: se você adicionar um command novo de produção, ele precisa dispatchar ou o teste falha.
 
 ## Quality Gates Globais (aplicar SEMPRE antes de entregar)
 
@@ -101,7 +107,9 @@ Conteúdos de redes sociais (Reels, posts, carrosséis, stories) **devem** inclu
 
 Os scripts Python em `scripts/` (CLI unificado em `scripts/mos.py`) são invocados pelos agents Tier 1 com acesso a `Bash` para tarefas determinísticas: `seo_analyzer.py`, `hashtag_generator.py`, `hook_generator.py`, `reels_script_generator.py`, `carousel_structure_generator.py`, `caption_generator.py`, `trend_tracker.py`, `quality_gate.py`, `headline_scorer.py`, `competitor_analyzer.py`, etc.
 
-Hook de quality gate: `scripts/hooks/quality_gate_hook.py` é invocado via `PreToolUse` matcher `Write|Edit|MultiEdit` em vários agents Tier 1 (ver frontmatter em `agents/mos-*.md`) e via `SubagentStop` global em `hooks/hooks.json` para validar a resposta final dos `mos-*`. O núcleo puro `evaluate_event` atende as duas superfícies e limita a correção final a uma tentativa para evitar loop.
+Hook de quality gate: `scripts/hooks/quality_gate_hook.py` é registrado no nível do plugin, em `hooks/hooks.json`: `PreToolUse` (`Write|Edit|MultiEdit`) e `SubagentStop`. Ele só age em eventos de agents do Marketing OS (`marketing-os:mos-*`, ou `mos-*` em instalação local); escrita da sessão principal do usuário passa direto. O núcleo puro `evaluate_event` atende as duas superfícies e limita a correção final a uma tentativa para evitar loop. Bloqueio sai em stderr com exit 2; nas escritas, avisos saem em JSON `additionalContext`, o único canal de exit 0 que o modelo vê. Na resposta final, só o bloqueio fala com o agent e pede a entrega completa; aviso solto reabriria o subagent e trocaria a entrega por uma nota de correção (ADR-0008). `MOS_HOOK_LOG=<arquivo>` registra cada evento para diagnóstico.
+
+Caminhos em runtime (ADR-0005): instalado, o plugin roda com a sessão no projeto do usuário. Agents, commands e SKILL.md referenciam recursos do plugin como `${CLAUDE_PLUGIN_ROOT}/subagents/...` (comandos de terminal com o caminho entre aspas), e scripts gravam estado do usuário em `workspace/` do diretório da sessão (`scripts/workspace_paths.py`). O guard `scripts/tests/test_plugin_runtime_paths.py` trava a regressão, e o build do pacote universal desfaz essas adaptações para ChatGPT Work e Codex.
 
 **Apify (opt-in)**: 6 scripts opcionais (`apify_client.py` + 5 scrapers: `apify_serp.py`, `apify_instagram.py`, `apify_meta_ads.py`, `apify_tiktok.py`, `apify_youtube.py`) habilitam scraping estruturado de SERP do Google, Instagram, Meta Ad Library, TikTok e YouTube. Usados pelos agents `mos-seo`, `mos-research`, `mos-ads` e `mos-video` quando a variável `APIFY_TOKEN` está disponível. Sem token, comportamento idêntico ao anterior (fallback automático para `WebSearch`). Setup, custo estimado, mapeamento Actor↔agent e FAQ em `docs/APIFY-INTEGRATION.md`.
 
@@ -113,11 +121,11 @@ Hook de quality gate: `scripts/hooks/quality_gate_hook.py` é invocado via `PreT
 
 ## Memory opt-in (per-projeto)
 
-Agents com `memory: project` no frontmatter persistem aprendizado por projeto em `.claude/agent-memory/mos-*/MEMORY.md` (path canônico, padronizado na v6.5.0). O bootstrap é explícito: o usuário roda `python3 scripts/init_agent_memory.py` no projeto pra criar os arquivos. Sem o bootstrap, a instrução do agent fica condicional (só lê se o diretório existir), evitando ruído em projetos novos.
+Agents com `memory: project` no frontmatter persistem aprendizado por projeto em `.claude/agent-memory/marketing-os-mos-*/MEMORY.md`. Esse é o diretório nativo que o Claude Code usa para agent de plugin (`<plugin>-<agent>`): a plataforma injeta o início do `MEMORY.md` no contexto do agent. Até 2026-09 o plugin usava `mos-*/`, que a plataforma não lê em agent de plugin; `init_agent_memory.py` e `memory_writer.py` migram esse legado sem perda (ADR-0006). O bootstrap continua explícito e idempotente: `python3 scripts/init_agent_memory.py` cria os arquivos e migra o legado.
 
 Regras pra mexer:
 
-1. Pra adicionar memory a um agent novo: declarar `memory: project` no frontmatter e referenciar `.claude/agent-memory/<nome-do-agent>/MEMORY.md` em modo condicional no system prompt.
+1. Pra adicionar memory a um agent novo: declarar `memory: project` no frontmatter, incluir o agent em `AGENTS_WITH_MEMORY` (`scripts/init_agent_memory.py`) e referenciar `.claude/agent-memory/marketing-os-<nome-do-agent>/MEMORY.md` no system prompt. Aprendizado se grava só via `memory_writer.py` (schema e limites anti-poluição).
 2. Não escrever no diretório de memory dentro do plugin install dir. É sempre relativo ao CWD do projeto do usuário.
 3. `init_agent_memory.py` é idempotente: roda quantas vezes quiser, não sobrescreve conteúdo existente.
 
@@ -133,7 +141,11 @@ Antes de mexer em `.claude-plugin/plugin.json` ou `.claude-plugin/marketplace.js
 | Field `category` em `plugin.json` | Singular `"category": "marketing"`, não plural `"categories": [...]`. Plural é input inválido | Desktop |
 | Field `skills` em `plugin.json` | **Não declarar** se usa folder default `skills/`. O explicit `["skills/marketing-os"]` é rejeitado como "Invalid input"; default discovery cobre | Desktop |
 | `marketplace.json` metadata block | Use top-level `description` e `version` (NÃO `metadata.{description,version}`). Metadata block é só backward-compat e Desktop pode rejeitar | Desktop |
-| Hook command em agent frontmatter | **MUST** usar `${CLAUDE_PLUGIN_ROOT}/scripts/hooks/...`. Caminho relativo `scripts/hooks/...` falha em qualquer CWD ≠ raiz do plugin (CWD do hook é do user, não do plugin install dir) | Code + Desktop em runtime |
+| Hook em frontmatter de agent de plugin | **Ignorado pela plataforma** (junto com `mcpServers` e `permissionMode`). Registre hooks em `hooks/hooks.json` com `"${CLAUDE_PLUGIN_ROOT}/..."` entre aspas | Code + Desktop em runtime |
+| Nome de agent de plugin | Chega qualificado: `marketing-os:mos-copy` no dispatch (`subagent_type`) e no `agent_type` dos hooks. Nome curto falha com "Agent type not found" | Code + Desktop em runtime |
+| Caminho relativo a recurso do plugin | Só resolve com a sessão dentro do repo. Instalado, use `${CLAUDE_PLUGIN_ROOT}/...` (substituído em agents, commands e skills) | Code + Desktop em runtime |
+| Marketplace de conta claude.ai | Marketplace adicionado na conta sincroniza para `~/.claude/plugins/synced/` e pode congelar; o app desktop carrega essa cópia. Diagnóstico: `python3 scripts/mos.py install doctor` | Desktop |
+| Memória nativa de agent de plugin | Diretório `.claude/agent-memory/<plugin>-<agent>/` (ex: `marketing-os-mos-copy`), não o nome curto | Code + Desktop em runtime |
 | Marketplace name bug | Anthropic cacheia state por nome de marketplace server-side. Se seu marketplace teve syncs broken, rename pra bypass cache (ex: `marketing-os-marketplace` → `mos-marketplace`) | Desktop |
 | Reserved names | `claude-code-marketplace`, `claude-code-plugins`, `claude-plugins-official`, `anthropic-marketplace`, `anthropic-plugins`, `agent-skills` — não usar | Validator |
 | kebab-case strict | Plugin/marketplace `name` deve ser kebab-case. Outras formas funcionam no Code mas Claude.ai sync rejeita | Sync layer |

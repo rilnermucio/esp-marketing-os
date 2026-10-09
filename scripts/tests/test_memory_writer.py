@@ -22,13 +22,12 @@ import memory_writer as mw
 def tmp_cwd(tmp_path, monkeypatch):
     monkeypatch.chdir(tmp_path)
     monkeypatch.setattr(iam, "MEMORY_ROOT", Path(".claude/agent-memory"))
-    monkeypatch.setattr(mw, "MEMORY_ROOT", Path(".claude/agent-memory"))
     return tmp_path
 
 
 def _bootstrap_agent(tmp_cwd, agent: str) -> Path:
     iam.init_memory(force=False, check_only=False)
-    return tmp_cwd / ".claude" / "agent-memory" / agent / "MEMORY.md"
+    return tmp_cwd / ".claude" / "agent-memory" / f"marketing-os-{agent}" / "MEMORY.md"
 
 
 class TestAppendLearning:
@@ -109,9 +108,17 @@ class TestAppendLearning:
             agent, "voz", "Tom direto converteu melhor", "fonte", data="2026-07-04"
         )
 
-        expected = tmp_cwd / ".claude" / "agent-memory" / agent / "MEMORY.md"
+        expected = (
+            tmp_cwd / ".claude" / "agent-memory" / f"marketing-os-{agent}" / "MEMORY.md"
+        )
         assert expected.exists()
-        assert (Path.cwd() / ".claude" / "agent-memory" / agent / "MEMORY.md").exists()
+        assert (
+            Path.cwd()
+            / ".claude"
+            / "agent-memory"
+            / f"marketing-os-{agent}"
+            / "MEMORY.md"
+        ).exists()
 
 
 class TestCli:
@@ -154,3 +161,34 @@ class TestCli:
             ],
         )
         assert mw.main() == 1
+
+
+class TestNativeMemoryDir:
+    """Memória de agent de plugin mora em marketing-os-<agent> (ADR-0006)."""
+
+    def test_aceita_nome_qualificado(self, tmp_cwd):
+        assert mw.append_learning(
+            "marketing-os:mos-copy", "pattern", "Hook curto retém mais", "teste"
+        )
+        target = (
+            tmp_cwd / ".claude" / "agent-memory" / "marketing-os-mos-copy" / "MEMORY.md"
+        )
+        assert "Hook curto retém mais" in target.read_text(encoding="utf-8")
+
+    def test_migra_legado_na_primeira_escrita(self, tmp_cwd):
+        legacy = tmp_cwd / ".claude" / "agent-memory" / "mos-seo"
+        legacy.mkdir(parents=True)
+        (legacy / "MEMORY.md").write_text(
+            "# mos-seo\n\n## Aprendizados\n\n[2026-08-01] [resultado] Title curto ganhou CTR (fonte: gsc)\n",
+            encoding="utf-8",
+        )
+        assert mw.append_learning(
+            "mos-seo", "pattern", "Intent comercial pede tabela", "teste"
+        )
+        native = (
+            tmp_cwd / ".claude" / "agent-memory" / "marketing-os-mos-seo" / "MEMORY.md"
+        )
+        content = native.read_text(encoding="utf-8")
+        assert "Title curto ganhou CTR" in content
+        assert "Intent comercial pede tabela" in content
+        assert not legacy.exists()

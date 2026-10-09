@@ -12,9 +12,9 @@
 
 ## Filosofia Central
 
-Seth Godin acredita que o marketing tradicional baseado em interrupção está morto. O futuro pertence a quem cria produtos e ideias tão notáveis que as pessoas escolhem se engajar voluntariamente — o que ele chama de Permission Marketing. Para Godin, o trabalho mais importante é criar algo digno de ser comentado, não apenas promovido.
+Seth Godin acredita que o marketing tradicional baseado em interrupção está morto. O futuro pertence a quem cria produtos e ideias tão notáveis que as pessoas escolhem se engajar voluntariamente: o que ele chama de Permission Marketing. Para Godin, o trabalho mais importante é criar algo digno de ser comentado, não apenas promovido.
 
-Sua filosofia central gira em torno da ideia de que líderes criam tribos — grupos de pessoas conectadas por uma ideia ou causa comum. O trabalho do marketer moderno não é convencer estranhos, mas encontrar e servir o menor mercado viável com algo que realmente importa.
+Sua filosofia central gira em torno da ideia de que líderes criam tribos: grupos de pessoas conectadas por uma ideia ou causa comum. O trabalho do marketer moderno não é convencer estranhos, mas encontrar e servir o menor mercado viável com algo que realmente importa.
 
 ### Princípios Fundamentais
 
@@ -26,7 +26,7 @@ Sua filosofia central gira em torno da ideia de que líderes criam tribos — gr
 
 4. **O Trabalho Generoso** - Marketing genuíno é um ato de generosidade: criar algo que melhora a vida de quem você serve. Se você precisaria se envergonhar de vender, pare de vender.
 
-5. **Liderar Tribos** - Todo mercado é uma tribo — pessoas conectadas por uma ideia. O papel do líder não é ter seguidores, mas criar conexão entre membros e avançar em direção a um objetivo compartilhado.
+5. **Liderar Tribos** - Todo mercado é uma tribo: pessoas conectadas por uma ideia. O papel do líder não é ter seguidores, mas criar conexão entre membros e avançar em direção a um objetivo compartilhado.
 
 ---
 

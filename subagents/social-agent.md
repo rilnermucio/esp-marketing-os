@@ -30,14 +30,15 @@ Subagente especializado em criação, otimização e viralização de conteúdo 
 12. [Calendário de Publicação](#calendário-de-publicação)
 13. [Métricas e Analytics Avançados](#métricas-e-analytics-avançados)
 14. [WhatsApp Business e Messaging](#whatsapp-business-e-messaging)
-15. [Gestão de Crise](#gestão-de-crise-nas-redes)
-16. [Community Management](#community-management)
-17. [AI Features 2026 (Meta AI, TikTok Symphony, Instagram Notes)](#ai-features-2026)
-18. [CONAR e Disclosure de Publi (BR)](#conar-e-disclosure-de-publi-br)
-19. [Content Fatigue e Creative Refresh](#content-fatigue-e-creative-refresh)
-20. [Voice Clones para Social (34 disponíveis)](#voice-clones-para-social)
-21. [Apify Trend Research](#apify-trend-research)
-22. [Continuous Social Optimization Protocol](#continuous-social-optimization-protocol)
+15. [Kwai e WhatsApp: Status e Canais](#kwai-e-whatsapp-status-e-canais)
+16. [Gestão de Crise](#gestão-de-crise-nas-redes)
+17. [Community Management](#community-management)
+18. [AI Features 2026 (Meta AI, TikTok Symphony, Instagram Notes)](#ai-features-2026)
+19. [CONAR e Disclosure de Publi (BR)](#conar-e-disclosure-de-publi-br)
+20. [Content Fatigue e Creative Refresh](#content-fatigue-e-creative-refresh)
+21. [Voice Clones para Social (34 disponíveis)](#voice-clones-para-social)
+22. [Apify Trend Research](#apify-trend-research)
+23. [Continuous Social Optimization Protocol](#continuous-social-optimization-protocol)
 
 ---
 
@@ -752,7 +753,9 @@ FORMATOS QUE VIRALIZAM:
    "Salvei este post porque ninguém fala sobre [tema]"
    ├── 10-15 slides
    ├── Uma ideia por slide
-   └── CTA para salvar/seguir
+   ├── CTA para salvar/seguir
+   └── Especificação oficial: PDF, PPT, PPTX, DOC ou DOCX, até 100 MB e
+       300 páginas, título obrigatório, páginas do PDF no mesmo tamanho
 ```
 
 ### Twitter/X
@@ -1265,6 +1268,20 @@ DEZEMBRO
 2. **Respeite a cultura** - Cada plataforma tem códigos
 3. **Formatos nativos** - Performam melhor
 4. **Timing diferente** - Espaçar publicações
+
+### Reaproveitamento 1→N: de uma fonte pilar para várias peças
+
+Método usado pelo `/reaproveitar`. A fonte pilar é uma live, aula, podcast, vídeo longo ou artigo.
+
+1. **Mapa da fonte antes de escrever**: tese central em uma frase, 5 a 10 ideias-chave, falas fortes, números e provas, histórias. Em vídeo ou áudio, anote o tempo de cada trecho para virar corte.
+2. **Uma ideia por peça**: a tese é o fio condutor; o ângulo e o gancho mudam a cada peça.
+3. **Formato nativo** por plataforma (tabela acima), nunca a mesma peça colada em todas.
+4. **Ordem de publicação**: peças curtas primeiro validam os ganchos; a peça longa ou a oferta recolhe o interesse. Em lançamento de conteúdo longo, a ordem se inverte e as curtas repercutem a longa.
+5. **Voz e prova preservadas**: use as falas e os números da fonte, com a origem; nada de inventar dado para a peça derivada.
+6. **Aberturas diferentes**: a mesma frase de abertura em todas as peças canibaliza atenção e denuncia conteúdo em série.
+7. **Um CTA por peça**, apontando para a fonte ou para a oferta.
+
+Matriz de saída: ideia-chave, formato, plataforma, gancho, CTA e data sugerida.
 
 ## Métricas e Analytics Avançados
 
@@ -1954,17 +1971,17 @@ ABORDAGEM ERRADA:
 #### Templates de DM por Plataforma
 
 ```
-INSTAGRAM DM — Início de conversa:
+INSTAGRAM DM (início de conversa):
 "[Nome], adorei seu post sobre [tema específico].
 Especialmente a parte sobre [detalhe].
 Você já experimentou [insight relacionado]?"
 
-LINKEDIN DM — Networking:
+LINKEDIN DM (networking):
 "[Nome], acompanho seu conteúdo sobre [tema] há um tempo.
 Seu post sobre [post específico] foi muito alinhado com
 o que estou trabalhando em [área]. Adoraria trocar ideias."
 
-TWITTER DM — Colaboração:
+TWITTER DM (colaboração):
 "Oi [Nome]! Vi sua thread sobre [tema] e achei brilhante.
 Estou trabalhando em algo complementar.
 Faria sentido uma conversa rápida?"
@@ -2013,6 +2030,110 @@ FÓRMULAS:
 Taxa de conversão = Vendas via WhatsApp / Total de conversas × 100
 Custo por conversa = Investimento em tráfego / Conversas iniciadas
 ROI WhatsApp = (Receita - Custo) / Custo × 100
+```
+
+---
+
+## Kwai e WhatsApp: Status e Canais
+
+> Verificado em 2026-09-28 na Central de Ajuda do Kwai, no FAQ do WhatsApp e na documentação da Meta. Onde a fonte oficial não existe, o texto diz. Limites que mudam ficam em `references/platform-facts.md`.
+
+### Kwai
+
+```
+PÚBLICO (dados de mercado, não oficiais)
+├── Cerca de 60 milhões de usuários ativos por mês no Brasil, segundo
+│   executivos do Kwai (dez/2025)
+├── Classe C aparece como predominante em todas as fontes consultadas
+├── Humor é o interesse nº 1 (56%, Opinion Box 2024, n=1.008)
+└── Percentuais de gênero, idade e região divergem entre fontes: não cite
+
+FORMATOS ORGÂNICOS (Central de Ajuda)
+├── Vídeo gravado no app ou enviado do álbum (vídeo ou foto)
+├── Dueto, live (exige 500 seguidores) e "famílias" de criadores
+├── Mininovelas TeleKwai: episódios verticais de cerca de 2 min
+└── Duração máxima de vídeo: nenhuma página oficial informa. Não afirme número;
+    produza em 9:16
+
+MONETIZAÇÃO DO CRIADOR (Central de Ajuda)
+├── Programa de Receita de Anúncios: nível 6 ou mais de 500 fãs, conteúdo
+│   original, mais de 12 publicações em 30 dias, média de 1.000 views ou
+│   10.000 acumuladas em 30 dias, maioridade; abertura gradual
+├── Subsídio UGC: por convite, vídeo original com o criador aparecendo
+└── Kwai Shop: e-commerce só no Brasil; venda por vídeo e live em teste
+
+COMO PRODUZIR (prática de mercado)
+├── Criador real aparecendo, gravação de celular, humor e cotidiano
+├── Séries em capítulos curtos: gancho no início, chamada para o próximo episódio
+└── Parte do uso do app é recompensada com moedas: acompanhe conversão,
+    não só views
+```
+
+Anúncios no Kwai (Kwai for Business): ver a knowledge base de ads.
+
+### WhatsApp Status
+
+```
+FORMATO (FAQ do WhatsApp)
+├── Vídeo de até 90 s por atualização (liberado em 2025)
+├── Texto, foto, vídeo e GIF somem em 24 h
+└── Público padrão: todos os contatos; dá para restringir ("Meus contatos",
+    "exceto", "compartilhar somente com") e mencionar pessoas e grupos
+
+ORGÂNICO (prática de mercado)
+├── Sequências curtas e autossuficientes: oferta do dia, bastidor, prova social
+├── Uma ação por sequência (responder, pedir o catálogo, salvar o número)
+└── Peça para o cliente salvar o número da loja: o Status aparece para
+    contatos que têm o número salvo
+```
+
+Anúncio no Status (o Brasil está na lista oficial de países): é comprado no Gerenciador de Anúncios junto com Instagram Stories. Detalhes de compra e restrições na knowledge base de ads.
+
+### Canais do WhatsApp
+
+```
+FATOS (FAQ do WhatsApp)
+├── No Brasil desde 13/09/2023
+├── Aceitam texto, links, fotos, vídeos, enquetes, testes, GIFs, figurinhas e voz
+├── PDF não é aceito
+├── Conteúdo público e sem criptografia de ponta a ponta
+├── Enquetes e testes: públicos; admins veem nome e data de quem votou;
+│   enquete com foto aceita até 12 opções; enquete não pode ser editada
+├── Reações: uma por atualização; o admin pode limitar os emojis
+├── Admins: o dono convida até 16; todos precisam de verificação em duas
+│   etapas e veem o número do dono (use número corporativo)
+├── Métricas (crescimento, alcance, seguidores): só a partir de 100
+│   seguidores, com atraso de até 1 semana
+├── Assinaturas pagas: liberação gradual para canais selecionados e fora do
+│   app WhatsApp Business; não planeje receita com isso no Brasil ainda
+└── Canal promovido: anúncio que impulsiona o canal no diretório
+
+PRÁTICA (mercado)
+├── Canal movido a enquete: o voto decide a próxima oferta; depois publique
+│   o resultado com o link de compra
+├── Divulgue o link do canal no Status e na bio
+└── Catálogo por link, porque o canal não aceita PDF
+```
+
+### Custo de mensagem no WhatsApp Business Platform
+
+```
+MODELO (documentação da Meta, desde 01/07/2025)
+├── Cobrança por template entregue
+├── Marketing: sempre cobrado
+├── Utilidade: grátis dentro da janela de 24 h aberta pelo cliente
+├── Serviço (resposta ao cliente): grátis
+└── Clique em anúncio para WhatsApp abre 72 h sem cobrança
+
+BRASIL (tabela oficial vigente desde 01/07/2026; confira o CSV antes de orçar)
+├── Marketing: US$ 0,0625 (R$ 0,3217) por mensagem entregue
+├── Utilidade e autenticação: US$ 0,0068 (R$ 0,0350)
+└── Faturamento em reais para empresas elegíveis desde 01/07/2026
+
+PRÁTICA
+├── Avisos amplos no Canal e no Status, que não custam por mensagem
+├── Template de marketing só para listas segmentadas com opt-in
+└── Follow-up dentro das 72 h abertas pelo anúncio
 ```
 
 ---
@@ -2565,11 +2686,12 @@ LONGER FORM TIKTOK (2025+)
 ├── 30-60s é o novo sweet spot (vs <15s antigo)
 └── Long-form só pra creators estabelecidos
 
-TIKTOK SHOP (BR 2024+)
-├── Live commerce explodiu no BR
-├── Conteúdo com produto + link compra direto = boost
-├── "Shoppable Reels" virou prioridade
-└── Cuidado: produto sem afinidade autêntica = penalizado
+TIKTOK SHOP (Brasil desde 08/05/2025)
+├── Lançado com compra em vídeos e lives, vitrine no perfil e programa de afiliados
+├── Primeiro ano (mai/2025 a mai/2026, newsroom do TikTok): GMV médio diário 102x,
+│   criadores afiliados ativos 46x, lives diárias 20x
+├── Conteúdo com produto e link de compra direto tende a ganhar distribuição
+└── Cuidado: produto sem afinidade autêntica com o criador perde credibilidade
 ```
 
 ### LinkedIn (2024-2026)
@@ -2661,36 +2783,43 @@ GROK INTEGRATION (2024+)
 
 ## Threads (Meta) - Plataforma Emergente
 
-Threads (Meta, lançado 2023) tem 200M+ usuários ativos em 2026 e características próprias.
+Threads (Meta) chegou ao Brasil no lançamento, em 05/07/2023. Para número de usuários, confirme o dado atual via WebSearch antes de citar. Fatos de formato verificados em 2026-09-28 (registro em `references/platform-facts.md`):
 
 ### Características Únicas
 
 ```
-DIFERENÇAS DO X/TWITTER:
+DIFERENÇAS DO X/TWITTER
 
-FEED ALGORITHIC POR DEFAULT
-├── Não cronológico (vs X)
-├── Algoritmo recomenda mesmo perfis não seguidos
-├── Discovery > seguidores
-└── Implicação: conteúdo viral pode bombar mesmo com 0 seguidores
+FEED ALGORÍTMICO POR PADRÃO
+├── Não cronológico
+├── Recomenda perfis que a pessoa não segue
+├── Descoberta pesa mais que seguidores
+└── Conteúdo pode viralizar mesmo em perfil pequeno
 
-INTEGRAÇÃO INSTAGRAM
-├── Conta Threads herda de Instagram
-├── Conteúdo cross-postável (mas não recomendado)
-├── Discovery via "see similar accounts"
-└── Audience overlap com IG
+INTEGRAÇÃO COM INSTAGRAM
+├── Conta Threads nasce do Instagram
+├── Conteúdo cross-postável (adapte o tom antes)
+└── Público com sobreposição ao do Instagram
 
-LIMITES DE FORMATO
-├── 500 chars por post (mais que X 280)
-├── Imagens, vídeos curtos (até 5min)
-├── Sem hashtags ainda (2025+)
-└── Sem DMs (foco em conversação pública)
+FORMATO (verificado em 2026-09-28)
+├── 500 caracteres por post
+├── Anexo de texto de até 10.000 caracteres (desde 04/09/2025);
+│   post com anexo pode levar link no corpo
+├── Fotos, vídeos e links
+├── Tag de tópico: uma por post (posts com tópico tendem a ter mais views)
+├── Mensagens diretas desde 01/07/2025
+├── Comunidades desde out/2025
+└── Até 5 links na bio (mai/2025)
+
+ANÚNCIOS
+└── Liberados para todos os usuários e mercados, inclusive Brasil, a partir
+    da semana de 26/01/2026, com entrega gradual. Formatos: imagem, vídeo,
+    carrossel, 4:5, catálogo Advantage+ e app
 
 VIBE EDITORIAL
-├── Mais "conversational" que X polêmico
-├── Long-form text-first (vs IG visual-first)
-├── Audiência mais jovem que LinkedIn, mais reflexiva que X
-└── Funciona pra: opinião, perguntas, builds in public
+├── Mais conversacional que o X
+├── Texto em primeiro lugar (o Instagram é visual primeiro)
+└── Funciona para: opinião, perguntas, bastidores e construção em público
 ```
 
 ### Hooks que Funcionam em Threads
@@ -2835,27 +2964,27 @@ THUMBNAIL VARIANTS
 ```
 NOVO WORKFLOW:
 
-1. IDEAÇÃO (10min) — humano
+1. IDEAÇÃO (10min): humano
    ├── Define ângulo, gancho, audiência
    └── Critério: "vale a pena postar?"
 
-2. RASCUNHO (5min) — AI
+2. RASCUNHO (5min): AI
    ├── Caption assist, hook variants, structure
    ├── Output: 3-5 versões bruta
    └── Não publicar, só draft
 
-3. CURADORIA (10min) — humano
+3. CURADORIA (10min): humano
    ├── Escolhe melhor draft
    ├── Adiciona voz autêntica
    ├── Verifica fact-checking
    └── Aprova após Quality Gates
 
-4. PRODUÇÃO (15min) — AI + humano
+4. PRODUÇÃO (15min): AI + humano
    ├── AI: edição base, b-roll, música
    ├── Humano: refinamento, brand consistency
    └── Output: post pronto
 
-5. POSTAGEM (5min) — humano
+5. POSTAGEM (5min): humano
    ├── Timing certo
    ├── Hashtags revisados
    ├── Disclosure se publi

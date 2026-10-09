@@ -42,26 +42,26 @@ APLICAÇÕES:
 ## Framework 2: O Diagnóstico da Hesitação
 
 ### O que é
-Mel ensina que a hesitação não é preguiça nem falta de força de vontade — é um mecanismo de proteção do cérebro que pode ser identificado e interrompido.
+Mel ensina que a hesitação é um mecanismo de proteção do cérebro, que pode ser identificado e interrompido, e tem pouco a ver com preguiça ou falta de força de vontade.
 
 ### Como funciona
 ```
 OS 3 TIPOS DE HESITAÇÃO:
 
-TIPO 1 — HESITAÇÃO DE MEDO:
+TIPO 1: HESITAÇÃO DE MEDO:
 ├── Sinal: sensação física de desconforto antes da ação
 ├── Gatilho: qualquer coisa nova, julgamento possível, rejeição possível
 ├── Resposta do cérebro: "Isso é ameaça, não faça"
 └── Interrupção: 5-4-3-2-1 + o reconhecimento "isso é medo, não é perigo real"
 
-TIPO 2 — HESITAÇÃO DE HÁBITO:
+TIPO 2: HESITAÇÃO DE HÁBITO:
 ├── Sinal: você sabe que deveria fazer mas simplesmente não faz
 ├── Gatilho: comportamento automático instalado (checar redes sociais em vez de trabalhar)
 ├── Resposta do cérebro: segue o caminho de menor resistência neural
 └── Interrupção: 5-4-3-2-1 + substituição pelo comportamento desejado
 
-TIPO 3 — HESITAÇÃO DE DECISÃO:
-├── Sinal: análise paralisa — você tem informação mas não decide
+TIPO 3: HESITAÇÃO DE DECISÃO:
+├── Sinal: análise paralisa, você tem informação mas não decide
 ├── Gatilho: medo de tomar decisão errada
 ├── Resposta do cérebro: busca mais informação como substituta da decisão
 └── Interrupção: 5-4-3-2-1 + decisão intencional com a informação disponível
@@ -100,7 +100,7 @@ O MECANISMO:
 POR QUE TEM RESISTÊNCIA:
 ├── A maioria das pessoas usa o espelho para criticar o que vê
 ├── O gesto de high five parece ridículo (o cérebro resiste ao ridículo)
-└── Autocompaixão foi condicionada como fraqueza — tem que ser descondicionada
+└── Autocompaixão foi condicionada como fraqueza: tem que ser descondicionada
 
 O QUE ACONTECE EM 5 SEMANAS:
 ├── Semana 1-2: Resistência e estranhamento
@@ -125,17 +125,17 @@ Mel sintetiza a ciência por trás de quando e por que as pessoas agem, para cri
 A EQUAÇÃO:
 └── AÇÃO = Impulso × Energia × Permissão
 
-VARIÁVEL 1 — IMPULSO:
+VARIÁVEL 1: IMPULSO:
 ├── O que é: A vontade inicial de fazer algo
 ├── Como aumentar: Visualize o resultado positivo da ação completada
 └── Como a Regra dos 5 Segundos ajuda: Captura o impulso antes que esfrie
 
-VARIÁVEL 2 — ENERGIA:
+VARIÁVEL 2: ENERGIA:
 ├── O que é: Capacidade física e mental de executar
 ├── Como aumentar: Sono, alimentação, movimento físico diário
 └── Erro comum: Tentar criar hábitos quando a energia está no mínimo
 
-VARIÁVEL 3 — PERMISSÃO:
+VARIÁVEL 3: PERMISSÃO:
 ├── O que é: A crença de que você pode e merece agir
 ├── Como aumentar: High 5 Habit, evidências de ações passadas bem-sucedidas
 └── O maior bloqueio: Crenças de "não sou capaz" ou "não mereço isso"
@@ -157,7 +157,7 @@ DIAGNÓSTICO:
 ## Framework 5: A Estrutura de Mudança de Hábito de Mel
 
 ### O que é
-Mel ensina que mudar hábito não é sobre força de vontade — é sobre entender o gatilho e criar interrupção intencional no momento certo.
+Mel ensina que mudar hábito depende de entender o gatilho e criar interrupção intencional no momento certo.
 
 ### Como funciona
 ```

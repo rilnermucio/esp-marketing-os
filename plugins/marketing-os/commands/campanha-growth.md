@@ -1,5 +1,5 @@
 ---
-description: Preset de growth. Dispatcha mos-research + mos-analytics em paralelo, depois mos-ab-testing + mos-growth + mos-copy. Foco em experimentação acelerada e crescimento não-linear via ICE Score e AARRR. Clone primário ellis.
+description: "Campanha de growth por experimentos: hipóteses priorizadas por ICE ao longo do funil AARRR, testes e métricas. Use quando o objetivo for crescer por experimentação contínua."
 argument-hint: "<funil/produto> [--clone=ellis|chen] [--north-star=...]"
 ---
 
@@ -93,4 +93,4 @@ Aplicar gates globais do `skills/marketing-os/SKILL.md`:
 
 ## Memory note
 
-Os agents `mos-copy`, `mos-ab-testing` têm memory project em `.claude/agent-memory/mos-<agent>/`. Sempre mencione no prompt que considere memory existente para evitar repetir experimentos já testados e para construir cumulativamente sobre aprendizados anteriores.
+Os agents `mos-copy`, `mos-ab-testing` têm memory project em `.claude/agent-memory/marketing-os-mos-<agent>/`. Sempre mencione no prompt que considere memory existente para evitar repetir experimentos já testados e para construir cumulativamente sobre aprendizados anteriores.

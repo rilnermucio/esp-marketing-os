@@ -1,11 +1,11 @@
 ---
-description: Triagem e rascunhos de resposta para comentários/DMs no tom da marca. Dispatches mos-community; publicação só com aprovação humana item a item.
+description: "Tria comentários, DMs e avaliações públicas (Reclame Aqui, Google, marketplaces) e escreve rascunhos de resposta no tom da marca, escalando os sensíveis; nada é publicado sem aprovação. Use quando pedirem para responder comentários, directs, haters ou avaliações."
 argument-hint: "<comentários colados ou peça (reels/post) + contexto de marca/tom, ex: 'último reels de skincare, tom acolhedor'>"
 ---
 
 # /responder-comentarios: Fila de Rascunhos de Comunidade (Dispatch-Based)
 
-Classifica comentários e DMs, redige rascunhos no tom da marca e entrega fila pra aprovação orquestrando `Agent(subagent_type: "mos-community")`. **Nada é publicado automaticamente.**
+Classifica comentários e DMs, redige rascunhos no tom da marca e entrega fila pra aprovação orquestrando `Agent(subagent_type: "marketing-os:mos-community")`. **Nada é publicado automaticamente.**
 
 ## Required inputs (ask if missing)
 
@@ -28,7 +28,15 @@ Se nenhuma fonte: pedir ao usuário colar os comentários ou informar o link/ID 
 ## Dispatch Simples
 
 ```
-Agent(subagent_type: "mos-community", prompt: "Monte a fila de rascunhos de resposta. Plataforma: [plataforma]. Peça: [post/reels/DM]. Comentários: [lista ou resumo da coleta MCP]. Tom de voz: [guidelines/memory]. Políticas: [o que pode/não pode prometer]. Classifique cada interação (elogio, dúvida, objeção, reclamação, troll/hate, lead quente, spam). Para itens sensíveis, entregue 2-3 variações de tom e red team. Entregue no Output Schema: fila com comentário original → classificação → rascunho → ação recomendada. Modo: RASCUNHO ONLY. Nada publicado sem aprovação humana. Aplicar quality gates globais.")
+Agent(subagent_type: "marketing-os:mos-community", prompt: "Monte a fila de rascunhos de resposta. Plataforma: [plataforma]. Peça: [post/reels/DM]. Comentários: [lista ou resumo da coleta MCP]. Tom de voz: [guidelines/memory]. Políticas: [o que pode/não pode prometer]. Classifique cada interação (elogio, dúvida, objeção, reclamação, troll/hate, lead quente, spam). Para itens sensíveis, entregue 2-3 variações de tom e red team. Entregue no Output Schema: fila com comentário original → classificação → rascunho → ação recomendada. Modo: RASCUNHO ONLY. Nada publicado sem aprovação humana. Aplicar quality gates globais.")
+```
+
+## Modo avaliações (Reclame Aqui, Google, marketplaces)
+
+Quando o material for avaliação pública (reclamação no Reclame Aqui, avaliação no Perfil da Empresa no Google, avaliação ou pergunta em marketplace), use o mesmo dispatch com este complemento no prompt:
+
+```
+Agent(subagent_type: "marketing-os:mos-community", prompt: "MODO AVALIAÇÕES. Canal: [Reclame Aqui | Google | Mercado Livre | Shopee | Amazon]. Siga a PARTE X de ${CLAUDE_PLUGIN_ROOT}/subagents/community-agent.md. Para cada avaliação: classifique (negativa resolvível, negativa com escalação obrigatória, falsa ou ofensiva, positiva), escreva o rascunho público na estrutura da PARTE X e, quando couber, a mensagem para o canal privado. Nunca inclua dado pessoal na resposta pública nem ofereça vantagem por mudança de nota. AVALIAÇÕES: [texto ou export]")
 ```
 
 ## Publicação opcional (após aprovação humana)
@@ -68,7 +76,7 @@ Entregue ao usuário:
 
 ## Quality Gates (antes de entregar)
 
-Aplicar gates globais do `skills/marketing-os/SKILL.md` + gates do mos-community:
+Aplicar gates globais do `${CLAUDE_PLUGIN_ROOT}/skills/marketing-os/SKILL.md` + gates do mos-community:
 - **Aprovação humana obrigatória** antes de qualquer publicação
 - Declarar modo (rascunho vs publicado) explicitamente
 - Sem promessas de resultado/reembolso não autorizadas

@@ -15,7 +15,7 @@ Na prática, o que observo em 90% das empresas que chegam até mim é o seguinte
 
 O resultado previsível: CPC alto, taxa de conversão baixa, verba desperdiçada.
 
-**O P1 — Pesquisa — é a fundação de tudo**
+**O P1, Pesquisa, é a fundação de tudo**
 
 Antes de produzir qualquer conteúdo, antes de investir R$1 em tráfego pago, você precisa mapear o comportamento digital do seu cliente ideal.
 
@@ -47,7 +47,7 @@ Se você está investindo em tráfego pago sem ter executado o P1, comece por a�
 
 ---
 
-## Exemplo 2: Post LinkedIn — Diagnóstico de Erro Comum
+## Exemplo 2: Post LinkedIn (Diagnóstico de Erro Comum)
 
 **Tema:** Taxa de conversão baixa: onde está o problema
 **Formato:** Post educativo com diagnóstico
@@ -79,7 +79,7 @@ Qual é o seu gargalo atual?
 
 ---
 
-## Exemplo 3: Email de Nutrição — Conceito dos 8Ps
+## Exemplo 3: Email de Nutrição (Conceito dos 8Ps)
 
 **Assunto:** "Por que sequência importa mais que estratégia"
 
@@ -105,7 +105,7 @@ Na prática, o erro mais caro que observo é pular do P1 direto para o P5.
 
 Resultado: tráfego pago sem destinação clara, CAC alto, taxa de conversão baixa.
 
-Na próxima edição, vou detalhar o P2 — Planejamento — e mostrar como estruturar um plano estratégico que conecta os demais Ps.
+Na próxima edição, vou detalhar o P2, Planejamento, e mostrar como estruturar um plano estratégico que conecta os demais Ps.
 
 Até lá.
 
@@ -120,9 +120,9 @@ Conrado Adolpho
 
 ---
 
-"Olá, seja bem-vindo/a à Aula 3 do módulo de P1 — Pesquisa.
+"Olá, seja bem-vindo/a à Aula 3 do módulo de P1: Pesquisa.
 
-Nesta aula, vamos tratar especificamente da pesquisa de palavras-chave adaptada à realidade do consumidor brasileiro — que tem comportamentos de busca diferentes do americano, e por isso os benchmarks internacionais precisam de adaptação.
+Nesta aula, vamos tratar especificamente da pesquisa de palavras-chave adaptada à realidade do consumidor brasileiro, que tem comportamentos de busca diferentes do americano, e por isso os benchmarks internacionais precisam de adaptação.
 
 Ao final desta aula, você vai saber:
 
@@ -130,7 +130,7 @@ Ao final desta aula, você vai saber:
 2. Como usar o Google Trends para identificar sazonalidade no seu mercado
 3. Como filtrar palavras-chave por volume e intenção para priorizar as de maior retorno
 
-Antes de começar, preciso deixar claro um ponto fundamental: a pesquisa de palavras-chave não é sobre encontrar as palavras mais buscadas — é sobre encontrar as palavras que o seu cliente usa quando está mais próximo de tomar uma decisão.
+Antes de começar, preciso deixar claro um ponto fundamental: a pesquisa de palavras-chave serve para encontrar as palavras que o seu cliente usa quando está mais próximo de tomar uma decisão, e o volume de busca vem depois disso.
 
 Essa distinção vai mudar como você estrutura tanto o conteúdo orgânico quanto os anúncios pagos.
 
@@ -138,7 +138,7 @@ Vamos começar."
 
 ---
 
-## Exemplo 5: Post Instagram — Adaptação ao Mercado Brasileiro
+## Exemplo 5: Post Instagram (Adaptação ao Mercado Brasileiro)
 
 **Tema:** Por que copiar estratégias americanas não funciona no Brasil
 **Formato:** Post educativo direto
@@ -151,15 +151,15 @@ E todo mês vejo o mesmo resultado: campanhas bonitas que não convertem.
 
 O consumidor brasileiro tem comportamentos específicos:
 
-1. **WhatsApp como canal principal** — o brasileiro fecha negócio pelo WhatsApp. Não integrar isso ao funil é ignorar o maior canal de conversão do país.
+1. **WhatsApp como canal principal**: o brasileiro fecha negócio pelo WhatsApp. Não integrar isso ao funil é ignorar o maior canal de conversão do país.
 
-2. **Decisão de compra emocional, justificada com racional** — o brasileiro compra pela relação, não pela oferta. A comunicação precisa criar conexão antes de apresentar produto.
+2. **Decisão de compra emocional, justificada com racional**: o brasileiro compra pela relação, não pela oferta. A comunicação precisa criar conexão antes de apresentar produto.
 
-3. **Desconfiança alta com marcas desconhecidas** — prova social e autoridade são críticos aqui. Depoimento em vídeo de alguém parecido com o comprador converte mais que qualquer copy.
+3. **Desconfiança alta com marcas desconhecidas**: prova social e autoridade são críticos aqui. Depoimento em vídeo de alguém parecido com o comprador converte mais que qualquer copy.
 
-4. **Parcelamento como driver de conversão** — em mercados de ticket médio-alto, mostrar a parcela antes do preço total pode dobrar a conversão.
+4. **Parcelamento como driver de conversão**: em mercados de ticket médio-alto, mostrar a parcela antes do preço total pode dobrar a conversão.
 
-Veja bem: adaptar não é copiar — é entender que cada mercado tem sua lógica.
+Veja bem: adaptar é entender que cada mercado tem sua lógica.
 
 O que você está fazendo diferente para o mercado brasileiro?
 

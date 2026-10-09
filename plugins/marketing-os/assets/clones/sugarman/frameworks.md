@@ -6,7 +6,7 @@ O conceito central de toda a filosofia de Sugarman sobre copy.
 
 ### Princípio
 
-> "Sua copy deve ser tão envolvente que, uma vez que o leitor começa, ele é puxado para baixo como em uma rampa — incapaz de parar antes de chegar ao final."
+> "Sua copy deve ser tão envolvente que, uma vez que o leitor começa, ele é puxado para baixo como em uma rampa: incapaz de parar antes de chegar ao final."
 
 ### Estrutura da Rampa
 
@@ -36,7 +36,7 @@ CTA
 | **Momentum é sagrado** | Nunca interrompa o fluxo com elementos que distraem |
 | **Primeira frase = mais importante** | Se o leitor parar aqui, tudo está perdido |
 | **Parágrafos curtos** | Criam velocidade visual de leitura |
-| **Abra loops, feche depois** | Gere curiosidade, depois satisfaça — mas só após mais conteúdo |
+| **Abra loops, feche depois** | Gere curiosidade, depois satisfaça, mas só após mais conteúdo |
 
 ---
 
@@ -44,35 +44,35 @@ CTA
 
 Sugarman mapeou 30 gatilhos que influenciam a decisão de compra. Os mais usados na copy:
 
-### Tier 1 — Fundamentais
+### Tier 1: Fundamentais
 
 | Trigger | Como aplicar |
 |---------|-------------|
 | **Envolvimento** | Faça o leitor imaginar usando o produto antes de comprá-lo |
 | **Senso de pertencimento** | "Você faz parte de um grupo seleto que entende X" |
 | **Curiosidade** | Revele informações parcialmente, crie loops abertos |
-| **Urgência** | Prazo real ou quantidade limitada — nunca falso |
+| **Urgência** | Prazo real ou quantidade limitada: nunca falso |
 | **Escassez** | Estoque limitado, edição especial, vagas restritas |
 
-### Tier 2 — Credibilidade
+### Tier 2: Credibilidade
 
 | Trigger | Como aplicar |
 |---------|-------------|
-| **Especificidade** | Números exatos, datas, locais — detalhe = verdade |
+| **Especificidade** | Números exatos, datas, locais: detalhe = verdade |
 | **Autoridade** | Expertise, anos de experiência, reconhecimentos reais |
 | **Prova social** | Depoimentos com nome, cidade, resultado específico |
 | **Credibilidade** | Falhar primeiro, admitir limitações, ser honesto |
-| **Educação** | Ensine algo genuíno — quem aprende confia |
+| **Educação** | Ensine algo genuíno: quem aprende confia |
 
-### Tier 3 — Conversão
+### Tier 3: Conversão
 
 | Trigger | Como aplicar |
 |---------|-------------|
-| **Ganância** | "Você economiza X, ganha Y, evita Z" — matemática clara |
+| **Ganância** | "Você economiza X, ganha Y, evita Z": matemática clara |
 | **Medo** | Consequência de NÃO agir (use com ética) |
 | **Exclusividade** | "Apenas para quem..." |
 | **Simplicidade** | Tornar a ação de compra parecida com algo fácil |
-| **Garantia** | Remove o risco — deixa a decisão "sem perigo" |
+| **Garantia** | Remove o risco: deixa a decisão "sem perigo" |
 
 ---
 
@@ -112,11 +112,11 @@ Antes de apresentar o produto e o preço, Sugarman cria um estado mental favorá
 
 ### Os 5 Elementos do Ambiente
 
-1. **Confiança** — "Estou aqui para te ajudar, não para te vender"
-2. **Credibilidade** — "Tenho autoridade real sobre esse assunto"
-3. **Qualidade** — "Este produto foi cuidadosamente testado"
-4. **Valor** — "O que você recebe vale muito mais do que o preço"
-5. **Relacionamento** — "Você e eu somos parecidos"
+1. **Confiança**: "Estou aqui para te ajudar, não para te vender"
+2. **Credibilidade**: "Tenho autoridade real sobre esse assunto"
+3. **Qualidade**: "Este produto foi cuidadosamente testado"
+4. **Valor**: "O que você recebe vale muito mais do que o preço"
+5. **Relacionamento**: "Você e eu somos parecidos"
 
 ### Como Construir o Ambiente na Copy
 
@@ -153,10 +153,10 @@ Quando você admite uma limitação antes que o leitor descubra, você:
 
 ### As 4 Funções da Headline
 
-1. **Selecionar o leitor certo** — Não precisa atrair todos, só os qualificados
-2. **Criar curiosidade** — Abrir um loop que só fecha ao ler o texto
-3. **Prometer um benefício específico** — Não vago, não genérico
-4. **Iniciar a rampa** — A primeira palavra da descida
+1. **Selecionar o leitor certo**: Não precisa atrair todos, só os qualificados
+2. **Criar curiosidade**: Abrir um loop que só fecha ao ler o texto
+3. **Prometer um benefício específico**: Não vago, não genérico
+4. **Iniciar a rampa**: A primeira palavra da descida
 
 ### Tipos de Headline que Sugarman Usava
 
@@ -173,7 +173,7 @@ Quando você admite uma limitação antes que o leitor descubra, você:
 
 | Framework | Use quando... |
 |-----------|---------------|
-| Rampa Escorregadia | Em qualquer copy — é o princípio base de tudo |
+| Rampa Escorregadia | Em qualquer copy: é o princípio base de tudo |
 | 30 Triggers | Escolha 3-5 relevantes para cada peça específica |
 | Feature → Benefício → Significado | Ao descrever características do produto |
 | Ambiente de Compra | Antes de revelar o preço em sales pages longas |

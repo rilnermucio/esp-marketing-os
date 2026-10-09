@@ -1,5 +1,5 @@
 ---
-description: Diagnose, score and rewrite existing copy. Dispatches mos-copy com diagnóstico (PARTE XVIII), Copy Score System (PARTE XV) e reescritas com hipóteses A/B.
+description: "Diagnostica, pontua e reescreve uma peça que já existe (headline, post, anúncio, email ou sequência, página, roteiro, carrossel, artigo), com hipóteses A/B. Use quando pedirem para melhorar, revisar ou avaliar uma peça pronta."
 argument-hint: "<copy colada, path de arquivo, ou o que otimizar (ex: 'headline da minha landing')>"
 ---
 
@@ -17,6 +17,17 @@ Recebe copy existente (colada na conversa ou em arquivo), diagnostica por que el
 4. **Sintoma** (opcional, mas muda o diagnóstico): "CTR baixo", "abre mas não clica", "ninguém responde". Sem sintoma, o diagnóstico é estrutural
 5. **Público + oferta** (opcional): contexto que aumenta a precisão da reescrita
 6. **Métricas atuais** (opcional): baseline para calibrar hipóteses A/B
+
+## Qual especialista revisa
+
+| Peça | Dispatch |
+|---|---|
+| Headline, post curto, anúncio, CTA, bio, microcopy | `mos-copy` (simples, abaixo) |
+| Roteiro de vídeo, Reels ou VSL | `mos-copy` + `mos-video` em paralelo (retenção, hook por segundo, ritmo) |
+| Carrossel | `mos-copy` + `mos-social` em paralelo (estrutura e ritmo entre slides) |
+| Sequência de emails | `mos-copy` + `mos-email` em paralelo (fluxo, timing, subject lines) |
+| Artigo de blog | `mos-copy` + `mos-seo` em paralelo (intenção, on-page, headline) |
+| Landing ou página de vendas | `mos-copy` + `mos-funnel` em paralelo (estrutura de conversão) |
 
 ## Dispatch
 
@@ -38,6 +49,22 @@ Processo obrigatório:
 
 Aplicar quality gates globais (sem travessão, sem 'brutal', sem antítese negação/afirmação, acentuação PT-BR, máx 1 emoji).")
 ```
+
+### Peças com dono de formato (mesma mensagem, em paralelo com o mos-copy)
+
+```
+Agent(subagent_type: "mos-video", prompt: "Revise a estrutura deste roteiro [formato e duração] sem reescrever a copy: hook dos primeiros segundos, pontos prováveis de queda de retenção, ritmo, transições e CTA. Entregue problemas em ordem de impacto e ajustes por trecho. ROTEIRO: [roteiro]")
+
+Agent(subagent_type: "mos-social", prompt: "Revise a estrutura deste carrossel [plataforma]: capa, número de slides, ritmo de retenção entre slides, slide de CTA e legenda. Entregue problemas em ordem de impacto e a estrutura corrigida. CARROSSEL: [slides]")
+
+Agent(subagent_type: "mos-email", prompt: "Revise esta sequência de [N] emails: objetivo de cada email, ordem, intervalo, subject lines e preheaders, e onde a sequência perde o leitor. SEQUÊNCIA: [emails]")
+
+Agent(subagent_type: "mos-seo", prompt: "Revise este artigo para a keyword [keyword]: aderência à intenção de busca, estrutura de headings, title e meta description, links internos e lacunas frente aos concorrentes. ARTIGO: [texto]")
+
+Agent(subagent_type: "mos-funnel", prompt: "Revise a estrutura de conversão desta página [tipo e ticket]: ordem das seções, prova, oferta, objeções, CTAs e atrito. PÁGINA: [conteúdo]")
+```
+
+Na consolidação, junte o diagnóstico de estrutura do especialista com as reescritas do `mos-copy`; se os dois apontarem a mesma causa, ela vira a primeira prioridade.
 
 **Escalações** (apenas se necessário):
 - Peça de venda high-stakes (sales page, VSL, lançamento) sem research de público: dispatchar `Agent(subagent_type: "mos-research")` ANTES, porque o pre-flight do mos-copy exige research pra esse tipo de peça

@@ -1,4 +1,4 @@
-# Quality Gate — Checklist de Qualidade para Conteúdo
+# Quality Gate: Checklist de Qualidade para Conteúdo
 
 ## Visão Geral
 

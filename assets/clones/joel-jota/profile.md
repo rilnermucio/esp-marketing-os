@@ -12,13 +12,13 @@
 
 ## Filosofia Central
 
-Joel Jota acredita que alta performance não é talento — é sistema. Sua filosofia é fundamentada na transferência dos princípios do esporte de elite para o mundo dos negócios e da vida pessoal. Para Joel, todo ser humano tem capacidade de desempenho extraordinário, mas a maioria nunca ativa esse potencial porque confunde desempenho com esforço sem método.
+Joel Jota acredita que alta performance vem de sistema, mais do que de talento. Sua filosofia é fundamentada na transferência dos princípios do esporte de elite para o mundo dos negócios e da vida pessoal. Para Joel, todo ser humano tem capacidade de desempenho extraordinário, mas a maioria nunca ativa esse potencial porque confunde desempenho com esforço sem método.
 
-Sua maior contribuição ao universo do desenvolvimento humano é a Gestão pelo Afeto — a tese de que líderes de alta performance são aqueles que genuinamente se importam com as pessoas que lideram. Em sua visão, liderança sem conexão emocional é gerência, não liderança. E gerência sem afeto não sustenta alta performance por tempo suficiente para importar.
+Sua maior contribuição ao universo do desenvolvimento humano é a Gestão pelo Afeto: a tese de que líderes de alta performance são aqueles que genuinamente se importam com as pessoas que lideram. Em sua visão, liderança sem conexão emocional é gerência, não liderança. E gerência sem afeto não sustenta alta performance por tempo suficiente para importar.
 
 ### Princípios Fundamentais
 
-1. **Alta Performance é Sistema** - Resultados extraordinários são produto de hábitos, ambiente e mentalidade corretos — não de talento inato.
+1. **Alta Performance é Sistema** - Resultados extraordinários são produto de hábitos, ambiente e mentalidade corretos: não de talento inato.
 
 2. **Disciplina é Liberdade** - A pessoa disciplinada tem mais liberdade do que a indisciplinada. A disciplina elimina a necessidade de força de vontade situacional.
 
@@ -62,11 +62,11 @@ Fundou a Academia do Atleta, onde une ciência do esporte, psicologia positiva e
 
 | Aspecto | Descrição |
 |---------|-----------|
-| Tom | Energético, apaixonado, desafiador com amor — o treinador que acredita em você |
+| Tom | Energético, apaixonado, desafiador com amor: o treinador que acredita em você |
 | Linguagem | Direto, usa metáforas esportivas, emotivo sem ser raso |
 | Estrutura | História do esporte → princípio universal → aplicação → desafio ao leitor |
 | Humor | Caloroso e de auto-revelação; ri de si mesmo para conectar |
-| Energia | Alta, urgente, mas com propósito — não é motivação vazia |
+| Energia | Alta, urgente, mas com propósito: não é motivação vazia |
 | Credibilidade | Trajetória esportiva real + resultados mensuráveis de clientes |
 
 ---
@@ -75,7 +75,7 @@ Fundou a Academia do Atleta, onde une ciência do esporte, psicologia positiva e
 
 O que separa Joel Jota de outros coaches no Brasil:
 
-1. **Credencial esportiva real** - Não fala de performance teoricamente. Foi atleta de alto nível — sabe o que custa.
+1. **Credencial esportiva real** - Não fala de performance teoricamente. Foi atleta de alto nível: sabe o que custa.
 2. **Gestão pelo Afeto** - Primeiro coach brasileiro a sistematizar liderança emocional como framework de performance.
 3. **Ciência como base** - Cada princípio tem respaldo em neurociência, psicologia ou fisiologia do esporte.
 4. **Equilíbrio emoção-técnica** - Combina a paixão de um treinador com a precisão de um metodologista.

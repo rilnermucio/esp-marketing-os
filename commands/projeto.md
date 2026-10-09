@@ -1,5 +1,5 @@
 ---
-description: Workflow de projetos com pipeline declarativo, dispatch sequencial dos mos-* e approval gates entre stages. Subcomandos novo|list|status|avancar|aprovar|rejeitar.
+description: "Conduz um projeto de marketing em etapas, com aprovação entre elas (novo, status, avançar, aprovar, rejeitar). Use quando houver várias entregas encadeadas que precisam de revisão antes da próxima."
 argument-hint: "<subcomando> [args] (ex: novo \"Lançamento X\" --tipo lancamento)"
 ---
 
@@ -23,7 +23,7 @@ Gerencia projetos de marketing como pipeline declarativo, com handoffs entre sub
 Roda direto via Bash, sem dispatch:
 
 ```
-Bash("python scripts/project_manager.py <subcomando> [args]")
+Bash("python "${CLAUDE_PLUGIN_ROOT}/scripts/project_manager.py" <subcomando> [args]")
 ```
 
 Mostra a saída do script direto pro usuário (já vem human-readable).
@@ -32,13 +32,13 @@ Mostra a saída do script direto pro usuário (já vem human-readable).
 
 Esse subcomando NÃO é determinístico. Despacha um subagent. Fluxo:
 
-1. **Lê estado:** `Bash("python scripts/project_manager.py status <slug>")` retorna pipeline, stage atual, agente daquele stage.
-2. **Cria run pendente + folder:** `Bash("python scripts/project_manager.py avancar <slug>")` registra `run_NNN` em `runs.jsonl` com `status: pending` e cria `<NN>-<stage_id>/` automaticamente. O output do comando inclui o `folder` relativo.
+1. **Lê estado:** `Bash("python "${CLAUDE_PLUGIN_ROOT}/scripts/project_manager.py" status <slug>")` retorna pipeline, stage atual, agente daquele stage.
+2. **Cria run pendente + folder:** `Bash("python "${CLAUDE_PLUGIN_ROOT}/scripts/project_manager.py" avancar <slug>")` registra `run_NNN` em `runs.jsonl` com `status: pending` e cria `<NN>-<stage_id>/` automaticamente. O output do comando inclui o `folder` relativo.
 3. **Monta contexto:** lê `workspace/projects/<slug>/project.md` (briefing) + outputs anteriores das pastas `<NN>-<stage>/` se existirem. Se a iteração for >1, lê o feedback de `decisions.md` e adiciona ao prompt.
 4. **Despacha agente** com instrução explícita de output completo:
 
 ```
-Agent(subagent_type: "mos-<x>", prompt: """
+Agent(subagent_type: "marketing-os:mos-<x>", prompt: """
 <briefing + outputs anteriores + feedback se houver>
 
 INSTRUÇÃO DE OUTPUT (obrigatório):
@@ -50,14 +50,14 @@ mas o output detalhado vem PRIMEIRO e completo.
 ```
 
 5. **Salva output:** o resultado da resposta vai pra `workspace/projects/<slug>/<NN>-<stage_id>/draft-vN.md` (NN é a posição do stage no pipeline; N é o número da iteração).
-6. **Completa o run:** `Bash("python scripts/project_manager.py completar <slug> --output <NN>-<stage_id>/draft-vN.md")`. Esse comando atualiza o run pra `status: pending_approval`, adiciona `completed_at` e `output`. Se o stage tem `approval: skip`, **auto-aprova e avança**; senão pausa pra revisão humana.
+6. **Completa o run:** `Bash("python "${CLAUDE_PLUGIN_ROOT}/scripts/project_manager.py" completar <slug> --output <NN>-<stage_id>/draft-vN.md")`. Esse comando atualiza o run pra `status: pending_approval`, adiciona `completed_at` e `output`. Se o stage tem `approval: skip`, **auto-aprova e avança**; senão pausa pra revisão humana.
 7. **Mostra ao usuário:** preview do output + instrução "use `/projeto aprovar <slug>` ou `/projeto rejeitar <slug> \"motivo\"`" (a menos que tenha sido auto-aprovado).
 
 Importante:
 - Se `approval: skip` no stage atual, `completar` já avança automaticamente, não precisa chamar `aprovar` manualmente.
 - Se já for o último stage do pipeline, ao aprovar marca o projeto como `status: completed`.
 - Se houver iteração com feedback de rejeição anterior, incluir o feedback explicitamente no prompt do novo run.
-- Quality Gates globais (ver `skills/marketing-os/SKILL.md`) se aplicam ao output do agente antes de salvar.
+- Quality Gates globais (ver `${CLAUDE_PLUGIN_ROOT}/skills/marketing-os/SKILL.md`) se aplicam ao output do agente antes de salvar.
 
 ## Exemplo de uso completo
 

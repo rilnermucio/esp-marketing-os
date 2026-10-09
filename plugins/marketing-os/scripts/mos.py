@@ -13,7 +13,7 @@ Uso:
     python mos.py content ideas tecnologia 20
     python mos.py content audit arquivo.md --tipo blog
     python mos.py content calendar 2026-03-01 4 instagram linkedin
-    python mos.py content repurpose --file artigo.txt --output todos
+    python mos.py content repurpose --file artigo.txt --platform todos
     python mos.py reels script "tema" 30 tutorial
     python mos.py carousel structure "tema" educativo 10
     python mos.py trends track "termo" google,reddit --periodo 7
@@ -171,6 +171,36 @@ COMMAND_MAP: Dict[str, Dict[str, Tuple[str, str]]] = {
             "Resume métricas para o loop /aprender",
         ),
     },
+    "install": {
+        "doctor": (
+            "install_doctor.py",
+            "Lista cópias instaladas do plugin e versões divergentes",
+        ),
+    },
+    "compliance": {
+        "check": (
+            "compliance_check.py",
+            "Lista trechos de risco regulatório com a norma (CFM, CFO, CONAR, CVM...)",
+        ),
+    },
+    "facts": {
+        "check": (
+            "check_platform_facts.py",
+            "Lista fatos de plataforma com verificação vencida",
+        ),
+    },
+    "utm": {
+        "build": (
+            "utm_builder.py",
+            "Monta link com UTM e piece_id da peça",
+        ),
+    },
+    "voc": {
+        "extract": (
+            "voc_extractor.py",
+            "Extrai dores, desejos e objeções literais de reviews",
+        ),
+    },
 }
 
 # Comandos especiais que precisam de argumentos transformados
@@ -253,7 +283,7 @@ CATEGORIAS E COMANDOS:
 
   Planejamento:
     mos content calendar 2026-03-01 4 instagram linkedin
-    mos content repurpose --file artigo.txt --output todos
+    mos content repurpose --file artigo.txt --platform todos
 
   Tendências:
     mos trends track "IA" google,reddit --periodo 7
@@ -264,8 +294,8 @@ CATEGORIAS E COMANDOS:
     mos competitor analyze "@perfil1" "@perfil2"
 
   Apify (opcional, requer APIFY_TOKEN):
-    mos apify serp "infoproduto bofu" --max-results 10
-    mos apify instagram @concorrente --max-posts 30 --dry-run
+    mos apify serp --query "infoproduto bofu" --max-results 10
+    mos apify instagram --handle @concorrente --max-posts 30 --dry-run
     mos apify meta-ads --query "hotmart" --country BR --max-ads 30
     mos apify tiktok --handle @usuario --max-videos 30
     mos apify youtube --channel @mrbeast --max-videos 20

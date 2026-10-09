@@ -1,5 +1,5 @@
 ---
-description: Preset de retenção. Dispatcha mos-research + mos-analytics em paralelo, depois mos-email + mos-copy + mos-social. Foco em LTV, reativação de inativos e redução de churn. Clone primário abraham.
+description: "Campanha de retenção: reativação de inativos, redução de churn e aumento de LTV com emails, copy e social. Use quando o objetivo for manter ou reativar clientes."
 argument-hint: "<base/contexto> [--segmento=inativos-90dias|vip|risco|todos] [--desconto=...] [--clone=abraham|leila-hormozi]"
 ---
 
@@ -90,4 +90,4 @@ Aplicar gates globais do `skills/marketing-os/SKILL.md`:
 
 ## Memory note
 
-Os agents `mos-copy`, `mos-email`, `mos-social` têm memory project em `.claude/agent-memory/mos-<agent>/`. Sempre mencione no prompt que considere memory existente do cliente para respeitar histórico de comunicação com cada segmento.
+Os agents `mos-copy`, `mos-email`, `mos-social` têm memory project em `.claude/agent-memory/marketing-os-mos-<agent>/`. Sempre mencione no prompt que considere memory existente do cliente para respeitar histórico de comunicação com cada segmento.

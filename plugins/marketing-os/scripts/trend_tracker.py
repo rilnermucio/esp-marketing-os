@@ -254,8 +254,8 @@ def buscar_youtube_trends(termo: str, regiao: str = "BR", limite: int = 10) -> d
                                             "url": f"https://youtube.com/watch?v={video_id}",
                                         }
                                     )
-                except json.JSONDecodeError:
-                    pass
+                except json.JSONDecodeError as erro:
+                    resultados.setdefault("erros", {})["youtube_trending"] = str(erro)
 
     except Exception as e:
         resultados["status"] = f"erro: {str(e)}"
@@ -466,8 +466,9 @@ def obter_trending_geral(regiao: str = "BR") -> dict:
                     }
                 )
             resultados["fontes"]["reddit_popular"] = posts
-        except Exception:
-            pass
+        except Exception as erro:
+            # Fonte falhou: registrar em vez de sumir com ela do resultado.
+            resultados.setdefault("erros", {})["reddit_popular"] = str(erro)
 
     # Hacker News top
     print("  Buscando Hacker News...", file=sys.stderr)
@@ -492,8 +493,8 @@ def obter_trending_geral(regiao: str = "BR") -> dict:
                         }
                     )
             resultados["fontes"]["hacker_news"] = hn_posts
-        except Exception:
-            pass
+        except Exception as erro:
+            resultados.setdefault("erros", {})["hacker_news"] = str(erro)
 
     return resultados
 

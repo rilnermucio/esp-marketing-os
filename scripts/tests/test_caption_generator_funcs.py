@@ -2,6 +2,7 @@
 """
 Testes funcionais para caption_generator.py.
 """
+
 from __future__ import annotations
 
 import json
@@ -16,14 +17,9 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 import caption_generator as cg
 
 
-def _gerar_legenda_estavel(tema, objetivo, max_tentativas=30):
-    """Wrapper pra evitar bug pré-existente em hooks (placeholders com espaço)."""
-    for _ in range(max_tentativas):
-        try:
-            return cg.gerar_legenda(tema, objetivo)
-        except KeyError:
-            continue
-    pytest.skip("Não foi possível gerar legenda estável (bug pré-existente em hooks)")
+def _gerar_legenda_estavel(tema, objetivo):
+    """Chamada direta; o retry que escondia KeyError saiu com a correção dos templates."""
+    return cg.gerar_legenda(tema, objetivo)
 
 
 # ----------------------------------------------------------- gerar_legenda
@@ -73,7 +69,9 @@ def test_gerar_legenda_hook_formatado():
     # Pode ter alguns placeholders não usados ainda, mas {tema} sempre é substituído
     if "{tema}" in cg.HOOKS["engajamento"][4]:
         # Garantir que pelo menos os hooks com {tema} funcionam
-        assert "{tema}" not in r["hook"] or True  # pode escolher outro hook sem placeholder
+        assert (
+            "{tema}" not in r["hook"] or True
+        )  # pode escolher outro hook sem placeholder
 
 
 # ----------------------------------------------------------- gerar_exemplo_completo
@@ -213,3 +211,16 @@ def test_main_modo_json(capsys):
     assert parsed["tema"] == "vendas"
     assert parsed["objetivo"] == "vendas"
     assert "hashtags" in parsed
+
+
+def test_todos_os_templates_formatam():
+    """Todo template de HOOKS e CTAS formata com os campos do gerador (F-EVAL-05)."""
+    for objetivo, templates in cg.HOOKS.items():
+        for template in templates:
+            assert "{" not in template.format(**cg._hook_fields("vendas")), (
+                objetivo,
+                template,
+            )
+    for objetivo, templates in cg.CTAS.items():
+        for template in templates:
+            template.format(**cg._cta_fields("vendas"))

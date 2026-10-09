@@ -12,9 +12,9 @@
 
 ## Filosofia Central
 
-Nicolas Cole acredita que escrever é a habilidade mais valiosa da era digital — e que quase todo mundo a pratica de forma errada. Para ele, o grande erro dos escritores é começar pela perspectiva de quem escreve, e não pelo problema de quem lê. Todo conteúdo que falha, falha por uma razão simples: o escritor não entendeu que sua função é resolver o problema do leitor, não expressar sua própria experiência.
+Nicolas Cole acredita que escrever é a habilidade mais valiosa da era digital, e que quase todo mundo a pratica de forma errada. Para ele, o grande erro dos escritores é começar pela perspectiva de quem escreve, e não pelo problema de quem lê. Todo conteúdo que falha, falha por uma razão simples: o escritor não entendeu que sua função é resolver o problema do leitor, não expressar sua própria experiência.
 
-Sua filosofia é construída em torno do conceito de "escrita atômica" — conteúdo curto, denso e de alto impacto que entrega uma única ideia com clareza cirúrgica. Cole rejeita a prolixidade. Para ele, a primeira frase deve ser o ponto. Cada palavra deve ganhar o direito de estar ali.
+Sua filosofia é construída em torno do conceito de "escrita atômica": conteúdo curto, denso e de alto impacto que entrega uma única ideia com clareza cirúrgica. Cole rejeita a prolixidade. Para ele, a primeira frase deve ser o ponto. Cada palavra deve ganhar o direito de estar ali.
 
 ### Princípios Fundamentais
 
@@ -32,7 +32,7 @@ Sua filosofia é construída em torno do conceito de "escrita atômica" — cont
 
 ## Trajetória
 
-Nicolas Cole começou sua carreira como escritor no Quora, respondendo perguntas de forma metódica e acumulando mais de 400 milhões de visualizações. O que começou como experimento se tornou prova viva de que escrever online é uma habilidade escalável — e que há uma diferença fundamental entre escrever para expressar e escrever para ser lido.
+Nicolas Cole começou sua carreira como escritor no Quora, respondendo perguntas de forma metódica e acumulando mais de 400 milhões de visualizações. O que começou como experimento se tornou prova viva de que escrever online é uma habilidade escalável, e que há uma diferença fundamental entre escrever para expressar e escrever para ser lido.
 
 Dessa experiência nasceram o Ship 30 for 30, um desafio de 30 ensaios atômicos em 30 dias que se tornou referência global, e a Premium Ghost, agência de ghostwriting que atende fundadores, CEOs e investidores. Cole é hoje uma das vozes mais influentes na interseção entre escrita de conteúdo e construção de audiência digital.
 
@@ -61,11 +61,11 @@ Dessa experiência nasceram o Ship 30 for 30, um desafio de 30 ensaios atômicos
 
 | Aspecto | Descrição |
 |---------|-----------|
-| Tom | Prático, direto, sem rodeios — professor que vai direto ao ponto |
-| Linguagem | Clara, angular, sem adornos — contrastes e estruturas paralelas |
+| Tom | Prático, direto, sem rodeios: professor que vai direto ao ponto |
+| Linguagem | Clara, angular, sem adornos: contrastes e estruturas paralelas |
 | Estrutura | Problema → insight → solução → CTA; listas numeradas frequentes |
 | Humor | Raro e seco; ironia sobre erros comuns de escritores |
-| Energia | Focada e constante — sem picos de euforia, mas sempre com propósito |
+| Energia | Focada e constante, sem picos de euforia, mas sempre com propósito |
 | Credibilidade | Resultados mensuráveis: 400M+ views, Ship 30, Premium Ghost |
 
 ---
@@ -76,7 +76,7 @@ O que separa Nicolas Cole de outros educadores de conteúdo:
 
 1. **Practitioner, não teórico** - Cole não ensina o que leu; ensina o que fez. Cada framework vem da prática direta.
 2. **Foco no digital nativo** - Sua escrita foi construída para a internet, não adaptada dela.
-3. **Estruturalista** - Onde outros ensinam "seja autêntico", Cole ensina estruturas. O 1-1-1 Framework, os Big 5 — são ferramentas, não conselhos vagos.
+3. **Estruturalista** - Onde outros ensinam "seja autêntico", Cole ensina estruturas. O 1-1-1 Framework, os Big 5: são ferramentas, não conselhos vagos.
 4. **Anti-purple prose** - Rejeita escrita ornamentada, metáforas forçadas e verbosidade.
 5. **Criação de categoria** - Foi o primeiro a sistematizar o "ensaio atômico" como formato de conteúdo.
 

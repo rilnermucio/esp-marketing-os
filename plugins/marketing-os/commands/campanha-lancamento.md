@@ -1,5 +1,5 @@
 ---
-description: Preset de lançamento. Dispatcha mos-research + mos-launch + mos-funnel em paralelo, depois mos-copy + mos-storytelling + mos-social + mos-email, fechando com mos-ads + mos-design + mos-analytics. Clone primário brunson.
+description: "Campanha completa de lançamento: pesquisa, modelo (PLF, semente, relâmpago), funil, copy, emails, anúncios, design e métricas. Use para lançar um produto com campanha inteira. Só estruturar o produto: /criar-infoproduto."
 argument-hint: "<produto> [--preco=...] [--clone=brunson|suby|hormozi] [--canal=...] [--budget=...] [--nicho=...]"
 ---
 
@@ -111,4 +111,4 @@ Aplicar gates globais do `skills/marketing-os/SKILL.md`:
 
 ## Memory note
 
-Os agents `mos-copy`, `mos-email`, `mos-ads`, `mos-social`, `mos-funnel`, `mos-launch` têm memory project em `.claude/agent-memory/mos-<agent>/`. Sempre mencione no prompt que considere memory existente do cliente para evitar repetir hooks usados, manter consistência com campanhas passadas e respeitar restrições de compliance previamente registradas.
+Os agents `mos-copy`, `mos-email`, `mos-ads`, `mos-social`, `mos-funnel`, `mos-launch` têm memory project em `.claude/agent-memory/marketing-os-mos-<agent>/`. Sempre mencione no prompt que considere memory existente do cliente para evitar repetir hooks usados, manter consistência com campanhas passadas e respeitar restrições de compliance previamente registradas.

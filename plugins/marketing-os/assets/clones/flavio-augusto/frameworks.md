@@ -1,6 +1,6 @@
 # Flávio Augusto - Frameworks e Metodologias
 
-## Framework 1: Geração de Valor (GV) — O Ciclo Virtuoso
+## Framework 1: Geração de Valor (GV) (O Ciclo Virtuoso)
 
 ### O que é
 O conceito central de Flávio Augusto: antes de pedir (venda, parceria, lealdade), gere valor de forma genuína e gratuita. Quem gera mais valor consistentemente atrai mais oportunidades.
@@ -8,13 +8,13 @@ O conceito central de Flávio Augusto: antes de pedir (venda, parceria, lealdade
 ### Como funciona
 ```
 CICLO GV:
-├── PASSO 1 — Identifique o que você sabe que o mercado precisa
-│   (Não o que você quer vender — o que resolve um problema real)
-├── PASSO 2 — Compartilhe gratuitamente e amplamente
+├── PASSO 1: Identifique o que você sabe que o mercado precisa
+│   (O que resolve um problema real para o cliente)
+├── PASSO 2: Compartilhe gratuitamente e amplamente
 │   (Conteúdo, conhecimento, conexões, tempo)
-├── PASSO 3 — Construa reciprocidade e reputação
+├── PASSO 3: Construa reciprocidade e reputação
 │   (Quem recebe valor tende a retribuir)
-└── PASSO 4 — Converta reputação em oportunidade
+└── PASSO 4: Converta reputação em oportunidade
     (A oferta vem DEPOIS, não antes)
 
 MEDIÇÃO:
@@ -24,7 +24,7 @@ MEDIÇÃO:
 
 ARMADILHA COMUM:
 └── Gerar valor apenas como estratégia de venda (percebido como falso)
-    → Gere valor porque acredita que é o certo — o retorno vem como consequência
+    → Gere valor porque acredita que é o certo: o retorno vem como consequência
 ```
 
 ### Quando usar
@@ -41,23 +41,23 @@ Baseado na trajetória de Flávio da falência ao bilhão, este framework mapeia
 
 ### Como funciona
 ```
-FASE 1 — DIAGNÓSTICO BRUTAL:
+FASE 1: DIAGNÓSTICO BRUTAL:
 ├── Qual é o número real? (Receita, dívida, burn rate)
 ├── Onde está o vazamento? (Produto, operação, time, mercado?)
 └── O que precisa parar imediatamente vs. o que pode esperar?
 
-FASE 2 — SOBREVIVÊNCIA (primeiros 90 dias):
+FASE 2: SOBREVIVÊNCIA (primeiros 90 dias):
 ├── Corte tudo que não é essencial para o core business
 ├── Negocie dívidas com credibilidade (honestidade sobre a situação)
-└── Encontre a "venda de sobrevivência" — o que pode gerar caixa agora?
+└── Encontre a "venda de sobrevivência": o que pode gerar caixa agora?
 
-FASE 3 — ESTABILIZAÇÃO (meses 3-12):
+FASE 3: ESTABILIZAÇÃO (meses 3-12):
 ├── Foque em 1 produto/serviço que funciona
 ├── Reconstrua time com pessoas que acreditam na virada
-└── Melhore marginalmente a operação (não grande mudança — pequena e constante)
+└── Melhore marginalmente a operação (mudança pequena e constante)
 
-FASE 4 — ESCALA (ano 2+):
-├── Replique o que funciona (não invente — reaplique)
+FASE 4: ESCALA (ano 2+):
+├── Replique o que funciona (reaplique o que já deu certo)
 ├── Delegue o operacional para liberar estratégico
 └── Reinvista agressivamente nos canais de aquisição que provaram funcionar
 
@@ -79,12 +79,12 @@ Flávio identifica 3 qualidades que diferenciam empreendedores que chegam ao res
 
 ### Como funciona
 ```
-QUALIDADE 1 — CLAREZA DE OBJETIVO:
+QUALIDADE 1: CLAREZA DE OBJETIVO:
 ├── O objetivo é específico e mensurável? (Não "crescer", mas "dobrar receita em 18 meses")
-├── O objetivo tem data? (Sem deadline, é sonho — não objetivo)
+├── O objetivo tem data? (Sem deadline, é sonho: não objetivo)
 └── O objetivo é desafiador mas crível para você? (Muito fácil não motiva; impossível paralisa)
 
-QUALIDADE 2 — COMPROMETIMENTO RADICAL:
+QUALIDADE 2: COMPROMETIMENTO RADICAL:
 ├── Você faria isso mesmo se não funcionasse?
 │   (Flávio acredita que comprometimento precede certeza)
 ├── O que você está disposto a abrir mão?
@@ -92,7 +92,7 @@ QUALIDADE 2 — COMPROMETIMENTO RADICAL:
 └── Você agiu hoje em direção ao objetivo?
     (Comprometimento é diário, não declaração única)
 
-QUALIDADE 3 — APRENDIZADO ACELERADO:
+QUALIDADE 3: APRENDIZADO ACELERADO:
 ├── O que não funcionou esta semana? (O erro é dado)
 ├── O que o erro ensina? (A lição é o valor)
 └── O que você vai fazer diferente agora? (A ação é o produto)
@@ -120,17 +120,17 @@ RECEITA = Clientes × Ticket Médio × Frequência de Compra
 
 PARA CRESCER RECEITA, VOCÊ TEM 3 ALAVANCAS:
 
-ALAVANCA 1 — Mais Clientes:
+ALAVANCA 1: Mais Clientes:
 ├── Aumentar investimento em aquisição (tráfego pago, vendas)
 ├── Melhorar conversão (do visitante para cliente)
 └── Ativar indicações (referral do cliente atual)
 
-ALAVANCA 2 — Ticket Médio Maior:
+ALAVANCA 2: Ticket Médio Maior:
 ├── Upsell no momento de compra
 ├── Pacotes e bundling de produtos/serviços
 └── Produto premium para quem já confia na marca
 
-ALAVANCA 3 — Maior Frequência:
+ALAVANCA 3: Maior Frequência:
 ├── Programas de fidelidade e recorrência
 ├── Sequências de pós-compra que educam e retornam
 └── Razão para voltar antes do próximo ciclo natural
@@ -156,13 +156,13 @@ Flávio Augusto argumenta que construir um negócio pensando apenas em dinheiro 
 ```
 PERGUNTA FUNDADORA:
 └── "Que mundo você quer deixar para quem vem depois?"
-    Isso não é filosofia — é diferenciador competitivo.
+    Isso vira diferenciador competitivo.
 
 COMO TRADUZIR EM NEGÓCIO:
 ├── Qual é a missão que vai além do produto?
 │   (Wise Up: "Desenvolver pessoas para o mundo globalizado")
 ├── Como o produto serve a missão?
-│   (O inglês era o veículo — o impacto era a abertura de oportunidades)
+│   (O inglês era o veículo: o impacto era a abertura de oportunidades)
 └── Como a missão atrai pessoas que também acreditam nela?
     (Clientes, colaboradores, parceiros que compartilham o propósito)
 

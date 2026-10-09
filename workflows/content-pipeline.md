@@ -1,4 +1,4 @@
-# Content Pipeline — Workflow de Produção Integrado
+# Content Pipeline: Workflow de Produção Integrado
 
 > Workflow do Marketing OS. A numeração e os padrões de orquestração canônicos estão em `skills/marketing-os/SKILL.md` (seção "Padrões de Orquestração").
 
@@ -56,9 +56,9 @@ ENTREGÁVEL: research-brief.md
 | [kw1] | [vol] | [diff] | [intent] |
 
 ### Dados e Estatísticas
-- [Dado 1 — fonte]
-- [Dado 2 — fonte]
-- [Dado 3 — fonte]
+- [Dado 1: fonte]
+- [Dado 2: fonte]
+- [Dado 3: fonte]
 
 ### Análise de Concorrência
 | Concorrente | Ângulo | Pontos Fortes | Gaps |
@@ -71,8 +71,8 @@ ENTREGÁVEL: research-brief.md
 3. [Pergunta de oportunidade]
 
 ### Trends Relacionados
-- [Trend 1 — contexto]
-- [Trend 2 — contexto]
+- [Trend 1: contexto]
+- [Trend 2: contexto]
 
 ### Recomendações para o Conteúdo
 - **Hook sugerido:** [Hook baseado na pesquisa]
@@ -219,8 +219,8 @@ ENTREGÁVEL: quality-report.md
 **Veredicto:** [Aprovado / Revisão necessária / Reprovado]
 
 ### Problemas Encontrados
-1. [Problema — sugestão de correção]
-2. [Problema — sugestão de correção]
+1. [Problema: sugestão de correção]
+2. [Problema: sugestão de correção]
 
 ### Sugestões de Melhoria
 1. [Sugestão para aumentar engajamento]
@@ -320,8 +320,8 @@ ENTREGÁVEL: quality-report.md
 
 ## Recursos Relacionados
 
-- `workflows/batch-production-workflow.md` — Produção em lote (volume)
-- `assets/checklists/pre-publicacao.md` — Checklist pré-publicação
-- `references/strategy.md` — Estratégia geral de marketing
-- `references/social-media.md` — Guia por plataforma
-- `references/blog-seo.md` — Guia de SEO para blog
+- `workflows/batch-production-workflow.md` Produção em lote (volume)
+- `assets/checklists/pre-publicacao.md` Checklist pré-publicação
+- `references/strategy.md` Estratégia geral de marketing
+- `references/social-media.md` Guia por plataforma
+- `references/blog-seo.md` Guia de SEO para blog

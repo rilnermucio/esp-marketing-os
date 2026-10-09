@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import re
 import shutil
 import tempfile
 from pathlib import Path
@@ -65,6 +66,42 @@ def copy_tree(src: Path, dest: Path) -> None:
     shutil.copytree(src, dest, symlinks=True, ignore=should_ignore)
 
 
+# O Claude Code substitui ${CLAUDE_PLUGIN_ROOT} nos prompts de agents, commands
+# e skills, e exige o nome qualificado `marketing-os:mos-*` no dispatch. ChatGPT
+# Work e Codex não fazem nenhuma das duas coisas: lá os caminhos são relativos à
+# pasta da skill (que tem symlinks para subagents/, scripts/ etc.) e o dispatch
+# vira leitura de agents/mos-*.md. ADR-0005.
+_UNIVERSAL_REWRITES = [
+    (re.compile(r" \(`\$\{CLAUDE_PLUGIN_ROOT\}`\)"), ""),
+    (re.compile(r'"\$\{CLAUDE_PLUGIN_ROOT\}/([^"\s]+)"'), r"\1"),
+    (re.compile(r"\$\{CLAUDE_PLUGIN_ROOT\}/"), ""),
+    (re.compile(r"`\$\{CLAUDE_PLUGIN_ROOT\}`"), "a pasta do plugin"),
+    # Nome qualificado de agent (dispatch, frontmatter de fork e prosa) vira o curto.
+    (re.compile(r"marketing-os:mos-"), "mos-"),
+]
+
+
+def adapt_for_universal(text: str) -> str:
+    for pattern, replacement in _UNIVERSAL_REWRITES:
+        text = pattern.sub(replacement, text)
+    return text
+
+
+def adapt_package_prompts(dest: Path) -> None:
+    prompts = [
+        *sorted((dest / "agents").glob("*.md")),
+        *sorted((dest / "commands").glob("*.md")),
+        dest / "skills" / PLUGIN_NAME / "SKILL.md",
+    ]
+    for path in prompts:
+        if path.is_symlink() or not path.is_file():
+            continue
+        original = path.read_text(encoding="utf-8")
+        adapted = adapt_for_universal(original)
+        if adapted != original:
+            path.write_text(adapted, encoding="utf-8")
+
+
 def build_plugin(dest: Path) -> None:
     if dest.exists():
         shutil.rmtree(dest)
@@ -81,6 +118,8 @@ def build_plugin(dest: Path) -> None:
         if not src.exists():
             raise FileNotFoundError(f"Missing required file: {src}")
         shutil.copy2(src, dest / filename)
+
+    adapt_package_prompts(dest)
 
 
 def file_digest(path: Path) -> str:

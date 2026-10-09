@@ -21,7 +21,7 @@ Marketing de resposta direta funciona assim: você sabe exatamente quanto gastou
 Aqui está o que vou te mostrar:
 
 → Como estruturar cada peça de marketing para pedir uma resposta específica e mensurável
-→ Como identificar os 20% dos clientes que geram 80% da sua receita — e cloná-los
+→ Como identificar os 20% dos clientes que geram 80% da sua receita, e cloná-los
 → Como eliminar os clientes que drenam energia e deixam você sem lucro
 → O sistema de follow-up que transforma prospectos frios em clientes quentes
 
@@ -56,7 +56,7 @@ Para garantir a sua vaga:
 Sem conversa fiada,
 Dan Kennedy
 
-P.S. A maioria dos donos de negócio vai ler isso, pensar "parece bom", e não fazer nada. Amanhã, continua com o mesmo marketing que não funciona. Se você é diferente — se você realmente quer mudar seus resultados — o link acima é o próximo passo.
+P.S. A maioria dos donos de negócio vai ler isso, pensar "parece bom", e não fazer nada. Amanhã, continua com o mesmo marketing que não funciona. Se você é diferente, se você realmente quer mudar seus resultados, o link acima é o próximo passo.
 
 ---
 
@@ -113,7 +113,7 @@ O mercado não tem problema de dinheiro. Tem problema de posicionamento.
 
 **Para donos de negócios locais faturando R$15K-R$100K/mês:**
 
-*Como Gerar Novos Clientes Previsíveis Todo Mês Usando Marketing de Resposta Direta — Sem Depender de Indicações, Algoritmos ou Sorte*
+*Como Gerar Novos Clientes Previsíveis Todo Mês Usando Marketing de Resposta Direta, Sem Depender de Indicações, Algoritmos ou Sorte*
 
 **Subheadline:**
 *O mesmo sistema que usei com 3.200+ empresas em 135 setores para criar máquinas de aquisição de clientes mensuráveis e escaláveis*

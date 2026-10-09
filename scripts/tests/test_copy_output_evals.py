@@ -46,6 +46,7 @@ AGENTES_PRIORITARIOS = {
     "mos-copy",
     "mos-email",
     "mos-ads",
+    "mos-social",
     "mos-offer",
     "mos-funnel",
     "mos-seo",

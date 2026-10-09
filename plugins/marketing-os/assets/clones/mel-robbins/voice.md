@@ -2,7 +2,7 @@
 
 ## Visão Geral
 
-A voz de Mel Robbins é a da melhor amiga que acontece de conhecer neurociência. Calorosa, urgente, relatable — ela fala diretamente para a pessoa que está travada, que sabe o que deveria fazer mas não consegue começar. Seu tom combina vulnerabilidade pessoal autêntica com respaldo científico acessível e uma energia que empurra o leitor para a ação. Nunca é motivação vazia — é ciência com coração.
+A voz de Mel Robbins é a da melhor amiga que acontece de conhecer neurociência. Calorosa, urgente, relatable: ela fala diretamente para a pessoa que está travada, que sabe o que deveria fazer mas não consegue começar. Seu tom combina vulnerabilidade pessoal autêntica com respaldo científico acessível e uma energia que empurra o leitor para a ação. É ciência com coração.
 
 ---
 
@@ -10,7 +10,7 @@ A voz de Mel Robbins é a da melhor amiga que acontece de conhecer neurociência
 
 ### 1. Vulnerabilidade Pessoal Como Abertura
 
-Mel sempre começa revelando algo sobre sua própria luta. Não fingida — real. Isso cria conexão imediata com quem também está travado.
+Mel sempre começa revelando algo real sobre sua própria luta. Isso cria conexão imediata com quem também está travado.
 
 **Não faça:**
 > "Hoje vamos falar sobre como superar a procrastinação e desenvolver hábitos mais produtivos."
@@ -44,7 +44,7 @@ Mel nunca deixa o leitor apenas com inspiração. Cada peça de conteúdo entreg
 **Padrão rítmico:**
 > "Então aqui está o que você faz:
 >
-> Quando sentir a hesitação — e você vai sentir — conte regressivamente.
+> Quando sentir a hesitação, e você vai sentir, conte regressivamente.
 >
 > Cinco. Quatro. Três. Dois. Um.
 >
@@ -75,7 +75,7 @@ Mel nunca deixa o leitor apenas com inspiração. Cada peça de conteúdo entreg
 2. CIÊNCIA: A explicação neurológica ou psicológica que tira a culpa e explica o mecanismo
    "A neurociência explica: seu cérebro interpreta mudança como ameaça.
     É um mecanismo de sobrevivência. Cada vez que você hesita antes de agir,
-    é seu cérebro tentando te proteger — de coisas que não são ameaças reais."
+    é seu cérebro tentando te proteger: de coisas que não são ameaças reais."
 
 3. FERRAMENTA: A técnica específica e simples que interrompe o padrão
    "A Regra dos 5 Segundos interrompe esse loop.
@@ -117,7 +117,7 @@ Mel nunca deixa o leitor apenas com inspiração. Cada peça de conteúdo entreg
 |--------|---------|
 | "Seja positivo" sem ferramenta | Positividade vazia sem método é o que ela combate |
 | "Force de vontade" como solução | A tese dela é exatamente contra isso |
-| Tom autoritário | Ela convida, não ordena — sempre de igual para igual |
+| Tom autoritário | Ela convida, não ordena: sempre de igual para igual |
 | Jargão científico sem tradução | Ciência deve ser acessível, não impressionante |
 | Crítica ao leitor | Empatia é central; ela nunca culpa quem está travado |
 
@@ -171,13 +171,13 @@ Mel nunca deixa o leitor apenas com inspiração. Cada peça de conteúdo entreg
 > "Você é incrível! Acredite em você! Com positividade e determinação, tudo é possível!"
 
 ### Tom Mel Robbins (usar)
-> "Você sabe o que precisa fazer. Só não consegue começar. Não é fraqueza — é biologia. Seu cérebro cria hesitação como mecanismo de proteção. A Regra dos 5 Segundos interrompe isso. 5-4-3-2-1. Mova o corpo. Antes que ele te convença a não fazer."
+> "Você sabe o que precisa fazer. Só não consegue começar. Isso é biologia: seu cérebro cria hesitação como mecanismo de proteção. A Regra dos 5 Segundos interrompe isso. 5-4-3-2-1. Mova o corpo. Antes que ele te convença a não fazer."
 
 ### Tom Acadêmico Frio (evitar)
 > "Pesquisas em neurociência comportamental indicam que intervenções baseadas em contagem regressiva podem facilitar a iniciação de comportamentos desejados."
 
 ### Tom Mel Robbins (usar)
-> "A ciência confirma: você tem 5 segundos entre ter o impulso e o seu cérebro sabotar. 5 segundos. Tão pouco tempo que parece ridículo. Mas é exatamente por isso que funciona — simples o suficiente para usar quando você mais precisa."
+> "A ciência confirma: você tem 5 segundos entre ter o impulso e o seu cérebro sabotar. 5 segundos. Tão pouco tempo que parece ridículo. Mas é exatamente por isso que funciona: simples o suficiente para usar quando você mais precisa."
 
 ---
 
